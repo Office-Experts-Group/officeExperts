@@ -1,5 +1,17 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ServicePageCards from "./(components)/ServicePageCards";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import BlackSegment from "./(components)/BlackSegment";
+import PageSegment8 from "./(components)/PageSegment8";
+import PageSegment4 from "./(components)/PageSegment4";
+import PageSegment5 from "./(components)/PageSegment5";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/corporate-solutions";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +185,17 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Corporate Global Template Solution" />
+      <ServicePageCards />
+      <PageSegmentMain />
+      <PageSegment8 />
+      <BlackSegment />
+      <PageSegment4 />
+      <PageSegment5 />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

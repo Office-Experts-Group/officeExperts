@@ -1,5 +1,15 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ServicePageCards from "./(components)/ServicePageCards";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import BlackSegment from "./(components)/BlackSegment";
+import PageSegment4 from "./(components)/PageSegment4";
+import Promo from "./(components)/Promo";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import SegmentMainRepeat from "./(components)/SegmentMainRepeat";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -170,6 +180,15 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Microsoft Power Apps Consulting Services" />
+      <ServicePageCards />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <BlackSegment />
+      <Promo />
+      <PageSegment4 />
+      <SegmentMainRepeat />
+      <Contact />
     </>
   );
 };

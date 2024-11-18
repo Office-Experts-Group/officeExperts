@@ -1,5 +1,18 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ServicePageCards from "./(components)/ServicePageCards";
+import Contact from "../../../../components/Contact";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import PageSegment8 from "./(components)/PageSegment8";
+import PageSegment4 from "./(components)/PageSegment4";
+import PageSegment5 from "./(components)/PageSegment5";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/training";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +186,18 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Microsoft Word Help and Training" />
+      <ServicePageCards />
+      <PageSegmentMain />
+      <PageSegment8 />
+      <PageSegment4 />
+      <ExpertsAwait />
+      <PageSegment5 />
+      <Segment4Repeat />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

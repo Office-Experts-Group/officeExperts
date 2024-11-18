@@ -1,5 +1,16 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Contact from "../../../../components/Contact";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import PageSegment5 from "./(components)/PageSegment5";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Promo from "../../../../components/Promo";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/popup-forms";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +184,20 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Popup Forms" />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <PageSegment5 />
+      <Promo
+        h2="Empowering Your Documents with Seamless Integration"
+        p="Our popup forms are designed to simplify data entry, reduce errors, and enhance document consistency, giving your team a more efficient and reliable way to work in Microsoft Word."
+      />
+
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

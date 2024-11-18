@@ -1,5 +1,13 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Promo from "../../../../components/Promo";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import PageSegment4 from "./(components)/PageSegment4";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +181,18 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="PowerPoint User Training and Assistance" />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <ExpertsAwait />
+      <Promo
+        h2={"Get Trained By Experts!"}
+        p={
+          "Our PowerPoint experts can instruct users on the best ways to create presentations giving guidance and helpful hints."
+        }
+      />
+      <PageSegment4 />
+      <Contact />
     </>
   );
 };

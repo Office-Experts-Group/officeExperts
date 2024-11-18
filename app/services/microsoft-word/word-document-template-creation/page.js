@@ -1,5 +1,15 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import PageSegment4 from "./(components)/PageSegment4";
+import PageSegment5 from "./(components)/PageSegment5";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/document-template-creation";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +183,15 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Word Document Template Creation" />
+      <PageSegmentMain />
+      <PageSegment4 />
+      <PageSegment5 />
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

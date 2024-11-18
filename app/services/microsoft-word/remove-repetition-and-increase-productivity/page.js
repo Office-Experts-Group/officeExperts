@@ -1,5 +1,15 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Contact from "../../../../components/Contact";
+import PageSegment4 from "./(components)/PageSegment4";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Promo from "../../../../components/Promo";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/remove-repitition";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +183,18 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Remove Repetition and Increase Productivity" />
+      <PageSegmentMain />
+      <PageSegment4 />
+      <Promo
+        h2="Boost Productivity with Automated Document Templates"
+        p="Our automation solutions make document creation faster and more consistent, allowing your team to focus on high-priority work while we handle the repetitive tasks."
+      />
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

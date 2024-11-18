@@ -1,5 +1,10 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -170,6 +175,10 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Cloud Backup with OneDrive" />
+      <PageSegmentMain />
+      <ExpertsAwait />
+      <Contact />
     </>
   );
 };

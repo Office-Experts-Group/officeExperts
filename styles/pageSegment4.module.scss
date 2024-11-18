@@ -20,6 +20,27 @@
   }
 }
 
+.pageSegmentGrid {
+  scroll-margin-top: 100px;
+  padding: 0 10vw 2rem 10vw;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  img {
+    flex: 0 0 600px;
+    height: auto;
+    filter: grayscale(0%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
 .pageSegmentCenter {
   scroll-margin-top: 100px;
   padding: 0 10vw 2rem 10vw;

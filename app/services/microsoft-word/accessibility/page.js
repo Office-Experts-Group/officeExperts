@@ -1,5 +1,14 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import PageSegment4 from "./(components)/PageSegment4";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import FAQSection from "../../../../components/FAQSection";
+import Contact from "../../../../components/Contact";
+
+import faqs from "../../../../faqs/accesibility";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +182,14 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Accessibility" />
+      <PageSegmentMain />
+      <PageSegment4 />
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

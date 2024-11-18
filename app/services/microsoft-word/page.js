@@ -1,8 +1,23 @@
 import React from "react";
 
+import Hero from "./(components)/Hero";
+import Services from "./(components)/Services";
+import CTAMain from "./(components)/CTAMain";
+import IsRight from "./(components)/IsRight";
+import CTAFull from "./(components)/CTAFull";
+import Testimonials from "./(components)/Testimonials";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
+import Brands from "../../../components/Brands";
+import Promo from "../../../components/Promo";
+import Contact from "../../../components/Contact";
+
+import { getHomePageSchema } from "../../../utils/testimonialSchemaGenerator";
+import { testimonials } from "../../../testimonials";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    ...getHomePageSchema(testimonials),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-word/",
@@ -166,6 +181,19 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Hero />
+      <Services />
+      <CTAMain />
+      <IsRight />
+      <SolutionsCarousel />
+      <Testimonials testimonials={testimonials} />
+      <Brands />
+      <CTAFull />
+      <Promo
+        h2="Master Your Documents"
+        p="Professional Microsoft Word solutions to protect your brand, automate workflows, and empower your team to create consistent, high-quality documentation."
+      />
+      <Contact />
     </>
   );
 };

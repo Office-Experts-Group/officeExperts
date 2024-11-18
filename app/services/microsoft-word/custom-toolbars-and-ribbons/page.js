@@ -1,5 +1,14 @@
 import React from "react";
 
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import FAQSection from "../../../../components/FAQSection";
+import ServiceHero from "../../../../components/ServiceHero";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+
+import faqs from "../../../../faqs/custom-toolbars";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +182,14 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Custom Toolbars and Ribbons" />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };

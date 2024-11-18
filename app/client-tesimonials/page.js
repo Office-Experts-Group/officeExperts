@@ -10,7 +10,7 @@ import { testimonials } from "../../testimonials";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials)["@graph"],
+    ...getTestimonialsPageSchema(testimonials),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/client-testimonials/",

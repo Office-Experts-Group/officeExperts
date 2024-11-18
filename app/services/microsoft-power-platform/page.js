@@ -1,8 +1,19 @@
 import React from "react";
 
+import ServiceHero from "../../../components/ServiceHero";
+import ExpertsAwait from "../../../components/ExpertsAwait";
+import Contact from "../../../components/Contact";
+import Testimonials from "../../(components)/Testimonials";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Solutions from "./(components)/Solutions";
+
+import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
+import { testimonials } from "../../../testimonials";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    ...getTestimonialsPageSchema(testimonials),
     {
       "@type": "WebPage",
       "@id":
@@ -164,6 +175,12 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Microsoft Power Platform" />
+      <PageSegmentMain />
+      <Solutions />
+      <Testimonials testimonials={testimonials} />
+      <ExpertsAwait />
+      <Contact />
     </>
   );
 };

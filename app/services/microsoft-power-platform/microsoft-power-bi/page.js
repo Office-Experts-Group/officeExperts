@@ -1,5 +1,16 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import FAQSection from "../../../../components/FAQSection";
+import Contact from "../../../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import PageSegment4 from "./(components)/PageSegment4";
+import SegmentMainRepeat from "./(components)/SegmentMainRepeat";
+
+import faqs from "../../../../faqs/power-bi";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -172,6 +183,14 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Microsoft Power BI Services" />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <ExpertsAwait />
+      <SegmentMainRepeat />
+      <PageSegment4 />
+      <FAQSection faqs={faqs} />
+      <Contact />
     </>
   );
 };

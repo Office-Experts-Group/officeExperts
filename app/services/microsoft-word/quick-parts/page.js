@@ -1,5 +1,16 @@
 import React from "react";
 
+import ServiceHero from "../../../../components/ServiceHero";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Contact from "../../../../components/Contact";
+import Segment4Repeat from "./(components)/Segment4Repeat";
+import PageSegment5 from "./(components)/PageSegment5";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Promo from "../../../../components/Promo";
+import FAQSection from "../../../../components/FAQSection";
+
+import faqs from "../../../../faqs/quick-parts";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -173,6 +184,19 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Quick Parts" />
+      <PageSegmentMain />
+      <Segment4Repeat />
+      <PageSegment5 />
+      <Promo
+        h2="Optimise Document Creation with Quick Parts"
+        p="Our Quick Parts solutions allow your team to easily insert prebuilt content blocks, ensuring faster document creation, consistency, and improved productivity across the board."
+      />
+      <ExpertsAwait />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
+      <Contact />
     </>
   );
 };
