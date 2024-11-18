@@ -1,0 +1,73 @@
+@import "./globals.scss";
+
+.scrollMargin {
+  scroll-margin-top: 200px;
+}
+
+.contentsBox {
+  position: relative;
+  margin: 2rem 10vw 6rem 10vw;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  img {
+    position: absolute;
+    bottom: -8rem;
+    left: -10vw;
+    filter: opacity(0.1) brightness(3);
+    z-index: -1;
+  }
+}
+
+.contents {
+  grid-row: span 2;
+  background-color: $grayBGC;
+  padding: 2rem;
+  border-radius: 0.1rem;
+  max-width: 35vw;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+  h3 {
+    color: $black;
+    margin: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+}
+
+.contentLink {
+  position: relative;
+  padding: 1rem;
+
+  p {
+    color: $darkGrayText;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: white;
+
+    p {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.info {
+  h2 {
+    color: $black;
+    margin: 1rem 0;
+    font-weight: 900;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: $darkGrayText;
+    line-height: 2rem;
+    max-width: 90%;
+  }
+}

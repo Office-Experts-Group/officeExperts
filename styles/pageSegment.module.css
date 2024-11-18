@@ -1,0 +1,158 @@
+.pageSegment {
+  position: relative;
+  scroll-margin-top: 150px;
+  display: flex;
+  gap: 4rem;
+  margin: 8rem;
+}
+
+.imgWrapper {
+  z-index: 2;
+  flex: 1;
+  border-bottom: 15px solid #046999;
+}
+.imgWrapper img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-bottom: 0.5rem;
+  filter: grayscale(0%);
+  transition: all 0.3s ease;
+}
+.imgWrapper img:hover {
+  filter: grayscale(100%);
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content h2 {
+  color: #1e1e1e;
+  font-size: 2.5rem;
+  margin: 2rem 0 2rem 0;
+  font-weight: 900;
+}
+.content a {
+  color: #046999;
+  font-weight: 700;
+}
+.content p:first-child {
+  color: #046999;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.content p:nth-of-type(2) {
+  color: #777a7e;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.content p:nth-of-type(3) {
+  color: #777a7e;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.content p:nth-of-type(4) {
+  color: #777a7e;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.content p:last-child {
+  color: #777a7e;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.point p {
+  color: #777a7e;
+  margin: 0 !important;
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #046999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.tick:hover {
+  transition: all 0.5s ease;
+  background-color: #046999;
+}
+.tick:hover svg {
+  stroke: #f8f8f8;
+}
+
+.semi {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  filter: brightness(1.5);
+  transform: scaleX(-1);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.point p {
+  color: #777a7e;
+  margin: 0 !important;
+  line-height: 1.5rem;
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #0eaa0e;
+  background-color: #0eaa0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.tick svg {
+  stroke: #f8f8f8;
+  color: #f8f8f8;
+}
+.tick:hover {
+  transition: all 0.5s ease;
+  background-color: #f8f8f8;
+}
+.tick:hover svg {
+  stroke: #0eaa0e;
+  color: #0eaa0e;
+}/*# sourceMappingURL=pageSegment.module.css.map */

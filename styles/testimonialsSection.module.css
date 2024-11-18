@@ -1,0 +1,169 @@
+.testimonials {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 6rem auto;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.testimonials h3 {
+  color: #1e1e1e;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+.box {
+  margin: 0 auto 1.5rem auto;
+  border-bottom: 6px solid rgba(176, 176, 176, 0.3568627451);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.box h2 {
+  color: #046999;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: -0.5rem;
+  font-family: var(--font-aptos) !important;
+}
+
+.testimonialsWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.testimonialsTrack {
+  display: flex;
+  gap: 2rem;
+  animation: slideTrack 40s cubic-bezier(0.45, 0, 0.15, 1) infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.testimonialsTrack:hover {
+  animation-play-state: paused;
+}
+
+.testimonialSlide {
+  flex: 0 0 calc((100% - 4rem) / 3);
+  opacity: 1;
+}
+
+@keyframes slideTrack {
+  0% {
+    transform: translateX(0);
+  }
+  3%, 10% {
+    transform: translateX(0);
+  }
+  13%, 20% {
+    transform: translateX(calc(-1 * (100% - 4rem) / 3 - 2rem));
+  }
+  23%, 30% {
+    transform: translateX(calc(-2 * (100% - 4rem) / 3 - 4rem));
+  }
+  33%, 40% {
+    transform: translateX(calc(-3 * (100% - 4rem) / 3 - 6rem));
+  }
+  43%, 50% {
+    transform: translateX(calc(-4 * (100% - 4rem) / 3 - 8rem));
+  }
+  53%, 60% {
+    transform: translateX(calc(-5 * (100% - 4rem) / 3 - 10rem));
+  }
+  63%, 70% {
+    transform: translateX(calc(-6 * (100% - 4rem) / 3 - 12rem));
+  }
+  73%, 80% {
+    transform: translateX(calc(-7 * (100% - 4rem) / 3 - 14rem));
+  }
+  83%, 90% {
+    transform: translateX(calc(-8 * (100% - 4rem) / 3 - 16rem));
+  }
+  93%, 100% {
+    transform: translateX(calc(-9 * (100% - 4rem) / 3 - 18rem));
+  }
+}
+@media (max-width: 1024px) {
+  .testimonialSlide {
+    flex: 0 0 calc((100% - 2rem) / 2);
+  }
+  @keyframes slideTrack {
+    0% {
+      transform: translateX(0);
+    }
+    3%, 10% {
+      transform: translateX(0);
+    }
+    13%, 20% {
+      transform: translateX(calc(-1 * (100% - 2rem) / 2 - 2rem));
+    }
+    23%, 30% {
+      transform: translateX(calc(-2 * (100% - 2rem) / 2 - 4rem));
+    }
+    33%, 40% {
+      transform: translateX(calc(-3 * (100% - 2rem) / 2 - 6rem));
+    }
+    43%, 50% {
+      transform: translateX(calc(-4 * (100% - 2rem) / 2 - 8rem));
+    }
+    53%, 60% {
+      transform: translateX(calc(-5 * (100% - 2rem) / 2 - 10rem));
+    }
+    63%, 70% {
+      transform: translateX(calc(-6 * (100% - 2rem) / 2 - 12rem));
+    }
+    73%, 80% {
+      transform: translateX(calc(-7 * (100% - 2rem) / 2 - 14rem));
+    }
+    83%, 90% {
+      transform: translateX(calc(-8 * (100% - 2rem) / 2 - 16rem));
+    }
+    93%, 100% {
+      transform: translateX(calc(-9 * (100% - 2rem) / 2 - 18rem));
+    }
+  }
+}
+@media (max-width: 640px) {
+  .testimonialSlide {
+    flex: 0 0 100%;
+  }
+  @keyframes slideTrack {
+    0% {
+      transform: translateX(0);
+    }
+    3%, 10% {
+      transform: translateX(0);
+    }
+    13%, 20% {
+      transform: translateX(calc(-100% - 2rem));
+    }
+    23%, 30% {
+      transform: translateX(calc(-200% - 4rem));
+    }
+    33%, 40% {
+      transform: translateX(calc(-300% - 6rem));
+    }
+    43%, 50% {
+      transform: translateX(calc(-400% - 8rem));
+    }
+    53%, 60% {
+      transform: translateX(calc(-500% - 10rem));
+    }
+    63%, 70% {
+      transform: translateX(calc(-600% - 12rem));
+    }
+    73%, 80% {
+      transform: translateX(calc(-700% - 14rem));
+    }
+    83%, 90% {
+      transform: translateX(calc(-800% - 16rem));
+    }
+    93%, 100% {
+      transform: translateX(calc(-900% - 18rem));
+    }
+  }
+}
+.teamHeading {
+  font-size: 3rem;
+}/*# sourceMappingURL=testimonialsSection.module.css.map */

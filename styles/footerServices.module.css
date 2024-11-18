@@ -1,0 +1,65 @@
+.servicesSection {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.servicesSection a {
+  color: #a0a2a6;
+  text-decoration: none;
+  transition: color 0.5s;
+  font-weight: 500;
+}
+.servicesSection a:hover {
+  color: #046999;
+}
+
+.mainLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.mainLinks h3 {
+  color: #f8f8f8;
+  font-size: 1.125rem;
+  margin-bottom: 0.8rem;
+}
+
+.dropdownSection {
+  position: relative;
+}
+.dropdownSection h3 {
+  color: #a0a2a6;
+  text-decoration: none;
+  transition: color 0.5s;
+  font-size: 1rem;
+  color: #a0a2a6;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  font-family: var(--font-aptos) !important;
+}
+.dropdownSection h3:hover {
+  color: #046999;
+}
+.dropdownSection .dropdownContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-out;
+}
+.dropdownSection:hover .dropdownContent, .dropdownSection:focus-within .dropdownContent {
+  max-height: 300px;
+  padding: 1rem;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}/*# sourceMappingURL=footerServices.module.css.map */

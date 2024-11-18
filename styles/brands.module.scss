@@ -1,0 +1,25 @@
+.brands {
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 0;
+  border-top: 1px solid #dddddd;
+  position: relative;
+  z-index: 1;
+}
+
+.brandLink {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.brandImage {
+  filter: grayscale(0%) brightness(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.brandImage:hover {
+  filter: grayscale(100%) brightness(120%);
+  transition: 0.5s ease-in-out;
+}

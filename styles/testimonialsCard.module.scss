@@ -1,0 +1,62 @@
+@import "./globals.scss";
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border: 2px solid #b0b0b05b;
+  border-bottom: 10px solid #b0b0b05b;
+  padding: 3rem 3rem 0.5rem 3rem;
+  height: 350px;
+  min-height: 350px;
+  transition: all 0.3s ease;
+
+  p {
+    color: #777a7e;
+    line-height: 2rem;
+    font-size: 1.125rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    max-height: calc(2rem * 4); // line-height * number of lines
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &:hover {
+    border: 2px solid $theme;
+    border-bottom: 10px solid $theme;
+
+    p {
+      max-height: none;
+      -webkit-line-clamp: unset;
+      overflow-y: auto;
+    }
+
+    img {
+      margin-top: 1rem;
+    }
+  }
+
+  img {
+    align-self: end;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+  }
+}
+
+.cardWrapper {
+  h4 {
+    color: $black;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  h5 {
+    color: $theme;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}

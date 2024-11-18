@@ -1,0 +1,55 @@
+.animate {
+  // position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all var(--animation-duration, 1s) cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--animation-delay, 0s);
+  will-change: transform, opacity;
+
+  &.visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+  }
+}
+
+.fade-up {
+  transform: translateY(50px);
+  z-index: 2;
+}
+
+.fade-up-right {
+  transform: translateY(50px) translateX(-50px);
+}
+
+.fade-down {
+  transform: translateY(-100px);
+}
+
+.slide-left {
+  transform: translateX(-100px);
+}
+
+.slide-right {
+  transform: translateX(100px);
+}
+
+.scale-down {
+  transform: scale(1.4);
+}
+
+.scale-up {
+  transform: scale(0.2);
+}
+
+.fade {
+  transform: none;
+}
+
+// Accessibility
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,56 @@
+@import "./globals.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+  border-bottom: 1px solid #e0e0e09e;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.imageWrapper {
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  width: 200px;
+  height: 240px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.name {
+  margin: 0.5rem 0;
+  font-size: 1.5rem !important;
+  text-align: center;
+}
+
+.role {
+  margin: 0;
+  font-size: 1rem;
+  color: $theme;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize !important;
+}
+
+.skills {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  max-width: 90%;
+  line-height: 1.4;
+}

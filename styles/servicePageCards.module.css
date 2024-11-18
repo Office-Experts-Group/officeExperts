@@ -1,0 +1,108 @@
+.servicePageCards {
+  padding: 6rem 10vw 4rem 10vw;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 280px;
+  min-width: 280px;
+  border: 2px solid rgba(213, 213, 213, 0.5725490196);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  cursor: pointer;
+}
+
+.content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  isolation: isolate;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1e1e1e;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.content h2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #1e1e1e;
+  font-weight: 900;
+  min-height: 2.75rem;
+  transition: color 0.3s ease-in-out;
+  margin: 0;
+}
+.content p {
+  color: #777a7e;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  margin: 2rem 0 1rem 0;
+  width: 60px;
+  height: 60px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.imageWrapper {
+  position: relative !important;
+  width: 100%;
+  aspect-ratio: 7/4;
+  overflow: hidden;
+}
+
+.mainImage {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.3s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.card a:hover .content::before {
+  transform: translateX(0);
+}
+.card a:hover .content h2 {
+  color: #f8f8f8;
+}
+.card a:hover .icon {
+  animation: scale 1s ease-in-out infinite;
+}
+.card a:hover .mainImage {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=servicePageCards.module.css.map */

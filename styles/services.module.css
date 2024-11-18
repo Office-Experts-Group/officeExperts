@@ -1,0 +1,63 @@
+.services {
+  background: url("../public/service-bg.webp") no-repeat center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 8rem;
+}
+
+.content {
+  padding-right: 4rem;
+}
+.content h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #f8f8f8;
+  margin: 1rem 0 2rem 0;
+}
+.content p {
+  color: #a0a2a6;
+  line-height: 2rem;
+}
+
+.subBox {
+  border-bottom: 6px solid #046999;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.subBox p {
+  color: #f8f8f8;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: -0.8rem;
+}
+.subBox span {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 2rem;
+}
+.signature div {
+  border-radius: 50%;
+  border: 2px solid #046999;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.signature div img {
+  border-radius: 50%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: auto;
+  gap: 1.5rem;
+}/*# sourceMappingURL=services.module.css.map */

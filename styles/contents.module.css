@@ -1,0 +1,62 @@
+.scrollMargin {
+  scroll-margin-top: 200px;
+}
+
+.contentsBox {
+  position: relative;
+  margin: 2rem 10vw 6rem 10vw;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.contentsBox img {
+  position: absolute;
+  bottom: -8rem;
+  left: -10vw;
+  filter: opacity(0.1) brightness(3);
+  z-index: -1;
+}
+
+.contents {
+  grid-row: span 2;
+  background-color: #f2f3f5;
+  padding: 2rem;
+  border-radius: 0.1rem;
+  max-width: 35vw;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.contents h3 {
+  color: #1e1e1e;
+  margin: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.contentLink {
+  position: relative;
+  padding: 1rem;
+}
+.contentLink p {
+  color: #777a7e;
+  transition: all 0.3s ease;
+}
+.contentLink:hover {
+  background-color: white;
+}
+.contentLink:hover p::after {
+  opacity: 1;
+}
+
+.info h2 {
+  color: #1e1e1e;
+  margin: 1rem 0;
+  font-weight: 900;
+}
+.info p {
+  margin-top: 1rem;
+  color: #777a7e;
+  line-height: 2rem;
+  max-width: 90%;
+}/*# sourceMappingURL=contents.module.css.map */

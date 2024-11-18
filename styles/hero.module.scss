@@ -1,0 +1,200 @@
+@import "./globals.scss";
+
+.heroSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: fadeInOut 15s infinite; // Changed from 10s
+
+  &:nth-child(1) {
+    animation-delay: -7.5s; // Changed from -5s to maintain proportion
+
+    .slideImage {
+      animation-delay: -7.5s; // Changed from -5s to match
+    }
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0s;
+
+    .slideImage {
+      animation-delay: 0s;
+    }
+  }
+}
+
+.slideImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  animation: scale 15s infinite linear; // Changed from 10s
+  transform-origin: center center;
+}
+
+.shape {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+
+.shapeLeft {
+  left: -100px;
+  bottom: -100px;
+  animation: slideInLeft 7.5s infinite; // Changed from 5s to maintain proportion
+  animation-delay: 0.45s; // Adjusted proportionally from 0.3s
+}
+
+.shapeRight {
+  right: -100px;
+  bottom: -100px;
+  animation: slideInRight 7.5s infinite; // Changed from 5s to maintain proportion
+  animation-delay: 0.75s; // Adjusted proportionally from 0.5s
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding-left: clamp(1rem, 10vw, 10rem);
+  padding-bottom: 10vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 10rem);
+    line-height: clamp(1rem, 8vw, 8rem);
+    margin-bottom: 4rem;
+  }
+  button {
+    width: 225px;
+    height: 70px;
+  }
+}
+
+.subHead {
+  display: flex;
+}
+
+.bar {
+  color: $theme;
+  width: 24px;
+  height: 1px;
+  z-index: 2;
+  border: 3px solid $theme;
+  margin: 0.4rem 0.5rem 0 0;
+}
+
+.headingWrapper {
+  position: relative;
+  min-height: 1.2em;
+  white-space: nowrap;
+  margin-bottom: 1.8rem;
+}
+
+.heading1,
+.heading2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+
+.heading1 {
+  animation: fadeInOut 15s infinite;
+}
+
+.heading2 {
+  animation: fadeInOut 15s infinite;
+  animation-delay: -7.5s;
+}
+
+@keyframes fadeInOut {
+  0%,
+  45%,
+  100% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+// For slideInLeft, we'll keep the same entry timing but extend the visibility
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10%,
+  85% {
+    // Extended from 80% to 85% to stay visible longer
+    opacity: 1;
+    transform: translate(100px, -100px);
+  }
+  95%,   // Changed from 90% to 95% to exit later
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+// For slideInRight, we'll keep the same entry timing but start exit earlier
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10%,
+  75% {
+    // Reduced from 80% to 75% to start exit earlier
+    opacity: 1;
+    transform: translate(-100px, -100px);
+  }
+  85%,   // Changed from 90% to 85% to exit first
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}

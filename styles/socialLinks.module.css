@@ -1,0 +1,12 @@
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  height: 100%;
+}
+.socials svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.socials svg:hover {
+  color: #046999;
+}/*# sourceMappingURL=socialLinks.module.css.map */

@@ -1,0 +1,53 @@
+.card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border: 2px solid rgba(176, 176, 176, 0.3568627451);
+  border-bottom: 10px solid rgba(176, 176, 176, 0.3568627451);
+  padding: 3rem 3rem 0.5rem 3rem;
+  height: 350px;
+  min-height: 350px;
+  transition: all 0.3s ease;
+}
+.card p {
+  color: #777a7e;
+  line-height: 2rem;
+  font-size: 1.125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  max-height: 8rem;
+  scrollbar-width: none;
+}
+.card p::-webkit-scrollbar {
+  display: none;
+}
+.card:hover {
+  border: 2px solid #046999;
+  border-bottom: 10px solid #046999;
+}
+.card:hover p {
+  max-height: none;
+  -webkit-line-clamp: unset;
+  overflow-y: auto;
+}
+.card:hover img {
+  margin-top: 1rem;
+}
+.card img {
+  align-self: end;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.cardWrapper h4 {
+  color: #1e1e1e;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.cardWrapper h5 {
+  color: #046999;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=testimonialsCard.module.css.map */

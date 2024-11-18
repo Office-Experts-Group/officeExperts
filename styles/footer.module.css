@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #252629;
+  padding: 6rem 2rem 6rem 3rem;
+  overflow: hidden;
+}
+
+.bgImg {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+}
+
+.semi {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+}/*# sourceMappingURL=footer.module.css.map */

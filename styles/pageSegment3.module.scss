@@ -1,0 +1,112 @@
+@import "./globals.scss";
+
+.pageSegment {
+  scroll-margin-top: 100px;
+  padding: 4rem 10vw;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  p {
+    color: $darkGrayText;
+    line-height: 2rem;
+    max-width: 80%;
+  }
+
+  img {
+    filter: grayscale(0%);
+    transition: all 0.3s ease;
+    &:hover {
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.pageSegmentCentered {
+  scroll-margin-top: 100px;
+  padding: 0 10vw 4rem 10vw;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+
+  p {
+    color: $darkGrayText;
+    line-height: 2rem;
+    max-width: 80%;
+    &:last-of-type {
+      margin-top: 1rem;
+    }
+  }
+
+  img {
+    filter: grayscale(0%);
+    transition: all 0.3s ease;
+    &:hover {
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.underline {
+  border-bottom: 6px solid $theme;
+  width: fit-content;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: -0.5rem;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  p {
+    color: $darkGrayText;
+    margin: 0 !important;
+    line-height: 1.5rem;
+  }
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #0eaa0e;
+  background-color: #0eaa0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $offWhite;
+    svg {
+      stroke: #0eaa0e;
+      color: #0eaa0e;
+    }
+  }
+}

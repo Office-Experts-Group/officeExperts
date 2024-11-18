@@ -1,0 +1,443 @@
+@import "./globals.scss";
+
+.contact {
+  display: flex;
+  gap: 2rem;
+  padding: 6rem 10vw;
+  background-color: $grayBGC;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.optionsWrapper {
+  position: relative;
+  height: 400px; // Adjust based on your content
+}
+
+.option {
+  background: $grayBGC;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  transition: all 1s ease;
+  z-index: 2;
+  top: 0;
+
+  &.bottom {
+    top: calc(100% - 95px); // Adjust based on your collapsed height
+    transition: all 1s ease;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background: $theme;
+    transition: all 1s ease;
+    color: $offWhite;
+    font-size: 1rem;
+    width: 220px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+  }
+
+  // Move hover effects outside of h2 and exclude active state
+  &:not(.active) {
+    h2 {
+      font-family: var(--font-aptos);
+    }
+    h2:hover {
+      color: $theme;
+      border-color: $theme;
+
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  .description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    p {
+      margin: 1rem 0 0;
+      line-height: 1.8;
+    }
+  }
+
+  &:hover {
+    background: $grayBGC;
+  }
+
+  &.active {
+    h2 {
+      text-align: left;
+      color: $black;
+      font-weight: 900;
+      font-size: 3rem;
+      padding: 0;
+      background: $grayBGC;
+      width: fit-content;
+    }
+
+    .description {
+      max-height: 200px;
+      opacity: 1;
+      background: $grayBGC;
+
+      p {
+        color: $black;
+      }
+    }
+  }
+}
+.divider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+// .circle {
+//   position: relative;
+//   width: 60px;
+//   height: 60px;
+//   background: $offWhite;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   animation: bounce 1s ease infinite;
+//   z-index: 1;
+//   margin: 8rem 0 0rem 0;
+//   border: 1px dashed $black;
+
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: -10px; // Adjusted to be proportional to circle
+//     top: -10px; // Adjusted to be proportional to circle
+//     width: 80px; // Circle width (60px) + 20px for the ring
+//     height: 80px; // Circle height (60px) + 20px for the ring
+//     border-radius: 50%;
+//     border: 1px dashed $black;
+//     animation: ringExpand 1.8s linear infinite;
+//     z-index: 1;
+//   }
+
+//   // Delay the second ring
+//   &::after {
+//     animation-delay: 0.9s;
+//   }
+
+//   // Third ring
+//   &::before {
+//     animation-delay: 0.3s;
+//   }
+
+//   span {
+//     color: $theme;
+//     font-weight: 900;
+//     font-size: 1.2rem;
+//     letter-spacing: 1px;
+//   }
+// }
+
+.formContainer {
+  flex: 2;
+  position: relative;
+}
+
+.formWrapper {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(200px);
+  transition: all 1s ease;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: all;
+  }
+}
+
+@keyframes ringExpand {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+// Form styles **********************
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 2rem 0 2rem;
+  grid-row-gap: 2rem;
+  height: 100%;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-of-type(2) {
+    grid-row: span 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      flex: 1;
+      max-height: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 1rem;
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  textarea,
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #b7b7b7f6;
+    outline: $theme;
+    font-size: 1.125rem;
+    color: $grayText;
+    &::placeholder {
+      color: $grayText;
+      opacity: 0.7;
+      font-style: italic;
+      font-size: 0.8rem;
+    }
+  }
+
+  input {
+    height: 2.5rem;
+  }
+}
+
+// Quote Form *************************
+.quoteForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.radioField {
+  .groupLabel {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .radioOptions {
+    display: flex;
+
+    .radioOption {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      input[type="radio"] {
+        // Hide default radio button
+        appearance: none;
+        -webkit-appearance: none;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+
+        &:checked {
+          border-color: $theme;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: $theme;
+            border-radius: 50%;
+          }
+        }
+
+        &:hover:not(:checked) {
+          border-color: darken($theme, 10%);
+        }
+      }
+
+      label {
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.uploadField {
+  label {
+    font-weight: 500;
+    span {
+      text-transform: none;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: $grayText;
+    }
+  }
+  input {
+    margin-top: 0.5rem;
+  }
+}
+
+.termsField {
+  grid-column: span 2;
+  font-size: 0.8rem;
+  color: $grayText;
+
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0; // Prevent checkbox from shrinking
+
+      &:checked {
+        border-color: $theme;
+        background-color: $theme;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1px;
+          left: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:hover:not(:checked) {
+        border-color: darken($theme, 10%);
+      }
+    }
+
+    .checkboxText {
+      line-height: 1.4;
+    }
+  }
+
+  a {
+    color: $theme;
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.errorMessage {
+  color: $theme;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0 0 0.5rem;
+  letter-spacing: 1px;
+}
+
+.submitBtn {
+  width: 220px;
+  height: 67px;
+  margin-left: auto;
+  &:hover {
+    border: 1px solid $theme;
+  }
+}

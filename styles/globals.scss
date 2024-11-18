@@ -1,0 +1,44 @@
+// colors
+$body: #333;
+// $theme: #046999;
+$theme: #046999;
+$background: #f6f6f6;
+$offWhite: #f8f8f8;
+$black: #1e1e1e;
+$gray: #454545;
+$grayText: #a0a2a6;
+$grayBGC: #f2f3f5;
+$darkGrayText: #777a7e;
+$cardBGC: #1a1c1e;
+$footerBGC: #252629;
+
+// breakpoints
+@mixin smallPhone {
+  @media (max-width: 359px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 449px) {
+    @content;
+  }
+}
+
+@mixin phoneLandscape {
+  @media (min-width: 450px) and (max-width: 766px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 767px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}

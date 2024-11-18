@@ -1,0 +1,118 @@
+.container {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+@media (min-width: 768px) {
+  .container {
+    left: auto;
+    right: 1rem;
+    max-width: 28rem;
+  }
+}
+
+.alert {
+  position: relative;
+  background-color: white;
+  border-radius: 0.1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin-top: 0.5rem;
+}
+
+.message {
+  margin-bottom: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acceptButton {
+  padding: 0.5rem 1rem;
+  background-color: #046999;
+  color: #f8f8f8;
+  border: none;
+  border-radius: 0.1rem;
+  font-weight: 700;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.acceptButton:hover {
+  background-color: #05a605;
+}
+.acceptButton:focus {
+  outline: 2px solid #05a605;
+  outline-offset: 2px;
+}
+
+.declineButton {
+  padding: 0.5rem 1rem;
+  background-color: #f8f8f8;
+  color: #4b5563;
+  border: 1px solid #f8f8f8;
+  border-radius: 0.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.declineButton:hover {
+  background-color: #ff0909;
+  color: #f8f8f8;
+}
+.declineButton:focus {
+  outline: 2px solid #ff0909;
+  outline-offset: 2px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.closeButton:hover {
+  color: #374151;
+}
+.closeButton svg {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 2;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}/*# sourceMappingURL=cookieConsent.module.css.map */

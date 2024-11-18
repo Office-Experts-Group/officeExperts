@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.pageSegment {
+  scroll-margin-top: 100px;
+  display: grid;
+  grid-template-columns: 66% 1fr;
+  gap: 2rem;
+  padding: 10rem 10vw 4rem 10vw;
+}
+.pageSegment img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.pageSegmentReverse {
+  scroll-margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 66%;
+  gap: 4rem;
+  padding: 6rem 10vw;
+}
+.pageSegmentReverse img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: -4rem;
+}
+
+.contents {
+  position: relative;
+  grid-row: span 2;
+  background-color: #f2f3f5;
+  padding: 2rem;
+  border-radius: 0.1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.contents h3 {
+  color: #1e1e1e;
+  margin: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.contents .buttonWrapper {
+  margin: 3rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.contents .buttonWrapper button {
+  padding: 1.5rem 3rem;
+}
+
+.contentLink {
+  position: relative;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+.contentLink a,
+.contentLink p {
+  color: #777a7e;
+  transition: all 0.3s ease;
+  line-height: 2rem;
+}
+.contentLink a::after,
+.contentLink p::after {
+  content: "→";
+  position: absolute;
+  right: 1rem;
+  bottom: 1.25rem;
+  opacity: 0;
+  color: #046999;
+  transition: opacity 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a:hover .contentLink {
+  background-color: white;
+  cursor: pointer;
+}
+a:hover .contentLink p {
+  color: #046999;
+  font-weight: 700;
+}
+a:hover .contentLink p::after {
+  opacity: 1;
+}
+
+.contentLink[style*="display: flex"] a:hover p {
+  color: #046999;
+  font-weight: 700;
+}
+
+.info h2 {
+  color: #1e1e1e;
+  margin: 1rem 0;
+  font-weight: 900;
+}
+.info p {
+  margin-top: 1rem;
+  color: #777a7e;
+  line-height: 2rem;
+  max-width: 90%;
+} /*# sourceMappingURL=pageSegment2.module.css.map */

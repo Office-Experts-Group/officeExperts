@@ -1,0 +1,59 @@
+.meetTheTeam {
+  padding: 6rem 10vw;
+  margin: 0 auto;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.teamMember {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.imageWrapper {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.imageWrapper:hover .memberImage {
+  filter: grayscale(0%);
+}
+
+.memberImage {
+  width: 200px;
+  height: 244px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.memberInfo {
+  padding: 1rem;
+}
+.memberInfo h2 {
+  color: #1e1e1e;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.memberInfo h3 {
+  color: #046999;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.skills {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #777a7e;
+  margin: 0;
+}/*# sourceMappingURL=meetTheTeam.module.css.map */

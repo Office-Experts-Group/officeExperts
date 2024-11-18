@@ -1,0 +1,39 @@
+.goodToKnow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 6px solid #046999;
+  position: relative;
+}
+.goodToKnow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.goodToKnow .triangleDiv {
+  z-index: 2;
+  background-color: #046999;
+  width: 300px;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  margin-bottom: 2rem;
+}
+.goodToKnow .triangleDiv h2 {
+  color: #f8f8f8;
+  font-size: 1.25rem;
+  padding: 0.6rem 1rem 1rem 1rem;
+}
+.goodToKnow p {
+  padding: 2rem 15vw 0 15vw;
+  color: #f8f8f8;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.goodToKnow p:last-of-type {
+  padding: 1rem 15vw 6rem 15vw;
+}/*# sourceMappingURL=goodToKnow.module.css.map */

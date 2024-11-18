@@ -1,0 +1,15 @@
+@import "./globals.scss";
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  height: 100%;
+
+  svg {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $theme;
+    }
+  }
+}

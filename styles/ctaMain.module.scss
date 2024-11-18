@@ -1,0 +1,157 @@
+@import "./globals.scss";
+
+.contact {
+  display: flex;
+  align-items: center;
+  background-color: $theme;
+  border-radius: 0.2rem;
+  height: 25vh;
+  width: 80%;
+  margin: -4rem auto 0 auto;
+}
+
+.contactGroup {
+  display: grid;
+  grid-template-columns: 40% 1fr 1fr;
+}
+.contactText {
+  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ffffff51;
+  width: 100%;
+  height: 120%;
+}
+.svgImg {
+  position: relative;
+  &:hover {
+    animation: bounce 1s ease;
+    animation-fill-mode: forwards;
+  }
+
+  svg {
+    position: absolute;
+    color: $offWhite;
+    height: 40px;
+    width: 40px;
+    border: 2px solid $offWhite;
+    border-radius: 50%;
+    padding: 0.1rem;
+    stroke: $offWhite;
+    background-color: $theme;
+  }
+  svg:nth-child(1) {
+    top: -2.5rem;
+    left: 1rem;
+    z-index: 3;
+  }
+  svg:nth-child(2) {
+    top: -1.5rem;
+    left: -0.5rem;
+    z-index: 2;
+  }
+  svg:nth-child(3) {
+    top: -0.8rem;
+    left: 1rem;
+    border: none;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  /* First Movement: Down then Up */
+  15% {
+    transform: translateY(10px);
+  }
+  33% {
+    transform: translateY(-20px);
+  }
+
+  /* Second Movement: Down then Up */
+  48% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-10px);
+  }
+
+  /* Third Movement: Final Return */
+  81% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.phone {
+  margin-left: 5rem;
+  p {
+    color: $offWhite;
+    font-size: 0.8rem;
+  }
+  h3 {
+    color: $offWhite;
+    font-size: 2.5rem;
+  }
+}
+
+.plead {
+  place-self: center;
+  p {
+    line-height: 2rem;
+    color: $offWhite;
+    text-align: center;
+    font-weight: 500;
+  }
+  span {
+    opacity: 0.8;
+  }
+}
+
+.link {
+  place-self: center;
+  -moz-user-select: none;
+  background: $black;
+  border: medium none;
+  border-radius: 0.1rem;
+  color: $offWhite;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #046999;
+
+    &::before {
+      left: 0;
+    }
+  }
+}

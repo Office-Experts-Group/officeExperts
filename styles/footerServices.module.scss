@@ -1,0 +1,76 @@
+@import "./globals.scss";
+
+.servicesSection {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  a {
+    color: $grayText;
+    text-decoration: none;
+    transition: color 0.5s;
+    font-weight: 500;
+
+    &:hover {
+      color: $theme;
+    }
+  }
+}
+
+.mainLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  h3 {
+    color: $offWhite;
+    font-size: 1.125rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.dropdownSection {
+  position: relative;
+
+  h3 {
+    color: $grayText;
+    text-decoration: none;
+    transition: color 0.5s;
+    font-size: 1rem;
+    color: $grayText;
+    font-weight: 500;
+    margin-top: 0.8rem;
+    font-family: var(--font-aptos) !important;
+    &:hover {
+      color: $theme;
+    }
+  }
+
+  // Default collapsed state
+  .dropdownContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease-out;
+  }
+
+  // Expanded state on hover/focus
+  &:hover .dropdownContent,
+  &:focus-within .dropdownContent {
+    max-height: 300px;
+    padding: 1rem;
+  }
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}

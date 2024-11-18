@@ -1,0 +1,21 @@
+@import "./globals.scss";
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 8rem 3rem 4rem;
+  color: $grayText;
+  background-color: $black;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  a:hover {
+    color: $theme;
+  }
+}

@@ -1,0 +1,89 @@
+.pageSegment {
+  padding: 2rem 10vw;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 4rem;
+}
+.pageSegment img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(0%);
+  transition: all 0.3s ease;
+}
+.pageSegment img:hover {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.pageSegmentReverse {
+  margin: 8rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+.pageSegmentReverse img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(0%);
+  transition: all 0.3s ease;
+}
+.pageSegmentReverse img:hover {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+.pageSegmentReverse .pageSegmentCenter {
+  padding: 0;
+}
+
+.pageSegmentCenter {
+  place-self: center;
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.underline {
+  border-bottom: 6px solid #046999;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+.underline h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: -0.5rem;
+}
+
+.tickText {
+  color: #777a7e;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 1 auto;
+}
+.benefitItem .tick {
+  color: #046999;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.benefitItem a,
+.benefitItem p {
+  color: #777a7e;
+}
+.benefitItem a:hover {
+  color: #046999;
+  font-weight: 700;
+}/*# sourceMappingURL=pageSegmentCenter.module.css.map */
