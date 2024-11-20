@@ -8,7 +8,7 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
 import Promo from "./(components)/Promo";
 import Segment4Repeat from "./(components)/Segment4Repeat";
-import ExpertsAwait from "../../../../components/ ExpertsAwait";
+import ExpertsAwait from "../../../../components/ExpertsAwait";
 
 const schema = {
   "@context": "https://schema.org",
