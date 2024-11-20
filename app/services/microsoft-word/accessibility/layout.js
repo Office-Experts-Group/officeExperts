@@ -4,20 +4,20 @@ import PropTypes from "prop-types";
 export const metadata = {
   title: "Word Accessibility Solutions | Microsoft Word Accessibility",
   description:
-    "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
+    "As Excel specialists, our Word accessibility solutions seamlessly integrate with your Excel-based workflows. Our experts ensure your documents maintain accessibility standards while working harmoniously with your Excel data exports and reporting processes.",
 
   openGraph: {
     title: "Word Accessibility Solutions | Microsoft Word Accessibility",
     description:
-      "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/accessibility/",
-    siteName: "Office Experts Group",
+      "As Excel specialists, our Word accessibility solutions seamlessly integrate with your Excel-based workflows. Our experts ensure your documents maintain accessibility standards while working harmoniously with your Excel data exports and reporting processes.",
+    url: "https://www.excelexperts.com.au/services/microsoft-word/accessibility/",
+    siteName: "Excel Experts Group",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Excel Experts Group Logo",
       },
     ],
     locale: "en-AU",
@@ -25,37 +25,37 @@ export const metadata = {
   },
 
   keywords: [
-    // Core accessibility services
-    "word accessibility solutions",
-    "microsoft word accessibility",
-    "accessible word documents",
-    "word document accessibility",
-    "accessible document templates",
+    // Core accessibility services with Excel focus
+    "excel to word accessibility",
+    "microsoft word excel integration",
+    "accessible excel reports",
+    "excel data accessibility",
+    "accessible reporting templates",
 
-    // Location-based
-    "accessibility consultants sydney",
-    "accessibility services melbourne",
-    "accessibility specialists brisbane",
-    "accessibility experts perth",
+    // Location-based with Excel focus
+    "excel accessibility consultants sydney",
+    "excel document services melbourne",
+    "excel reporting specialists brisbane",
+    "excel integration experts perth",
 
-    // Service-specific long tail
-    "government document accessibility",
-    "corporate document accessibility",
-    "accessible template design",
-    "WCAG compliant documents",
-    "document accessibility standards",
+    // Service-specific long tail with Excel emphasis
+    "excel to word conversion accessibility",
+    "accessible excel reporting",
+    "integrated template design",
+    "WCAG compliant excel exports",
+    "spreadsheet accessibility standards",
 
-    // Industry-specific
-    "government accessibility solutions",
-    "enterprise document accessibility",
-    "corporate accessibility services",
-    "accessibility compliance services",
+    // Industry-specific with Excel focus
+    "financial document accessibility",
+    "data reporting accessibility",
+    "spreadsheet accessibility services",
+    "excel integration services",
 
     // Technology combinations
-    "microsoft office accessibility",
-    "word template accessibility",
-    "document accessibility automation",
-    "accessibility standards compliance",
+    "microsoft excel word integration",
+    "excel template accessibility",
+    "spreadsheet accessibility automation",
+    "excel reporting standards",
   ],
 
   twitter: {
@@ -63,12 +63,12 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Word Accessibility Solutions | Microsoft Word Accessibility",
     description:
-      "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
+      "As Excel specialists, our Word accessibility solutions seamlessly integrate with your Excel-based workflows. Our experts ensure your documents maintain accessibility standards while working harmoniously with your Excel data exports and reporting processes.",
     images: ["/logo.png"],
   },
 
   canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/accessibility/",
+    "https://www.excelexperts.com.au/services/microsoft-word/accessibility/",
   robots: {
     index: true,
     follow: true,

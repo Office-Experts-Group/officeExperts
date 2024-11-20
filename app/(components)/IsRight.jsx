@@ -22,13 +22,6 @@ const IsRight = () => {
               width={505}
               height={635}
             />
-            <Image
-              className={`${styles.imgSmall} ${styles.imgMain}`}
-              src={isRight2}
-              alt="Team collaboration on custom Office solutions"
-              width={160}
-              height={135}
-            />
           </div>
         </div>
       </AnimateOnScroll>

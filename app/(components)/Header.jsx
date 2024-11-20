@@ -34,6 +34,7 @@ const Header = () => {
   const handleMouseLeave = () => {
     setActiveDropdown(null);
   };
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div

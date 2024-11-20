@@ -15,10 +15,10 @@
     top: 0;
     left: -2rem;
     width: 2rem;
-    height: 100%;
+    height: 99.4%;
     border: 8px solid $theme;
     border-right: none;
-    border-bottom: none;
+    // border-bottom: none;
   }
 }
 
@@ -33,102 +33,6 @@
     -moz-filter: grayscale(100%);
     transition: all 0.3s ease-in-out;
   }
-}
-
-.circleButton {
-  position: absolute;
-  bottom: -1.5rem;
-  left: -3rem;
-  width: 7em;
-  height: 7rem;
-  border-radius: 50%;
-  background-color: #ffffff;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: bounce 1s ease infinite;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    border-radius: 50%;
-    border: 1px dashed rgba(255, 255, 255, 0.7);
-    animation: ringExpand 1.8s linear infinite;
-  }
-
-  // Delay the second ring
-  &::after {
-    animation-delay: 0.9s;
-  }
-
-  // Third ring
-  &::before {
-    animation-delay: 0.3s;
-  }
-}
-
-.iconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background: #ffffff;
-}
-
-@keyframes ringExpand {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  15% {
-    transform: translateY(5px);
-  }
-  33% {
-    transform: translateY(-10px);
-  }
-
-  48% {
-    transform: translateY(0);
-  }
-  66% {
-    transform: translateY(-5px);
-  }
-
-  81% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.imgSmall {
-  position: absolute;
-  bottom: -5rem;
-  left: -8.5rem;
-  z-index: 1;
 }
 
 // Start of content styles *********
@@ -153,7 +57,13 @@
 }
 
 .text {
-  color: #777a7e;
+  color: $darkGrayText;
+  line-height: 2.125rem;
+  font-size: 1.125rem;
+}
+
+.textAlone {
+  color: $darkGrayText;
   line-height: 2.125rem;
   margin-bottom: 2rem;
   font-size: 1.125rem;
@@ -163,6 +73,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .bar {
