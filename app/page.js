@@ -188,10 +188,12 @@ const Page = () => {
       <Testimonials testimonials={testimonials} />
       <Brands />
       <CTAFull />
-      <Promo
-        h2="Automate & Innovate"
-        p="Reduce costs and boost productivity with custom Microsoft Office solutions. Our experts deliver tailored automation, reporting, and integration services across Australia."
-      />
+      <div style={{ margin: "4rem 0" }}>
+        <Promo
+          h2="Automate & Innovate"
+          p="Reduce costs and boost productivity with custom Microsoft Office solutions. Our experts deliver tailored automation, reporting, and integration services across Australia."
+        />
+      </div>
       <Contact />
     </>
   );

@@ -1,5 +1,12 @@
 import React from "react";
 
+import ServiceHero from "../../components/ServiceHero";
+import ExpertsAwait from "../../components/ExpertsAwait";
+import Contact from "../../components/Contact";
+import PageSegmentMain from "./(components)/PageSegmentMain";
+import Solutions from "./(components)/Solutions";
+import SolutionsCopy from "./(components)/SolutionsCopy";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -128,6 +135,12 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title="Microsoft Development Services" />
+      <PageSegmentMain />
+      <Solutions />
+      <SolutionsCopy />
+      <ExpertsAwait />
+      <Contact />
     </>
   );
 };
