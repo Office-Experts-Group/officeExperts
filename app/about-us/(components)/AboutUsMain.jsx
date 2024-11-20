@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 import styles from "../../../styles/aboutUs.module.css";
 
 import about from "../../../public/about-img-6.webp";
-import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 const AboutUsMain = () => {

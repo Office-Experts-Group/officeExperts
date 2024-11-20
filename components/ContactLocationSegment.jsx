@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-import ContactForm from "./ContactForm";
-import QuoteForm from "./QuoteForm";
+import ContactLocation from "./ContactLocation";
+import QuoteLocation from "./QuoteLocation";
 
 import styles from "../styles/contact.module.css";
 
-const Contact = ({ isQuote }) => {
+const Contact = ({ isQuote, location }) => {
   const [activeForm, setActiveForm] = useState("contact");
 
   const handleFormSwitch = (formType) => {
@@ -41,9 +41,9 @@ const Contact = ({ isQuote }) => {
             <h2>Contact Us</h2>
             <div className={styles.description}>
               <p>
-                Get in touch with our team for general inquiries and support.
-                We&apos;re here to help with any questions you might have about
-                our services.
+                Get in touch with our team in {location} for general inquiries
+                and support. We&apos;re here to help with any questions you
+                might have about our services.
               </p>
             </div>
           </div>
@@ -77,14 +77,14 @@ const Contact = ({ isQuote }) => {
             activeForm === "contact" ? styles.visible : ""
           }`}
         >
-          <ContactForm />
+          <ContactLocation location={location} />
         </div>
         <div
           className={`${styles.formWrapper} ${
             activeForm === "quote" ? styles.visible : ""
           }`}
         >
-          <QuoteForm />
+          <QuoteLocation location={location} />
         </div>
       </div>
     </section>

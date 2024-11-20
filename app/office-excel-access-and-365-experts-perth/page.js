@@ -1,5 +1,11 @@
 import React from "react";
 
+import ServiceHero from "../../components/ServiceHero";
+import ContactLocationSegment from "../../components/ContactLocationSegment";
+import LocationPages from "../(components)/LocationPages";
+import CTAMainProps from "../(components)/CTAMainProps";
+import LocationPromos from "../(components)/LocationPromos";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -101,12 +107,32 @@ const schema = {
 };
 
 const Page = () => {
+  const location = "Perth";
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <ServiceHero title={`Excel and Access Consultants ${location}`} />
+      <LocationPages location={location} />
+      <CTAMainProps location={location} />
+      <LocationPromos location={location} />
+      <p
+        style={{
+          textAlign: "center",
+          fontStyle: "italic",
+          margin: "2rem 0 6rem 0",
+          color: "#046999;",
+          fontWeight: "700",
+        }}
+      >
+        <strong>NOTE* </strong>Our services are available Australia-wide via
+        remote access which is typically the most cost and time effective
+        method.
+      </p>
+      <ContactLocationSegment location={location} />
     </>
   );
 };

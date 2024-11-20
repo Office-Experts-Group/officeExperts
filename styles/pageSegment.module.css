@@ -155,4 +155,49 @@
 .tick:hover svg {
   stroke: #0eaa0e;
   color: #0eaa0e;
+}
+
+.btn {
+  -moz-user-select: none;
+  background: #046999;
+  border: medium none;
+  border-radius: 0.1rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+.btn:hover {
+  color: #046999;
+  border: 1px solid #046999;
+}
+.btn:hover::before {
+  left: 0;
 }/*# sourceMappingURL=pageSegment.module.css.map */
