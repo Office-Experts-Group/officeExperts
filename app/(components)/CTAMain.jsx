@@ -63,8 +63,8 @@ const CTAMain = () => {
               </p>
             </div>
 
-            <Link href="/about-us" className={styles.link}>
-              Discover More
+            <Link href="/contact-us/request-a-quote" className={styles.link}>
+              Request A Quote
             </Link>
           </div>
         </div>

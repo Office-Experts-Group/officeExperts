@@ -28,7 +28,7 @@ const HeadTop = () => {
         <div>
           <Link href="tel:+61-1300-12-20-38">
             <Image src={msg} alt="email" width={12} height={12} />
-            +61 1300 122 038
+            1300 122 038
           </Link>
         </div>
       </div>

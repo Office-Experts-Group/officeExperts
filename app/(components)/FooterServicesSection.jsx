@@ -9,8 +9,8 @@ const FooterServicesSection = () => {
       {/* Main Business Links - Always Visible */}
       <div className={styles.mainLinks}>
         <h3>Our Business</h3>
-        <Link href="/about-us">About Us</Link>
-        <Link href="/meet-the-team">Meet The Team</Link>
+        <Link href="/about-us">Our Company</Link>
+        <Link href="/meet-the-team">Our Team</Link>
         <Link href="/client-testimonials">Testimonials</Link>
         <Link href="/blog">Blog</Link>
       </div>
@@ -18,7 +18,7 @@ const FooterServicesSection = () => {
       {/* Power Platform Services Dropdown */}
       <div className={styles.dropdownSection}>
         <h3 className={styles.dropdownHeader}>
-          Our Microsoft Power Platform Services
+          Microsoft Power Platform Services
         </h3>
         <div className={styles.dropdownContent}>
           <Link href="https://www.powerplatformexperts.com.au/">
@@ -41,7 +41,7 @@ const FooterServicesSection = () => {
 
       {/* Office Services Dropdown */}
       <div className={styles.dropdownSection}>
-        <h3 className={styles.dropdownHeader}>Our Microsoft Office Services</h3>
+        <h3 className={styles.dropdownHeader}>Microsoft Office Services</h3>
         <div className={styles.dropdownContent}>
           <Link href="/services/microsoft-office">Microsoft Office</Link>
           <Link href="https://www.excelexperts.com.au/">Microsoft Excel</Link>
@@ -58,7 +58,7 @@ const FooterServicesSection = () => {
 
       {/* Other Microsoft Services Dropdown */}
       <div className={styles.dropdownSection}>
-        <h3 className={styles.dropdownHeader}>Our Other Microsoft Services</h3>
+        <h3 className={styles.dropdownHeader}>Other Microsoft Services</h3>
         <div className={styles.dropdownContent}>
           <Link href="/services/by-business-solution/cloud-based-solutions-with-azure">
             Microsoft Azure

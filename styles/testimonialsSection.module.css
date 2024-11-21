@@ -164,6 +164,21 @@
     }
   }
 }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 4rem auto -2rem auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+  border: 1px solid transparent;
+}
+.btn:hover {
+  border: 1px solid #046999;
+}
+
 .teamHeading {
   font-size: 3rem;
 }/*# sourceMappingURL=testimonialsSection.module.css.map */

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../../styles/hero.module.css";
 
@@ -59,7 +60,9 @@ const Hero = () => {
         <h1>
           Office<br></br>Experts
         </h1>
-        <button className="btn">Discover More</button>
+        <Link href={"/about-us"} className="btn">
+          Discover More
+        </Link>
       </div>
     </section>
   );

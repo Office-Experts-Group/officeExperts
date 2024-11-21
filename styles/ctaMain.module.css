@@ -8,9 +8,30 @@
   margin: -4rem auto 0 auto;
 }
 
+.contactAlternate {
+  display: flex;
+  align-items: center;
+  background-color: #046999;
+  border-radius: 0.2rem;
+  height: 25vh;
+  width: 80%;
+  margin: -4rem auto 2rem auto;
+  padding: 2rem;
+  z-index: 2;
+  position: relative;
+  justify-content: space-around;
+}
+
 .contactGroup {
   display: grid;
   grid-template-columns: 40% 1fr 1fr;
+}
+
+.contactGroupAlternate {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
 }
 
 .contactText {
@@ -18,9 +39,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.3176470588);
   width: 100%;
   height: 120%;
+  border-right: 1px solid rgba(255, 255, 255, 0.3176470588);
+}
+
+.contactTextAlternate {
+  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 120%;
+}
+.contactTextAlternate:first-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.3176470588);
+}
+
+.svgImgAlt {
+  margin: 4rem 1rem -3rem 0;
 }
 
 .svgImg {
@@ -95,6 +134,11 @@
 .phone h3 {
   color: #f8f8f8;
   font-size: 2.5rem;
+}
+
+.email p {
+  color: #f8f8f8;
+  margin-left: 3.5rem;
 }
 
 .plead {

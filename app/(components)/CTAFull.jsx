@@ -16,8 +16,8 @@ const CTAFull = () => {
         <AnimateOnScroll animation="fade-up" delay={0.1} duration={1}>
           <h2>Trust the Experts for All Your business Needs</h2>
         </AnimateOnScroll>
-        <Link href="/contact-us" className={`${styles.ctaBtn} btn`}>
-          Get Started
+        <Link href="#contact" className={`${styles.ctaBtn} btn`}>
+          Contact Us
         </Link>
       </div>
     </div>

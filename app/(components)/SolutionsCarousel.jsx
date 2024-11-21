@@ -19,17 +19,6 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft Word",
-      link: "/services/microsoft-word",
-      image: project2,
-      description: [
-        "Format and design documents",
-        "Mail merge",
-        "Template creation",
-        "Macro development",
-      ],
-    },
-    {
       title: "Microsoft PowerPoint",
       link: "/services/microsoft-powerpoint",
       image: project3,
@@ -116,6 +105,18 @@ const SolutionsCarousel = () => {
         "Upgrades and migration",
       ],
     },
+    {
+      title: "Services By Business Solution",
+      link: "/services/by-business-solution",
+      image: project4,
+      description: [
+        "Spreadsheets and databases",
+        "Coding and macros",
+        "Support and online solutions",
+        "Upgrades and migration",
+        "Document templates",
+      ],
+    },
   ];
 
   // Duplicate first few items to create seamless loop
@@ -124,7 +125,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>No Problems... Only Solutions</h2>
+        <h2>Experts In...</h2>
       </div>
 
       <div className={styles.carouselContainer}>

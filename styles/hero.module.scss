@@ -89,13 +89,17 @@
   }
 
   h1 {
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 1px;
     font-size: clamp(3rem, 10vw, 10rem);
     line-height: clamp(1rem, 8vw, 8rem);
     margin-bottom: 4rem;
+    font-family: var(--font-aptos) !important;
   }
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 225px;
     height: 70px;
   }

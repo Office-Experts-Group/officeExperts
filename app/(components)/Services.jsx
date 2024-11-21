@@ -7,9 +7,10 @@ import AnimateOnScroll from "../../components/AnimateOnScroll";
 import styles from "../../styles/services.module.css";
 
 import excel from "../../public/microsoft/excelNoBG.webp";
+import word from "../../public/microsoft/wordNoBG.webp";
 import access from "../../public/microsoft/accessNoBG.webp";
 import powerPlatform from "../../public/microsoft/powerPlatformNoBG.webp";
-import sharePoint from "../../public/microsoft/sharePointNoBG.webp";
+
 import scott from "../../public/scott.webp";
 import signature from "../../public/signature.webp";
 
@@ -63,6 +64,30 @@ const Services = () => {
             link={"/services/microsoft-excel"}
           />
           <ServicesCard
+            src={word}
+            alt={"Microsoft Word"}
+            h3={"Microsoft Word"}
+            li={[
+              "Format and design documents",
+              "Mail merge",
+              "Template creation",
+              "Macro development",
+            ]}
+            link={"/services/microsoft-word"}
+          />
+          <ServicesCard
+            src={powerPlatform}
+            alt={"Power Platform"}
+            h3={"Power Platform"}
+            li={[
+              "Web enabled Dashboard solutions which auto-refresh from your live databases.",
+              "Power BI Business Intelligence solutions.",
+              "Effortlessly drill down into your data.",
+              "Graphs, charts and other visual solutions to easily monitor the data that matters.",
+            ]}
+            link={"https://www.powerplatformexperts.com.au/"}
+          />
+          <ServicesCard
             src={access}
             alt={"Microsoft Access"}
             h3={"Microsoft Access"}
@@ -73,31 +98,6 @@ const Services = () => {
               "Integrate financial systems",
             ]}
             link={"/services/microsoft-access"}
-          />
-          <ServicesCard
-            src={powerPlatform}
-            alt={"Microsoft Power Platform"}
-            h3={"Microsoft Power Platform"}
-            li={[
-              "Web enabled Dashboard solutions which auto-refresh from your live databases.",
-              "Power BI Business Intelligence solutions.",
-              "Effortlessly drill down into your data.",
-              "Graphs, charts and other visual solutions to easily monitor the data that matters.",
-            ]}
-            link={"https://www.powerplatformexperts.com.au/"}
-          />
-          <ServicesCard
-            src={sharePoint}
-            alt={"Microsoft SharePoint"}
-            h3={"Microsoft SharePoint"}
-            li={[
-              "SharePoint solution design",
-              "Microsoft Office integration",
-              "Document management",
-              "Document storage",
-              "Online documents",
-            ]}
-            link={"/services/by-business-solution/online-solutions"}
           />
         </div>
       </AnimateOnScroll>
