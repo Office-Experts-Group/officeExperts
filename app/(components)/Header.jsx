@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "../../styles/header.module.css";
+
 import { navigationData } from "../../navigationData";
-import MobileNav from "./MobileNav";
 import ServicesDropdown from "../../components/ServicesDropdown";
 import SocialLinks from "../../components/SocialLinks";
+import MobileNav from "../../components/MobileNavigation/MobileNav";
+
 import logo from "../../public/logo300x130.webp";
 
 const Header = () => {
@@ -38,15 +40,15 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div
-        className={styles.logo}
-        style={
-          isScrolled
-            ? {
-                transform: "scale(0.5)",
-                transition: "transform 0.3s ease-in-out",
-              }
-            : {}
-        }
+        className={`${styles.logo} ${isScrolled ? styles.scrolledLogo : ""}`}
+        // style={
+        //   isScrolled
+        //     ? {
+        //         transform: "scale(0.5)",
+        //         transition: "transform 0.3s ease-in-out",
+        //       }
+        //     : {}
+        // }
       >
         <Link href="/">
           <Image
@@ -54,13 +56,13 @@ const Header = () => {
             alt="Office experts logo"
             width={300}
             height={130}
+            className={styles.logoImg}
           />
         </Link>
       </div>
 
-      <div className={styles.mobNav}>
-        <MobileNav />
-      </div>
+      {/* <MobileNav /> */}
+      <MobileNav />
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>

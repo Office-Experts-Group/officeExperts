@@ -1,19 +1,30 @@
 @import "./globals.scss";
 
 .mobileNavContainer {
-  @include desktop {
+  position: relative;
+
+  @include deskL {
     display: none;
   }
+  @include desktop {
+    display: flex;
+  }
+  @include tablet {
+    display: flex;
+  }
+  @include phone {
+    display: flex;
+  }
+  @include phoneLandscape {
+    display: flex;
+  }
+  margin-left: auto;
 }
 
 .menuButton {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
   z-index: 1000;
   background: none;
   border: none;
-  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -26,14 +37,17 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
-  max-width: 400px;
+  width: 70%;
+  max-width: 300px;
   height: 100vh;
-  background-color: white;
+  background-color: #25262a;
+  color: $offWhite;
   z-index: 999;
   transition: right 0.3s ease-in-out;
   overflow-y: auto;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .isOpen {
@@ -46,19 +60,69 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 50%;
+  right: calc(30% - 1rem);
+  transform: translateY(-90%) rotate(270deg);
+  color: $offWhite;
+  opacity: 0.5;
+  font-size: 8rem;
+  font-family: var(--font-aptos) !important;
+  font-weight: 900;
+  letter-spacing: 20px;
+  white-space: nowrap;
+  z-index: 1200;
+  animation: fadeIn 2s ease-in-out;
+
+  @include phone {
+    font-size: 6rem;
+    right: calc(30% + 3vw);
+  }
+  @include phoneLandscape {
+    right: calc(30% - 10vw);
+  }
+  @include tablet {
+    right: calc(30% - 15vw);
+  }
+  @include desktop {
+    right: calc(30% - 20vw);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .backButton {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border: none;
   background: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee6e;
+  color: $offWhite;
   cursor: pointer;
+
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
 }
 
 .backIcon {
@@ -69,8 +133,7 @@
 
 .navList {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 3rem 0.5rem 1rem 1rem;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -83,22 +146,56 @@
 }
 
 .navItem {
-  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: $offWhite;
+  font-weight: 500;
+  a,
+  button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: $offWhite;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
-.navButton,
-.navLink {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  text-align: left;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    background-color: #f5f5f5;
+.navContacts {
+  margin-top: auto;
+  padding: 0 2rem 1rem 2rem;
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
+}
+
+.navContact {
+  display: grid;
+  grid-template-columns: 5% 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  align-items: center;
+
+  span {
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+}
+
+.socialLinksContainer {
+  padding: 0.5rem 2rem 4rem 2rem;
 }

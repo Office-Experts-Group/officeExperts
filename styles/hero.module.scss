@@ -5,6 +5,10 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
+
+  @include phone {
+    height: 80vh;
+  }
 }
 
 .slider {
@@ -63,6 +67,15 @@
   bottom: -100px;
   animation: slideInLeft 7.5s infinite; // Changed from 5s to maintain proportion
   animation-delay: 0.45s; // Adjusted proportionally from 0.3s
+  @include phone {
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  @include phoneLandscape {
+    max-height: 150px;
+    max-width: 150px;
+  }
 }
 
 .shapeRight {
@@ -70,6 +83,15 @@
   bottom: -100px;
   animation: slideInRight 7.5s infinite; // Changed from 5s to maintain proportion
   animation-delay: 0.75s; // Adjusted proportionally from 0.5s
+  @include phone {
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  @include phoneLandscape {
+    max-height: 150px;
+    max-width: 150px;
+  }
 }
 
 .content {
@@ -81,7 +103,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: white;
+  color: $offWhite;
+
+  @include phone {
+    padding-bottom: 15rem;
+  }
 
   h4 {
     font-size: 1.2rem;
@@ -91,8 +117,8 @@
   h1 {
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: clamp(3rem, 10vw, 10rem);
-    line-height: clamp(1rem, 8vw, 8rem);
+    font-size: clamp(5rem, 10vw, 10rem);
+    line-height: clamp(4rem, 8vw, 8rem);
     margin-bottom: 4rem;
     font-family: var(--font-aptos) !important;
   }
@@ -166,7 +192,6 @@
   }
 }
 
-// For slideInLeft, we'll keep the same entry timing but extend the visibility
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -185,7 +210,6 @@
   }
 }
 
-// For slideInRight, we'll keep the same entry timing but start exit earlier
 @keyframes slideInRight {
   0% {
     opacity: 0;
@@ -193,11 +217,10 @@
   }
   10%,
   75% {
-    // Reduced from 80% to 75% to start exit earlier
     opacity: 1;
     transform: translate(-100px, -100px);
   }
-  85%,   // Changed from 90% to 85% to exit first
+  85%,
   100% {
     opacity: 0;
     transform: translate(0, 0);

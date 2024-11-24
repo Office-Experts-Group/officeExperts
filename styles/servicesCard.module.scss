@@ -5,9 +5,27 @@
   overflow: hidden;
   border-radius: 0.2rem;
   min-height: 300px;
-  flex: 1; /* This allows the card to grow */
-  max-width: 400px; /* Prevent cards from getting too wide */
+  flex: 1;
+  max-width: 400px;
   min-width: 300px;
+
+  @include desktop {
+    max-width: 300px;
+    min-width: 250px;
+    min-height: 250px;
+  }
+  @include tablet {
+    place-self: center;
+    max-width: 300px;
+    min-width: 250px;
+    min-height: 250px;
+  }
+  @include phoneLandscape {
+    place-self: center;
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 250px;
+  }
 }
 
 .cardImage {

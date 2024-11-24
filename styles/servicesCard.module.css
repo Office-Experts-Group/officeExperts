@@ -3,9 +3,32 @@
   overflow: hidden;
   border-radius: 0.2rem;
   min-height: 300px;
-  flex: 1; /* This allows the card to grow */
-  max-width: 400px; /* Prevent cards from getting too wide */
+  flex: 1;
+  max-width: 400px;
   min-width: 300px;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .card {
+    max-width: 300px;
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .card {
+    place-self: center;
+    max-width: 300px;
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .card {
+    place-self: center;
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 250px;
+  }
 }
 
 .cardImage {

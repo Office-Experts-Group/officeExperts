@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../styles/header.module.css";
 
 import maps from "../public/icons/maps.png";
 import msg from "../public/icons/msg.png";
 import emailSlide from "../public/icons/emailSlide.png";
-import Link from "next/link";
 
 const HeadTop = () => {
   return (
@@ -19,7 +19,7 @@ const HeadTop = () => {
           <span>Australia Wide</span>
         </div>
         <div>
-          <Link href="mailto:consult@wordexperts.com.au">
+          <Link href="mailto:consult@officeexperts.com.au">
             <Image src={emailSlide} alt="email" width={15} height={9} />
             consult@officeexperts.com.au
           </Link>

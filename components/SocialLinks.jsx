@@ -3,7 +3,7 @@ import React from "react";
 
 import styles from "../styles/socialLinks.module.css";
 
-const SocialLinks = ({}) => {
+const SocialLinks = ({ inNav }) => {
   return (
     <div className={styles.socials}>
       <Link
@@ -11,6 +11,7 @@ const SocialLinks = ({}) => {
         target="_blank"
         rel="noreferrer"
         aria-label="visit our facebook page"
+        className={inNav ? styles.socialLinkNav : ""}
       >
         <svg
           stroke="#f8f8f8"
@@ -31,6 +32,7 @@ const SocialLinks = ({}) => {
         target="_blank"
         rel="noreferrer"
         aria-label="visit our instagram page"
+        className={inNav ? styles.socialLinkNav : ""}
       >
         <svg
           stroke="#f8f8f8"
@@ -55,6 +57,7 @@ const SocialLinks = ({}) => {
         target="_blank"
         rel="noreferrer"
         aria-label="visit our twitter page"
+        className={inNav ? styles.socialLinkNav : ""}
       >
         <svg
           stroke="#f8f8f8"
@@ -77,6 +80,7 @@ const SocialLinks = ({}) => {
         target="_blank"
         rel="noreferrer"
         aria-label="visit our youtube channel"
+        className={inNav ? styles.socialLinkNav : ""}
       >
         <svg
           stroke="#f8f8f8"
@@ -100,6 +104,7 @@ const SocialLinks = ({}) => {
         target="_blank"
         rel="noreferrer"
         aria-label="Visit our LinkedIn page"
+        className={inNav ? styles.socialLinkNav : ""}
       >
         <svg
           stroke="#f8f8f8"
