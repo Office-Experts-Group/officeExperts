@@ -7,6 +7,21 @@
 @media (min-width: 767px) and (max-width: 1024px) {
   .contact {
     flex-direction: column;
+    gap: 0rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contact {
+    flex-direction: column;
+    padding: 6rem 5vw;
+    gap: 0rem;
+  }
+}
+@media (max-width: 449px) {
+  .contact {
+    flex-direction: column;
+    padding: 6rem 1rem;
+    gap: 0rem;
   }
 }
 
@@ -24,6 +39,21 @@
 .optionsWrapper {
   position: relative;
   height: 400px;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .optionsWrapper {
+    height: 300px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .optionsWrapper {
+    height: 300px;
+  }
+}
+@media (max-width: 449px) {
+  .optionsWrapper {
+    height: 300px;
+  }
 }
 
 .option {
@@ -149,6 +179,20 @@
   grid-row-gap: 2rem;
   height: 100%;
 }
+@media (max-width: 449px) {
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
 
 .honeypot {
   position: absolute;
@@ -172,6 +216,36 @@
   flex: 1;
   max-height: 100%;
   padding: 0.5rem 0;
+}
+@media (max-width: 449px) {
+  .formField:nth-of-type(1) {
+    order: 1;
+  }
+  .formField:nth-of-type(2) {
+    order: 4;
+    height: 150px;
+  }
+  .formField:nth-of-type(3) {
+    order: 2;
+  }
+  .formField:nth-of-type(4) {
+    order: 3;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .formField:nth-of-type(1) {
+    order: 1;
+  }
+  .formField:nth-of-type(2) {
+    order: 4;
+    height: 150px;
+  }
+  .formField:nth-of-type(3) {
+    order: 2;
+  }
+  .formField:nth-of-type(4) {
+    order: 3;
+  }
 }
 .formField label {
   font-weight: 500;
@@ -211,6 +285,20 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
+}
+@media (max-width: 449px) {
+  .quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .radioField .groupLabel {
@@ -301,6 +389,16 @@
   font-size: 0.8rem;
   color: #a0a2a6;
 }
+@media (max-width: 449px) {
+  .termsField {
+    order: 98;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .termsField {
+    order: 98;
+  }
+}
 .termsField .checkboxLabel {
   display: flex;
   align-items: center;
@@ -362,6 +460,33 @@
   height: 67px;
   margin-left: auto;
 }
+@media (max-width: 449px) {
+  .submitBtn {
+    order: 99;
+    align-self: flex-end;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .submitBtn {
+    order: 99;
+    align-self: flex-end;
+    margin: 1rem 0;
+  }
+}
 .submitBtn:hover {
   border: 1px solid #046999;
+}
+
+@media (max-width: 449px) {
+  .webField {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .webField {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
 }/*# sourceMappingURL=contact.module.css.map */

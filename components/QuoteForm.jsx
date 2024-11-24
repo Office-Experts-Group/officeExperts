@@ -310,7 +310,7 @@ const QuoteForm = () => {
             placeholder="e.g. Office 365, Excel 2019"
           />
         </div>
-        <div className={styles.formField}>
+        <div className={`${styles.formField} ${styles.webField}`}>
           <label htmlFor="website">Website</label>
           <input
             type="url"

@@ -9,6 +9,10 @@
   height: 350px;
   min-height: 350px;
   transition: all 0.3s ease;
+  @include phone {
+    width: 90vw;
+    margin: 0 auto;
+  }
 
   p {
     color: #777a7e;
@@ -58,5 +62,9 @@
     color: $theme;
     font-size: 0.8rem;
     letter-spacing: 1px;
+  }
+  @include phone {
+    width: 90vw;
+    margin: 0 auto;
   }
 }

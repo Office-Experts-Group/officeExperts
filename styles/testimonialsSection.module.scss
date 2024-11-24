@@ -12,6 +12,15 @@
     font-size: 3rem;
     margin: 0 auto;
   }
+  @include desktop {
+    padding: 2rem;
+  }
+  @include tablet {
+    padding: 2rem;
+  }
+  @include phoneLandscape {
+    padding: 2rem;
+  }
 }
 .box {
   margin: 0 auto 1.5rem auto;

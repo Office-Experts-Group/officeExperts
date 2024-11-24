@@ -6,6 +6,16 @@
   position: relative;
   z-index: 1;
 }
+@media (max-width: 449px) {
+  .brands {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .brands {
+    display: none;
+  }
+}
 
 .brandLink {
   display: block;

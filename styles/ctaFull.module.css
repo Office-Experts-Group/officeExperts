@@ -13,6 +13,11 @@
   flex-direction: column;
   padding: 0 20vw;
 }
+@media (max-width: 449px) {
+  .ctaWrapper {
+    padding: 0 10vw;
+  }
+}
 .ctaWrapper img {
   position: absolute;
   top: 0;
@@ -38,7 +43,7 @@
 .ctaWrapper H2 {
   position: relative;
   color: #f8f8f8;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   text-align: center;
   font-weight: 900;
   margin: 1.25rem 0 2.5rem 0;

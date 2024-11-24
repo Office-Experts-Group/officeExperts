@@ -11,6 +11,21 @@
 .promo a:hover {
   text-decoration: underline;
 }
+@media (max-width: 449px) {
+  .promo {
+    margin: 3rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .promo {
+    margin: 3rem 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .promo {
+    margin: 3rem 1rem;
+  }
+}
 
 .circle {
   width: 120px;
@@ -21,6 +36,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 449px) {
+  .circle {
+    margin-right: auto;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .circle {
+    margin-right: auto;
+  }
 }
 
 .text {
@@ -89,6 +114,16 @@
   transition: all 0.5s ease-in-out;
   font-weight: 700;
 }
+@media (max-width: 449px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .content {
+    flex-direction: column;
+  }
+}
 
 .link {
   -moz-user-select: none;
@@ -137,4 +172,14 @@
   align-items: center;
   justify-content: space-around;
   margin-right: 10vw;
+}
+@media (max-width: 449px) {
+  .container {
+    margin: 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .container {
+    margin: 0;
+  }
 }/*# sourceMappingURL=promo.module.css.map */

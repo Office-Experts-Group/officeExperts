@@ -14,6 +14,9 @@
   align-items: center;
   flex-direction: column;
   padding: 0 20vw;
+  @include phone {
+    padding: 0 10vw;
+  }
 
   img {
     position: absolute;
@@ -41,7 +44,7 @@
   H2 {
     position: relative;
     color: $offWhite;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     font-weight: 900;
     margin: 1.25rem 0 2.5rem 0;

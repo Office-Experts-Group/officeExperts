@@ -4,6 +4,29 @@
   display: grid;
   grid-template-columns: 50% 1fr;
   padding: 7rem 10vw;
+
+  @media screen and (max-width: 1300px) {
+    padding: 7rem 5vw;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 7rem 10vw;
+  }
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 7rem 5vw;
+  }
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 7rem 1rem;
+  }
 }
 
 .imgDiv {
@@ -18,7 +41,16 @@
     height: 99.4%;
     border: 8px solid $theme;
     border-right: none;
-    // border-bottom: none;
+  }
+
+  @include tablet {
+    margin-left: 10vw;
+  }
+  @include phoneLandscape {
+    margin-left: 10vw;
+  }
+  @include phone {
+    margin-left: 10vw;
   }
 }
 
@@ -32,6 +64,22 @@
     -ms-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     transition: all 0.3s ease-in-out;
+  }
+  @include desktop {
+    width: 400px;
+    height: 503px;
+  }
+  @include tablet {
+    width: 400px;
+    height: 503px;
+  }
+  @include phoneLandscape {
+    width: 300px;
+    height: 377px;
+  }
+  @include phone {
+    width: 300px;
+    height: 377px;
   }
 }
 
@@ -74,6 +122,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 2rem;
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .bar {
@@ -96,6 +148,9 @@
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    @include phone {
+      font-size: 1.25rem;
+    }
   }
 
   p {

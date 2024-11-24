@@ -4,11 +4,20 @@
   background-color: $grayBGC;
   padding: 6rem 0;
   position: relative;
+
+  @include phone {
+    padding: 3rem 0;
+  }
 }
 
 .title {
   margin-left: 10vw;
   margin-bottom: 3rem;
+
+  @include phone {
+    margin-left: 5vw;
+    margin-bottom: 2rem;
+  }
 
   p {
     color: $theme;
@@ -22,6 +31,10 @@
     color: #1e1e1e;
     font-weight: 900;
     margin: 1.25rem 0 2.5rem 0;
+
+    @include phone {
+      font-size: 2.5rem;
+    }
   }
 
   div {
@@ -35,6 +48,11 @@
   overflow: visible;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include phone {
+    padding: 0;
+    overflow-x: hidden;
+  }
 }
 
 .carouselTrack {
@@ -46,6 +64,12 @@
   padding-top: 150px;
   margin-top: -150px;
 
+  @include phone {
+    gap: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   &:hover {
     animation-play-state: paused;
   }
@@ -55,6 +79,11 @@
   flex: 0 0 350px;
   position: relative;
   margin-bottom: 2rem;
+
+  @include phone {
+    flex: 0 0 100vw;
+    margin-bottom: 1rem;
+  }
 
   &:hover {
     z-index: 30;
@@ -86,6 +115,11 @@
   pointer-events: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
+  @include phone {
+    width: 90vw;
+    font-size: 0.8rem;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -108,6 +142,11 @@
   overflow: hidden;
   cursor: pointer;
   z-index: 10;
+
+  @include phone {
+    width: 100vw;
+    height: 300px;
+  }
 
   &::before {
     content: "";
@@ -146,6 +185,11 @@
   margin-bottom: 2rem;
   transition: background-color 0.3s ease-in-out;
 
+  @include phone {
+    width: 90vw;
+    margin: 1rem auto;
+  }
+
   span {
     font-size: 0.8rem;
   }
@@ -170,54 +214,29 @@
   }
 }
 
-@media (max-width: 1200px) {
+@include desktop {
   .carouselTrack {
     animation-duration: 45s;
   }
 }
 
-@media (max-width: 768px) {
+@include tablet {
+  .carouselTrack {
+    animation-duration: 30s;
+  }
+}
+
+@include phone {
   .carouselTrack {
     animation-duration: 30s;
   }
 
-  .cardWrapper {
-    flex: 0 0 300px;
-  }
-
-  .card {
-    width: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    margin-left: 5vw;
-
-    h2 {
-      font-size: 2.5rem;
+  @keyframes slideTrack {
+    0% {
+      transform: translateX(0);
     }
-  }
-
-  .carouselTrack {
-    animation-duration: 20s;
-  }
-
-  .cardWrapper {
-    flex: 0 0 250px;
-  }
-
-  .card {
-    width: 250px;
-  }
-
-  .popIn {
-    width: 90%;
-  }
-
-  .description {
-    width: 90%;
-    font-size: 0.8rem;
-    left: 50%;
+    100% {
+      transform: translateX(calc(-100vw * 8));
+    }
   }
 }

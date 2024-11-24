@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
+
 import MobileNavButton from "./MobileNavButton";
 import MobileNavBackButton from "./MobileNavBackButton";
 import MobileNavContent from "./MobileNavContent";
-import styles from "../../styles/mobileNav.module.css";
 import MobileContact from "./MobileContact";
 import SocialLinks from "../SocialLinks";
+
+import styles from "../../styles/mobileNav.module.css";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);

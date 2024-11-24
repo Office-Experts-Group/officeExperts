@@ -8,6 +8,12 @@
   min-height: 350px;
   transition: all 0.3s ease;
 }
+@media (max-width: 449px) {
+  .card {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
 .card p {
   color: #777a7e;
   line-height: 2rem;
@@ -50,4 +56,10 @@
   color: #046999;
   font-size: 0.8rem;
   letter-spacing: 1px;
+}
+@media (max-width: 449px) {
+  .cardWrapper {
+    width: 90vw;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=testimonialsCard.module.css.map */

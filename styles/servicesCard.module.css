@@ -2,10 +2,12 @@
   position: relative;
   overflow: hidden;
   border-radius: 0.2rem;
-  min-height: 300px;
   flex: 1;
+  min-height: 300px;
   max-width: 400px;
   min-width: 300px;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
   .card {
@@ -17,9 +19,9 @@
 @media (min-width: 767px) and (max-width: 1024px) {
   .card {
     place-self: center;
-    max-width: 300px;
-    min-width: 250px;
-    min-height: 250px;
+    min-height: 300px;
+    max-width: 400px;
+    min-width: 300px;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
@@ -47,8 +49,13 @@
   transform: translateY(0);
   transition: transform 0.5s ease;
 }
-.card:hover .cardImage {
+.card:hover .cardImage, .card:focus .cardImage, .card:focus-within .cardImage, .card:active .cardImage {
   transform: translateY(-100%);
+}
+@media (hover: none) {
+  .card:active .cardImage {
+    transform: translateY(-100%);
+  }
 }
 .cardImage h3 {
   font-size: 1rem;
@@ -88,6 +95,14 @@
   transition: transform 0.5s ease;
   overflow: hidden;
 }
+.card:hover .cardContent, .card:focus .cardContent, .card:focus-within .cardContent, .card:active .cardContent {
+  transform: translateY(0);
+}
+@media (hover: none) {
+  .card:active .cardContent {
+    transform: translateY(0);
+  }
+}
 .cardContent h4 {
   font-size: 1rem;
   font-weight: 900;
@@ -120,14 +135,17 @@
   margin: auto 0 0 auto;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
+  z-index: 2;
 }
 .cardContent a:hover {
   background-color: #046999;
   filter: brightness(1.3);
   transform: scale(1.1);
 }
-.card:hover .cardContent {
-  transform: translateY(0);
+.cardContent a:focus {
+  outline: 2px solid #f8f8f8;
+  outline-offset: 2px;
 }
 .cardContent::before {
   content: "";
@@ -140,49 +158,4 @@
   filter: brightness(1.3);
   border-radius: 50%;
   z-index: -1;
-}
-
-.contactCardWrapper {
-  padding: 8rem 10vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.contactCardWrapper .card .cardImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contactCardWrapper .card .cardImage h3 {
-  line-height: 2rem;
-}
-.contactCardWrapper .card .cardImage p {
-  margin-top: 1rem;
-  color: #777a7e;
-  line-height: 2rem;
-}
-.contactCardWrapper .card .cardContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contactCardWrapper .card .cardContent h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.contactCardWrapper .card .cardContent li {
-  margin-top: 1rem;
-  list-style-type: none;
-}
-.contactCardWrapper .card .cardContent a {
-  margin: 0.8rem auto -1rem auto;
-  align-self: center;
-}
-.contactCardWrapper .card .cardContent p {
-  max-width: 80%;
-  line-height: 2rem;
 }/*# sourceMappingURL=servicesCard.module.css.map */
