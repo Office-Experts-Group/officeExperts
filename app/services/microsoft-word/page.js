@@ -189,10 +189,12 @@ const Page = () => {
       <Testimonials testimonials={testimonials} />
       <Brands />
       <CTAFull />
-      <Promo
-        h2="Master Your Documents"
-        p="Professional Microsoft Word solutions to protect your brand, automate workflows, and empower your team to create consistent, high-quality documentation."
-      />
+      <div style={{ padding: "3rem 0" }}>
+        <Promo
+          h2="Master Your Documents"
+          p="Professional Microsoft Word solutions to protect your brand, automate workflows, and empower your team to create consistent, high-quality documentation."
+        />
+      </div>
       <Contact />
     </>
   );

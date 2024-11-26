@@ -9,9 +9,12 @@
   height: 350px;
   min-height: 350px;
   transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; // Removes default mobile tap highlight
+  tabindex: 0; // Makes it focusable
+
   @include phone {
-    width: 90vw;
-    margin: 0 auto;
+    max-width: 90vw;
   }
 
   p {
@@ -22,25 +25,48 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
-    max-height: calc(2rem * 4); // line-height * number of lines
+    max-height: calc(2rem * 4);
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
     }
   }
 
-  &:hover {
-    border: 2px solid $theme;
-    border-bottom: 10px solid $theme;
+  // For devices that support hover
+  @media (hover: hover) {
+    &:hover {
+      border: 2px solid $theme;
+      border-bottom: 10px solid $theme;
 
-    p {
-      max-height: none;
-      -webkit-line-clamp: unset;
-      overflow-y: auto;
+      p {
+        max-height: none;
+        -webkit-line-clamp: unset;
+        overflow-y: auto;
+      }
+
+      img {
+        margin-top: 1rem;
+      }
     }
+  }
 
-    img {
-      margin-top: 1rem;
+  // For touch devices
+  @media (hover: none) {
+    &:focus,
+    &:active {
+      border: 2px solid $theme;
+      border-bottom: 10px solid $theme;
+      outline: none;
+
+      p {
+        max-height: none;
+        -webkit-line-clamp: unset;
+        overflow-y: auto;
+      }
+
+      img {
+        margin-top: 1rem;
+      }
     }
   }
 

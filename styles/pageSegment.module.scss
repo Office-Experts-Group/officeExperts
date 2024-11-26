@@ -6,6 +6,18 @@
   display: flex;
   gap: 4rem;
   margin: 8rem;
+  @include phone {
+    flex-direction: column;
+    margin: 6rem 1rem;
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+    margin: 6rem 1rem;
+  }
+  @include tablet {
+    flex-direction: column;
+    margin: 6rem 4rem;
+  }
 }
 
 .imgWrapper {
@@ -22,6 +34,16 @@
     &:hover {
       filter: grayscale(100%);
     }
+  }
+
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
   }
 }
 

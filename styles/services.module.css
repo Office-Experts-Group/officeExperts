@@ -60,6 +60,10 @@
     padding-right: 0;
   }
 }
+.content a {
+  font-weight: 700;
+  color: #046999;
+}
 
 .subBox {
   border-bottom: 6px solid #046999;

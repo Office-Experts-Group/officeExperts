@@ -18,6 +18,27 @@
   filter: grayscale(100%);
   transition: all 0.3s ease;
 }
+@media (max-width: 449px) {
+  .pageSegment img {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+  }
+}
 
 .pageSegmentCentered {
   scroll-margin-top: 100px;

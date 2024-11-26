@@ -63,3 +63,34 @@
   color: $darkGrayText;
   margin: 0;
 }
+
+// .content {
+//   display: grid;
+//   grid-template-columns: 50% 1fr;
+
+//   p {
+//     color: $darkGrayText;
+//     line-height: 2rem;
+//     font-size: 1.125rem;
+//   }
+
+//   h2 {
+//     margin-bottom: 1.5rem;
+//   }
+
+//   .underline {
+//     border-bottom: 6px solid $theme;
+//     margin-bottom: 2rem;
+//     width: fit-content;
+//     p {
+//       margin-bottom: -0.8rem;
+//       color: $black;
+//       font-weight: 700;
+//       font-size: 1.5rem;
+//     }
+//   }
+
+//   .teamMember {
+//     margin: 0 auto;
+//   }
+// }

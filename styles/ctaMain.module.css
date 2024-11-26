@@ -40,6 +40,52 @@
   }
 }
 
+.contactAlternate {
+  display: flex;
+  align-items: center;
+  background-color: #046999;
+  border-radius: 0.2rem;
+  height: 25vh;
+  width: 80%;
+  margin: -4rem auto 2rem auto;
+  padding: 2rem;
+  z-index: 2;
+  position: relative;
+  justify-content: space-around;
+}
+@media (max-width: 449px) {
+  .contactAlternate {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 2rem 1rem;
+    margin: -4rem auto 0 auto;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contactAlternate {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 2rem 1rem;
+    margin: -4rem auto 0 auto;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contactAlternate {
+    flex-direction: column;
+    height: auto;
+    width: 85%;
+    padding: 2rem 3rem;
+    margin: -4rem auto 0 auto;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .contactAlternate {
+    width: 95%;
+  }
+}
+
 .contactGroup {
   display: grid;
   grid-template-columns: 40% 1fr 1fr;
@@ -106,6 +152,86 @@
     height: auto;
     gap: 1rem;
     padding: 1rem 1rem 0 1rem;
+  }
+}
+
+.contactGroupAlternate {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+}
+@media (max-width: 449px) {
+  .contactGroupAlternate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contactGroupAlternate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contactGroupAlternate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.contactTextAlternate {
+  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.contactTextAlternate:first-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.3176470588);
+}
+@media (max-width: 449px) {
+  .contactTextAlternate:first-of-type {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3176470588);
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contactTextAlternate:first-of-type {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3176470588);
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contactTextAlternate:first-of-type {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3176470588);
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
   }
 }
 
@@ -205,8 +331,131 @@
   }
 }
 
+.svgImgAlt {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  margin: 3rem 0 -3rem 0;
+}
+@media (max-width: 449px) {
+  .svgImgAlt {
+    width: 80px;
+    height: 60px;
+    margin: 1rem 0 -2.5rem 0.5rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .svgImgAlt {
+    width: 80px;
+    height: 60px;
+    margin: 1rem 0 -2.5rem 0.5rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .svgImgAlt {
+    width: 80px;
+    height: 60px;
+    margin: 2.5rem 0 -2.5rem 0.5rem;
+  }
+}
+.svgImgAlt:hover {
+  animation: bounce 1s ease;
+  animation-fill-mode: forwards;
+}
+.svgImgAlt svg {
+  position: absolute;
+  color: #f8f8f8;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #f8f8f8;
+  border-radius: 50%;
+  padding: 0.1rem;
+  stroke: #f8f8f8;
+  background-color: #046999;
+}
+@media (max-width: 449px) {
+  .svgImgAlt svg {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .svgImgAlt svg {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .svgImgAlt svg {
+    height: 35px;
+    width: 35px;
+  }
+}
+.svgImgAlt svg:nth-child(1) {
+  top: -2.5rem;
+  left: 1rem;
+  z-index: 3;
+}
+.svgImgAlt svg:nth-child(2) {
+  top: -1.5rem;
+  left: -0.5rem;
+  z-index: 2;
+}
+.svgImgAlt svg:nth-child(3) {
+  top: -0.8rem;
+  left: 1rem;
+  border: none;
+  height: 45px;
+  width: 45px;
+}
+@media (max-width: 449px) {
+  .svgImgAlt svg:nth-child(3) {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .svgImgAlt svg:nth-child(3) {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .svgImgAlt svg:nth-child(3) {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .svgImgAlt {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-right: none;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .svgImgAlt {
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: none;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+.svgWrapper {
+  display: flex;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .phone {
-  text-align: center;
   margin: 0;
 }
 @media (max-width: 449px) {
@@ -229,7 +478,7 @@
 }
 .phone p {
   color: #f8f8f8;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 449px) {
@@ -257,6 +506,7 @@
 }
 @media (max-width: 449px) {
   .phone h3 {
+    font-size: 2rem;
     font-family: var(--font-aptos) !important;
   }
 }
@@ -293,6 +543,19 @@
 }
 .plead span {
   font-weight: 700;
+}
+
+.email {
+  color: #f8f8f8;
+  width: 70%;
+  margin-left: auto;
+  text-align: center;
+}
+@media (max-width: 449px) {
+  .email {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .link {

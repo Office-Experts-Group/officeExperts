@@ -22,22 +22,6 @@ const IsRight = () => {
               width={505}
               height={635}
             />
-            {/* <div className={styles.circleButton}>
-              <span className={styles.iconWrapper}>
-                <Image
-                  src={idea}
-                  alt="Icon"
-                  style={{ width: "auto", height: "auto" }}
-                />
-              </span>
-            </div> */}
-            <Image
-              className={`${styles.imgSmall} ${styles.imgMain}`}
-              src={isRight2}
-              alt="someone holding a newspaper"
-              width={160}
-              height={135}
-            />
           </div>
         </div>
       </AnimateOnScroll>

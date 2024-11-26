@@ -188,10 +188,12 @@ const Page = () => {
       <Testimonials testimonials={testimonials} />
       <Brands />
       <CTAFull />
-      <Promo
-        h2="We Deliver the Best Quality"
-        p="Our Excel Experts team is a dedicated department of the Office Experts Group to handle all your Microsoft Excel requirements"
-      />
+      <div style={{ padding: "3rem 0" }}>
+        <Promo
+          h2="We Deliver the Best Quality"
+          p="Our Excel Experts team is a dedicated department of the Office Experts Group to handle all your Microsoft Excel requirements"
+        />
+      </div>
       <Contact />
     </>
   );

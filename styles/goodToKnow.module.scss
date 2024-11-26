@@ -41,5 +41,12 @@
     &:last-of-type {
       padding: 1rem 15vw 6rem 15vw;
     }
+
+    @include phone {
+      padding: 2rem 1rem 0 1rem;
+      &:last-of-type {
+        padding: 2rem 1rem 6rem 1rem;
+      }
+    }
   }
 }

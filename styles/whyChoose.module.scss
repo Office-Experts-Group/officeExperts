@@ -8,6 +8,16 @@
   gap: 3rem;
   background-color: $grayBGC;
   overflow: hidden;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .semi {

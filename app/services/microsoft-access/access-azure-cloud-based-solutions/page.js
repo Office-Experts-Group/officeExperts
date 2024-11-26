@@ -11,6 +11,7 @@ import PageSegment7 from "./(components)/PageSegment7";
 import PageSegment8 from "./(components)/PageSegment8";
 import Contact from "../../../../components/Contact";
 import Promo from "../../../../components/Promo";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -182,6 +183,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Azure Cloud Based Solutions" />
       <PageSegmentMain2 />
       <PageSegment3 />

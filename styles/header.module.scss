@@ -351,5 +351,8 @@
   transition: all 0.5s ease;
   @include phone {
     transform: scale(1);
+    img {
+      margin: 0.5rem 0 0.5rem -0.5rem;
+    }
   }
 }

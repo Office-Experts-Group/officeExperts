@@ -5,6 +5,23 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (min-width: 767px) and (max-width: 1024px) {
+  .servicePageCards {
+    padding: 3rem 2vw 4rem 2vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .servicePageCards {
+    padding: 1rem;
+    margin: 0rem;
+  }
+}
+@media (max-width: 449px) {
+  .servicePageCards {
+    padding: 1rem;
+    margin: 0rem;
+  }
+}
 
 .card {
   flex: 1 1 280px;
@@ -21,6 +38,16 @@
   flex-direction: column;
   flex: 1;
   cursor: pointer;
+}
+@media (max-width: 449px) {
+  .card {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .card {
+    display: none;
+  }
 }
 
 .content {
@@ -56,6 +83,11 @@
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 449px) {
+  .content {
+    padding: 1rem;
+  }
+}
 
 .icon {
   margin: 2rem 0 1rem 0;
@@ -63,12 +95,22 @@
   height: 60px;
   transition: filter 0.3s ease-in-out;
 }
+@media (max-width: 449px) {
+  .icon {
+    display: none;
+  }
+}
 
 .imageWrapper {
   position: relative !important;
   width: 100%;
   aspect-ratio: 7/4;
   overflow: hidden;
+}
+@media (max-width: 449px) {
+  .imageWrapper {
+    display: none;
+  }
 }
 
 .mainImage {

@@ -136,7 +136,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>No Problems... Only Solutions</h2>
+        <h2>Experts In...</h2>
       </div>
 
       <div className={styles.carouselContainer}>

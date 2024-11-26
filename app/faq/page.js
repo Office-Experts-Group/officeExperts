@@ -1,5 +1,12 @@
 import React from "react";
 
+import FAQSection from "../../components/FAQSection";
+
+import faqs from "../../faqs/general";
+import ServiceHero from "../../components/ServiceHero";
+import ExpertsAwait from "../../components/ExpertsAwait";
+import Contact from "../../components/Contact";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -197,6 +204,19 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <ServiceHero title={"FAQ'S"} />
+      <div
+        style={{
+          margin: "6rem 10vw",
+          "@media (max-width: 768px)": {
+            margin: "6rem 2vw",
+          },
+        }}
+      >
+        <FAQSection faqs={faqs} />
+      </div>
+      <ExpertsAwait />
+      <Contact />
     </>
   );
 };

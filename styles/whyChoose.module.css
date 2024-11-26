@@ -8,6 +8,18 @@
   background-color: #f2f3f5;
   overflow: hidden;
 }
+@media (max-width: 449px) {
+  .whyChoose {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .whyChoose {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .semi {
   position: absolute;

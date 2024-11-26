@@ -16,6 +16,36 @@
   filter: grayscale(100%);
   transition: all 0.3s ease;
 }
+@media (max-width: 449px) {
+  .pageSegment img {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegment img {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment img {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment {
+    flex-direction: column-reverse;
+  }
+}
 
 .pageSegmentGrid {
   scroll-margin-top: 100px;
@@ -54,6 +84,26 @@
   filter: grayscale(100%);
   transition: all 0.3s ease;
 }
+@media (max-width: 449px) {
+  .pageSegmentCenter img {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegmentCenter {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegmentCenter {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegmentCenter {
+    flex-direction: column-reverse;
+  }
+}
 
 .content {
   flex: 1;
@@ -61,6 +111,9 @@
 .content p {
   color: #777a7e;
   line-height: 2rem;
+}
+.content p:first-of-type {
+  margin-bottom: 1rem;
 }
 .content a {
   color: #046999;
@@ -79,13 +132,6 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: -0.5rem;
-}
-
-.points {
-  display: grid;
-  grid-template-columns: 50% 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
 }
 
 .pointsGrid {

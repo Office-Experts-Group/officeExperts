@@ -62,7 +62,7 @@ const Segment4Repeat = () => {
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="scale-up" duration={1} delay={0.2}>
-          <div className="image-wrapper">
+          <div className={styles.imgWrapper}>
             <Image
               src={eyes}
               alt="person clicking a computer mouse"

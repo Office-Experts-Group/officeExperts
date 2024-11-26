@@ -9,6 +9,16 @@
   background-color: $black;
   font-size: 0.8rem;
   letter-spacing: 1px;
+
+  @include phone {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @include phoneLandscape {
+    padding: 1rem;
+    text-align: center;
+  }
 }
 
 .link {

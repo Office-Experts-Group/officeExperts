@@ -1,6 +1,6 @@
 .promo {
   scroll-margin-top: 200px;
-  margin: 3rem 8rem;
+  margin: 6rem 8rem;
   display: flex;
   align-items: center;
 }
@@ -13,17 +13,21 @@
 }
 @media (max-width: 449px) {
   .promo {
-    margin: 3rem 1rem;
+    margin: 6rem 1rem;
+    flex-direction: column;
+    text-align: center;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .promo {
-    margin: 3rem 1rem;
+    margin: 6rem 1rem;
+    flex-direction: column;
   }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .promo {
-    margin: 3rem 1rem;
+    margin: 6rem 1rem;
+    flex-direction: column;
   }
 }
 
@@ -39,12 +43,12 @@
 }
 @media (max-width: 449px) {
   .circle {
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .circle {
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 
@@ -70,6 +74,18 @@
 }
 .text a:hover {
   text-decoration: underline;
+}
+@media (max-width: 449px) {
+  .text {
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .text {
+    margin-bottom: 2rem;
+    align-items: center;
+  }
 }
 
 .bar {
@@ -97,6 +113,21 @@
   filter: grayscale(100%);
   transition: all 0.5s ease-in-out;
 }
+@media (max-width: 449px) {
+  .img {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .img {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .img {
+    display: none;
+  }
+}
 
 .content {
   display: flex;
@@ -117,11 +148,13 @@
 @media (max-width: 449px) {
   .content {
     flex-direction: column;
+    margin: 0 auto;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .content {
     flex-direction: column;
+    margin: 0 auto;
   }
 }
 
@@ -181,5 +214,16 @@
 @media (min-width: 450px) and (max-width: 766px) {
   .container {
     margin: 0;
+  }
+}
+
+@media (max-width: 449px) {
+  .imgWrapper {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .imgWrapper {
+    display: none;
   }
 }/*# sourceMappingURL=promo.module.css.map */

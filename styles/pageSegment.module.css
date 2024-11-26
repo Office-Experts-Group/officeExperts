@@ -5,6 +5,24 @@
   gap: 4rem;
   margin: 8rem;
 }
+@media (max-width: 449px) {
+  .pageSegment {
+    flex-direction: column;
+    margin: 6rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegment {
+    flex-direction: column;
+    margin: 6rem 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment {
+    flex-direction: column;
+    margin: 6rem 4rem;
+  }
+}
 
 .imgWrapper {
   z-index: 2;
@@ -22,6 +40,21 @@
 }
 .imgWrapper img:hover {
   filter: grayscale(100%);
+}
+@media (max-width: 449px) {
+  .imgWrapper {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .imgWrapper {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .imgWrapper {
+    display: none;
+  }
 }
 
 .contentWrapper {

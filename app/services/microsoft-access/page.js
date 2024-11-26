@@ -161,10 +161,12 @@ const Page = () => {
       <Testimonials testimonials={testimonials} />
       <Brands />
       <CTAFull />
-      <Promo
-        h2="We Deliver the Best Quality"
-        p="Access Experts is our dedicated team for all your Microsoft Access needs "
-      />
+      <div style={{ padding: "3rem 0" }}>
+        <Promo
+          h2="We Deliver the Best Quality"
+          p="Access Experts is our dedicated team for all your Microsoft Access needs "
+        />
+      </div>
       <Contact />
     </>
   );

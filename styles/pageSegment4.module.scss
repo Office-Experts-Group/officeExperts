@@ -17,6 +17,25 @@
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+    @include phone {
+      max-width: 90vw;
+    }
+    @include phoneLandscape {
+      max-width: 90vw;
+    }
+    @include tablet {
+      max-width: 90vw;
+    }
+  }
+
+  @include phone {
+    flex-direction: column-reverse;
+  }
+  @include phoneLandscape {
+    flex-direction: column-reverse;
+  }
+  @include tablet {
+    flex-direction: column-reverse;
   }
 }
 
@@ -59,6 +78,21 @@
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+    @include phone {
+      max-width: 90vw;
+    }
+  }
+
+  @include phone {
+    flex-direction: column-reverse;
+  }
+
+  @include phoneLandscape {
+    flex-direction: column-reverse;
+  }
+
+  @include tablet {
+    flex-direction: column-reverse;
   }
 }
 
@@ -68,6 +102,10 @@
   p {
     color: $darkGrayText;
     line-height: 2rem;
+
+    &:first-of-type {
+      margin-bottom: 1rem;
+    }
   }
 
   a {
@@ -92,13 +130,6 @@
     font-weight: 700;
     margin-bottom: -0.5rem;
   }
-}
-
-.points {
-  display: grid;
-  grid-template-columns: 50% 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
 }
 
 .pointsGrid {

@@ -7,11 +7,13 @@
   height: 350px;
   min-height: 350px;
   transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  tabindex: 0;
 }
 @media (max-width: 449px) {
   .card {
-    width: 90vw;
-    margin: 0 auto;
+    max-width: 90vw;
   }
 }
 .card p {
@@ -28,17 +30,34 @@
 .card p::-webkit-scrollbar {
   display: none;
 }
-.card:hover {
-  border: 2px solid #046999;
-  border-bottom: 10px solid #046999;
+@media (hover: hover) {
+  .card:hover {
+    border: 2px solid #046999;
+    border-bottom: 10px solid #046999;
+  }
+  .card:hover p {
+    max-height: none;
+    -webkit-line-clamp: unset;
+    overflow-y: auto;
+  }
+  .card:hover img {
+    margin-top: 1rem;
+  }
 }
-.card:hover p {
-  max-height: none;
-  -webkit-line-clamp: unset;
-  overflow-y: auto;
-}
-.card:hover img {
-  margin-top: 1rem;
+@media (hover: none) {
+  .card:focus, .card:active {
+    border: 2px solid #046999;
+    border-bottom: 10px solid #046999;
+    outline: none;
+  }
+  .card:focus p, .card:active p {
+    max-height: none;
+    -webkit-line-clamp: unset;
+    overflow-y: auto;
+  }
+  .card:focus img, .card:active img {
+    margin-top: 1rem;
+  }
 }
 .card img {
   align-self: end;

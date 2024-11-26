@@ -42,17 +42,17 @@
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .optionsWrapper {
-    height: 300px;
+    height: 320px;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .optionsWrapper {
-    height: 300px;
+    height: 320px;
   }
 }
 @media (max-width: 449px) {
   .optionsWrapper {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -95,6 +95,16 @@
 }
 .option:not(.active) h2 {
   font-family: var(--font-aptos);
+}
+@media (max-width: 449px) {
+  .option:not(.active) h2 {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .option:not(.active) h2 {
+    margin-top: 1rem;
+  }
 }
 .option:not(.active) h2:hover {
   color: #046999;

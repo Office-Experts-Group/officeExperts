@@ -20,6 +20,21 @@
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+
+    @include phone {
+      max-width: 90vw;
+    }
+  }
+
+  @include phone {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+  }
+  @include phoneLandscape {
+    flex-direction: column-reverse;
+  }
+  @include tablet {
+    flex-direction: column-reverse;
   }
 }
 

@@ -49,6 +49,11 @@
   @include phone {
     padding-right: 0;
   }
+
+  a {
+    font-weight: 700;
+    color: $theme;
+  }
 }
 
 .subBox {

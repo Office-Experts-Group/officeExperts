@@ -37,7 +37,7 @@ const AboutUsMain = () => {
         <div className={styles.imgWrapper}>
           <Image src={about} alt="About Us" width={570} height={607} priority />
           <div className={styles.insert}>
-            <p>Call us to discuss you needs...</p>
+            <p>Call us to discuss your needs...</p>
             <Link href="tel:+61-1300-10-28-10" className={styles.phone}>
               <svg
                 stroke="currentColor"

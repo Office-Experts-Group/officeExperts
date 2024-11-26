@@ -6,8 +6,6 @@ import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 import styles from "../../../../styles/isRight.module.css";
 
 import isRight from "../../../../public/isRight.webp";
-import isRight2 from "../../../../public/isRight2.webp";
-import idea from "../../../../public/icons/idea.png";
 
 const IsRight = () => {
   return (
@@ -21,22 +19,6 @@ const IsRight = () => {
               alt="person using a laptop"
               width={505}
               height={635}
-            />
-            <div className={styles.circleButton}>
-              <span className={styles.iconWrapper}>
-                <Image
-                  src={idea}
-                  alt="Icon"
-                  style={{ width: "auto", height: "auto" }}
-                />
-              </span>
-            </div>
-            <Image
-              className={`${styles.imgSmall} ${styles.imgMain}`}
-              src={isRight2}
-              alt="someone holding a newspaper"
-              width={160}
-              height={135}
             />
           </div>
         </div>

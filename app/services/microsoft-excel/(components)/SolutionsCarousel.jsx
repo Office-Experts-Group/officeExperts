@@ -100,10 +100,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <div>
-          <p>No Problems</p>
-        </div>
-        <h2>Only Solutions</h2>
+        <h2>Experts In...</h2>
       </div>
 
       <div className={styles.carouselContainer}>

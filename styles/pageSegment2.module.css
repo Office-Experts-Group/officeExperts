@@ -1,14 +1,53 @@
 @charset "UTF-8";
 .pageSegment {
+  position: relative;
   scroll-margin-top: 100px;
   display: grid;
   grid-template-columns: 66% 1fr;
   gap: 2rem;
-  padding: 10rem 10vw 4rem 10vw;
+  padding: 4rem 10vw;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment {
+    padding: 4rem 2vw;
+    gap: 0rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pageSegment {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 4rem 2vw;
+  }
 }
 .pageSegment img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .pageSegment img {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegment img {
+    max-width: 70vw;
+    padding: 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegment img {
+    max-width: 95vw;
+    padding: 0;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegment img {
+    max-width: 95vw;
+    padding: 0;
+  }
 }
 
 .pageSegmentReverse {
@@ -20,7 +59,7 @@
 }
 .pageSegmentReverse img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   margin-bottom: -4rem;
 }
 
@@ -46,6 +85,26 @@
 }
 .contents .buttonWrapper button {
   padding: 1.5rem 3rem;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .contents {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contents {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contents {
+    display: none;
+  }
+}
+@media (max-width: 449px) {
+  .contents {
+    display: none;
+  }
 }
 
 .contentLink {
@@ -99,4 +158,24 @@ a:hover .contentLink p::after {
   color: #777a7e;
   line-height: 2rem;
   max-width: 90%;
-} /*# sourceMappingURL=pageSegment2.module.css.map */
+}
+@media (max-width: 449px) {
+  .info {
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .info {
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .info {
+    padding: 1rem 0 6rem 0;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .info {
+    padding: 0 0 0 10vw;
+  }
+}/*# sourceMappingURL=pageSegment2.module.css.map */

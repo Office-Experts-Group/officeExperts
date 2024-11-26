@@ -8,13 +8,21 @@ const ContactDetails = () => {
     <div className={styles.contactCardWrapper}>
       <div className={styles.card}>
         <div className={styles.cardImage}>
-          <h3>Company Details</h3>
+          <h3
+            style={{
+              paddingBottom: "1rem",
+              fontSize: "2rem",
+              lineHeight: "1.2",
+            }}
+          >
+            Company Details
+          </h3>
           <p>Name: Brayalei Pty Ltd</p>
           <p>ABN: 32 093 067 737</p>
           <p>ACN: 093 067 737</p>
         </div>
 
-        <div className={styles.cardContent}>
+        <div className={`${styles.cardContent} ${styles.contentAlt}`}>
           <h4>Trading As:</h4>
           <ul>
             <li>Office Experts Group</li>
@@ -26,12 +34,12 @@ const ContactDetails = () => {
 
       <div className={styles.card}>
         <div className={styles.cardImage}>
-          <h3>
+          <h3 style={{ margin: "0", fontSize: "2rem", lineHeight: "1.2" }}>
             Frequently<br></br>Asked Questions
           </h3>
         </div>
 
-        <div className={styles.cardContent}>
+        <div className={`${styles.cardContent} ${styles.contentAlt}`}>
           <h3>Visit our</h3>
           <p>
             <Link href={"https://www.officeexperts.com.au/faq"}>FAQ Page</Link>

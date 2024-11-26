@@ -361,4 +361,7 @@
   .scrolledLogo {
     transform: scale(1);
   }
+  .scrolledLogo img {
+    margin: 0.5rem 0 0.5rem -0.5rem;
+  }
 }/*# sourceMappingURL=header.module.css.map */

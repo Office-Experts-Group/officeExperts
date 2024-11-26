@@ -1,14 +1,43 @@
 @import "./globals.scss";
 
 .pageSegment {
+  position: relative;
   scroll-margin-top: 100px;
   display: grid;
   grid-template-columns: 66% 1fr;
   gap: 2rem;
   padding: 4rem 10vw;
 
+  @include tablet {
+    padding: 4rem 2vw;
+    gap: 0rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 4rem 2vw;
+  }
+
   img {
     object-fit: cover;
+    @include desktop {
+      display: none;
+    }
+    @include tablet {
+      max-width: 70vw;
+      padding: 0;
+    }
+
+    @include phoneLandscape {
+      max-width: 95vw;
+      padding: 0;
+    }
+    @include phone {
+      max-width: 95vw;
+      padding: 0;
+    }
   }
 }
 
@@ -47,6 +76,19 @@
     button {
       padding: 1.5rem 3rem;
     }
+  }
+
+  @include desktop {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
   }
 }
 
@@ -109,5 +151,18 @@ a:hover {
     color: $darkGrayText;
     line-height: 2rem;
     max-width: 90%;
+  }
+
+  @include phone {
+    padding-left: 1rem;
+  }
+  @include phoneLandscape {
+    padding-left: 1rem;
+  }
+  @include tablet {
+    padding: 1rem 0 6rem 0;
+  }
+  @include desktop {
+    padding: 0 0 0 10vw;
   }
 }

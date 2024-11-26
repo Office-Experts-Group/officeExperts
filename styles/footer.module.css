@@ -6,6 +6,20 @@
   padding: 6rem 2rem 6rem 3rem;
   overflow: hidden;
 }
+@media (max-width: 449px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}
 
 .bgImg {
   position: absolute;

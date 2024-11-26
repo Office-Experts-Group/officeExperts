@@ -35,13 +35,13 @@
   position: relative;
   height: 400px;
   @include tablet {
-    height: 300px;
+    height: 320px;
   }
   @include phoneLandscape {
-    height: 300px;
+    height: 320px;
   }
   @include phone {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -89,6 +89,12 @@
   &:not(.active) {
     h2 {
       font-family: var(--font-aptos);
+      @include phone {
+        margin-top: 1rem;
+      }
+      @include phoneLandscape {
+        margin-top: 1rem;
+      }
     }
     h2:hover {
       color: $theme;

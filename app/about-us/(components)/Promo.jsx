@@ -25,7 +25,7 @@ const Promo = () => {
               keeping you informed every step of the way.
             </p>
             <p>
-              We realize that our success is hinged on our ability to ensure
+              We realise that our success is hinged on our ability to ensure
               your success, and succeed we shall. Working with us is a win-win
               situation — with nothing to lose and everything to gain! We work
               hard to ensure it!

@@ -149,7 +149,9 @@ const Page = () => {
       <WhyChooseUs />
       <MeetTheTeamSlider />
       <ExpertsAwait />
-      <Promo />
+      <div style={{ margin: "6rem 0" }}>
+        <Promo />
+      </div>
       <Contact />
     </>
   );

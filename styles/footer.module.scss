@@ -7,6 +7,18 @@
   background-color: $footerBGC;
   padding: 6rem 2rem 6rem 3rem;
   overflow: hidden;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 }
 
 .bgImg {
