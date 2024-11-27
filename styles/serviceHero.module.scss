@@ -100,13 +100,13 @@
 
   @include tablet {
     font-size: 2.5rem;
-    line-height: 3.5rem;
+    line-height: 4rem;
     max-width: 80vw;
   }
 
   @include phoneLandscape {
     font-size: 2.5rem;
-    line-height: 3rem;
+    line-height: 4rem;
     max-width: 90vw;
   }
   @include phone {

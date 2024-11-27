@@ -105,6 +105,16 @@
   gap: 1rem;
   margin-top: 2rem;
 }
+@media (max-width: 449px) {
+  .points {
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .points {
+    margin-left: 1rem;
+  }
+}
 
 .pointsGrid {
   display: grid;
@@ -233,4 +243,16 @@
 }
 .btn:hover::before {
   left: 0;
+}
+
+@media (max-width: 449px) {
+  .withImg {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .withImg .imgWrapper {
+    display: flex;
+    margin: 0 auto;
+    border: none;
+  }
 }/*# sourceMappingURL=pageSegment.module.css.map */

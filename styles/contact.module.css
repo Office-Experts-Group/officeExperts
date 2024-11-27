@@ -382,6 +382,12 @@
   cursor: pointer;
 }
 
+.refField {
+  grid-column: span 2;
+  display: flex;
+  gap: 1rem;
+}
+
 .uploadField label {
   font-weight: 500;
 }
@@ -394,6 +400,18 @@
 }
 .uploadField input {
   margin-top: 0.5rem;
+}
+@media (max-width: 449px) {
+  .uploadField {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .uploadField {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .termsField {

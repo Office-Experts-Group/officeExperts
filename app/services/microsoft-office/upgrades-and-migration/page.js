@@ -24,7 +24,7 @@ const schema = {
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
-        "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300 10 28 10",
+        "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300 102 810",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration/#breadcrumb",
@@ -101,12 +101,12 @@ const schema = {
       "@id": "https://www.officeexperts.com.au/#organization",
       name: "Office Experts Group",
       url: "https://www.officeexperts.com.au/",
-      telephone: "1300 10 28 10",
+      telephone: "1300 102 810",
       email: "consult@officeexperts.com.au",
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "1300 10 28 10",
+          telephone: "1300 102 810",
           contactType: "customer service",
           email: "consult@officeexperts.com.au",
           availableLanguage: ["en", "en-AU"],

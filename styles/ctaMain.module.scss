@@ -494,10 +494,15 @@
   margin-left: auto;
   text-align: center;
 
+  margin-right: 2.8vw;
+
   @include phone {
     width: 100%;
     margin: 0;
   }
+}
+.email2 {
+  margin-right: 2.3vw;
 }
 
 .link {

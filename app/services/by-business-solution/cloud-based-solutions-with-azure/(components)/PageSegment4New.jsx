@@ -10,7 +10,10 @@ import chain from "../../../../../public/chain600x400.webp";
 const PageSegment4New = () => {
   return (
     <div className="animate-wrapper">
-      <section className={styles.pageSegment} id="integrated-solutions">
+      <section
+        className={`${styles.pageSegment} ${styles.noImg}`}
+        id="integrated-solutions"
+      >
         <AnimateOnScroll animation="slide-right" duration={1} delay={0.2}>
           <div className={styles.content}>
             <h2 style={{ marginBottom: "1rem" }}>

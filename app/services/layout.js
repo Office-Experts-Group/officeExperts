@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 export const metadata = {
   title: "Microsoft Development Services | Office Experts Solutions Australia",
   description:
-    "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 10 28 10 or Email us consult@officeexperts.com.au",
+    "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
 
   openGraph: {
     title:
       "Microsoft Development Services | Office Experts Solutions Australia",
     description:
-      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 10 28 10 or Email us consult@officeexperts.com.au",
+      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
     url: "https://www.officeexperts.com.au/services/",
     siteName: "Office Experts Group",
     images: [
@@ -61,7 +61,7 @@ export const metadata = {
     title:
       "Microsoft Development Services | Office Experts Solutions Australia",
     description:
-      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 10 28 10 or Email us consult@officeexperts.com.au",
+      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
     images: ["/logo.png"],
   },
 

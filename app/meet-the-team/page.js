@@ -47,11 +47,11 @@ const schema = {
       name: "Office Experts",
       url: "https://officeexperts.com.au/",
       email: "excel@officeexperts.com.au",
-      telephone: "1300 10 28 10",
+      telephone: "1300 102 810",
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "1300 10 28 10",
+          telephone: "1300 102 810",
           contactType: "customer service",
           email: "consult@officeexperts.com.au",
           availableLanguage: ["en", "en-AU"],

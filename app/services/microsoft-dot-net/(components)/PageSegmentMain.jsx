@@ -17,7 +17,7 @@ const PageSegmentMain = () => {
     "Web application development",
   ];
   return (
-    <section className={styles.pageSegment}>
+    <section className={`${styles.pageSegment} ${styles.withImg}`}>
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image

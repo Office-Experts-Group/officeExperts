@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 import styles from "../styles/contact.module.css";
 
 const ContactForm = () => {
@@ -10,6 +9,8 @@ const ContactForm = () => {
     phone: "",
     message: "",
     honeypot: "",
+    referralSource: "",
+    otherReferralDetails: "",
   });
 
   const [error, setError] = useState({});
@@ -24,20 +25,19 @@ const ContactForm = () => {
     const newError = {};
 
     if (!formData.name.trim()) {
-      newError.name = "*Name is required...";
+      newError.name = "*Name is required";
     }
     if (!formData.email.trim()) {
-      newError.email = "*Email is required...";
+      newError.email = "*Email is required";
     } else if (!emailRegex.test(formData.email.trim())) {
-      newError.email = "*Email is not valid...";
+      newError.email = "*Email is not valid";
     }
     if (!formData.message.trim()) {
-      newError.message = "*Message is required...";
+      newError.message = "*Message is required";
     }
 
     if (Object.keys(newError).length > 0) {
       setError(newError);
-      // Focus first error field
       const firstErrorField = Object.keys(newError)[0];
       const element = document.getElementById(firstErrorField);
       if (element) {
@@ -50,14 +50,21 @@ const ContactForm = () => {
     }
 
     if (formData.honeypot) {
-      return; // Silent return for bot submissions
+      return;
     }
 
     try {
       const res = await fetch("/api/contactForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          // Format referral source for email body
+          referralDetails:
+            formData.referralSource === "other"
+              ? `Other: ${formData.otherReferralDetails}`
+              : formData.referralSource,
+        }),
       });
 
       if (res.ok) {
@@ -68,6 +75,8 @@ const ContactForm = () => {
           phone: "",
           message: "",
           honeypot: "",
+          referralSource: "",
+          otherReferralDetails: "",
         });
       } else {
         setError((prev) => ({
@@ -88,9 +97,12 @@ const ContactForm = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+      // Clear other details if referral source is changed to something other than "other"
+      ...(name === "referralSource" && value !== "other"
+        ? { otherReferralDetails: "" }
+        : {}),
     }));
 
-    // Clear error when user starts typing
     if (error[name]) {
       setError((prev) => ({
         ...prev,
@@ -118,10 +130,7 @@ const ContactForm = () => {
     >
       <div className={styles.formField}>
         <label htmlFor="name" className={styles.requiredField}>
-          Name
-          <span className={styles.requiredIndicator} aria-hidden="true">
-            *
-          </span>
+          Name*
         </label>
         <input
           type="text"
@@ -148,10 +157,7 @@ const ContactForm = () => {
 
       <div className={styles.formField}>
         <label htmlFor="message" className={styles.requiredField}>
-          Message
-          <span className={styles.requiredIndicator} aria-hidden="true">
-            *
-          </span>
+          Message*
         </label>
         <textarea
           id="message"
@@ -178,10 +184,7 @@ const ContactForm = () => {
 
       <div className={styles.formField}>
         <label htmlFor="email" className={styles.requiredField}>
-          Email
-          <span className={styles.requiredIndicator} aria-hidden="true">
-            *
-          </span>
+          Email*
         </label>
         <input
           type="email"
@@ -220,6 +223,75 @@ const ContactForm = () => {
           aria-required="false"
           placeholder="optional..."
         />
+      </div>
+
+      <div className={`${styles.formField} ${styles.refField}`}>
+        <label className={styles.groupLabel}>How did you hear about us?</label>
+        <div className={styles.radioOptions}>
+          <div className={styles.radioOption}>
+            <input
+              type="radio"
+              id="search"
+              name="referralSource"
+              value="search"
+              checked={formData.referralSource === "search"}
+              onChange={handleChange}
+            />
+            <label htmlFor="search">Search Engine</label>
+          </div>
+
+          <div className={styles.radioOption}>
+            <input
+              type="radio"
+              id="referral"
+              name="referralSource"
+              value="referral"
+              checked={formData.referralSource === "referral"}
+              onChange={handleChange}
+            />
+            <label htmlFor="referral">Referral/Word of Mouth</label>
+          </div>
+
+          <div className={styles.radioOption}>
+            <input
+              type="radio"
+              id="advertising"
+              name="referralSource"
+              value="advertising"
+              checked={formData.referralSource === "advertising"}
+              onChange={handleChange}
+            />
+            <label htmlFor="advertising">Advertising</label>
+          </div>
+
+          <div className={styles.radioOption}>
+            <input
+              type="radio"
+              id="other"
+              name="referralSource"
+              value="other"
+              checked={formData.referralSource === "other"}
+              onChange={handleChange}
+            />
+            <label htmlFor="other">Other</label>
+          </div>
+        </div>
+
+        {formData.referralSource === "other" && (
+          <div className={styles.otherInput}>
+            <input
+              type="text"
+              id="otherReferralDetails"
+              name="otherReferralDetails"
+              value={formData.otherReferralDetails}
+              onChange={handleChange}
+              placeholder="Please specify..."
+              aria-label="Please specify how you heard about us"
+              aria-required="true"
+              aria-invalid={!!error.otherReferralDetails}
+            />
+          </div>
+        )}
       </div>
 
       <div>

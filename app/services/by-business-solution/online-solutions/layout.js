@@ -5,13 +5,13 @@ export const metadata = {
   // Basic metadata
   title: "Online Solution | Microsoft Office | Office Expert Australia",
   description:
-    "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 10 28 10",
+    "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
 
   // OpenGraph
   openGraph: {
     title: "Online Solutions",
     description:
-      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 10 28 10",
+      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
     url: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions/",
     siteName: "Office Experts Group",
     images: [
@@ -68,7 +68,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Online Solutions | Microsoft Office Solutions",
     description:
-      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 10 28 10",
+      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
     images: ["/logo.png"],
   },
 

@@ -41,7 +41,7 @@ const Contact = ({ isQuote }) => {
             <h2>Contact Us</h2>
             <div className={styles.description}>
               <p>
-                Get in touch with our team for general inquiries and support.
+                Get in touch with our team for general enquiries and support.
                 We&apos;re here to help with any questions you might have about
                 our services.
               </p>

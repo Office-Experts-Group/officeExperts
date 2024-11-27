@@ -26,7 +26,7 @@ const schema = {
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
-        "We create and support a wide variety of cloud based solutions including the following. Visit www.officeexperts.com.au or call us 1300 10 28 10 to get more info",
+        "We create and support a wide variety of cloud based solutions including the following. Visit www.officeexperts.com.au or call us 1300 102 810 to get more info",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure/#breadcrumb",
@@ -76,12 +76,12 @@ const schema = {
       "@id": "https://www.officeexperts.com.au/#organization",
       name: "Office Experts Group",
       url: "https://www.officeexperts.com.au/",
-      telephone: "1300 10 28 10",
+      telephone: "1300 102 810",
       email: "consult@officeexperts.com.au",
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "1300 10 28 10",
+          telephone: "1300 102 810",
           contactType: "customer service",
           email: "consult@officeexperts.com.au",
           availableLanguage: ["en", "en-AU"],

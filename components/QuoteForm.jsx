@@ -365,7 +365,7 @@ const QuoteForm = () => {
         <div className={styles.uploadField}>
           <label htmlFor="file">
             Upload a file
-            <span aria-label="Accepted file size"> (...up to 5MB)</span>
+            <span aria-label="Accepted file size"> (up to 5MB)</span>
           </label>
           <input
             type="file"

@@ -135,11 +135,6 @@
 .underline h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  display: inline;
-  background-image: linear-gradient(#046999, #046999);
-  background-size: 100% 6px;
-  background-repeat: no-repeat;
-  background-position: 0 calc(100% + 4px);
 }
 
 .pointsGrid {
@@ -147,6 +142,20 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-top: 2rem;
+}
+@media (max-width: 449px) {
+  .pointsGrid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pointsGrid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
 }
 
 .point {

@@ -550,12 +550,17 @@
   width: 70%;
   margin-left: auto;
   text-align: center;
+  margin-right: 2.8vw;
 }
 @media (max-width: 449px) {
   .email {
     width: 100%;
     margin: 0;
   }
+}
+
+.email2 {
+  margin-right: 2.3vw;
 }
 
 .link {

@@ -47,8 +47,8 @@ const CTAMain = () => {
             </div>
             <div className={styles.phone}>
               <p>General Enquiries</p>
-              <Link href="tel:1300 10 28 10">
-                <h3>1300 10 28 10</h3>
+              <Link href="tel:1300 102 810">
+                <h3>1300 102 810</h3>
               </Link>
             </div>
           </div>
@@ -99,13 +99,13 @@ const CTAMain = () => {
             <div>
               <div className={styles.phone}>
                 <p>Account Enquiries</p>
-                <Link href="tel:1300 12 20 10">
-                  <h3>1300 12 20 10</h3>
+                <Link href="tel:1300 122 010">
+                  <h3>1300 122 010</h3>
                 </Link>
               </div>
             </div>
           </div>
-          <div className={styles.email}>
+          <div className={`${styles.email} ${styles.email2}`}>
             <Link href="mailto:accounts@officeexperts.com.au">
               <p>accounts@officeexperts.com.au</p>
             </Link>

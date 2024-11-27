@@ -400,6 +400,12 @@
   }
 }
 
+.refField {
+  grid-column: span 2;
+  display: flex;
+  gap: 1rem;
+}
+
 .uploadField {
   label {
     font-weight: 500;
@@ -413,6 +419,15 @@
   }
   input {
     margin-top: 0.5rem;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
   }
 }
 

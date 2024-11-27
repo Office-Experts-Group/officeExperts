@@ -5,13 +5,13 @@ export const metadata = {
   // Basic metadata
   title: "Custom Office Solutions | Office Expert Australia",
   description:
-    "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 10 28 10",
+    "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
 
   // OpenGraph
   openGraph: {
     title: "Custom Office Solutions",
     description:
-      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 10 28 10",
+      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
     url: "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions/",
     siteName: "Office Experts Group",
     images: [
@@ -63,7 +63,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Custom Office Solutions",
     description:
-      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 10 28 10",
+      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
     images: ["/logo.png"],
   },
 

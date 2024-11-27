@@ -46,6 +46,7 @@ a,
 span,
 button,
 input,
+label,
 textarea {
   font-family: var(--font-aptos), sans-serif;
 }
