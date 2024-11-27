@@ -24,14 +24,23 @@
     @include phone {
       max-width: 90vw;
     }
+    @include phoneLandscape {
+      max-width: 90vw;
+    }
   }
 
   @include phone {
     flex-direction: column-reverse;
     padding: 2rem 1rem;
+    p {
+      max-width: 100%;
+    }
   }
   @include phoneLandscape {
     flex-direction: column-reverse;
+    p {
+      max-width: 100%;
+    }
   }
   @include tablet {
     flex-direction: column-reverse;
@@ -65,14 +74,16 @@
 }
 
 .underline {
-  border-bottom: 6px solid $theme;
-  width: fit-content;
   margin-bottom: 2rem;
 
   h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: -0.5rem;
+    display: inline; // Makes the element only as wide as its content
+    background-image: linear-gradient($theme, $theme); // Use your theme color
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% + 4px); // Positions the line below the text
   }
 }
 

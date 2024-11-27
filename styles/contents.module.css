@@ -1,62 +1,90 @@
-.scrollMargin {
-  scroll-margin-top: 200px;
-}
-
-.contentsBox {
-  position: relative;
-  margin: 2rem 10vw 6rem 10vw;
+.contentsSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 6rem 0;
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
 }
-.contentsBox img {
+.contentsSection img {
   position: absolute;
   bottom: -8rem;
   left: -10vw;
   filter: opacity(0.1) brightness(3);
   z-index: -1;
 }
-
-.contents {
-  grid-row: span 2;
-  background-color: #f2f3f5;
-  padding: 2rem;
-  border-radius: 0.1rem;
-  max-width: 35vw;
-  width: 500px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+@media (min-width: 450px) and (max-width: 766px) {
+  .contentsSection {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.contents h3 {
+@media (max-width: 449px) {
+  .contentsSection {
+    max-width: 90vw;
+    padding: 2rem 0 6rem 0;
+  }
+}
+
+.contentBox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 580px;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .contentBox {
+    max-width: 45vw;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contentBox {
+    max-width: 45vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contentBox {
+    width: 90vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .contentBox {
+    width: 90vw;
+  }
+}
+.contentBox h3 {
   color: #1e1e1e;
-  margin: 1rem;
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 1.25rem;
 }
 
-.contentLink {
-  position: relative;
-  padding: 1rem;
-}
-.contentLink p {
-  color: #777a7e;
-  transition: all 0.3s ease;
-}
-.contentLink:hover {
-  background-color: white;
-}
-.contentLink:hover p::after {
-  opacity: 1;
+.contentList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.info h2 {
-  color: #1e1e1e;
-  margin: 1rem 0;
-  font-weight: 900;
+.contentItem {
+  background: transparent;
+  border: 1px solid rgba(30, 30, 30, 0.1);
+  border-radius: 0.2rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  line-height: 1.5rem;
 }
-.info p {
-  margin-top: 1rem;
+.contentItem p {
   color: #777a7e;
-  line-height: 2rem;
-  max-width: 90%;
+  margin: 0;
+  font-weight: 500;
+}
+.contentItem span {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.contentItem:hover {
+  background: rgba(30, 30, 30, 0.01);
+  box-shadow: 0 4px 12px rgba(30, 30, 30, 0.1);
 }/*# sourceMappingURL=contents.module.css.map */

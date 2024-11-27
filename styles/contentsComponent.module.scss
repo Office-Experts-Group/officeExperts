@@ -53,11 +53,12 @@
   box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateX(200%); // Fixed: translateX not transformX
-  transition: opacity 0.5s ease, transform 0.5s ease; // Specify both properties
+  transition: opacity 1s ease, transform 1s ease; // Specify both properties
 
   &.visible {
     opacity: 1;
-    transform: translateX(0); // Fixed: translateX not transformX
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
   }
 
   h3 {
@@ -91,6 +92,7 @@
     color: $darkGrayText;
     transition: all 0.5s ease;
     line-height: 2rem;
+    cursor: pointer;
     &::after {
       content: "→";
       position: absolute;
@@ -101,6 +103,9 @@
       transition: opacity 0.5s ease;
       font-size: 1.5rem;
       font-weight: 700;
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
     }
   }
 }

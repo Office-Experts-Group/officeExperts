@@ -8,6 +8,7 @@ import styles from "../../../styles/services.module.css";
 
 import scott from "../../../public/scott.webp";
 import signature from "../../../public/signature.webp";
+import handsIn from "../../../public/handsIn600x400.webp";
 
 const Services = ({ meetStyles, teamMembers }) => {
   return (
@@ -40,23 +41,15 @@ const Services = ({ meetStyles, teamMembers }) => {
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="fade-down" delay={0} duration={1.5}>
-        <div className={meetStyles.teamMember}>
-          <div className={meetStyles.imageWrapper}>
-            <Image
-              src={teamMembers[0].image}
-              alt={`${teamMembers[0].name} - ${teamMembers[0].role}`}
-              width={200}
-              height={244}
-              className={meetStyles.memberImage}
-            />
-          </div>
-          <div className={meetStyles.memberInfo}>
-            <h2>{teamMembers[0].name}</h2>
-            <h3>{teamMembers[0].role}</h3>
-            <p className={meetStyles.skills}>
-              {teamMembers[0].skills.join(" • ")}
-            </p>
-          </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src={handsIn}
+            alt="People joining hands"
+            width={600}
+            height={400}
+            style={{ width: "100%", height: "auto" }}
+            priority
+          />
         </div>
       </AnimateOnScroll>
     </section>

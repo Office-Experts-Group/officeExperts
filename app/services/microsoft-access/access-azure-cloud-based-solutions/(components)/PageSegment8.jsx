@@ -9,7 +9,7 @@ import programmer from "../../../../../public/programmer600x400.webp";
 
 const PageSegment8 = () => {
   return (
-    <section className={styles.pageSegment} id="experts">
+    <section className={`${styles.pageSegment} ${styles.noImg}`} id="experts">
       <AnimateOnScroll animation="slide-right" duration={1} delay={0.2}>
         <div className={styles.content}>
           <div className={styles.underline}>

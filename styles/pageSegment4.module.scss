@@ -26,10 +26,15 @@
     @include tablet {
       max-width: 90vw;
     }
+    @include desktop {
+      width: 450px;
+      height: 300px;
+    }
   }
 
   @include phone {
     flex-direction: column-reverse;
+    padding: 0 1rem;
   }
   @include phoneLandscape {
     flex-direction: column-reverse;
@@ -121,14 +126,16 @@
 }
 
 .underline {
-  border-bottom: 6px solid $theme;
-  width: fit-content;
   margin-bottom: 2rem;
 
   h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: -0.5rem;
+    display: inline; // Makes the element only as wide as its content
+    background-image: linear-gradient($theme, $theme); // Use your theme color
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% + 4px); // Positions the line below the text
   }
 }
 
@@ -287,6 +294,45 @@
     width: 160px;
     &:hover {
       border: 1px solid $theme;
+    }
+  }
+}
+
+// Variations ********************
+
+.reverse {
+  @include phone {
+    flex-direction: column;
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  .content {
+    @include phone {
+      margin-top: 3rem;
+    }
+    @include phoneLandscape {
+      flex-direction: column;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+}
+
+.noImg {
+  img {
+    @include phone {
+      display: none;
+    }
+    @include phoneLandscape {
+      display: none;
+    }
+    @include tablet {
+      display: none;
     }
   }
 }

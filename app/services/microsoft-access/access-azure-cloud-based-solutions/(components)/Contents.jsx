@@ -5,6 +5,18 @@ import styles from "../../../../../styles/contentsComponent.module.css";
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);
 
+  const handleLinkClick = (e, id) => {
+    e.preventDefault();
+    setIsHidden(true);
+    // Small delay to allow the animation to start before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
   return (
     <div className={styles.mobContents} style={isHidden ? {} : { right: "0" }}>
       {isHidden ? (
@@ -27,37 +39,49 @@ const Contents = () => {
             <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"></path>
           </svg>
           <h3>Contents</h3>
-          <a href="#existing-access">
+          <a
+            href="#existing-access"
+            onClick={(e) => handleLinkClick(e, "#existing-access")}
+          >
             <div className={styles.contentLink}>
               <p>Existing Access Databases</p>
             </div>
           </a>
-          <a href="#web-apps">
+          <a href="#web-apps" onClick={(e) => handleLinkClick(e, "#web-apps")}>
             <div className={styles.contentLink}>
               <p>Web Apps Linked to Databases</p>
             </div>
           </a>
-          <a href="#is-access-azure">
+          <a
+            href="#is-access-azure"
+            onClick={(e) => handleLinkClick(e, "#is-access-azure")}
+          >
             <div className={styles.contentLink}>
               <p>Is Access/Azure for You?</p>
             </div>
           </a>
-          <a href="#alternatives">
+          <a
+            href="#alternatives"
+            onClick={(e) => handleLinkClick(e, "#alternatives")}
+          >
             <div className={styles.contentLink}>
               <p>Alternatives to Access/Azure</p>
             </div>
           </a>
-          <a href="#requirements">
+          <a
+            href="#requirements"
+            onClick={(e) => handleLinkClick(e, "#requirements")}
+          >
             <div className={styles.contentLink}>
               <p>Access/Azure Requirements</p>
             </div>
           </a>
-          <a href="#low-cost">
+          <a href="#low-cost" onClick={(e) => handleLinkClick(e, "#low-cost")}>
             <div className={styles.contentLink}>
               <p>Low Cost Solution</p>
             </div>
           </a>
-          <a href="#experts">
+          <a href="#experts" onClick={(e) => handleLinkClick(e, "#experts")}>
             <div className={styles.contentLink}>
               <p>Microsoft Database Solution Experts</p>
             </div>

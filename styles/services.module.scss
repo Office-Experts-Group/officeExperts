@@ -7,27 +7,54 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding: 8rem;
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px; // Original image width
+    aspect-ratio: 3/2; // Based on your 600/400 dimensions
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
   @include desktop {
     padding: 8rem 2rem;
     gap: 1rem;
   }
+
   @include tablet {
     padding: 8rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
+
   @include phoneLandscape {
     padding: 8rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    .imageWrapper {
+      max-width: 90vw;
+      margin: 0 auto;
+    }
   }
+
   @include phone {
     padding: 8rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    .imageWrapper {
+      max-width: 90vw;
+      margin: 0 auto;
+    }
   }
 }
 

@@ -6,6 +6,18 @@
   gap: 1.5rem;
   padding: 8rem;
 }
+.services .imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3/2;
+}
+.services .imageWrapper img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (min-width: 1025px) and (max-width: 1199px) {
   .services {
     padding: 8rem 2rem;
@@ -27,6 +39,10 @@
     flex-direction: column;
     gap: 4rem;
   }
+  .services .imageWrapper {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 449px) {
   .services {
@@ -34,6 +50,10 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+  }
+  .services .imageWrapper {
+    max-width: 90vw;
+    margin: 0 auto;
   }
 }
 

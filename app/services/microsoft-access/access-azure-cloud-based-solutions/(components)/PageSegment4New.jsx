@@ -10,7 +10,10 @@ import chain from "../../../../../public/chain600x400.webp";
 const PageSegment4New = () => {
   return (
     <div className="animate-wrapper">
-      <section className={styles.pageSegment} id="web-apps">
+      <section
+        className={`${styles.pageSegment} ${styles.reverse}`}
+        id="web-apps"
+      >
         <AnimateOnScroll animation="slide-right" duration={1} delay={0.2}>
           <div className={styles.content}>
             <div className={styles.underline}>

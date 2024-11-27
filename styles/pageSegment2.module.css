@@ -161,12 +161,12 @@ a:hover .contentLink p::after {
 }
 @media (max-width: 449px) {
   .info {
-    padding-left: 1rem;
+    padding: 0 0 2rem 1rem;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .info {
-    padding-left: 1rem;
+    padding: 0 0 2rem 1rem;
   }
 }
 @media (min-width: 767px) and (max-width: 1024px) {

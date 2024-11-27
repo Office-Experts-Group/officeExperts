@@ -50,11 +50,12 @@
   box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateX(200%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 .contents.visible {
   opacity: 1;
   transform: translateX(0);
+  transition: opacity 1s ease, transform 1s ease;
 }
 .contents h3 {
   color: #1e1e1e;
@@ -86,6 +87,7 @@
   color: #777a7e;
   transition: all 0.5s ease;
   line-height: 2rem;
+  cursor: pointer;
 }
 .contentLink a::after,
 .contentLink p::after {
@@ -98,6 +100,12 @@
   transition: opacity 0.5s ease;
   font-size: 1.5rem;
   font-weight: 700;
+}
+@media screen and (max-width: 1200px) {
+  .contentLink a::after,
+  .contentLink p::after {
+    display: none;
+  }
 }
 
 a:hover .contentLink {
