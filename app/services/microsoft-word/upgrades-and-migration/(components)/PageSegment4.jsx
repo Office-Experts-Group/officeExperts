@@ -10,7 +10,7 @@ import remoteSupport from "../../../../../public/remoteSupport600x400.webp";
 const PageSegment4 = () => {
   return (
     <div className="animate-wrapper">
-      <div className={styles.pageSegment}>
+      <div className={`${styles.pageSegment} ${styles.customMargin}`}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
             <div className={styles.underline}>

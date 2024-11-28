@@ -1,3 +1,4 @@
+// app/privacy/layout.js
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -8,10 +9,10 @@ export const metadata = {
   robots: "noindex, nofollow",
 };
 
-export default function RootLayout({ children }) {
+export default function PrivacyLayout({ children }) {
   return <>{children}</>;
 }
 
-RootLayout.propTypes = {
+PrivacyLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };

@@ -19,9 +19,8 @@ const PageSegment3 = () => {
 
   return (
     <section
-      className={styles.pageSegment}
+      className={`${styles.pageSegment} ${styles.paddedTop}`}
       id="word-training"
-      style={{ padding: "8rem 10vw" }}
     >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image

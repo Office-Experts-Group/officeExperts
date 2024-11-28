@@ -303,4 +303,33 @@
   .marginText {
     margin-top: 4rem;
   }
+}
+
+.cross {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  background-color: rgb(202, 13, 13);
+  border: 1px solid rgb(202, 13, 13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  color: #f8f8f8;
+}
+.cross svg {
+  stroke: #f8f8f8;
+  color: #f8f8f8;
+}
+.cross:hover {
+  transition: all 0.5s ease;
+  background-color: #f8f8f8;
+}
+.cross:hover svg {
+  stroke: #046999;
+  color: #046999;
+}
+.cross p {
+  margin: 0 !important;
 }/*# sourceMappingURL=expertsAwait.module.css.map */

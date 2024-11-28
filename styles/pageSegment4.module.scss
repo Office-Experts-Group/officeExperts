@@ -42,6 +42,11 @@
   @include tablet {
     flex-direction: column-reverse;
   }
+
+  a {
+    color: $theme;
+    font-weight: 700;
+  }
 }
 
 .pageSegmentGrid {
@@ -62,6 +67,33 @@
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+    @include phone {
+      max-width: 90vw;
+    }
+    @include phoneLandscape {
+      max-width: 90vw;
+    }
+    @include tablet {
+      max-width: 90vw;
+    }
+    @include desktop {
+      width: 450px;
+      height: 300px;
+    }
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -100,6 +132,11 @@
 
   @include tablet {
     padding: 0 5vw 2rem 5vw;
+  }
+
+  a {
+    color: $theme;
+    font-weight: 700;
   }
 }
 

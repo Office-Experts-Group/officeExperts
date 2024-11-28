@@ -15,7 +15,7 @@ const Promo = ({ h2, p }) => {
           <div className={styles.circle}>
             <Image src={computer} alt="computer icon" width={30} height={30} />
           </div>
-          <div className={styles.text} style={{ marginLeft: "2rem" }}>
+          <div className={`${styles.text} ${styles.leftMargin}`}>
             <h2>Office Experts can Help!</h2>
             <p style={{ marginBottom: "1rem" }}>
               Our experts can create beautiful documents and templates that are

@@ -41,11 +41,7 @@ const LocationPages = ({ location }) => {
               education, expert troubleshooting and reliable support.
             </p>
           </div>
-          <a
-            href="#contact"
-            className={styles.btn}
-            style={{ marginTop: "2rem" }}
-          >
+          <a href="#contact" className={`${styles.btn} ${styles.locationBtn}`}>
             Contact Your Local {location} Experts
             <svg
               stroke="currentColor"

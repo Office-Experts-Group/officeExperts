@@ -11,6 +11,7 @@ import PageSegment5 from "./(components)/PageSegment5";
 import FAQSection from "../../../../components/FAQSection";
 
 import faqs from "../../../../faqs/corporate-solutions";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -185,6 +186,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Corporate Global Template Solution" />
       <ServicePageCards />
       <PageSegmentMain />

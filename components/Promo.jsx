@@ -10,10 +10,17 @@ import styles from "../styles/promo.module.css";
 import computer from "../public/icons/computer.webp";
 import promo from "../public/promo.webp";
 
-const Promo = ({ h2, p, link, linkText }) => {
+const Promo = ({ h2, p, link, linkText, isLocation }) => {
   return (
-    <div className={styles.container}>
-      <section className={styles.promo}>
+    <div
+      className={styles.container}
+      style={isLocation ? { flexDirection: "column", gap: "1rem" } : {}}
+    >
+      <section
+        className={`${styles.promo} ${
+          isLocation ? styles.promoWithLocation : ""
+        }`}
+      >
         <AnimateOnScroll animation="scale-up" duration={1}>
           <div className={styles.content}>
             <div className={styles.circle}>

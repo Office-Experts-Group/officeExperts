@@ -11,8 +11,7 @@ const PageSegmentMain = () => {
   return (
     <section
       id="stuck"
-      className={styles.pageSegment}
-      style={{ margin: "0rem 10vw 0rem 10vw" }}
+      className={`${styles.pageSegment} ${styles.customMargin}`}
     >
       <div className={styles.imgWrapper}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>

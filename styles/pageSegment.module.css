@@ -294,4 +294,23 @@
   .customMargin {
     margin: 6rem 1rem;
   }
+}
+
+.locationBtn {
+  margin-top: 2rem;
+  max-width: 90vw;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.2;
+}
+.locationBtn svg {
+  flex: 0 0 auto;
+  width: 1.5em;
+  height: 1.5em;
 }/*# sourceMappingURL=pageSegment.module.css.map */

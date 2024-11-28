@@ -29,11 +29,11 @@ const BlackSegment = () => {
           <div className={styles.text}>
             <p>
               Our custom template solutions give users access to pre-approved
-              styles and colors based on your brand&aspo;s unique
-              specifications. By limiting font and style changes, our controlled
-              environment ensures that every document aligns with your corporate
-              identity, preserving brand consistency while empowering users to
-              work efficiently within set guidelines.
+              styles and colors based on your brand's unique specifications. By
+              limiting font and style changes, our controlled environment
+              ensures that every document aligns with your corporate identity,
+              preserving brand consistency while empowering users to work
+              efficiently within set guidelines.
             </p>
             <div className={styles.link}>
               <Link
@@ -71,9 +71,9 @@ const BlackSegment = () => {
               alt="Connection icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Users will have access to approved prebuilt styles and colour
               pallet, based on your specifications
             </p>
@@ -85,9 +85,9 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Your brand will be secure as users will not have the ability to
               edit fonts or font sizes from the Home tab
             </p>
@@ -99,9 +99,9 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Pasted text is inserted under a controlled environment which
               ensures only your corporate fonts are permitted
             </p>
@@ -113,9 +113,9 @@ const BlackSegment = () => {
               alt="documents icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Your documents will no longer be ruined by external formatting
               corrupting your styles and functionality
             </p>

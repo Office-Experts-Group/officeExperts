@@ -24,7 +24,7 @@ const BlackSegment = () => {
             </div>
             <h2>Have Word Migration Issues?</h2>
           </div>
-          <div className={styles.altText}>
+          <div className={styles.text}>
             <p>
               Do you have a PDF file that has been migrated into Word, but just
               doesn't work right? PDF converters can create many issues
@@ -36,14 +36,16 @@ const BlackSegment = () => {
                   <div className={styles.cross}>
                     <p>X</p>
                   </div>
-                  <p>Inappropriate add in text boxes and section breaks</p>
+                  <p style={{ textAlign: "left" }}>
+                    Inappropriate add in text boxes and section breaks
+                  </p>
                 </div>
 
                 <div className={styles.point}>
                   <div className={styles.cross}>
                     <p>X</p>
                   </div>
-                  <p>
+                  <p style={{ textAlign: "left" }}>
                     Mismanaged content, sometimes with text created as an image
                   </p>
                 </div>
@@ -52,14 +54,16 @@ const BlackSegment = () => {
                   <div className={styles.cross}>
                     <p>X</p>
                   </div>
-                  <p>Incorrect and inconsistent styles</p>
+                  <p style={{ textAlign: "left" }}>
+                    Incorrect and inconsistent styles
+                  </p>
                 </div>
 
                 <div className={styles.point}>
                   <div className={styles.cross}>
                     <p>X</p>
                   </div>
-                  <p>Many accessibility issues</p>
+                  <p style={{ textAlign: "left" }}>Many accessibility issues</p>
                 </div>
               </div>
             </AnimateOnScroll>

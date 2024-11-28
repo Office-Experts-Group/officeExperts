@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
+import styles from "../../styles/boringStuff.module.css";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -154,12 +156,12 @@ const schema = {
 
 export default function TermsAndConditionsPage() {
   return (
-    <>
+    <main className={styles.container}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <main>
+      <section className={styles.main}>
         <h1>Terms and Conditions</h1>
         <p>
           These Terms and Conditions (Terms) govern the provision of services by
@@ -892,7 +894,7 @@ export default function TermsAndConditionsPage() {
             Business' solutions.
           </li>
         </ul>
-      </main>
-    </>
+      </section>
+    </main>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import styles from "../../styles/boringStuff.module.css";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -152,12 +154,12 @@ const schema = {
 
 const Page = () => {
   return (
-    <>
+    <main className={styles.container}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <main>
+      <section className={styles.main}>
         <h1>Privacy Policy</h1>
         <p>
           This privacy policy (Policy) describes how Brayalei Pty Ltd, ABN 32
@@ -581,8 +583,8 @@ const Page = () => {
           or concerns about this Policy, please feel free to contact us any
           time.
         </p>
-      </main>
-    </>
+      </section>
+    </main>
   );
 };
 

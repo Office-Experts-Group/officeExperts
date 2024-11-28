@@ -9,10 +9,7 @@ import template from "../../../../../public/template600x400.webp";
 
 const PageSegment3 = () => {
   return (
-    <section
-      className={styles.pageSegment}
-      style={{ padding: "3rem 10vw 8rem 10vw" }}
-    >
+    <section className={`${styles.pageSegment} ${styles.paddedBtm}`}>
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image
           src={template}

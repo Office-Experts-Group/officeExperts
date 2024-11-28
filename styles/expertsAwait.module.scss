@@ -296,3 +296,32 @@
     margin-top: 4rem;
   }
 }
+
+.cross {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  background-color: rgb(202, 13, 13);
+  border: 1px solid rgb(202, 13, 13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  color: $offWhite;
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $offWhite;
+    svg {
+      stroke: $theme;
+      color: $theme;
+    }
+  }
+  p {
+    margin: 0 !important;
+  }
+}

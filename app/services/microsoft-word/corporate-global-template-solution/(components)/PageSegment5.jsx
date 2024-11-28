@@ -17,9 +17,9 @@ const PageSegment3 = () => {
 
   return (
     <section
-      className={styles.pageSegment}
+      className={`${styles.pageSegment} ${styles.padded}`}
       id="in-control"
-      style={{ backgroundColor: "#f2f3f5", padding: "8rem 10vw" }}
+      style={{ backgroundColor: "#f2f3f5" }}
     >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image

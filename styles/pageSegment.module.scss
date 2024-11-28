@@ -276,3 +276,22 @@
     margin: 6rem 1rem;
   }
 }
+
+.locationBtn {
+  margin-top: 2rem;
+  max-width: 90vw;
+  display: inline-flex; // Changed to inline-flex
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 1rem;
+  white-space: normal; // Forces text to wrap
+  overflow-wrap: break-word; // Breaks words when necessary
+  line-height: 1.2; // Helps with readability of wrapped text
+
+  svg {
+    flex: 0 0 auto; // Prevents svg from shrinking or growing
+    width: 1.5em;
+    height: 1.5em;
+  }
+}

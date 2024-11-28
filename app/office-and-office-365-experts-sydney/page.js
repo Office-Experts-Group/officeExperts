@@ -123,7 +123,7 @@ const Page = () => {
         style={{
           textAlign: "center",
           fontStyle: "italic",
-          margin: "2rem 0 6rem 0",
+          margin: "2rem 1rem 6rem 1rem",
           color: "#046999;",
           fontWeight: "700",
         }}

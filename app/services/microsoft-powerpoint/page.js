@@ -5,7 +5,7 @@ import ExpertsAwait from "../../../components/ExpertsAwait";
 import Contact from "../../../components/Contact";
 import Testimonials from "../../(components)/Testimonials";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import Solutions from "./(components)/Solutions";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
 import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
@@ -178,7 +178,7 @@ const Page = () => {
       />
       <ServiceHero title="Microsoft PowerPoint" />
       <PageSegmentMain />
-      <Solutions />
+      <SolutionsCarousel />
       <Testimonials testimonials={testimonials} />
       <ExpertsAwait />
       <Contact />

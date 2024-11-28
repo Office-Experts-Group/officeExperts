@@ -53,6 +53,10 @@
     flex-direction: column-reverse;
   }
 }
+.pageSegment a {
+  color: #046999;
+  font-weight: 700;
+}
 
 .pageSegmentGrid {
   scroll-margin-top: 100px;
@@ -71,6 +75,46 @@
 .pageSegmentGrid img:hover {
   filter: grayscale(100%);
   transition: all 0.3s ease;
+}
+@media (max-width: 449px) {
+  .pageSegmentGrid img {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegmentGrid img {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegmentGrid img {
+    max-width: 90vw;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .pageSegmentGrid img {
+    width: 450px;
+    height: 300px;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegmentGrid {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegmentGrid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegmentGrid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .pageSegmentCenter {
@@ -112,6 +156,10 @@
   .pageSegmentCenter {
     padding: 0 5vw 2rem 5vw;
   }
+}
+.pageSegmentCenter a {
+  color: #046999;
+  font-weight: 700;
 }
 
 .content {

@@ -228,3 +228,37 @@
     padding: 4rem 1rem;
   }
 }
+
+.paddedBtm {
+  padding: 4rem 10vw 8rem 10vw;
+  @include desktop {
+    padding: 4rem 10vw;
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include phoneLandscape {
+    padding: 4rem 5vw;
+  }
+  @include phone {
+    padding: 4rem 1rem;
+  }
+}
+
+.paddedTop {
+  padding: 8rem 10vw;
+  @include desktop {
+    padding: 4rem 10vw;
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include phoneLandscape {
+    padding: 4rem 5vw 0 5vw;
+  }
+  @include phone {
+    padding: 4rem 1rem 0 1rem;
+  }
+}
