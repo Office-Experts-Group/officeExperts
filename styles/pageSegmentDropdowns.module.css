@@ -15,15 +15,22 @@
   letter-spacing: 1px;
   margin: 1rem 0;
 }
-
-.imgSection {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .upgradeSection {
+    padding: 8rem 5vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .upgradeSection {
+    padding: 8rem 1rem;
+  }
 }
 
+@media screen and (max-width: 1000px) {
+  .imgSection {
+    display: none;
+  }
+}
 .mainImg {
   width: 100%;
   height: auto;
@@ -72,6 +79,11 @@
 }
 .content p {
   color: #777a7e;
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    grid-column: span 2;
+  }
 }
 
 .faqContainer {

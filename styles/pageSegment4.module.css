@@ -202,15 +202,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .cross {
   height: 30px;
   width: 30px;
   min-width: 30px;
-  background-color: #046999;
-  border: 1px solid #046999;
+  background-color: rgb(202, 13, 13);
+  border: 1px solid rgb(202, 13, 13);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,6 +227,9 @@
 .cross:hover svg {
   stroke: #046999;
   color: #046999;
+}
+.cross p {
+  margin: 0 !important;
 }
 
 .alsoTrading {
@@ -264,6 +266,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: 1rem;
 }
 .point p {
   color: #777a7e;
@@ -307,6 +310,11 @@
 }
 .btns a:hover {
   border: 1px solid #046999;
+}
+@media screen and (max-width: 800px) {
+  .btns {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 449px) {
@@ -364,5 +372,22 @@
 @media (min-width: 450px) and (max-width: 766px) {
   .noMargin {
     margin: 0 !important;
+  }
+}
+
+.customMargin {
+  margin: 6rem 0;
+  scroll-margin-top: 100px;
+}
+@media screen and (min-width: 800px) {
+  .customMargin {
+    margin: 6rem 0 0 0;
+    scroll-margin-top: 150px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .btmMargin {
+    margin-bottom: 6rem;
   }
 }/*# sourceMappingURL=pageSegment4.module.css.map */

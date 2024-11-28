@@ -16,8 +16,7 @@ const PageSegmentMain = () => {
   ];
   return (
     <section
-      className={styles.pageSegment}
-      style={{ margin: "4rem 10vw 0rem 10vw" }}
+      className={`${styles.pageSegment} ${styles.customMargin}`}
       id="enhance-your-business-productivity"
     >
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>

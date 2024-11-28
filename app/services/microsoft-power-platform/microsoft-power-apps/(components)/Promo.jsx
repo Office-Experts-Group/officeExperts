@@ -17,7 +17,7 @@ const Promo = () => {
           <div className={styles.circle}>
             <Image src={computer} alt="computer icon" width={30} height={30} />
           </div>
-          <div className={styles.text} style={{ marginLeft: "2rem" }}>
+          <div className={`${styles.text} ${styles.marginText}`}>
             <h2>Empower Business with Certified Expertise</h2>
             <p>
               Power Platform Experts specialise in harnessing Power Apps to

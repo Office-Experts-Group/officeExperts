@@ -16,7 +16,7 @@ const BlackSegment = () => {
     <section
       className={styles.expertsAwait}
       style={{ marginTop: "8rem" }}
-      id="issues"
+      id="existing-data"
     >
       <Image className={styles.bgImg} src={bg} alt="shape icon" fill="true" />
 
@@ -28,7 +28,7 @@ const BlackSegment = () => {
             </div>
             <h2>Enhanced Connectivity to Existing Data</h2>
           </div>
-          <div className={styles.text}>
+          <div className={`${styles.text} ${styles.marginText}`}>
             <p>
               Power Apps seamlessly connects to a multitude of existing data
               sources, empowering you to leverage your organisation’s valuable
@@ -71,9 +71,11 @@ const BlackSegment = () => {
               alt="Connection icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>Seamless connection to existing data sources</p>
+            <p className={styles.centerText}>
+              Seamless connection to existing data sources
+            </p>
           </div>
 
           <div className={styles.point}>
@@ -82,9 +84,11 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>Facilitates data-driven decision-making</p>
+            <p className={styles.centerText}>
+              Facilitates data-driven decision-making
+            </p>
           </div>
 
           <div className={styles.point}>
@@ -93,9 +97,11 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>Optimises operational efficiency</p>
+            <p className={styles.centerText}>
+              Optimises operational efficiency
+            </p>
           </div>
         </div>
       </AnimateOnScroll>

@@ -25,12 +25,13 @@ const PageSegmentMain = () => {
       <div className={styles.contentWrapper}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
-            <p>Take Your Business Mobile!</p>
-            <h2>Remote Data Gathering</h2>
+            <p>Leave it to us</p>
+            <h2>We Make Office 365 Easy</h2>
             <p>
-              Do you require your staff to remotely fill out forms while
-              offsite? Do you want to gather information from your clients from
-              any device?
+              Our Office 365 experts offer reliable managed services so your
+              business does not have to worry about the technicalities and
+              issues with Office 365 in order to concentrate more on the day to
+              day running of your business.
             </p>
           </div>
         </AnimateOnScroll>

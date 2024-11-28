@@ -8,6 +8,7 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -181,6 +182,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Upgrades and Migration" />
       <ServicePageCards />
       <PageSegmentMain />

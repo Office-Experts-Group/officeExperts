@@ -22,10 +22,10 @@ const ServicePageCards = () => {
       style={{ margin: "4rem 0 0rem 0" }}
     >
       <div className={styles.card}>
-        <a href="">
+        <a href="#enhance">
           <div className={styles.content}>
-            <p>Nationwide</p>
-            <h2>Custom solutions</h2>
+            <p>Enhance</p>
+            <h2>Business Efficiency</h2>
             <Image
               src={stuckIcon}
               alt="Old version icon"
@@ -46,10 +46,10 @@ const ServicePageCards = () => {
       </div>
 
       <div className={styles.card}>
-        <a href="">
+        <a href="#revolutionise">
           <div className={styles.content}>
-            <p>Flexible pricing</p>
-            <h2>End-to-end guidance</h2>
+            <p>Revolutionise</p>
+            <h2>Work Flows</h2>
             <Image
               src={issuesIcon}
               alt="Access issues icon"
@@ -70,10 +70,10 @@ const ServicePageCards = () => {
       </div>
 
       <div className={styles.card}>
-        <a href="">
+        <a href="#automation">
           <div className={styles.content}>
-            <p>Experience</p>
-            <h2>Customised to your needs</h2>
+            <p>Automation</p>
+            <h2>With Power Automate</h2>
             <Image
               src={expertsIcon}
               alt="Expert help icon"
@@ -94,10 +94,10 @@ const ServicePageCards = () => {
       </div>
 
       <div className={styles.card}>
-        <a href="">
+        <a href="#custom-solutions">
           <div className={styles.content}>
-            <p>Ongoing</p>
-            <h2>Support and training</h2>
+            <p>Tailored</p>
+            <h2>Nationwide Solutions</h2>
             <Image
               src={migrateIcon}
               alt="Migration icon"

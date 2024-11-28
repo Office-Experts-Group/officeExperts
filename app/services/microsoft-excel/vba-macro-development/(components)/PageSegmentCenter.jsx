@@ -20,10 +20,7 @@ const PageSegmentCenter = () => {
   ];
 
   return (
-    <section
-      className={styles.pageSegment}
-      style={{ padding: "8rem 10vw", backgroundColor: "#f2f3f5" }}
-    >
+    <section className={`${styles.pageSegment} ${styles.customSegment}`}>
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image
           src={pointing}
@@ -34,9 +31,7 @@ const PageSegmentCenter = () => {
       </AnimateOnScroll>
 
       <div className={styles.pageSegmentCenter}>
-        <div className={styles.underline}>
-          <h2>What VBA Can Do For You!</h2>
-        </div>
+        <h2>What VBA Can Do For You!</h2>
         <div className={styles.benefitsList}>
           {points.map((point, index) => (
             <AnimateOnScroll
@@ -45,7 +40,19 @@ const PageSegmentCenter = () => {
               delay={index * 0.1}
             >
               <div className={styles.benefitItem}>
-                <div className={styles.tick}>✓</div>
+                <div className={styles.tick}>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="1"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                  </svg>
+                </div>
                 <p>{point}</p>
               </div>
             </AnimateOnScroll>

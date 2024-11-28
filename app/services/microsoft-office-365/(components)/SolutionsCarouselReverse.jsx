@@ -11,36 +11,41 @@ import project4 from "../../../../public/project-img-4.webp";
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
-      title: "VBA & Macro Development",
-      link: "/services/by-business-solution/vba-macro-development",
+      title: "Exchange Setup and Help",
+      link: "/services/microsoft-office-365/exchange-online-setup-and-support",
       image: project1,
       description: [
-        "Need a VBA programmer to automate tasks or extend Office functionality?",
+        "Does your organisation need Exchange setup and configured?",
+        "Do you need Outlook setup for your staff?",
       ],
     },
     {
-      title: "Custom Office Solutions",
-      link: "/services/by-business-solution/custom-office-solutions",
+      title: "Help and Managed Services",
+      link: "/services/microsoft-office-365/support-and-managed-services",
       image: project2,
       description: [
-        "Need our experts with over 15 years experience to help you with Excel, Access, Word, Outlook or PowerPoint?",
+        "Need support for your Office 365 subscription?",
+        "Is your OneDrive not syncing?",
+        "Need tips on using and configuring Office 365 and its features?",
       ],
     },
     {
-      title: "Database Solutions",
-      link: "/services/by-business-solution/database-development-and-solutions",
-      image: project3,
+      title: "Cloud Backup with OneDrive",
+      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+      image: project2,
       description: [
-        "Our experts can build reliable and cost effective database solutions in most Microsoft technologies.",
+        "Have important documents needing off site backup?",
+        "Want to share files with colleagues and customers?",
+        "Need files in remote places on multiple devices?",
       ],
     },
     {
-      title: "3rd Party App Office Integration",
-      link: "/services/by-business-solution/3rd-party-application-or-office-integration",
-      image: project4,
+      title: "App & Custom Development",
+      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+      image: project2,
       description: [
-        "Want to link an Office app, CRM, accounting package, data files or 3rd party product to Office?",
-        "Want to extend a 3rd party product’s functionality with Office?",
+        "Need custom applications to integrate with SharePoint lists and libraries?",
+        "Need custom branding for your corporate intranet site?",
       ],
     },
   ];
@@ -49,13 +54,9 @@ const SolutionsCarousel = () => {
   const extendedSolutions = [...solutionsData, ...solutionsData];
 
   return (
-    <div className={`${styles.solutions} ${styles.withDuplicate}`}>
-      <div className={styles.title}>
-        <h2>Experts In...</h2>
-        <div></div>
-      </div>
+    <div className={`${styles.solutions} ${styles.duplicate}`}>
       <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack}>
+        <div className={`${styles.carouselTrack} ${styles.reverseAnimation}`}>
           {extendedSolutions.map((solution, index) => (
             <div className={styles.cardWrapper} key={index}>
               <div className={styles.description}>
@@ -75,7 +76,7 @@ const SolutionsCarousel = () => {
                 >
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Office</span>
+                      <span>Microsoft</span>
                       <br />
                       {solution.title}
                     </h3>

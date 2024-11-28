@@ -200,15 +200,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .cross {
   height: 30px;
   width: 30px;
   min-width: 30px;
-  background-color: $theme;
-  border: 1px solid $theme;
+  background-color: rgb(202, 13, 13);
+  border: 1px solid rgb(202, 13, 13);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,6 +224,9 @@
       stroke: $theme;
       color: $theme;
     }
+  }
+  p {
+    margin: 0 !important;
   }
 }
 
@@ -265,6 +267,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: 1rem;
   p {
     color: $darkGrayText;
     margin: 0 !important;
@@ -307,6 +310,9 @@
     &:hover {
       border: 1px solid $theme;
     }
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
   }
 }
 
@@ -355,5 +361,20 @@
   }
   @include phoneLandscape {
     margin: 0 !important;
+  }
+}
+
+.customMargin {
+  @media screen and (min-width: 800px) {
+    margin: 6rem 0 0 0;
+    scroll-margin-top: 150px;
+  }
+  margin: 6rem 0;
+  scroll-margin-top: 100px;
+}
+
+.btmMargin {
+  @media screen and (min-width: 800px) {
+    margin-bottom: 6rem;
   }
 }

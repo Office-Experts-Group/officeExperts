@@ -18,9 +18,7 @@ const PageSegment4 = () => {
       <div className={styles.pageSegment}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
-            <div className={styles.underline}>
-              <h2>Upgrading Office?</h2>
-            </div>
+            <h2 style={{ marginBottom: "1.5rem" }}>Upgrading Office?</h2>
             <p>
               To better understand the considerations in upgrading or migrating
               your specific Microsoft Office products, click the buttons below.

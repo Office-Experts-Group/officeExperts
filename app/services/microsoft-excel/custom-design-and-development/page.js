@@ -7,6 +7,8 @@ import PageSegmentCenter from "./(components)/PageSegmentCenter";
 import SegmentMainCopy from "./(components)/SegmentMainCopy";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
 import Promo from "../../../../components/Promo";
+import Contents from "./(components)/Contents";
+import ContentsCopy from "./(components)/ContentsCopy";
 
 const schema = {
   "@context": "https://schema.org",
@@ -180,6 +182,8 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
+      <ContentsCopy />
       <ServiceHero title="Custom Design and Development" />
       <PageSegmentMain2 />
       <PageSegmentCenter />

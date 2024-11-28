@@ -274,6 +274,11 @@
 .centerText {
   @include phoneLandscape {
     text-align: center;
+    width: 100%;
+  }
+  @include phone {
+    text-align: center;
+    width: 100%;
   }
 }
 .hidden {
@@ -283,5 +288,11 @@
 
   @include phoneLandscape {
     display: none;
+  }
+}
+
+.marginText {
+  @media screen and (min-width: 1200px) {
+    margin-top: 4rem;
   }
 }

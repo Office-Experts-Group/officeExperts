@@ -63,13 +63,14 @@
   }
 
   img {
-    object-fit: cover;
+    object-fit: contain;
     filter: grayscale(0%);
     transition: all 0.3s ease;
     &:hover {
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+    max-width: 90vw;
   }
 
   .pageSegmentCenter {
@@ -103,6 +104,8 @@
     img {
       width: 450px;
       height: 300px;
+      max-width: 90vw;
+      margin: 0 auto;
     }
   }
 }
@@ -165,6 +168,7 @@
   align-items: center;
   gap: 0.75rem;
   flex: 0 1 auto;
+  margin-left: 1rem;
 
   .tick {
     color: $theme;
@@ -226,6 +230,20 @@
   }
 }
 
+.noImg {
+  @include phoneLandscape {
+    img {
+      display: none;
+    }
+  }
+
+  @include phone {
+    img {
+      display: none;
+    }
+  }
+}
+
 .noMargin {
   @include phoneLandscape {
     margin: 0;
@@ -236,5 +254,24 @@
   }
   @include phone {
     margin: 0;
+  }
+}
+
+.customSegment {
+  padding: 8rem 10vw;
+  background-color: $grayBGC;
+  grid-template-columns: 1fr 40%;
+
+  @media screen and (max-width: 900px) {
+    padding: 8rem 5vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include phoneLandscape {
+    gap: 2rem;
+  }
+  @include phone {
+    padding: 4rem 1rem 6rem 1rem;
   }
 }

@@ -16,14 +16,18 @@
       margin: 1rem 0;
     }
   }
+  @include desktop {
+    padding: 8rem 5vw;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 8rem 1rem;
+  }
 }
 
-.imgSection {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
+@media screen and (max-width: 1000px) {
+  .imgSection {
+    display: none;
+  }
 }
 
 .mainImg {
@@ -72,6 +76,9 @@
   grid-column: 1;
   p {
     color: $darkGrayText;
+  }
+  @media screen and (max-width: 1000px) {
+    grid-column: span 2;
   }
 }
 

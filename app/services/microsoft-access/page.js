@@ -9,10 +9,10 @@ import Testimonials from "./(components)/Testimonials";
 import Brands from "../../../components/Brands";
 import Promo from "../../../components/Promo";
 import Contact from "../../../components/Contact";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
 import { getHomePageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
-import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
 const schema = {
   "@context": "https://schema.org",

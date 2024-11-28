@@ -17,7 +17,7 @@ const PageSegment3 = () => {
   return (
     <section
       className={styles.pageSegment}
-      id="vsto"
+      id="excel-help"
       style={{ marginBottom: "4rem" }}
     >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
@@ -32,7 +32,7 @@ const PageSegment3 = () => {
       <div className={styles.content}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
           <div className={styles.underline}>
-            <h2>Our Excel Experts can Help!</h2>
+            <h2>Our Excel Experts Can Help!</h2>
           </div>
           <p>
             Our experts will review your workbook and advise the best migration

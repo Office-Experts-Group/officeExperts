@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../../../../../styles/pageSegment2.module.scss";
+import styles from "../../../../../styles/pageSegment2.module.css";
 
 import lady from "../../../../../public/service-img-1.webp";
 
@@ -16,7 +16,7 @@ const SegmentMainCopy = () => {
             <p>VBA Programming</p>
           </div>
         </Link>
-        <Link href="/">
+        <Link href="https://excelexperts.com.au">
           <div className={styles.contentLink}>
             <p>Microsoft Excel</p>
           </div>

@@ -19,6 +19,7 @@ const Segment4Repeat = () => {
     <div className="animate-wrapper">
       <div
         className={styles.pageSegment}
+        id="revolutionise"
         style={{ margin: "6rem 0 0 0", scrollMarginTop: "150px" }}
       >
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>

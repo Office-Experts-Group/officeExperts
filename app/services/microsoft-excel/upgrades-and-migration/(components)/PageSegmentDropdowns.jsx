@@ -40,9 +40,7 @@ const UpgradeIssues = () => {
   return (
     <div className={styles.upgradeSection} id="upgrade-issues">
       <div className={styles.content}>
-        <div className={styles.underline}>
-          <h2>Excel Upgrade Issues</h2>
-        </div>
+        <h2>Excel Upgrade Issues</h2>
         <p>
           Through decades of experience we have seen many reasons why users have
           issues upgrading to new versions of Excel.

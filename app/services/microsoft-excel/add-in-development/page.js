@@ -12,6 +12,7 @@ import Segment4Copy from "./(components)/Segment4Copy";
 import FAQ from "../../../../components/FAQSection";
 
 import faqs from "../../../../faqs/add-in-development";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -185,6 +186,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title={"3rd Party Product Integration"} />
       <ServicePageCards />
       <PageSegmentMain />

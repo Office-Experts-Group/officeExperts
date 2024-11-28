@@ -68,6 +68,9 @@
   align-items: center;
 }
 
+.content {
+  z-index: 2;
+}
 .content h2 {
   color: #1e1e1e;
   font-size: 2.5rem;
@@ -161,6 +164,18 @@
   left: 0;
   filter: brightness(1.5);
   transform: scaleX(-1);
+}
+@media (max-width: 449px) {
+  .semi {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media (max-width: 449px) {
+  .semi {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .points {
@@ -259,5 +274,24 @@
     display: flex;
     margin: 0 auto;
     border: none;
+  }
+}
+
+.customMargin {
+  margin: 6rem 10vw;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .customMargin {
+    margin: 6rem 5vw;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .customMargin {
+    margin: 6rem 2vw;
+  }
+}
+@media (max-width: 449px) {
+  .customMargin {
+    margin: 6rem 1rem;
   }
 }/*# sourceMappingURL=pageSegment.module.css.map */

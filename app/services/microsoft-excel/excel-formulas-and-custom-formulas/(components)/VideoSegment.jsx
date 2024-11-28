@@ -9,7 +9,7 @@ const VideoSegment = () => {
   const videoURL = "https://player.vimeo.com/video/294497327?h=c55bd1bb94";
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} style={{ paddingBottom: "6rem" }}>
       <div className={styles.content}>
         <div className={styles.header}>
           <p className={styles.subtitle}>Watch a Demo</p>

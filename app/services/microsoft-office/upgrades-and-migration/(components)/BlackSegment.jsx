@@ -16,7 +16,7 @@ const BlackSegment = () => {
     <section
       className={styles.expertsAwait}
       style={{ marginTop: "8rem" }}
-      id="issues"
+      id="expert-help"
     >
       <Image className={styles.bgImg} src={bg} alt="shape icon" fill="true" />
 
@@ -28,8 +28,8 @@ const BlackSegment = () => {
             </div>
             <h2>Office Experts can Help!</h2>
           </div>
-          <div className={styles.text}>
-            <p style={{ marginTop: "8rem" }}>
+          <div className={`${styles.text} ${styles.marginText}`}>
+            <p>
               Our experts will review your Office application, workbooks,
               databases and documents and advise your best migration and upgrade
               path!
@@ -46,9 +46,9 @@ const BlackSegment = () => {
               alt="Access issues icon"
               width={60}
               height={60}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Upgrade or fix your current solution if it was designed poorly,
               needs some smarts or needs some automation.
             </p>
@@ -60,9 +60,9 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={60}
               height={60}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Migrate your Office solution to a custom database application! A
               multi-user database solution typically benefits from being built
               on a commercial database such as SQL Server.{" "}
@@ -83,9 +83,9 @@ const BlackSegment = () => {
               alt="Access issues icon"
               width={60}
               height={60}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               Upgrade or fix your current solution if it was designed poorly,
               needs some smarts or needs some automation.
             </p>

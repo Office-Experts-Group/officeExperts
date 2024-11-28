@@ -16,11 +16,12 @@ const Segment4Repeat = () => {
   ];
 
   return (
-    <div className="animate-wrapper">
-      <div
-        className={styles.pageSegment}
-        style={{ margin: "6rem 0 0 0", scrollMarginTop: "150px" }}
-      >
+    <div
+      className="animate-wrapper"
+      id="microsoft-partner"
+      style={{ scrollMarginTop: "150px" }}
+    >
+      <div className={`${styles.pageSegment} ${styles.customMargin}`}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
             <h2 style={{ marginBottom: "1rem" }}>

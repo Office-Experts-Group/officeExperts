@@ -11,53 +11,61 @@ import project4 from "../../../../public/project-img-4.webp";
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
-      title: "VBA & Macro Development",
-      link: "/services/by-business-solution/vba-macro-development",
+      title: "Office 365 Implementation",
+      link: "/services/microsoft-office-365/office-365-implementation",
       image: project1,
       description: [
-        "Need a VBA programmer to automate tasks or extend Office functionality?",
+        "Need help setting up Office 365 in your organisation?",
+        "Our experts can assist you in planning and utilizing Office 365 features to maximize your ROI.",
       ],
     },
     {
-      title: "Custom Office Solutions",
-      link: "/services/by-business-solution/custom-office-solutions",
+      title: "Office 365 Migration",
+      link: "/services/microsoft-access",
       image: project2,
       description: [
-        "Need our experts with over 15 years experience to help you with Excel, Access, Word, Outlook or PowerPoint?",
+        "Need to migrate emails and/or files to Office 365?",
+        "Our consultants can help move your organisation’s email and files to the cloud using Office 365.",
       ],
     },
     {
-      title: "Database Solutions",
-      link: "/services/by-business-solution/database-development-and-solutions",
+      title: "Business Process Automation",
+      link: "/services/microsoft-office-365/business-process-automation",
       image: project3,
       description: [
-        "Our experts can build reliable and cost effective database solutions in most Microsoft technologies.",
+        "Are paper forms delaying your business processes?",
+        "Losing track of your internal forms?",
+        "THave a budget for new forms to streamline your business?",
       ],
     },
     {
-      title: "3rd Party App Office Integration",
-      link: "/services/by-business-solution/3rd-party-application-or-office-integration",
+      title: "Remote Data Gathering",
+      link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
       image: project4,
       description: [
-        "Want to link an Office app, CRM, accounting package, data files or 3rd party product to Office?",
-        "Want to extend a 3rd party product’s functionality with Office?",
+        "Need your staff to remotely fill out forms while offsite?",
+        "Do you need to gather information from your clients from any device?",
       ],
     },
   ];
 
-  // Duplicate the array to create seamless loop
-  const extendedSolutions = [...solutionsData, ...solutionsData];
+  // Duplicate first few items to create seamless loop
+  const extendedSolutions = [...solutionsData, ...solutionsData.slice(0, 3)];
 
   return (
-    <div className={`${styles.solutions} ${styles.withDuplicate}`}>
+    <div className={styles.solutions}>
       <div className={styles.title}>
         <h2>Experts In...</h2>
-        <div></div>
       </div>
+
       <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack}>
+        <div className={styles.carouselTrack} aria-label="Solutions carousel">
           {extendedSolutions.map((solution, index) => (
-            <div className={styles.cardWrapper} key={index}>
+            <div
+              key={`solution-${index}`}
+              className={styles.cardWrapper}
+              aria-label={`Solution ${(index % solutionsData.length) + 1}`}
+            >
               <div className={styles.description}>
                 {solution.description.map((item, i) => (
                   <p key={i}>{item}</p>
@@ -75,7 +83,7 @@ const SolutionsCarousel = () => {
                 >
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Office</span>
+                      <span>Microsoft</span>
                       <br />
                       {solution.title}
                     </h3>

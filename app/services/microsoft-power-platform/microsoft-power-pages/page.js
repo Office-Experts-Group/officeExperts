@@ -12,6 +12,7 @@ import Segment4Repeat from "./(components)/Segment4Repeat";
 import SegmentMainRepeat from "./(components)/SegmentMainRepeat";
 
 import faqs from "../../../../faqs/power-pages";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -183,6 +184,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Microsoft Power Pages Services" />
       <ServicePageCards />
       <PageSegmentMain />

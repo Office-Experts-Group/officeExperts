@@ -14,10 +14,7 @@ const PageSegmentMain = () => {
     "Seamless data integration",
   ];
   return (
-    <section
-      className={styles.pageSegment}
-      style={{ margin: "8rem 10vw 0rem 10vw" }}
-    >
+    <section className={`${styles.pageSegment} ${styles.customMargin}`}>
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image

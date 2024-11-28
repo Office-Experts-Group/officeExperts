@@ -70,7 +70,7 @@ const ServicePageCards = () => {
       </div>
 
       <div className={styles.card}>
-        <a href="#experts">
+        <a href="#expert-help">
           <div className={styles.content}>
             <p>Trust Us</p>
             <h2>Our Experts can Help!</h2>

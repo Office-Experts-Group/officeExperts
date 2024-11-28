@@ -8,7 +8,7 @@ import lady from "../../../../../public/service-img-1.webp";
 
 const PageSegmentMain2 = () => {
   return (
-    <section className={styles.pageSegment} style={{ margin: "4rem 0 2rem 0" }}>
+    <section className={`${styles.pageSegment} ${styles.customMargin}`}>
       <Image
         src={lady}
         alt="lady in an office environment"
@@ -43,12 +43,12 @@ const PageSegmentMain2 = () => {
             <p>Data Manipulation/Conversion</p>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/services/microsoft-word/custom-toolbars-and-ribbons">
           <div className={styles.contentLink}>
             <p>Custom Ribbons and Toolbars</p>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/services/microsoft-word/word-template-conversions">
           <div className={styles.contentLink}>
             <p>Custom Workbooks and Templates</p>
           </div>

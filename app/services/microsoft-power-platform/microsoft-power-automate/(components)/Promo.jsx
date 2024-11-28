@@ -11,13 +11,16 @@ import promo from "../../../../../public/promo.webp";
 
 const Promo = () => {
   return (
-    <section className={styles.promo} style={{ marginTop: "8rem" }}>
+    <section
+      className={`${styles.promo} ${styles.topMargin}`}
+      id="custom-solutions"
+    >
       <AnimateOnScroll animation="scale-up" duration={1}>
         <div className={styles.content}>
           <div className={styles.circle}>
             <Image src={computer} alt="computer icon" width={30} height={30} />
           </div>
-          <div className={styles.text} style={{ marginLeft: "2rem" }}>
+          <div className={`${styles.text} ${styles.leftMargin}`}>
             <h2>Tailored Power Automate Solutions Nationwide</h2>
             <p>
               Our devoted experts craft customised Power Automate solutions that

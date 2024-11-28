@@ -14,7 +14,7 @@ const Segment4Copy = () => {
       style={{ margin: "2rem 0 4rem 0", scrollMarginTop: "150px" }}
       id="build"
     >
-      <div className={styles.pageSegment}>
+      <div className={`${styles.pageSegment} ${styles.reverse}`}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
             <div className={styles.underline}>

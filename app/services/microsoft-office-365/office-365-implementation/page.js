@@ -175,7 +175,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero title="Microsoft Office 365 Implementation Consulting Services" />
+      <ServiceHero title="Microsoft Office 365 Implementation" />
       <PageSegmentMain />
       <ExpertsAwait />
       <Contact />

@@ -8,6 +8,7 @@ import ServicePageCards from "./(components)/ServicePageCards";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment3 from "./(components)/PageSegment3";
 import PageSegmentDropdowns from "./(components)/PageSegmentDropdowns";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -181,6 +182,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title={"Upgrades and Migration"} />
       <ServicePageCards />
       <PageSegmentMain />

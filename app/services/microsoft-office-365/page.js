@@ -5,8 +5,8 @@ import ExpertsAwait from "../../../components/ExpertsAwait";
 import Contact from "../../../components/Contact";
 import Testimonials from "../../(components)/Testimonials";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import Solutions from "./(components)/Solutions";
-import SolutionsCopy from "./(components)/SolutionsCopy";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
+import SolutionsCarouselReverse from "./(components)/SolutionsCarouselReverse";
 
 import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
@@ -179,8 +179,8 @@ const Page = () => {
       />
       <ServiceHero title="Microsoft Office 365" />
       <PageSegmentMain />
-      <Solutions />
-      <SolutionsCopy />
+      <SolutionsCarousel />
+      <SolutionsCarouselReverse />
       <Testimonials testimonials={testimonials} />
       <ExpertsAwait />
       <Contact />

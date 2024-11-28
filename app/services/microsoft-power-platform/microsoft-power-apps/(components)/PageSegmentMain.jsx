@@ -15,10 +15,7 @@ const PageSegmentMain = () => {
     "Enhanced accuracy, reduced errors.",
   ];
   return (
-    <section
-      className={styles.pageSegment}
-      style={{ margin: "4rem 10vw 0rem 10vw" }}
-    >
+    <section className={`${styles.pageSegment} ${styles.customMargin}`}>
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image

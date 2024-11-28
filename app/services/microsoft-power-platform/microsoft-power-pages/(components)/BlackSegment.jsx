@@ -71,7 +71,7 @@ const BlackSegment = () => {
               alt="Connection icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
             <p>Seamless connection to existing data sources</p>
           </div>
@@ -82,7 +82,7 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
             <p>Facilitates data-driven decision-making</p>
           </div>
@@ -93,7 +93,7 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
             <p>Optimises operational efficiency</p>
           </div>

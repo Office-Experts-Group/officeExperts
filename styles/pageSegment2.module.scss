@@ -52,6 +52,43 @@
     object-fit: cover;
     margin-bottom: -4rem;
   }
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 2vw 8rem 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: -2rem;
+  }
+
+  @include phoneLandscape {
+    margin-top: 4rem;
+    gap: 6rem;
+  }
+  @include phone {
+    margin-top: 6rem;
+    gap: 6rem;
+  }
+
+  img {
+    object-fit: cover;
+    @include desktop {
+      display: none;
+    }
+    @include tablet {
+      max-width: 70vw;
+      padding: 0;
+    }
+
+    @include phoneLandscape {
+      max-width: 95vw;
+      padding: 0;
+    }
+    @include phone {
+      max-width: 95vw;
+      padding: 0;
+    }
+  }
 }
 
 .contents {
@@ -172,5 +209,23 @@ a:hover {
   }
   @include desktop {
     padding: 0 0 0 10vw;
+  }
+}
+
+.customMargin {
+  margin: 4rem 0 0 0;
+
+  @include desktop {
+    margin: 4rem 0 -4rem 0;
+  }
+
+  @include tablet {
+    margin: 0 0 -4rem 0;
+  }
+  @include phoneLandscape {
+    margin: 0 0 -4rem 0;
+  }
+  @include phone {
+    margin: 0;
   }
 }

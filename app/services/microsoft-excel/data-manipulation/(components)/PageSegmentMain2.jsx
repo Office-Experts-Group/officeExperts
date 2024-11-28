@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../../../../../styles/pageSegment2.module.scss";
+import styles from "../../../../../styles/pageSegment2.module.css";
 
 import lady from "../../../../../public/service-img-1.webp";
 
 const PageSegmentMain2 = () => {
   return (
-    <section className={styles.pageSegment} style={{ margin: "4rem 0 2rem 0" }}>
+    <section className={`${styles.pageSegment} ${styles.customMargin}`}>
       <Image
         src={lady}
         alt="lady in an office environment"

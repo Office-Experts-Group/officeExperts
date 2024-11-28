@@ -11,14 +11,13 @@ const Segment4Repeat = () => {
   const checkItems = [
     "User-friendly dashboards and reports",
     "Tailored analytics aligned to objectives",
-    "MEnhanced strategic foresight",
+    "Enhanced strategic foresight",
   ];
 
   return (
     <div className="animate-wrapper">
       <div
-        className={styles.pageSegment}
-        style={{ margin: "6rem 0", scrollMarginTop: "150px" }}
+        className={`${styles.pageSegment} ${styles.customMargin} ${styles.btmMargin}`}
       >
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
