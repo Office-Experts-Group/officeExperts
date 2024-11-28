@@ -13,7 +13,7 @@ import promo from "../../../../../public/promo.webp";
 const Promo = () => {
   return (
     <section
-      className={styles.promo}
+      className={`${styles.promo} ${styles.noMargin}`}
       style={{ justifyContent: "space-between" }}
     >
       <AnimateOnScroll animation="scale-up" duration={1}>
@@ -21,7 +21,7 @@ const Promo = () => {
           <div className={styles.circle}>
             <Image src={computer} alt="computer icon" width={30} height={30} />
           </div>
-          <div className={styles.text} style={{ marginLeft: "2rem" }}>
+          <div className={`${styles.text} ${styles.textML}`}>
             <h2>Share Your Documents Online!</h2>
             <Link href={"/services/microsoft-office-365"}>- Office 365</Link>
             <Link href={"/services/by-business-solution/online-solutions"}>

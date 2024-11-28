@@ -9,11 +9,7 @@ import template from "../../../../../public/template600x400.webp";
 
 const PageSegment3 = () => {
   return (
-    <section
-      className={styles.pageSegment}
-      id="upgrade"
-      style={{ padding: "8rem 10vw" }}
-    >
+    <section className={`${styles.pageSegment} ${styles.padded}`} id="upgrade">
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image
           src={template}
@@ -25,7 +21,9 @@ const PageSegment3 = () => {
 
       <div className={styles.content}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
-          <h2>Upgrading Your Office Products</h2>
+          <h2 style={{ marginBottom: "1.5rem" }}>
+            Upgrading Your Office Products
+          </h2>
           <p>
             If you utilise macros in your Microsoft Office solutions, some of
             them may fail when upgrading or moving to 64 bit systems. If this is

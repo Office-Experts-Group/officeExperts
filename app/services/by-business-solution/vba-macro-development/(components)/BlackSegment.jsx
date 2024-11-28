@@ -9,8 +9,6 @@ import styles from "../../../../../styles/expertsAwait.module.css";
 import bg from "../../../../../public/service-bg.webp";
 import stuckIcon from "../../../../../public/icons/computerRed.png";
 import issuesIcon from "../../../../../public/icons/support.png";
-import migrateIcon from "../../../../../public/icons/idea.png";
-import expertsIcon from "../../../../../public/icons/deal.png";
 
 const BlackSegment = () => {
   return (
@@ -24,7 +22,7 @@ const BlackSegment = () => {
       <AnimateOnScroll animation="slide-left" delay={0.1} duration={1.2}>
         <div className={styles.content}>
           <div className={styles.title}>
-            <h2>
+            <h2 className={styles.centerText}>
               VBA Macros<br></br>In Office
             </h2>
           </div>
@@ -70,9 +68,9 @@ const BlackSegment = () => {
               alt="Connection icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               All Office products come with macro recorders which allow you to
               record a series of steps you would like to be able to repeat.
             </p>
@@ -84,9 +82,9 @@ const BlackSegment = () => {
               alt="Old version icon"
               width={30}
               height={30}
-              className={styles.icon}
+              className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
+            <p className={styles.centerText}>
               In recording a macro, the Office product automatically creates the
               VBA code for those steps, but the macro recorder is just the tip
               of the iceberg.

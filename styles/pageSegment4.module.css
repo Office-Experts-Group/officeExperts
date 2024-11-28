@@ -99,16 +99,18 @@
 @media (max-width: 449px) {
   .pageSegmentCenter {
     flex-direction: column-reverse;
+    padding: 0 1rem 2rem 1rem;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .pageSegmentCenter {
     flex-direction: column-reverse;
+    padding: 0 1rem 2rem 1rem;
   }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .pageSegmentCenter {
-    flex-direction: column-reverse;
+    padding: 0 5vw 2rem 5vw;
   }
 }
 
@@ -351,5 +353,16 @@
 @media (min-width: 767px) and (max-width: 1024px) {
   .noImg img {
     display: none;
+  }
+}
+
+@media (max-width: 449px) {
+  .noMargin {
+    margin: 0 !important;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .noMargin {
+    margin: 0 !important;
   }
 }/*# sourceMappingURL=pageSegment4.module.css.map */

@@ -88,6 +88,12 @@
   }
 }
 
+@media screen and (min-width: 800px) {
+  .textML {
+    margin-left: 2rem;
+  }
+}
+
 .bar {
   background-color: #046999;
   width: 10px;
@@ -225,5 +231,22 @@
 @media (min-width: 450px) and (max-width: 766px) {
   .imgWrapper {
     display: none;
+  }
+}
+
+@media (max-width: 449px) {
+  .noMargin {
+    margin: 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .noMargin {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .leftMargin {
+    margin-left: 2rem;
   }
 }/*# sourceMappingURL=promo.module.css.map */

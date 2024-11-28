@@ -41,14 +41,6 @@ const Header = () => {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div
         className={`${styles.logo} ${isScrolled ? styles.scrolledLogo : ""}`}
-        // style={
-        //   isScrolled
-        //     ? {
-        //         transform: "scale(0.5)",
-        //         transition: "transform 0.3s ease-in-out",
-        //       }
-        //     : {}
-        // }
       >
         <Link href="/">
           <Image

@@ -1,6 +1,6 @@
 .solutions {
   background-color: #f2f3f5;
-  padding: 6rem 0 0 0;
+  padding: 6rem 0;
 }
 .solutions .container {
   display: flex;
@@ -11,6 +11,7 @@
 .solutionsCopy {
   background-color: #f2f3f5;
   padding: 0 0 6rem 0;
+  margin-top: -6rem;
 }
 .solutionsCopy .container {
   display: flex;
@@ -26,11 +27,13 @@
   color: #046999;
   letter-spacing: 1px;
   font-weight: 500;
+  text-transform: uppercase;
   margin-bottom: -0.4rem;
 }
 .title h2 {
   font-size: 3rem;
   color: #1e1e1e;
+  text-transform: uppercase;
   font-weight: 900;
   margin: 1.25rem 0 3.5rem 0;
 }
@@ -129,6 +132,7 @@
 .popIn h3 {
   font-size: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
   color: #f8f8f8;
 }
 .popIn svg {
@@ -170,4 +174,4 @@
   .description::after {
     left: 50%;
   }
-} /*# sourceMappingURL=solutions.module.css.map */
+}/*# sourceMappingURL=solutions.module.css.map */

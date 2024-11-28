@@ -81,6 +81,12 @@
   }
 }
 
+.textML {
+  @media screen and (min-width: "800px") {
+    margin-left: 2rem;
+  }
+}
+
 .bar {
   background-color: $theme;
   width: 10px;
@@ -209,5 +215,20 @@
   }
   @include phoneLandscape {
     display: none;
+  }
+}
+
+.noMargin {
+  @include phone {
+    margin: 0;
+  }
+  @include phoneLandscape {
+    margin: 0;
+  }
+}
+
+.leftMargin {
+  @media screen and (min-width: 700px) {
+    margin-left: 2rem;
   }
 }

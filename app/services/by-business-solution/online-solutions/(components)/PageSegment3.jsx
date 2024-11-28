@@ -10,9 +10,8 @@ import cloud from "../../../../../public/Cloud400x267.webp";
 const PageSegment3 = () => {
   return (
     <section
-      className={styles.pageSegmentCentered}
+      className={`${styles.pageSegmentCentered} ${styles.noImg} ${styles.marginBottom}`}
       id="vsto"
-      style={{ marginBottom: "4rem" }}
     >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image

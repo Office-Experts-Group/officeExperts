@@ -6,13 +6,48 @@
   grid-template-columns: 40% 1fr;
   gap: 4rem;
 
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   img {
-    object-fit: cover;
+    object-fit: contain;
     filter: grayscale(0%);
     transition: all 0.3s ease;
     &:hover {
       filter: grayscale(100%);
       transition: all 0.3s ease;
+    }
+    max-width: 90vw;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 0;
+    img {
+      margin: 0 auto;
+    }
+  }
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 0;
+  }
+
+  @include tablet {
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include desktop {
+    img {
+      width: 450px;
+      height: 300px;
     }
   }
 }
@@ -22,6 +57,10 @@
   display: flex;
   justify-content: center;
   gap: 10vw;
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 
   img {
     object-fit: cover;
@@ -36,13 +75,65 @@
   .pageSegmentCenter {
     padding: 0;
   }
+
+  @include desktop {
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include tablet {
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+
+  @include phoneLandscape {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
 }
 
 .pageSegmentCenter {
   place-self: center;
-  padding: 0 10vw;
+  padding: 0;
   display: flex;
   flex-direction: column;
+
+  a {
+    color: $theme;
+    font-weight: 700;
+  }
+
+  @include phone {
+    img {
+      margin: 0 auto;
+    }
+  }
+  @include phoneLandscape {
+  }
+}
+
+.miniTickImg {
+  @include phone {
+    margin-top: 1.5rem;
+  }
+  @include phoneLandscape {
+    margin-top: 1.5rem;
+  }
 }
 
 .underline {
@@ -90,5 +181,60 @@
   a:hover {
     color: $theme;
     font-weight: 700;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    color: $darkGrayText;
+    margin: 0 !important;
+    line-height: 1.5rem;
+  }
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #0eaa0e;
+  background-color: #0eaa0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $offWhite;
+    svg {
+      stroke: #0eaa0e;
+      color: #0eaa0e;
+    }
+  }
+}
+
+.noMargin {
+  @include phoneLandscape {
+    margin: 0;
+    align-items: center;
+    img {
+      align-self: center;
+    }
+  }
+  @include phone {
+    margin: 0;
   }
 }

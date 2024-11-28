@@ -10,7 +10,7 @@ import dashboard from "../../../../../public/dashboard400x240.webp";
 const PageSegment3 = () => {
   return (
     <section
-      className={styles.pageSegment}
+      className={`${styles.pageSegment} ${styles.reversed}`}
       id="ASP.net"
       style={{ marginBottom: "6rem" }}
     >

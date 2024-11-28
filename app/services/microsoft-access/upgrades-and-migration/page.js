@@ -9,6 +9,7 @@ import BlackSegment from "./(components)/BlackSegment";
 import Promo from "./(components)/Promo";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -182,10 +183,11 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Upgrades and Migration" />
       <ServicePageCards />
-      <PageSegment4 />
       <PageSegmentMain />
+      <PageSegment4 />
       <BlackSegment />
       <Promo />
       <Segment4Repeat />

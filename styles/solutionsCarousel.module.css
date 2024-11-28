@@ -9,6 +9,14 @@
   }
 }
 
+.withDuplicate {
+  padding: 6rem 0 1rem 0;
+}
+
+.duplicate {
+  padding: 0 0 6rem 0;
+}
+
 .title {
   margin-left: 10vw;
   margin-bottom: 3rem;
@@ -55,26 +63,6 @@
   }
 }
 
-.carouselTrack {
-  display: flex;
-  gap: 2rem;
-  animation: slideTrack 60s linear infinite;
-  will-change: transform;
-  transform: translateZ(0);
-  padding-top: 150px;
-  margin-top: -150px;
-}
-@media (max-width: 449px) {
-  .carouselTrack {
-    gap: 1rem;
-    padding-top: 0;
-    margin-top: 0;
-  }
-}
-.carouselTrack:hover {
-  animation-play-state: paused;
-}
-
 .cardWrapper {
   flex: 0 0 350px;
   position: relative;
@@ -113,6 +101,7 @@
   z-index: 40;
   pointer-events: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 @media (max-width: 449px) {
   .description {
@@ -198,34 +187,63 @@
   color: #f8f8f8;
 }
 
+.carouselTrack {
+  display: flex;
+  gap: 2rem;
+  animation: slideTrack 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  padding-top: 150px;
+  margin-top: -150px;
+}
+@media (max-width: 449px) {
+  .carouselTrack {
+    gap: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+.reverseAnimation {
+  animation: slideTrackReverse 60s linear infinite;
+  padding: 0 0 150px 0;
+  margin: 0 0 -150px 0;
+}
+
 @keyframes slideTrack {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-2800px - 16rem));
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideTrackReverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  .carouselTrack {
+  .carouselTrack,
+  .reverseAnimation {
     animation-duration: 45s;
   }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
-  .carouselTrack {
+  .carouselTrack,
+  .reverseAnimation {
     animation-duration: 30s;
   }
 }
 @media (max-width: 449px) {
-  .carouselTrack {
-    animation-duration: 30s;
-  }
-  @keyframes slideTrack {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-800vw);
-    }
+  .carouselTrack,
+  .reverseAnimation {
+    animation-duration: 10s;
   }
 }/*# sourceMappingURL=solutionsCarousel.module.css.map */

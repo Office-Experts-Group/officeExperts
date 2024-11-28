@@ -10,12 +10,10 @@
     padding: 3rem 2vw 4rem 2vw;
   }
   @include phoneLandscape {
-    padding: 1rem;
-    margin: 0rem;
+    display: none;
   }
   @include phone {
-    padding: 1rem;
-    margin: 0rem;
+    display: none;
   }
 }
 
@@ -144,4 +142,8 @@
   100% {
     transform: scale(1);
   }
+}
+
+.hidden {
+  display: none;
 }

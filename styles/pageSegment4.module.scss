@@ -90,14 +90,16 @@
 
   @include phone {
     flex-direction: column-reverse;
+    padding: 0 1rem 2rem 1rem;
   }
 
   @include phoneLandscape {
     flex-direction: column-reverse;
+    padding: 0 1rem 2rem 1rem;
   }
 
   @include tablet {
-    flex-direction: column-reverse;
+    padding: 0 5vw 2rem 5vw;
   }
 }
 
@@ -344,5 +346,14 @@
     @include tablet {
       display: none;
     }
+  }
+}
+
+.noMargin {
+  @include phone {
+    margin: 0 !important;
+  }
+  @include phoneLandscape {
+    margin: 0 !important;
   }
 }

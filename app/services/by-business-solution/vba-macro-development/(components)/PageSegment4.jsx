@@ -14,7 +14,10 @@ const Segment4Repeat = () => {
       id="add-ins"
       style={{ scrollMarginTop: "150px" }}
     >
-      <div className={styles.pageSegment} style={{ margin: "10rem 0 0 0" }}>
+      <div
+        className={`${styles.pageSegment} ${styles.reverse} ${styles.noMargin}`}
+        style={{ margin: "10rem 0 0 0" }}
+      >
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content} style={{ width: "90%" }}>
             <h2 style={{ marginBottom: "1rem" }}>

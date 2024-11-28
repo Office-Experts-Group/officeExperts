@@ -9,11 +9,7 @@ import migrate from "../../../../../public/migrate600x400.webp";
 
 const PageSegmentMain = () => {
   return (
-    <section
-      id="stuck"
-      className={styles.pageSegment}
-      style={{ margin: "0rem 10vw 0rem 10vw" }}
-    >
+    <section id="stuck" className={styles.pageSegment}>
       <div className={styles.imgWrapper}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image

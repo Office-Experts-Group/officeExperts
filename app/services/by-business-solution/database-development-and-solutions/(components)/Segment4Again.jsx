@@ -11,7 +11,7 @@ const Segment4Repeat = () => {
   return (
     <div className="animate-wrapper">
       <div
-        className={styles.pageSegmentCenter}
+        className={`${styles.pageSegmentCenter} ${styles.noImg} ${styles.noMargin}`}
         style={{ margin: "8rem 0 2rem 0", scrollMarginTop: "150px" }}
         id="SharePoint-Solutions"
       >

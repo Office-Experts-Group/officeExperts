@@ -18,7 +18,7 @@ import migrateImage from "../../../../../public/service-img-4350x201.webp";
 const ServicePageCards = () => {
   return (
     <section
-      className={styles.servicePageCards}
+      className={`${styles.servicePageCards} ${styles.hidden}`}
       style={{ margin: "4rem 0 0rem 0" }}
     >
       <div className={styles.card}>

@@ -250,6 +250,21 @@
   gap: 1rem;
   max-width: 60%;
 }
+@media (max-width: 449px) {
+  .points {
+    max-width: 90%;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .points {
+    max-width: 90%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .points {
+    max-width: 80%;
+  }
+}
 
 .point {
   display: flex;
@@ -258,4 +273,21 @@
   color: #777a7e;
   font-size: 1.125rem;
   line-height: 2rem;
+}
+
+@media (min-width: 450px) and (max-width: 766px) {
+  .centerText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 449px) {
+  .hidden {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .hidden {
+    display: none;
+  }
 }/*# sourceMappingURL=expertsAwait.module.css.map */

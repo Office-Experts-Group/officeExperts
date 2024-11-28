@@ -11,7 +11,7 @@ import eyes from "../../../../../public/eyes400x263.webp";
 const PageSegment3 = () => {
   return (
     <section
-      className={styles.pageSegment}
+      className={`${styles.pageSegment} ${styles.reversed}`}
       id="SQL-Server"
       style={{ marginBottom: "4rem" }}
     >

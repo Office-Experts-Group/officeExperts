@@ -252,6 +252,15 @@
   margin: 0 auto;
   gap: 1rem;
   max-width: 60%;
+  @include phone {
+    max-width: 90%;
+  }
+  @include phoneLandscape {
+    max-width: 90%;
+  }
+  @include tablet {
+    max-width: 80%;
+  }
 }
 
 .point {
@@ -261,4 +270,18 @@
   color: $darkGrayText;
   font-size: 1.125rem;
   line-height: 2rem;
+}
+.centerText {
+  @include phoneLandscape {
+    text-align: center;
+  }
+}
+.hidden {
+  @include phone {
+    display: none;
+  }
+
+  @include phoneLandscape {
+    display: none;
+  }
 }

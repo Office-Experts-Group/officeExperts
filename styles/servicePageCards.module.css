@@ -12,14 +12,12 @@
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .servicePageCards {
-    padding: 1rem;
-    margin: 0rem;
+    display: none;
   }
 }
 @media (max-width: 449px) {
   .servicePageCards {
-    padding: 1rem;
-    margin: 0rem;
+    display: none;
   }
 }
 
@@ -147,4 +145,7 @@
   100% {
     transform: scale(1);
   }
+}
+.hidden {
+  display: none;
 }/*# sourceMappingURL=servicePageCards.module.css.map */

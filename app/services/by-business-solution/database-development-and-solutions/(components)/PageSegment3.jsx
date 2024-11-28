@@ -10,7 +10,7 @@ import cloud from "../../../../../public/Cloud400x267.webp";
 const PageSegment3 = () => {
   return (
     <section
-      className={styles.pageSegment}
+      className={`${styles.pageSegment} ${styles.noImg}`}
       id="why-choose-access"
       style={{ marginBottom: "2rem" }}
     >

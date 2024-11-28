@@ -16,6 +16,9 @@
   img {
     filter: grayscale(0%);
     transition: all 0.3s ease;
+    aspect-ratio: 600/450;
+    object-fit: contain;
+
     &:hover {
       filter: grayscale(100%);
       transition: all 0.3s ease;
@@ -70,6 +73,23 @@
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
+  }
+
+  @include phone {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    p {
+      max-width: 100%;
+    }
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+    p {
+      max-width: 100%;
+    }
+  }
+  @include tablet {
+    flex-direction: column;
   }
 }
 
@@ -141,5 +161,69 @@
       stroke: #0eaa0e;
       color: #0eaa0e;
     }
+  }
+}
+
+.noImg {
+  @include phone {
+    img {
+      display: none;
+    }
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+  }
+  @include phoneLandscape {
+    img {
+      display: none;
+    }
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+  }
+}
+
+.reversed {
+  @include phone {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+
+.noMargin {
+  @include phone {
+    margin: 0 !important;
+  }
+  @include phoneLandscape {
+    margin: 0 !important;
+  }
+}
+
+.marginBottom {
+  margin-bottom: 4rem !important;
+  @include phone {
+    margin-top: -4rem;
+  }
+  @include phoneLandscape {
+    margin-top: -4rem;
+  }
+}
+
+.padded {
+  padding: 8rem 10vw;
+  @include desktop {
+    padding: 4rem 10vw;
+    img {
+      width: 450px;
+      height: 300px;
+    }
+  }
+  @include phoneLandscape {
+    padding: 4rem 5vw;
+  }
+  @include phone {
+    padding: 4rem 1rem;
   }
 }

@@ -9,7 +9,10 @@ import dashboard from "../../../../../public/dashboard400x240.webp";
 
 const PageSegment3 = () => {
   return (
-    <section className={styles.pageSegment} id="cloud-based-azure">
+    <section
+      className={`${styles.pageSegment} ${styles.reversed} ${styles.noMargin}`}
+      id="cloud-based-azure"
+    >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image
           src={dashboard}

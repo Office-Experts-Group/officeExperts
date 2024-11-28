@@ -13,6 +13,9 @@
 .pageSegment img {
   filter: grayscale(0%);
   transition: all 0.3s ease;
+  aspect-ratio: 600/450;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .pageSegment img:hover {
   filter: grayscale(100%);
@@ -73,6 +76,28 @@
 .pageSegmentCentered img:hover {
   filter: grayscale(100%);
   transition: all 0.3s ease;
+}
+@media (max-width: 449px) {
+  .pageSegmentCentered {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .pageSegmentCentered p {
+    max-width: 100%;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegmentCentered {
+    flex-direction: column;
+  }
+  .pageSegmentCentered p {
+    max-width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pageSegmentCentered {
+    flex-direction: column;
+  }
 }
 
 .underline {
@@ -139,4 +164,84 @@
 .tick:hover svg {
   stroke: #0eaa0e;
   color: #0eaa0e;
+}
+
+@media (max-width: 449px) {
+  .noImg {
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+  }
+  .noImg img {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .noImg {
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+  }
+  .noImg img {
+    display: none;
+  }
+}
+
+@media (max-width: 449px) {
+  .reversed {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .reversed {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 449px) {
+  .noMargin {
+    margin: 0 !important;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .noMargin {
+    margin: 0 !important;
+  }
+}
+
+.marginBottom {
+  margin-bottom: 4rem !important;
+}
+@media (max-width: 449px) {
+  .marginBottom {
+    margin-top: -4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .marginBottom {
+    margin-top: -4rem;
+  }
+}
+
+.padded {
+  padding: 8rem 10vw;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .padded {
+    padding: 4rem 10vw;
+  }
+  .padded img {
+    width: 450px;
+    height: 300px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .padded {
+    padding: 4rem 5vw;
+  }
+}
+@media (max-width: 449px) {
+  .padded {
+    padding: 4rem 1rem;
+  }
 }/*# sourceMappingURL=pageSegment3.module.css.map */

@@ -4,7 +4,6 @@ import Hero from "./(components)/Hero";
 import Services from "./(components)/Services";
 import CTAMain from "./(components)/CTAMain";
 import IsRight from "./(components)/IsRight";
-import Solutions from "./(components)/Solutions";
 import CTAFull from "./(components)/CTAFull";
 import Testimonials from "./(components)/Testimonials";
 import Brands from "../../../components/Brands";
@@ -13,6 +12,7 @@ import Contact from "../../../components/Contact";
 
 import { getHomePageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
 const schema = {
   "@context": "https://schema.org",
@@ -157,7 +157,7 @@ const Page = () => {
       <Services />
       <CTAMain />
       <IsRight />
-      <Solutions />
+      <SolutionsCarousel />
       <Testimonials testimonials={testimonials} />
       <Brands />
       <CTAFull />

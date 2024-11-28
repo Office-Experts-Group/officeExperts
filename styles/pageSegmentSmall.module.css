@@ -12,6 +12,18 @@
   color: #777a7e;
   line-height: 2rem;
 }
+@media (min-width: 450px) and (max-width: 766px) {
+  .pageSegmentSmall {
+    flex-direction: column;
+  }
+}
+@media (max-width: 449px) {
+  .pageSegmentSmall {
+    flex-direction: column;
+    padding: 0rem 1rem 6rem 1rem;
+    gap: 1rem;
+  }
+}
 
 .point {
   display: flex;

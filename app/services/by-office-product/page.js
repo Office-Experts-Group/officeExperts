@@ -4,8 +4,8 @@ import ServiceHero from "../../../components/ServiceHero";
 import ExpertsAwait from "../../../components/ExpertsAwait";
 import Contact from "../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import Solutions from "./(components)/Solutions";
-import SolutionsCopy from "./(components)/SolutionsCopy";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
+import SolutionsCarouselReverse from "./(components)/SolutionsCarouselReverse";
 
 const schema = {
   "@context": "https://schema.org",
@@ -147,8 +147,8 @@ const Page = () => {
       />
       <ServiceHero title="Services By Office Product" />
       <PageSegmentMain />
-      <Solutions />
-      <SolutionsCopy />
+      <SolutionsCarousel />
+      <SolutionsCarouselReverse />
       <ExpertsAwait />
       <Contact />
     </>

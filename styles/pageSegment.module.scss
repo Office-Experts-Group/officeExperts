@@ -45,6 +45,9 @@
   @include tablet {
     display: none;
   }
+  @include desktop {
+    border-bottom: none;
+  }
 }
 
 .contentWrapper {

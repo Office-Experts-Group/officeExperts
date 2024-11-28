@@ -13,6 +13,7 @@ import CTAFull from "../../../(components)/CTAFull";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import Segment4Again from "./(components)/Segment4Again";
 import Segment7Repeat from "./(components)/Segment7Repeat";
+import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",
@@ -159,6 +160,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero title="Microsoft Database Development and Solutions" />
       <PageSegmentMain2 />
       <PageSegment3 />
