@@ -48,44 +48,52 @@ const Services = () => {
 
       <AnimateOnScroll animation="fade-down" delay={0} duration={1.5}>
         <div className={styles.cards}>
-          <ServicesCard
-            src={corporate}
-            alt={"Corporate Global Template Solution"}
-            h3={"Corporate Global Template Solution"}
-            li={[
-              "Our advanced Corporate Word Template Solution enables users to efficiently create corporate documents in a controlled environment within your branding guidelines.",
-            ]}
-            link={"/corporate-global-template-solution"}
-          />
-          <ServicesCard
-            src={word}
-            alt={"Word Document & Template Creation"}
-            h3={"Word Document & Template Creation"}
-            li={[
-              "Let us take the stress out of your company templates. We create easy to use templates for all of your organisation's documents with your branding, a consistent look and a professional feel.",
-            ]}
-            link={"/word-document-template-creation"}
-          />
-          <ServicesCard
-            src={accessibility}
-            alt={"Accessibility"}
-            h3={"Accessibility"}
-            li={[
-              "Templates created to Accessibility Guidelines.",
-              "Ensure your Corporate or Government documentation adheres to Accessibility Guidelines.",
-            ]}
-            link={"/accessibility"}
-          />
-          <ServicesCard
-            src={quickParts}
-            alt={"Quick Parts"}
-            h3={"Quick Parts"}
-            li={[
-              "Increase productivity and reduce repetition",
-              "With Quick Parts and Building Blocks we can pre-design page layouts, content, image placements and more for easy insertion by users",
-            ]}
-            link={"/quick-parts"}
-          />
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={corporate}
+              alt={"Corporate Global Template Solution"}
+              h3={"Corporate Global Template Solution"}
+              li={[
+                "Our advanced Corporate Word Template Solution enables users to efficiently create corporate documents in a controlled environment within your branding guidelines.",
+              ]}
+              link={"/corporate-global-template-solution"}
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={word}
+              alt={"Word Document & Template Creation"}
+              h3={"Word Document & Template Creation"}
+              li={[
+                "Let us take the stress out of your company templates. We create easy to use templates for all of your organisation's documents with your branding, a consistent look and a professional feel.",
+              ]}
+              link={"/word-document-template-creation"}
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={accessibility}
+              alt={"Accessibility"}
+              h3={"Accessibility"}
+              li={[
+                "Templates created to Accessibility Guidelines.",
+                "Ensure your Corporate or Government documentation adheres to Accessibility Guidelines.",
+              ]}
+              link={"/accessibility"}
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={quickParts}
+              alt={"Quick Parts"}
+              h3={"Quick Parts"}
+              li={[
+                "Increase productivity and reduce repetition",
+                "With Quick Parts and Building Blocks we can pre-design page layouts, content, image placements and more for easy insertion by users",
+              ]}
+              link={"/quick-parts"}
+            />
+          </CardIntersectionWrapper>
         </div>
       </AnimateOnScroll>
     </section>

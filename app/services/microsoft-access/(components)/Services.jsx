@@ -12,6 +12,7 @@ import integrate from "../../../../public/microsoft/integrateNoBG.webp";
 import upgrades from "../../../../public/microsoft/upgradesNoBG.webp";
 import scott from "../../../../public/scott.webp";
 import signature from "../../../../public/signature.webp";
+import CardIntersectionWrapper from "../../../../components/CardIntersectionWrapper";
 
 const Services = () => {
   return (
@@ -48,48 +49,56 @@ const Services = () => {
 
       <AnimateOnScroll animation="fade-down" delay={0} duration={1.5}>
         <div className={styles.cards}>
-          <ServicesCard
-            src={dataSol}
-            alt={"Office environment"}
-            h3={"Microsoft Database Solutions"}
-            li={[
-              "Need a reliable database built by experts with 15+ years experience?",
-              "We build cost effective database solutions in most Microsoft technologies.",
-            ]}
-            link={
-              "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions"
-            }
-          />
-          <ServicesCard
-            src={azure}
-            alt={"Access/Azure Cloud Solutions"}
-            h3={"Access/Azure Cloud Solutions"}
-            li={[
-              "Need an Access database setup to be used remotely?",
-              "Using Azure in combination with Access we can setup a custom, cost effective cloud database to suit your needs.",
-            ]}
-            link={"/access-azure-cloud-based-solutions"}
-          />
-          <ServicesCard
-            src={integrate}
-            alt={"3rd Party Product Integration"}
-            h3={"3rd Party Product Integration"}
-            li={[
-              "Need an accounting package, CRM, 3rd party product or Office app linked to Access?",
-              "Want to extend 3rd party product functionality with Access?",
-            ]}
-            link={"/3rd-party-product-integration"}
-          />
-          <ServicesCard
-            src={upgrades}
-            alt={"Upgrades and Conversions"}
-            h3={"Upgrades and Conversions"}
-            li={[
-              "Have a database that needs upgrading or is failing after upgrading?",
-              "Have a database that needs to be converted from or to another format?",
-            ]}
-            link={"/upgrades-and-migration"}
-          />
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={dataSol}
+              alt={"Office environment"}
+              h3={"Microsoft Database Solutions"}
+              li={[
+                "Need a reliable database built by experts with 15+ years experience?",
+                "We build cost effective database solutions in most Microsoft technologies.",
+              ]}
+              link={
+                "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions"
+              }
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={azure}
+              alt={"Access/Azure Cloud Solutions"}
+              h3={"Access/Azure Cloud Solutions"}
+              li={[
+                "Need an Access database setup to be used remotely?",
+                "Using Azure in combination with Access we can setup a custom, cost effective cloud database to suit your needs.",
+              ]}
+              link={"/access-azure-cloud-based-solutions"}
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={integrate}
+              alt={"3rd Party Product Integration"}
+              h3={"3rd Party Product Integration"}
+              li={[
+                "Need an accounting package, CRM, 3rd party product or Office app linked to Access?",
+                "Want to extend 3rd party product functionality with Access?",
+              ]}
+              link={"/3rd-party-product-integration"}
+            />
+          </CardIntersectionWrapper>
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={upgrades}
+              alt={"Upgrades and Conversions"}
+              h3={"Upgrades and Conversions"}
+              li={[
+                "Have a database that needs upgrading or is failing after upgrading?",
+                "Have a database that needs to be converted from or to another format?",
+              ]}
+              link={"/upgrades-and-migration"}
+            />
+          </CardIntersectionWrapper>
         </div>
       </AnimateOnScroll>
     </section>

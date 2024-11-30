@@ -87,6 +87,13 @@
     filter: brightness(1.1);
     border-radius: 50%;
   }
+
+  @include phone {
+    transition: all 1s ease-in-out;
+  }
+  @include phoneLandscape {
+    transition: all 1s ease-in-out;
+  }
 }
 
 .cardContent {
@@ -164,10 +171,11 @@
       transform: scale(1.1);
     }
 
-    // Add focus styles for accessibility
-    &:focus {
-      outline: 2px solid $offWhite;
-      outline-offset: 2px;
+    @include phone {
+      transition: all 1s ease-in-out;
+    }
+    @include phoneLandscape {
+      transition: all 1s ease-in-out;
     }
   }
 
@@ -199,5 +207,47 @@
   text-align: center;
   a {
     margin: 2rem auto 1rem auto;
+  }
+}
+// New classes for intersection observer
+@include phoneLandscape {
+  .inViewImage {
+    transform: translateY(-100%) !important;
+  }
+
+  .inViewContent {
+    transform: translateY(0) !important;
+  }
+
+  // Media query for touch devices
+  @media (hover: none) {
+    .card .cardImage.inViewImage {
+      transform: translateY(-100%) !important;
+    }
+
+    .card .cardContent.inViewContent {
+      transform: translateY(0) !important;
+    }
+  }
+}
+
+@include phone {
+  .inViewImage {
+    transform: translateY(-100%) !important;
+  }
+
+  .inViewContent {
+    transform: translateY(0) !important;
+  }
+
+  // Media query for touch devices
+  @media (hover: none) {
+    .card .cardImage.inViewImage {
+      transform: translateY(-100%) !important;
+    }
+
+    .card .cardContent.inViewContent {
+      transform: translateY(0) !important;
+    }
   }
 }

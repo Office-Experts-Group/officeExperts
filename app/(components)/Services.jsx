@@ -13,6 +13,7 @@ import powerPlatform from "../../public/microsoft/powerPlatformNoBG.webp";
 
 import scott from "../../public/scott.webp";
 import signature from "../../public/signature.webp";
+import CardIntersectionWrapper from "../../components/CardIntersectionWrapper";
 
 const Services = () => {
   return (
@@ -50,55 +51,66 @@ const Services = () => {
 
       <AnimateOnScroll animation="fade-down" delay={0} duration={1.5}>
         <div className={styles.cards}>
-          <ServicesCard
-            src={excel}
-            alt={"Microsoft Excel"}
-            h3={"Microsoft Excel"}
-            li={[
-              "Spreadsheets and Add-ins",
-              "Process Data and Automation",
-              "Develop VBA macros",
-              "Pivot tables, reports, charts",
-              "Forms/formulas/functions",
-            ]}
-            link={"/services/microsoft-excel"}
-          />
-          <ServicesCard
-            src={word}
-            alt={"Microsoft Word"}
-            h3={"Microsoft Word"}
-            li={[
-              "Format and design documents",
-              "Mail merge",
-              "Template creation",
-              "Macro development",
-            ]}
-            link={"/services/microsoft-word"}
-          />
-          <ServicesCard
-            src={powerPlatform}
-            alt={"Power Platform"}
-            h3={"Power Platform"}
-            li={[
-              "Web enabled Dashboard solutions which auto-refresh from your live databases.",
-              "Power BI Business Intelligence solutions.",
-              "Effortlessly drill down into your data.",
-              "Graphs, charts and other visual solutions to easily monitor the data that matters.",
-            ]}
-            link={"https://www.powerplatformexperts.com.au/"}
-          />
-          <ServicesCard
-            src={access}
-            alt={"Microsoft Access"}
-            h3={"Microsoft Access"}
-            li={[
-              "Create and design databases",
-              "Automation and upgrades",
-              "Review code and fix defects",
-              "Integrate financial systems",
-            ]}
-            link={"/services/microsoft-access"}
-          />
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={excel}
+              alt={"Microsoft Excel"}
+              h3={"Microsoft Excel"}
+              li={[
+                "Spreadsheets and Add-ins",
+                "Process Data and Automation",
+                "Develop VBA macros",
+                "Pivot tables, reports, charts",
+                "Forms/formulas/functions",
+              ]}
+              link={"/services/microsoft-excel"}
+            />
+          </CardIntersectionWrapper>
+
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={word}
+              alt={"Microsoft Word"}
+              h3={"Microsoft Word"}
+              li={[
+                "Format and design documents",
+                "Mail merge",
+                "Template creation",
+                "Macro development",
+              ]}
+              link={"/services/microsoft-word"}
+            />
+          </CardIntersectionWrapper>
+
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={powerPlatform}
+              alt={"Power Platform"}
+              h3={"Power Platform"}
+              li={[
+                "Web enabled Dashboard solutions which auto-refresh from your live databases.",
+                "Power BI Business Intelligence solutions.",
+                "Effortlessly drill down into your data.",
+                "Graphs, charts and other visual solutions to easily monitor the data that matters.",
+              ]}
+              link={"https://www.powerplatformexperts.com.au/"}
+            />
+          </CardIntersectionWrapper>
+
+          <CardIntersectionWrapper>
+            <ServicesCard
+              src={access}
+              alt={"Microsoft Access"}
+              h3={"Microsoft Access"}
+              li={[
+                "Create and design databases",
+                "Automation and upgrades",
+                "Review code and fix defects",
+                "Integrate financial systems",
+              ]}
+              link={"/services/microsoft-access"}
+            />
+          </CardIntersectionWrapper>
         </div>
       </AnimateOnScroll>
     </section>

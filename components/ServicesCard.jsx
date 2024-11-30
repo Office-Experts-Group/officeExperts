@@ -2,12 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PropTypes from "prop-types";
+import styles from "../styles/servicesCard.module.scss";
 
-import styles from "../styles/servicesCard.module.css";
-
-const ServicesCard = ({ src, alt, h3, li, link }) => {
+export const ServicesCard = ({ src, alt, h3, li, link }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-card>
       <div className={styles.cardImage}>
         <Image
           src={src}
@@ -45,12 +44,12 @@ const ServicesCard = ({ src, alt, h3, li, link }) => {
   );
 };
 
-export default ServicesCard;
-
 ServicesCard.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   h3: PropTypes.string,
-  li: PropTypes.array,
+  li: PropTypes.arrayOf(PropTypes.string),
   link: PropTypes.string,
 };
+
+export default ServicesCard;
