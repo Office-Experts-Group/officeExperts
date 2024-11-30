@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "../../../../styles/hero.module.css";
 
-import handShake from "../../../../public/hero/handShakeBlue.webp";
+import handShake from "../../../../public/hero/handShake.webp";
 import graph from "../../../../public/hero/graph.webp";
 import shapeLeft from "../../../../public/hero/shapeLeft.png";
 import shapeRight from "../../../../public/hero/shapeRight.webp";
