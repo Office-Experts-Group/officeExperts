@@ -1,7 +1,7 @@
-import React from "react";
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-
-import styles from "../styles/footerLocations.module.css";
+import styles from "../styles/footerLocations.module.scss";
 
 const locationsByState = {
   "New South Wales": {
@@ -30,55 +30,54 @@ const locationsByState = {
   },
 };
 
-const FooterLocationsSection = () => {
+export default function FooterLocationsSection() {
+  const [activeState, setActiveState] = useState(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice("ontouchstart" in window);
+  }, []);
+
+  const handleStateClick = (state, e) => {
+    e.preventDefault();
+    setActiveState(activeState === state ? null : state);
+  };
+
   return (
     <div className={styles.locationsSection}>
       <h3>Our Locations</h3>
       <p className={styles.remoteAccess}>Australia-wide via remote access</p>
 
       <div className={styles.statesGrid}>
-        {Object.entries(locationsByState).map(([state, locations]) => (
-          <div key={state} className={styles.stateDropdown}>
-            <p className={styles.stateHeader}>{state}</p>
+        {Object.entries(locationsByState).map(([state, locations]) => {
+          const isActive = activeState === state;
+          const dropdownClasses = `${styles.locationsDropdown} ${
+            isActive ? styles.show : ""
+          }`;
+          const stateClasses = `${styles.stateDropdown} ${
+            isActive ? styles.active : ""
+          }`;
 
-            {/* Cities dropdown */}
-            <div className={styles.locationsDropdown}>
-              {Object.entries(locations).map(([city, data]) => (
-                <div key={city} className={styles.cityItem}>
-                  {typeof data === "string" ? (
-                    <Link href={data} className={styles.cityLink}>
+          return (
+            <div
+              key={state}
+              className={stateClasses}
+              onClick={(e) => handleStateClick(state, e)}
+            >
+              <p className={styles.stateHeader}>{state}</p>
+              <div className={dropdownClasses}>
+                {Object.entries(locations).map(([city, url]) => (
+                  <div key={city} className={styles.cityItem}>
+                    <Link href={url} className={styles.cityLink}>
                       {city}
                     </Link>
-                  ) : (
-                    <div className={styles.cityWithServices}>
-                      <span className={styles.cityName}>{city}</span>
-
-                      {/* Services dropdown */}
-                      <div className={styles.servicesDropdown}>
-                        {data.links.map((linkGroup, index) => (
-                          <div key={index} className={styles.servicesList}>
-                            {linkGroup.map((service) => (
-                              <Link
-                                key={service}
-                                href={data.urls[index]}
-                                className={styles.serviceLink}
-                              >
-                                {service}
-                              </Link>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
-};
-
-export default FooterLocationsSection;
+}

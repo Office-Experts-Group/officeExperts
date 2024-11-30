@@ -29,6 +29,15 @@
 .stateDropdown {
   position: relative;
 }
+.stateDropdown::-webkit-details-marker {
+  display: none;
+}
+.stateDropdown > summary {
+  list-style: none;
+}
+.stateDropdown > summary::-webkit-details-marker {
+  display: none;
+}
 
 .stateHeader {
   display: flex;
@@ -54,7 +63,7 @@
 }
 
 .stateDropdown:hover .locationsDropdown,
-.stateDropdown:focus-within .locationsDropdown {
+.stateDropdown[open] .locationsDropdown {
   max-height: 500px;
 }
 
@@ -68,48 +77,6 @@
   pointer-events: auto;
 }
 
-.cityWithServices {
-  display: flex;
-  flex-direction: column;
-}
-
-.cityName {
-  color: #a0a2a6;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.5s;
-}
-.cityName:hover {
-  color: #046999;
-}
-
-.servicesDropdown {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 1s ease-out;
-  overflow: hidden;
-}
-
-.servicesList {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-left: 1rem;
-}
-.servicesList a {
-  color: #a0a2a6;
-  transition: color 0.5s;
-}
-.servicesList a:hover {
-  color: #046999;
-}
-.servicesList a:not(:last-child)::after {
-  content: "|";
-  margin-left: 0.5rem;
-  color: #a0a2a6;
-}
-
 .cityLink {
   color: #a0a2a6;
   transition: color 0.5s;
@@ -119,6 +86,11 @@
   color: #046999;
 }
 
+@media (hover: none) {
+  .stateDropdown:not([open]) .locationsDropdown {
+    max-height: 0 !important;
+  }
+}
 @media (max-width: 768px) {
   .statesGrid {
     gap: 0.5rem;
@@ -126,10 +98,51 @@
   .locationsDropdown {
     padding-left: 1rem;
   }
-  .servicesDropdown {
-    position: relative;
-    left: auto;
-    top: auto;
-    box-shadow: none;
+}
+.locationsDropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-out;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+.stateDropdown:hover .locationsDropdown,
+.stateDropdown:focus-within .locationsDropdown,
+.stateDropdown.active .locationsDropdown {
+  max-height: 500px !important;
+}
+
+@media (hover: none) {
+  .stateDropdown:hover .locationsDropdown {
+    max-height: 0 !important;
+  }
+  .stateDropdown.active .locationsDropdown {
+    max-height: 500px !important;
+  }
+}
+.locationsDropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-out;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+.locationsDropdown.show {
+  max-height: 500px;
+}
+
+@media (hover: hover) {
+  .stateDropdown:hover .locationsDropdown {
+    max-height: 500px;
+  }
+}
+
+@media (hover: none) {
+  .stateDropdown .locationsDropdown {
+    max-height: 0;
+  }
+  .stateDropdown .locationsDropdown.show {
+    max-height: 500px;
   }
 }/*# sourceMappingURL=footerLocations.module.css.map */

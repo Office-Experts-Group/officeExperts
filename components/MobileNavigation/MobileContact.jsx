@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import maps from "../../public/icons/maps.png";
-import msg from "../../public/icons/msg.png";
-import emailSlide from "../../public/icons/emailSlide.png";
+import maps from "../../public/icons/mapsBlue.webp";
+import msg from "../../public/icons/msgBlue.webp";
+import emailSlide from "../../public/icons/emailSlideBlue.webp";
 
 const MobileContact = ({ styles }) => {
   return (

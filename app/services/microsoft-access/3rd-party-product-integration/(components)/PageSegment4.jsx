@@ -24,7 +24,7 @@ const Segment4Repeat = () => {
               other 3rd party product that you want linked to Access?
             </p>
             <p>
-              Do you want to extend a 3rd party product’s functionality using
+              Do you want to extend a 3rd party product's functionality using
               Access?
             </p>
           </div>

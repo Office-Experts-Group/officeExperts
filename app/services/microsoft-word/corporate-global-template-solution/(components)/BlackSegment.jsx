@@ -7,10 +7,10 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import styles from "../../../../../styles/expertsAwait.module.css";
 
 import bg from "../../../../../public/service-bg.webp";
-import stuckIcon from "../../../../../public/icons/computerRed.png";
-import issuesIcon from "../../../../../public/icons/support.png";
-import migrateIcon from "../../../../../public/icons/idea.png";
-import expertsIcon from "../../../../../public/icons/deal.png";
+import stuckIcon from "../../../../../public/icons/computerBlue.webp";
+import issuesIcon from "../../../../../public/icons/supportBlue.webp";
+import migrateIcon from "../../../../../public/icons/ideaBlue.webp";
+import expertsIcon from "../../../../../public/icons/handShakeBlue.webp";
 
 const BlackSegment = () => {
   return (

@@ -6,9 +6,9 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import styles from "../../../../../styles/expertsAwait.module.css";
 
 import bg from "../../../../../public/service-bg.webp";
-import stuckIcon from "../../../../../public/icons/computerRed.png";
-import issuesIcon from "../../../../../public/icons/support.png";
-import handShake from "../../../../../public/icons/handShake.png";
+import stuckIcon from "../../../../../public/icons/computerBlue.webp";
+import issuesIcon from "../../../../../public/icons/supportBlue.webp";
+import handShake from "../../../../../public/icons/handShakeBlue.webp";
 import Link from "next/link";
 
 const BlackSegment = () => {

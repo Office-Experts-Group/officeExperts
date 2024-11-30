@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 // import Image from "next/image";
 
-// import msg from "../../public/icons/msg.png";
-// import emailSlide from "../../public/icons/emailSlide.png";
+// import msg from "../../public/icons/msgBlue.webp";
+// import emailSlide from "../../public/icons/emailSlideBlue.webp";
 
 import styles from "../../styles/footerHelp.module.css";
 

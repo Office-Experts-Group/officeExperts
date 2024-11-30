@@ -7,7 +7,7 @@ import styles from "../../../../styles/isRight.module.css";
 
 import isRight from "../../../../public/isRight.webp";
 import isRight2 from "../../../../public/isRight2.webp";
-import idea from "../../../../public/icons/idea.png";
+import idea from "../../../../public/icons/ideaBlue.webp";
 
 const IsRight = () => {
   return (

@@ -61,6 +61,7 @@
   transition: all 0.5s ease;
   height: fit-content;
   width: 100%;
+  max-width: 100vw;
 
   &.scrolled {
     background-color: $black;

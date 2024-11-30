@@ -7,19 +7,13 @@ import SocialLinks from "./SocialLinks";
 import styles from "../styles/footerLogo.module.css";
 
 import logo from "../public/logo200x86.webp";
-import msg from "../public/icons/msg.png";
-import emailSlide from "../public/icons/emailSlide.png";
+import msg from "../public/icons/msgBlue.webp";
+import emailSlide from "../public/icons/emailSlideBlue.webp";
 
 const FooterLogoSection = () => {
   return (
     <div className={styles.footerLogo}>
       <Image src={logo} alt="logo" width={200} height={86} />
-
-      {/* <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-        aliquam nemo eveniet accusamus ab veniam consectetur perspiciatis.
-        Ipsum, harum commodi.
-      </p> */}
       <div className={styles.contact}>
         <h3>Contact Us</h3>
         <Link href={"tel:+61-1300-10-28-10"}>
