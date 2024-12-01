@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import ServicesCard from "../../components/ServicesCard";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
+import CardIntersectionWrapper from "../../components/CardIntersectionWrapper";
 
 import styles from "../../styles/services.module.css";
 
@@ -13,7 +14,6 @@ import powerPlatform from "../../public/microsoft/powerPlatformNoBG.webp";
 
 import scott from "../../public/scott.webp";
 import signature from "../../public/signature.webp";
-import CardIntersectionWrapper from "../../components/CardIntersectionWrapper";
 
 const Services = () => {
   return (

@@ -5,7 +5,7 @@ const NavLinks = () => {
   return (
     <>
       <li>
-        <Link href="https://officeexperts.com.au">Office Experts</Link>
+        <Link href="/">Office Experts</Link>
       </li>
       <li>
         <Link href="https://excelexperts.com.au">Excel Experts</Link>
@@ -16,7 +16,7 @@ const NavLinks = () => {
         </Link>
       </li>
       <li>
-        <Link href="/">Access Experts</Link>
+        <Link href="https://accessexperts.com.au">Access Experts</Link>
       </li>
       <li>
         <Link href="https://wordexperts.com.au">Word Experts</Link>

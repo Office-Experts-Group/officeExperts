@@ -12,6 +12,11 @@
     max-width: 28rem;
   }
 }
+@media (max-width: 768px) {
+  .container {
+    max-width: 95vw;
+  }
+}
 
 .alert {
   position: relative;

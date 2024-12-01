@@ -6,15 +6,12 @@ export default function CardIntersectionWrapper({ children }) {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    console.log("Available styles:", styles); // Debug log to see all available CSS module classes
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target.classList) {
             // Add/remove the CSS module class
             entry.target.classList.toggle(styles.inView, entry.isIntersecting);
-            console.log("Applied class:", styles.inView);
 
             // Find child elements using the CSS module classes
             const cardImage = entry.target.querySelector(
