@@ -66,14 +66,14 @@
 }
 @media (max-width: 449px) {
   .shapeLeft {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 147px;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .shapeLeft {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 147px;
   }
 }
 
@@ -85,14 +85,14 @@
 }
 @media (max-width: 449px) {
   .shapeRight {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 146px;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
   .shapeRight {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 146px;
   }
 }
 

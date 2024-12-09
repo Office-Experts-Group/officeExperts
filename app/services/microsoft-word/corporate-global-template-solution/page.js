@@ -9,9 +9,9 @@ import PageSegment8 from "./(components)/PageSegment8";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
 import FAQSection from "../../../../components/FAQSection";
+import Contents from "./(components)/Contents";
 
 import faqs from "../../../../faqs/corporate-solutions";
-import Contents from "./(components)/Contents";
 
 const schema = {
   "@context": "https://schema.org",

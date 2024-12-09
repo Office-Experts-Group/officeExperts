@@ -68,13 +68,13 @@
   animation: slideInLeft 7.5s infinite; // Changed from 5s to maintain proportion
   animation-delay: 0.45s; // Adjusted proportionally from 0.3s
   @include phone {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 147px; // Maintains original aspect ratio (150/1.019)
   }
 
   @include phoneLandscape {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 147px;
   }
 }
 
@@ -84,13 +84,13 @@
   animation: slideInRight 7.5s infinite; // Changed from 5s to maintain proportion
   animation-delay: 0.75s; // Adjusted proportionally from 0.5s
   @include phone {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 146px; // Maintains original aspect ratio (150/1.019)
   }
 
   @include phoneLandscape {
-    max-height: 150px;
-    max-width: 150px;
+    width: 150px;
+    height: 146px;
   }
 }
 
