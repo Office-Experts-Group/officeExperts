@@ -11,17 +11,6 @@ export const metadata = {
     description:
       "Expert Microsoft Word document design and consulting services for government departments. Specializing in accessible documents, templates, and corporate identity protection for state and federal agencies.",
     url: "https://www.wordexperts.com.au/services/microsoft-word/government-departments/",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   keywords: [
@@ -58,31 +47,8 @@ export const metadata = {
     "government template automation",
     "government document consistency",
   ],
-
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Government Department Word Solutions",
-    description:
-      "Expert Microsoft Word document design and consulting services for government departments. Specializing in accessible documents, templates, and corporate identity protection for state and federal agencies.",
-    images: ["/logo.png"],
-  },
-
   canonical:
     "https://www.wordexperts.com.au/services/microsoft-word/government-departments/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

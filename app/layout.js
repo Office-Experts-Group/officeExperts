@@ -89,6 +89,7 @@ export const metadata = {
     "Microsoft Office consulting",
     "Office solutions Australia",
     "Office programmers Australia",
+    "Office Experts Australia",
     "Office automation solutions",
     "Office integration services",
     "Office 365 migration services",
@@ -111,12 +112,6 @@ export const metadata = {
     "government Office services",
     "enterprise Office consulting",
     "business Office automation",
-
-    // Technology combinations
-    "Office SharePoint integration",
-    "Office Azure solutions",
-    "Office cloud migration",
-    "Office business solutions",
   ],
 
   // Twitter Card
@@ -125,15 +120,14 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Group | Microsoft Office Consulting & Solutions",
     description:
-      "Leading Microsoft Office consulting and solutions provider in Australia. Specializing in comprehensive Office solutions, integration, and business automation.",
-    images: [
-      "https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png",
-    ],
+      "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
+    images: ["https://www.officeexperts.com.au/logo.webp"],
   },
 
   // Additional tags
 
   canonical: "https://www.officeexperts.com.au/",
+
   robots: {
     index: true,
     follow: true,

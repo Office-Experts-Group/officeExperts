@@ -8,26 +8,6 @@ export const metadata = {
   description:
     "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
 
-  // OpenGraph
-  openGraph: {
-    title: "PowerPoint Experts Group",
-    description:
-      "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
-    url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
-  // Keywords extracted from content
   keywords: [
     // Core PowerPoint services
     "PowerPoint consulting services",
@@ -62,30 +42,7 @@ export const metadata = {
     "PowerPoint brand compliance",
   ],
 
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "PowerPoint Experts Group",
-    description:
-      "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
-    images: ["/logo.png"],
-  },
-
   canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

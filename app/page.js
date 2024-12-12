@@ -152,15 +152,15 @@ const schema = {
       logo: {
         "@type": "ImageObject",
         inLanguage: "en-AU",
-        "@id": "https://www.officeexperts.com.au/#/schema/logo/image/",
-        url: "/logo.png",
-        contentUrl: "/logo.png",
-        width: 1181,
-        height: 1181,
+        "@id": "https://www.officeexperts.com.au/logo.webp",
+        url: "/logo.webp",
+        contentUrl: "/logo.webp",
+        width: 1200,
+        height: 630,
         caption: "Office Experts Group",
       },
       image: {
-        "@id": "https://www.officeexperts.com.au/#/schema/logo/image/",
+        "@id": "https://www.officeexperts.com.au/logo.webp",
       },
       sameAs: [
         "https://www.facebook.com/MSOfficeExperts",

@@ -6,24 +6,6 @@ export const metadata = {
   description:
     "Expert Office 365 managed services and support to help your business focus on core operations while we handle the technical aspects of Office 365.",
 
-  openGraph: {
-    title: "Office 365 Support and Managed Services",
-    description:
-      "Expert Office 365 managed services and support solutions across Australia.",
-    url: "https://www.officeexperts.com.au/services/microsoft-office-365/support-and-managed-services/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
   keywords: [
     "Office 365 managed services",
     "Office 365 support Australia",
@@ -46,31 +28,8 @@ export const metadata = {
     "Office 365 integration services",
     "Office 365 technical consulting",
   ],
-
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Office 365 Support and Managed Services",
-    description:
-      "Expert Office 365 managed services and support solutions across Australia.",
-    images: ["/logo.png"],
-  },
-
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-office-365/support-and-managed-services/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

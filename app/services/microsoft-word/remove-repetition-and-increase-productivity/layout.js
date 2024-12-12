@@ -14,17 +14,6 @@ export const metadata = {
     description:
       "Our template solution contains automation that allows users to add document elements at the click of a button. We can automate processes to make your document creation task simple and time effective.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "article",
   },
 
   // Additional metadata
@@ -57,35 +46,8 @@ export const metadata = {
     "professional Word services",
     "document productivity consulting",
   ],
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Word Remove Repetition and Increase Productivity",
-    description:
-      "Our template solution contains automation that allows users to add document elements at the click of a button. We can automate processes to make your document creation task simple and time effective.",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

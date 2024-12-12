@@ -7,26 +7,6 @@ export const metadata = {
   description:
     "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
 
-  // OpenGraph
-  openGraph: {
-    title: "OneDrive Cloud Backup Solutions",
-    description:
-      "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
-    url: "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
-  // Additional metadata
   keywords: [
     // Core OneDrive services
     "OneDrive business backup",
@@ -61,35 +41,8 @@ export const metadata = {
     "Microsoft cloud storage",
     "cross-platform cloud backup",
   ],
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "OneDrive Cloud Backup Solutions",
-    description:
-      "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

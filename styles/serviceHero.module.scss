@@ -1,58 +1,3 @@
-// @import "./globals.scss";
-
-// .serviceHero {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 499px;
-//   width: 100%;
-
-//   a {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 225px;
-//     height: 70px;
-//   }
-// }
-
-// .imageContainer {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   overflow: hidden;
-// }
-
-// .heroImage {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .serviceHero::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.1);
-//   z-index: 1;
-// }
-
-// .serviceHero h1 {
-//   z-index: 2;
-//   font-size: 3rem;
-//   font-weight: 900;
-//   text-align: center;
-//   color: $offWhite;
-//   max-width: 70vw;
-//   line-height: 4rem;
-// }
-
 @import "./globals.scss";
 
 .serviceHero {
@@ -75,6 +20,7 @@
 
 .heroImage {
   z-index: 0;
+  filter: grayscale(100%);
 }
 
 .serviceHero::before {
@@ -84,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -97,6 +43,7 @@
   max-width: 70vw;
   line-height: 4rem;
   position: relative;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 
   @include tablet {
     font-size: 2.5rem;
@@ -113,5 +60,19 @@
     font-size: 2.5rem;
     line-height: 3rem;
     max-width: 90vw;
+  }
+}
+
+.desktopImage {
+  display: none;
+  @media (min-width: 450px) {
+    display: block;
+  }
+}
+
+.mobileImage {
+  display: block;
+  @media (min-width: 450px) {
+    display: none;
   }
 }

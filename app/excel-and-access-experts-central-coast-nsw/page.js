@@ -6,6 +6,9 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 import ContactLocationSegment from "../../components/ContactLocationSegment";
 
+import centralCoast from "../../public/pageHeros/centralCoast.webp";
+import centralCoastMob from "../../public/pageHeros/mob/centralCoast.webp";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -115,7 +118,13 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero title={`Excel and Access Consultants ${location}`} />
+      <ServiceHero
+        title={`Excel and Access Consultants ${location}`}
+        desktopImage={centralCoast}
+        mobileImage={centralCoastMob}
+        altDesk="central coast New South Wales"
+        altMob="central coast New South Wales"
+      />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
       <LocationPromos location={location} />

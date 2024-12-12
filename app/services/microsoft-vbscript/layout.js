@@ -7,26 +7,6 @@ export const metadata = {
   description:
     "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
 
-  // OpenGraph
-  openGraph: {
-    title: "VBScript Support | Professional VBScript Programming Services",
-    description:
-      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
-    url: "https://www.officeexperts.com.au/services/microsoft-vbscript/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
-  // Additional metadata
   keywords: [
     // Core VBScript services
     "VBScript programming",
@@ -62,34 +42,7 @@ export const metadata = {
     "automated backup solutions",
     "Windows automation services",
   ],
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "VBScript Support | Professional VBScript Programming Services",
-    description:
-      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical: "https://www.officeexperts.com.au/services/microsoft-vbscript/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

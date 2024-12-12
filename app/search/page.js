@@ -5,6 +5,9 @@ import { headers } from "next/headers";
 
 export const dynamic = "force-dynamic";
 
+import penPoint from "../../public/pageHeros/penPoint.webp";
+import glassesMob from "../../public/pageHeros/mob/glassesMob.webp";
+
 function highlightQuery(text, query) {
   const words = query.toLowerCase().split(/\s+/);
   let highlightedText = text;
@@ -57,7 +60,13 @@ async function SearchPage({ searchParams }) {
 
     return (
       <>
-        <ServiceHero title="Search Results" />
+        <ServiceHero
+          title="Search Results"
+          desktopImage={penPoint}
+          mobileImage={glassesMob}
+          altDesk={"pen pointing to a point"}
+          altMob={"glasses on a table"}
+        />
         <div className={styles.searchResults}>
           <h1>Search Results for "{query}"</h1>
 
@@ -130,7 +139,13 @@ async function SearchPage({ searchParams }) {
     console.error("Search page error:", error);
     return (
       <>
-        <ServiceHero title="Search Error" />
+        <ServiceHero
+          title="Search Error"
+          desktopImage={penPoint}
+          mobileImage={glassesMob}
+          altDesk={"pen pointing to a point"}
+          altMob={"glasses on a table"}
+        />
         <div className={styles.error}>
           Error performing search: {error.message}. Please try again.
         </div>

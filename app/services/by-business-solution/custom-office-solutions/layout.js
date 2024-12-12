@@ -7,25 +7,6 @@ export const metadata = {
   description:
     "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
 
-  // OpenGraph
-  openGraph: {
-    title: "Custom Office Solutions",
-    description:
-      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
-    url: "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "article",
-  },
-
   // Additional metadata
   keywords: [
     // Core custom solution services
@@ -57,34 +38,8 @@ export const metadata = {
     "document management solutions",
   ],
 
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Custom Office Solutions",
-    description:
-      "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical:
     "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

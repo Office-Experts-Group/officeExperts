@@ -6,24 +6,6 @@ export const metadata = {
   description:
     "Professional Office 365 implementation and migration services. Expert consultants for successful Office 365 deployment across your organization.",
 
-  openGraph: {
-    title: "Microsoft Office 365 Implementation Services",
-    description:
-      "Expert Office 365 implementation services for businesses of all sizes. Seamless migration and deployment solutions.",
-    url: "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
   keywords: [
     // Core implementation
     "Office 365 implementation",
@@ -56,30 +38,8 @@ export const metadata = {
     "Teams implementation",
   ],
 
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft Office 365 Implementation Services",
-    description:
-      "Expert Office 365 implementation services for businesses of all sizes. Seamless migration and deployment solutions.",
-    images: ["/logo.png"],
-  },
-
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

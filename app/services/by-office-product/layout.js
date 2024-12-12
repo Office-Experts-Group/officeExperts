@@ -7,26 +7,6 @@ export const metadata = {
   description:
     "Comprehensive Microsoft Office consultancy and assistance services across Australia. Specializing in Excel, Word, Access, PowerPoint, and SharePoint solutions.",
 
-  // OpenGraph
-  openGraph: {
-    title: "Services By Office Product | Office Experts Australia",
-    description:
-      "Expert Microsoft Office consultancy and assistance services across Australia. Specializing in Excel, Word, Access, PowerPoint, and SharePoint solutions.",
-    url: "https://www.officeexperts.com.au/services/by-office-product/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
-  // Additional metadata
   keywords: [
     // Core services
     "Microsoft Office consultancy",
@@ -62,34 +42,7 @@ export const metadata = {
     "Microsoft Office product support",
     "Microsoft Office software training",
   ],
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Services By Office Product | Office Experts Australia",
-    description:
-      "Expert Microsoft Office consultancy and assistance services across Australia. Specializing in Excel, Word, Access, PowerPoint, and SharePoint solutions.",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical: "https://www.officeexperts.com.au/services/by-office-product/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {

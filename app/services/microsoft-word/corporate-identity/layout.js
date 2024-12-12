@@ -13,17 +13,6 @@ export const metadata = {
     description:
       "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
     url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
@@ -56,35 +45,8 @@ export const metadata = {
     "template management system",
     "brand compliant documents",
   ],
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title: "Corporate Identity Solutions | Word Document Protection",
-    description:
-      "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
-    images: ["/logo.png"],
-  },
-
-  // Additional tags
-
   canonical:
     "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  // Icons
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {
