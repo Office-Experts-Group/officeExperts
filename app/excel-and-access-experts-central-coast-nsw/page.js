@@ -7,7 +7,7 @@ import LocationPromos from "../(components)/LocationPromos";
 import ContactLocationSegment from "../../components/ContactLocationSegment";
 
 import centralCoast from "../../public/pageHeros/centralCoast.webp";
-import centralCoastMob from "../../public/pageHeros/mob/centralCoast.webp";
+import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

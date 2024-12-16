@@ -11,6 +11,9 @@ import FAQSection from "../../../../components/FAQSection";
 
 import faqs from "../../../../faqs/quick-parts";
 
+import whiteBoard from "../../../../public/pageHeros/whiteBoard.webp";
+import puzzleMob from "../../../../public/pageHeros/mob/puzzleMob.webp";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

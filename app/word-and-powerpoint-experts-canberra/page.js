@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import canberra from "../../public/pageHeros/canberra.webp";
-import canberraMob from "../../public/pageHeros/mob/canberra.webp";
+import canberraMob from "../../public/pageHeros/mob/canberraMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

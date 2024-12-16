@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import wollongong from "../../public/pageHeros/wollongong.webp";
-import wollongongMob from "../../public/pageHeros/mob/wollongong.webp";
+import wollongongMob from "../../public/pageHeros/mob/wollongongMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

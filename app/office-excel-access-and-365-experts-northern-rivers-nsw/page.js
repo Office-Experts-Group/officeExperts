@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import northernRivers from "../../public/pageHeros/northernRivers.webp";
-import northernRiversMob from "../../public/pageHeros/mob/northernRivers.webp";
+import northernRiversMob from "../../public/pageHeros/mob/northernRiversMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

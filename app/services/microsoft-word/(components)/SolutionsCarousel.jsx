@@ -3,17 +3,25 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import keyboard from "../../../../public/350x260/keyboard.webp";
+import coder from "../../../../public/350x260/coder.webp";
+import dashboard from "../../../../public/350x260/dashboard.webp";
+import graph from "../../../../public/350x260/graph.webp";
+import desk from "../../../../public/350x260/desk.webp";
+import magnify from "../../../../public/350x260/magnify.webp";
+import code from "../../../../public/350x260/code.webp";
+import hands from "../../../../public/350x260/hands.webp";
+import scrabble from "../../../../public/350x260/scrabble.webp";
+import laptop from "../../../../public/350x260/laptop.webp";
+import graph2 from "../../../../public/350x260/graph2.webp";
+import automation from "../../../../public/350x260/automation.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Corporate Identity",
       link: "/corporate-identity",
-      image: project1,
+      image: keyboard,
       description: [
         "Corporate identity protection",
         "Let users concentrate on content, not design",
@@ -23,7 +31,7 @@ const SolutionsCarousel = () => {
     {
       title: "VBA & Macro Development",
       link: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
-      image: project2,
+      image: coder,
       description: [
         "Data import/export",
         "Data parsing and processing",
@@ -35,7 +43,7 @@ const SolutionsCarousel = () => {
     {
       title: "Government Departments",
       link: "/government-departments",
-      image: project3,
+      image: dashboard,
       description: [
         "Create accessible templates and documents",
         "Users can create sub templates from master templates",
@@ -46,7 +54,7 @@ const SolutionsCarousel = () => {
     {
       title: "Companies and Organisations",
       link: "/companies-and-organisations",
-      image: project4,
+      image: graph,
       description: [
         "Protect and control Corporate Identity",
         "Save $$ by creating Reports and all documents inhouse in a controlled environment",
@@ -56,7 +64,7 @@ const SolutionsCarousel = () => {
     {
       title: "Remove Repetition and Increase Productivity",
       link: "/remove-repetition-and-increase-productivity",
-      image: project1,
+      image: automation,
       description: [
         "Let users focus on content, not design",
         "Users add prebuilt elements with one click",
@@ -66,7 +74,7 @@ const SolutionsCarousel = () => {
     {
       title: "Popup Forms",
       link: "/popup-forms",
-      image: project2,
+      image: magnify,
       description: [
         "With easy to use popup forms your staff can enter data efficiently with validated and protected document integrity.",
       ],
@@ -74,7 +82,7 @@ const SolutionsCarousel = () => {
     {
       title: "Fill In Forms",
       link: "/fill-in-forms",
-      image: project3,
+      image: code,
       description: [
         "Step-by-step fill in forms for easy data entry by your staff or clients.",
         "Drop selection lists and check boxes.",
@@ -84,7 +92,7 @@ const SolutionsCarousel = () => {
     {
       title: "Upgrading Word To 2016",
       link: "/upgrades-and-migration",
-      image: project4,
+      image: hands,
       description: [
         "Pagination issues solved.",
         "Table issues solved.",
@@ -95,7 +103,7 @@ const SolutionsCarousel = () => {
     {
       title: "Online Solutions",
       link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
-      image: project4,
+      image: scrabble,
       description: [
         "Need your Office document(s) online or connected to a database?",
         "TNeed help with Office 365 or SharePoint?",
@@ -104,7 +112,7 @@ const SolutionsCarousel = () => {
     {
       title: "Convert Adobe To Word",
       link: "/word-template-conversions",
-      image: project4,
+      image: laptop,
       description: [
         "InDesign, Illustrator, PDF or other documents and layouts created in professional, easy to use Word documents and templates.",
       ],
@@ -112,7 +120,7 @@ const SolutionsCarousel = () => {
     {
       title: "Custom Toolbars and Ribbons",
       link: "/custom-toolbars-and-ribbons",
-      image: project4,
+      image: graph2,
       description: [
         "Automate features that you use daily.",
         "Buttons for Landscape pages, A3 pages, Covers & Chapter Breaks, paragraphs of common text.",
@@ -121,7 +129,7 @@ const SolutionsCarousel = () => {
     {
       title: "Help and Training",
       link: "/training",
-      image: project4,
+      image: desk,
       description: [
         "We can train your staff to use Word efficiently.",
         "On call support via screen sharing – don’t waste time pulling your hair out, get the answers fast (fees apply).",

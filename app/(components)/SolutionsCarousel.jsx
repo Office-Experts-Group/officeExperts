@@ -3,17 +3,23 @@ import Link from "next/link";
 
 import styles from "../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../public/project-img-1.webp";
-import project2 from "../../public/project-img-2.webp";
-import project3 from "../../public/project-img-3.webp";
-import project4 from "../../public/project-img-4.webp";
+import keyboard from "../../public/350x260/keyboard.webp";
+import coder from "../../public/350x260/coder.webp";
+import dashboard from "../../public/350x260/dashboard.webp";
+import graph from "../../public/350x260/graph.webp";
+import desk from "../../public/350x260/desk.webp";
+import magnify from "../../public/350x260/magnify.webp";
+import code from "../../public/350x260/code.webp";
+import hands from "../../public/350x260/hands.webp";
+import document from "../../public/350x260/document.webp";
+import automation from "../../public/350x260/automation.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Microsoft Azure",
       link: "/services/by-business-solution/cloud-based-solutions-with-azure",
-      image: project1,
+      image: hands,
       description: [
         "We can cloud and web enable your documents, workbooks and databases with Azure.",
       ],
@@ -21,7 +27,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft PowerPoint",
       link: "/services/microsoft-powerpoint",
-      image: project3,
+      image: magnify,
       description: [
         "Template creation",
         "pptPlex presentations",
@@ -32,7 +38,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft Office",
       link: "/services/microsoft-office",
-      image: project4,
+      image: desk,
       description: [
         "Professional documents, spreadsheets, databases and presentations",
         "Support and custom coding",
@@ -41,7 +47,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft SQL Server",
       link: "/services/by-business-solution/office-and-sql-server-integration",
-      image: project1,
+      image: graph,
       description: [
         "Custom solutions to SQL Server data.",
         "Auto-generate PowerPoint presentations and Word documents from your databases.",
@@ -52,7 +58,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft .NET",
       link: "/services/microsoft-dot-net",
-      image: project2,
+      image: dashboard,
       description: [
         ".NET solution design",
         "VB.NET, ASP.NET, C#.NET development",
@@ -63,7 +69,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft Office 365",
       link: "/services/microsoft-office-365",
-      image: project3,
+      image: keyboard,
       description: [
         "Support and managed services: Setup, implementation, custom development, migration, automation, cloud backups",
       ],
@@ -71,7 +77,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft Outlook",
       link: "/services/by-business-solution/custom-office-solutions",
-      image: project4,
+      image: coder,
       description: [
         "Email automation from Office apps",
         "VBA development",
@@ -82,7 +88,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft VBScript",
       link: "/services/microsoft-vbscript",
-      image: project4,
+      image: automation,
       description: [
         "Programming and testing",
         "Command Line and batch automation",
@@ -95,7 +101,7 @@ const SolutionsCarousel = () => {
     {
       title: "Microsoft Publisher",
       link: "/services/microsoft-publisher",
-      image: project4,
+      image: document,
       description: [
         "Microsoft Publisher design",
         "Your corporate branding",
@@ -108,7 +114,7 @@ const SolutionsCarousel = () => {
     {
       title: "Services By Business Solution",
       link: "/services/by-business-solution",
-      image: project4,
+      image: code,
       description: [
         "Spreadsheets and databases",
         "Coding and macros",

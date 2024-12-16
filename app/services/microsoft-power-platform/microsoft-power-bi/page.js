@@ -12,7 +12,7 @@ import SegmentMainRepeat from "./(components)/SegmentMainRepeat";
 import faqs from "../../../../faqs/power-bi";
 
 import graph from "../../../../public/pageHeros/mob/graph.webp";
-import graphMeeting from "../../../../public/pageHeros/desk/graph.webp";
+import graphMeeting from "../../../../public/pageHeros/graphMeeting.webp";
 
 const schema = {
   "@context": "https://schema.org",

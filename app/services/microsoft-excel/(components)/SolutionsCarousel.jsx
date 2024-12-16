@@ -3,17 +3,22 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import keyboard from "../../../../public/350x260/keyboard.webp";
+import coder from "../../../../public/350x260/coder.webp";
+import dashboard from "../../../../public/350x260/dashboard.webp";
+import graph from "../../../../public/350x260/graph.webp";
+import desk from "../../../../public/350x260/desk.webp";
+import magnify from "../../../../public/350x260/magnify.webp";
+import code from "../../../../public/350x260/code.webp";
+import hands from "../../../../public/350x260/hands.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Help and Training",
       link: "/excel-support",
-      image: project1,
+      image: keyboard,
+      alt: "computer keyboard",
       description: [
         "Struggling with Excel and need help?",
         "Need occasional guidance?",
@@ -23,7 +28,7 @@ const SolutionsCarousel = () => {
     {
       title: "Data Manipulation",
       link: "/data-manipulation",
-      image: project2,
+      image: coder,
       description: [
         "Data import/export",
         "Data parsing and processing",
@@ -35,7 +40,7 @@ const SolutionsCarousel = () => {
     {
       title: "Dashboards",
       link: "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
-      image: project3,
+      image: dashboard,
       description: [
         "Custom Excel dashboards",
         "Dashboard automation",
@@ -45,7 +50,7 @@ const SolutionsCarousel = () => {
     {
       title: "Online Solutions",
       link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
-      image: project4,
+      image: graph,
       description: [
         "Do you need your spreadsheet online?",
         "Need to share data online with your customers or staff?",
@@ -55,7 +60,7 @@ const SolutionsCarousel = () => {
     {
       title: "Office Integrations",
       link: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
-      image: project1,
+      image: desk,
       description: [
         "Excel data manipulation from Office apps, CRM, accounting packages, data files or 3rd party product",
         "Connect Excel directly to 3rd party products",
@@ -64,7 +69,7 @@ const SolutionsCarousel = () => {
     {
       title: "Charting & Pivot Tables",
       link: "/pivot-tables-charts-and-reporting-solutions",
-      image: project2,
+      image: magnify,
       description: [
         "Need help with Excel's charting and pivot features?",
         "Need quality visual outputs from your data?",
@@ -74,7 +79,7 @@ const SolutionsCarousel = () => {
     {
       title: "Upgrades and Migration",
       link: "/upgrades-and-migration",
-      image: project3,
+      image: code,
       description: [
         "Workbook troubleshooting",
         "Migration path advice and assistance",
@@ -84,7 +89,7 @@ const SolutionsCarousel = () => {
     {
       title: "Office / Excel Integration",
       link: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
-      image: project4,
+      image: hands,
       description: [
         "Microsoft Access",
         "Microsoft Word",
@@ -100,7 +105,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
+        <h2>No Problems... Only Solutions</h2>
       </div>
 
       <div className={styles.carouselContainer}>

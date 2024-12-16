@@ -5,7 +5,7 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 import styles from "../../../../../styles/pageSegmentCenter.module.css";
 
-import success from "../../../../../public/success400x267.webp";
+import graphs from "../../../../../public/graphs400x300.webp";
 
 const MiniTicks = () => {
   const benefits = [
@@ -58,10 +58,10 @@ const MiniTicks = () => {
 
       <AnimateOnScroll animation="slide-right" duration={1} delay={0}>
         <Image
-          src={success}
+          src={graphs}
           alt="person pointing at a computer screen"
           width={400}
-          height={267}
+          height={300}
           className={styles.miniTickImg}
         />
       </AnimateOnScroll>

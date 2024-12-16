@@ -30,10 +30,6 @@ const schema = {
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
         "We offer ongoing support and training, microsoft access services in Australia for your staff to learn specific tasks as required. Call us Today 1300 102 810",
-      breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/microsoft-access/#breadcrumb",
-      },
       inLanguage: "en-AU",
       potentialAction: [
         {

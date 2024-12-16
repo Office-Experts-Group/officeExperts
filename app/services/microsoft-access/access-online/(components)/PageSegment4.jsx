@@ -33,9 +33,9 @@ const PageSegment4 = () => {
           <div className="image-wrapper">
             <Image
               src={cloudSolution}
-              alt="person clicking a computer mouse"
-              width={600}
-              height={400}
+              alt="digital design for cloud computing"
+              width={450}
+              height={300}
             />
           </div>
         </AnimateOnScroll>

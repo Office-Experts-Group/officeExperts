@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import brisbane from "../../public/pageHeros/brisbane.webp";
-import brisbaneMob from "../../public/pageHeros/mob/brisbane.webp";
+import brisbaneMob from "../../public/pageHeros/mob/brisbaneMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

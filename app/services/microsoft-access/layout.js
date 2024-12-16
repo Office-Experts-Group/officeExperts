@@ -5,7 +5,7 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Access Services | Database Solutions Australia",
   description:
-    "Professional Microsoft Access database consulting and development services across Australia. Specializing in custom database solutions, cloud integration, and business automation.",
+    "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
 
   keywords: [
     // Core database services

@@ -7,8 +7,8 @@ import ServiceHero from "../../components/ServiceHero";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import Contact from "../../components/Contact";
 
-import faq from "../../public/pageHeros/faq";
-import faqMob from "../../public/pageHeros/mob/faqMob";
+import faq from "../../public/pageHeros/faq.webp";
+import faqMob from "../../public/pageHeros/mob/faqMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

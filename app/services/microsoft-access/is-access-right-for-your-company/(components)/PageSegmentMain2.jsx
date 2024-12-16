@@ -3,16 +3,16 @@ import React from "react";
 
 import styles from "../../../../../styles/pageSegment2.module.css";
 
-import lady from "../../../../../public/service-img-1.webp";
+import jigsaw from "../../../../../public/jigsaw770x430.webp";
 
 const PageSegmentMain2 = () => {
   return (
     <section className={styles.pageSegment} style={{ marginBottom: "-4rem" }}>
       <Image
-        src={lady}
-        alt="lady in an office environment"
+        src={jigsaw}
+        alt="people holding large jigsaw puzzle pieces"
         width={770}
-        height={424}
+        height={430}
       />
 
       <div className={styles.contents}>

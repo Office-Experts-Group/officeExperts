@@ -3,15 +3,15 @@ import Image from "next/image";
 
 import styles from "../../../../../styles/pageSegment.module.css";
 
-import dreadLady from "../../../../../public/dreadLady.webp";
+import twoComputers from "../../../../../public/540x480/twoComputers.webp";
 
 const PageSegmentMain = () => {
   return (
     <section className={styles.pageSegment}>
       <div className={styles.imgWrapper}>
         <Image
-          src={dreadLady}
-          alt="lady in an office environment"
+          src={twoComputers}
+          alt="Two computers"
           width={540}
           height={480}
         />

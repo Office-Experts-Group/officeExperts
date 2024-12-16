@@ -13,8 +13,8 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 import { getAboutPageSchema } from "../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../testimonials";
 
-import aboutUs from "../../public/pageHeros/about-us.jpg";
-import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob";
+import aboutUs from "../../public/pageHeros/aboutUs.webp";
+import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

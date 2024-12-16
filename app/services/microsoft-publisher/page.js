@@ -6,8 +6,8 @@ import Contact from "../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 
-import calculator from "../../../../public/pageHeros/calculator.webp";
-import calcMob from "../../../../public/pageHeros/mob/calcMob.webp";
+import calculator from "../../../public/pageHeros/calculator.webp";
+import calcMob from "../../../public/pageHeros/mob/calcMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

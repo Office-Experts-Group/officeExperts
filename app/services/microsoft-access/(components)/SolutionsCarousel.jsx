@@ -3,17 +3,17 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import magnify from "../../../../public/350x260/magnify.webp";
+import handShake from "../../../../public/350x260/handShake.webp";
+import graph from "../../../../public/350x260/graph.webp";
+import desk from "../../../../public/350x260/desk.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Online",
       link: "/access-online",
-      image: project1,
+      image: magnify,
       description: [
         "Need an Access database setup to use with Office 365, SharePoint or Azure?",
         "Our experts have several techniques and clever solutions to achieve this.",
@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
     {
       title: "Help and Training",
       link: "/access-support",
-      image: project2,
+      image: handShake,
       description: [
         "Have a database but nobody to support it?",
         "Do you need experts to help with changes or additions?",
@@ -32,7 +32,7 @@ const SolutionsCarousel = () => {
     {
       title: "Upgrades and Conversions",
       link: "/upgrades-and-migration",
-      image: project3,
+      image: graph,
       description: [
         "Have a database that needs upgrading or is failing after upgrading?",
         "Have a database that needs to be converted from or to another format?",
@@ -41,26 +41,30 @@ const SolutionsCarousel = () => {
     {
       title: "is it right for you?",
       link: "/is-access-right-for-your-company",
-      image: project4,
+      image: desk,
       description: [
         "Need a database solution with Access, SQL Server, Visual Studio (C#, VB, ASP), Office 365, SharePoint and/or Azure?",
       ],
     },
   ];
 
-  // Duplicate the array to create seamless loop
-  const extendedSolutions = [...solutionsData, ...solutionsData];
+  // Duplicate first few items to create seamless loop
+  const extendedSolutions = [...solutionsData, ...solutionsData.slice(0, 3)];
 
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
-        <div></div>
+        <h2>No Problems... Only Solutions</h2>
       </div>
+
       <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack}>
+        <div className={styles.carouselTrack} aria-label="Solutions carousel">
           {extendedSolutions.map((solution, index) => (
-            <div className={styles.cardWrapper} key={index}>
+            <div
+              key={`solution-${index}`}
+              className={styles.cardWrapper}
+              aria-label={`Solution ${(index % solutionsData.length) + 1}`}
+            >
               <div className={styles.description}>
                 {solution.description.map((item, i) => (
                   <p key={i}>{item}</p>
@@ -78,7 +82,7 @@ const SolutionsCarousel = () => {
                 >
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Access</span>
+                      <span>Excel</span>
                       <br />
                       {solution.title}
                     </h3>

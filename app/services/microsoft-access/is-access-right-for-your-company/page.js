@@ -7,6 +7,7 @@ import MiniTicks from "./(components)/MiniTicks";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
 import FAQSection from "../../../../components/FAQSection";
 import Contact from "../../../../components/Contact";
+import Contents from "./(components)/Contents";
 
 import faqs from "../../../../faqs/is-access-right-for-you";
 
@@ -110,6 +111,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Contents />
       <ServiceHero
         title="Is Microsoft Access the Right Technology for your Company?"
         desktopImage={twoComputers}

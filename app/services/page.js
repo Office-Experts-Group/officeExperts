@@ -4,8 +4,7 @@ import ServiceHero from "../../components/ServiceHero";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import Contact from "../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import Solutions from "./(components)/Solutions";
-import SolutionsCopy from "./(components)/SolutionsCopy";
+import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
 import handShake from "../../public/pageHeros/handShake.webp";
 import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
@@ -71,8 +70,7 @@ const Page = () => {
         altMob={"handshake"}
       />
       <PageSegmentMain />
-      <Solutions />
-      <SolutionsCopy />
+      <SolutionsCarousel />
       <ExpertsAwait />
       <Contact />
     </>

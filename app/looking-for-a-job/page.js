@@ -8,8 +8,8 @@ import PageSegment7 from "./(components)/PageSegment7";
 import Promo from "./(components)/Promo";
 import BlackSegment from "./(components)/BlackSegment";
 
-import resume from "../../public/pageHeros/resume";
-import resumeMob from "../../public/pageHeros/mob/resumeMob";
+import resume from "../../public/pageHeros/resume.webp";
+import resumeMob from "../../public/pageHeros/mob/resumeMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

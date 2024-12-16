@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import darwin from "../../public/pageHeros/darwin.webp";
-import darwinMob from "../../public/pageHeros/mob/darwin.webp";
+import darwinMob from "../../public/pageHeros/mob/darwinMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

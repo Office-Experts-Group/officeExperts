@@ -7,7 +7,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import LocationPromos from "../(components)/LocationPromos";
 
 import sydney from "../../public/pageHeros/sydney.webp";
-import sydneyMob from "../../public/pageHeros/mob/sydney.webp";
+import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
