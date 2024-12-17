@@ -5,6 +5,7 @@ import styles from "../styles/cookieConsent.module.css";
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
