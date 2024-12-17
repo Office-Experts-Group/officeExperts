@@ -133,6 +133,9 @@
 
 .subHead {
   display: flex;
+  @include phone {
+    margin-bottom: 2rem;
+  }
 }
 
 .bar {
@@ -147,8 +150,8 @@
 .headingWrapper {
   position: relative;
   min-height: 1.2em;
-  white-space: nowrap;
   margin-bottom: 1.8rem;
+  width: 90vw;
 }
 
 .heading1,

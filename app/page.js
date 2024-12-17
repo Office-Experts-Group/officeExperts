@@ -1,15 +1,21 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
+// Keep Hero static as it's above fold
 import Hero from "./(components)/Hero";
-import Services from "./(components)/Services";
-import CTAMain from "./(components)/CTAMain";
-import IsRight from "./(components)/IsRight";
-import CTAFull from "./(components)/CTAFull";
-import Testimonials from "./(components)/Testimonials";
-import SolutionsCarousel from "./(components)/SolutionsCarousel";
-import Brands from "../components/Brands";
-import Promo from "../components/Promo";
-import Contact from "../components/Contact";
+
+// Dynamically import everything else
+const Services = dynamic(() => import("./(components)/Services"));
+const CTAMain = dynamic(() => import("./(components)/CTAMain"));
+const IsRight = dynamic(() => import("./(components)/IsRight"));
+const SolutionsCarousel = dynamic(() =>
+  import("./(components)/SolutionsCarousel")
+);
+const CTAFull = dynamic(() => import("./(components)/CTAFull"));
+const Testimonials = dynamic(() => import("./(components)/Testimonials"));
+const Brands = dynamic(() => import("../components/Brands"));
+const Promo = dynamic(() => import("../components/Promo"));
+const Contact = dynamic(() => import("../components/Contact"));
 
 import { getHomePageSchema } from "../utils/testimonialSchemaGenerator";
 import { testimonials } from "../testimonials";

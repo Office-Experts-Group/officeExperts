@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "../../../styles/solutionsCarousel.module.css";
 
@@ -23,6 +24,7 @@ const SolutionsCarousel = () => {
       title: "Excel",
       link: "/services/microsoft-excel",
       image: graph,
+      alt: "graph",
       description: [
         "Spreadsheets and Add-ins",
         "Process Data and Automation",
@@ -35,6 +37,7 @@ const SolutionsCarousel = () => {
       title: "Access",
       link: "/services/microsoft-access",
       image: code,
+      alt: "code",
       description: [
         "Create and design databases",
         "Automation and upgrades",
@@ -46,6 +49,7 @@ const SolutionsCarousel = () => {
       title: "Power Platform",
       link: "https://www.powerplatformexperts.com.au/",
       image: desk,
+      alt: "desk",
       description: [
         "Web enabled Dashboard solutions which auto-refresh from your live databases.",
         "Power BI Business Intelligence solutions.",
@@ -57,6 +61,7 @@ const SolutionsCarousel = () => {
       title: "SharePoint",
       link: "/services/by-business-solution/online-solutions",
       image: keyboard,
+      alt: "keyboard",
       description: [
         "SharePoint solution design",
         "Web-based collaboration",
@@ -70,6 +75,7 @@ const SolutionsCarousel = () => {
       title: "Azure",
       link: "/services/by-business-solution/cloud-based-solutions-with-azure",
       image: hands,
+      alt: "hands",
       description: [
         "We can cloud and web enable your documents, workbooks and databases with Azure.",
       ],
@@ -78,6 +84,7 @@ const SolutionsCarousel = () => {
       title: "Word",
       link: "/services/microsoft-word",
       image: coder,
+      alt: "coder",
       description: [
         "Format and design documents",
         "Mail merge",
@@ -89,6 +96,7 @@ const SolutionsCarousel = () => {
       title: "PowerPoint",
       link: "/services/microsoft-powerpoint",
       image: magnify,
+      alt: "magnify",
       description: [
         "Template creation",
         "pptPlex presentations",
@@ -100,6 +108,7 @@ const SolutionsCarousel = () => {
       title: "Office",
       link: "/services/microsoft-office",
       image: dashboard,
+      alt: "dashboard",
       description: [
         "Professional documents, spreadsheets, databases and presentations",
         "Support and custom coding",
@@ -109,6 +118,7 @@ const SolutionsCarousel = () => {
       title: "SQL Server",
       link: "/services/by-business-solution/office-and-sql-server-integration",
       image: handShake,
+      alt: "handshake",
       description: [
         "Custom solutions to SQL Server data.",
         "Auto-generate PowerPoint presentations and Word documents from your databases.",
@@ -120,6 +130,7 @@ const SolutionsCarousel = () => {
       title: ".NET",
       link: "/services/microsoft-dot-net",
       image: automation,
+      alt: "automation",
       description: [
         ".NET solution design",
         "VB.NET, ASP.NET, C#.NET development",
@@ -131,6 +142,7 @@ const SolutionsCarousel = () => {
       title: "Office 365",
       link: "/services/microsoft-office-365",
       image: graph2,
+      alt: "graph",
       description: [
         "Support and managed services: Setup, implementation, custom development, migration, automation, cloud backups",
       ],
@@ -139,6 +151,7 @@ const SolutionsCarousel = () => {
       title: "Outlook",
       link: "/services/by-business-solution/custom-office-solutions",
       image: scrabble,
+      alt: "scrabble pieces",
       description: [
         "Email automation from Office apps",
         "VBA development",
@@ -150,6 +163,7 @@ const SolutionsCarousel = () => {
       title: "VBScript",
       link: "/services/microsoft-vbscript",
       image: document,
+      alt: "document",
       description: [
         "Programming and testing",
         "Command Line and batch automation",
@@ -163,6 +177,7 @@ const SolutionsCarousel = () => {
       title: "Publisher",
       link: "/services/microsoft-publisher",
       image: dashboard,
+      alt: "dashboard",
       description: [
         "Microsoft Publisher design",
         "Your corporate branding",
@@ -180,13 +195,17 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
-        <div></div>
+        <h2>No Problems... Only Solutions</h2>
       </div>
+
       <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack}>
+        <div className={styles.carouselTrack} aria-label="Solutions carousel">
           {extendedSolutions.map((solution, index) => (
-            <div className={styles.cardWrapper} key={index}>
+            <div
+              key={`solution-${index}`}
+              className={styles.cardWrapper}
+              aria-label={`Solution ${(index % solutionsData.length) + 1}`}
+            >
               <div className={styles.description}>
                 {solution.description.map((item, i) => (
                   <p key={i}>{item}</p>
@@ -197,14 +216,19 @@ const SolutionsCarousel = () => {
                   className={`${styles.card} ${
                     styles[`card${(index % solutionsData.length) + 1}`]
                   }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
                 >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={solution.image}
+                      alt={solution.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className={styles.carouselImage}
+                    />
+                  </div>
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Access</span>
+                      <span>Office</span>
                       <br />
                       {solution.title}
                     </h3>

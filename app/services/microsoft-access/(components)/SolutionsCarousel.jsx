@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
@@ -14,6 +15,7 @@ const SolutionsCarousel = () => {
       title: "Online",
       link: "/access-online",
       image: magnify,
+      alt: "magnifying glass",
       description: [
         "Need an Access database setup to use with Office 365, SharePoint or Azure?",
         "Our experts have several techniques and clever solutions to achieve this.",
@@ -23,6 +25,7 @@ const SolutionsCarousel = () => {
       title: "Help and Training",
       link: "/access-support",
       image: handShake,
+      alt: "handshake",
       description: [
         "Have a database but nobody to support it?",
         "Do you need experts to help with changes or additions?",
@@ -33,6 +36,7 @@ const SolutionsCarousel = () => {
       title: "Upgrades and Conversions",
       link: "/upgrades-and-migration",
       image: graph,
+      alt: "graph",
       description: [
         "Have a database that needs upgrading or is failing after upgrading?",
         "Have a database that needs to be converted from or to another format?",
@@ -42,6 +46,7 @@ const SolutionsCarousel = () => {
       title: "is it right for you?",
       link: "/is-access-right-for-your-company",
       image: desk,
+      alt: "desk in an office",
       description: [
         "Need a database solution with Access, SQL Server, Visual Studio (C#, VB, ASP), Office 365, SharePoint and/or Azure?",
       ],
@@ -75,14 +80,19 @@ const SolutionsCarousel = () => {
                   className={`${styles.card} ${
                     styles[`card${(index % solutionsData.length) + 1}`]
                   }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
                 >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={solution.image}
+                      alt={solution.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className={styles.carouselImage}
+                    />
+                  </div>
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Excel</span>
+                      <span>Access</span>
                       <br />
                       {solution.title}
                     </h3>

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "../../styles/solutionsCarousel.module.css";
 
@@ -20,6 +21,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft Azure",
       link: "/services/by-business-solution/cloud-based-solutions-with-azure",
       image: hands,
+      alt: "hands",
       description: [
         "We can cloud and web enable your documents, workbooks and databases with Azure.",
       ],
@@ -28,6 +30,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft PowerPoint",
       link: "/services/microsoft-powerpoint",
       image: magnify,
+      alt: "magnify",
       description: [
         "Template creation",
         "pptPlex presentations",
@@ -39,6 +42,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft Office",
       link: "/services/microsoft-office",
       image: desk,
+      alt: "desk",
       description: [
         "Professional documents, spreadsheets, databases and presentations",
         "Support and custom coding",
@@ -48,6 +52,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft SQL Server",
       link: "/services/by-business-solution/office-and-sql-server-integration",
       image: graph,
+      alt: "graph",
       description: [
         "Custom solutions to SQL Server data.",
         "Auto-generate PowerPoint presentations and Word documents from your databases.",
@@ -59,6 +64,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft .NET",
       link: "/services/microsoft-dot-net",
       image: dashboard,
+      alt: "dashboard",
       description: [
         ".NET solution design",
         "VB.NET, ASP.NET, C#.NET development",
@@ -70,6 +76,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft Office 365",
       link: "/services/microsoft-office-365",
       image: keyboard,
+      alt: "keyboard",
       description: [
         "Support and managed services: Setup, implementation, custom development, migration, automation, cloud backups",
       ],
@@ -78,6 +85,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft Outlook",
       link: "/services/by-business-solution/custom-office-solutions",
       image: coder,
+      alt: "coder",
       description: [
         "Email automation from Office apps",
         "VBA development",
@@ -89,6 +97,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft VBScript",
       link: "/services/microsoft-vbscript",
       image: automation,
+      alt: "automation",
       description: [
         "Programming and testing",
         "Command Line and batch automation",
@@ -102,6 +111,7 @@ const SolutionsCarousel = () => {
       title: "Microsoft Publisher",
       link: "/services/microsoft-publisher",
       image: document,
+      alt: "document",
       description: [
         "Microsoft Publisher design",
         "Your corporate branding",
@@ -115,6 +125,7 @@ const SolutionsCarousel = () => {
       title: "Services By Business Solution",
       link: "/services/by-business-solution",
       image: code,
+      alt: "code",
       description: [
         "Spreadsheets and databases",
         "Coding and macros",
@@ -131,7 +142,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
+        <h2>No Problems... Only Solutions</h2>
       </div>
 
       <div className={styles.carouselContainer}>
@@ -152,14 +163,19 @@ const SolutionsCarousel = () => {
                   className={`${styles.card} ${
                     styles[`card${(index % solutionsData.length) + 1}`]
                   }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
                 >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={solution.image}
+                      alt={solution.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className={styles.carouselImage}
+                    />
+                  </div>
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Office Experts</span>
+                      <span>Word Experts</span>
                       <br />
                       {solution.title}
                     </h3>

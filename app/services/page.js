@@ -1,10 +1,30 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
+export const revalidate = false;
+
+// Keep ServiceHero static since it's above fold
 import ServiceHero from "../../components/ServiceHero";
-import ExpertsAwait from "../../components/ExpertsAwait";
-import Contact from "../../components/Contact";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import SolutionsCarousel from "./(components)/SolutionsCarousel";
+
+// Dynamically import components that use images
+const ExpertsAwait = dynamic(() => import("../../components/ExpertsAwait"), {
+  ssr: true,
+});
+const Contact = dynamic(() => import("../../components/Contact"), {
+  ssr: true,
+});
+const PageSegmentMain = dynamic(
+  () => import("./(components)/PageSegmentMain"),
+  {
+    ssr: true,
+  }
+);
+const SolutionsCarousel = dynamic(
+  () => import("./(components)/SolutionsCarousel"),
+  {
+    ssr: true,
+  }
+);
 
 import handShake from "../../public/pageHeros/handShake.webp";
 import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";

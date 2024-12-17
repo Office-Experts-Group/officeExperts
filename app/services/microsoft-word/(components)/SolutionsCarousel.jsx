@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
@@ -22,6 +23,7 @@ const SolutionsCarousel = () => {
       title: "Corporate Identity",
       link: "/corporate-identity",
       image: keyboard,
+      alt: "keyboard",
       description: [
         "Corporate identity protection",
         "Let users concentrate on content, not design",
@@ -32,6 +34,7 @@ const SolutionsCarousel = () => {
       title: "VBA & Macro Development",
       link: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
       image: coder,
+      alt: "coder working",
       description: [
         "Data import/export",
         "Data parsing and processing",
@@ -44,6 +47,7 @@ const SolutionsCarousel = () => {
       title: "Government Departments",
       link: "/government-departments",
       image: dashboard,
+      alt: "dashboard design",
       description: [
         "Create accessible templates and documents",
         "Users can create sub templates from master templates",
@@ -55,6 +59,7 @@ const SolutionsCarousel = () => {
       title: "Companies and Organisations",
       link: "/companies-and-organisations",
       image: graph,
+      alt: "graph",
       description: [
         "Protect and control Corporate Identity",
         "Save $$ by creating Reports and all documents inhouse in a controlled environment",
@@ -65,6 +70,7 @@ const SolutionsCarousel = () => {
       title: "Remove Repetition and Increase Productivity",
       link: "/remove-repetition-and-increase-productivity",
       image: automation,
+      alt: "automation",
       description: [
         "Let users focus on content, not design",
         "Users add prebuilt elements with one click",
@@ -75,6 +81,7 @@ const SolutionsCarousel = () => {
       title: "Popup Forms",
       link: "/popup-forms",
       image: magnify,
+      alt: "magnifying glass over graphs",
       description: [
         "With easy to use popup forms your staff can enter data efficiently with validated and protected document integrity.",
       ],
@@ -83,6 +90,7 @@ const SolutionsCarousel = () => {
       title: "Fill In Forms",
       link: "/fill-in-forms",
       image: code,
+      alt: "code on a screen",
       description: [
         "Step-by-step fill in forms for easy data entry by your staff or clients.",
         "Drop selection lists and check boxes.",
@@ -93,6 +101,7 @@ const SolutionsCarousel = () => {
       title: "Upgrading Word To 2016",
       link: "/upgrades-and-migration",
       image: hands,
+      alt: "hands",
       description: [
         "Pagination issues solved.",
         "Table issues solved.",
@@ -104,6 +113,7 @@ const SolutionsCarousel = () => {
       title: "Online Solutions",
       link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
       image: scrabble,
+      alt: "scrabble pieces",
       description: [
         "Need your Office document(s) online or connected to a database?",
         "TNeed help with Office 365 or SharePoint?",
@@ -113,6 +123,7 @@ const SolutionsCarousel = () => {
       title: "Convert Adobe To Word",
       link: "/word-template-conversions",
       image: laptop,
+      alt: "laptop",
       description: [
         "InDesign, Illustrator, PDF or other documents and layouts created in professional, easy to use Word documents and templates.",
       ],
@@ -121,6 +132,7 @@ const SolutionsCarousel = () => {
       title: "Custom Toolbars and Ribbons",
       link: "/custom-toolbars-and-ribbons",
       image: graph2,
+      alt: "graph",
       description: [
         "Automate features that you use daily.",
         "Buttons for Landscape pages, A3 pages, Covers & Chapter Breaks, paragraphs of common text.",
@@ -130,9 +142,10 @@ const SolutionsCarousel = () => {
       title: "Help and Training",
       link: "/training",
       image: desk,
+      alt: "desk in an office",
       description: [
         "We can train your staff to use Word efficiently.",
-        "On call support via screen sharing – don’t waste time pulling your hair out, get the answers fast (fees apply).",
+        "On call support via screen sharing – don't waste time pulling your hair out, get the answers fast (fees apply).",
         "Video and PDF tutorials.",
       ],
     },
@@ -144,7 +157,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
+        <h2>No Problems... Only Solutions</h2>
       </div>
 
       <div className={styles.carouselContainer}>
@@ -165,11 +178,16 @@ const SolutionsCarousel = () => {
                   className={`${styles.card} ${
                     styles[`card${(index % solutionsData.length) + 1}`]
                   }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
                 >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={solution.image}
+                      alt={solution.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className={styles.carouselImage}
+                    />
+                  </div>
                   <div className={styles.popIn}>
                     <h3>
                       <span>Word Experts</span>

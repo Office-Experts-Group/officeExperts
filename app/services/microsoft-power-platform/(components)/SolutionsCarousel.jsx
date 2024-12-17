@@ -1,19 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import magnify from "../../../../public/350x260/magnify.webp";
+import handShake from "../../../../public/350x260/handShake.webp";
+import graph from "../../../../public/350x260/graph.webp";
+import desk from "../../../../public/350x260/desk.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Power Apps",
       link: "/services/microsoft-power-platform/microsoft-power-apps",
-      image: project1,
+      image: magnify,
+      alt: "magnifying glass on graph",
       description: [
         "Custom business apps such as mobile apps and full database apps",
         "Canvas Apps: Custom user interface, Power FX, connected to any data source",
@@ -23,7 +25,8 @@ const SolutionsCarousel = () => {
     {
       title: "Power Automate",
       link: "/services/microsoft-access",
-      image: project2,
+      image: handShake,
+      alt: "handshake",
       description: [
         "Apps to guide users through business process flows from start to finish, along with reporting and analytics.",
         "Robotic Process Automation to record and replicate mouse clicks for legacy system integration.",
@@ -33,7 +36,8 @@ const SolutionsCarousel = () => {
     {
       title: "Power BI",
       link: "/services/microsoft-power-platform/microsoft-power-bi",
-      image: project3,
+      image: graph,
+      alt: "graph",
       description: [
         "Web enabled Dashboard solutions which auto-refresh from your live databases.",
         "Power BI Business Intelligence solutions.",
@@ -44,7 +48,8 @@ const SolutionsCarousel = () => {
     {
       title: "Power Pages",
       link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
-      image: project4,
+      image: desk,
+      alt: "desk in an office",
       description: [
         "Low-code solutions",
         "Rapid design and development of custom business solutions",
@@ -60,7 +65,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
+        <h2>No Problems... Only Solutions</h2>
       </div>
 
       <div className={styles.carouselContainer}>
@@ -81,14 +86,19 @@ const SolutionsCarousel = () => {
                   className={`${styles.card} ${
                     styles[`card${(index % solutionsData.length) + 1}`]
                   }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
                 >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={solution.image}
+                      alt={solution.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className={styles.carouselImage}
+                    />
+                  </div>
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Excel</span>
+                      <span>Power Platform</span>
                       <br />
                       {solution.title}
                     </h3>
