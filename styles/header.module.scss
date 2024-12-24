@@ -2,10 +2,6 @@
 
 // HeadTop component
 .headTop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
   background-color: $black;
   display: flex;
@@ -66,8 +62,7 @@
   &.scrolled {
     background-color: $black;
     border-bottom: none;
-    // margin-top: 0;
-    margin-top: 40px;
+    margin-top: 0;
     transition: all 0.5s ease;
     height: 80px;
   }
@@ -135,6 +130,12 @@
     width: 100%;
     height: 1.9rem;
     background-color: transparent;
+  }
+
+  p,
+  a {
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 }
 
