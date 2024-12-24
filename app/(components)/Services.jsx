@@ -64,6 +64,7 @@ const Services = () => {
                 "Forms/formulas/functions",
               ]}
               link={"/services/microsoft-excel"}
+              linkText={"Excel"}
             />
           </CardIntersectionWrapper>
 
@@ -79,6 +80,7 @@ const Services = () => {
                 "Macro development",
               ]}
               link={"/services/microsoft-word"}
+              linkText={"Word"}
             />
           </CardIntersectionWrapper>
 
@@ -94,6 +96,7 @@ const Services = () => {
                 "Graphs, charts and other visual solutions to easily monitor the data that matters.",
               ]}
               link={"https://www.powerplatformexperts.com.au/"}
+              linkText={"Power Platform"}
             />
           </CardIntersectionWrapper>
 
@@ -109,6 +112,7 @@ const Services = () => {
                 "Integrate financial systems",
               ]}
               link={"/services/microsoft-access"}
+              linkText={"Access"}
             />
           </CardIntersectionWrapper>
         </div>

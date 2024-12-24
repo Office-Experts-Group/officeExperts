@@ -46,7 +46,6 @@ const Testimonials = ({ testimonials }) => {
               aria-label={`Testimonial ${
                 (index % selectedTestimonials.length) + 1
               }`}
-              tabIndex={index}
             >
               <TestimonialCard {...testimonial} />
             </div>

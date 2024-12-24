@@ -13,7 +13,11 @@ export default function MobileNavBackButton({
       .trim();
 
   return (
-    <button onClick={onClick} className={styles.backButton}>
+    <button
+      onClick={onClick}
+      className={styles.backButton}
+      aria-label="Back to previous view"
+    >
       <span>Back to {displayName}</span>
       <svg
         stroke="currentColor"
