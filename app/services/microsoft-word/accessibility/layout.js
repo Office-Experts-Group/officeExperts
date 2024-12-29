@@ -8,36 +8,36 @@ export const metadata = {
 
   keywords: [
     // Core accessibility services
-    "word accessibility solutions",
-    "microsoft word accessibility",
-    "accessible word documents",
-    "word document accessibility",
+    // "word accessibility solutions",
+    // "microsoft word accessibility",
+    // "accessible word documents",
+    // "word document accessibility",
     "accessible document templates",
 
     // Location-based
-    "accessibility consultants sydney",
-    "accessibility services melbourne",
-    "accessibility specialists brisbane",
-    "accessibility experts perth",
+    // "accessibility consultants sydney",
+    // "accessibility services melbourne",
+    // "accessibility specialists brisbane",
+    // "accessibility experts perth",
 
-    // Service-specific long tail
-    "government document accessibility",
-    "corporate document accessibility",
-    "accessible template design",
-    "WCAG compliant documents",
-    "document accessibility standards",
+    // // Service-specific long tail
+    // "government document accessibility",
+    // "corporate document accessibility",
+    // "accessible template design",
+    // "WCAG compliant documents",
+    // "document accessibility standards",
 
-    // Industry-specific
-    "government accessibility solutions",
-    "enterprise document accessibility",
-    "corporate accessibility services",
-    "accessibility compliance services",
+    // // Industry-specific
+    // "government accessibility solutions",
+    // "enterprise document accessibility",
+    // "corporate accessibility services",
+    // "accessibility compliance services",
 
-    // Technology combinations
-    "microsoft office accessibility",
-    "word template accessibility",
-    "document accessibility automation",
-    "accessibility standards compliance",
+    // // Technology combinations
+    // "microsoft office accessibility",
+    // "word template accessibility",
+    // "document accessibility automation",
+    // "accessibility standards compliance",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/accessibility/",

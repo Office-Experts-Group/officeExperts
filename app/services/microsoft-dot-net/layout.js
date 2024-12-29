@@ -9,36 +9,36 @@ export const metadata = {
 
   keywords: [
     // Core .NET services
-    "NET development services",
-    "C# programming Australia",
-    "VB.NET development",
-    "VSTO solutions",
-    "ASP.NET web development",
+    "NET developers",
+    // "C# programming Australia",
+    // "VB.NET development",
+    // "VSTO solutions",
+    // "ASP.NET web development",
 
-    // Location-based
-    "NET developers Sydney",
-    "NET consultants Melbourne",
-    "NET programmers Brisbane",
-    "NET specialists Perth",
+    // // Location-based
+    // "NET developers Sydney",
+    // "NET consultants Melbourne",
+    // "NET programmers Brisbane",
+    // "NET specialists Perth",
 
-    // Service-specific long tail
-    "custom NET application development",
-    "NET business solutions",
-    "NET API development",
-    "NET migration services",
-    "NET troubleshooting services",
+    // // Service-specific long tail
+    // "custom NET application development",
+    // "NET business solutions",
+    // "NET API development",
+    // "NET migration services",
+    // "NET troubleshooting services",
 
-    // Industry-specific
-    "enterprise NET solutions",
-    "corporate NET development",
-    "government NET services",
-    "business NET applications",
+    // // Industry-specific
+    // "enterprise NET solutions",
+    // "corporate NET development",
+    // "government NET services",
+    // "business NET applications",
 
-    // Technology combinations
-    "NET Azure integration",
-    "NET cloud solutions",
-    "NET Office integration",
-    "NET SharePoint development",
+    // // Technology combinations
+    // "NET Azure integration",
+    // "NET cloud solutions",
+    // "NET Office integration",
+    // "NET SharePoint development",
   ],
   canonical: "https://www.officeexperts.com.au/services/microsoft-dot-net/",
 };

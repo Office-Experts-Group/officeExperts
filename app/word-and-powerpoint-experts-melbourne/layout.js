@@ -14,17 +14,6 @@ export const metadata = {
     description:
       "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specializing in templates, document design, presentations, automation and corporate solutions.",
     url: "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne/",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
@@ -32,30 +21,30 @@ export const metadata = {
     // Location-specific
     "word experts melbourne",
     "powerpoint experts melbourne",
-    "microsoft word consultants melbourne",
-    "powerpoint consultants melbourne",
-    "document design melbourne",
-    "presentation design melbourne",
+    // "microsoft word consultants melbourne",
+    // "powerpoint consultants melbourne",
+    // "document design melbourne",
+    // "presentation design melbourne",
 
-    // Service-specific
-    "word template design",
-    "powerpoint template design",
-    "corporate document solutions",
-    "presentation automation",
-    "document automation melbourne",
-    "business documentation",
+    // // Service-specific
+    // "word template design",
+    // "powerpoint template design",
+    // "corporate document solutions",
+    // "presentation automation",
+    // "document automation melbourne",
+    // "business documentation",
 
-    // Industry-specific
-    "corporate documentation services",
-    "government document solutions",
-    "business presentation design",
-    "professional document templates",
+    // // Industry-specific
+    // "corporate documentation services",
+    // "government document solutions",
+    // "business presentation design",
+    // "professional document templates",
 
-    // Technology combinations
-    "microsoft office consulting melbourne",
-    "word powerpoint integration",
-    "office automation melbourne",
-    "document management solutions",
+    // // Technology combinations
+    // "microsoft office consulting melbourne",
+    // "word powerpoint integration",
+    // "office automation melbourne",
+    // "document management solutions",
   ],
 
   // Twitter Card

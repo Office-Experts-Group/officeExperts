@@ -8,37 +8,37 @@ export const metadata = {
 
   keywords: [
     // Core Power Platform services
-    "Microsoft Power Platform consulting",
-    "Power Platform solutions Australia",
-    "Power Apps development",
-    "Power BI consulting",
-    "Power Automate solutions",
-    "Power Pages development",
+    "Microsoft Power Platform consultants",
+    // "Power Platform solutions Australia",
+    // "Power Apps development",
+    // "Power BI consulting",
+    // "Power Automate solutions",
+    // "Power Pages development",
 
-    // Location-based
-    "Power Platform consultants Sydney",
-    "Power Platform experts Melbourne",
-    "Power Platform services Brisbane",
-    "Power Platform specialists Perth",
+    // // Location-based
+    // "Power Platform consultants Sydney",
+    // "Power Platform experts Melbourne",
+    // "Power Platform services Brisbane",
+    // "Power Platform specialists Perth",
 
-    // Service-specific long tail
-    "custom Power Apps development",
-    "Power BI dashboard creation",
-    "Power Automate workflow automation",
-    "Power Pages website development",
-    "Dataverse integration services",
+    // // Service-specific long tail
+    // "custom Power Apps development",
+    // "Power BI dashboard creation",
+    // "Power Automate workflow automation",
+    // "Power Pages website development",
+    // "Dataverse integration services",
 
-    // Industry-specific
-    "enterprise Power Platform solutions",
-    "business process automation",
-    "corporate dashboard development",
-    "low-code application development",
+    // // Industry-specific
+    // "enterprise Power Platform solutions",
+    // "business process automation",
+    // "corporate dashboard development",
+    // "low-code application development",
 
-    // Technology combinations
-    "Power Platform SharePoint integration",
-    "Power Platform Azure integration",
-    "Microsoft 365 integration",
-    "Dynamics 365 integration",
+    // // Technology combinations
+    // "Power Platform SharePoint integration",
+    // "Power Platform Azure integration",
+    // "Microsoft 365 integration",
+    // "Dynamics 365 integration",
   ],
 
   canonical:

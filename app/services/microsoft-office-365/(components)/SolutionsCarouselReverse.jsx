@@ -3,17 +3,17 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import deskGroup from "../../../../public/cards/deskGroup350x200.webp";
+import penGraph from "../../../../public/cards/penGraph350x200.webp";
+import graphHands from "../../../../public/cards/graphHands350x200.webp";
+import jigsaw from "../../../../public/cards/jigsaw350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Exchange Setup and Help",
       link: "/services/microsoft-office-365/exchange-online-setup-and-support",
-      image: project1,
+      image: deskGroup,
       description: [
         "Does your organisation need Exchange setup and configured?",
         "Do you need Outlook setup for your staff?",
@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
     {
       title: "Help and Managed Services",
       link: "/services/microsoft-office-365/support-and-managed-services",
-      image: project2,
+      image: penGraph,
       description: [
         "Need support for your Office 365 subscription?",
         "Is your OneDrive not syncing?",
@@ -32,7 +32,7 @@ const SolutionsCarousel = () => {
     {
       title: "Cloud Backup with OneDrive",
       link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
-      image: project2,
+      image: graphHands,
       description: [
         "Have important documents needing off site backup?",
         "Want to share files with colleagues and customers?",
@@ -42,7 +42,7 @@ const SolutionsCarousel = () => {
     {
       title: "App & Custom Development",
       link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
-      image: project2,
+      image: jigsaw,
       description: [
         "Need custom applications to integrate with SharePoint lists and libraries?",
         "Need custom branding for your corporate intranet site?",

@@ -5,6 +5,7 @@
   margin: 6rem 8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   a {
     color: $theme;
     font-weight: 700;
@@ -49,6 +50,7 @@
 .text {
   display: flex;
   flex-direction: column;
+  max-width: 70%;
   h2 {
     color: $black;
     font-size: 2rem;
@@ -73,11 +75,13 @@
   @include phone {
     margin-bottom: 2rem;
     align-items: center;
+    max-width: 100%;
   }
 
   @include phoneLandscape {
     margin-bottom: 2rem;
     align-items: center;
+    max-width: 100%;
   }
 }
 
@@ -126,6 +130,7 @@
 .content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin-left: 2rem;
 
@@ -198,8 +203,8 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-right: 10vw;
+  justify-content: center;
+  // margin-right: 10vw;
 
   @include phone {
     margin: 0;

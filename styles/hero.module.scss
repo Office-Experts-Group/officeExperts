@@ -121,6 +121,7 @@
     line-height: clamp(3rem, 8vw, 6rem);
     margin-bottom: 4rem;
     font-family: var(--font-aptos) !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   a {
     display: flex;

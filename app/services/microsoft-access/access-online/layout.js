@@ -9,31 +9,31 @@ export const metadata = {
   keywords: [
     // Core service keywords
     "online access database solutions",
-    "cloud access database",
-    "access online solutions",
-    "microsoft access cloud",
-    "sharepoint access integration",
+    // "cloud access database",
+    // "access online solutions",
+    // "microsoft access cloud",
+    // "sharepoint access integration",
 
-    // Feature-specific
-    "access office 365 integration",
-    "access mobile solutions",
-    "access cloud storage",
-    "access database hosting",
-    "access remote database",
+    // // Feature-specific
+    // "access office 365 integration",
+    // "access mobile solutions",
+    // "access cloud storage",
+    // "access database hosting",
+    // "access remote database",
 
-    // Solution-specific
-    "access ipad solutions",
-    "access iphone compatibility",
-    "access cloud migration",
-    "access database conversion",
-    "access web integration",
+    // // Solution-specific
+    // "access ipad solutions",
+    // "access iphone compatibility",
+    // "access cloud migration",
+    // "access database conversion",
+    // "access web integration",
 
-    // Business focus
-    "business database solutions",
-    "enterprise access solutions",
-    "corporate database systems",
-    "access cost effective solutions",
-    "cloud database management",
+    // // Business focus
+    // "business database solutions",
+    // "enterprise access solutions",
+    // "corporate database systems",
+    // "access cost effective solutions",
+    // "cloud database management",
   ],
 
   canonical:

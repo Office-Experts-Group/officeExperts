@@ -10,31 +10,31 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core Add-in services
-    "Office add-in development",
-    "VSTO add-in creation",
-    "Custom Office add-ins",
-    "Microsoft Office add-ins",
-    "Office extension development",
+    "Office add-in developers",
+    // "VSTO add-in creation",
+    // "Custom Office add-ins",
+    // "Microsoft Office add-ins",
+    // "Office extension development",
 
-    // Location-based
-    "Add-in developers Australia",
-    "VSTO developers Sydney",
-    "Office add-in services Melbourne",
-    "Add-in creation Brisbane",
+    // // Location-based
+    // "Add-in developers Australia",
+    // "VSTO developers Sydney",
+    // "Office add-in services Melbourne",
+    // "Add-in creation Brisbane",
 
-    // Service-specific long tail
-    "Excel VSTO add-in development",
-    "Word add-in creation",
-    "PowerPoint add-in solutions",
-    "Outlook add-in programming",
-    "Office automation add-ins",
+    // // Service-specific long tail
+    // "Excel VSTO add-in development",
+    // "Word add-in creation",
+    // "PowerPoint add-in solutions",
+    // "Outlook add-in programming",
+    // "Office automation add-ins",
 
-    // Technology combinations
-    "Visual Studio add-in development",
-    "Office 365 add-in integration",
-    "SharePoint add-in creation",
-    "Enterprise Office add-ins",
-    "Commercial Office add-ins",
+    // // Technology combinations
+    // "Visual Studio add-in development",
+    // "Office 365 add-in integration",
+    // "SharePoint add-in creation",
+    // "Enterprise Office add-ins",
+    // "Commercial Office add-ins",
   ],
 
   canonical:

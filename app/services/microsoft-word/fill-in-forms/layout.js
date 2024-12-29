@@ -18,32 +18,32 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core form services
-    "Word form design",
-    "fill in forms Word",
-    "Word form templates",
-    "form controls Word",
-    "Word data entry forms",
+    "Word fill inform designers",
+    // "fill in forms Word",
+    // "Word form templates",
+    // "form controls Word",
+    // "Word data entry forms",
 
-    // Technical aspects
-    "VBA form integration",
-    "Word form automation",
-    "form data extraction",
-    "protected Word forms",
-    "Word form controls",
+    // // Technical aspects
+    // "VBA form integration",
+    // "Word form automation",
+    // "form data extraction",
+    // "protected Word forms",
+    // "Word form controls",
 
-    // Service-specific
-    "user friendly forms",
-    "Word document forms",
-    "business form design",
-    "form template creation",
-    "custom Word forms",
+    // // Service-specific
+    // "user friendly forms",
+    // "Word document forms",
+    // "business form design",
+    // "form template creation",
+    // "custom Word forms",
 
-    // Business benefits
-    "consistent data entry",
-    "form design services",
-    "professional forms",
-    "form development",
-    "business documentation",
+    // // Business benefits
+    // "consistent data entry",
+    // "form design services",
+    // "professional forms",
+    // "form development",
+    // "business documentation",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms/",

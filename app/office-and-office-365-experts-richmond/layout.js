@@ -13,50 +13,13 @@ export const metadata = {
     description:
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
   keywords: [
     // Location specific
-    "office experts richmond",
-    "microsoft office consultants richmond",
+    "Microsoft office experts richmond",
     "office 365 consultants richmond",
-    "microsoft office specialists richmond",
-
-    // Service specific
-    "office 365 migration richmond",
-    "office automation richmond",
-    "office integration richmond",
-    "office cloud solutions richmond",
-
-    // Expertise areas
-    "custom office development richmond",
-    "office document design richmond",
-    "office database solutions richmond",
-    "office reporting solutions richmond",
-
-    // Business solutions
-    "business automation richmond",
-    "document management richmond",
-    "office training richmond",
-    "office support richmond",
-
-    // Technology combinations
-    "office sharepoint richmond",
-    "office azure richmond",
-    "office 365 migration richmond",
-    "office cloud integration richmond",
   ],
 
   // Twitter Card
@@ -68,8 +31,6 @@ export const metadata = {
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
 
   canonical:
     "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",

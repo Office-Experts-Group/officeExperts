@@ -1,21 +1,50 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useRef } from "react";
+import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
 
+const SurveyForm = dynamic(() => import("./SurveyForm"), {
+  ssr: false,
+});
+
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
+  // Documents
   "application/pdf",
   "application/msword",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/vnd.oasis.opendocument.text",
+  "application/rtf",
   "text/plain",
+  "text/csv",
+  "text/html",
+  "text/markdown",
+
+  // Images
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/bmp",
+  "image/webp",
+  "image/svg+xml",
+  "image/tiff",
+
+  // Archives (if needed)
   "application/zip",
+  "application/x-rar-compressed",
+
+  // Spreadsheets
+  "application/vnd.ms-excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "application/vnd.oasis.opendocument.spreadsheet",
 ];
 
 const QuoteLocation = ({ location }) => {
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     location: location,
     service: "",
@@ -30,6 +59,10 @@ const QuoteLocation = ({ location }) => {
     acceptTerms: false,
     honeypot: "",
   });
+
+  // States to pass to SurveyForm
+  const [surveyName, setSurveyName] = useState("");
+  const [surveyEmail, setSurveyEmail] = useState("");
 
   // Create refs for form fields that might need focus
   const nameRef = useRef(null);
@@ -55,7 +88,10 @@ const QuoteLocation = ({ location }) => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (!file) return;
+    if (!file) {
+      setFormData((prev) => ({ ...prev, file: null }));
+      return;
+    }
 
     if (file.size > MAX_FILE_SIZE) {
       setError((prev) => ({
@@ -100,9 +136,16 @@ const QuoteLocation = ({ location }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     setError({});
 
-    if (formData.honeypot) return;
+    setSurveyName(formData.name);
+    setSurveyEmail(formData.email);
+
+    if (formData.honeypot) {
+      setIsSubmitting(false);
+      return;
+    }
 
     const newError = {};
 
@@ -120,6 +163,8 @@ const QuoteLocation = ({ location }) => {
 
     if (Object.keys(newError).length > 0) {
       setError(newError);
+      setIsSubmitting(false);
+
       // Get the first error field
       const firstErrorField = Object.keys(newError)[0];
       // Get the corresponding ref
@@ -136,7 +181,7 @@ const QuoteLocation = ({ location }) => {
     }
 
     try {
-      const res = await fetch("/api/quoteForm", {
+      const res = await fetch("/api/quoteLocation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -145,6 +190,8 @@ const QuoteLocation = ({ location }) => {
       if (res.ok) {
         setSuccess(true);
         setFormData({
+          location: location,
+          service: "",
           name: "",
           email: "",
           phone: "",
@@ -157,18 +204,25 @@ const QuoteLocation = ({ location }) => {
           honeypot: "",
         });
       } else {
-        setError({ general: "Something went wrong. Please try again." });
+        const data = await res.json();
+        setError({
+          general: data.error || "Something went wrong. Please try again.",
+        });
       }
     } catch (err) {
-      setError({ general: "There was an error submitting the form." });
+      setError({
+        general:
+          "There was an error submitting the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   if (success) {
     return (
-      <div role="alert" aria-live="polite">
-        <h2>Thank you {formData.name} for your quote request!</h2>
-        <p>One of our team will contact you shortly</p>
+      <div className={styles.successMessage} role="alert" aria-live="polite">
+        <SurveyForm name={surveyName} email={surveyEmail} />
       </div>
     );
   }
@@ -197,6 +251,7 @@ const QuoteLocation = ({ location }) => {
         className={styles.honeypot}
         aria-hidden="true"
         tabIndex="-1"
+        disabled={isSubmitting}
       />
 
       <div className={styles.contactForm}>
@@ -218,6 +273,7 @@ const QuoteLocation = ({ location }) => {
             aria-describedby={error.name ? "name-error" : undefined}
             required
             ref={nameRef}
+            disabled={isSubmitting}
           />
           {error.name && (
             <p
@@ -241,6 +297,7 @@ const QuoteLocation = ({ location }) => {
             aria-describedby={error.message ? "message-error" : undefined}
             placeholder="Enter details about your project here..."
             ref={messageRef}
+            disabled={isSubmitting}
           />
           {error.message && (
             <p
@@ -273,6 +330,7 @@ const QuoteLocation = ({ location }) => {
             placeholder="eg. john@example.com"
             required
             ref={emailRef}
+            disabled={isSubmitting}
           />
           {error.email && (
             <p
@@ -296,6 +354,7 @@ const QuoteLocation = ({ location }) => {
             onChange={handleChange}
             aria-required="false"
             placeholder="optional"
+            disabled={isSubmitting}
           />
         </div>
       </div>
@@ -310,33 +369,11 @@ const QuoteLocation = ({ location }) => {
             value={formData.softwareVersions}
             onChange={handleChange}
             placeholder="e.g. Office 365, Excel 2019"
-          />
-        </div>
-        <div className={styles.formField}>
-          <label htmlFor="website">Website</label>
-          <input
-            type="url"
-            id="website"
-            name="website"
-            value={formData.website}
-            onChange={handleChange}
-            aria-required="false"
-            placeholder="Your company website or project URL"
+            disabled={isSubmitting}
           />
         </div>
 
         <div className={styles.formField}>
-          <label htmlFor="softwareVersions">Software Versions</label>
-          <input
-            type="text"
-            id="softwareVersions"
-            name="softwareVersions"
-            value={formData.softwareVersions}
-            onChange={handleChange}
-            placeholder="e.g. Office 365, Excel 2019"
-          />
-        </div>
-        <div className={styles.formField}>
           <label htmlFor="website">Website</label>
           <input
             type="url"
@@ -346,126 +383,59 @@ const QuoteLocation = ({ location }) => {
             onChange={handleChange}
             aria-required="false"
             placeholder="Your company website or project URL"
+            disabled={isSubmitting}
           />
         </div>
 
         <div className={styles.radioFieldSpan}>
           <label className={styles.groupLabel}>Microsoft Service</label>
           <div className={styles.radioOptionsGrid}>
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="Office"
-                name="operatingSystem"
-                value="Office"
-                checked={formData.operatingSystem === "Office"}
-                onChange={handleChange}
-              />
-              <label htmlFor="Office">Office</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="Access"
-                name="operatingSystem"
-                value="Access"
-                checked={formData.operatingSystem === "Access"}
-                onChange={handleChange}
-              />
-              <label htmlFor="Access">Access</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="Excel"
-                name="operatingSystem"
-                value="Excel"
-                checked={formData.operatingSystem === "Excel"}
-                onChange={handleChange}
-              />
-              <label htmlFor="Excel">Excel</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="power-platform"
-                name="operatingSystem"
-                value="power-platform"
-                checked={formData.operatingSystem === "power-platform"}
-                onChange={handleChange}
-              />
-              <label htmlFor="power-platform">Power Platform</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="Word"
-                name="operatingSystem"
-                value="Word"
-                checked={formData.operatingSystem === "Word"}
-                onChange={handleChange}
-              />
-              <label htmlFor="Word">Word</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="not-sure"
-                name="operatingSystem"
-                value="not-sure"
-                checked={formData.operatingSystem === "not-sure"}
-                onChange={handleChange}
-              />
-              <label htmlFor="not-sure">Not Sure</label>
-            </div>
+            {[
+              "Office",
+              "Access",
+              "Excel",
+              "Power Platform",
+              "Word",
+              "Not Sure",
+            ].map((serviceName) => (
+              <div key={serviceName} className={styles.radioOption}>
+                <input
+                  type="radio"
+                  id={serviceName.toLowerCase().replace(" ", "-")}
+                  name="service"
+                  value={serviceName}
+                  checked={formData.service === serviceName}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                />
+                <label htmlFor={serviceName.toLowerCase().replace(" ", "-")}>
+                  {serviceName}
+                </label>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.radioFieldSpan}>
           <label className={styles.groupLabel}>Operating System</label>
           <div className={styles.radioOptions}>
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="windows"
-                name="operatingSystem"
-                value="Windows"
-                checked={formData.operatingSystem === "Windows"}
-                onChange={handleChange}
-              />
-              <label htmlFor="windows">Windows</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="mac"
-                name="operatingSystem"
-                value="Mac"
-                checked={formData.operatingSystem === "Mac"}
-                onChange={handleChange}
-              />
-              <label htmlFor="mac">Mac</label>
-            </div>
-
-            <div className={styles.radioOption}>
-              <input
-                type="radio"
-                id="other"
-                name="operatingSystem"
-                value="Other"
-                checked={formData.operatingSystem === "Other"}
-                onChange={handleChange}
-              />
-              <label htmlFor="other">Other</label>
-            </div>
+            {["Windows", "Mac", "Other"].map((system) => (
+              <div key={system} className={styles.radioOption}>
+                <input
+                  type="radio"
+                  id={system.toLowerCase()}
+                  name="operatingSystem"
+                  value={system}
+                  checked={formData.operatingSystem === system}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                />
+                <label htmlFor={system.toLowerCase()}>{system}</label>
+              </div>
+            ))}
           </div>
         </div>
+
         <div className={styles.uploadField}>
           <label htmlFor="file">
             Upload a file
@@ -478,6 +448,7 @@ const QuoteLocation = ({ location }) => {
             onChange={handleFileChange}
             accept={VALID_FILE_TYPES.join(", ")}
             className={styles.fileInput}
+            disabled={isSubmitting}
           />
           {error.file && (
             <p
@@ -490,6 +461,7 @@ const QuoteLocation = ({ location }) => {
             </p>
           )}
         </div>
+
         <div className={styles.termsField}>
           <label className={styles.checkboxLabel}>
             <input
@@ -502,6 +474,7 @@ const QuoteLocation = ({ location }) => {
               aria-invalid={!!error.acceptTerms}
               required
               ref={termsRef}
+              disabled={isSubmitting}
             />
             <span className={styles.checkboxText}>
               I accept the{" "}
@@ -532,8 +505,12 @@ const QuoteLocation = ({ location }) => {
         </div>
       </div>
 
-      <button type="submit" className={`btn ${styles.submitBtn}`}>
-        Submit
+      <button
+        type="submit"
+        className={`btn ${styles.submitBtn}`}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Submit"}
       </button>
     </form>
   );

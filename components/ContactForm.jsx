@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
+
 import styles from "../styles/contact.module.css";
+const SurveyForm = dynamic(() => import("./SurveyForm"), {
+  ssr: false,
+});
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,35 +14,40 @@ const ContactForm = () => {
     phone: "",
     message: "",
     honeypot: "",
-    referralSource: "",
-    otherReferralDetails: "",
   });
 
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // props to pass to SurveyForm
+  const [surveyName, setSurveyName] = useState("");
+  const [surveyEmail, setSurveyEmail] = useState("");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsSubmitting(true);
     setError({});
     const newError = {};
 
     if (!formData.name.trim()) {
-      newError.name = "*Name is required";
+      newError.name = "*Name is required...";
     }
     if (!formData.email.trim()) {
-      newError.email = "*Email is required";
+      newError.email = "*Email is required...";
     } else if (!emailRegex.test(formData.email.trim())) {
-      newError.email = "*Email is not valid";
+      newError.email = "*Email is not valid...";
     }
     if (!formData.message.trim()) {
-      newError.message = "*Message is required";
+      newError.message = "*Message is required...";
     }
 
     if (Object.keys(newError).length > 0) {
       setError(newError);
+      setIsSubmitting(false);
+      // Focus first error field
       const firstErrorField = Object.keys(newError)[0];
       const element = document.getElementById(firstErrorField);
       if (element) {
@@ -50,24 +60,21 @@ const ContactForm = () => {
     }
 
     if (formData.honeypot) {
-      return;
+      return; // Silent return for bot submissions
     }
 
     try {
       const res = await fetch("/api/contactForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          // Format referral source for email body
-          referralDetails:
-            formData.referralSource === "other"
-              ? `Other: ${formData.otherReferralDetails}`
-              : formData.referralSource,
-        }),
+        body: JSON.stringify(formData),
       });
 
+      const data = await res.json();
+
       if (res.ok) {
+        setSurveyName(formData.name);
+        setSurveyEmail(formData.email);
         setSuccess(true);
         setFormData({
           name: "",
@@ -75,20 +82,20 @@ const ContactForm = () => {
           phone: "",
           message: "",
           honeypot: "",
-          referralSource: "",
-          otherReferralDetails: "",
         });
       } else {
-        setError((prev) => ({
-          ...prev,
-          general: "Something went wrong. Please try again.",
-        }));
+        setError({
+          general: data.message || "Something went wrong. Please try again.",
+        });
       }
     } catch (err) {
-      setError((prev) => ({
-        ...prev,
-        general: "There was an error submitting the form.",
-      }));
+      console.error("Form submission error:", err);
+      setError({
+        general:
+          "There was an error submitting the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -97,12 +104,9 @@ const ContactForm = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-      // Clear other details if referral source is changed to something other than "other"
-      ...(name === "referralSource" && value !== "other"
-        ? { otherReferralDetails: "" }
-        : {}),
     }));
 
+    // Clear error when user starts typing
     if (error[name]) {
       setError((prev) => ({
         ...prev,
@@ -114,8 +118,7 @@ const ContactForm = () => {
   if (success) {
     return (
       <div className={styles.successMessage} role="alert" aria-live="polite">
-        <h2>Thank you {formData.name} for your message!</h2>
-        <p>One of our team will contact you shortly</p>
+        <SurveyForm name={surveyName} email={surveyEmail} />
       </div>
     );
   }
@@ -128,9 +131,18 @@ const ContactForm = () => {
       aria-label="Contact form"
       role="form"
     >
+      {error.general && (
+        <div className={styles.generalError} role="alert">
+          {error.general}
+        </div>
+      )}
+
       <div className={styles.formField}>
         <label htmlFor="name" className={styles.requiredField}>
-          Name*
+          Name
+          <span className={styles.requiredIndicator} aria-hidden="true">
+            *
+          </span>
         </label>
         <input
           type="text"
@@ -142,6 +154,7 @@ const ContactForm = () => {
           aria-invalid={!!error.name}
           aria-describedby={error.name ? "name-error" : undefined}
           required
+          disabled={isSubmitting}
         />
         {error.name && (
           <p
@@ -157,7 +170,10 @@ const ContactForm = () => {
 
       <div className={styles.formField}>
         <label htmlFor="message" className={styles.requiredField}>
-          Message*
+          Message
+          <span className={styles.requiredIndicator} aria-hidden="true">
+            *
+          </span>
         </label>
         <textarea
           id="message"
@@ -169,6 +185,7 @@ const ContactForm = () => {
           aria-describedby={error.message ? "message-error" : undefined}
           placeholder="Your message..."
           required
+          disabled={isSubmitting}
         />
         {error.message && (
           <p
@@ -184,7 +201,10 @@ const ContactForm = () => {
 
       <div className={styles.formField}>
         <label htmlFor="email" className={styles.requiredField}>
-          Email*
+          Email
+          <span className={styles.requiredIndicator} aria-hidden="true">
+            *
+          </span>
         </label>
         <input
           type="email"
@@ -197,6 +217,7 @@ const ContactForm = () => {
           aria-describedby={error.email ? "email-error" : undefined}
           placeholder="eg. john@example.com"
           required
+          disabled={isSubmitting}
         />
         {error.email && (
           <p
@@ -222,76 +243,8 @@ const ContactForm = () => {
           onChange={handleChange}
           aria-required="false"
           placeholder="optional..."
+          disabled={isSubmitting}
         />
-      </div>
-
-      <div className={`${styles.formField} ${styles.refField}`}>
-        <label className={styles.groupLabel}>How did you hear about us?</label>
-        <div className={styles.radioOptions}>
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="search"
-              name="referralSource"
-              value="search"
-              checked={formData.referralSource === "search"}
-              onChange={handleChange}
-            />
-            <label htmlFor="search">Search Engine</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="referral"
-              name="referralSource"
-              value="referral"
-              checked={formData.referralSource === "referral"}
-              onChange={handleChange}
-            />
-            <label htmlFor="referral">Referral/Word of Mouth</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="advertising"
-              name="referralSource"
-              value="advertising"
-              checked={formData.referralSource === "advertising"}
-              onChange={handleChange}
-            />
-            <label htmlFor="advertising">Advertising</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="other"
-              name="referralSource"
-              value="other"
-              checked={formData.referralSource === "other"}
-              onChange={handleChange}
-            />
-            <label htmlFor="other">Other</label>
-          </div>
-        </div>
-
-        {formData.referralSource === "other" && (
-          <div className={styles.otherInput}>
-            <input
-              type="text"
-              id="otherReferralDetails"
-              name="otherReferralDetails"
-              value={formData.otherReferralDetails}
-              onChange={handleChange}
-              placeholder="Please specify..."
-              aria-label="Please specify how you heard about us"
-              aria-required="true"
-              aria-invalid={!!error.otherReferralDetails}
-            />
-          </div>
-        )}
       </div>
 
       <div>
@@ -310,8 +263,9 @@ const ContactForm = () => {
         type="submit"
         className={`btn ${styles.submitBtn}`}
         aria-label="Submit contact form"
+        disabled={isSubmitting}
       >
-        Submit
+        {isSubmitting ? "Sending..." : "Submit"}
       </button>
     </form>
   );

@@ -148,7 +148,7 @@ export const navigationData = {
         href: "/about-us",
       },
       {
-        label: "Meet the Team",
+        label: "Meet Our Team",
         href: "/meet-the-team",
       },
     ],

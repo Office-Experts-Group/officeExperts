@@ -4,18 +4,46 @@ import React, { useState, useRef } from "react";
 
 import styles from "../styles/contact.module.css";
 
+const SurveyForm = dynamic(() => import("./SurveyForm"), {
+  ssr: false,
+});
+
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
+  // Documents
   "application/pdf",
   "application/msword",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/vnd.oasis.opendocument.text",
+  "application/rtf",
   "text/plain",
+  "text/csv",
+  "text/html",
+  "text/markdown",
+
+  // Images
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/bmp",
+  "image/webp",
+  "image/svg+xml",
+  "image/tiff",
+
+  // Archives (if needed)
   "application/zip",
+  "application/x-rar-compressed",
+
+  // Spreadsheets
+  "application/vnd.ms-excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "application/vnd.oasis.opendocument.spreadsheet",
 ];
 
 const QuoteForm = () => {
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,6 +56,10 @@ const QuoteForm = () => {
     acceptTerms: false,
     honeypot: "",
   });
+
+  // states to hand to SurveyForm
+  const [surveyName, setSurveyName] = useState("");
+  const [surveyEmail, setSurveyEmail] = useState("");
 
   // Create refs for form fields that might need focus
   const nameRef = useRef(null);
@@ -53,7 +85,10 @@ const QuoteForm = () => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (!file) return;
+    if (!file) {
+      setFormData((prev) => ({ ...prev, file: null }));
+      return;
+    }
 
     if (file.size > MAX_FILE_SIZE) {
       setError((prev) => ({
@@ -64,24 +99,21 @@ const QuoteForm = () => {
     }
 
     if (!VALID_FILE_TYPES.includes(file.type)) {
-      setError((prev) => ({
-        ...prev,
-        file: "Invalid file type. Please upload a PDF, Word document, text file, or ZIP file.",
-      }));
+      setError((prev) => ({ ...prev, file: "Invalid file type" }));
       return;
     }
 
     const reader = new FileReader();
     reader.onload = () => {
+      const base64String = reader.result.split(",")[1];
       setFormData((prev) => ({
         ...prev,
         file: {
-          content: reader.result.split(",")[1],
+          content: base64String,
           name: file.name,
           type: file.type,
         },
       }));
-      setError((prev) => ({ ...prev, file: "" }));
     };
     reader.readAsDataURL(file);
   };
@@ -99,8 +131,15 @@ const QuoteForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError({});
+    setIsSubmitting(true);
 
-    if (formData.honeypot) return;
+    setSurveyName(formData.name);
+    setSurveyEmail(formData.email);
+
+    if (formData.honeypot) {
+      setIsSubmitting(false);
+      return;
+    }
 
     const newError = {};
 
@@ -118,6 +157,8 @@ const QuoteForm = () => {
 
     if (Object.keys(newError).length > 0) {
       setError(newError);
+      setIsSubmitting(false);
+
       // Get the first error field
       const firstErrorField = Object.keys(newError)[0];
       // Get the corresponding ref
@@ -134,10 +175,20 @@ const QuoteForm = () => {
     }
 
     try {
+      const requestBody = {
+        ...formData,
+      };
+
+      // Only include file-related fields if a file is present
+      if (formData.file) {
+        requestBody.filename = formData.file.name;
+        requestBody.type = formData.file.type;
+      }
+
       const res = await fetch("/api/quoteForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(requestBody),
       });
 
       if (res.ok) {
@@ -155,18 +206,25 @@ const QuoteForm = () => {
           honeypot: "",
         });
       } else {
-        setError({ general: "Something went wrong. Please try again." });
+        const data = await res.json();
+        setError({
+          general: data.error || "Something went wrong. Please try again.",
+        });
       }
     } catch (err) {
-      setError({ general: "There was an error submitting the form." });
+      setError({
+        general:
+          "There was an error submitting the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   if (success) {
     return (
-      <div role="alert" aria-live="polite">
-        <h2>Thank you {formData.name} for your quote request!</h2>
-        <p>One of our team will contact you shortly</p>
+      <div className={styles.successMessage} role="alert" aria-live="polite">
+        <SurveyForm name={surveyName} email={surveyEmail} />
       </div>
     );
   }
@@ -195,6 +253,7 @@ const QuoteForm = () => {
         className={styles.honeypot}
         aria-hidden="true"
         tabIndex="-1"
+        disabled={isSubmitting}
       />
 
       <div className={styles.contactForm}>
@@ -216,6 +275,7 @@ const QuoteForm = () => {
             aria-describedby={error.name ? "name-error" : undefined}
             required
             ref={nameRef}
+            disabled={isSubmitting}
           />
           {error.name && (
             <p
@@ -239,6 +299,7 @@ const QuoteForm = () => {
             aria-describedby={error.message ? "message-error" : undefined}
             placeholder="Enter details about your project here..."
             ref={messageRef}
+            disabled={isSubmitting}
           />
           {error.message && (
             <p
@@ -271,6 +332,7 @@ const QuoteForm = () => {
             placeholder="eg. john@example.com"
             required
             ref={emailRef}
+            disabled={isSubmitting}
           />
           {error.email && (
             <p
@@ -294,6 +356,7 @@ const QuoteForm = () => {
             onChange={handleChange}
             aria-required="false"
             placeholder="optional"
+            disabled={isSubmitting}
           />
         </div>
       </div>
@@ -308,9 +371,10 @@ const QuoteForm = () => {
             value={formData.softwareVersions}
             onChange={handleChange}
             placeholder="e.g. Office 365, Excel 2019"
+            disabled={isSubmitting}
           />
         </div>
-        <div className={`${styles.formField} ${styles.webField}`}>
+        <div className={styles.formField}>
           <label htmlFor="website">Website</label>
           <input
             type="url"
@@ -320,6 +384,7 @@ const QuoteForm = () => {
             onChange={handleChange}
             aria-required="false"
             placeholder="Your company website or project URL"
+            disabled={isSubmitting}
           />
         </div>
         <div className={styles.radioField}>
@@ -333,6 +398,7 @@ const QuoteForm = () => {
                 value="Windows"
                 checked={formData.operatingSystem === "Windows"}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
               <label htmlFor="windows">Windows</label>
             </div>
@@ -345,6 +411,7 @@ const QuoteForm = () => {
                 value="Mac"
                 checked={formData.operatingSystem === "Mac"}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
               <label htmlFor="mac">Mac</label>
             </div>
@@ -357,6 +424,7 @@ const QuoteForm = () => {
                 value="Other"
                 checked={formData.operatingSystem === "Other"}
                 onChange={handleChange}
+                disabled={isSubmitting}
               />
               <label htmlFor="other">Other</label>
             </div>
@@ -365,7 +433,7 @@ const QuoteForm = () => {
         <div className={styles.uploadField}>
           <label htmlFor="file">
             Upload a file
-            <span aria-label="Accepted file size"> (up to 5MB)</span>
+            <span aria-label="Accepted file size"> (...up to 5MB)</span>
           </label>
           <input
             type="file"
@@ -374,6 +442,7 @@ const QuoteForm = () => {
             onChange={handleFileChange}
             accept={VALID_FILE_TYPES.join(", ")}
             className={styles.fileInput}
+            disabled={isSubmitting}
           />
           {error.file && (
             <p
@@ -398,6 +467,7 @@ const QuoteForm = () => {
               aria-invalid={!!error.acceptTerms}
               required
               ref={termsRef}
+              disabled={isSubmitting}
             />
             <span className={styles.checkboxText}>
               I accept the{" "}
@@ -428,8 +498,12 @@ const QuoteForm = () => {
         </div>
       </div>
 
-      <button type="submit" className={`btn ${styles.submitBtn}`}>
-        Submit
+      <button
+        type="submit"
+        className={`btn ${styles.submitBtn}`}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Submit"}
       </button>
     </form>
   );

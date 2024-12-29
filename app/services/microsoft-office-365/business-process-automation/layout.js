@@ -8,32 +8,32 @@ export const metadata = {
 
   keywords: [
     // Core automation keywords
-    "office 365 process automation",
     "business automation office 365",
-    "office 365 workflow automation",
-    "automated form processing",
-    "paperless office automation",
+    // "office 365 process automation",
+    // "office 365 workflow automation",
+    // "automated form processing",
+    // "paperless office automation",
 
-    // Solution specific
-    "office 365 forms automation",
-    "digital form conversion",
-    "automated business workflows",
-    "office 365 business processes",
-    "electronic form solutions",
+    // // Solution specific
+    // "office 365 forms automation",
+    // "digital form conversion",
+    // "automated business workflows",
+    // "office 365 business processes",
+    // "electronic form solutions",
 
-    // Business outcomes
-    "business process efficiency",
-    "workflow streamlining",
-    "automated data collection",
-    "business report automation",
-    "process optimization office 365",
+    // // Business outcomes
+    // "business process efficiency",
+    // "workflow streamlining",
+    // "automated data collection",
+    // "business report automation",
+    // "process optimization office 365",
 
-    // Industry specific
-    "enterprise process automation",
-    "corporate workflow solutions",
-    "business automation consulting",
-    "office automation services",
-    "digital transformation solutions",
+    // // Industry specific
+    // "enterprise process automation",
+    // "corporate workflow solutions",
+    // "business automation consulting",
+    // "office automation services",
+    // "digital transformation solutions",
   ],
 
   canonical:

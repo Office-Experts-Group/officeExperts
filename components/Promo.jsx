@@ -8,12 +8,11 @@ import AnimateOnScroll from "./AnimateOnScroll";
 import styles from "../styles/promo.module.css";
 
 import computer from "../public/icons/computer.webp";
-import promo from "../public/promo.webp";
 
 const Promo = ({ h2, p, link, linkText, isLocation }) => {
   return (
     <div
-      className={styles.container}
+      className={`${styles.container}`}
       style={isLocation ? { flexDirection: "column", gap: "1rem" } : {}}
     >
       <section
@@ -37,18 +36,6 @@ const Promo = ({ h2, p, link, linkText, isLocation }) => {
             </div>
           </div>
         </AnimateOnScroll>
-
-        {/* <AnimateOnScroll animation="scale-up" duration={1} delay={0.3}>
-        <div className={styles.img}>
-          <div className={styles.bar}></div>
-          <Image
-            src={promo}
-            alt="person at a computer"
-            width={130}
-            height={60}
-          />
-        </div>
-      </AnimateOnScroll> */}
       </section>
       {link && (
         <AnimateOnScroll animation="scale-up" duration={1} delay={0.3}>

@@ -7,37 +7,37 @@ export const metadata = {
   description:
     "Expert Microsoft Excel migration and upgrade services. We help resolve Excel workbook issues, optimize performance, and ensure smooth transitions between versions.",
   keywords: [
+    "Excel workbook optimisation",
     // Core upgrade services
-    "Excel migration services",
-    "Excel upgrade solutions",
-    "Excel version compatibility",
-    "Excel workbook optimization",
+    // "Excel migration services",
+    // "Excel upgrade solutions",
+    // "Excel version compatibility",
 
-    // Specific issues
-    "slow Excel workbooks",
-    "Excel compatibility issues",
-    "Excel VBA migration",
-    "Excel macro upgrades",
-    "Excel 32-bit to 64-bit",
+    // // Specific issues
+    // "slow Excel workbooks",
+    // "Excel compatibility issues",
+    // "Excel VBA migration",
+    // "Excel macro upgrades",
+    // "Excel 32-bit to 64-bit",
 
-    // Solutions
-    "Excel performance optimization",
-    "Excel workbook repair",
-    "Excel database migration",
-    "Excel cloud migration",
-    "Excel version upgrade",
+    // // Solutions
+    // "Excel performance optimization",
+    // "Excel workbook repair",
+    // "Excel database migration",
+    // "Excel cloud migration",
+    // "Excel version upgrade",
 
-    // Business focus
-    "business Excel solutions",
-    "enterprise Excel migration",
-    "corporate Excel upgrades",
-    "Excel consulting services",
+    // // Business focus
+    // "business Excel solutions",
+    // "enterprise Excel migration",
+    // "corporate Excel upgrades",
+    // "Excel consulting services",
 
-    // Location specific
-    "Excel migration Australia",
-    "Excel upgrade services Sydney",
-    "Excel consultants Melbourne",
-    "Excel experts Brisbane",
+    // // Location specific
+    // "Excel migration Australia",
+    // "Excel upgrade services Sydney",
+    // "Excel consultants Melbourne",
+    // "Excel experts Brisbane",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-excel/upgrades-and-migration/",

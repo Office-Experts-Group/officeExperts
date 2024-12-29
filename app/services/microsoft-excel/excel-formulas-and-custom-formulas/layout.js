@@ -10,31 +10,31 @@ export const metadata = {
   keywords: [
     // Core formula keywords
     "Excel formula help",
-    "custom Excel formulas",
-    "Excel formula development",
-    "complex Excel formulas",
-    "Excel formula optimization",
+    // "custom Excel formulas",
+    // "Excel formula development",
+    // "complex Excel formulas",
+    // "Excel formula optimization",
 
-    // Technical keywords
-    "Excel VBA formulas",
-    "Excel formula functions",
-    "Excel formula automation",
-    "Excel formula programming",
-    "Excel custom functions",
+    // // Technical keywords
+    // "Excel VBA formulas",
+    // "Excel formula functions",
+    // "Excel formula automation",
+    // "Excel formula programming",
+    // "Excel custom functions",
 
-    // Problem-focused
-    "Excel formula troubleshooting",
-    "Excel formula maintenance",
-    "Excel formula performance",
-    "Excel formula crashes",
-    "Excel formula corruption",
+    // // Problem-focused
+    // "Excel formula troubleshooting",
+    // "Excel formula maintenance",
+    // "Excel formula performance",
+    // "Excel formula crashes",
+    // "Excel formula corruption",
 
-    // Service-specific
-    "Excel formula consulting",
-    "Excel formula experts",
-    "Excel formula support",
-    "Excel formula training",
-    "Excel formula solutions",
+    // // Service-specific
+    // "Excel formula consulting",
+    // "Excel formula experts",
+    // "Excel formula support",
+    // "Excel formula training",
+    // "Excel formula solutions",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas/",

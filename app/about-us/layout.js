@@ -27,32 +27,32 @@ export const metadata = {
   keywords: [
     // Location-based
     "microsoft office consultants australia",
-    "office experts sydney",
-    "office consultants melbourne",
-    "microsoft specialists brisbane",
-    "office consultants perth",
-    "microsoft office experts canberra",
+    // "office experts sydney",
+    // "office consultants melbourne",
+    // "microsoft specialists brisbane",
+    // "office consultants perth",
+    // "microsoft office experts canberra",
 
-    // Service-specific
-    "remote office consulting",
-    "onsite office support",
-    "microsoft office migration",
-    "office 365 consulting",
-    "corporate office solutions",
+    // // Service-specific
+    // "remote office consulting",
+    // "onsite office support",
+    // "microsoft office migration",
+    // "office 365 consulting",
+    // "corporate office solutions",
 
-    // Expertise-based
-    "microsoft office experts",
-    "pc mac office specialists",
-    "office design experts",
-    "office development consultants",
-    "microsoft business solutions",
+    // // Expertise-based
+    // "microsoft office experts",
+    // "pc mac office specialists",
+    // "office design experts",
+    // "office development consultants",
+    // "microsoft business solutions",
 
-    // Experience-based
-    "corporate office experience",
-    "business software development",
-    "office integration experts",
-    "microsoft office design",
-    "office automation specialists",
+    // // Experience-based
+    // "corporate office experience",
+    // "business software development",
+    // "office integration experts",
+    // "microsoft office design",
+    // "office automation specialists",
   ],
 
   twitter: {
@@ -65,19 +65,6 @@ export const metadata = {
   },
 
   canonical: "https://www.officeexperts.com.au/about-us/",
-  robots: {
-    index: true,
-    follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function AboutLayout({ children }) {

@@ -19,32 +19,32 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core services
-    "Word automation services",
-    "document productivity solutions",
-    "Microsoft Word efficiency",
-    "document automation tools",
-    "Word template automation",
+    "Remove repetition in Microsoft Word",
+    // "document productivity solutions",
+    // "Microsoft Word efficiency",
+    // "document automation tools",
+    // "Word template automation",
 
-    // Features
-    "automated document creation",
-    "document element automation",
-    "Word document efficiency",
-    "business document automation",
-    "Word process automation",
+    // // Features
+    // "automated document creation",
+    // "document element automation",
+    // "Word document efficiency",
+    // "business document automation",
+    // "Word process automation",
 
-    // Benefits
-    "reduce document repetition",
-    "increase Word productivity",
-    "improve document efficiency",
-    "streamline Word processes",
-    "automate Word tasks",
+    // // Benefits
+    // "reduce document repetition",
+    // "increase Word productivity",
+    // "improve document efficiency",
+    // "streamline Word processes",
+    // "automate Word tasks",
 
-    // Business focus
-    "business document solutions",
-    "corporate Word automation",
-    "enterprise Word solutions",
-    "professional Word services",
-    "document productivity consulting",
+    // // Business focus
+    // "business document solutions",
+    // "corporate Word automation",
+    // "enterprise Word solutions",
+    // "professional Word services",
+    // "document productivity consulting",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity/",

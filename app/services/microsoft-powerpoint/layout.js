@@ -6,40 +6,40 @@ export const metadata = {
   title:
     "PowerPoint Consulting Services | PowerPoint Design | PowerPoint Experts",
   description:
-    "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
+    "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
 
   keywords: [
     // Core PowerPoint services
-    "PowerPoint consulting services",
-    "PowerPoint presentation design",
-    "PowerPoint template creation",
-    "PowerPoint VBA automation",
-    "PowerPoint training services",
+    "Microsoft PowerPoint consultation",
+    // "PowerPoint presentation design",
+    // "PowerPoint template creation",
+    // "PowerPoint VBA automation",
+    // "PowerPoint training services",
 
-    // Location-based
-    "PowerPoint consultants Sydney",
-    "PowerPoint experts Melbourne",
-    "PowerPoint services Brisbane",
-    "PowerPoint specialists Perth",
+    // // Location-based
+    // "PowerPoint consultants Sydney",
+    // "PowerPoint experts Melbourne",
+    // "PowerPoint services Brisbane",
+    // "PowerPoint specialists Perth",
 
-    // Service-specific
-    "corporate PowerPoint templates",
-    "PowerPoint master slides",
-    "PowerPoint presentation redesign",
-    "PowerPoint automation solutions",
-    "PowerPoint user training",
+    // // Service-specific
+    // "corporate PowerPoint templates",
+    // "PowerPoint master slides",
+    // "PowerPoint presentation redesign",
+    // "PowerPoint automation solutions",
+    // "PowerPoint user training",
 
-    // Industry-specific
-    "corporate presentation design",
-    "business PowerPoint solutions",
-    "enterprise PowerPoint consulting",
-    "professional presentation services",
+    // // Industry-specific
+    // "corporate presentation design",
+    // "business PowerPoint solutions",
+    // "enterprise PowerPoint consulting",
+    // "professional presentation services",
 
-    // Technical combinations
-    "PowerPoint VBA development",
-    "PowerPoint data integration",
-    "PowerPoint template automation",
-    "PowerPoint brand compliance",
+    // // Technical combinations
+    // "PowerPoint VBA development",
+    // "PowerPoint data integration",
+    // "PowerPoint template automation",
+    // "PowerPoint brand compliance",
   ],
 
   canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",

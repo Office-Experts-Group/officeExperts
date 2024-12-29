@@ -10,35 +10,35 @@ export const metadata = {
   keywords: [
     // Core migration services
     "Office 365 migration services",
-    "email migration Office 365",
-    "Office 365 data migration",
-    "Office 365 upgrade services",
-    "Office 365 transition",
+    // "email migration Office 365",
+    // "Office 365 data migration",
+    // "Office 365 upgrade services",
+    // "Office 365 transition",
 
-    // Location-based
-    "Office 365 migration Sydney",
-    "Office 365 migration Melbourne",
-    "Office 365 migration Brisbane",
-    "Office 365 migration Perth",
+    // // Location-based
+    // "Office 365 migration Sydney",
+    // "Office 365 migration Melbourne",
+    // "Office 365 migration Brisbane",
+    // "Office 365 migration Perth",
 
-    // Service-specific long tail
-    "Exchange to Office 365 migration",
-    "Gmail to Office 365 migration",
-    "OneDrive migration services",
-    "Office 365 email transfer",
-    "business Office 365 migration",
+    // // Service-specific long tail
+    // "Exchange to Office 365 migration",
+    // "Gmail to Office 365 migration",
+    // "OneDrive migration services",
+    // "Office 365 email transfer",
+    // "business Office 365 migration",
 
-    // Technical specifics
-    "zero downtime migration",
-    "data loss prevention migration",
-    "secure Office 365 migration",
-    "Exchange migration specialist",
+    // // Technical specifics
+    // "zero downtime migration",
+    // "data loss prevention migration",
+    // "secure Office 365 migration",
+    // "Exchange migration specialist",
 
-    // Migration combinations
-    "email and file migration",
-    "complete Office 365 transition",
-    "business email migration",
-    "corporate Office 365 setup",
+    // // Migration combinations
+    // "email and file migration",
+    // "complete Office 365 transition",
+    // "business email migration",
+    // "corporate Office 365 setup",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-migration/",

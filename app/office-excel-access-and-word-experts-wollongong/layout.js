@@ -13,17 +13,6 @@ export const metadata = {
     description:
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
@@ -35,22 +24,6 @@ export const metadata = {
     "word experts wollongong",
     "office 365 consulting wollongong",
     "powerpoint designers wollongong",
-
-    // Service specific
-    "custom office development wollongong",
-    "excel programming wollongong",
-    "access database development wollongong",
-    "word template design wollongong",
-    "office automation wollongong",
-    "powerpoint presentation design wollongong",
-
-    // Solution specific
-    "business database solutions wollongong",
-    "excel reporting solutions wollongong",
-    "document automation wollongong",
-    "office integration wollongong",
-    "data analysis wollongong",
-    "cloud solutions wollongong",
   ],
 
   // Twitter Card
@@ -62,8 +35,6 @@ export const metadata = {
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
 
   canonical:
     "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",

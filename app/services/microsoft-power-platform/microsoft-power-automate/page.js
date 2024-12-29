@@ -6,7 +6,7 @@ import ServicePageCards from "./(components)/ServicePageCards";
 import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
-import Promo from "./(components)/Promo";
+import Promo from "../../../../components/Promo";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import Contents from "./(components)/Contents";
 
@@ -122,7 +122,12 @@ const Page = () => {
       <PageSegmentMain />
       <Segment4Repeat />
       <BlackSegment />
-      <Promo />
+      <Promo
+        h2={"Tailored Power Automate Solutions Nationwide"}
+        p={
+          "Our devoted experts craft customised Power Automate solutions that cater to your precise needs. Flexible pricing options, including fixed price quotes and hourly rates, ensures dedicated project guidance from inception to completion."
+        }
+      />
       <FAQSection faqs={faqs} />
       <Contact />
     </>

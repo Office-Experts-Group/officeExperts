@@ -31,30 +31,30 @@ export const metadata = {
     // Location-specific
     "Canberra Word experts",
     "Canberra PowerPoint experts",
-    "Microsoft Office consultants Canberra",
-    "document design Canberra",
-    "presentation design Canberra",
+    // "Microsoft Office consultants Canberra",
+    // "document design Canberra",
+    // "presentation design Canberra",
 
-    // Service-specific
-    "Word template design",
-    "PowerPoint presentation services",
-    "document automation",
-    "corporate templates",
-    "accessibility solutions",
+    // // Service-specific
+    // "Word template design",
+    // "PowerPoint presentation services",
+    // "document automation",
+    // "corporate templates",
+    // "accessibility solutions",
 
-    // Industry-specific
-    "government document solutions",
-    "corporate presentation design",
-    "business document templates",
-    "professional PowerPoint design",
-    "document consulting services",
+    // // Industry-specific
+    // "government document solutions",
+    // "corporate presentation design",
+    // "business document templates",
+    // "professional PowerPoint design",
+    // "document consulting services",
 
-    // Technology combinations
-    "Microsoft Word solutions",
-    "PowerPoint automation",
-    "Office 365 integration",
-    "document accessibility",
-    "template development",
+    // // Technology combinations
+    // "Microsoft Word solutions",
+    // "PowerPoint automation",
+    // "Office 365 integration",
+    // "document accessibility",
+    // "template development",
   ],
 
   // Twitter Card

@@ -9,37 +9,37 @@ export const metadata = {
 
   keywords: [
     // Core online services
-    "online spreadsheet solutions",
-    "online database connectivity",
-    "web application development",
-    "cloud data solutions",
-    "online data management",
+    "custom online spreadsheet solutions",
+    // "online database connectivity",
+    // "web application development",
+    // "cloud data solutions",
+    // "online data management",
 
-    // Location-based
-    "online solutions Sydney",
-    "web services Melbourne",
-    "cloud solutions Brisbane",
-    "online database Perth",
+    // // Location-based
+    // "online solutions Sydney",
+    // "web services Melbourne",
+    // "cloud solutions Brisbane",
+    // "online database Perth",
 
-    // Service-specific long tail
-    "SharePoint online integration",
-    "Office 365 web services",
-    "ASP.NET web applications",
-    "Azure cloud solutions",
-    "Google Docs integration",
+    // // Service-specific long tail
+    // "SharePoint online integration",
+    // "Office 365 web services",
+    // "ASP.NET web applications",
+    // "Azure cloud solutions",
+    // "Google Docs integration",
 
-    // Industry-specific
-    "business online solutions",
-    "enterprise web services",
-    "corporate cloud solutions",
-    "remote data access",
+    // // Industry-specific
+    // "business online solutions",
+    // "enterprise web services",
+    // "corporate cloud solutions",
+    // "remote data access",
 
-    // Technology combinations
-    "Excel online connectivity",
-    "Word web integration",
-    "Access online database",
-    "PowerPoint web sharing",
-    "Outlook online solutions",
+    // // Technology combinations
+    // "Excel online connectivity",
+    // "Word web integration",
+    // "Access online database",
+    // "PowerPoint web sharing",
+    // "Outlook online solutions",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/by-business-solution/online-solutions/",

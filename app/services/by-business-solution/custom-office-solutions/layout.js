@@ -10,32 +10,32 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core custom solution services
-    "custom Office solutions Australia",
-    "Office customization services",
-    "bespoke Office development",
-    "tailored Office solutions",
-    "custom Office automation",
+    "custom Microsoft Office solutions Australia",
+    // "Office customization services",
+    // "bespoke Office development",
+    // "tailored Office solutions",
+    // "custom Office automation",
 
-    // Product-specific solutions
-    "custom Excel solutions",
-    "custom Access solutions",
-    "custom Word templates",
-    "PowerPoint customization",
-    "Outlook automation",
+    // // Product-specific solutions
+    // "custom Excel solutions",
+    // "custom Access solutions",
+    // "custom Word templates",
+    // "PowerPoint customization",
+    // "Outlook automation",
 
-    // Business solution focus
-    "business process automation",
-    "document automation solutions",
-    "workflow optimization",
-    "data processing solutions",
-    "reporting automation",
+    // // Business solution focus
+    // "business process automation",
+    // "document automation solutions",
+    // "workflow optimization",
+    // "data processing solutions",
+    // "reporting automation",
 
-    // Industry/purpose specific
-    "enterprise Office customization",
-    "corporate Office solutions",
-    "business efficiency solutions",
-    "productivity enhancement tools",
-    "document management solutions",
+    // // Industry/purpose specific
+    // "enterprise Office customization",
+    // "corporate Office solutions",
+    // "business efficiency solutions",
+    // "productivity enhancement tools",
+    // "document management solutions",
   ],
 
   canonical:

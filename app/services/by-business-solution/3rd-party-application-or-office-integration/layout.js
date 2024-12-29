@@ -9,33 +9,33 @@ export const metadata = {
 
   keywords: [
     // Core integration services
-    "office integration services",
-    "third party application integration",
-    "CRM office integration",
-    "accounting software integration",
-    "ODBC integration",
-    "API integration",
+    "office 3rd party integration services",
+    // "third party application integration",
+    // "CRM office integration",
+    // "accounting software integration",
+    // "ODBC integration",
+    // "API integration",
 
-    // Specific integrations
-    "Xero integration",
-    "MYOB integration",
-    "Dynamics integration",
-    "Salesforce integration",
-    "MailChimp integration",
+    // // Specific integrations
+    // "Xero integration",
+    // "MYOB integration",
+    // "Dynamics integration",
+    // "Salesforce integration",
+    // "MailChimp integration",
 
-    // Database integration
-    "SQL Server integration",
-    "Azure database integration",
-    "MySQL integration",
-    "Oracle integration",
-    "Access integration",
+    // // Database integration
+    // "SQL Server integration",
+    // "Azure database integration",
+    // "MySQL integration",
+    // "Oracle integration",
+    // "Access integration",
 
-    // Office specific
-    "Excel integration",
-    "Word integration",
-    "PowerPoint integration",
-    "Office automation",
-    "VBA development",
+    // // Office specific
+    // "Excel integration",
+    // "Word integration",
+    // "PowerPoint integration",
+    // "Office automation",
+    // "VBA development",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/",

@@ -29,33 +29,33 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core business solutions
-    "office business solutions",
-    "custom office development",
-    "vba macro development",
-    "database solutions australia",
-    "office integration services",
-    "sql server integration",
+    "microsoft office business solutions",
+    // "custom office development",
+    // "vba macro development",
+    // "database solutions australia",
+    // "office integration services",
+    // "sql server integration",
 
-    // Service-specific
-    "office automation solutions",
-    "custom add-in development",
-    "cloud based office solutions",
-    "office upgrade services",
-    "office migration services",
+    // // Service-specific
+    // "office automation solutions",
+    // "custom add-in development",
+    // "cloud based office solutions",
+    // "office upgrade services",
+    // "office migration services",
 
-    // Location-based
-    "office solutions sydney",
-    "office development melbourne",
-    "office consultants brisbane",
-    "office experts perth",
+    // // Location-based
+    // "office solutions sydney",
+    // "office development melbourne",
+    // "office consultants brisbane",
+    // "office experts perth",
 
-    // Technology combinations
-    "office azure integration",
-    "office sql development",
-    "office cloud migration",
-    "office 365 solutions",
-    "sharepoint integration",
-    "office automation systems",
+    // // Technology combinations
+    // "office azure integration",
+    // "office sql development",
+    // "office cloud migration",
+    // "office 365 solutions",
+    // "sharepoint integration",
+    // "office automation systems",
   ],
 
   // Twitter Card

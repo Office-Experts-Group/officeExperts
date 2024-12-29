@@ -10,32 +10,32 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core Azure/Access services
-    "Azure cloud database",
-    "Access cloud solutions",
-    "Azure database hosting",
-    "cloud based Access",
-    "Azure SQL database",
+    "Azure cloud database solutions",
+    // "Access cloud solutions",
+    // "Azure database hosting",
+    // "cloud based Access",
+    // "Azure SQL database",
 
-    // Features and capabilities
-    "remote database access",
-    "cloud data storage",
-    "Access Azure integration",
-    "database migration Azure",
-    "cloud database conversion",
+    // // Features and capabilities
+    // "remote database access",
+    // "cloud data storage",
+    // "Access Azure integration",
+    // "database migration Azure",
+    // "cloud database conversion",
 
-    // Service-specific
-    "Azure database development",
-    "Access cloud migration",
-    "Azure hosting services",
-    "cloud database solutions",
-    "Azure SQL deployment",
+    // // Service-specific
+    // "Azure database development",
+    // "Access cloud migration",
+    // "Azure hosting services",
+    // "cloud database solutions",
+    // "Azure SQL deployment",
 
-    // Industry/business focus
-    "business cloud solutions",
-    "enterprise database hosting",
-    "Azure corporate solutions",
-    "cloud database management",
-    "Access business solutions",
+    // // Industry/business focus
+    // "business cloud solutions",
+    // "enterprise database hosting",
+    // "Azure corporate solutions",
+    // "cloud database management",
+    // "Access business solutions",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-access/access-azure-cloud-based-solutions/",

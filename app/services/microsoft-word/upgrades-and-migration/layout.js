@@ -18,37 +18,37 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core services
-    "Word upgrade services",
-    "Word migration services",
-    "Microsoft Word version upgrade",
-    "Word document conversion",
-    "PDF to Word conversion",
+    "Word upgrade and migration assistance",
+    // "Word migration services",
+    // "Microsoft Word version upgrade",
+    // "Word document conversion",
+    // "PDF to Word conversion",
 
-    // Specific services
-    "Word template migration",
-    "Word macro upgrade",
-    "Word formatting fixes",
-    "Word version compatibility",
-    "Word document repair",
+    // // Specific services
+    // "Word template migration",
+    // "Word macro upgrade",
+    // "Word formatting fixes",
+    // "Word version compatibility",
+    // "Word document repair",
 
-    // Problem-specific
-    "fix Word formatting issues",
-    "repair broken Word documents",
-    "Word version compatibility issues",
-    "Word document recovery",
-    "Word template repair",
+    // // Problem-specific
+    // "fix Word formatting issues",
+    // "repair broken Word documents",
+    // "Word version compatibility issues",
+    // "Word document recovery",
+    // "Word template repair",
 
-    // Location-based
-    "Word migration services Australia",
-    "Word upgrade consultants Sydney",
-    "Word document experts Melbourne",
-    "Microsoft Word specialists Brisbane",
+    // // Location-based
+    // "Word migration services Australia",
+    // "Word upgrade consultants Sydney",
+    // "Word document experts Melbourne",
+    // "Microsoft Word specialists Brisbane",
 
-    // Business solutions
-    "business Word migration",
-    "enterprise Word upgrade",
-    "corporate Word solutions",
-    "professional Word services",
+    // // Business solutions
+    // "business Word migration",
+    // "enterprise Word upgrade",
+    // "corporate Word solutions",
+    // "professional Word services",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration/",

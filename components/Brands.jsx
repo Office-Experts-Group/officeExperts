@@ -64,8 +64,8 @@ export default function Brands() {
         <Image
           src={hyundai}
           alt="Hyundai logo"
-          width={150}
-          height={51}
+          width={140}
+          height={35}
           className={styles.brandImage}
         />
       </Link>

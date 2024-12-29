@@ -9,34 +9,34 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core services
-    "Power Pages consulting",
-    "Microsoft Power Pages development",
-    "low-code web development",
-    "business website development",
+    // "Power Pages consulting",
+    "Microsoft Power Pages developers",
+    // "low-code web development",
+    // "business website development",
 
-    // Service-specific
-    "Power Pages integration",
-    "Microsoft Dataverse integration",
-    "Power Platform web solutions",
-    "secure business websites",
+    // // Service-specific
+    // "Power Pages integration",
+    // "Microsoft Dataverse integration",
+    // "Power Platform web solutions",
+    // "secure business websites",
 
-    // Location-based
-    "Power Pages consultants Australia",
-    "Microsoft web developers Sydney",
-    "Power Pages experts Melbourne",
-    "website consultants Brisbane",
+    // // Location-based
+    // "Power Pages consultants Australia",
+    // "Microsoft web developers Sydney",
+    // "Power Pages experts Melbourne",
+    // "website consultants Brisbane",
 
-    // Feature-specific
-    "business data visualization",
-    "role-based security websites",
-    "web form development",
-    "Microsoft Azure compliance",
+    // // Feature-specific
+    // "business data visualization",
+    // "role-based security websites",
+    // "web form development",
+    // "Microsoft Azure compliance",
 
-    // Solution-specific
-    "business process automation",
-    "custom website solutions",
-    "data-driven websites",
-    "enterprise web development",
+    // // Solution-specific
+    // "business process automation",
+    // "custom website solutions",
+    // "data-driven websites",
+    // "enterprise web development",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages/",

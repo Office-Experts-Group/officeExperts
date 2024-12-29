@@ -7,7 +7,7 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegmentCenter from "./(components)/PageSegmentCenter";
 import PageSegment3 from "./(components)/PageSegment3";
 import Segment3Copy from "./(components)/Segment3Copy";
-import Promo from "./(components)/Promo";
+import Promo from "../../../../components/Promo";
 
 import puzzle from "../../../../public/pageHeros/puzzle.webp";
 import puzzleMob from "../../../../public/pageHeros/mob/puzzleMob.webp";
@@ -118,7 +118,14 @@ const Page = () => {
       <PageSegment3 />
       <PageSegmentCenter />
       <Segment3Copy />
-      <Promo />
+      <div style={{ margin: "-6rem 0 2rem 0" }}>
+        <Promo
+          h2={"Upgrading Excel"}
+          p={
+            "If you utilise macros in your Microsoft Excel solutions, some of them may fail when upgrading or moving to 64 bit systems. If this is the case, we can review and solve these issues for you."
+          }
+        />
+      </div>
       <ExpertsAwait />
       <Contact />
     </>

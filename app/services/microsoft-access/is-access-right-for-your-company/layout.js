@@ -11,31 +11,31 @@ export const metadata = {
   keywords: [
     // Core Access services
     "Microsoft Access solutions",
-    "Access database consulting",
-    "Access database development",
-    "database management solutions",
-    "business database systems",
+    // "Access database consulting",
+    // "Access database development",
+    // "database management solutions",
+    // "business database systems",
 
-    // Technology specific
-    "Microsoft Access expertise",
-    "Access database advice",
-    "database technology selection",
-    "SQL Server integration",
-    "cloud database solutions",
+    // // Technology specific
+    // "Microsoft Access expertise",
+    // "Access database advice",
+    // "database technology selection",
+    // "SQL Server integration",
+    // "cloud database solutions",
 
-    // Business focused
-    "business database solutions",
-    "corporate database systems",
-    "enterprise data management",
-    "business process automation",
-    "data management strategy",
+    // // Business focused
+    // "business database solutions",
+    // "corporate database systems",
+    // "enterprise data management",
+    // "business process automation",
+    // "data management strategy",
 
-    // Solution specific
-    "custom database development",
-    "database integration services",
-    "multi-user databases",
-    "database reporting solutions",
-    "database migration services",
+    // // Solution specific
+    // "custom database development",
+    // "database integration services",
+    // "multi-user databases",
+    // "database reporting solutions",
+    // "database migration services",
   ],
 
   canonical:

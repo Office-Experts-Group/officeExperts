@@ -9,33 +9,33 @@ export const metadata = {
 
   // Additional metadata
   keywords: [
+    "Access database developers",
     // Core database services
-    "Microsoft database development",
-    "database solutions Australia",
-    "Access database development",
-    "SQL Server solutions",
-    "Azure database services",
+    // "Microsoft database development",
+    // "database solutions Australia",
+    // "SQL Server solutions",
+    // "Azure database services",
 
-    // Service-specific
-    "database migration services",
-    "database integration",
-    "multi-user database solutions",
-    "cloud database development",
-    "SharePoint database solutions",
+    // // Service-specific
+    // "database migration services",
+    // "database integration",
+    // "multi-user database solutions",
+    // "cloud database development",
+    // "SharePoint database solutions",
 
-    // Technology combinations
-    "Access SQL Server integration",
-    "Azure SQL databases",
-    "web database development",
-    "ASP.NET database solutions",
-    "database GUI development",
+    // // Technology combinations
+    // "Access SQL Server integration",
+    // "Azure SQL databases",
+    // "web database development",
+    // "ASP.NET database solutions",
+    // "database GUI development",
 
-    // Business solutions
-    "business database solutions",
-    "enterprise database systems",
-    "custom database development",
-    "database automation solutions",
-    "database consulting services",
+    // // Business solutions
+    // "business database solutions",
+    // "enterprise database systems",
+    // "custom database development",
+    // "database automation solutions",
+    // "database consulting services",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/",

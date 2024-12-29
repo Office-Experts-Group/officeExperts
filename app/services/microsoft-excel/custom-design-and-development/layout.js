@@ -9,32 +9,32 @@ export const metadata = {
 
   keywords: [
     // Core service keywords
-    "Excel custom development",
-    "Excel design services",
-    "Excel VBA development",
-    "Excel programming services",
-    "Excel integration solutions",
+    "Excel custom design and development",
+    // "Excel design services",
+    // "Excel VBA development",
+    // "Excel programming services",
+    // "Excel integration solutions",
 
-    // Feature-specific
-    "custom Excel workbooks",
-    "Excel template development",
-    "Excel data manipulation",
-    "Excel reporting solutions",
-    "Excel macro development",
+    // // Feature-specific
+    // "custom Excel workbooks",
+    // "Excel template development",
+    // "Excel data manipulation",
+    // "Excel reporting solutions",
+    // "Excel macro development",
 
-    // Integration-focused
-    "Excel third party integration",
-    "Excel SQL integration",
-    "Excel Azure integration",
-    "Excel Office integration",
-    "Excel database connection",
+    // // Integration-focused
+    // "Excel third party integration",
+    // "Excel SQL integration",
+    // "Excel Azure integration",
+    // "Excel Office integration",
+    // "Excel database connection",
 
-    // Business solutions
-    "Excel business automation",
-    "Excel process automation",
-    "Excel workflow solutions",
-    "Excel business solutions",
-    "Excel efficiency tools",
+    // // Business solutions
+    // "Excel business automation",
+    // "Excel process automation",
+    // "Excel workflow solutions",
+    // "Excel business solutions",
+    // "Excel efficiency tools",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development/",

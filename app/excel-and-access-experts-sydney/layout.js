@@ -14,50 +14,13 @@ export const metadata = {
     description:
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Keywords extrapolated from content
   keywords: [
     // Core services
     "Excel consulting Sydney",
-    "Access database Sydney",
-    "Excel development Sydney",
-    "Access solutions Sydney",
-    "Excel programmers Sydney",
     "Access specialists Sydney",
-
-    // Specific services
-    "Excel VBA development",
-    "Access database design",
-    "Excel automation Sydney",
-    "Access integration services",
-    "Excel data solutions",
-    "Access reporting systems",
-
-    // Solution types
-    "custom Excel solutions",
-    "Access database development",
-    "Excel business automation",
-    "Access data management",
-    "Excel reporting tools",
-    "Access business solutions",
-
-    // Industry terms
-    "database consultants Sydney",
-    "Excel experts Sydney",
-    "Microsoft Access Sydney",
-    "Excel integration Sydney",
   ],
 
   // Twitter Card
@@ -69,8 +32,6 @@ export const metadata = {
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
 
   canonical:
     "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",

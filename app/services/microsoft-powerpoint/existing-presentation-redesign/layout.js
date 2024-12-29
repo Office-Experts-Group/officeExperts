@@ -9,34 +9,34 @@ export const metadata = {
   keywords: [
     // Core PowerPoint services
     "PowerPoint presentation redesign",
-    "PowerPoint template redesign",
-    "PowerPoint makeover services",
-    "PowerPoint slide design",
-    "PowerPoint master slides",
+    // "PowerPoint template redesign",
+    // "PowerPoint makeover services",
+    // "PowerPoint slide design",
+    // "PowerPoint master slides",
 
-    // Branding focused
-    "corporate PowerPoint templates",
-    "brand compliant presentations",
-    "PowerPoint brand guidelines",
-    "corporate presentation design",
+    // // Branding focused
+    // "corporate PowerPoint templates",
+    // "brand compliant presentations",
+    // "PowerPoint brand guidelines",
+    // "corporate presentation design",
 
-    // Location-based
-    "PowerPoint designers Sydney",
-    "PowerPoint experts Melbourne",
-    "presentation design Brisbane",
-    "PowerPoint services Perth",
+    // // Location-based
+    // "PowerPoint designers Sydney",
+    // "PowerPoint experts Melbourne",
+    // "presentation design Brisbane",
+    // "PowerPoint services Perth",
 
-    // Service-specific
-    "professional PowerPoint redesign",
-    "PowerPoint template conversion",
-    "presentation modernization",
-    "slide deck transformation",
+    // // Service-specific
+    // "professional PowerPoint redesign",
+    // "PowerPoint template conversion",
+    // "presentation modernization",
+    // "slide deck transformation",
 
-    // Industry-specific
-    "business presentation design",
-    "corporate PowerPoint services",
-    "enterprise presentation solutions",
-    "government presentation redesign",
+    // // Industry-specific
+    // "business presentation design",
+    // "corporate PowerPoint services",
+    // "enterprise presentation solutions",
+    // "government presentation redesign",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-powerpoint/existing-presentation-redesign/",

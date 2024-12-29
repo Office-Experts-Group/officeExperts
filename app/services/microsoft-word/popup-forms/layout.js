@@ -17,33 +17,33 @@ export const metadata = {
 
   // Additional metadata
   keywords: [
+    "Word popup form development",
     // Core popup form services
-    "Word popup forms",
-    "Microsoft Word popup windows",
-    "custom popup forms Word",
-    "Word form development",
-    "popup form design",
+    // "Word popup forms",
+    // "Microsoft Word popup windows",
+    // "custom popup forms Word",
+    // "popup form design",
 
-    // Features and benefits
-    "data validation forms",
-    "form automation Word",
-    "document data entry",
-    "form efficiency solutions",
-    "document productivity tools",
+    // // Features and benefits
+    // "data validation forms",
+    // "form automation Word",
+    // "document data entry",
+    // "form efficiency solutions",
+    // "document productivity tools",
 
-    // Service-specific
-    "Word form integration",
-    "popup form consulting",
-    "Microsoft Word forms",
-    "Word document automation",
-    "form template design",
+    // // Service-specific
+    // "Word form integration",
+    // "popup form consulting",
+    // "Microsoft Word forms",
+    // "Word document automation",
+    // "form template design",
 
-    // Business focus
-    "business document solutions",
-    "corporate form templates",
-    "document efficiency",
-    "data entry automation",
-    "document quality control",
+    // // Business focus
+    // "business document solutions",
+    // "corporate form templates",
+    // "document efficiency",
+    // "data entry automation",
+    // "document quality control",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",

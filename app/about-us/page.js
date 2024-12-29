@@ -6,8 +6,8 @@ import Testimonials from "../(components)/Testimonials";
 import WhyChooseUs from "./(components)/WhyChooseUs";
 import GoodToKnow from "./(components)/GoodToKnow";
 import MeetTheTeamSlider from "./(components)/MeetTheTeamSlider";
-import Promo from "./(components)/Promo";
 import Contact from "../../components/Contact";
+import Promo from "../../components/Promo";
 import ExpertsAwait from "../../components/ExpertsAwait";
 
 import { getAboutPageSchema } from "../../utils/testimonialSchemaGenerator";
@@ -83,9 +83,12 @@ const Page = () => {
       <WhyChooseUs />
       <MeetTheTeamSlider />
       <ExpertsAwait />
-      <div style={{ margin: "6rem 0" }}>
-        <Promo />
-      </div>
+      <Promo
+        h2={"Let's Do This!"}
+        p={
+          "Once you have decided to take advantage of our services, we will carefully customise those services to match your requirements, keeping you informed every step of the way. We realise that our success is hinged on our ability to ensure your own"
+        }
+      />
       <Contact />
     </>
   );

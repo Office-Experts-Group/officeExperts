@@ -9,35 +9,35 @@ export const metadata = {
   keywords: [
     // Core integration services
     "Access database integration",
-    "Microsoft Access integration",
-    "third party integration Access",
-    "Access system integration",
-    "database integration services",
+    // "Microsoft Access integration",
+    // "third party integration Access",
+    // "Access system integration",
+    // "database integration services",
 
-    // Specific integration types
-    "CRM Access integration",
-    "accounting software integration",
-    "ERP Access integration",
-    "Office integration Access",
+    // // Specific integration types
+    // "CRM Access integration",
+    // "accounting software integration",
+    // "ERP Access integration",
+    // "Office integration Access",
 
-    // Technical aspects
-    "Access API integration",
-    "database connectivity Access",
-    "Access data integration",
-    "custom Access integration",
-    "Access automation integration",
+    // // Technical aspects
+    // "Access API integration",
+    // "database connectivity Access",
+    // "Access data integration",
+    // "custom Access integration",
+    // "Access automation integration",
 
-    // Business benefits
-    "business process integration",
-    "enterprise Access integration",
-    "integrated database solutions",
-    "automated data integration",
+    // // Business benefits
+    // "business process integration",
+    // "enterprise Access integration",
+    // "integrated database solutions",
+    // "automated data integration",
 
-    // Location-specific
-    "Access integration Australia",
-    "database integration services Sydney",
-    "Melbourne Access integration",
-    "Brisbane database services",
+    // // Location-specific
+    // "Access integration Australia",
+    // "database integration services Sydney",
+    // "Melbourne Access integration",
+    // "Brisbane database services",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-access/3rd-party-product-integration/",

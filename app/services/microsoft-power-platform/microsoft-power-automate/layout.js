@@ -8,30 +8,30 @@ export const metadata = {
 
   keywords: [
     // Core automation services
-    "Microsoft Power Automate services",
-    "Power Automate consulting",
-    "workflow automation Australia",
-    "business process automation",
-    "RPA solutions",
+    "Microsoft Power Automate developers",
+    // "Power Automate consulting",
+    // "workflow automation Australia",
+    // "business process automation",
+    // "RPA solutions",
 
-    // Service-specific
-    "cloud flows development",
-    "business process flows",
-    "robotic process automation",
-    "process mining services",
-    "workflow optimization",
+    // // Service-specific
+    // "cloud flows development",
+    // "business process flows",
+    // "robotic process automation",
+    // "process mining services",
+    // "workflow optimization",
 
-    // Location-based
-    "Power Automate consultants Sydney",
-    "Power Automate experts Melbourne",
-    "workflow automation Brisbane",
-    "RPA solutions Perth",
+    // // Location-based
+    // "Power Automate consultants Sydney",
+    // "Power Automate experts Melbourne",
+    // "workflow automation Brisbane",
+    // "RPA solutions Perth",
 
-    // Technology combinations
-    "Microsoft Power Platform integration",
-    "Power Automate Azure integration",
-    "Office 365 workflow automation",
-    "legacy system integration",
+    // // Technology combinations
+    // "Microsoft Power Platform integration",
+    // "Power Automate Azure integration",
+    // "Office 365 workflow automation",
+    // "legacy system integration",
   ],
 
   canonical:

@@ -5,7 +5,7 @@ import ServiceHero from "../../components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment7 from "./(components)/PageSegment7";
-import Promo from "./(components)/Promo";
+import Promo from "../../components/Promo";
 import BlackSegment from "./(components)/BlackSegment";
 
 import resume from "../../public/pageHeros/resume.webp";
@@ -72,7 +72,12 @@ const Page = () => {
       <PageSegmentMain />
       <PageSegment4 />
       <BlackSegment />
-      <Promo />
+      <Promo
+        h2={"We're looking for contractors"}
+        p={
+          "All of our consultants work as independent contractors, not as employees. Our consultants are responsible for communicating with clients to scope, quote, implement and deliver projects."
+        }
+      />
       <PageSegment7 />
       <Contact />
     </>

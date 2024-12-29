@@ -5,7 +5,7 @@ import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
 import styles from "../../../../styles/pageSegment.module.css";
 
-import migrate from "../../../../public/migrate600x400.webp";
+import box from "../../../../public/box600x400.webp";
 
 const PageSegmentMain = () => {
   const checkItems = [
@@ -22,8 +22,8 @@ const PageSegmentMain = () => {
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image
-            src={migrate}
-            alt="Image of a files leaving a computer"
+            src={box}
+            alt="Two boxing gloves coming together"
             width={600}
             height={400}
             priority

@@ -6,7 +6,7 @@ import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
 import PageSegment4 from "./(components)/PageSegment4";
-import Promo from "./(components)/Promo";
+import Promo from "../../../../components/Promo";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import SegmentMainRepeat from "./(components)/SegmentMainRepeat";
 import Contents from "./(components)/Contents";
@@ -121,7 +121,12 @@ const Page = () => {
       <PageSegmentMain />
       <Segment4Repeat />
       <BlackSegment />
-      <Promo />
+      <Promo
+        h2={"Empower Business with Certified Expertise"}
+        p={
+          "Power Platform Experts specialise in harnessing Power Apps to streamline operations and drive innovation. Custom applications tailored to your business needs ensure enhanced efficiency and seamless workflows."
+        }
+      />
       <PageSegment4 />
       <SegmentMainRepeat />
       <Contact />

@@ -13,17 +13,6 @@ export const metadata = {
     description:
       "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing. Specialists in custom development, databases, integration, and business solutions.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-melbourne/",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
@@ -31,30 +20,6 @@ export const metadata = {
     // Location-specific
     "Excel experts Melbourne",
     "Access experts Melbourne",
-    "database consultants Melbourne",
-    "Excel programmers Melbourne",
-    "Access specialists Melbourne",
-
-    // Service-specific
-    "custom Excel development",
-    "Access database solutions",
-    "Excel database integration",
-    "business automation Melbourne",
-    "database development Melbourne",
-
-    // Expertise areas
-    "Excel VBA programming",
-    "Access database design",
-    "data manipulation services",
-    "custom reporting solutions",
-    "database consulting Melbourne",
-
-    // Industry focus
-    "business Excel solutions",
-    "corporate database systems",
-    "enterprise Excel development",
-    "professional Excel services",
-    "business database solutions",
   ],
 
   // Twitter Card
@@ -66,8 +31,6 @@ export const metadata = {
       "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
 
   canonical:
     "https://www.officeexperts.com.au/excel-and-access-experts-melbourne/",

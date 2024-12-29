@@ -1,8 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
 
+const SurveyForm = dynamic(() => import("./SurveyForm"), {
+  ssr: false,
+});
 const ContactLocation = ({ location }) => {
   const [formData, setFormData] = useState({
     location: location,
@@ -12,16 +16,22 @@ const ContactLocation = ({ location }) => {
     phone: "",
     message: "",
     honeypot: "",
+    operatingSystem: "",
   });
 
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // States to pass to SurveyForm
+  const [surveyName, setSurveyName] = useState("");
+  const [surveyEmail, setSurveyEmail] = useState("");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsSubmitting(true);
     setError({});
     const newError = {};
 
@@ -39,6 +49,7 @@ const ContactLocation = ({ location }) => {
 
     if (Object.keys(newError).length > 0) {
       setError(newError);
+      setIsSubmitting(false);
       // Focus first error field
       const firstErrorField = Object.keys(newError)[0];
       const element = document.getElementById(firstErrorField);
@@ -52,37 +63,46 @@ const ContactLocation = ({ location }) => {
     }
 
     if (formData.honeypot) {
+      setIsSubmitting(false);
       return; // Silent return for bot submissions
     }
 
     try {
-      const res = await fetch("/api/contactForm", {
+      const res = await fetch("/api/contactLocation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      const data = await res.json();
+
       if (res.ok) {
+        setSurveyName(formData.name);
+        setSurveyEmail(formData.email);
         setSuccess(true);
         setFormData({
+          location: location,
           service: "",
           name: "",
           email: "",
           phone: "",
           message: "",
           honeypot: "",
+          operatingSystem: "",
         });
       } else {
-        setError((prev) => ({
-          ...prev,
-          general: "Something went wrong. Please try again.",
-        }));
+        setError({
+          general: data.message || "Something went wrong. Please try again.",
+        });
       }
     } catch (err) {
-      setError((prev) => ({
-        ...prev,
-        general: "There was an error submitting the form.",
-      }));
+      console.error("Form submission error:", err);
+      setError({
+        general:
+          "There was an error submitting the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -105,8 +125,7 @@ const ContactLocation = ({ location }) => {
   if (success) {
     return (
       <div className={styles.successMessage} role="alert" aria-live="polite">
-        <h2>Thank you {formData.name} for your message!</h2>
-        <p>One of our team will contact you shortly</p>
+        <SurveyForm name={surveyName} email={surveyEmail} />
       </div>
     );
   }
@@ -119,6 +138,12 @@ const ContactLocation = ({ location }) => {
       aria-label="Contact form"
       role="form"
     >
+      {error.general && (
+        <div className={styles.generalError} role="alert">
+          {error.general}
+        </div>
+      )}
+
       <div className={styles.formField}>
         <label htmlFor="name" className={styles.requiredField}>
           Name
@@ -136,6 +161,7 @@ const ContactLocation = ({ location }) => {
           aria-invalid={!!error.name}
           aria-describedby={error.name ? "name-error" : undefined}
           required
+          disabled={isSubmitting}
         />
         {error.name && (
           <p
@@ -166,6 +192,7 @@ const ContactLocation = ({ location }) => {
           aria-describedby={error.message ? "message-error" : undefined}
           placeholder="Your message..."
           required
+          disabled={isSubmitting}
         />
         {error.message && (
           <p
@@ -197,6 +224,7 @@ const ContactLocation = ({ location }) => {
           aria-describedby={error.email ? "email-error" : undefined}
           placeholder="eg. john@example.com"
           required
+          disabled={isSubmitting}
         />
         {error.email && (
           <p
@@ -222,87 +250,38 @@ const ContactLocation = ({ location }) => {
           onChange={handleChange}
           aria-required="false"
           placeholder="optional..."
+          disabled={isSubmitting}
         />
       </div>
 
-      {/* <div className={styles.quoteForm}> */}
       <div className={styles.radioFieldSpan}>
         <label className={styles.groupLabel}>Microsoft Service</label>
         <div className={styles.radioOptionsGrid}>
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="Office"
-              name="operatingSystem"
-              value="Office"
-              checked={formData.operatingSystem === "Office"}
-              onChange={handleChange}
-            />
-            <label htmlFor="Office">Office</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="Access"
-              name="operatingSystem"
-              value="Access"
-              checked={formData.operatingSystem === "Access"}
-              onChange={handleChange}
-            />
-            <label htmlFor="Access">Access</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="Excel"
-              name="operatingSystem"
-              value="Excel"
-              checked={formData.operatingSystem === "Excel"}
-              onChange={handleChange}
-            />
-            <label htmlFor="Excel">Excel</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="power-platform"
-              name="operatingSystem"
-              value="power-platform"
-              checked={formData.operatingSystem === "power-platform"}
-              onChange={handleChange}
-            />
-            <label htmlFor="power-platform">Power Platform</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="Word"
-              name="operatingSystem"
-              value="Word"
-              checked={formData.operatingSystem === "Word"}
-              onChange={handleChange}
-            />
-            <label htmlFor="Word">Word</label>
-          </div>
-
-          <div className={styles.radioOption}>
-            <input
-              type="radio"
-              id="not-sure"
-              name="operatingSystem"
-              value="not-sure"
-              checked={formData.operatingSystem === "not-sure"}
-              onChange={handleChange}
-            />
-            <label htmlFor="not-sure">Not Sure</label>
-          </div>
+          {[
+            "Office",
+            "Access",
+            "Excel",
+            "Power Platform",
+            "Word",
+            "Not Sure",
+          ].map((serviceName) => (
+            <div key={serviceName} className={styles.radioOption}>
+              <input
+                type="radio"
+                id={serviceName.toLowerCase().replace(" ", "-")}
+                name="service"
+                value={serviceName}
+                checked={formData.service === serviceName}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor={serviceName.toLowerCase().replace(" ", "-")}>
+                {serviceName}
+              </label>
+            </div>
+          ))}
         </div>
       </div>
-      {/* </div> */}
 
       <div>
         <input
@@ -313,6 +292,7 @@ const ContactLocation = ({ location }) => {
           className={styles.honeypot}
           aria-hidden="true"
           tabIndex="-1"
+          disabled={isSubmitting}
         />
       </div>
 
@@ -320,8 +300,9 @@ const ContactLocation = ({ location }) => {
         type="submit"
         className={`btn ${styles.submitBtn}`}
         aria-label="Submit contact form"
+        disabled={isSubmitting}
       >
-        Submit
+        {isSubmitting ? "Sending..." : "Submit"}
       </button>
     </form>
   );

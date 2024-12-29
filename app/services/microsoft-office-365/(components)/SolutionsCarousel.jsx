@@ -3,17 +3,17 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import calcGraph from "../../../../public/cards/calcGraph350x200.webp";
+import data from "../../../../public/cards/data350x200.webp";
+import desk from "../../../../public/cards/desk350x200.webp";
+import deskGraph from "../../../../public/cards/deskGraph300x250.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Office 365 Implementation",
       link: "/services/microsoft-office-365/office-365-implementation",
-      image: project1,
+      image: calcGraph,
       description: [
         "Need help setting up Office 365 in your organisation?",
         "Our experts can assist you in planning and utilizing Office 365 features to maximize your ROI.",
@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
     {
       title: "Office 365 Migration",
       link: "/services/microsoft-access",
-      image: project2,
+      image: data,
       description: [
         "Need to migrate emails and/or files to Office 365?",
         "Our consultants can help move your organisation’s email and files to the cloud using Office 365.",
@@ -31,7 +31,7 @@ const SolutionsCarousel = () => {
     {
       title: "Business Process Automation",
       link: "/services/microsoft-office-365/business-process-automation",
-      image: project3,
+      image: desk,
       description: [
         "Are paper forms delaying your business processes?",
         "Losing track of your internal forms?",
@@ -41,7 +41,7 @@ const SolutionsCarousel = () => {
     {
       title: "Remote Data Gathering",
       link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
-      image: project4,
+      image: deskGraph,
       description: [
         "Need your staff to remotely fill out forms while offsite?",
         "Do you need to gather information from your clients from any device?",

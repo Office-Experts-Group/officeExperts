@@ -15,32 +15,32 @@ export const metadata = {
 
   keywords: [
     // Core training services
-    "Microsoft Word training",
-    "Word document training",
-    "Word template training",
-    "Word expert training",
-    "Word consulting services",
+    "Microsoft Word remote support",
+    // "Word document training",
+    // "Word template training",
+    // "Word expert training",
+    // "Word consulting services",
 
-    // Service types
-    "remote Word training",
-    "onsite Word training",
-    "individual Word training",
-    "group Word training",
-    "Word document help",
+    // // Service types
+    // "remote Word training",
+    // "onsite Word training",
+    // "individual Word training",
+    // "group Word training",
+    // "Word document help",
 
-    // Location-specific
-    "Word training Australia",
-    "Word consultants Sydney",
-    "Word training Melbourne",
-    "Word experts Brisbane",
-    "Word training Perth",
+    // // Location-specific
+    // "Word training Australia",
+    // "Word consultants Sydney",
+    // "Word training Melbourne",
+    // "Word experts Brisbane",
+    // "Word training Perth",
 
-    // Service features
-    "custom Word training",
-    "Word troubleshooting help",
-    "Word document support",
-    "Word template assistance",
-    "professional Word guidance",
+    // // Service features
+    // "custom Word training",
+    // "Word troubleshooting help",
+    // "Word document support",
+    // "Word template assistance",
+    // "professional Word guidance",
   ],
   canonical: "https://www.wordexperts.com.au/services/microsoft-word/training/",
 };

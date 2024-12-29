@@ -15,37 +15,37 @@ export const metadata = {
 
   keywords: [
     // Core government services
-    "government document solutions",
-    "government word templates",
-    "federal government word services",
-    "state government word services",
-    "accessible government documents",
+    "government microsoft document solutions",
+    // "government word templates",
+    // "federal government word services",
+    // "state government word services",
+    // "accessible government documents",
 
-    // Service-specific
-    "government document design",
-    "government template creation",
-    "government accessibility compliance",
-    "government corporate identity",
-    "government document automation",
+    // // Service-specific
+    // "government document design",
+    // "government template creation",
+    // "government accessibility compliance",
+    // "government corporate identity",
+    // "government document automation",
 
-    // Location-based
-    "australian government word services",
-    "federal department word solutions",
-    "state department word solutions",
+    // // Location-based
+    // "australian government word services",
+    // "federal department word solutions",
+    // "state department word solutions",
 
-    // Technical aspects
-    "government document accessibility",
-    "government template management",
-    "government document standards",
-    "government compliant documents",
-    "government document formatting",
+    // // Technical aspects
+    // "government document accessibility",
+    // "government template management",
+    // "government document standards",
+    // "government compliant documents",
+    // "government document formatting",
 
-    // Specific solutions
-    "government master templates",
-    "government sub templates",
-    "government document controls",
-    "government template automation",
-    "government document consistency",
+    // // Specific solutions
+    // "government master templates",
+    // "government sub templates",
+    // "government document controls",
+    // "government template automation",
+    // "government document consistency",
   ],
   canonical:
     "https://www.wordexperts.com.au/services/microsoft-word/government-departments/",

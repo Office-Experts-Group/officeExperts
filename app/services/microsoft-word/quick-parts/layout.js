@@ -19,37 +19,37 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core Quick Parts services
-    "microsoft word quick parts",
-    "quick parts gallery",
-    "word document quick parts",
-    "quick parts consulting",
-    "word building blocks",
+    "microsoft word quick parts creation",
+    // "quick parts gallery",
+    // "word document quick parts",
+    // "quick parts consulting",
+    // "word building blocks",
 
-    // Location-based
-    "quick parts services australia",
-    "word template consulting sydney",
-    "microsoft word services melbourne",
-    "document consulting brisbane",
-    "word experts perth",
+    // // Location-based
+    // "quick parts services australia",
+    // "word template consulting sydney",
+    // "microsoft word services melbourne",
+    // "document consulting brisbane",
+    // "word experts perth",
 
-    // Service-specific
-    "custom quick parts development",
-    "word template automation",
-    "document element automation",
-    "building blocks gallery",
-    "word document efficiency",
+    // // Service-specific
+    // "custom quick parts development",
+    // "word template automation",
+    // "document element automation",
+    // "building blocks gallery",
+    // "word document efficiency",
 
-    // Industry-specific
-    "corporate document solutions",
-    "business document automation",
-    "enterprise word templates",
-    "professional document services",
+    // // Industry-specific
+    // "corporate document solutions",
+    // "business document automation",
+    // "enterprise word templates",
+    // "professional document services",
 
-    // Technology combinations
-    "word automation solutions",
-    "document productivity tools",
-    "microsoft office automation",
-    "word template solutions",
+    // // Technology combinations
+    // "word automation solutions",
+    // "document productivity tools",
+    // "microsoft office automation",
+    // "word template solutions",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-word/quick-parts/",

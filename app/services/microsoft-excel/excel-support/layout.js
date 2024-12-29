@@ -10,37 +10,37 @@ export const metadata = {
   keywords: [
     // Core Excel support keywords
     "Excel one on one training",
-    "Excel expert support",
-    "Excel consultant services",
-    "Excel help Australia",
-    "remote Excel training",
+    // "Excel expert support",
+    // "Excel consultant services",
+    // "Excel help Australia",
+    // "remote Excel training",
 
-    // Service-specific
-    "Excel troubleshooting help",
-    "Excel code review services",
-    "Excel migration support",
-    "Excel data conversion help",
-    "Excel solution documentation",
+    // // Service-specific
+    // "Excel troubleshooting help",
+    // "Excel code review services",
+    // "Excel migration support",
+    // "Excel data conversion help",
+    // "Excel solution documentation",
 
-    // Training-focused
-    "custom Excel training",
-    "group Excel training",
-    "individual Excel sessions",
-    "Excel how-to videos",
-    "onsite Excel training",
+    // // Training-focused
+    // "custom Excel training",
+    // "group Excel training",
+    // "individual Excel sessions",
+    // "Excel how-to videos",
+    // "onsite Excel training",
 
-    // Location-based
-    "Excel consultants Sydney",
-    "Excel training Melbourne",
-    "Excel support Brisbane",
-    "Excel help Perth",
+    // // Location-based
+    // "Excel consultants Sydney",
+    // "Excel training Melbourne",
+    // "Excel support Brisbane",
+    // "Excel help Perth",
 
-    // Business-focused
-    "corporate Excel training",
-    "business Excel support",
-    "enterprise Excel solutions",
-    "professional Excel guidance",
-    "Excel business consulting",
+    // // Business-focused
+    // "corporate Excel training",
+    // "business Excel support",
+    // "enterprise Excel solutions",
+    // "professional Excel guidance",
+    // "Excel business consulting",
   ],
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-excel/excel-support/",

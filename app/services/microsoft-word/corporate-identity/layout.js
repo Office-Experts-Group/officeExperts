@@ -18,32 +18,32 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core services
-    "Word corporate identity",
-    "Word template protection",
-    "corporate document templates",
-    "Word formatting consistency",
-    "document branding solutions",
+    "Word corporate identity creation",
+    // "Word template protection",
+    // "corporate document templates",
+    // "Word formatting consistency",
+    // "document branding solutions",
 
-    // Service-specific
-    "Word template design",
-    "corporate document control",
-    "Word document standards",
-    "brand consistency templates",
-    "document formatting services",
+    // // Service-specific
+    // "Word template design",
+    // "corporate document control",
+    // "Word document standards",
+    // "brand consistency templates",
+    // "document formatting services",
 
-    // Business focus
-    "business document solutions",
-    "corporate identity management",
-    "Word business templates",
-    "document brand protection",
-    "template design services",
+    // // Business focus
+    // "business document solutions",
+    // "corporate identity management",
+    // "Word business templates",
+    // "document brand protection",
+    // "template design services",
 
-    // Professional services
-    "professional Word templates",
-    "corporate Word solutions",
-    "document consistency tools",
-    "template management system",
-    "brand compliant documents",
+    // // Professional services
+    // "professional Word templates",
+    // "corporate Word solutions",
+    // "document consistency tools",
+    // "template management system",
+    // "brand compliant documents",
   ],
   canonical:
     "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
