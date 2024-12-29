@@ -28,7 +28,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office and Office 365 Experts Melbourne",
     description:
-      "Leading Microsoft Office consulting and Office 365 expertise in Melbourne. Our expert consultants specialize in custom Office development, integration, and business automation solutions.",
+      "Leading Microsoft Office consulting and Office 365 expertise in Melbourne. Our expert consultants specialise in custom Office development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
 

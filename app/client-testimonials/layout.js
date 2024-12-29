@@ -27,7 +27,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Group Client Testimonials",
     description:
-      "Read testimonials from our satisfied clients across Australia. Our Microsoft Office consultants have helped businesses optimize their operations and improve efficiency.",
+      "Read testimonials from our satisfied clients across Australia. Our Microsoft Office consultants have helped businesses optimise their operations and improve efficiency.",
     images: ["/logo.png"],
   },
 

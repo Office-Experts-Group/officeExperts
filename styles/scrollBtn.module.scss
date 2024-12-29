@@ -20,7 +20,7 @@
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.3s ease-in-out; // Split transitions for smoother effect
   pointer-events: none;
-  will-change: transform, opacity; // Optimize for animation performance
+  will-change: transform, opacity; // optimise for animation performance
 
   &:hover {
     background-color: darken($theme, 10%);

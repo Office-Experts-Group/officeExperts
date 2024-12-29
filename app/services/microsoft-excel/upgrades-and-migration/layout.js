@@ -5,7 +5,7 @@ export const metadata = {
   // Basic metadata
   title: "Excel Upgrades and Migration | Office Expert Australia",
   description:
-    "Expert Microsoft Excel migration and upgrade services. We help resolve Excel workbook issues, optimize performance, and ensure smooth transitions between versions.",
+    "Expert Microsoft Excel migration and upgrade services. We help resolve Excel workbook issues, optimise performance, and ensure smooth transitions between versions.",
   keywords: [
     "Excel workbook optimisation",
     // Core upgrade services

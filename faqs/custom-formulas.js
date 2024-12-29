@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "Can custom formulas help improve workbook performance?",
     answer:
-      "Yes, custom formulas, when used thoughtfully, can reduce performance issues related to formula-intensive workbooks. Our experts can help create optimized formulas that prevent crashes, data corruption, and slowdowns, leading to a smoother experience.",
+      "Yes, custom formulas, when used thoughtfully, can reduce performance issues related to formula-intensive workbooks. Our experts can help create optimised formulas that prevent crashes, data corruption, and slowdowns, leading to a smoother experience.",
   },
   {
     question: "How do I know if I need a custom formula or a standard formula?",

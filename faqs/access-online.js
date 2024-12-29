@@ -18,7 +18,7 @@ export const faqs = [
   {
     question: "What support and training options are available?",
     answer:
-      "We offer comprehensive support and training options including quote-based or hourly rate services, remote access or onsite support, ongoing maintenance, and tailored training programs. Our Access developers are available across Australia to help automate your tasks and optimize your business processes.",
+      "We offer comprehensive support and training options including quote-based or hourly rate services, remote access or onsite support, ongoing maintenance, and tailored training programs. Our Access developers are available across Australia to help automate your tasks and optimise your business processes.",
   },
   {
     question:

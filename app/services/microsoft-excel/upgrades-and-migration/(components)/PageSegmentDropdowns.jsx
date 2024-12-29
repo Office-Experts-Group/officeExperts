@@ -18,7 +18,7 @@ const UpgradeIssues = () => {
     {
       title: "Macro or VBA issues with incompatible code such as Windows APIs",
       content:
-        "VBA code and macros may not work correctly when migrating to newer Excel versions. We analyze and update your code, ensuring all functionalities are compatible and optimized for performance.",
+        "VBA code and macros may not work correctly when migrating to newer Excel versions. We analyze and update your code, ensuring all functionalities are compatible and optimised for performance.",
     },
     {
       title: "Shapes and ActiveX buttons change size",
@@ -33,7 +33,7 @@ const UpgradeIssues = () => {
     {
       title: "Workbooks speeds grinding to a halt and becoming unworkable",
       content:
-        "Performance slowdowns are common with inefficient formulas or outdated data structures. We optimize your workbook by improving formulas, reducing calculation times, and streamlining data processes.",
+        "Performance slowdowns are common with inefficient formulas or outdated data structures. We optimise your workbook by improving formulas, reducing calculation times, and streamlining data processes.",
     },
   ];
 

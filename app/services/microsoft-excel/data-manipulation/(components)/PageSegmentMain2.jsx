@@ -87,7 +87,7 @@ const PageSegmentMain2 = () => {
       <div className={styles.info}>
         <h2>Effortless Data Automation and Processing</h2>
         <p>
-          Our team specializes in streamlining complex data workflows,
+          Our team specialises in streamlining complex data workflows,
           transforming manual tasks into automated solutions that save you time
           and reduce errors. From importing and exporting large datasets to
           automating formatting and conversions, we harness the power of VBA,

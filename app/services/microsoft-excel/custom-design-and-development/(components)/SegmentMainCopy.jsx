@@ -91,7 +91,7 @@ const SegmentMainCopy = () => {
           efficiently and effectively.
         </p>
         <p>
-          We specialize in seamlessly connecting your Microsoft applications
+          We specialise in seamlessly connecting your Microsoft applications
           with third-party platforms, creating a unified ecosystem that enhances
           productivity and reduces manual work. By leveraging automation and
           smart integration, we simplify complex processes and ensure your data

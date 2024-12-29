@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "How can Power Platform Experts assist with Power BI?",
     answer:
-      "Our team of trained consultants specializes in designing, developing, and implementing custom Power BI solutions. We create tailored dashboards, reports, and analytics that align with your business objectives, helping you unlock actionable insights and improve collaboration across teams.",
+      "Our team of trained consultants specialises in designing, developing, and implementing custom Power BI solutions. We create tailored dashboards, reports, and analytics that align with your business objectives, helping you unlock actionable insights and improve collaboration across teams.",
   },
   {
     question: "What types of insights can I gain from Power BI?",

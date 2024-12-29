@@ -33,7 +33,7 @@ const IsRight = () => {
           </div>
           <h2>Professional Word Template Solutions for Your Business</h2>
           <p className={styles.text}>
-            At Word Experts, we specialize in creating sophisticated Microsoft
+            At Word Experts, we specialise in creating sophisticated Microsoft
             Word solutions that protect your corporate identity and streamline
             document creation. Our team of experienced consultants delivers
             professional templates with built-in automation, ensuring consistent

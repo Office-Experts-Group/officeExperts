@@ -8,7 +8,7 @@ export const faqs = [
     question:
       "Can you help with creating custom Excel charts and pivot tables?",
     answer:
-      "Yes, our experts specialize in creating custom Excel charts and pivot tables to help visualize and analyze your data effectively. We ensure that your reporting solutions are tailored to your business requirements.",
+      "Yes, our experts specialise in creating custom Excel charts and pivot tables to help visualize and analyze your data effectively. We ensure that your reporting solutions are tailored to your business requirements.",
   },
   {
     question:

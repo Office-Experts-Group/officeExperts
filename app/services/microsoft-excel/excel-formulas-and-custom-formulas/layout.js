@@ -5,7 +5,7 @@ export const metadata = {
   // Basic metadata
   title: "Excel Formulas and Custom Formulas | Office Expert Australia",
   description:
-    "Expert assistance with Excel formulas and custom formula development. Our specialists help optimize formula usage and create custom solutions for complex requirements.",
+    "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
 
   keywords: [
     // Core formula keywords

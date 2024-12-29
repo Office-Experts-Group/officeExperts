@@ -60,7 +60,7 @@ const faqSchema = [
     name: "What skills do you have in your company?",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "With a large group of experienced designers and programmers, we specialize in Microsoft technologies and a range of 3rd party accounting, CRM, and other applications. Skills include Microsoft Office design (Word, PowerPoint, Publisher), Excel, web-based solutions with ASP.NET and PHP, Office add-in development using VSTO, VBA/Macro programming for various Office applications, SQL Server development, Access database programming, 3rd party product API and ODBC integration, Office 365/SharePoint support, .NET Development in VB.NET and C#.NET, and Azure solutions.",
+      text: "With a large group of experienced designers and programmers, we specialise in Microsoft technologies and a range of 3rd party accounting, CRM, and other applications. Skills include Microsoft Office design (Word, PowerPoint, Publisher), Excel, web-based solutions with ASP.NET and PHP, Office add-in development using VSTO, VBA/Macro programming for various Office applications, SQL Server development, Access database programming, 3rd party product API and ODBC integration, Office 365/SharePoint support, .NET Development in VB.NET and C#.NET, and Azure solutions.",
     },
   },
   {
