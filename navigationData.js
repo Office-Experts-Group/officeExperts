@@ -1,140 +1,139 @@
-// lib/navigationData.js
+// Base URLs for different sites (change these for production)
+const WORD_EXPERTS_URL = "https://word-experts.vercel.app";
+const OFFICE_EXPERTS_URL = "https://office-experts.vercel.app";
+const EXCEL_EXPERTS_URL = "https://excel-experts.vercel.app";
+const POWER_PLATFORM_EXPERTS_URL = "https://power-platform-experts.vercel.app";
+const ACCESS_EXPERTS_URL = "https://access-experts.vercel.app";
 
 export const navigationData = {
   home: {
     label: "Home",
     href: "/",
+    items: [
+      {
+        label: "Office Experts",
+        href: "/",
+      },
+      {
+        label: "Excel Experts",
+        href: EXCEL_EXPERTS_URL,
+      },
+      {
+        label: "Power Platform Experts",
+        href: POWER_PLATFORM_EXPERTS_URL,
+      },
+      {
+        label: "Access Experts",
+        href: ACCESS_EXPERTS_URL,
+      },
+      {
+        label: "Word Experts",
+        href: WORD_EXPERTS_URL,
+      },
+    ],
   },
   services: {
     label: "Services",
     items: [
       {
-        label: "Office",
-        href: "/services/",
+        label: "All Our Services",
+        href: "/services",
+      },
+      {
+        label: "Microsoft Power Platform",
+        href: POWER_PLATFORM_EXPERTS_URL,
         items: [
           {
-            label: "SharePoint",
-            href: "/services/by-business-solution/online-solutions",
+            label: "Microsoft Power Apps",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-apps`,
           },
           {
-            label: "Azure",
-            href: "/services/by-business-solution/cloud-based-solutions-with-azure",
+            label: "Microsoft Power BI",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-bi`,
           },
           {
-            label: "SQL Server",
-            href: "/services/by-business-solution/office-and-sql-server-integration",
+            label: "Microsoft Power Automate",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-automate`,
           },
           {
-            label: ".NET",
-            href: "/services/microsoft-dot-net",
+            label: "Microsoft Power Pages",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
+          },
+        ],
+      },
+      {
+        label: "By Office Product",
+        href: "/services/by-office-product",
+        items: [
+          {
+            label: "Microsoft Office",
+            href: `/services/microsoft-office`,
           },
           {
-            label: "Office 365",
+            label: "Microsoft Excel",
+            href: EXCEL_EXPERTS_URL,
+          },
+          {
+            label: "Microsoft Access",
+            href: ACCESS_EXPERTS_URL,
+          },
+          {
+            label: "Microsoft Word",
+            href: WORD_EXPERTS_URL,
+          },
+          {
+            label: "Microsoft PowerPoint",
+            href: "/services/microsoft-powerpoint",
+          },
+          {
+            label: "Microsoft Office 365",
             href: "/services/microsoft-office-365",
           },
+        ],
+      },
+      {
+        label: "By Business Solution",
+        href: "/services/by-business-solution",
+        items: [
           {
-            label: "Outlook",
+            label: "VBA Macro Development",
+            href: "/services/by-business-solution/vba-macro-development",
+          },
+          {
+            label: "Custom Office Solutions",
             href: "/services/by-business-solution/custom-office-solutions",
           },
           {
-            label: "VBScript",
-            href: "/services/microsoft-vbscript",
+            label: "Database Solutions",
+            href: "/services/by-business-solution/database-development-and-solutions",
           },
           {
-            label: "Publisher",
-            href: "/services/microsoft-publisher",
-          },
-        ],
-      },
-      {
-        label: "Excel",
-        href: "",
-        items: [
-          {
-            label: "Excel Experts Home",
-            href: "https://www.excelexperts.com.au/",
+            label: "Online Solutions",
+            href: "/services/by-business-solution/online-solutions",
           },
           {
-            label: "Data analysis and reporting",
-            href: "https://www.excelexperts.com.au/data-manipulation/",
+            label: "Microsoft Cloud Based Solutions",
+            href: "/services/by-business-solution/cloud-based-solutions-with-azure",
           },
           {
-            label: "Automation and VBA programming",
-            href: "https://www.excelexperts.com.au/vba-macro-development/",
+            label: "Dashboards",
+            href: "/services/by-business-solution/dashboards",
           },
           {
-            label: "Dashboard and Visualisation Design",
-            href: "https://www.excelexperts.com.au/custom-design-and-development/",
+            label: "3rd Party App or Office Integration",
+            href: "/services/by-business-solution/3rd-party-application-or-office-integration",
           },
           {
-            label: "Training and Skill Development",
-            href: "https://www.excelexperts.com.au/excel-support/",
-          },
-        ],
-      },
-      {
-        label: "Word",
-        href: "",
-        items: [
-          {
-            label: "Word Experts Home",
-            href: "https://www.wordexperts.com.au/",
+            label: "Office and SQL Server",
+            href: "/services/by-business-solution/office-and-sql-server-integration",
           },
           {
-            label: "Template Creation and Standardisation",
-            href: "https://www.wordexperts.com.au/word-document-template-creation/",
+            label: "Upgrades and Migration",
+            href: "/services/microsoft-office/upgrades-and-migration",
           },
           {
-            label: "Automation with Macros and Custom Functions",
-            href: "https://wordexperts.com.au/custom-toolbars-and-ribbons/",
-          },
-          {
-            label: "Training and User Support",
-            href: "https://www.wordexperts.com.au/training/",
-          },
-        ],
-      },
-      {
-        label: "Access",
-        href: "",
-        items: [
-          {
-            label: "Access Experts Home",
-            href: "https://www.accessexperts.com.au/",
-          },
-          {
-            label: "Cloud-based and Online Database Solutions",
-            href: "https://www.accessexperts.com.au/access-online/",
-          },
-          {
-            label: "Integration with Other Systems",
-            href: "https://www.accessexperts.com.au/3rd-party-product-integration/",
-          },
-        ],
-      },
-      {
-        label: "Power Platform",
-        href: "",
-        items: [
-          {
-            label: "Power Platform Experts Home",
-            href: "https://www.powerplatformexperts.com.au/",
-          },
-          {
-            label: "App Development with Power Apps",
-            href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps/",
-          },
-          {
-            label: "Workflow Automation with Power Automate",
-            href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate/",
-          },
-          {
-            label: "Data Analytics with Power BI",
-            href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi/",
-          },
-          {
-            label: "Simple, Scalable Websites with Power Pages",
-            href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages/",
+            label: "Add-in Creation",
+            href: "/services/by-business-solution/add-in-creation",
           },
         ],
       },
@@ -157,6 +156,10 @@ export const navigationData = {
     {
       label: "Testimonials",
       href: "/client-testimonials",
+    },
+    {
+      label: "FAQ",
+      href: "/faq",
     },
   ],
 };

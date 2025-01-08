@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../styles/meetTheTeam.module.css";
+import styles from "../../../styles/meetTheTeam.module.css";
 
-import Services from "../app/meet-the-team/(components)/Services";
+import Services from "./Services";
 
-import { teamMembers } from "../meetTheTeam";
+import { teamMembers } from "../../../meetTheTeam";
 
 const MeetTheTeam = () => {
   return (

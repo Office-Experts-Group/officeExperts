@@ -1,7 +1,7 @@
 import React from "react";
 
 import ServiceHero from "../../components/ServiceHero";
-import MeetTheTeam from "../../components/MeetTheTeam";
+import MeetAlt from "./(components)/MeetAlt";
 import Contact from "../../components/Contact";
 
 import handShake from "../../public/pageHeros/handShake.webp";
@@ -61,7 +61,7 @@ const Page = () => {
         altDesk={"Handshake"}
         altMob={"Handshake"}
       />
-      <MeetTheTeam />
+      <MeetAlt />
       <Contact />
     </>
   );
