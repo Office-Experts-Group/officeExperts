@@ -19,6 +19,7 @@ const Contact = dynamic(() => import("../components/Contact"));
 
 import { getHomePageSchema } from "../utils/testimonialSchemaGenerator";
 import { testimonials } from "../testimonials";
+import Logos from "../components/Logos";
 
 const schema = {
   "@context": "https://schema.org",
@@ -187,6 +188,7 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <Hero />
+      <Logos />
       <Services />
       <CTAMain />
       <IsRight />
