@@ -60,8 +60,10 @@ export const metadata = {
 
   // Additional tags
 
-  canonical:
-    "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast/",
+  },
 };
 
 export default function RootLayout({ children }) {

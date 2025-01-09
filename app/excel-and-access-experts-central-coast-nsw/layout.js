@@ -35,8 +35,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+  },
 };
 
 export default function RootLayout({ children }) {

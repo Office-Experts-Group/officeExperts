@@ -33,8 +33,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane/",
+  },
 };
 
 export default function RootLayout({ children }) {

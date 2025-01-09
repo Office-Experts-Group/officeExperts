@@ -29,7 +29,9 @@ export const metadata = {
     ],
   },
 
-  canonical: "https://www.officeexperts.com.au/meet-the-team/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/meet-the-team/",
+  },
 };
 
 export default function RootLayout({ children }) {

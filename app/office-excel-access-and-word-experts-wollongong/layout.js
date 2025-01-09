@@ -36,8 +36,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
+  },
 };
 
 export default function RootLayout({ children }) {

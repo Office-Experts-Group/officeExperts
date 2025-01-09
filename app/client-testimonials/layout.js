@@ -31,7 +31,9 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical: "https://www.officeexperts.com.au/client-testimonials/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/client-testimonials/",
+  },
 };
 
 export default function RootLayout({ children }) {

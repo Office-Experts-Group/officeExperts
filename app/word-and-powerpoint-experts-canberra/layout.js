@@ -69,8 +69,10 @@ export const metadata = {
 
   // Additional tags
 
-  canonical:
-    "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra/",
+  },
 };
 
 export default function RootLayout({ children }) {

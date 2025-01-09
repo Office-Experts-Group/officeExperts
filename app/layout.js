@@ -97,31 +97,12 @@ export const metadata = {
   keywords: [
     // Core Office services
     "Microsoft Office consulting",
-    "Office solutions Australia",
-    "Office programmers Australia",
-    "Office Experts Australia",
+    "Microsoft Office solutions",
+    "Microsoft Office programmers",
+    "Microsoft Office Experts",
     "Office automation solutions",
-    "Office integration services",
+    "Microsoft Office integration services",
     "Office 365 migration services",
-
-    // Location-based
-    "Office consultants Sydney",
-    "Office solutions Melbourne",
-    "Office consultants Brisbane",
-    "Office specialists Perth",
-
-    // Service-specific long tail
-    "custom Office development",
-    "Office business automation",
-    "Office VBA development",
-    "Office workflow automation",
-    "Office template solutions",
-
-    // Industry-specific
-    "corporate Office solutions",
-    "government Office services",
-    "enterprise Office consulting",
-    "business Office automation",
   ],
 
   // Twitter Card
@@ -136,7 +117,9 @@ export const metadata = {
 
   // Additional tags
 
-  canonical: "https://www.officeexperts.com.au/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/",
+  },
 
   robots: {
     index: true,

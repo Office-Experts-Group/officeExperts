@@ -64,7 +64,9 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical: "https://www.officeexperts.com.au/about-us/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/about-us/",
+  },
 };
 
 export default function AboutLayout({ children }) {

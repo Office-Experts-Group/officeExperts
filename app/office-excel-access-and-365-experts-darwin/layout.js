@@ -34,8 +34,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+  },
 };
 
 export default function RootLayout({ children }) {

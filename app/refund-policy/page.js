@@ -98,7 +98,7 @@ const Page = () => {
       />
       <div className={styles.refundPolicyContainer}>
         <div className={styles.policySection}>
-          <h1 className={styles.mainTitle}>Refund Policy</h1>
+          <h2 className={styles.mainTitle}>Refund Policy</h2>
 
           <p className={styles.introText}>
             This Refund Policy should be read in conjunction with our Service

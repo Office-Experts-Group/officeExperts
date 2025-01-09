@@ -32,8 +32,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
+  },
 };
 
 export default function RootLayout({ children }) {

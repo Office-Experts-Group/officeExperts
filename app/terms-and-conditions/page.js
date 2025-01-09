@@ -95,7 +95,7 @@ export default function TermsAndConditionsPage() {
         altMob={"handshake"}
       />
       <section className={styles.main}>
-        <h1>Terms and Conditions</h1>
+        <h2>Terms and Conditions</h2>
         <p>
           These Terms and Conditions (Terms) govern the provision of services by
           Brayalei Pty Ltd, ABN 32 093 067 737 trading as Office Experts Group

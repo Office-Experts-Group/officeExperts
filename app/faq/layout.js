@@ -27,7 +27,9 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical: "https://www.officeexperts.com.au/faq/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/faq/",
+  },
 };
 
 export default function RootLayout({ children }) {

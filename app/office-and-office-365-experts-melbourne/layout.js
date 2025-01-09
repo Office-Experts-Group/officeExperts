@@ -32,8 +32,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/office-and-office-365-experts-melbourne/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-and-office-365-experts-melbourne/",
+  },
 };
 
 export default function RootLayout({ children }) {

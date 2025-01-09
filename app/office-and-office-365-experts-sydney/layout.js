@@ -32,8 +32,10 @@ export const metadata = {
       "Leading Microsoft Office and Office 365 consultants in Sydney. Specializing in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
-  canonical:
-    "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
+  },
 };
 
 export default function RootLayout({ children }) {

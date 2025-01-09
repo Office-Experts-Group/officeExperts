@@ -32,8 +32,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/excel-and-access-experts-richmond/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/excel-and-access-experts-richmond/",
+  },
 };
 
 export default function RootLayout({ children }) {

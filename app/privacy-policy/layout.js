@@ -7,6 +7,9 @@ export const metadata = {
   description:
     "Read the privacy policy for Office Experts, detailing how we collect, use, and protect your personal information.",
   url: "https://officeexperts.com.au/privacy-policy",
+  alternates: {
+    canonical: "https://officeexperts.com.au/privacy-policy",
+  },
 };
 
 export default function PrivacyLayout({ children }) {

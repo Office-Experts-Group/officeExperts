@@ -7,7 +7,9 @@ export const metadata = {
     "Read our terms and conditions for using Office Experts. We ensure fair and transparent practices for all users.",
   robots: "noindex, nofollow",
 
-  charset: "utf-8",
+  alternates: {
+    canonical: "https://officeexperts.com.au/terms-and-conditions",
+  },
 };
 
 export default function RootLayout({ children }) {

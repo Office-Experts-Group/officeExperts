@@ -22,7 +22,9 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+  },
 };
 
 export default function RootLayout({ children }) {

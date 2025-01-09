@@ -33,8 +33,10 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  canonical:
-    "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
+  },
 };
 
 export default function RootLayout({ children }) {

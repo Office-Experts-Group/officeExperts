@@ -59,8 +59,10 @@ export const metadata = {
 
   // Additional tags
 
-  canonical:
-    "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne/",
+  alternates: {
+    canonical:
+      "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne/",
+  },
 };
 
 export default function RootLayout({ children }) {
