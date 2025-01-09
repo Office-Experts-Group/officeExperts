@@ -1,3 +1,11 @@
+.btn {
+  position: absolute;
+  top: 25vh;
+  left: 2vw;
+  z-index: 1000;
+  background-color: #046999;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(100vw);
@@ -15,7 +23,43 @@
     opacity: 1;
   }
 }
-.logos {
+@keyframes slideInSmooth {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFade {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+    filter: brightness(75%);
+  }
+  80% {
+    filter: brightness(95%);
+  }
+  100% {
+    transform: translateX(0);
+    filter: brightness(95%);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.logos1 {
   position: absolute;
   top: 20vh;
   right: 15vw;
@@ -25,23 +69,195 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.logos img {
+.logos1 img {
   animation: slideIn 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   opacity: 0;
   position: relative;
   filter: brightness(75%);
 }
-.logos img:nth-child(1) {
+.logos1 img:nth-child(1) {
   animation-delay: 100ms;
 }
-.logos img:nth-child(2) {
+.logos1 img:nth-child(2) {
   animation-delay: 300ms;
 }
-.logos img:nth-child(3) {
+.logos1 img:nth-child(3) {
   animation-delay: 500ms;
 }
 
-.logos img:hover {
+.logos1 img:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
+}
+
+.logos2 {
+  position: absolute;
+  top: 20vh;
+  right: 15vw;
+  height: 70vh;
+  height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.logos2 img {
+  animation: fadeIn 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  filter: brightness(75%);
+}
+.logos2 img:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logos2 img:nth-child(2) {
+  animation-delay: 300ms;
+}
+.logos2 img:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.logos2 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos3 {
+  position: absolute;
+  top: 25vh;
+  left: 15vw;
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+}
+.logos3 img {
+  animation: fadeIn 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  filter: brightness(75%);
+}
+.logos3 img:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logos3 img:nth-child(2) {
+  animation-delay: 300ms;
+}
+.logos3 img:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.logos3 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos4 {
+  position: absolute;
+  top: 25vh;
+  left: 15vw;
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+}
+.logos4 img {
+  animation: slideInSmooth 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  filter: brightness(75%);
+}
+.logos4 img:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logos4 img:nth-child(2) {
+  animation-delay: 300ms;
+}
+.logos4 img:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.logos4 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos5 {
+  position: absolute;
+  bottom: 15vh;
+  right: 5vw;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.logos5 img {
+  animation: fadeIn 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  filter: brightness(75%);
+  z-index: 1000;
+}
+.logos5 img:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logos5 img:nth-child(2) {
+  animation-delay: 300ms;
+}
+.logos5 img:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.logos5 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos6 {
+  position: absolute;
+  bottom: 15vh;
+  right: 5vw;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.logos6 img {
+  animation: slideInFade 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.logos6 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos7 {
+  position: absolute;
+  top: 25vh;
+  right: 5vw;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.logos7 img {
+  animation: fadeIn 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  position: relative;
+  filter: brightness(75%);
+  z-index: 1000;
+}
+.logos7 img:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logos7 img:nth-child(2) {
+  animation-delay: 300ms;
+}
+.logos7 img:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.logos5 img:hover {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
 }/*# sourceMappingURL=logos.module.css.map */
