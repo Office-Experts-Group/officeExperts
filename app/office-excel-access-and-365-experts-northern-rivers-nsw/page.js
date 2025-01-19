@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import northernRivers from "../../public/pageHeros/northernRivers.webp";
 import northernRiversMob from "../../public/pageHeros/mob/northernRiversMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

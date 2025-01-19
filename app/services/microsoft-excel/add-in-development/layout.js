@@ -1,10 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Add-in Development | Excel Add-ins | Office Expert Australia",
+  title: "Add-in Development | Office Experts Group",
   description:
-    "Expert Excel add-in development services for extending Excel functionality. Specializing in VBA and VSTO add-ins to automate tasks and enhance Excel capabilities.",
+    "Expert Excel add-in development services for extending Excel functionality. Specialising in VBA and VSTO add-ins to automate tasks and enhance Excel capabilities.",
   keywords: [
     "Excel add-in deployment",
     // "Excel add-in development",
@@ -12,7 +11,7 @@ export const metadata = {
     // "VSTO add-in development",
     // "custom Excel functions",
     // "Excel automation add-ins",
-    // "Excel toolbar customization",
+    // "Excel toolbar customisation",
     // "Excel VBA macros",
     // "Excel VSTO solutions",
     // "Excel functionality extension",
@@ -27,14 +26,15 @@ export const metadata = {
     // "Excel integration services",
     // "Excel workplace automation",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/add-in-development/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/add-in-development",
+    languages: {
+      "en-AU": "/services/microsoft-excel/add-in-development",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

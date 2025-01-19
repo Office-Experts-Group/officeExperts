@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   title: "About Us",
@@ -64,15 +63,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://www.officeexperts.com.au/about-us/",
+    canonical: "/about-us",
+    languages: {
+      "en-AU": "/about-us",
+    },
   },
 };
 
 export default function AboutLayout({ children }) {
   return <>{children}</>;
 }
-
-AboutLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,10 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Microsoft Office 365 Implementation Services",
+  title: "Microsoft Office 365 Implementation Services | Office Experts Group",
   description:
-    "Professional Office 365 implementation and migration services. Expert consultants for successful Office 365 deployment across your organization.",
+    "Professional Office 365 implementation and migration services. Expert consultants for successful Office 365 deployment across your organisation.",
 
   keywords: [
     // Core implementation
@@ -38,14 +37,17 @@ export const metadata = {
     // "Teams implementation",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    languages: {
+      "en-AU":
+        "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

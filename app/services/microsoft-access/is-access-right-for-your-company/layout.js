@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Why To Choose Access for your Company | Office Expert Australia",
+  title: "Why To Choose Access for your Company | Office Experts Group",
   description:
     "Expert guidance on whether Microsoft Access is the right solution for your business needs. Get professional advice on database solutions, data management, and business automation.",
 
@@ -38,14 +37,15 @@ export const metadata = {
     // "database migration services",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/is-access-right-for-your-company",
+    languages: {
+      "en-AU": "/services/microsoft-access/is-access-right-for-your-company",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

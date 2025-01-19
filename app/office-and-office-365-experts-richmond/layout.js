@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office and Office 365 Experts Richmond",
+  title: "Office and Office 365 Experts Richmond | Office Experts Group",
   description:
     "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
 
   // OpenGraph
   openGraph: {
-    title: "Office and Office 365 Experts Richmond",
+    title: "Office and Office 365 Experts Richmond | Office Experts Group",
     description:
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
@@ -32,16 +31,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
+    canonical: "/office-and-office-365-experts-richmond",
+    languages: {
+      "en-AU": "/office-and-office-365-experts-richmond",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
@@ -31,15 +30,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://www.officeexperts.com.au/client-testimonials/",
+    canonical: "/client-testimonials",
+    languages: {
+      "en-AU": "/client-testimonials",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

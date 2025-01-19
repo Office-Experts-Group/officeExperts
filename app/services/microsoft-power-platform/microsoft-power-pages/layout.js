@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Power Pages Consulting | Low-Code Web Development",
+  title: "Microsoft Power Pages Consulting | Office Experts Group",
   description:
     "If Microsoft Power Pages is right for your business, our certified experts can rapidly build websites that deliver crucial information and services to your customers.",
   // Additional metadata
   keywords: [
     // Core services
-    // "Power Pages consulting",
+    "Power Pages consulting",
     "Microsoft Power Pages developers",
     // "low-code web development",
     // "business website development",
@@ -38,14 +37,15 @@ export const metadata = {
     // "data-driven websites",
     // "enterprise web development",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-power-platform/microsoft-power-pages",
+    languages: {
+      "en-AU": "/services/microsoft-power-platform/microsoft-power-pages",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

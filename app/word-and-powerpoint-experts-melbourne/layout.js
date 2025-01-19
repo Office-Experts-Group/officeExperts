@@ -1,18 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Word and PowerPoint Experts Melbourne | Document Design Services Melbourne",
+  title: "Word and PowerPoint Experts Melbourne | Office Experts Group",
   description:
-    "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specializing in templates, document design, presentations, automation and corporate solutions.",
+    "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Word and PowerPoint Experts Melbourne",
+    title: "Word and PowerPoint Experts Melbourne | Office Experts Group",
     description:
-      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specializing in templates, document design, presentations, automation and corporate solutions.",
+      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
     url: "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne/",
   },
 
@@ -51,24 +49,20 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Melbourne",
+    title: "Word and PowerPoint Experts Melbourne | Office Experts Group",
     description:
-      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specializing in templates, document design, presentations, automation and corporate solutions.",
+      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
-
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne/",
+    canonical: "/word-and-powerpoint-experts-melbourne/",
+    languages: {
+      "en-AU": "/word-and-powerpoint-experts-melbourne/",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

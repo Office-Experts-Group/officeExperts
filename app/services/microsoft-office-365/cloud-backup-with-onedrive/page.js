@@ -8,9 +8,16 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import marker from "../../../../public/pageHeros/marker.webp";
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

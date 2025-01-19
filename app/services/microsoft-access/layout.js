@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Access Services | Database Solutions Australia",
+  title: "Microsoft Access Services | Office Experts Group",
   description:
     "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
 
   keywords: [
-    "Access database migration",
+    "Microsoft Access database migration",
     // Core database services
     // "Microsoft Access consulting",
     // "Access database development",
@@ -43,13 +42,15 @@ export const metadata = {
     // "database repair services",
     // "Access database training",
   ],
-  canonical: "https://www.officeexperts.com.au/services/microsoft-access/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/",
+    languages: {
+      "en-AU": "/services/microsoft-access/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

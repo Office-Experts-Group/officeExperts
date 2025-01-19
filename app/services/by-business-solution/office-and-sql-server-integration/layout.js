@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office and SQL Server Integration",
+  title: "Office and SQL Server Integration | Office Experts Group",
   description:
     "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
 
@@ -36,14 +35,17 @@ export const metadata = {
     // "SQL Server development",
     // "database interface design",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/by-business-solution/office-and-sql-server-integration",
+    languages: {
+      "en-AU":
+        "/services/by-business-solution/office-and-sql-server-integration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office Experts Darwin | Microsoft Office Consulting Services",
+  title: "Microsoft Office Consulting Services | Office Experts Group",
   description:
     "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
 
   // OpenGraph
   openGraph: {
-    title: "Office Experts Darwin | Microsoft Office Solutions",
+    title: "Microsoft Office Consulting Services | Office Experts Group",
     description:
       "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
@@ -21,7 +20,7 @@ export const metadata = {
     "Microsoft Office consultants Darwin",
     "Excel consulting Darwin",
     "Access database specialists Darwin",
-    "Word document services Darwin",
+    "Office 365 services Darwin",
   ],
 
   // Twitter Card
@@ -30,20 +29,19 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Darwin | Microsoft Office Solutions",
     description:
-      "Leading Microsoft Office consulting services in Darwin. Specializing in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+    canonical: "/office-excel-access-and-365-experts-darwin",
+    languages: {
+      "en-AU": "/office-excel-access-and-365-experts-darwin",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

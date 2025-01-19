@@ -8,9 +8,16 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import party from "../../../../public/pageHeros/3rdParty.webp";
 import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Custom Office Solutions | Office Expert Australia",
+  title: "Custom Office Solutions | Office Experts Group",
   description:
     "Custom Office Solutions - Need an expert to help you with Excel, Access, Word, Outlook or PowerPoint. Call us 1300 102 810",
 
@@ -11,7 +10,7 @@ export const metadata = {
   keywords: [
     // Core custom solution services
     "custom Microsoft Office solutions Australia",
-    // "Office customization services",
+    // "Office customisation services",
     // "bespoke Office development",
     // "tailored Office solutions",
     // "custom Office automation",
@@ -20,7 +19,7 @@ export const metadata = {
     // "custom Excel solutions",
     // "custom Access solutions",
     // "custom Word templates",
-    // "PowerPoint customization",
+    // "PowerPoint customisation",
     // "Outlook automation",
 
     // // Business solution focus
@@ -31,21 +30,22 @@ export const metadata = {
     // "reporting automation",
 
     // // Industry/purpose specific
-    // "enterprise Office customization",
+    // "enterprise Office customisation",
     // "corporate Office solutions",
     // "business efficiency solutions",
     // "productivity enhancement tools",
     // "document management solutions",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-business-solution/custom-office-solutions",
+    languages: {
+      "en-AU": "/services/by-business-solution/custom-office-solutions",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

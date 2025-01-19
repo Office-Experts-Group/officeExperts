@@ -5,12 +5,19 @@ import ExpertsAwait from "../../../../components/ExpertsAwait";
 import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
-import darwin from "../../../../public/pageHeros/darwin.webp";
-import darwinMob from "../../../../public/pageHeros/mob/darwinMob.webp";
+import graphMeeting from "../../../../public/pageHeros/graphMeeting.webp";
+import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":
@@ -105,10 +112,10 @@ const Page = () => {
       />
       <ServiceHero
         title="Take Your Business Mobile with MS Office 365"
-        desktopImage={darwin}
-        mobileImage={darwinMob}
-        altDesk={"beach scene"}
-        altMob={"beach scene"}
+        desktopImage={graphMeeting}
+        mobileImage={coffeeMob}
+        altDesk={"Office meeting with graphs"}
+        altMob={"coffee on an office desk"}
       />
       <PageSegmentMain />
       <ExpertsAwait />

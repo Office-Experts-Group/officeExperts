@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office 365 Migration | Office 365 Upgrades | Office 365 Help",
+  title: "Office 365 Migration | Office Experts Group",
   description:
     "Professional Office 365 migration services with no downtime or data loss. Expert migration of emails, files, and systems to Office 365.",
 
@@ -40,14 +39,15 @@ export const metadata = {
     // "business email migration",
     // "corporate Office 365 setup",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-migration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-office-365/office-365-migration",
+    languages: {
+      "en-AU": "/services/microsoft-office-365/office-365-migration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

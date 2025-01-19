@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Companies and Organizations | Word Document Services",
+  title:
+    "Companies and Organisations | Word Document Services | Office Experts Group",
   description:
     "Our team of Word design experts deliver versatile templates that meet the needs of any company or organisation. We ensure your corporate identity is protected and can cut costs through setting you up to produce your own inhouse reports.",
 
@@ -25,14 +25,15 @@ export const metadata = {
     // "corporate document management",
   ],
 
-  canonical:
-    "https://www.wordexperts.com.au/services/microsoft-word/companies-and-organisations/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/companies-and-organisations/",
+    languages: {
+      "en-AU": "/services/microsoft-word/companies-and-organisations/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

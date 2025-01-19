@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel Custom Design and Development | Excel Development Services",
+  title: "Excel Custom Design and Development | Office Experts Group",
   description:
-    "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
+    "Professional Excel custom design and development services across Australia. Specialising in custom workbooks, VBA development, and Excel integration solutions.",
 
   keywords: [
     // Core service keywords
@@ -36,14 +35,15 @@ export const metadata = {
     // "Excel business solutions",
     // "Excel efficiency tools",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/custom-design-and-development",
+    languages: {
+      "en-AU": "/services/microsoft-excel/custom-design-and-development",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

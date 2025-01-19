@@ -1,15 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Exchange Online Setup and Support",
+  title: "Exchange Online Setup and Support | Office Experts Group",
   description:
     "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
 
   keywords: [
     // Core Exchange/Email services
-    "Exchange Online setup",
+    "Microsoft Exchange Online setup",
+    "Microsoft Exchange Online support",
     // "business email configuration",
     // "email domain setup",
     // "Exchange migration services",
@@ -41,14 +41,17 @@ export const metadata = {
     // "business email branding",
     // "company email management",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/microsoft-office-365/exchange-online-setup-and-support",
+    languages: {
+      "en-AU":
+        "/services/microsoft-office-365/exchange-online-setup-and-support",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

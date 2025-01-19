@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import brisbane from "../../public/pageHeros/brisbane.webp";
 import brisbaneMob from "../../public/pageHeros/mob/brisbaneMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

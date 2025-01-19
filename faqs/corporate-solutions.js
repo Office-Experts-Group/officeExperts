@@ -13,7 +13,7 @@ const faqs = [
     question:
       "Can document templates be customized to our specific branding guidelines?",
     answer:
-      "Yes, corporate document templates can be tailored to include your specific branding guidelines, such as approved colors, fonts, and styles. This customization helps ensure every document produced remains consistent with your brand identity.",
+      "Yes, corporate document templates can be tailored to include your specific branding guidelines, such as approved colors, fonts, and styles. This customisation helps ensure every document produced remains consistent with your brand identity.",
   },
   {
     question:

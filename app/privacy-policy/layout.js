@@ -1,21 +1,21 @@
 // app/privacy/layout.js
-import PropTypes from "prop-types";
 import React from "react";
 
 export const metadata = {
-  title: "Privacy Policy - Office Experts",
+  title: "Privacy Policy | Office Experts Group",
   description:
     "Read the privacy policy for Office Experts, detailing how we collect, use, and protect your personal information.",
   url: "https://officeexperts.com.au/privacy-policy",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://officeexperts.com.au/privacy-policy",
+    canonical: "/privacy-policy",
+    languages: {
+      "en-AU": "/privacy-policy",
+    },
   },
+  keywords: "privacy policy, office experts",
 };
 
 export default function PrivacyLayout({ children }) {
   return <>{children}</>;
 }
-
-PrivacyLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

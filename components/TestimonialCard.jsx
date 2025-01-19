@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import PropTypes from "prop-types";
 
 import styles from "../styles/testimonialsCard.module.css";
 
@@ -28,17 +27,6 @@ const TestimonialCard = ({ content, name, contact, image }) => {
       <h5>{contact}</h5>
     </div>
   );
-};
-
-TestimonialCard.propTypes = {
-  content: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  contact: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-  }),
 };
 
 export default TestimonialCard;

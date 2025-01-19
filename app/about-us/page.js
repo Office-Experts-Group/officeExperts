@@ -12,6 +12,10 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 
 import { getAboutPageSchema } from "../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../testimonials";
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
 
 import aboutUs from "../../public/pageHeros/aboutUs.webp";
 import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
@@ -19,12 +23,14 @@ import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getAboutPageSchema(testimonials),
+    ...getAboutPageSchema(testimonials)["@graph"],
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/about-us/",
       url: "https://www.officeexperts.com.au/about-us/",
-      name: "Excel Advanced Reporting | Excel Developer Australia",
+      name: "About Us | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au/#website",
       },

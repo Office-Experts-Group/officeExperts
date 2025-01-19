@@ -10,9 +10,16 @@ import PageSegment7 from "./(components)/PageSegment7";
 import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
 import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

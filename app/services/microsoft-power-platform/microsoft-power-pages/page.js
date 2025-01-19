@@ -17,9 +17,16 @@ import Contents from "./(components)/Contents";
 import longDesk from "../../../../public/pageHeros/longDesk.webp";
 import coffee from "../../../../public/pageHeros/mob/coffeeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

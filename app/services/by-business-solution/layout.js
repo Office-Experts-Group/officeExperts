@@ -1,15 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Business Solutions | Custom Office Development Services Australia",
+  title:
+    "Business Solutions & Custom Office Development Services | Office Experts Group",
   description:
     "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Office Business Solutions & Development Services",
+    title:
+      "Business Solutions & Custom Office Development Services | Office Experts Group",
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/",
@@ -62,21 +63,21 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Office Business Solutions & Development Services",
+    title:
+      "Business Solutions & Custom Office Development Services | Office Experts Group",
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
-
-  canonical: "https://www.officeexperts.com.au/services/by-business-solution/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-business-solution/",
+    languages: {
+      "en-AU": "/services/by-business-solution/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

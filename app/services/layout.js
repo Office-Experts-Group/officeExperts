@@ -1,14 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Microsoft Development Services | Office Experts Solutions Australia",
+  title: "Microsoft Development Services | Office Experts Group",
   description:
     "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
 
   openGraph: {
-    title:
-      "Microsoft Development Services | Office Experts Solutions Australia",
+    title: "Microsoft Development Services | Office Experts Group",
     description:
       "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
     url: "https://www.officeexperts.com.au/services/",
@@ -43,13 +41,15 @@ export const metadata = {
     // "office experts perth",
     // "microsoft services australia wide",
   ],
-  canonical: "https://www.officeexperts.com.au/services/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/",
+    languages: {
+      "en-AU": "/services/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Publisher Services",
+  title: "Microsoft Publisher Services | Office Experts Group",
   description:
     "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
 
   keywords: [
     // Core Publisher services
     "Microsoft Publisher templates",
-    // "Publisher design services",
+    "Microsoft Publisher design services",
     // "Publisher consulting",
     // "corporate publishing solutions",
     // "professional layout design",
@@ -40,13 +39,15 @@ export const metadata = {
     // "Publisher online documents",
     // "Publisher training services",
   ],
-  canonical: "https://www.officeexperts.com.au/services/microsoft-publisher/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-publisher",
+    languages: {
+      "en-AU": "/services/microsoft-publisher",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

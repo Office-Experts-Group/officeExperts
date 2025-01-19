@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "OneDrive Cloud Backup | OneDrive for Business | Office 365",
+  title: "OneDrive Cloud Backup | Office Experts Group",
   description:
     "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
 
@@ -41,14 +40,15 @@ export const metadata = {
     // "Microsoft cloud storage",
     // "cross-platform cloud backup",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+    languages: {
+      "en-AU": "/services/microsoft-office-365/cloud-backup-with-onedrive",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

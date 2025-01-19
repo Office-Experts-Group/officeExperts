@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office Product Services | Microsoft Office Solutions Australia",
+  title: "Office Product Services |  Office Experts Group",
   description:
-    "Comprehensive Microsoft Office consultancy and assistance services across Australia. Specializing in Excel, Word, Access, PowerPoint, and SharePoint solutions.",
+    "Comprehensive Microsoft Office consultancy and assistance services across Australia. Specialising in Excel, Word, Access, PowerPoint, and SharePoint solutions.",
 
   keywords: [
     // Core services
@@ -42,13 +41,15 @@ export const metadata = {
     // "Microsoft Office product support",
     // "Microsoft Office software training",
   ],
-  canonical: "https://www.officeexperts.com.au/services/by-office-product/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-office-product",
+    languages: {
+      "en-AU": "/services/by-office-product",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -14,9 +14,16 @@ import Contents from "./(components)/Contents";
 import graph from "../../../../public/pageHeros/graph.webp";
 import graphs from "../../../../public/pageHeros/mob/graph.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

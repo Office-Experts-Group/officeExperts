@@ -9,9 +9,16 @@ import PageSegment4 from "./(components)/PageSegment4";
 import notes from "../../../../public/pageHeros/notes.webp";
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

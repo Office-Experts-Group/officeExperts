@@ -14,9 +14,16 @@ import faqs from "../../../../faqs/access-online.js";
 import whiteBoard from "../../../../public/pageHeros/whiteBoard.webp";
 import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

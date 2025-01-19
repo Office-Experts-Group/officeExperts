@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Request a Quote",
+  title: "Request a Quote | Office Experts Group",
   description:
-    "Use the form below to provide us with all relevant information to quickly and efficiently process your enquiry.",
-
+    "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
+  keywords: ["Office experts request a quote"],
   openGraph: {
-    title: "Request a Quote",
+    title: "Request a Quote | Office Experts Group",
     description:
       "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
     url: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
@@ -22,15 +21,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+    canonical: "/contact-us/request-a-quote",
+    languages: {
+      "en-AU": "/contact-us/request-a-quote",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

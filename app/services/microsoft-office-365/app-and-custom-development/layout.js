@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Custom 365 Solutions | Custom App Development | Office Experts",
+  title: "Custom 365 Solutions | Office Experts Group",
   description:
     "Professional Microsoft 365 app development and custom solutions. Specialists in SharePoint integration, corporate intranet development and business automation.",
 
@@ -41,14 +40,15 @@ export const metadata = {
     // "365 business automation",
     // "SharePoint business solutions",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office-365/app-and-custom-development/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-office-365/app-and-custom-development",
+    languages: {
+      "en-AU": "/services/microsoft-office-365/app-and-custom-development",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

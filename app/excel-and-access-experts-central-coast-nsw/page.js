@@ -9,9 +9,16 @@ import ContactLocationSegment from "../../components/ContactLocationSegment";
 import centralCoast from "../../public/pageHeros/centralCoast.webp";
 import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

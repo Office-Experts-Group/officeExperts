@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "VBA Macro Development | Office Expert Australia",
+  title: "VBA Macro Development | Office Experts Group",
   description:
     "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
 
@@ -36,14 +35,15 @@ export const metadata = {
     // "VBA add-in development",
     // "form automation VBA",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-business-solution/vba-macro-development",
+    languages: {
+      "en-AU": "/services/by-business-solution/vba-macro-development",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

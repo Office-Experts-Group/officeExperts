@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "PowerPoint Presentation Redesign Services",
+  title: "PowerPoint Presentation Redesign Services | Office Experts Group",
   description:
     "Professional PowerPoint presentation redesign services. Transform existing presentations into high-quality templates with master slides and brand guidelines.",
 
@@ -38,14 +37,15 @@ export const metadata = {
     // "enterprise presentation solutions",
     // "government presentation redesign",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-powerpoint/existing-presentation-redesign/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-powerpoint/existing-presentation-redesign",
+    languages: {
+      "en-AU": "/services/microsoft-powerpoint/existing-presentation-redesign",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

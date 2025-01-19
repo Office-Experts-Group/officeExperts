@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import PropTypes from "prop-types";
 import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
@@ -47,12 +46,6 @@ const Promo = () => {
       </AnimateOnScroll>
     </section>
   );
-};
-
-// Define PropTypes
-Promo.propTypes = {
-  h2: PropTypes.string,
-  p: PropTypes.string,
 };
 
 export default Promo;

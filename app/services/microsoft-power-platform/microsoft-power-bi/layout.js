@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Power BI Services",
+  title: "Microsoft Power BI Services | Office Experts Group",
   description:
     "We build reports and dashboards which connect your Power BI services to your financial and accounting systems, databases, Azure services and spreadsheets.",
 
@@ -10,7 +9,7 @@ export const metadata = {
     // Core Power BI services
     // "Power BI consulting",
     // "Power BI services Australia",
-    // "Power BI development",
+    "Power BI development",
     // "Power BI integration",
     // "Power BI dashboard creation",
 
@@ -40,14 +39,15 @@ export const metadata = {
     // "Power BI business intelligence",
   ],
 
-  canonical:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-power-platform/microsoft-power-bi",
+    languages: {
+      "en-AU": "/services/microsoft-power-platform/microsoft-power-bi",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

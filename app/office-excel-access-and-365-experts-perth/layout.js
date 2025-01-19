@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Office, Excel, Access and 365 Experts - Perth",
+  title: "Office, Excel, Access and 365 Experts | Office Experts Group",
   description:
     "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
 
   openGraph: {
-    title: "Office, Excel, Access and 365 Experts - Perth",
+    title: "Office, Excel, Access and 365 Experts | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-perth/",
@@ -26,20 +25,19 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office, Excel, Access and 365 Experts - Perth",
     description:
-      "Leading Microsoft Office consulting and solutions provider in Perth. Specializing in Excel, Access, and Office 365 solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-perth/",
+    canonical: "/office-excel-access-and-365-experts-perth",
+    languages: {
+      "en-AU": "/office-excel-access-and-365-experts-perth",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

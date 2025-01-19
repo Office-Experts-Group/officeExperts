@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Microsoft Power Platform Services",
+  title: "Microsoft Power Platform Services | Office Experts Group",
   description:
     "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
 
@@ -41,14 +40,15 @@ export const metadata = {
     // "Dynamics 365 integration",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-power-platform/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-power-platform/",
+    languages: {
+      "en-AU": "/services/microsoft-power-platform/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

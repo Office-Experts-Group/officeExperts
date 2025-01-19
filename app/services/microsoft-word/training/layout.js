@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Microsoft Word Training",
+  title: "Microsoft Word Training | Office Experts Group",
   description:
     "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
 
   openGraph: {
-    title: "Microsoft Word Training",
+    title: "Microsoft Word Training | Office Experts Group",
     description:
       "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
     url: "https://www.wordexperts.com.au/services/microsoft-word/training/",
@@ -42,13 +41,15 @@ export const metadata = {
     // "Word template assistance",
     // "professional Word guidance",
   ],
-  canonical: "https://www.wordexperts.com.au/services/microsoft-word/training/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/training/",
+    languages: {
+      "en-AU": "/services/microsoft-word/training/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

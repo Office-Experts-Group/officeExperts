@@ -10,14 +10,16 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.80.6",
-    "@sendgrid/mail": "^8.1.4",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.1.5",
+    "css-minimizer-webpack-plugin": "^7.0.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.15",
     "eslint-plugin-react": "^7.37.1",

@@ -14,9 +14,16 @@ import faqs from "../../../../faqs/power-bi";
 import graph from "../../../../public/pageHeros/mob/graph.webp";
 import graphMeeting from "../../../../public/pageHeros/graphMeeting.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

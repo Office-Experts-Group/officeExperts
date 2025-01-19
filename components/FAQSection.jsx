@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "../styles/faqSection.module.css";
 
 const FAQ = ({ title = "Frequently Asked Questions", faqs = [] }) => {
@@ -28,16 +27,6 @@ const FAQ = ({ title = "Frequently Asked Questions", faqs = [] }) => {
       </div>
     </section>
   );
-};
-
-FAQ.propTypes = {
-  title: PropTypes.string,
-  faqs: PropTypes.arrayOf(
-    PropTypes.shape({
-      question: PropTypes.string,
-      answer: PropTypes.string,
-    })
-  ).isRequired,
 };
 
 export default FAQ;

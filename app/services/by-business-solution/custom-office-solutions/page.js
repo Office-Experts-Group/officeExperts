@@ -9,9 +9,16 @@ import PageSegment8 from "./(components)/PageSegment8";
 import marker from "../../../../public/pageHeros/marker.webp";
 import meetingMob from "../../../../public/pageHeros/mob/meetingMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

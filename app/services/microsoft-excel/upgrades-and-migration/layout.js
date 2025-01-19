@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel Upgrades and Migration | Office Expert Australia",
+  title: "Excel Upgrades and Migration | Office Experts Group",
   description:
     "Expert Microsoft Excel migration and upgrade services. We help resolve Excel workbook issues, optimise performance, and ensure smooth transitions between versions.",
   keywords: [
-    "Excel workbook optimisation",
+    // "Excel workbook optimisation",
     // Core upgrade services
-    // "Excel migration services",
-    // "Excel upgrade solutions",
+    "Excel migration services",
+    "Excel upgrade solutions",
     // "Excel version compatibility",
 
     // // Specific issues
@@ -39,14 +38,15 @@ export const metadata = {
     // "Excel consultants Melbourne",
     // "Excel experts Brisbane",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/upgrades-and-migration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/upgrades-and-migration",
+    languages: {
+      "en-AU": "/services/microsoft-excel/upgrades-and-migration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

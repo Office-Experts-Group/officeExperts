@@ -10,9 +10,70 @@ const formatDate = (date) => {
 
 // Generate schema for a single testimonial
 const generateTestimonialSchema = (testimonial, domain, page, index) => {
+  const domainName = domain.split(".")[1];
+  const serviceName =
+    domainName.charAt(0).toUpperCase() + domainName.slice(1, -7);
+
   return {
     "@type": "Review",
     "@id": generateTestimonialId(domain, page, index),
+    itemReviewed: {
+      "@type": "ProfessionalService",
+      "@id": `${domain}/#business`,
+      name: `Microsoft ${serviceName} Consulting Services`,
+      provider: {
+        "@type": "Organization",
+        "@id": `${domain}/#organization`,
+      },
+      serviceType: `Microsoft ${serviceName} Consulting`,
+      description: `Professional Microsoft ${serviceName} consulting and support services`,
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "New South Wales",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Victoria",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Queensland",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Western Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "South Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Tasmania",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Australian Capital Territory",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Northern Territory",
+        },
+      ],
+      priceRange: "$$",
+      // Remove specific address and add availableService instead
+      availableService: {
+        "@type": "Service",
+        name: "Remote Consulting",
+        description:
+          "Australia-wide remote Microsoft Office consulting services",
+      },
+    },
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -24,7 +85,7 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
       name: testimonial.name,
     },
     reviewBody: testimonial.content,
-    datePublished: formatDate(new Date("2024-01-01")), // Set appropriate date
+    datePublished: formatDate(new Date("2024-01-01")),
     publisher: {
       "@type": "Organization",
       "@id": `${domain}/#organization`,
@@ -38,9 +99,54 @@ const generateAggregateSchema = (testimonials, domain) => {
     "@type": "AggregateRating",
     "@id": `${domain}/#aggregateRating`,
     itemReviewed: {
-      "@type": "Organization",
-      "@id": `${domain}/#organization`,
+      "@type": "ProfessionalService",
+      "@id": `${domain}/#business`,
       name: "Office Experts Group",
+      priceRange: "$$",
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "New South Wales",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Victoria",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Queensland",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Western Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "South Australia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Tasmania",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Australian Capital Territory",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Northern Territory",
+        },
+      ],
+      availableService: {
+        "@type": "Service",
+        name: "Remote Consulting",
+        description:
+          "Australia-wide remote Microsoft Office consulting services",
+      },
     },
     ratingValue: "5",
     reviewCount: testimonials.length,
@@ -56,6 +162,12 @@ export const generateTestimonialsSchema = (
   page,
   includeAll = false
 ) => {
+  // Base schema
+  const baseSchema = {
+    "@context": "https://schema.org",
+    "@graph": [],
+  };
+
   // Add testimonial schemas based on page
   let testimonialsToInclude = testimonials;
   if (!includeAll) {
@@ -70,8 +182,10 @@ export const generateTestimonialsSchema = (
   // Add aggregate rating
   const aggregateSchema = generateAggregateSchema(testimonials, domain);
 
-  // Return just the array of schemas since we're spreading into existing @graph
-  return [aggregateSchema, ...testimonialSchemas];
+  // Combine all schemas
+  baseSchema["@graph"] = [aggregateSchema, ...testimonialSchemas];
+
+  return baseSchema;
 };
 
 // Usage example for different pages:

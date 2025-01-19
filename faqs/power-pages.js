@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Can Power Pages be customized with programming languages?",
     answer:
-      "Yes, Power Pages supports customization with languages like R and Python, allowing you to create tailored data visualizations and interactive web elements. This makes it ideal for creating unique, data-driven user experiences suited to specific business needs.",
+      "Yes, Power Pages supports customisation with languages like R and Python, allowing you to create tailored data visualizations and interactive web elements. This makes it ideal for creating unique, data-driven user experiences suited to specific business needs.",
   },
   {
     question: "Is Power Pages secure?",

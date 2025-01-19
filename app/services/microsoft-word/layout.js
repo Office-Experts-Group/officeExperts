@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Word Services | Word Experts Australia",
+  title: "Microsoft Word Services | Office Experts Group",
   description:
     "Professional Microsoft Word consulting services specialising in templates, document design, forms, accessibility and corporate solutions across Australia.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Word Services",
+    title: "Microsoft Word Services | Office Experts Group",
     description:
       "Professional Microsoft Word consulting services specialising in templates, document design, forms, accessibility and corporate solutions across Australia.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/",
@@ -18,7 +17,7 @@ export const metadata = {
   // Additional metadata
   keywords: [
     // Core Word services
-    "Microsoft Word template conversions",
+    "Microsoft Word professional consultants",
     // "Word template design",
     // "corporate Word templates",
     // "Word document solutions",
@@ -50,13 +49,15 @@ export const metadata = {
     // "Word custom toolbars",
     // "Word template migration",
   ],
-  canonical: "https://www.officeexperts.com.au/services/microsoft-word/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/",
+    languages: {
+      "en-AU": "/services/microsoft-word/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office Upgrades And Migration | Office Experts Australia",
+  title: "Office Upgrades And Migration | Office Experts Group",
   description:
     "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300102810",
 
@@ -39,14 +38,15 @@ export const metadata = {
     // "access database migration",
     // "vba code upgrade services",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-office/upgrades-and-migration",
+    languages: {
+      "en-AU": "/services/microsoft-office/upgrades-and-migration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

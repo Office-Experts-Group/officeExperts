@@ -1,10 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "PowerPoint Training | PowerPoint Assistance | PowerPoint Help | PowerPoint Experts",
+  title: "PowerPoint Training | PowerPoint Assistance | Office Experts Group",
   description:
     "Expert PowerPoint training and assistance services. Get professional guidance on creating effective presentations with our PowerPoint specialists.",
 
@@ -12,43 +10,46 @@ export const metadata = {
     // Core training services
     "PowerPoint training services",
     "PowerPoint user assistance",
-    "PowerPoint help Australia",
-    "PowerPoint guidance services",
-    "PowerPoint expert training",
+    // "PowerPoint help Australia",
+    // "PowerPoint guidance services",
+    // "PowerPoint expert training",
 
-    // Location-based
-    "PowerPoint training Sydney",
-    "PowerPoint assistance Melbourne",
-    "PowerPoint help Brisbane",
-    "PowerPoint training Perth",
+    // // Location-based
+    // "PowerPoint training Sydney",
+    // "PowerPoint assistance Melbourne",
+    // "PowerPoint help Brisbane",
+    // "PowerPoint training Perth",
 
-    // Service-specific long tail
-    "corporate PowerPoint training",
-    "professional PowerPoint guidance",
-    "PowerPoint presentation training",
-    "PowerPoint template assistance",
-    "PowerPoint design help",
+    // // Service-specific long tail
+    // "corporate PowerPoint training",
+    // "professional PowerPoint guidance",
+    // "PowerPoint presentation training",
+    // "PowerPoint template assistance",
+    // "PowerPoint design help",
 
-    // Industry-specific
-    "business PowerPoint training",
-    "corporate PowerPoint assistance",
-    "enterprise PowerPoint help",
-    "professional PowerPoint guidance",
+    // // Industry-specific
+    // "business PowerPoint training",
+    // "corporate PowerPoint assistance",
+    // "enterprise PowerPoint help",
+    // "professional PowerPoint guidance",
 
-    // Training combinations
-    "PowerPoint design training",
-    "PowerPoint template guidance",
-    "PowerPoint creation assistance",
-    "PowerPoint skills development",
+    // // Training combinations
+    // "PowerPoint design training",
+    // "PowerPoint template guidance",
+    // "PowerPoint creation assistance",
+    // "PowerPoint skills development",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    languages: {
+      "en-AU":
+        "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

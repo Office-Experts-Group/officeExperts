@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Word Popup Form | Word Popup Window | Word Experts",
+  title: "Word Popup Form | Office Experts Group",
   description:
     "Our team of Word design experts can deliver your document templates with popup forms to enhance the data entry process, improving both productivity and document quality, while saving your business money.",
 
   // OpenGraph
   openGraph: {
-    title: "Word Popup Form | Word Popup Window | Word Experts",
+    title: "Word Popup Form | Office Experts Group",
     description:
       "Our team of Word design experts can deliver your document templates with popup forms to enhance the data entry process, improving both productivity and document quality, while saving your business money.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
@@ -45,14 +44,15 @@ export const metadata = {
     // "data entry automation",
     // "document quality control",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/popup-forms/",
+    languages: {
+      "en-AU": "/services/microsoft-word/popup-forms/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Database Development and Solutions | Office Expert Australia",
+  title: "Database Development and Solutions | Office Experts Group",
   description:
     "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
 
@@ -37,14 +36,17 @@ export const metadata = {
     // "database automation solutions",
     // "database consulting services",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/by-business-solution/database-development-and-solutions",
+    languages: {
+      "en-AU":
+        "/services/by-business-solution/database-development-and-solutions",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

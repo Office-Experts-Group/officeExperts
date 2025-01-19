@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 import styles from "../styles/animate.module.css";
 
 const AnimateOnScroll = ({
@@ -54,20 +53,6 @@ const AnimateOnScroll = ({
       {children}
     </div>
   );
-};
-
-AnimateOnScroll.propTypes = {
-  children: PropTypes.node.isRequired,
-  animation: PropTypes.oneOf([
-    "fade-up",
-    "fade-down",
-    "slide-left",
-    "slide-right",
-    "scale-up",
-    "fade",
-  ]),
-  delay: PropTypes.number,
-  duration: PropTypes.number,
 };
 
 export default AnimateOnScroll;

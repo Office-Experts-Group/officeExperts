@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Access Support and Training",
+  title: "Microsoft Access Support and Training | Office Experts Group",
   description:
     "Our expert team provides Microsoft Access database support and training services. We offer instant help and advice through remote access or phone support, with competitive rates and dedicated consultants available when you need them most.",
 
@@ -42,14 +41,15 @@ export const metadata = {
     // "professional Access help",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-access/access-support/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/access-support",
+    languages: {
+      "en-AU": "/services/microsoft-access/access-support",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

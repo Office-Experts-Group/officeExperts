@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import richmond from "../../public/pageHeros/richmond.webp";
 import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

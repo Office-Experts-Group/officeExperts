@@ -1,14 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title:
-    "Word and PowerPoint Experts Sydney | Document & Presentation Solutions",
+  title: "Word and PowerPoint Experts Sydney | Office Experts Group",
   description:
     "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
 
   openGraph: {
-    title: "Word and PowerPoint Experts Sydney",
+    title: "Word and PowerPoint Experts Sydney | Office Experts Group",
     description:
       "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney/",
@@ -42,16 +40,15 @@ export const metadata = {
     // "document consistency solutions",
     // "presentation design services",
   ],
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney/",
+    canonical: "/word-and-powerpoint-experts-sydney/",
+    languages: {
+      "en-AU": "/word-and-powerpoint-experts-sydney/",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

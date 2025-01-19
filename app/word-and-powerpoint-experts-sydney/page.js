@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import sydney from "../../public/pageHeros/sydney.webp";
 import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":
@@ -84,53 +91,6 @@ const schema = {
         },
       ],
       inLanguage: "en-AU",
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.officeexperts.com.au/#organization",
-      name: "Office Experts Group",
-      url: "https://www.officeexperts.com.au/",
-      telephone: "1300 102 810",
-      email: "consult@officeexperts.com.au",
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          telephone: "1300 102 810",
-          contactType: "customer service",
-          email: "consult@officeexperts.com.au",
-          availableLanguage: ["en", "en-AU"],
-        },
-      ],
-      areaServed: [
-        {
-          "@type": "Country",
-          name: "Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "New South Wales",
-        },
-      ],
-      logo: {
-        "@type": "ImageObject",
-        inLanguage: "en-AU",
-        "@id": "https://www.officeexperts.com.au/#/schema/logo/image/",
-        url: "/logo.png",
-        contentUrl: "/logo.png",
-        width: 1181,
-        height: 1181,
-        caption: "Office Experts Group",
-      },
-      image: {
-        "@id": "https://www.officeexperts.com.au/#/schema/logo/image/",
-      },
-      sameAs: [
-        "https://www.facebook.com/MSOfficeExperts",
-        "https://x.com/OfficeExpertsG1",
-        "https://www.instagram.com/officeexpertsgroup",
-        "https://www.linkedin.com/company/office-experts-group",
-        "https://www.youtube.com/channel/UCw2Xf02ukEwvM6fQ2lVZxuw",
-      ],
     },
   ],
 };

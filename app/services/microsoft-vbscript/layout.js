@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "VBScript Support | Need A VBScript Programmer | Excel Experts",
+  title: "VBScript Support | Office Experts Group",
   description:
     "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
 
@@ -42,13 +41,15 @@ export const metadata = {
     // "automated backup solutions",
     // "Windows automation services",
   ],
-  canonical: "https://www.officeexperts.com.au/services/microsoft-vbscript/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-vbscript",
+    languages: {
+      "en-AU": "/services/microsoft-vbscript",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

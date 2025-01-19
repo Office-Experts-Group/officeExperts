@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Data Manipulation | Microsoft Excel | Office Experts",
+  title: "Data Manipulation | Office Experts Group",
   description:
     "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
 
@@ -40,14 +39,15 @@ export const metadata = {
     // "data processing Perth",
   ],
 
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/data-manipulation/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/data-manipulation",
+    languages: {
+      "en-AU": "/services/microsoft-excel/data-manipulation",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

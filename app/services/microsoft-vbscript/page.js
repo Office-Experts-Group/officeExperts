@@ -9,9 +9,16 @@ import Segment4Repeat from "./(components)/Segment4Repeat";
 import desk from "../../../public/pageHeros/desk.webp";
 import seatMob from "../../../public/pageHeros/mob/seatMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-vbscript/",

@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import darwin from "../../public/pageHeros/darwin.webp";
 import darwinMob from "../../public/pageHeros/mob/darwinMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

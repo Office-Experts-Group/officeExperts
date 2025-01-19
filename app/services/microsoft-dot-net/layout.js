@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft .NET Services | C# | VB.net | VSTO",
+  title: "Microsoft .NET Services | C# | VB.net | VSTO | Office Experts Group",
   description:
     "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
 
@@ -40,13 +39,15 @@ export const metadata = {
     // "NET Office integration",
     // "NET SharePoint development",
   ],
-  canonical: "https://www.officeexperts.com.au/services/microsoft-dot-net/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/microsoft-dot-net",
+    languages: {
+      "en-AU": "/services/microsoft-access/microsoft-dot-net",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Office 365 Support and Managed Services",
+  title: "Office 365 Support and Managed Services | Office Experts Group",
   description:
     "Expert Office 365 managed services and support to help your business focus on core operations while we handle the technical aspects of Office 365.",
 
   keywords: [
-    "Office 365 managed services",
-    // "Office 365 support Australia",
+    "Microsoft Office 365 managed services",
+    "Microsoft Office 365 support",
     // "Office 365 technical support",
     // "Office 365 business solutions",
     // "Office 365 maintenance",
@@ -35,7 +34,3 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

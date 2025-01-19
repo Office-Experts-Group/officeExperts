@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Online Solution | Microsoft Office | Office Expert Australia",
+  title: "Online Solution | Office Experts Group",
   description:
     "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
 
@@ -41,14 +40,15 @@ export const metadata = {
     // "PowerPoint web sharing",
     // "Outlook online solutions",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/online-solutions/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-business-solution/online-solutions",
+    languages: {
+      "en-AU": "/services/by-business-solution/online-solutions",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

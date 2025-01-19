@@ -14,10 +14,17 @@ import SolutionsCarousel from "./(components)/SolutionsCarousel";
 import { getHomePageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getHomePageSchema(testimonials),
+    ...getHomePageSchema(testimonials)["@graph"],
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-access/",

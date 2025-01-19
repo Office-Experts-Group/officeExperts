@@ -13,10 +13,17 @@ import { testimonials } from "../../../testimonials";
 import longDesk from "../../../public/pageHeros/longDesk.webp";
 import graphTableMob from "../../../public/pageHeros/mob/graphTableMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials),
+    ...getTestimonialsPageSchema(testimonials)["@graph"],
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-powerpoint/",

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "3rd Party Application | Office Integration | Office Expert",
+  title: "3rd Party Application | Office Experts Group",
   description:
     "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
 
@@ -37,14 +36,17 @@ export const metadata = {
     // "Office automation",
     // "VBA development",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical:
+      "/services/by-business-solution/3rd-party-application-or-office-integration",
+    languages: {
+      "en-AU":
+        "/services/by-business-solution/3rd-party-application-or-office-integration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

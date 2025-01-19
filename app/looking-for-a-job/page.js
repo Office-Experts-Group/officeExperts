@@ -11,9 +11,28 @@ import BlackSegment from "./(components)/BlackSegment";
 import resume from "../../public/pageHeros/resume.webp";
 import resumeMob from "../../public/pageHeros/mob/resumeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.officeexperts.com.au/#website",
+      url: "https://www.officeexperts.com.au/",
+      name: "Office experts",
+      description: "Microsoft Excel, Microsoft Access, Power BI, MS Office",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://www.officeexperts.com.au/?s={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/looking-for-a-job/",

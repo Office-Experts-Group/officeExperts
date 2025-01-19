@@ -13,9 +13,16 @@ import faqs from "../../../../faqs/corporate-identity";
 import invoice from "../../../../public/pageHeros/invoice.webp";
 import codingMob from "../../../../public/pageHeros/mob/codingMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

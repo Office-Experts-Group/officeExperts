@@ -11,9 +11,16 @@ import VideoSegment2 from "./(components)/VideoSegment2";
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 import graph from "../../../../public/pageHeros/graph.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

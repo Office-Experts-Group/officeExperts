@@ -1,10 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "PowerPoint Consulting Services | PowerPoint Design | PowerPoint Experts",
+  title: "PowerPoint Consulting Services | Office Experts Group",
   description:
     "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
 
@@ -42,13 +40,15 @@ export const metadata = {
     // "PowerPoint brand compliance",
   ],
 
-  canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-powerpoint/",
+    languages: {
+      "en-AU": "/services/microsoft-powerpoint/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

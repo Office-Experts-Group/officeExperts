@@ -1,10 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import PropTypes from "prop-types";
 
 import styles from "../styles/serviceHero.module.css";
 
-const ServiceHero = ({ title, desktopImage, mobileImage, altMob, altDesk }) => {
+const ServiceHero = ({
+  title,
+  desktopImage,
+  mobileImage,
+  altMob,
+  altDesk,
+  isMeetTeam,
+}) => {
   return (
     <section className={styles.serviceHero}>
       <div className={styles.imageContainer}>
@@ -30,18 +36,15 @@ const ServiceHero = ({ title, desktopImage, mobileImage, altMob, altDesk }) => {
           style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </div>
-      <h1>{title}</h1>
+      <h1
+        style={
+          isMeetTeam ? { fontSize: "clamp(3rem, 6vw, 8vw)" } : { fontSize: "" }
+        }
+      >
+        {title}
+      </h1>
     </section>
   );
-};
-
-ServiceHero.propTypes = {
-  title: PropTypes.string,
-  desktopImage: PropTypes.object,
-  mobileImage: PropTypes.object,
-  altDesk: PropTypes.string,
-  altMob: PropTypes.string,
-  objectPosition: PropTypes.string,
 };
 
 export default ServiceHero;

@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Word and PowerPoint Experts Perth",
+  title: "Word and PowerPoint Experts Perth | Office Experts Group",
   description:
     "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
 
   openGraph: {
-    title: "Word and PowerPoint Experts Perth",
+    title: "Word and PowerPoint Experts Perth | Office Experts Group",
     description:
       "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth/",
@@ -17,7 +16,7 @@ export const metadata = {
     "Microsoft PowerPoint designers Perth",
     "Microsoft Word designers Perth",
     // "Word presentation templates Perth",
-    // "PowerPoint customization Perth",
+    // "PowerPoint customisation Perth",
     // "Microsoft Office consultants Perth",
     // "Document design services Perth",
     // "PowerPoint automation Perth",
@@ -30,16 +29,15 @@ export const metadata = {
     // "PowerPoint experts Perth",
     // "Word consultants Perth",
   ],
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth/",
+    canonical: "/word-and-powerpoint-experts-perth/",
+    languages: {
+      "en-AU": "/word-and-powerpoint-experts-perth/",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

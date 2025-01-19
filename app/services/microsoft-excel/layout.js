@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Microsoft Excel Consulting | Excel Programmers | Excel Experts",
+  title: "Microsoft Excel Consulting | Office Experts Group",
   description:
     "Our Microsoft Excel programming services can enhance your productivity. Contact our expert Excel specialists to help your business excel.",
 
   keywords: [
-    "Excel macro programming",
+    // "Excel macro programming",
     // Core Excel services
-    // "Excel consulting services",
-    // "Excel programmers Australia",
+    "Excel consulting services",
+    "Excel programmers Australia",
     // "Excel VBA development",
     // "Excel automation solutions",
 
@@ -36,13 +35,15 @@ export const metadata = {
     // "Excel data analysis",
   ],
 
-  canonical: "https://www.officeexperts.com.au/services/microsoft-excel/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/",
+    languages: {
+      "en-AU": "/services/microsoft-excel/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

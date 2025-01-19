@@ -12,9 +12,16 @@ import faqs from "../../../../faqs/fill-in-forms";
 import penPoint from "../../../../public/pageHeros/penPoint.webp";
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

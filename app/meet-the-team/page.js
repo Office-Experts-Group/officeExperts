@@ -7,9 +7,16 @@ import Contact from "../../components/Contact";
 import handShake from "../../public/pageHeros/handShake.webp";
 import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id": "https://officeexperts.com.au/meet-the-team/",
@@ -60,6 +67,7 @@ const Page = () => {
         mobileImage={handShakeMob}
         altDesk={"Handshake"}
         altMob={"Handshake"}
+        isMeetTeam={true}
       />
       <MeetTheTeam />
       <Contact />

@@ -4,9 +4,16 @@ import React from "react";
 import styles from "../../styles/boringStuff.module.css";
 import ServiceHero from "../../components/ServiceHero";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/terms-and-conditions/",

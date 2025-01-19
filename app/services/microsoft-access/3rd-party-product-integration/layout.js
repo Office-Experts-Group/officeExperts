@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Access Database Integration | Access Integration | Access Experts",
+  title: "Access Database Integration | Office Experts Group",
   description:
     "Our Microsoft Access database experts can help determine whether your integration requirements are viable and build the required functionality for your company with competitive pricing and a prompt, high quality service.",
 
@@ -39,14 +38,15 @@ export const metadata = {
     // "Melbourne Access integration",
     // "Brisbane database services",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-access/3rd-party-product-integration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/3rd-party-product-integration",
+    languages: {
+      "en-AU": "/services/microsoft-access/3rd-party-product-integration",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

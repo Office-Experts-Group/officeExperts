@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import perth from "../../public/pageHeros/perth.webp";
 import perthMob from "../../public/pageHeros/mob/perthMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

@@ -10,10 +10,17 @@ import { testimonials } from "../../testimonials";
 import testimonialsPic from "../../public/pageHeros/testimonials.webp";
 import testimonialsMob from "../../public/pageHeros/mob/testimonialsMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials),
+    ...getTestimonialsPageSchema(testimonials)["@graph"],
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/client-testimonials/",

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import dynamic from "next/dynamic";
 
 import localFont from "next/font/local";
@@ -72,13 +71,13 @@ export const metadata = {
   title:
     "Microsoft Office Consulting | Office Solutions | Office Experts Group",
   description:
-    "Leading Microsoft Office consulting and solutions provider in Australia. Specializing in comprehensive Office solutions, integration, and business automation.",
+    "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
 
   // OpenGraph
   openGraph: {
     title: "Office Experts Group | Microsoft Office Consulting & Solutions",
     description:
-      "Leading Microsoft Office consulting and solutions provider in Australia. Specializing in comprehensive Office solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/",
     siteName: "Office Experts Group",
     images: [
@@ -152,7 +151,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import wollongong from "../../public/pageHeros/wollongong.webp";
 import wollongongMob from "../../public/pageHeros/mob/wollongongMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

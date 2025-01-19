@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Online Access Database Solutions | Microsoft Access Online",
+  title: "Online Access Database Solutions | Office Experts Group",
   description:
     "Innovative online Microsoft Access database solutions with cloud integration, including Office 365 and SharePoint compatibility. Cost-effective development with comprehensive mobile support.",
 
@@ -36,14 +35,15 @@ export const metadata = {
     // "cloud database management",
   ],
 
-  canonical:
-    "https://www.accessexperts.com.au/services/microsoft-access/access-online/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/access-online",
+    languages: {
+      "en-AU": "/services/microsoft-access/access-online",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

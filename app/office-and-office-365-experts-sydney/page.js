@@ -9,9 +9,16 @@ import LocationPromos from "../(components)/LocationPromos";
 import sydney from "../../public/pageHeros/sydney.webp";
 import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

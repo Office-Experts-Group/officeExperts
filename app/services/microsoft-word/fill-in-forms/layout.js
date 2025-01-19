@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Word Fill In Forms | Word Form Design | Form Experts",
+  title: "Microsoft Word Fill In Forms | Office Experts Group",
   description:
-    "Expert Word form design services specializing in user-friendly data entry solutions, form controls, and VBA integration. Professional form templates with consistent formatting.",
+    "Expert Word form design services Specialising in user-friendly data entry solutions, form controls, and VBA integration. Professional form templates with consistent formatting.",
 
   // OpenGraph
   openGraph: {
@@ -45,14 +44,15 @@ export const metadata = {
     // "form development",
     // "business documentation",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/fill-in-forms/",
+    languages: {
+      "en-AU": "/services/microsoft-word/fill-in-forms/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

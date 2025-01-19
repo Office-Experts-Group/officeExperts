@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
+// import Image from "next/image";
 
 import styles from "../styles/socialLinks.module.css";
+
+// import x from "../public/icons/x.png";
 
 const SocialLinks = ({ inNav }) => {
   return (
@@ -52,28 +55,22 @@ const SocialLinks = ({ inNav }) => {
         </svg>
       </Link>
 
-      <Link
+      {/* <Link
         href="https://www.twitter.com/OfficeExpertsG1"
         target="_blank"
         rel="noreferrer"
-        aria-label="visit our twitter page"
+        aria-label="visit our X formerly twitter page"
         className={inNav ? styles.socialLinkNav : ""}
       >
-        <svg
-          stroke="#f8f8f8"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1.2em"
-          width="1.2em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Twitter</title>
-          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-      </Link>
+        <Image
+          src={x}
+          alt="X (formerly Twitter) icon"
+          width={15}
+          height={15}
+          style={{ filter: "brightness(150%)" }}
+          priority
+        />
+      </Link> */}
 
       <Link
         href="https://www.youtube.com/channel/UCw2Xf02ukEwvM6fQ2lVZxuw"

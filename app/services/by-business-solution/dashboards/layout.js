@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Dashboard Experts",
+  title: "Dashboard Experts | Office Experts Group",
   description:
     "We are experts in Data! Data import/export, parsing and processing Data formatting automation Automated data manipulation solutions using VBA. Call us 1300102810",
 
@@ -38,14 +37,15 @@ export const metadata = {
     // "cloud dashboard development",
     // "enterprise dashboard systems",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/by-business-solution/dashboards/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/by-business-solution/dashboards",
+    languages: {
+      "en-AU": "/services/by-business-solution/dashboards",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

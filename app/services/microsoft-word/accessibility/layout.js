@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Word Accessibility Solutions | Microsoft Word Accessibility",
+  title: "Microsoft Word Accessibility Solutions | Office Experts Group",
   description:
     "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
 
   keywords: [
     // Core accessibility services
-    // "word accessibility solutions",
+    "Microsoft word accessibility solutions",
     // "microsoft word accessibility",
     // "accessible word documents",
     // "word document accessibility",
@@ -39,14 +38,15 @@ export const metadata = {
     // "document accessibility automation",
     // "accessibility standards compliance",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/accessibility/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/accessibility/",
+    languages: {
+      "en-AU": "/services/microsoft-word/accessibility/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

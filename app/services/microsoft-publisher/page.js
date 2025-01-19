@@ -9,9 +9,16 @@ import Segment4Repeat from "./(components)/Segment4Repeat";
 import calculator from "../../../public/pageHeros/calculator.webp";
 import calcMob from "../../../public/pageHeros/mob/calcMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-publisher/",

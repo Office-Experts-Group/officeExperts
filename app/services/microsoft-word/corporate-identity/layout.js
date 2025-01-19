@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Word/Corporate Global Template Solution / Corporate Governance",
+  title: "Corporate Identity Solutions | Office Experts Group",
   description:
-    "Our team of Word design experts will deliver your document templates with consistent formatting, protecting your corporate identity and allowing your team to focus on content.",
+    "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
 
   // OpenGraph
   openGraph: {
-    title: "Corporate Identity Solutions | Word Document Protection",
+    title: "Corporate Identity Solutions | Office Experts Group",
     description:
       "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
     url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
@@ -45,14 +44,15 @@ export const metadata = {
     // "template management system",
     // "brand compliant documents",
   ],
-  canonical:
-    "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/corporate-identity/",
+    languages: {
+      "en-AU": "/services/microsoft-word/corporate-identity/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

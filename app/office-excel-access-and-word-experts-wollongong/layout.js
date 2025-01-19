@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Office Experts Wollongong",
+  title: "Microsoft Office Consultants Wollongong | Office Experts Group",
   description:
     "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Office Experts Wollongong",
+    title: "Microsoft Office Consultants Wollongong | Office Experts Group",
     description:
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
@@ -36,16 +35,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
+    canonical: "/office-excel-access-and-365-experts-wollongong",
+    languages: {
+      "en-AU": "/office-excel-access-and-365-experts-wollongong",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

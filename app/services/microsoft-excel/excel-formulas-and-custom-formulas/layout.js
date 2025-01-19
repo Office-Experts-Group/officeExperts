@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel Formulas and Custom Formulas | Office Expert Australia",
+  title: "Excel Formulas and Custom Formulas | Office Experts Group",
   description:
     "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
 
@@ -36,14 +35,15 @@ export const metadata = {
     // "Excel formula training",
     // "Excel formula solutions",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
+    languages: {
+      "en-AU": "/services/microsoft-excel/excel-formulas-and-custom-formulas",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

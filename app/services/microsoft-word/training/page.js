@@ -17,9 +17,16 @@ import Contents from "./(components)/Contents";
 import support from "../../../../public/pageHeros/support.webp";
 import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
-  title: "Corporate Word Solutions",
+  title: "Corporate Word Solutions | Office Experts Group",
   description:
     "Advanced Corporate Word Template Solution enabling users to efficiently create corporate documents in a controlled environment with consistent formatting, automated processes, and protected branding guidelines.",
 
   openGraph: {
-    title: "Corporate Word Solutions",
+    title: "Corporate Word Solutions | Office Experts Group",
     description:
       "Advanced Corporate Word Template Solution enabling users to efficiently create corporate documents in a controlled environment with consistent formatting, automated processes, and protected branding guidelines.",
     url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-global-template-solution/",
@@ -15,7 +14,7 @@ export const metadata = {
 
   keywords: [
     // Core services
-    // "corporate Word template solution",
+    "corporate Word template solutions",
     // "Word document automation",
     "corporate branding templates",
     // "business document templates",
@@ -42,14 +41,15 @@ export const metadata = {
     // "style guide enforcement",
     // "template standardization",
   ],
-  canonical:
-    "https://www.wordexperts.com.au/services/microsoft-word/corporate-global-template-solution/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/corporate-global-template-solution/",
+    languages: {
+      "en-AU": "/services/microsoft-word/corporate-global-template-solution/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

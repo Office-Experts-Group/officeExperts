@@ -1,16 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title:
-    "Word Template Creation | Word Document Creation | Microsoft Word Services | Word Experts",
+    "Word Template Creation | Word Document Creation | Office Experts Group",
   description:
     "Our team of Word design experts can create your company documents and templates with our easy to use templates, complete with your branding, a consistent look and a professional feel.",
 
   // OpenGraph
   openGraph: {
-    title: "Word Document/Template Creation",
+    title:
+      "Word Template Creation | Word Document Creation | Office Experts Group",
     description:
       "Our team of Word design experts can create your company documents and templates with our easy to use templates, complete with your branding, a consistent look and a professional feel.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation/",
@@ -36,7 +36,7 @@ export const metadata = {
     // // Features
     // "Word template automation",
     // "Word document formatting",
-    // "Word template customization",
+    // "Word template customisation",
     // "Word branding solutions",
     // "Word document consistency",
 
@@ -47,14 +47,15 @@ export const metadata = {
     // "company document templates",
     // "document branding services",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/word-document-template-creation/",
+    languages: {
+      "en-AU": "/services/microsoft-word/word-document-template-creation/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

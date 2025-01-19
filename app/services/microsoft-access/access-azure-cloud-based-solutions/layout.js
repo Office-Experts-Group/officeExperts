@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Azure Cloud Access Solution",
+  title: "Azure Cloud Access Solution | Office Experts Group",
   description:
     "Microsoft Azure cloud hosting solutions for Access databases. Host your data securely in the cloud and access it from anywhere with our custom built Access databases and cloud integration services.",
 
@@ -37,14 +36,15 @@ export const metadata = {
     // "cloud database management",
     // "Access business solutions",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-access/access-azure-cloud-based-solutions/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-access/access-azure-cloud-based-solutions",
+    languages: {
+      "en-AU": "/services/microsoft-access/access-azure-cloud-based-solutions",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

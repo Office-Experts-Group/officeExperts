@@ -1,15 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Word Upgrades and Migration | Office Expert Australia",
+  title: "Word Upgrades and Migration | Office Experts Group",
   description:
     "Expert Microsoft Word upgrade and migration services. Our team helps ensure smooth transitions between versions, fixes formatting issues, and handles PDF conversions professionally.",
 
   // OpenGraph
   openGraph: {
-    title: "Word Upgrades and Migration Services",
+    title: "Word Upgrades and Migration Services | Office Experts Group",
     description:
       "Professional Microsoft Word upgrade and migration services. Specialists in version transitions, formatting fixes, and PDF conversions.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration/",
@@ -50,14 +49,15 @@ export const metadata = {
     // "corporate Word solutions",
     // "professional Word services",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-word/upgrades-and-migration/",
+    languages: {
+      "en-AU": "/services/microsoft-word/upgrades-and-migration/",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -14,9 +14,16 @@ import faqs from "../../../../faqs/access-support";
 import support from "../../../../public/pageHeros/support.webp";
 import handShakeMob from "../../../../public/pageHeros/mob/handShakeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

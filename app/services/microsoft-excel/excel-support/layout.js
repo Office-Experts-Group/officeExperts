@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel One on One Training | Microsoft Excel Help & Support",
+  title: "Microsoft Excel Help & Support | Office Experts Group",
   description:
     "Professional Excel training and support services across Australia. Get instant expert guidance via remote access or onsite with our experienced Excel consultants.",
 
   keywords: [
     // Core Excel support keywords
     "Excel one on one training",
-    // "Excel expert support",
+    "Excel expert support",
     // "Excel consultant services",
     // "Excel help Australia",
     // "remote Excel training",
@@ -42,14 +41,15 @@ export const metadata = {
     // "professional Excel guidance",
     // "Excel business consulting",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-excel/excel-support/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-excel/excel-support",
+    languages: {
+      "en-AU": "/services/microsoft-excel/excel-support",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

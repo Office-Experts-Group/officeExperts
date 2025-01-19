@@ -1,16 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Excel and Access Database Experts Sydney | Database Development | Excel Development",
+  title: "Excel and Access Database Experts Sydney | Office Experts Group",
   description:
     "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
 
   // OpenGraph
   openGraph: {
-    title: "Excel and Access Database Experts Sydney",
+    title: "Excel and Access Database Experts Sydney | Office Experts Group",
     description:
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
@@ -33,16 +31,15 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
+    canonical: "/excel-and-access-experts-sydney",
+    languages: {
+      "en-AU": "/excel-and-access-experts-sydney",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

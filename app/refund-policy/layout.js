@@ -1,21 +1,21 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title: "Refund Policy | Office Experts Group",
   description:
-    "This Refund Policy should be read in conjunction with our Service Agreement. Your rights under the Service Agreement can be found at section 15.\n\n1. Refunds for legal services provided\nOffice Experts Group is bound by Australian Consumer Law ('ACL') obligations to provide IT services with due care and skill within a reasonable period of time.",
+    "Read the refund policy for Office Experts, detailing how we accept and process refunds for our professional services.",
+  keywords: "refund policy, office experts",
 
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://www.officeexperts.com.au/refund-policy/",
+    canonical: "/refund-policy",
+    languages: {
+      "en-AU": "/refund-policy",
+    },
   },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

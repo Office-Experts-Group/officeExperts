@@ -13,9 +13,16 @@ import faqs from "../../../../faqs/remove-repitition";
 import desk from "../../../../public/pageHeros/desk.webp";
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

@@ -3,9 +3,16 @@ import Link from "next/link";
 
 import styles from "../../styles/boringStuff.module.css";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/privacy-policy/",

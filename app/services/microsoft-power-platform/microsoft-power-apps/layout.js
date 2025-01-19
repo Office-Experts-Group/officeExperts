@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Power Apps Services Australia",
+  title: "Microsoft Power Apps Services Australia | Office Experts Group",
   description:
     "Our certified experts develop custom business apps for mobile and web, using Microsoft Power Apps canvas and model-driven solutions. Competitive pricing and minimal coding approach.",
 
   // Additional metadata
   keywords: [
     // Core services
-    "power apps development",
+    "Microsoft power apps development",
     // "custom business apps",
     // "canvas apps development",
     // "model driven apps",
@@ -41,14 +40,15 @@ export const metadata = {
     // "power apps sharepoint integration",
     // "power apps azure solutions",
   ],
-  canonical:
-    "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-apps/",
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-power-platform/microsoft-power-apps",
+    languages: {
+      "en-AU": "/services/microsoft-power-platform/microsoft-power-apps",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
-
-RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

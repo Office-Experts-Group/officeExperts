@@ -13,9 +13,16 @@ import faqs from "../../../../faqs/3rd-party-product-integration.js";
 import support from "../../../../public/pageHeros/support.webp";
 import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../../../utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":
@@ -81,7 +88,13 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero title={"Third Party Product Integration"} />
+      <ServiceHero
+        title={"Third Party Product Integration"}
+        desktopImage={support}
+        mobileImage={coffeeMob}
+        altDesk={"support"}
+        altMob={"coffee on a table"}
+      />
       <PageSegmentMain />
       <PageSegment4 />
       <ExpertsAwait />
