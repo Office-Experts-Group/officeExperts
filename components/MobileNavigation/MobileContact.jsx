@@ -24,8 +24,8 @@ const MobileContact = ({ styles }) => {
 
         <div className={styles.navContact}>
           <Image src={msg} alt="email" width={12} height={12} />
-          <Link href="tel:+61-1300-12-20-38">
-            <span>1300 122 038</span>
+          <Link href="tel:+61-1300-102-810">
+            <span>1300 102 810</span>
           </Link>
         </div>
       </div>

@@ -1,11 +1,14 @@
 .headTop {
+  position: fixed;
+  width: 100vw;
+  max-width: 100vw;
   z-index: 1000;
   background-color: #1e1e1e;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #f8f8f8;
-  padding: 0.7rem;
+  padding: 0.7rem 2.2rem;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -31,13 +34,195 @@
 .topContacts {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 .topContacts img {
   margin-right: 0.5rem;
 }
 .topContacts div:last-of-type {
   margin-bottom: -0.1rem;
+}
+@media screen and (max-width: 1260px) {
+  .topContacts {
+    display: none;
+  }
+}
+
+.locationWrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 160px;
+}
+.locationWrapper span {
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+  letter-spacing: 1px;
+}
+
+@keyframes location1 {
+  0%, 9.09% {
+    opacity: 1;
+  }
+  9.1%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location2 {
+  0%, 9.08% {
+    opacity: 0;
+  }
+  9.09%, 18.18% {
+    opacity: 1;
+  }
+  18.19%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location3 {
+  0%, 18.17% {
+    opacity: 0;
+  }
+  18.18%, 27.27% {
+    opacity: 1;
+  }
+  27.28%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location4 {
+  0%, 27.26% {
+    opacity: 0;
+  }
+  27.27%, 36.36% {
+    opacity: 1;
+  }
+  36.37%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location5 {
+  0%, 36.35% {
+    opacity: 0;
+  }
+  36.36%, 45.45% {
+    opacity: 1;
+  }
+  45.46%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location6 {
+  0%, 45.44% {
+    opacity: 0;
+  }
+  45.45%, 54.54% {
+    opacity: 1;
+  }
+  54.55%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location7 {
+  0%, 54.53% {
+    opacity: 0;
+  }
+  54.54%, 63.63% {
+    opacity: 1;
+  }
+  63.64%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location8 {
+  0%, 63.62% {
+    opacity: 0;
+  }
+  63.63%, 72.72% {
+    opacity: 1;
+  }
+  72.73%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location9 {
+  0%, 72.71% {
+    opacity: 0;
+  }
+  72.72%, 81.81% {
+    opacity: 1;
+  }
+  81.82%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location10 {
+  0%, 81.80% {
+    opacity: 0;
+  }
+  81.81%, 90.90% {
+    opacity: 1;
+  }
+  90.91%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes location11 {
+  0%, 90.89% {
+    opacity: 0;
+  }
+  90.90%, 99.99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loc1 {
+  animation: location1 33s infinite ease-in-out;
+}
+
+.loc2 {
+  animation: location2 33s infinite ease-in-out;
+}
+
+.loc3 {
+  animation: location3 33s infinite ease-in-out;
+}
+
+.loc4 {
+  animation: location4 33s infinite ease-in-out;
+}
+
+.loc5 {
+  animation: location5 33s infinite ease-in-out;
+}
+
+.loc6 {
+  animation: location6 33s infinite ease-in-out;
+}
+
+.loc7 {
+  animation: location7 33s infinite ease-in-out;
+}
+
+.loc8 {
+  animation: location8 33s infinite ease-in-out;
+}
+
+.loc9 {
+  animation: location9 33s infinite ease-in-out;
+}
+
+.loc10 {
+  animation: location10 33s infinite ease-in-out;
+}
+
+.loc11 {
+  animation: location11 33s infinite ease-in-out;
 }
 
 .header {
@@ -63,7 +248,6 @@
 .header.scrolled {
   background-color: #1e1e1e;
   border-bottom: none;
-  margin-top: 0;
   transition: all 0.5s ease;
   height: 80px;
 }
@@ -81,6 +265,9 @@
   .header {
     margin-top: 0;
   }
+}
+.header li {
+  list-style: none;
 }
 
 .nav {
@@ -345,6 +532,74 @@
   border-right: 1px solid rgba(255, 255, 255, 0.275);
   margin-right: 0.8rem;
   padding-right: 0.8rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.275);
+  margin-left: 0.8rem;
+  padding-left: 0.8rem;
+}
+@media screen and (max-width: 1260px) {
+  .socialLinks {
+    display: none;
+  }
+}
+
+.microContainerScrolled,
+.microContainer {
+  position: relative;
+}
+
+.logoHover {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: #f8f8f8;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 1rem;
+  position: absolute;
+  bottom: -8rem;
+  width: 350px;
+}
+
+.logoHoverScrolled {
+  bottom: -6rem;
+}
+
+.microLogo {
+  filter: brightness(80%);
+  scale: 1;
+  transition: all 0.5s ease;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) and (max-width: 1260px) {
+  .microLogo {
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 540px) {
+  .microLogo {
+    display: none;
+  }
+}
+@media (max-width: 449px) {
+  .microLogo {
+    scale: 0.5;
+  }
+}
+
+.microLogoScrolled {
+  filter: brightness(100%);
+  scale: 0.7;
+  margin: 0 -1.2rem 0 auto;
+  transition: all 0.5s ease;
+}
+@media (max-width: 449px) {
+  .microLogoScrolled {
+    scale: 0.5;
+  }
 }
 
 .searchIcon {
@@ -356,7 +611,7 @@
   .logoImg {
     max-width: 150px;
     max-height: 65px;
-    margin: 1rem 0;
+    margin: 1rem 0 1rem -0.5rem;
   }
 }
 

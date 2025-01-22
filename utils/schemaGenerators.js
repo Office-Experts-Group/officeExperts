@@ -7,11 +7,19 @@ export const generateProfessionalServiceSchema = () => ({
   description: "Professional Microsoft Office consulting and support services",
   priceRange: "$$",
   serviceType: "Microsoft Office Consulting",
-  availableService: {
-    "@type": "Service",
-    name: "Remote Consulting",
-    description: "Australia-wide remote Microsoft Office consulting services",
-  },
+  availableService: [
+    {
+      "@type": "Service",
+      name: "Remote Consulting",
+      description: "Australia-wide remote Microsoft Office consulting services",
+    },
+    {
+      "@type": "Service",
+      name: "On-site Consulting",
+      description:
+        "In-house Microsoft Office consulting services available in major metropolitan areas",
+    },
+  ],
   areaServed: [
     {
       "@type": "Country",
@@ -249,7 +257,7 @@ export const generateProfessionalServiceSchema = () => ({
     "@type": "Organization",
     "@id": `https://www.officeexperts.com.au/#organization`,
   },
-  telephone: "1300 122 038",
+  telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
 });
 
@@ -258,14 +266,14 @@ export const generateOrganizationSchema = () => ({
   "@id": "https://www.officeexperts.com.au/#organization",
   name: "Office Experts Group",
   url: "https://www.officeexperts.com.au/",
-  telephone: "1300 122 038",
+  telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
   // Enhanced contact point information
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer service",
-      telephone: "1300 122 038",
+      telephone: "1300 102 810",
       email: "consult@officeexperts.com.au",
       availableLanguage: ["en", "en-AU"],
       contactOption: "TollFree",
@@ -275,15 +283,313 @@ export const generateOrganizationSchema = () => ({
   // Remote service availability
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Services",
+    name: "Microsoft Office Consulting Services",
     itemListElement: [
+      // Excel Experts (excelexperts.com.au)
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Remote Microsoft Office Consulting",
+          name: "Add-in Development",
           description:
-            "Australia-wide remote Microsoft Office consulting and support",
+            "Custom Excel add-in development for enhanced spreadsheet functionality",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Manipulation",
+          description:
+            "Professional data cleaning, transformation, and analysis services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Pivot Tables & Reporting",
+          description:
+            "Advanced pivot table creation and custom reporting solutions",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Excel Support",
+          description:
+            "Ongoing technical support and maintenance for Excel solutions",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Development",
+          description: "Tailored Excel solution design and implementation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Formula Development",
+          description: "Complex Excel formula creation and optimisation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Upgrades & Migration",
+          description: "Excel version upgrades and workbook migration services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "VBA Macro Development",
+          description: "Custom VBA macro programming for Excel automation",
+        },
+      },
+      // Access Experts (accessexperts.com.au)
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Azure Cloud Integration",
+          description: "Access database integration with Azure cloud services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Online Access Solutions",
+          description: "Web-enabled Microsoft Access application development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Third-party Integration",
+          description:
+            "Integration of Access with external systems and applications",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Technical Support",
+          description: "Comprehensive Access database support and maintenance",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Database Migration",
+          description: "Access database upgrades and data migration services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Solutions",
+          description: "Bespoke Access database design and development",
+        },
+      },
+      // Word Experts (wordexperts.com.au)
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Template Creation",
+          description: "Professional Word document template development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Template Conversion",
+          description: "Legacy template modernisation and conversion services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Accessibility Solutions",
+          description: "WCAG compliance and accessibility implementation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom UI Development",
+          description: "Customised toolbar and ribbon interface development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Training Services",
+          description: "Specialised Microsoft Word training programs",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Form Development",
+          description: "Interactive form creation and automation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Government Solutions",
+          description:
+            "Specialised documentation solutions for government departments",
+        },
+      },
+      // Power Platform Experts (powerplatformexperts.com.au)
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Power BI Solutions",
+          description: "Custom dashboard development and data visualisation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Power Apps Development",
+          description: "Custom business application development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Power Automate",
+          description: "Workflow automation and business process optimization",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Power Pages",
+          description: "External-facing website development and portals",
+        },
+      },
+      // Office Experts (officeexperts.com.au)
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Office 365 Migration",
+          description: "Complete Office 365 migration and implementation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Development",
+          description: "Tailored Microsoft Office solution development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Process Automation",
+          description: "Office-wide business process automation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Cloud Solutions",
+          description: "OneDrive and SharePoint implementation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Exchange Setup",
+          description: "Exchange Online configuration and management",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Remote Solutions",
+          description: "Cross-device data access and management",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Managed Services",
+          description: "Comprehensive Office 365 support and maintenance",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Excel Services",
+          description: "Advanced Excel development and support",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Access Solutions",
+          description: "Database development and maintenance",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Word Services",
+          description: "Document automation and template development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "PowerPoint Services",
+          description: "Presentation design and automation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Power Platform Integration",
+          description: "Business intelligence and process automation",
         },
       },
     ],

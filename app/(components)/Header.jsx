@@ -11,12 +11,13 @@ import SocialLinks from "../../components/SocialLinks";
 import MobileNav from "../../components/MobileNavigation/MobileNav";
 
 import logo from "../../public/logo300x130.webp";
-import SearchInput from "../../components/SearchInput";
+import certified from "../../public/microsoft/certified.gif";
+import ideaBlue from "../../public/icons/ideaBlue.webp";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [search, setSearch] = useState(false);
+  const [logoHover, setLogoHover] = useState(false);
 
   useEffect(() => {
     // Check initial scroll position
@@ -55,12 +56,10 @@ const Header = () => {
             width={300}
             height={130}
             className={styles.logoImg}
+            priority
           />
         </Link>
       </div>
-
-      {/* <MobileNav /> */}
-      <MobileNav />
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
@@ -120,31 +119,47 @@ const Header = () => {
         </ul>
       </nav>
 
+      <div
+        className={
+          isScrolled ? styles.microContainerScrolled : styles.microContainer
+        }
+        onMouseEnter={() => setLogoHover(true)}
+        onMouseLeave={() => setLogoHover(false)}
+      >
+        <Image
+          src={certified}
+          alt="Microsoft certified logo"
+          width={130}
+          height={85}
+          className={isScrolled ? styles.microLogoScrolled : styles.microLogo}
+        />
+
+        {logoHover && (
+          <div
+            className={`${styles.logoHover} ${
+              isScrolled && styles.logoHoverScrolled
+            }`}
+          >
+            <Image src={ideaBlue} alt="Idea Blue Logo" width={60} height={60} />
+            <p>
+              We are officially Microsoft Certified, Microsoft Partners and
+              Certified Solutions Associates!
+            </p>
+          </div>
+        )}
+      </div>
+
       <div className={styles.headerContacts}>
         <div className={styles.socialLinks}>
           <SocialLinks />
         </div>
-        {!search ? (
-          <svg
-            onClick={() => setSearch(!search)}
-            className={styles.searchIcon}
-            stroke="#f8f8f8"
-            fill="#f8f8f8"
-            strokeWidth="0"
-            viewBox="0 0 24 24"
-            height="1.4em"
-            width="1.4em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19.023,16.977c-0.513-0.488-1.004-0.997-1.367-1.384c-0.372-0.378-0.596-0.653-0.596-0.653l-2.8-1.337 C15.34,12.37,16,10.763,16,9c0-3.859-3.14-7-7-7S2,5.141,2,9s3.14,7,7,7c1.763,0,3.37-0.66,4.603-1.739l1.337,2.8 c0,0,0.275,0.224,0.653,0.596c0.387,0.363,0.896,0.854,1.384,1.367c0.494,0.506,0.988,1.012,1.358,1.392 c0.362,0.388,0.604,0.646,0.604,0.646l2.121-2.121c0,0-0.258-0.242-0.646-0.604C20.035,17.965,19.529,17.471,19.023,16.977z M9,14 c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S11.757,14,9,14z"></path>
-          </svg>
-        ) : (
-          <SearchInput />
-        )}
         <Link href="/contact-us" className="btn">
           Contact Us
         </Link>
       </div>
+
+      {/* <MobileNav /> */}
+      <MobileNav />
     </header>
   );
 };
