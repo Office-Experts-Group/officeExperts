@@ -18,7 +18,7 @@ import automation from "../../public/350x260/automation.webp";
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
-      title: "Microsoft Azure",
+      title: "Azure",
       link: "/services/by-business-solution/cloud-based-solutions-with-azure",
       image: hands,
       alt: "hands",
@@ -27,7 +27,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft PowerPoint",
+      title: "PowerPoint",
       link: "/services/microsoft-powerpoint",
       image: magnify,
       alt: "magnify",
@@ -39,7 +39,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft Office",
+      title: "Office",
       link: "/services/microsoft-office",
       image: desk,
       alt: "desk",
@@ -49,7 +49,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft SQL Server",
+      title: "SQL Server",
       link: "/services/by-business-solution/office-and-sql-server-integration",
       image: graph,
       alt: "graph",
@@ -61,7 +61,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft .NET",
+      title: ".NET",
       link: "/services/microsoft-dot-net",
       image: dashboard,
       alt: "dashboard",
@@ -73,7 +73,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft Office 365",
+      title: "Office 365",
       link: "/services/microsoft-office-365",
       image: keyboard,
       alt: "keyboard",
@@ -82,7 +82,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft Outlook",
+      title: "Outlook",
       link: "/services/by-business-solution/custom-office-solutions",
       image: coder,
       alt: "coder",
@@ -94,7 +94,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft VBScript",
+      title: "VBScript",
       link: "/services/microsoft-vbscript",
       image: automation,
       alt: "automation",
@@ -108,7 +108,7 @@ const SolutionsCarousel = () => {
       ],
     },
     {
-      title: "Microsoft Publisher",
+      title: "Publisher",
       link: "/services/microsoft-publisher",
       image: document,
       alt: "document",
@@ -175,7 +175,7 @@ const SolutionsCarousel = () => {
                   </div>
                   <div className={styles.popIn}>
                     <h3>
-                      <span>Word Experts</span>
+                      <span>Microsoft</span>
                       <br />
                       {solution.title}
                     </h3>

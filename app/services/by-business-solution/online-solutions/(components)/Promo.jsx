@@ -26,9 +26,7 @@ const Promo = () => {
             <Link href={"/services/by-business-solution/online-solutions"}>
               - Microsoft SharePoint
             </Link>
-            <Link href={"/services/by-business-solution/online-solutions"}>
-              - Google Docs
-            </Link>
+            <p>- Google Docs</p>
           </div>
         </div>
       </AnimateOnScroll>
