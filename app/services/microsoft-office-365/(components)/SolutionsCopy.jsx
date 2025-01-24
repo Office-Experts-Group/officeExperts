@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutions.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
+import project1 from "../../../../public/cards/deskGraph300x250.webp";
+import project2 from "../../../../public/cards/deskGroup350x200.webp";
 
 const Solutions = () => {
   const solutionsData = [

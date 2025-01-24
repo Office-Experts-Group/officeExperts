@@ -122,8 +122,8 @@ const Page = () => {
         desktopImage={invoice}
         mobileImage={codingMob}
         altDesk={"invoice on a computer screen"}
-        mobDesk={"laptop with programmers code displayed"}
-      />{" "}
+        altMob={"laptop with programmers code displayed"}
+      />
       <PageSegmentMain />
       <Segment4Repeat />
       <ExpertsAwait />

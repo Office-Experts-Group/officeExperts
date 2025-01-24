@@ -150,6 +150,22 @@ const REDIRECTS = [
       "/services/by-business-solution/database-development-and-solutions",
     permanent: true,
   },
+  {
+    source: "/services/office-and-sql-server-integration",
+    destination:
+      "/services/by-business-solution/office-and-sql-server-integration",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-power-bi",
+    destination: "/services/microsoft-power-platform/microsoft-power-bi",
+    permanent: true,
+  },
+  {
+    source: "/vba-macro-developmentVBA%20macros",
+    destination: "/services/microsoft-excel/vba-macro-development",
+    permanent: true,
+  },
 ];
 /** @type {import('next').NextConfig} */
 const nextConfig = {

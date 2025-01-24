@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import project1 from "../../../../public/cards/calcGraph350x200.webp";
+import project2 from "../../../../public/cards/deskGroup350x200.webp";
+import project3 from "../../../../public/cards/penGraph350x200.webp";
+import project4 from "../../../../public/cards/twoComputers350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [

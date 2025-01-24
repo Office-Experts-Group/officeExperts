@@ -3,10 +3,11 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/project-img-1.webp";
-import project2 from "../../../../public/project-img-2.webp";
-import project3 from "../../../../public/project-img-3.webp";
-import project4 from "../../../../public/project-img-4.webp";
+import project1 from "../../../../public/cards/graphHands350x200.webp";
+import project2 from "../../../../public/cards/data350x200.webp";
+import project3 from "../../../../public/350x260/graph.webp";
+import project4 from "../../../../public/350x260/magnify.webp";
+import project5 from "../../../../public/350x260/keyboard.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
@@ -47,7 +48,7 @@ const SolutionsCarousel = () => {
     {
       title: "Custom Add-in Creation",
       link: "/services/by-business-solution/add-in-creation",
-      image: project4,
+      image: project5,
       description: [
         "Need a new Office add-in?",
         "Our experienced programmers can create an add-in for your organisation to automate tasks and meet your requirements.",
