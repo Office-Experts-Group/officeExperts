@@ -12,6 +12,7 @@ const FooterHelpSection = () => {
       <Link href={"/terms-and-conditions"}>Terms and Conditions</Link>
       <Link href={"/privacy-policy"}>Privacy Policy</Link>
       <Link href={"/refund-policy"}>Refund Policy</Link>
+      <Link href={"/looking-for-a-job"}>Looking for a Job?</Link>
     </div>
   );
 };

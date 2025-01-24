@@ -1,5 +1,7 @@
 import React from "react";
+
 import { navigationData } from "../../navigationData";
+
 import MobileNavList from "./MobileNavList";
 
 const getMenuItems = (currentView = "main") => {
@@ -8,7 +10,7 @@ const getMenuItems = (currentView = "main") => {
       return [
         { label: "Home", href: "/" },
         { label: "Services", items: navigationData.services.items },
-        { label: "About Us", items: navigationData.aboutUs.items },
+        { label: "About Us", href: "/about-us" },
         { label: "Testimonials", href: "/client-testimonials" },
         { label: "Contact Us", href: "/contact-us" },
       ];

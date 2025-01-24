@@ -26,7 +26,7 @@ const Services = () => {
               <span> for Microsoft Technologies</span>
             </p>
           </div>
-          <h2>Office Experts Services</h2>
+          <h2>Microsoft Office Services</h2>
           <p>
             Specialising in Office and Microsoft technologies, our
             Australia-wide, cross-industry consultants excel in innovative

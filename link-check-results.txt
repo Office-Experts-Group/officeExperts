@@ -1,0 +1,591 @@
+SCAN DETAILS
+============
+Scanned Directories: app, components, styles, public
+Total Files Scanned: 620
+
+POTENTIALLY TRUNCATED LINKS
+==========================
+/services/microsoft-office
+   File: app/about-us/(components)/WhyChooseUs.jsx
+   Context: rsonal
+            <Link href={"/services/microsoft-office"}>
+              Micr
+
+/services/by-business-solution/3rd-party-
+   Source unknown
+
+/services/microsoft-power-platform/microsoft-power-
+   Source unknown
+
+ERRORS
+======
+404: /about-us
+   Found in: app/services/microsoft-word/(components)/Hero.jsx
+   Context:      </h1>
+        <Link href={"/about-us"} className="btn">
+  
+
+404: /faq
+   Found in: app/(components)/FooterHelpSection.jsx
+   Context:  Form</Link>
+      <Link href={"/faq"}>FAQ</Link>
+      <L
+
+404: /terms-and-conditions
+   Found in: app/refund-policy/page.js
+   Context: e{" "}
+            <Link href={"/terms-and-conditions"}>Service Agreement</
+
+404: /privacy-policy
+   Found in: app/(components)/FooterHelpSection.jsx
+   Context: tions</Link>
+      <Link href={"/privacy-policy"}>Privacy Policy</Lin
+
+404: /refund-policy
+   Found in: app/(components)/FooterHelpSection.jsx
+   Context: olicy</Link>
+      <Link href={"/refund-policy"}>Refund Policy</Link
+
+404: /looking-for-a-job
+   Found in: app/(components)/FooterHelpSection.jsx
+   Context: olicy</Link>
+      <Link href={"/looking-for-a-job"}>Looking for a Job?<
+
+404: /services/microsoft-office
+   Found in: app/about-us/(components)/WhyChooseUs.jsx
+   Context: rsonal
+            <Link href={"/services/microsoft-office"}>
+              Micr
+
+404: /services/microsoft-powerpoint
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-powerpoint">
+          <div cla
+
+404: /services/microsoft-office-365
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:        >
+          <Link href="/services/microsoft-office-365">
+            <p>Off
+
+404: /services/by-business-solution/cloud-based-solutions-with-azure
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:     </div>
+        <Link href="/services/by-business-solution/cloud-based-solutions-with-azure">
+          <div cla
+
+404: /services/by-business-solution/office-and-sql-server-integration
+   Found in: app/(components)/FooterServicesSection.jsx
+   Context: /Link>
+            <Link href="/services/by-business-solution/office-and-sql-server-integration">
+              Micr
+
+404: /services/by-business-solution/online-solutions
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context: <p>/</p>
+          <Link href="/services/by-business-solution/online-solutions">
+            <p>Sha
+
+404: /services/by-product-and-technology/microsoft-dot-net
+   Found in: app/(components)/FooterServicesSection.jsx
+   Context: /Link>
+            <Link href="/services/by-product-and-technology/microsoft-dot-net">
+              Micr
+
+404: /services/by-business-solution/custom-office-solutions
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:    </Link>
+        <Link href="/services/by-business-solution/custom-office-solutions">
+          <div cla
+
+404: /services/by-product-and-technology/microsoft-publisher
+   Found in: app/(components)/FooterServicesSection.jsx
+   Context: /Link>
+            <Link href="/services/by-product-and-technology/microsoft-publisher">
+              Micr
+
+404: /services
+   Found in: app/about-us/(components)/WhyChooseUs.jsx
+   Context:           </Link>, <Link href={"/services"}>Microsoft technolog
+
+404: /services/by-business-solution/3rd-party-application-or-office-integration
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/services/by-business-solution/3rd-party-application-or-office-integration">
+          <div cla
+
+404: /blog
+   Found in: Unknown source
+
+404: /ccp
+   Found in: Unknown source
+
+404: /excel-and-access-experts-central-coast-nsw
+   Found in: Unknown source
+
+404: /excel-and-access-experts-melbourne
+   Found in: Unknown source
+
+404: /excel-and-access-experts-richmond
+   Found in: Unknown source
+
+404: /office-and-office-365-experts-melbourne
+   Found in: Unknown source
+
+404: /office-and-office-365-experts-richmond
+   Found in: Unknown source
+
+404: /office-and-office-365-experts-sydney
+   Found in: Unknown source
+
+404: /office-excel-access-and-365-experts-brisbane
+   Found in: Unknown source
+
+404: /office-excel-access-and-365-experts-darwin
+   Found in: Unknown source
+
+404: /office-excel-access-and-365-experts-northern-rivers-nsw
+   Found in: Unknown source
+
+404: /office-excel-access-and-365-experts-perth
+   Found in: Unknown source
+
+404: /office-excel-access-and-365-experts-wollongong
+   Found in: Unknown source
+
+404: /services/by-business-solution/3rd-party-
+   Found in: Unknown source
+
+404: /services/by-business-solution/add-in-creation
+   Found in: Unknown source
+
+404: /services/by-business-solution/dashboards
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/PageSegmentMain2.jsx
+   Context: Links</h3>
+        <Link href="/services/by-business-solution/dashboards">
+          <div cla
+
+404: /services/by-business-solution/database-development-and-solutions
+   Found in: Unknown source
+
+404: /services/by-business-solution
+   Found in: Unknown source
+
+404: /services/by-business-solution/vba-macro-development
+   Found in: Unknown source
+
+404: /services/by-office-product
+   Found in: Unknown source
+
+404: /is-access-right-for-your-company/
+   Found in: app/services/microsoft-access/(components)/CTAMain.jsx
+   Context: /div>
+
+            <Link
+              href="/is-access-right-for-your-company/"
+              class
+
+404: /services/microsoft-access/3rd-party-product-integration
+   Found in: Unknown source
+
+404: /services/microsoft-access/access-azure-cloud-based-solutions
+   Found in: Unknown source
+
+404: /services/microsoft-access/access-online
+   Found in: Unknown source
+
+404: /services/microsoft-access/access-support
+   Found in: Unknown source
+
+404: /access-online
+   Found in: app/services/microsoft-access/is-access-right-for-your-company/(components)/Contents.jsx
+   Context: nks</h3>
+          <Link href="/access-online">
+            <div c
+
+404: /3rd-party-product-integration
+   Found in: app/services/microsoft-access/is-access-right-for-your-company/(components)/Contents.jsx
+   Context:  </Link>
+          <Link href="/3rd-party-product-integration">
+            <div c
+
+404: /access-support
+   Found in: app/services/microsoft-access/is-access-right-for-your-company/(components)/Contents.jsx
+   Context:  </Link>
+          <Link href="/access-support">
+            <div c
+
+404: /services/microsoft-access/is-access-right-for-your-company
+   Found in: Unknown source
+
+404: /services/microsoft-access
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-access">
+          <div cla
+
+404: /access-azure-cloud-based-solutions
+   Found in: app/services/microsoft-access/upgrades-and-migration/(components)/Promo.jsx
+   Context: " "}
+              <Link href="/access-azure-cloud-based-solutions">
+                Mi
+
+404: /services/microsoft-access/upgrades-and-migration
+   Found in: Unknown source
+
+404: /services/microsoft-dot-net
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-dot-net">
+          <div cla
+
+404: /excel-support
+   Found in: app/services/microsoft-excel/(components)/CTAMain.jsx
+   Context: /div>
+
+            <Link href="/excel-support" className={styles.l
+
+404: /vba-macro-developmentVBA macros
+   Found in: app/services/microsoft-excel/add-in-development/(components)/PageSegment4.jsx
+   Context: " "}
+              <Link href="/vba-macro-developmentVBA macros">VBA macros</Link>.
+
+
+404: /services/microsoft-excel/add-in-development
+   Found in: Unknown source
+
+404: /services/microsoft-word/custom-toolbars-and-ribbons
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-word/custom-toolbars-and-ribbons">
+          <div cla
+
+404: /services/microsoft-word/word-template-conversions
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-word/word-template-conversions">
+          <div cla
+
+404: /vba-macro-development
+   Found in: app/services/microsoft-excel/excel-support/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/vba-macro-development">
+          <div cla
+
+404: /services/microsoft-power-bi
+   Found in: app/services/microsoft-excel/custom-design-and-development/(components)/SegmentMainCopy.jsx
+   Context:    </Link>
+        <Link href="/services/microsoft-power-bi">
+          <div cla
+
+404: /services/microsoft-excel/custom-design-and-development
+   Found in: Unknown source
+
+404: /services/microsoft-excel/data-manipulation
+   Found in: Unknown source
+
+404: /services/microsoft-excel/excel-formulas-and-custom-formulas
+   Found in: Unknown source
+
+404: /data-manipulation
+   Found in: app/services/microsoft-excel/excel-support/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/data-manipulation">
+          <div cla
+
+404: /add-in-development
+   Found in: app/services/microsoft-excel/excel-support/(components)/PageSegmentMain2.jsx
+   Context:    </Link>
+        <Link href="/add-in-development">
+          <div cla
+
+404: /services/microsoft-excel/excel-support
+   Found in: Unknown source
+
+404: /services/microsoft-excel
+   Found in: Unknown source
+
+404: /services/microsoft-excel/pivot-tables-charts-and-reporting-solutions
+   Found in: Unknown source
+
+404: /services/microsoft-excel/upgrades-and-migration
+   Found in: Unknown source
+
+404: /services/microsoft-excel/vba-macro-development
+   Found in: Unknown source
+
+404: /services/microsoft-office/upgrades-and-migration
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/business-process-automation
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/cloud-backup-with-onedrive
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/exchange-online-setup-and-support
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/office-365-implementation
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/office-365-migration
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/remote-data-gathering-from-any-device
+   Found in: Unknown source
+
+404: /services/microsoft-office-365/support-and-managed-services
+   Found in: Unknown source
+
+404: /services/microsoft-power-platform/microsoft-power-
+   Found in: Unknown source
+
+404: /services/microsoft-power-platform/microsoft-power-automate
+   Found in: Unknown source
+
+404: /services/microsoft-power-platform/microsoft-power-bi
+   Found in: Unknown source
+
+404: /services/microsoft-power-platform/microsoft-power-pages
+   Found in: Unknown source
+
+404: /services/microsoft-power-platform
+   Found in: Unknown source
+
+404: /services/microsoft-powerpoint/automate-presentations-with-vba
+   Found in: Unknown source
+
+404: /services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations
+   Found in: Unknown source
+
+404: /services/microsoft-powerpoint/existing-presentation-redesign
+   Found in: Unknown source
+
+404: /services/microsoft-powerpoint/powerpoint-user-training-and-assistance
+   Found in: Unknown source
+
+404: /services/microsoft-publisher
+   Found in: Unknown source
+
+404: /services/microsoft-vbscript
+   Found in: Unknown source
+
+404: /services/microsoft-word/accessibility
+   Found in: Unknown source
+
+404: /services/microsoft-word/companies-and-organisations
+   Found in: Unknown source
+
+404: /services/microsoft-word/corporate-global-template-solution
+   Found in: Unknown source
+
+404: /services/microsoft-word/corporate-identity
+   Found in: Unknown source
+
+404: /services/microsoft-word/fill-in-forms
+   Found in: Unknown source
+
+404: /services/microsoft-word/government-departments
+   Found in: Unknown source
+
+404: /services/microsoft-word
+   Found in: Unknown source
+
+404: /services/microsoft-word/popup-forms
+   Found in: Unknown source
+
+404: /services/microsoft-word/quick-parts
+   Found in: Unknown source
+
+404: /services/microsoft-word/remove-repetition-and-increase-productivity
+   Found in: Unknown source
+
+404: /services/microsoft-word/training
+   Found in: Unknown source
+
+404: /services/microsoft-word/upgrades-and-migration
+   Found in: Unknown source
+
+404: /services/microsoft-word/word-document-template-creation
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-canberra
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-gold-coast
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-melbourne
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-perth
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-richmond
+   Found in: Unknown source
+
+404: /word-and-powerpoint-experts-sydney
+   Found in: Unknown source
+
+140/152: https://www.dulux.com.au - Error: fetch failed
+   Found in: Unknown source
+
+143/152: https://www.hyundai.com.au/ - Error: fetch failed
+   Found in: Unknown source
+
+CHECK RESULTS
+============
+1/152: /contact-us - Status: 200
+2/152: /contact-us/request-a-quote - Status: 200
+3/152: /about-us - Status: 404
+4/152: /faq - Status: 404
+5/152: /terms-and-conditions - Status: 404
+6/152: /privacy-policy - Status: 404
+7/152: /refund-policy - Status: 404
+8/152: /looking-for-a-job - Status: 404
+9/152: /meet-the-team - Status: 200
+10/152: /client-testimonials - Status: 200
+11/152: /services/microsoft-office - Status: 404
+12/152: /services/microsoft-powerpoint - Status: 404
+13/152: /services/microsoft-office-365 - Status: 404
+14/152: /services/by-business-solution/cloud-based-solutions-with-azure - Status: 404
+15/152: /services/by-business-solution/office-and-sql-server-integration - Status: 404
+16/152: /services/by-business-solution/online-solutions - Status: 404
+17/152: /services/by-product-and-technology/microsoft-dot-net - Status: 404
+18/152: /services/by-business-solution/custom-office-solutions - Status: 404
+19/152: /services/by-product-and-technology/microsoft-publisher - Status: 404
+20/152: https://www.powerplatformexperts.com.au/ - Status: 200
+21/152: https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps - Status: 200
+22/152: https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi - Status: 200
+23/152: https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate - Status: 200
+24/152: https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages - Status: 200
+25/152: https://www.excelexperts.com.au/ - Status: 200
+26/152: https://www.accessexperts.com.au/ - Status: 200
+27/152: https://www.wordexperts.com.au/ - Status: 200
+28/152: / - Status: 200
+29/152: /services - Status: 404
+30/152: /services/by-business-solution/3rd-party-application-or-office-integration - Status: 404
+31/152: /blog - Status: 404
+32/152: /ccp - Status: 404
+33/152: /excel-and-access-experts-central-coast-nsw - Status: 404
+34/152: /excel-and-access-experts-melbourne - Status: 404
+35/152: /excel-and-access-experts-richmond - Status: 404
+36/152: /excel-and-access-experts-sydney - Status: 200
+37/152: /office-and-office-365-experts-melbourne - Status: 404
+38/152: /office-and-office-365-experts-richmond - Status: 404
+39/152: /office-and-office-365-experts-sydney - Status: 404
+40/152: /office-excel-access-and-365-experts-brisbane - Status: 404
+41/152: /office-excel-access-and-365-experts-darwin - Status: 404
+42/152: /office-excel-access-and-365-experts-northern-rivers-nsw - Status: 404
+43/152: /office-excel-access-and-365-experts-perth - Status: 404
+44/152: /office-excel-access-and-365-experts-wollongong - Status: 404
+45/152:  - Status: 200
+46/152: https://www.officeexperts.com.au/contact-us - Status: 200
+47/152: http://www.oaic.gov.au - Status: 200
+48/152: /services/by-business-solution/3rd-party- - Status: 404
+49/152: /services/by-business-solution/add-in-creation - Status: 404
+50/152: /services/by-business-solution/dashboards - Status: 404
+51/152: /services/by-business-solution/database-development-and-solutions - Status: 404
+52/152: /services/by-business-solution - Status: 404
+53/152: /services/by-business-solution/vba-macro-development - Status: 404
+54/152: /services/by-office-product - Status: 404
+55/152: /is-access-right-for-your-company/ - Status: 404
+56/152: /services/microsoft-access/3rd-party-product-integration - Status: 404
+57/152: https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration/ - Status: 200
+58/152: /services/microsoft-access/access-azure-cloud-based-solutions - Status: 404
+59/152: /services/microsoft-access/access-online - Status: 404
+60/152: /services/microsoft-access/access-support - Status: 404
+61/152: /access-online - Status: 404
+62/152: /3rd-party-product-integration - Status: 404
+63/152: /access-support - Status: 404
+64/152: /upgrades-and-migration - Status: 200
+65/152: /services/microsoft-access/is-access-right-for-your-company - Status: 404
+66/152: /services/microsoft-access - Status: 404
+67/152: /access-azure-cloud-based-solutions - Status: 404
+68/152: https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure - Status: 200
+69/152: https://www.officeexperts.com.au/services/microsoft-dot-net - Status: 200
+70/152: https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration - Status: 200
+71/152: https://www.officeexperts.com.au/services/by-business-solution/online-solutions - Status: 200
+72/152: https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions - Status: 200
+73/152: /services/microsoft-access/upgrades-and-migration - Status: 404
+74/152: /services/microsoft-dot-net - Status: 404
+75/152: /excel-support - Status: 404
+76/152: /vba-macro-developmentVBA macros - Status: 404
+77/152: /services/microsoft-excel/add-in-development - Status: 404
+78/152: /services/microsoft-word/custom-toolbars-and-ribbons - Status: 404
+79/152: /services/microsoft-word/word-template-conversions - Status: 404
+80/152: https://excelexperts.com.au/vba-macro-development - Status: 200
+81/152: https://excelexperts.com.au/data-manipulation - Status: 200
+82/152: https://excelexperts.com.au/add-in-development - Status: 200
+83/152: /vba-macro-development - Status: 404
+84/152: /services/microsoft-power-bi - Status: 404
+85/152: https://excelexperts.com.au - Status: 200
+86/152: /services/microsoft-excel/custom-design-and-development - Status: 404
+87/152: /services/microsoft-excel/data-manipulation - Status: 404
+88/152: /services/microsoft-excel/excel-formulas-and-custom-formulas - Status: 404
+89/152: /data-manipulation - Status: 404
+90/152: /add-in-development - Status: 404
+91/152: https://www.officeexperts.com.au/services/by-business-solution/dashboards - Status: 200
+92/152: https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration - Status: 200
+93/152: /services/microsoft-excel/excel-support - Status: 404
+94/152: /services/microsoft-excel - Status: 404
+95/152: /services/microsoft-excel/pivot-tables-charts-and-reporting-solutions - Status: 404
+96/152: /services/microsoft-excel/upgrades-and-migration - Status: 404
+97/152: /services/microsoft-excel/vba-macro-development - Status: 404
+98/152: https://accessexperts.com.au - Status: 200
+99/152: https://wordexperts.com.au - Status: 200
+100/152: /services/microsoft-office/upgrades-and-migration - Status: 404
+101/152: /services/microsoft-office-365/business-process-automation - Status: 404
+102/152: /services/microsoft-office-365/cloud-backup-with-onedrive - Status: 404
+103/152: /services/microsoft-office-365/exchange-online-setup-and-support - Status: 404
+104/152: /services/microsoft-office-365/office-365-implementation - Status: 404
+105/152: /services/microsoft-office-365/office-365-migration - Status: 404
+106/152: /services/microsoft-office-365/remote-data-gathering-from-any-device - Status: 404
+107/152: /services/microsoft-office-365/support-and-managed-services - Status: 404
+108/152: /services/microsoft-power-platform/microsoft-power- - Status: 404
+109/152: /services/microsoft-power-platform/microsoft-power-automate - Status: 404
+110/152: /services/microsoft-power-platform/microsoft-power-bi - Status: 404
+111/152: /services/microsoft-power-platform/microsoft-power-pages - Status: 404
+112/152: /services/microsoft-power-platform - Status: 404
+113/152: /services/microsoft-powerpoint/automate-presentations-with-vba - Status: 404
+114/152: /services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations - Status: 404
+115/152: /services/microsoft-powerpoint/existing-presentation-redesign - Status: 404
+116/152: /services/microsoft-powerpoint/powerpoint-user-training-and-assistance - Status: 404
+117/152: /services/microsoft-publisher - Status: 404
+118/152: /services/microsoft-vbscript - Status: 404
+119/152: /training - Status: 200
+120/152: /services/microsoft-word/accessibility - Status: 404
+121/152: /services/microsoft-word/companies-and-organisations - Status: 404
+122/152: /services/microsoft-word/corporate-global-template-solution - Status: 404
+123/152: /services/microsoft-word/corporate-identity - Status: 404
+124/152: /services/microsoft-word/fill-in-forms - Status: 404
+125/152: /services/microsoft-word/government-departments - Status: 404
+126/152: /services/microsoft-word - Status: 404
+127/152: /services/microsoft-word/popup-forms - Status: 404
+128/152: /services/microsoft-word/quick-parts - Status: 404
+129/152: /services/microsoft-word/remove-repetition-and-increase-productivity - Status: 404
+130/152: /services/microsoft-word/training - Status: 404
+131/152: /services/microsoft-word/upgrades-and-migration - Status: 404
+132/152: /services/microsoft-word/word-document-template-creation - Status: 404
+133/152: http://www.officeexperts.com.au - Status: 200
+134/152: /word-and-powerpoint-experts-canberra - Status: 404
+135/152: /word-and-powerpoint-experts-gold-coast - Status: 404
+136/152: /word-and-powerpoint-experts-melbourne - Status: 404
+137/152: /word-and-powerpoint-experts-perth - Status: 404
+138/152: /word-and-powerpoint-experts-richmond - Status: 404
+139/152: /word-and-powerpoint-experts-sydney - Status: 404
+140/152: https://www.dulux.com.au - Error: fetch failed
+141/152: https://www.bekaert.com/en/ - Status: 200
+142/152: http://www.queenslandrail.com.au/ - Status: 200
+143/152: https://www.hyundai.com.au/ - Error: fetch failed
+144/152: https://www.sgwater.com.au/ - Status: 503
+145/152: https://www.officeexperts.com.au/faq - Status: 200
+146/152: https://www.officeexperts.com.au/privacy-policy - Status: 200
+147/152: https://www.officeexperts.com.au/terms-and-conditions - Status: 200
+148/152: https://www.facebook.com/MSOfficeExperts - Status: 400
+149/152: https://www.instagram.com/officeexpertsgroup - Status: 200
+150/152: https://www.twitter.com/OfficeExpertsG1 - Status: 200
+151/152: https://www.youtube.com/channel/UCw2Xf02ukEwvM6fQ2lVZxuw - Status: 200
+152/152: https://www.linkedin.com/company/office-experts-group - Status: 200

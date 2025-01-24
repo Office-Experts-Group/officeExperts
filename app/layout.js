@@ -81,7 +81,7 @@ export const metadata = {
     siteName: "Office Experts Group",
     images: [
       {
-        url: "https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Office Experts Group Logo",
@@ -110,7 +110,7 @@ export const metadata = {
     title: "Office Experts Group | Microsoft Office Consulting & Solutions",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
-    images: ["https://www.officeexperts.com.au/logo.webp"],
+    images: ["/logo.png"],
   },
 
   metadataBase: new URL("https://www.officeexperts.com.au"),

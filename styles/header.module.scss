@@ -407,7 +407,7 @@ $cycle-duration: 33s;
   position: absolute;
   top: calc(100% + 1.9rem);
   left: 0;
-  min-width: 200px;
+  min-width: 250px;
   background-color: $offWhite;
   border-top: 4px solid $theme;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -484,7 +484,7 @@ $cycle-duration: 33s;
   position: absolute;
   top: -1rem;
   left: 100%;
-  min-width: 220px;
+  min-width: 350px;
   background-color: $offWhite;
   border-top: 4px solid $theme;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -565,7 +565,7 @@ $cycle-duration: 33s;
   border-left: 1px solid rgba(255, 255, 255, 0.275);
   margin-left: 0.8rem;
   padding-left: 0.8rem;
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1400px) {
     display: none;
   }
 }
@@ -600,8 +600,11 @@ $cycle-duration: 33s;
   scale: 1;
   // margin: 0 0 0 auto;
   transition: all 0.5s ease;
-  @media screen and (min-width: 1200px) and (max-width: 1260px) {
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
     margin-right: 1rem;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1262px) {
+    display: none;
   }
   @media screen and (min-width: 450px) and (max-width: 540px) {
     display: none;
@@ -622,16 +625,11 @@ $cycle-duration: 33s;
   }
 }
 
-.searchIcon {
-  cursor: pointer;
-  margin-right: 0.8rem;
-}
-
 .logoImg {
   @include phone {
     max-width: 150px;
     max-height: 65px;
-    margin: 1rem 0 1rem -0.5rem;
+    margin: 1rem 0;
   }
 }
 
