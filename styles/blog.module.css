@@ -1,0 +1,17 @@
+.blogContainer {
+  min-height: 60vh;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+.blogContainer h1 {
+  color: #f8f8f8;
+  margin-bottom: 1rem;
+}
+.blogContainer p {
+  color: #777a7e;
+}/*# sourceMappingURL=blog.module.css.map */

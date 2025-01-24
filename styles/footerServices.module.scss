@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  position: relative;
 
   a {
     color: $grayText;
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 0.3s;
     font-weight: 500;
 
     &:hover {
@@ -21,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  margin-bottom: 0.3rem;
 
   h3 {
     color: $offWhite;
@@ -31,33 +33,44 @@
 
 .dropdownSection {
   position: relative;
+  // padding: 0.5rem 0;
+
+  @media (hover: hover) {
+    &:hover {
+      z-index: 10;
+
+      .dropdownContainer {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &.active {
+    z-index: 10;
+
+    .dropdownContainer {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
 
   h3 {
     color: $grayText;
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 0.3s;
     font-size: 1rem;
-    color: $grayText;
     font-weight: 500;
-    margin-top: 0.8rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
     font-family: var(--font-aptos) !important;
+
     &:hover {
       color: $theme;
     }
-  }
-
-  // Default collapsed state
-  .dropdownContent {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 1s ease-out;
-  }
-
-  // Expanded state on hover/focus
-  &:hover .dropdownContent,
-  &:focus-within .dropdownContent {
-    max-height: 300px;
-    padding: 1rem;
   }
 }
 
@@ -65,12 +78,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+}
+
+.dropdownContainer {
+  position: absolute;
+  left: 1rem;
+  top: 100%;
+  width: calc(80% + 2rem);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 5;
+}
+
+.dropdownBackground {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
 }
 
 .dropdownContent {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 1rem;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+// Media query for touch devices
+@media (hover: none) {
+  .dropdownSection {
+    .dropdownContainer {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+
+      &:not(.show) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
 }

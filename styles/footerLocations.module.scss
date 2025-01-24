@@ -21,7 +21,7 @@
   .remoteAccess {
     color: $grayText;
     font-weight: 500;
-    margin: 0 0 0.2rem 0;
+    margin-bottom: 0.2rem;
   }
 }
 
@@ -29,20 +29,32 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
 .stateDropdown {
   position: relative;
+  padding: 0.19rem 0;
 
-  &::-webkit-details-marker {
-    display: none;
+  @media (hover: hover) {
+    &:hover {
+      z-index: 10;
+
+      .locationsDropdown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
   }
 
-  // Remove default triangle
-  & > summary {
-    list-style: none;
-    &::-webkit-details-marker {
-      display: none;
+  &.active {
+    z-index: 10;
+
+    .locationsDropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
   }
 }
@@ -52,11 +64,11 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  margin: 0.2rem 0;
+  margin: 0;
   color: $grayText;
   font-size: 1rem;
   font-weight: 500;
-  transition: color 0.5s;
+  transition: color 0.3s;
 
   &:hover {
     color: $theme;
@@ -64,36 +76,40 @@
 }
 
 .locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 100%;
+  width: calc(80% + 2rem);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 5;
 }
 
-// Handle both hover and open states
-.stateDropdown:hover .locationsDropdown,
-.stateDropdown[open] .locationsDropdown {
-  max-height: 500px;
+.dropdownBackground {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+}
+
+.dropdownContent {
+  position: relative;
+  padding: 0.5rem 1rem;
 }
 
 .cityItem {
-  margin: 0.5rem 0;
   position: relative;
-
-  &:hover {
-    .servicesDropdown {
-      max-height: 500px;
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+  padding: 0.5rem 0;
 }
 
 .cityLink {
   color: $grayText;
-  transition: color 0.5s;
+  transition: color 0.3s;
   font-weight: 500;
+  display: block;
 
   &:hover {
     color: $theme;
@@ -102,75 +118,14 @@
 
 // Media query for touch devices
 @media (hover: none) {
-  .stateDropdown:not([open]) .locationsDropdown {
-    max-height: 0 !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .statesGrid {
-    gap: 0.5rem;
-  }
-
-  .locationsDropdown {
-    padding-left: 1rem;
-  }
-}
-
-.locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
-}
-
-// Update these selectors to ensure they override the default state
-.stateDropdown:hover .locationsDropdown,
-.stateDropdown:focus-within .locationsDropdown,
-.stateDropdown.active .locationsDropdown {
-  max-height: 500px !important; // Force override
-}
-
-@media (hover: none) {
-  .stateDropdown {
-    &:hover .locationsDropdown {
-      max-height: 0 !important; // Disable hover on touch devices
-    }
-
-    &.active .locationsDropdown {
-      max-height: 500px !important; // Ensure click state works on mobile
-    }
-  }
-}
-
-.locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
-
-  &.show {
-    max-height: 500px;
-  }
-}
-
-// Your existing hover state
-.stateDropdown:hover .locationsDropdown {
-  @media (hover: hover) {
-    max-height: 500px;
-  }
-}
-
-// New mobile styles
-@media (hover: none) {
   .stateDropdown {
     .locationsDropdown {
-      max-height: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
 
-      &.show {
-        max-height: 500px;
+      &:not(.show) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
       }
     }
   }

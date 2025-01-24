@@ -11,7 +11,7 @@ import SocialLinks from "../../components/SocialLinks";
 import MobileNav from "../../components/MobileNavigation/MobileNav";
 
 import logo from "../../public/logo300x130.webp";
-import certified from "../../public/microsoft/certified.gif";
+import certified from "../../public/microsoft/partnerLogo.webp";
 import ideaBlue from "../../public/icons/ideaBlue.webp";
 
 const Header = () => {

@@ -17,26 +17,37 @@
 .locationsSection .remoteAccess {
   color: #a0a2a6;
   font-weight: 500;
-  margin: 0 0 0.2rem 0;
+  margin-bottom: 0.2rem;
 }
 
 .statesGrid {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
 .stateDropdown {
   position: relative;
+  padding: 0.19rem 0;
 }
-.stateDropdown::-webkit-details-marker {
-  display: none;
+@media (hover: hover) {
+  .stateDropdown:hover {
+    z-index: 10;
+  }
+  .stateDropdown:hover .locationsDropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
 }
-.stateDropdown > summary {
-  list-style: none;
+.stateDropdown.active {
+  z-index: 10;
 }
-.stateDropdown > summary::-webkit-details-marker {
-  display: none;
+.stateDropdown.active .locationsDropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .stateHeader {
@@ -44,105 +55,64 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  margin: 0.2rem 0;
+  margin: 0;
   color: #a0a2a6;
   font-size: 1rem;
   font-weight: 500;
-  transition: color 0.5s;
+  transition: color 0.3s;
 }
 .stateHeader:hover {
   color: #046999;
 }
 
 .locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 100%;
+  width: calc(80% + 2rem);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 5;
 }
 
-.stateDropdown:hover .locationsDropdown,
-.stateDropdown[open] .locationsDropdown {
-  max-height: 500px;
+.dropdownBackground {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.85);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 4px;
+}
+
+.dropdownContent {
+  position: relative;
+  padding: 0.5rem 1rem;
 }
 
 .cityItem {
-  margin: 0.5rem 0;
   position: relative;
-}
-.cityItem:hover .servicesDropdown {
-  max-height: 500px;
-  opacity: 1;
-  pointer-events: auto;
+  padding: 0.5rem 0;
 }
 
 .cityLink {
   color: #a0a2a6;
-  transition: color 0.5s;
+  transition: color 0.3s;
   font-weight: 500;
+  display: block;
 }
 .cityLink:hover {
   color: #046999;
 }
 
 @media (hover: none) {
-  .stateDropdown:not([open]) .locationsDropdown {
-    max-height: 0 !important;
-  }
-}
-@media (max-width: 768px) {
-  .statesGrid {
-    gap: 0.5rem;
-  }
-  .locationsDropdown {
-    padding-left: 1rem;
-  }
-}
-.locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
-}
-
-.stateDropdown:hover .locationsDropdown,
-.stateDropdown:focus-within .locationsDropdown,
-.stateDropdown.active .locationsDropdown {
-  max-height: 500px !important;
-}
-
-@media (hover: none) {
-  .stateDropdown:hover .locationsDropdown {
-    max-height: 0 !important;
-  }
-  .stateDropdown.active .locationsDropdown {
-    max-height: 500px !important;
-  }
-}
-.locationsDropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 1s ease-out;
-  padding: 0;
-  margin-left: 0.5rem;
-}
-.locationsDropdown.show {
-  max-height: 500px;
-}
-
-@media (hover: hover) {
-  .stateDropdown:hover .locationsDropdown {
-    max-height: 500px;
-  }
-}
-
-@media (hover: none) {
   .stateDropdown .locationsDropdown {
-    max-height: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
-  .stateDropdown .locationsDropdown.show {
-    max-height: 500px;
+  .stateDropdown .locationsDropdown:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }/*# sourceMappingURL=footerLocations.module.css.map */

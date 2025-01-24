@@ -1,32 +1,44 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+
 import styles from "../styles/footerLocations.module.scss";
 
 const locationsByState = {
   "New South Wales": {
-    Sydney: "/word-and-powerpoint-experts-sydney/",
-    Wollongong: "/office-excel-access-and-word-experts-wollongong/",
-    "Central Coast": "/excel-and-access-experts-central-coast-nsw/",
+    Sydney: "https://officeexperts.com.au/word-and-powerpoint-experts-sydney/",
+    Wollongong:
+      "https://officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
+    "Central Coast":
+      "https://officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
     "Northern Rivers":
-      "/office-excel-access-and-365-experts-northern-rivers-nsw/",
+      "https://officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw/",
   },
   Victoria: {
-    Melbourne: "/word-and-powerpoint-experts-melbourne/",
-    Richmond: "/office-and-office-365-experts-richmond/",
+    Melbourne:
+      "https://officeexperts.com.au/word-and-powerpoint-experts-melbourne/",
+    Richmond:
+      "https://officeexperts.com.au/office-and-office-365-experts-richmond/",
   },
   Queensland: {
-    Brisbane: "/office-excel-access-and-365-experts-brisbane/",
-    "Gold Coast": "/word-and-powerpoint-experts-gold-coast/",
+    Brisbane:
+      "https://officeexperts.com.au/office-excel-access-and-365-experts-brisbane/",
+    "Gold Coast":
+      "https://officeexperts.com.au/word-and-powerpoint-experts-gold-coast/",
   },
   "Western Australia": {
-    Perth: "/word-and-powerpoint-experts-perth/",
+    Perth: "https://officeexperts.com.au/word-and-powerpoint-experts-perth/",
   },
   ACT: {
-    Canberra: "/word-and-powerpoint-experts-canberra/",
+    Canberra:
+      "https://officeexperts.com.au/word-and-powerpoint-experts-canberra/",
   },
   "Northern Territory": {
-    Darwin: "/office-excel-access-and-365-experts-darwin/",
+    Darwin:
+      "https://officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+  },
+  "South Australia": {
+    Adelaide: "/",
   },
 };
 
@@ -36,11 +48,27 @@ export default function FooterLocationsSection() {
 
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window);
+
+    // Add click event listener to handle clicking outside
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(`.${styles.stateDropdown}`)) {
+        setActiveState(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   const handleStateClick = (state, e) => {
-    e.preventDefault();
-    setActiveState(activeState === state ? null : state);
+    if (isTouchDevice) {
+      e.preventDefault();
+      e.stopPropagation();
+      setActiveState(activeState === state ? null : state);
+    }
   };
 
   return (
@@ -64,15 +92,20 @@ export default function FooterLocationsSection() {
               className={stateClasses}
               onClick={(e) => handleStateClick(state, e)}
             >
-              <p className={styles.stateHeader}>{state}</p>
+              <p className={styles.stateHeader}>
+                <span>{state}</span>
+              </p>
               <div className={dropdownClasses}>
-                {Object.entries(locations).map(([city, url]) => (
-                  <div key={city} className={styles.cityItem}>
-                    <Link href={url} className={styles.cityLink}>
-                      {city}
-                    </Link>
-                  </div>
-                ))}
+                <div className={styles.dropdownBackground}></div>
+                <div className={styles.dropdownContent}>
+                  {Object.entries(locations).map(([city, url]) => (
+                    <div key={city} className={styles.cityItem}>
+                      <Link href={url} className={styles.cityLink}>
+                        {city}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           );

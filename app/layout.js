@@ -68,14 +68,13 @@ const garamond = EB_Garamond({
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Microsoft Office Consulting | Office Solutions | Office Experts Group",
+  title: "Microsoft Office Consulting & Solutions | Office Experts Group",
   description:
     "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
 
   // OpenGraph
   openGraph: {
-    title: "Office Experts Group | Microsoft Office Consulting & Solutions",
+    title: "Microsoft Office Consulting & Solutions | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/",
@@ -114,10 +113,12 @@ export const metadata = {
     images: ["https://www.officeexperts.com.au/logo.webp"],
   },
 
-  // Additional tags
-
+  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "https://www.officeexperts.com.au/",
+    canonical: "/",
+    languages: {
+      "en-AU": "/",
+    },
   },
 
   robots: {
