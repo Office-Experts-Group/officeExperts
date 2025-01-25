@@ -6,7 +6,9 @@ import ServiceHero from "../../components/ServiceHero";
 
 import { getTestimonialsPageSchema } from "../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../testimonials";
-
+import { filterAndSortTestimonials } from "../../utils/filterTestimonials";
+const serviceTestimonials =
+  filterAndSortTestimonials(testimonials, "office") || testimonials;
 import testimonialsPic from "../../public/pageHeros/testimonials.webp";
 import testimonialsMob from "../../public/pageHeros/mob/testimonialsMob.webp";
 
@@ -18,7 +20,7 @@ import {
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials)["@graph"],
+    ...getTestimonialsPageSchema(serviceTestimonials, "office")["@graph"],
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
     {
@@ -77,7 +79,7 @@ const Page = () => {
         altDesk={"Wooden block with smiley face"}
         altMob={"five stars"}
       />
-      <TestimonialPage testimonials={testimonials} />
+      <TestimonialPage testimonials={serviceTestimonials} />
       <Contact />
     </>
   );

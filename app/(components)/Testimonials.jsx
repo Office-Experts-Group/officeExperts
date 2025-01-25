@@ -47,7 +47,7 @@ const Testimonials = ({ testimonials }) => {
                 (index % selectedTestimonials.length) + 1
               }`}
             >
-              <TestimonialCard {...testimonial} />
+              <TestimonialCard key={index} {...testimonial} index={index} />
             </div>
           ))}
         </div>

@@ -1,3 +1,4 @@
+// extensive list of testimonials
 import dulux from "./public/logos/Dulux-Group.webp";
 import queenslandRailLogo from "./public/logos/Queensland-Rail.webp";
 import arrow from "./public/logos/Arrow-Energy.webp";

@@ -6,39 +6,31 @@ import styles from "../styles/footerLocations.module.scss";
 
 const locationsByState = {
   "New South Wales": {
-    Sydney: "https://officeexperts.com.au/word-and-powerpoint-experts-sydney/",
-    Wollongong:
-      "https://officeexperts.com.au/office-excel-access-and-word-experts-wollongong/",
-    "Central Coast":
-      "https://officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+    Sydney: "/word-and-powerpoint-experts-sydney/",
+    Wollongong: "/office-excel-access-and-word-experts-wollongong/",
+    "Central Coast": "/excel-and-access-experts-central-coast-nsw/",
     "Northern Rivers":
-      "https://officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw/",
+      "/office-excel-access-and-365-experts-northern-rivers-nsw/",
   },
   Victoria: {
-    Melbourne:
-      "https://officeexperts.com.au/word-and-powerpoint-experts-melbourne/",
-    Richmond:
-      "https://officeexperts.com.au/office-and-office-365-experts-richmond/",
+    Melbourne: "/word-and-powerpoint-experts-melbourne/",
+    Richmond: "/office-and-office-365-experts-richmond/",
   },
   Queensland: {
-    Brisbane:
-      "https://officeexperts.com.au/office-excel-access-and-365-experts-brisbane/",
-    "Gold Coast":
-      "https://officeexperts.com.au/word-and-powerpoint-experts-gold-coast/",
+    Brisbane: "/office-excel-access-and-365-experts-brisbane/",
+    "Gold Coast": "/word-and-powerpoint-experts-gold-coast/",
   },
   "Western Australia": {
-    Perth: "https://officeexperts.com.au/word-and-powerpoint-experts-perth/",
+    Perth: "/word-and-powerpoint-experts-perth/",
   },
   ACT: {
-    Canberra:
-      "https://officeexperts.com.au/word-and-powerpoint-experts-canberra/",
+    Canberra: "/word-and-powerpoint-experts-canberra/",
   },
   "Northern Territory": {
-    Darwin:
-      "https://officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+    Darwin: "/office-excel-access-and-365-experts-darwin/",
   },
   "South Australia": {
-    Adelaide: "/",
+    Adelaide: "/office-excel-access-and-365-experts-adelaide/",
   },
 };
 

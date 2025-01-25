@@ -23,7 +23,7 @@ import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getAboutPageSchema(testimonials)["@graph"],
+    ...getAboutPageSchema(testimonials, "office")["@graph"],
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
     {
