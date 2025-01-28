@@ -7,7 +7,7 @@ import styles from "../styles/footerLocations.module.scss";
 const locationsByState = {
   "New South Wales": {
     Sydney: "/word-and-powerpoint-experts-sydney/",
-    Wollongong: "/office-excel-access-and-word-experts-wollongong/",
+    Wollongong: "/office-excel-access-and-365-experts-wollongong/",
     "Central Coast": "/excel-and-access-experts-central-coast-nsw/",
     "Northern Rivers":
       "/office-excel-access-and-365-experts-northern-rivers-nsw/",
