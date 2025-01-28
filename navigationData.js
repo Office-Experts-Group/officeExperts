@@ -36,7 +36,7 @@ export const navigationData = {
     label: "Services",
     items: [
       {
-        label: "Office Services",
+        label: "Microsoft Office",
         href: `/services`,
         items: [
           {
@@ -78,7 +78,7 @@ export const navigationData = {
         ],
       },
       {
-        label: "Word Services",
+        label: "Microsoft Word",
         href: WORD_EXPERTS_URL,
         items: [
           {
@@ -148,7 +148,7 @@ export const navigationData = {
         ],
       },
       {
-        label: "Excel Services",
+        label: "Microsoft Excel",
         href: EXCEL_EXPERTS_URL,
         items: [
           {
@@ -206,7 +206,7 @@ export const navigationData = {
         ],
       },
       {
-        label: "Access Services",
+        label: "Microsoft Access",
         href: ACCESS_EXPERTS_URL,
         items: [
           {
@@ -240,7 +240,7 @@ export const navigationData = {
         ],
       },
       {
-        label: "Power Platform Services",
+        label: "Microsoft Power Platform",
         href: POWER_PLATFORM_EXPERTS_URL,
         items: [
           {
