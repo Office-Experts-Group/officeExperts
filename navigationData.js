@@ -139,7 +139,7 @@ export const navigationData = {
           },
           {
             label: "Custom Toolbars & Ribbons",
-            href: `${WORD_EXPERTS_URL}custom-toolbars-and-ribbons`,
+            href: `${WORD_EXPERTS_URL}/custom-toolbars-and-ribbons`,
           },
           {
             label: "Training and User Support",
