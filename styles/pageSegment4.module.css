@@ -353,16 +353,21 @@
   margin-top: 2rem;
   align-items: center;
 }
-.btns a {
-  width: 160px;
-}
-.btns a:hover {
-  border: 1px solid #046999;
-}
 @media screen and (max-width: 800px) {
   .btns {
     flex-direction: column;
   }
+}
+.btns .btnLink {
+  width: 180px;
+  border: 1px solid #046999;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.btns .btnLink:hover {
+  border: 1px solid white;
+  background-color: #046999;
+  color: white;
 }
 
 @media (max-width: 449px) {

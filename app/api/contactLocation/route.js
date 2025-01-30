@@ -51,13 +51,9 @@ export async function POST(req) {
     const customerTextMessage = `
       Hi ${name},
 
-      Thank you for reaching out to our ${
-        location || ""
-      } office. We've received your message:
-
-      ${message}
-
-      We'll get back to you soon!
+      Thanks for contacting us.
+      
+      One of our team members will be in touch shortly.
 
       ${textSignature}
     `;
@@ -79,11 +75,8 @@ export async function POST(req) {
 
     const customerHtmlMessage = `
       <p>Hi ${name},</p>
-      <p>Thank you for reaching out to our ${
-        location || ""
-      } office. We've received your message:</p>
-      <p>${message}</p>
-      <p>One of our team members will get back to you soon.</p>
+      <p>Thanks for contacting us.</p>
+      <p>One of our team members will be in touch shortly.</p>
       ${htmlSignature}
     `;
 

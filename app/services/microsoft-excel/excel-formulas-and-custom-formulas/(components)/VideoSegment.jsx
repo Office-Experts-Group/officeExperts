@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-
 import styles from "../../../../../styles/videoSegment.module.css";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 const VideoSegment = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const videoURL = "https://player.vimeo.com/video/294497327?h=c55bd1bb94";
+  const videoURL =
+    "https://player.vimeo.com/video/294497327?h=c55bd1bb94&dnt=1";
 
   return (
     <section className={styles.container} style={{ paddingBottom: "6rem" }}>
@@ -30,6 +30,7 @@ const VideoSegment = () => {
               allowFullScreen
               title="Excel Custom Formulas Demo"
               onLoad={() => setIsLoading(false)}
+              loading="lazy"
             />
           </div>
         </AnimateOnScroll>

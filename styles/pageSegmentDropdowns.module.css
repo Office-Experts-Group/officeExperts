@@ -92,15 +92,6 @@
   flex-direction: column;
   gap: 1rem;
 }
-.faqContainer details[open] ~ details[open] {
-  display: revert;
-}
-.faqContainer details[open] ~ details[open] > *:not(summary) {
-  display: none;
-}
-.faqContainer details[open] ~ details[open][open] summary::after {
-  content: "+";
-}
 
 .faqItem {
   background: transparent;

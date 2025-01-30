@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 import styles from "../../../../../styles/pageSegment2.module.css";
 
@@ -33,7 +34,9 @@ const PageSegmentMain2 = () => {
         </div>
 
         <div className={styles.buttonWrapper}>
-          <button className={`${styles.contactBtn} btn`}>Contact Us</button>
+          <Link href="/contact-us" className={`${styles.contactBtn} btn`}>
+            Contact Us
+          </Link>{" "}
         </div>
       </div>
 

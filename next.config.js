@@ -186,7 +186,6 @@ const nextConfig = {
   },
 
   webpack: (config, { dev, isServer }) => {
-    // Add CSS minification in production builds
     if (!dev && !isServer) {
       config.optimization.minimizer.push(new CssMinimizerPlugin());
     }

@@ -11,11 +11,13 @@ export function middleware(request) {
   response.headers.set(
     "Content-Security-Policy",
     "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com; " +
       "style-src 'self' 'unsafe-inline'; " +
-      "img-src 'self' data: https:; " +
+      "img-src 'self' data: https: *.vimeocdn.com; " +
       "font-src 'self'; " +
-      "frame-ancestors 'none';"
+      "frame-src 'self' *.vimeo.com player.vimeo.com; " + // Added this line
+      "media-src 'self' *.vimeo.com *.vimeocdn.com; " + // Added this line
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com;" // Added this line
   );
 
   if (

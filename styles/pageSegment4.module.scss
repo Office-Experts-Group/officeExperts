@@ -342,14 +342,20 @@
   gap: 1rem;
   margin-top: 2rem;
   align-items: center;
-  a {
-    width: 160px;
-    &:hover {
-      border: 1px solid $theme;
-    }
-  }
   @media screen and (max-width: 800px) {
     flex-direction: column;
+  }
+
+  .btnLink {
+    width: 180px;
+    border: 1px solid $theme;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid white;
+      background-color: $theme;
+      color: white;
+    }
   }
 }
 

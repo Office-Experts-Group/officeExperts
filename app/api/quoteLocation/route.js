@@ -109,17 +109,9 @@ export async function POST(req) {
     const customerTextMessage = `
       Hi ${name},
 
-      Thank you for reaching out to our ${
-        location || ""
-      } office. We've received your quote request:
-
-      Service Requested: ${service || "Not specified"}
-      Operating System: ${operatingSystem || "Not provided"}
-      Software Versions: ${softwareVersions || "Not provided"}
-      Website: ${website || "Not provided"}
-      Message: ${message || "Not provided"}
-
-      We'll get back to you soon!
+      Thanks for contacting us.
+      
+      One of our team members will be in touch shortly.
 
       ${textSignature}
     `;
@@ -144,20 +136,8 @@ export async function POST(req) {
 
     const customerHtmlMessage = `
       <p>Hi ${name},</p>
-      <p>Thank you for reaching out to our ${
-        location || ""
-      } office. We've received your quote request:</p>
-      <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
-      <p><strong>Operating System:</strong> ${
-        operatingSystem || "Not provided"
-      }</p>
-      <p><strong>Software Versions:</strong> ${
-        softwareVersions || "Not provided"
-      }</p>
-      <p><strong>Website:</strong> ${website || "Not provided"}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message || "Not provided"}</p>
-      <p>We'll get back to you soon!</p>
+      <p>Thanks for contacting us.</p>
+      <p>One of our team members will be in touch shortly.</p>
       ${htmlSignature}
     `;
 

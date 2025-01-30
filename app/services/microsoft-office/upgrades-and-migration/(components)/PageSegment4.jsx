@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 import styles from "../../../../../styles/pageSegment4.module.css";
 
 import remoteSupport from "../../../../../public/remoteSupport600x400.webp";
-import Link from "next/link";
 
 const PageSegment4 = () => {
   return (
@@ -27,19 +27,28 @@ const PageSegment4 = () => {
 
           <div className={styles.btns}>
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.4}>
-              <Link href={"https://excelexperts.com.au"} className="btn">
+              <Link
+                href={"https://excelexperts.com.au"}
+                className={`"btn" ${styles.btnLink}`}
+              >
                 Excel
               </Link>
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.6}>
-              <Link href={"https://accessexperts.com.au"} className="btn">
+              <Link
+                href={"https://accessexperts.com.au"}
+                className={`"btn" ${styles.btnLink}`}
+              >
                 Access
               </Link>
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.6}>
-              <Link href={"https://wordexperts.com.au"} className="btn">
+              <Link
+                href={"https://wordexperts.com.au"}
+                className={`"btn" ${styles.btnLink}`}
+              >
                 Word
               </Link>
             </AnimateOnScroll>

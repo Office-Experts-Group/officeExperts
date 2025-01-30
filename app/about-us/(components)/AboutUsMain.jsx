@@ -29,7 +29,9 @@ const AboutUsMain = () => {
               business needs.
             </p>
           </div>
-          <button className={`btn ${styles.btn}`}>discover more</button>
+          <Link href="/meet-the-team" className={`btn ${styles.btn}`}>
+            Meet Our Team
+          </Link>
         </div>
       </AnimateOnScroll>
 
