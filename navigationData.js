@@ -1,9 +1,9 @@
 // Base URLs for different sites (change these for production)
-const WORD_EXPERTS_URL = "https://word-experts.vercel.app";
+const WORD_EXPERTS_URL = "https://wordexperts.com.au";
 const OFFICE_EXPERTS_URL = "/";
-const EXCEL_EXPERTS_URL = "https://excel-experts.vercel.app";
-const POWER_PLATFORM_EXPERTS_URL = "https://power-platform-experts.vercel.app";
-const ACCESS_EXPERTS_URL = "https://access-experts.vercel.app";
+const EXCEL_EXPERTS_URL = "https://excelexperts.com.au";
+const POWER_PLATFORM_EXPERTS_URL = "https://powerplatformexperts.com.au";
+const ACCESS_EXPERTS_URL = "https://accessexperts.com.au";
 
 export const navigationData = {
   home: {
