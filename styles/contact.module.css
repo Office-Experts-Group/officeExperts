@@ -229,6 +229,11 @@
   max-height: 100%;
   padding: 0.5rem 0;
 }
+@media screen and (max-width: 768px) {
+  .formField:nth-of-type(2) {
+    margin-bottom: 4rem;
+  }
+}
 @media (max-width: 449px) {
   .formField:nth-of-type(1) {
     order: 1;
@@ -320,6 +325,8 @@
 }
 .radioField .radioOptions {
   display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .radioFieldSpan {
@@ -577,6 +584,24 @@
   display: grid;
   grid-template-columns: 1fr 50%;
   grid-row-gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (max-width: 449px) {
+  .surveyOptions {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .surveyOptions {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.surveyOptions .radioOption {
+  min-width: 200px;
 }
 
 #otherReferralDetails {

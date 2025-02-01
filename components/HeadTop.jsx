@@ -28,7 +28,7 @@ const HeadTop = () => {
             <span className={styles.loc6}>Adelaide, SA</span>
             <span className={styles.loc7}>Canberra, ACT</span>
             <span className={styles.loc8}>Northern Rivers, NSW</span>
-            <span className={styles.loc9}>Woolongong, NSW</span>
+            <span className={styles.loc9}>Wollongong, NSW</span>
             <span className={styles.loc10}>Richmond, Vic</span>
             <span className={styles.loc11}>Darwin, NT</span>
           </div>
