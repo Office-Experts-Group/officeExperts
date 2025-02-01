@@ -11,7 +11,7 @@ export const metadata = {
       "Word Template Conversions | Word Design Services | Office Experts Group",
     description:
       "Our team of Word design experts take the stress out of your company templates by converting all of your organisation's documents to our easy to use templates, complete with your branding, a consistent look and a professional feel.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/word-template-conversions/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/word-template-conversions",
   },
 
   keywords: [
@@ -44,9 +44,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/word-template-conversions/",
+    canonical: "/services/microsoft-word/word-template-conversions",
     languages: {
-      "en-AU": "/services/microsoft-word/word-template-conversions/",
+      "en-AU": "/services/microsoft-word/word-template-conversions",
     },
   },
 };
