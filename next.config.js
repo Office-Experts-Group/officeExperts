@@ -166,6 +166,11 @@ const REDIRECTS = [
     destination: "/services/microsoft-excel/vba-macro-development",
     permanent: true,
   },
+  {
+    source: "/services/microsoft-access/microsoft-dot-net",
+    destination: "/services/microsoft-dot-net",
+    permanent: true,
+  },
 ];
 /** @type {import('next').NextConfig} */
 const nextConfig = {
