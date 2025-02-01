@@ -42,9 +42,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/word-and-powerpoint-experts-sydney/",
+    canonical: "/word-and-powerpoint-experts-sydney",
     languages: {
-      "en-AU": "/word-and-powerpoint-experts-sydney/",
+      "en-AU": "/word-and-powerpoint-experts-sydney",
     },
   },
 };

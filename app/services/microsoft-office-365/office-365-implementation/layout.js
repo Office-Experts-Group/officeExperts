@@ -35,6 +35,13 @@ export const metadata = {
     // "business email setup with Office 365",
     // "company productivity tools Office 365",
   ],
+  metadataBase: new URL("https://www.officeexperts.com.au"),
+  alternates: {
+    canonical: "/services/microsoft-office-365/office-365-implementation",
+    languages: {
+      "en-AU": "/services/microsoft-office-365/office-365-implementation",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -57,9 +57,9 @@ export const metadata = {
 
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/word-and-powerpoint-experts-canberra/",
+    canonical: "/word-and-powerpoint-experts-canberra",
     languages: {
-      "en-AU": "/word-and-powerpoint-experts-canberra/",
+      "en-AU": "/word-and-powerpoint-experts-canberra",
     },
   },
 };

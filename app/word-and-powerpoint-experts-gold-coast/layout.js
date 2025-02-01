@@ -57,9 +57,9 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/word-and-powerpoint-experts-gold-coast/",
+    canonical: "/word-and-powerpoint-experts-gold-coast",
     languages: {
-      "en-AU": "/word-and-powerpoint-experts-gold-coast/",
+      "en-AU": "/word-and-powerpoint-experts-gold-coast",
     },
   },
 };

@@ -42,9 +42,9 @@ export const metadata = {
 
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-powerpoint/",
+    canonical: "/services/microsoft-powerpoint",
     languages: {
-      "en-AU": "/services/microsoft-powerpoint/",
+      "en-AU": "/services/microsoft-powerpoint",
     },
   },
 };

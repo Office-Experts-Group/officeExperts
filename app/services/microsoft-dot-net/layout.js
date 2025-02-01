@@ -41,9 +41,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-access/microsoft-dot-net",
+    canonical: "/services/microsoft-dot-net",
     languages: {
-      "en-AU": "/services/microsoft-access/microsoft-dot-net",
+      "en-AU": "/services/microsoft-dot-net",
     },
   },
 };

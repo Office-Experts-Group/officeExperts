@@ -43,9 +43,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/",
+    canonical: "/services",
     languages: {
-      "en-AU": "/services/",
+      "en-AU": "/services",
     },
   },
 };

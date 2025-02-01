@@ -7,9 +7,9 @@ export const metadata = {
 
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/terms-and-conditions/",
+    canonical: "/terms-and-conditions",
     languages: {
-      "en-AU": "/terms-and-conditions/",
+      "en-AU": "/terms-and-conditions",
     },
   },
 };
