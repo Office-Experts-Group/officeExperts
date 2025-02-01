@@ -11,7 +11,7 @@ export const metadata = {
     title: "Microsoft Office Consulting Services | Office Experts Group",
     description:
       "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
-    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin/",
+    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin",
   },
 
   // Keywords extrapolated from content

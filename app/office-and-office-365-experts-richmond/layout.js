@@ -11,7 +11,7 @@ export const metadata = {
     title: "Office and Office 365 Experts Richmond | Office Experts Group",
     description:
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
-    url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond/",
+    url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",
   },
 
   // Additional metadata

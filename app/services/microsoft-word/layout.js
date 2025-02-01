@@ -11,7 +11,7 @@ export const metadata = {
     title: "Microsoft Word Services | Office Experts Group",
     description:
       "Professional Microsoft Word consulting services specialising in templates, document design, forms, accessibility and corporate solutions across Australia.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word",
   },
 
   // Additional metadata

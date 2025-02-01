@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Canberra | Office Experts Group",
     description:
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
-    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra/",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
   },
 
   // Additional metadata

@@ -11,7 +11,7 @@ export const metadata = {
     title: "Excel and Access Database Experts Sydney | Office Experts Group",
     description:
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
-    url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney/",
+    url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney",
   },
 
   // Keywords extrapolated from content

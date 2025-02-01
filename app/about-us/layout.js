@@ -9,7 +9,7 @@ export const metadata = {
     title: "About Us",
     description:
       "Leading Microsoft Office consultants with expert developers and designers servicing all of Australia. Corporate business experience combined with software development expertise.",
-    url: "https://www.officeexperts.com.au/about-us/",
+    url: "https://www.officeexperts.com.au/about-us",
     siteName: "Office Experts Group",
     images: [
       {

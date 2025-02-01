@@ -11,7 +11,7 @@ export const metadata = {
     title: "Office and Office 365 Experts Sydney | Office Experts Group",
     description:
       "Leading Microsoft Office and Office 365 consultants in Sydney. Specialising in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
-    url: "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
+    url: "https://www.officeexperts.com.au/office-and-office-365-experts-sydney",
   },
 
   // Additional metadata

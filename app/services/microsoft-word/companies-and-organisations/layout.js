@@ -27,9 +27,9 @@ export const metadata = {
 
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/companies-and-organisations/",
+    canonical: "/services/microsoft-word/companies-and-organisations",
     languages: {
-      "en-AU": "/services/microsoft-word/companies-and-organisations/",
+      "en-AU": "/services/microsoft-word/companies-and-organisations",
     },
   },
 };

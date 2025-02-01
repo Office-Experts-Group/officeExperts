@@ -9,7 +9,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Sydney | Office Experts Group",
     description:
       "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
-    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney/",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney",
   },
 
   keywords: [

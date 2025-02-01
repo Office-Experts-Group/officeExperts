@@ -9,7 +9,7 @@ export const metadata = {
     title: "Request a Quote | Office Experts Group",
     description:
       "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
-    url: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+    url: "https://www.officeexperts.com.au/contact-us/request-a-quote",
   },
 
   twitter: {

@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Gold Coast | Office Experts Group",
     description:
       "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, document design, presentation solutions, and business automation.",
-    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast/",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast",
   },
 
   // Additional metadata

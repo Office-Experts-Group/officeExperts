@@ -9,7 +9,7 @@ export const metadata = {
     title: "Government Department Word Solutions | Office Experts Group",
     description:
       "Expert Microsoft Word document design and consulting services for government departments. Specialising in accessible documents, templates, and corporate identity protection for state and federal agencies.",
-    url: "https://www.wordexperts.com.au/services/microsoft-word/government-departments/",
+    url: "https://www.wordexperts.com.au/services/microsoft-word/government-departments",
   },
 
   keywords: [
@@ -48,9 +48,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/government-departments/",
+    canonical: "/services/microsoft-word/government-departments",
     languages: {
-      "en-AU": "/services/microsoft-word/government-departments/",
+      "en-AU": "/services/microsoft-word/government-departments",
     },
   },
 };

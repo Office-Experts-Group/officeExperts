@@ -11,7 +11,7 @@ export const metadata = {
       "Microsoft Office Consulting Northern Rivers NSW | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW. Specialising in comprehensive Office solutions, integration, and business automation.",
-    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw/",
+    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
   },
 
   keywords: [

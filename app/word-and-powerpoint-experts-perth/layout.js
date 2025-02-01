@@ -9,7 +9,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Perth | Office Experts Group",
     description:
       "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
-    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth/",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth",
   },
 
   keywords: [

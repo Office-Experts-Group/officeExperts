@@ -12,7 +12,7 @@ export const metadata = {
       "Microsoft Word Document Quick Parts Services | Office Experts Group",
     description:
       "Our team of Word design experts will deliver your document templates with a gallery of Quick Parts so your users can effortlessly create common Word elements, saving your business time, stress and money.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/quick-parts/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/quick-parts",
   },
 
   // Additional metadata
@@ -52,9 +52,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/quick-parts/",
+    canonical: "/services/microsoft-word/quick-parts",
     languages: {
-      "en-AU": "/services/microsoft-word/quick-parts/",
+      "en-AU": "/services/microsoft-word/quick-parts",
     },
   },
 };

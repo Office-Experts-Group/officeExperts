@@ -11,7 +11,7 @@ export const metadata = {
     title: "Meet Our Microsoft Office Specialists | Office Experts Group",
     description:
       "Connect with our expert team of Microsoft Office specialists, focusing on advanced spreadsheet development, VBA automation, and Power Query solutions for businesses across Australia.",
-    url: "https://www.officeexperts.com.au/meet-the-team/",
+    url: "https://www.officeexperts.com.au/meet-the-team",
   },
 
   // Additional metadata

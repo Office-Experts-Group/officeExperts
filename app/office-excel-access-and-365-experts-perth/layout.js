@@ -9,7 +9,7 @@ export const metadata = {
     title: "Office, Excel, Access and 365 Experts | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
-    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-perth/",
+    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-perth",
   },
 
   keywords: [

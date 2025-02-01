@@ -13,7 +13,7 @@ export const metadata = {
       "Word Template Creation | Word Document Creation | Office Experts Group",
     description:
       "Our team of Word design experts can create your company documents and templates with our easy to use templates, complete with your branding, a consistent look and a professional feel.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation",
   },
 
   // Additional metadata
@@ -49,9 +49,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/word-document-template-creation/",
+    canonical: "/services/microsoft-word/word-document-template-creation",
     languages: {
-      "en-AU": "/services/microsoft-word/word-document-template-creation/",
+      "en-AU": "/services/microsoft-word/word-document-template-creation",
     },
   },
 };

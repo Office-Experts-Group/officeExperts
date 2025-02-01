@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word Popup Form | Office Experts Group",
     description:
       "Our team of Word design experts can deliver your document templates with popup forms to enhance the data entry process, improving both productivity and document quality, while saving your business money.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/popup-forms",
   },
 
   // Additional metadata
@@ -46,9 +46,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/popup-forms/",
+    canonical: "/services/microsoft-word/popup-forms",
     languages: {
-      "en-AU": "/services/microsoft-word/popup-forms/",
+      "en-AU": "/services/microsoft-word/popup-forms",
     },
   },
 };

@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Richmond | Office Experts Group",
     description:
       "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
-    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond/",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
   },
 
   // Additional metadata
@@ -46,9 +46,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/word-and-powerpoint-experts-richmond/",
+    canonical: "/word-and-powerpoint-experts-richmond",
     languages: {
-      "en-AU": "/word-and-powerpoint-experts-richmond/",
+      "en-AU": "/word-and-powerpoint-experts-richmond",
     },
   },
 };

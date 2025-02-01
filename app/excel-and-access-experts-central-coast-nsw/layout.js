@@ -11,7 +11,7 @@ export const metadata = {
     title: "Excel & Access Experts Central Coast NSW | Office Experts Group",
     description:
       "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimization.",
-    url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+    url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
   },
 
   // Additional metadata

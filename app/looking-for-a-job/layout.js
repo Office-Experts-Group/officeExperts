@@ -11,7 +11,7 @@ export const metadata = {
     title: "Looking for a job? | Office Experts Group",
     description:
       "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies including Microsoft Office, Power Platform, and Azure as independent contractors.",
-    url: "https://www.officeexperts.com.au/looking-for-a-job/",
+    url: "https://www.officeexperts.com.au/looking-for-a-job",
   },
 
   // Additional metadata

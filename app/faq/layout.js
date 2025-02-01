@@ -9,7 +9,7 @@ export const metadata = {
     title: "Frequently Asked Questions | Office Experts Group",
     description:
       "Find answers to common questions about our Microsoft Office consulting services and solutions.",
-    url: "https://www.officeexperts.com.au/faq/",
+    url: "https://www.officeexperts.com.au/faq",
   },
 
   keywords: [

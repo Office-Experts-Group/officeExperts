@@ -40,9 +40,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/accessibility/",
+    canonical: "/services/microsoft-word/accessibility",
     languages: {
-      "en-AU": "/services/microsoft-word/accessibility/",
+      "en-AU": "/services/microsoft-word/accessibility",
     },
   },
 };

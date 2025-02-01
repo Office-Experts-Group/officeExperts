@@ -11,7 +11,7 @@ export const metadata = {
       "Word Toolbar Customisation | Custom Word Ribbon Design | Office Experts Group",
     description:
       "Expert customisation of Microsoft Word toolbars and ribbons to improve productivity and streamline document creation. Our team delivers automated solutions for efficient business documentation.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons",
   },
 
   keywords: [
@@ -45,9 +45,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/custom-toolbars-and-ribbons/",
+    canonical: "/services/microsoft-word/custom-toolbars-and-ribbons",
     languages: {
-      "en-AU": "/services/microsoft-word/custom-toolbars-and-ribbons/",
+      "en-AU": "/services/microsoft-word/custom-toolbars-and-ribbons",
     },
   },
 };

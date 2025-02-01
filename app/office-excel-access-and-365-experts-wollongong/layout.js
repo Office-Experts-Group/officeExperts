@@ -11,7 +11,7 @@ export const metadata = {
     title: "Microsoft Office Consultants Wollongong | Office Experts Group",
     description:
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
-    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-wollongong/",
+    url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-wollongong",
   },
 
   // Additional metadata

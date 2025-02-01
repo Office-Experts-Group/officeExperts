@@ -11,7 +11,7 @@ export const metadata = {
     title: "Office Experts Group Client Testimonials",
     description:
       "Read testimonials from our satisfied clients across Australia. Our Microsoft Office consultants have helped businesses optimise their operations and improve efficiency.",
-    url: "https://www.officeexperts.com.au/client-testimonials/",
+    url: "https://www.officeexperts.com.au/client-testimonials",
   },
 
   // Additional metadata

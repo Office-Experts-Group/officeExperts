@@ -11,7 +11,7 @@ export const metadata = {
     title: "Corporate Identity Solutions | Office Experts Group",
     description:
       "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
-    url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity/",
+    url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-identity",
   },
 
   // Additional metadata
@@ -46,9 +46,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/corporate-identity/",
+    canonical: "/services/microsoft-word/corporate-identity",
     languages: {
-      "en-AU": "/services/microsoft-word/corporate-identity/",
+      "en-AU": "/services/microsoft-word/corporate-identity",
     },
   },
 };

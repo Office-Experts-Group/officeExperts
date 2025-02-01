@@ -11,7 +11,7 @@ export const metadata = {
     title: "Excel and Access Experts Melbourne | Office Experts Group",
     description:
       "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing. Specialists in custom development, databases, integration, and business solutions.",
-    url: "https://www.officeexperts.com.au/excel-and-access-experts-melbourne/",
+    url: "https://www.officeexperts.com.au/excel-and-access-experts-melbourne",
   },
 
   // Additional metadata
