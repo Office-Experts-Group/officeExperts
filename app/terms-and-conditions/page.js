@@ -4,6 +4,9 @@ import React from "react";
 import styles from "../../styles/boringStuff.module.css";
 import ServiceHero from "../../components/ServiceHero";
 
+import handShake from "../../public/pageHeros/handShake.webp";
+import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
+
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
@@ -96,8 +99,8 @@ export default function TermsAndConditionsPage() {
       />
       <ServiceHero
         title="Terms and Conditions"
-        desktopImage={"handShake"}
-        mobileImage={"handShakeMob"}
+        desktopImage={handShake}
+        mobileImage={handShakeMob}
         altDesk={"handshake"}
         altMob={"handshake"}
       />

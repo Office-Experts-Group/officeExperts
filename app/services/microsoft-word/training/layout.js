@@ -9,7 +9,7 @@ export const metadata = {
     title: "Microsoft Word Training | Office Experts Group",
     description:
       "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
-    url: "https://www.wordexperts.com.au/services/microsoft-word/training/",
+    url: "https://www.wordexperts.com.au/services/microsoft-word/training",
   },
 
   keywords: [
@@ -43,9 +43,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/training/",
+    canonical: "/services/microsoft-word/training",
     languages: {
-      "en-AU": "/services/microsoft-word/training/",
+      "en-AU": "/services/microsoft-word/training",
     },
   },
 };

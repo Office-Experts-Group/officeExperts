@@ -9,7 +9,7 @@ export const metadata = {
     title: "Corporate Word Solutions | Office Experts Group",
     description:
       "Advanced Corporate Word Template Solution enabling users to efficiently create corporate documents in a controlled environment with consistent formatting, automated processes, and protected branding guidelines.",
-    url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-global-template-solution/",
+    url: "https://www.wordexperts.com.au/services/microsoft-word/corporate-global-template-solution",
   },
 
   keywords: [
@@ -43,9 +43,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/corporate-global-template-solution/",
+    canonical: "/services/microsoft-word/corporate-global-template-solution",
     languages: {
-      "en-AU": "/services/microsoft-word/corporate-global-template-solution/",
+      "en-AU": "/services/microsoft-word/corporate-global-template-solution",
     },
   },
 };

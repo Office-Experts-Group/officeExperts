@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word Upgrades and Migration Services | Office Experts Group",
     description:
       "Professional Microsoft Word upgrade and migration services. Specialists in version transitions, formatting fixes, and PDF conversions.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
   },
 
   // Additional metadata
@@ -51,9 +51,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/upgrades-and-migration/",
+    canonical: "/services/microsoft-word/upgrades-and-migration",
     languages: {
-      "en-AU": "/services/microsoft-word/upgrades-and-migration/",
+      "en-AU": "/services/microsoft-word/upgrades-and-migration",
     },
   },
 };

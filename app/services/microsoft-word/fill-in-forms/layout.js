@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word Fill In Forms & Form Design Services",
     description:
       "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms/",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms",
   },
 
   // Additional metadata
@@ -46,9 +46,9 @@ export const metadata = {
   ],
   metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-word/fill-in-forms/",
+    canonical: "/services/microsoft-word/fill-in-forms",
     languages: {
-      "en-AU": "/services/microsoft-word/fill-in-forms/",
+      "en-AU": "/services/microsoft-word/fill-in-forms",
     },
   },
 };
