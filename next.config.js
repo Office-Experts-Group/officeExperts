@@ -186,6 +186,11 @@ const REDIRECTS = [
     destination: "/client-testimonials",
     permanent: true,
   },
+  {
+    source: "/services",
+    destination: "/",
+    permanent: true,
+  },
 ];
 
 const NOINDEX_REDIRECTS = [
