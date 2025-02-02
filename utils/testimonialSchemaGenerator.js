@@ -19,7 +19,7 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
     "@id": generateTestimonialId(domain, page, index),
     itemReviewed: {
       "@type": "ProfessionalService",
-      "@id": `${domain}/#business`,
+      "@id": `${domain}#business`,
       name: `Microsoft ${serviceName} Consulting Services`,
       provider: {
         "@type": "Organization",
@@ -97,7 +97,7 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
 const generateAggregateSchema = (testimonials, domain) => {
   return {
     "@type": "AggregateRating",
-    "@id": `${domain}/#aggregateRating`,
+    "@id": `${domain}#aggregateRating`,
     itemReviewed: {
       "@type": "ProfessionalService",
       "@id": `${domain}/#business`,
@@ -202,7 +202,7 @@ export const getAboutPageSchema = (testimonials) => {
   return generateTestimonialsSchema(
     testimonials,
     "https://www.officeexperts.com.au",
-    "https://officeexperts.com.au/about-us/",
+    "https://officeexperts.com.au/about-us",
     false
   );
 };
@@ -211,7 +211,7 @@ export const getTestimonialsPageSchema = (testimonials) => {
   return generateTestimonialsSchema(
     testimonials,
     "https://www.officeexperts.com.au",
-    "/client-testimonials/",
+    "/client-testimonials",
     true
   );
 };

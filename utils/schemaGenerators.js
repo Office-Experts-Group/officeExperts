@@ -1,7 +1,7 @@
 // utils/schemaGenerators.js
 export const generateProfessionalServiceSchema = () => ({
   "@type": "ProfessionalService",
-  "@id": `https://www.officeexperts.com.au/#business`,
+  "@id": `https://www.officeexperts.com.au#business`,
   name: "Microsoft Office Consulting Services",
   url: "https://www.officeexperts.com.au",
   description: "Professional Microsoft Office consulting and support services",
