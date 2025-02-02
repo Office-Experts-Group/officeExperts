@@ -128,6 +128,12 @@ export const metadata = {
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
+
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://www.officeexperts.com.au"
+      : "http://localhost:3000"
+  ),
 };
 
 export default function RootLayout({ children }) {
