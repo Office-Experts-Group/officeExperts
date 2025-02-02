@@ -20,14 +20,6 @@ export const metadata = {
       "Request a quote for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/contact-us/request-a-quote",
-    languages: {
-      "en-AU": "/contact-us/request-a-quote",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -3,7 +3,7 @@ export const generateProfessionalServiceSchema = () => ({
   "@type": "ProfessionalService",
   "@id": `https://www.officeexperts.com.au/#business`,
   name: "Microsoft Office Consulting Services",
-  url: "https://www.officeexperts.com.au/",
+  url: "https://www.officeexperts.com.au",
   description: "Professional Microsoft Office consulting and support services",
   priceRange: "$$",
   serviceType: "Microsoft Office Consulting",
@@ -255,7 +255,7 @@ export const generateProfessionalServiceSchema = () => ({
   },
   provider: {
     "@type": "Organization",
-    "@id": `https://www.officeexperts.com.au/#organization`,
+    "@id": `https://www.officeexperts.com.au#organization`,
   },
   telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
@@ -263,9 +263,9 @@ export const generateProfessionalServiceSchema = () => ({
 
 export const generateOrganizationSchema = () => ({
   "@type": "Organization",
-  "@id": "https://www.officeexperts.com.au/#organization",
+  "@id": "https://www.officeexperts.com.au#organization",
   name: "Office Experts Group",
-  url: "https://www.officeexperts.com.au/",
+  url: "https://www.officeexperts.com.au",
   telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
   // Enhanced contact point information

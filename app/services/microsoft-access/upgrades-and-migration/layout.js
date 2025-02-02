@@ -10,14 +10,6 @@ export const metadata = {
     "Microsoft access database migration",
     "Microsoft access database upgrade",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access/upgrades-and-migration",
-    languages: {
-      "en-AU": "/services/microsoft-access/upgrades-and-migration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

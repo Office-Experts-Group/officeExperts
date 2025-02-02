@@ -36,15 +36,6 @@ export const metadata = {
     // "database automation solutions",
     // "database consulting services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/by-business-solution/database-development-and-solutions",
-    languages: {
-      "en-AU":
-        "/services/by-business-solution/database-development-and-solutions",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

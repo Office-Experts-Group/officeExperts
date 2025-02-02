@@ -78,7 +78,7 @@ export const metadata = {
     title: "Microsoft Office Consulting & Solutions | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
-    url: "https://www.officeexperts.com.au/",
+    url: "https://www.officeexperts.com.au",
     siteName: "Office Experts Group",
     images: [
       {
@@ -112,14 +112,6 @@ export const metadata = {
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     images: ["/logo.png"],
-  },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-AU": "/",
-    },
   },
 
   robots: {

@@ -29,14 +29,6 @@ export const metadata = {
       "Read testimonials from our satisfied clients across Australia. Our Microsoft Office consultants have helped businesses optimise their operations and improve efficiency.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/client-testimonials",
-    languages: {
-      "en-AU": "/client-testimonials",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

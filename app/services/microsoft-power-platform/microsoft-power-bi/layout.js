@@ -38,14 +38,6 @@ export const metadata = {
     // "Power BI Excel integration",
     // "Power BI business intelligence",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-bi",
-    languages: {
-      "en-AU": "/services/microsoft-power-platform/microsoft-power-bi",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

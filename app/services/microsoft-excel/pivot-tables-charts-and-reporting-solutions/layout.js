@@ -40,15 +40,6 @@ export const metadata = {
     // "Excel charting services",
     // "pivot table specialists",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
-    languages: {
-      "en-AU":
-        "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

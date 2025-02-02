@@ -31,11 +31,11 @@ const schema = {
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/",
-      url: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/",
+        "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
+      url: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
       name: "Database Development and Solutions | Office Expert Australia",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
@@ -43,14 +43,14 @@ const schema = {
         "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/#breadcrumb",
+          "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/",
+            "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
           ],
         },
       ],
@@ -58,25 +58,25 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions/#breadcrumb",
+        "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution/",
+          item: "https://www.officeexperts.com.au/services/by-business-solution",
         },
         {
           "@type": "ListItem",

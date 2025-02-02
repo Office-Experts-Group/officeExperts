@@ -32,14 +32,6 @@ export const metadata = {
       "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-excel-access-and-365-experts-darwin",
-    languages: {
-      "en-AU": "/office-excel-access-and-365-experts-darwin",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

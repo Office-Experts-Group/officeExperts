@@ -38,15 +38,6 @@ export const metadata = {
     // "PowerPoint branding templates",
     // "custom slide designs",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
-    languages: {
-      "en-AU":
-        "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

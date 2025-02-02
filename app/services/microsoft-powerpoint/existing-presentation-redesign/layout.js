@@ -37,13 +37,6 @@ export const metadata = {
     // "enterprise presentation solutions",
     // "government presentation redesign",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-powerpoint/existing-presentation-redesign",
-    languages: {
-      "en-AU": "/services/microsoft-powerpoint/existing-presentation-redesign",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -35,13 +35,6 @@ export const metadata = {
     // "Excel business solutions",
     // "Excel efficiency tools",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/custom-design-and-development",
-    languages: {
-      "en-AU": "/services/microsoft-excel/custom-design-and-development",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

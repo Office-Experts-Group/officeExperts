@@ -23,11 +23,11 @@ const schema = {
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/",
-      url: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/",
+        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
+      url: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
       name: "3rd Party Application | Office Integration | Office Experts",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
@@ -35,14 +35,14 @@ const schema = {
         "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/#breadcrumb",
+          "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/",
+            "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
           ],
         },
       ],
@@ -50,25 +50,25 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration/#breadcrumb",
+        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution/",
+          item: "https://www.officeexperts.com.au/services/by-business-solution",
         },
         {
           "@type": "ListItem",

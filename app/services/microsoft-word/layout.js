@@ -49,13 +49,6 @@ export const metadata = {
     // "Word custom toolbars",
     // "Word template migration",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word",
-    languages: {
-      "en-AU": "/services/microsoft-word",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

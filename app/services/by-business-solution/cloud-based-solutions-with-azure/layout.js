@@ -11,7 +11,7 @@ export const metadata = {
     title: "Microsoft Cloud Based Solutions | Office Experts Group",
     description:
       "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
-    url: "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure/",
+    url: "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
   },
 
   // Additional metadata
@@ -57,15 +57,6 @@ export const metadata = {
     description:
       "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
     images: ["/logo.png"],
-  },
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/by-business-solution/cloud-based-solutions-with-azure",
-    languages: {
-      "en-AU":
-        "/services/by-business-solution/cloud-based-solutions-with-azure",
-    },
   },
 };
 

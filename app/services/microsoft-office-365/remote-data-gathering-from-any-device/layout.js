@@ -36,16 +36,6 @@ export const metadata = {
     // "Exchange Online deployment",
     // "Teams implementation",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/microsoft-office-365/remote-data-gathering-from-any-device",
-    languages: {
-      "en-AU":
-        "/services/microsoft-office-365/remote-data-gathering-from-any-device",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

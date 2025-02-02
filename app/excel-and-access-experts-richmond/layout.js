@@ -30,14 +30,6 @@ export const metadata = {
       "Expert Microsoft Excel programmers and Access database consultants in Richmond. Specialising in custom development, databases, integration, data manipulation and business solutions.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/excel-and-access-experts-richmond",
-    languages: {
-      "en-AU": "/excel-and-access-experts-richmond",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

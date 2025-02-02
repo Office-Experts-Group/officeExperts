@@ -40,14 +40,6 @@ export const metadata = {
     // "enterprise Access solutions",
     // "professional Access help",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access/access-support",
-    languages: {
-      "en-AU": "/services/microsoft-access/access-support",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

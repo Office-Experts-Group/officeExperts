@@ -23,7 +23,7 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
       name: `Microsoft ${serviceName} Consulting Services`,
       provider: {
         "@type": "Organization",
-        "@id": `${domain}/#organization`,
+        "@id": `${domain}#organization`,
       },
       serviceType: `Microsoft ${serviceName} Consulting`,
       description: `Professional Microsoft ${serviceName} consulting and support services`,
@@ -88,7 +88,7 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
     datePublished: formatDate(new Date("2024-01-01")),
     publisher: {
       "@type": "Organization",
-      "@id": `${domain}/#organization`,
+      "@id": `${domain}#organization`,
     },
   };
 };

@@ -19,24 +19,24 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/contact-us/request-a-quote/",
-      url: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+      "@id": "https://www.officeexperts.com.au/contact-us/request-a-quote",
+      url: "https://www.officeexperts.com.au/contact-us/request-a-quote",
       name: "Request a Quote | Get a Quote | Office Experts Group",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/contact-us/request-a-quote/#breadcrumb",
+          "https://www.officeexperts.com.au/contact-us/request-a-quote#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/contact-us/request-a-quote/",
+            "https://www.officeexperts.com.au/contact-us/request-a-quote",
           ],
         },
       ],
@@ -44,19 +44,19 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/contact-us/request-a-quote/#breadcrumb",
+        "https://www.officeexperts.com.au/contact-us/request-a-quote#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Contact Us",
-          item: "https://www.officeexperts.com.au/contact-us/",
+          item: "https://www.officeexperts.com.au/contact-us",
         },
         {
           "@type": "ListItem",

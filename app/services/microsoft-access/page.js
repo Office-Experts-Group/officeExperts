@@ -27,11 +27,11 @@ const schema = {
     generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/microsoft-access/",
-      url: "https://www.officeexperts.com.au/services/microsoft-access/",
+      "@id": "https://www.officeexperts.com.au/services/microsoft-access",
+      url: "https://www.officeexperts.com.au/services/microsoft-access",
       name: "Microsoft Access Services | Microsoft Access Experts AU",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
@@ -42,7 +42,7 @@ const schema = {
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/microsoft-access/",
+            "https://www.officeexperts.com.au/services/microsoft-access",
           ],
         },
       ],
@@ -50,19 +50,19 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/microsoft-access/#breadcrumb",
+        "https://www.officeexperts.com.au/services/microsoft-access#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",

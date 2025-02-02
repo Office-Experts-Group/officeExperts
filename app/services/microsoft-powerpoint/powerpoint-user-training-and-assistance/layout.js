@@ -39,15 +39,6 @@ export const metadata = {
     // "PowerPoint creation assistance",
     // "PowerPoint skills development",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
-    languages: {
-      "en-AU":
-        "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

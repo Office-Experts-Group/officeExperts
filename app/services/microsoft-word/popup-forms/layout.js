@@ -44,13 +44,6 @@ export const metadata = {
     // "data entry automation",
     // "document quality control",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/popup-forms",
-    languages: {
-      "en-AU": "/services/microsoft-word/popup-forms",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -36,15 +36,6 @@ export const metadata = {
     // "Office automation",
     // "VBA development",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/by-business-solution/3rd-party-application-or-office-integration",
-    languages: {
-      "en-AU":
-        "/services/by-business-solution/3rd-party-application-or-office-integration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

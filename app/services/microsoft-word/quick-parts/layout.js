@@ -50,13 +50,6 @@ export const metadata = {
     // "microsoft office automation",
     // "word template solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/quick-parts",
-    languages: {
-      "en-AU": "/services/microsoft-word/quick-parts",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

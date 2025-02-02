@@ -38,13 +38,6 @@ export const metadata = {
     // "document accessibility automation",
     // "accessibility standards compliance",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/accessibility",
-    languages: {
-      "en-AU": "/services/microsoft-word/accessibility",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

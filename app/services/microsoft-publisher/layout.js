@@ -39,13 +39,6 @@ export const metadata = {
     // "Publisher online documents",
     // "Publisher training services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-publisher",
-    languages: {
-      "en-AU": "/services/microsoft-publisher",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

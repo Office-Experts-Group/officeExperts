@@ -41,13 +41,6 @@ export const metadata = {
     // "office experts perth",
     // "microsoft services australia wide",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services",
-    languages: {
-      "en-AU": "/services",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

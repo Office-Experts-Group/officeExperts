@@ -22,24 +22,24 @@ const schema = {
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
-      url: "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
+        "https://www.officeexperts.com.au/office-and-office-365-experts-sydney",
+      url: "https://www.officeexperts.com.au/office-and-office-365-experts-sydney",
       name: "Office and Office 365 Experts - Sydney",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/#breadcrumb",
+          "https://www.officeexperts.com.au/office-and-office-365-experts-sydney#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
+            "https://www.officeexperts.com.au/office-and-office-365-experts-sydney",
           ],
         },
       ],
@@ -47,13 +47,13 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/#breadcrumb",
+        "https://www.officeexperts.com.au/office-and-office-365-experts-sydney#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

@@ -25,14 +25,6 @@ export const metadata = {
       "Connect with our expert team of Microsoft Office specialists, focusing on advanced spreadsheet development, VBA automation, and Power Query solutions for businesses across Australia.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/meet-the-team",
-    languages: {
-      "en-AU": "/meet-the-team",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

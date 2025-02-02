@@ -22,11 +22,11 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/by-office-product/",
-      url: "https://www.officeexperts.com.au/services/by-office-product/",
+      "@id": "https://www.officeexperts.com.au/services/by-office-product",
+      url: "https://www.officeexperts.com.au/services/by-office-product",
       name: "Office Product Services | Excel Consulting Solutions AU",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
@@ -34,14 +34,14 @@ const schema = {
         "Microsoft Office Consultancy and Assistance Services for Australia, Excel, Word, Access, PowerPoint, SharePoint. Contact us Consult@officeexperts.com.au",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/by-office-product/#breadcrumb",
+          "https://www.officeexperts.com.au/services/by-office-product#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/by-office-product/",
+            "https://www.officeexperts.com.au/services/by-office-product",
           ],
         },
       ],
@@ -49,19 +49,19 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/by-office-product/#breadcrumb",
+        "https://www.officeexperts.com.au/services/by-office-product#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",

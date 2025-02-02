@@ -31,14 +31,6 @@ export const metadata = {
       "Leading Microsoft Office consultants in Brisbane Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions. Expert development, integration and support.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-excel-access-and-365-experts-brisbane",
-    languages: {
-      "en-AU": "/office-excel-access-and-365-experts-brisbane",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

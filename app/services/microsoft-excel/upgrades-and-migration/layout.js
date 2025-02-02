@@ -38,13 +38,6 @@ export const metadata = {
     // "Excel consultants Melbourne",
     // "Excel experts Brisbane",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/upgrades-and-migration",
-    languages: {
-      "en-AU": "/services/microsoft-excel/upgrades-and-migration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

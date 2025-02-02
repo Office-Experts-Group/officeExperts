@@ -35,15 +35,6 @@ export const metadata = {
     // "SQL Server development",
     // "database interface design",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/by-business-solution/office-and-sql-server-integration",
-    languages: {
-      "en-AU":
-        "/services/by-business-solution/office-and-sql-server-integration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

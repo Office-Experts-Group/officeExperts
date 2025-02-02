@@ -44,13 +44,6 @@ export const metadata = {
     // "form development",
     // "business documentation",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/fill-in-forms",
-    languages: {
-      "en-AU": "/services/microsoft-word/fill-in-forms",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -38,14 +38,6 @@ export const metadata = {
     // "Excel automation Brisbane",
     // "data processing Perth",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/data-manipulation",
-    languages: {
-      "en-AU": "/services/microsoft-excel/data-manipulation",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

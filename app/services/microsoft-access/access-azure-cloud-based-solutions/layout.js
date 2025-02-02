@@ -36,13 +36,6 @@ export const metadata = {
     // "cloud database management",
     // "Access business solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access/access-azure-cloud-based-solutions",
-    languages: {
-      "en-AU": "/services/microsoft-access/access-azure-cloud-based-solutions",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

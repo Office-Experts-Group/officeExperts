@@ -47,13 +47,6 @@ export const metadata = {
     // "company document templates",
     // "document branding services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/word-document-template-creation",
-    languages: {
-      "en-AU": "/services/microsoft-word/word-document-template-creation",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

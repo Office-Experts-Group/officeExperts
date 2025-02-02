@@ -40,13 +40,6 @@ export const metadata = {
     // "document consistency solutions",
     // "presentation design services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/word-and-powerpoint-experts-sydney",
-    languages: {
-      "en-AU": "/word-and-powerpoint-experts-sydney",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

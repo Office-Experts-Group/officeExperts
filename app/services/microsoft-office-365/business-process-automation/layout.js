@@ -34,14 +34,6 @@ export const metadata = {
     // "office automation services",
     // "digital transformation solutions",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-office-365/business-process-automation",
-    languages: {
-      "en-AU": "/services/microsoft-office-365/business-process-automation",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

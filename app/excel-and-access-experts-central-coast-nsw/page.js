@@ -22,24 +22,24 @@ const schema = {
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
-      url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+        "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
+      url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
       name: "Excel and Access Experts - Central Coast, NSW",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/#breadcrumb",
+          "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/",
+            "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
           ],
         },
       ],
@@ -47,13 +47,13 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw/#breadcrumb",
+        "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

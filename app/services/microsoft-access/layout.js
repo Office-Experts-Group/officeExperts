@@ -42,13 +42,6 @@ export const metadata = {
     // "database repair services",
     // "Access database training",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access",
-    languages: {
-      "en-AU": "/services/microsoft-access",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

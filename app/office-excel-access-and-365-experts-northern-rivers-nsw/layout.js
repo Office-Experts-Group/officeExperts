@@ -30,14 +30,6 @@ export const metadata = {
       "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW. Specialising in comprehensive Office solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-excel-access-and-365-experts-northern-rivers-nsw",
-    languages: {
-      "en-AU": "/office-excel-access-and-365-experts-northern-rivers-nsw",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -35,13 +35,6 @@ export const metadata = {
     // "VBA integration services",
     // "automated Office solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/vba-macro-development",
-    languages: {
-      "en-AU": "/services/microsoft-excel/vba-macro-development",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -14,36 +14,36 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://officeexperts.com.au/blog/",
-      url: "https://officeexperts.com.au/blog/",
+      "@id": "https://officeexperts.com.au/blog",
+      url: "https://officeexperts.com.au/blog",
       name: "Blog | Office Experts Australia",
       isPartOf: {
-        "@id": "https://officeexperts.com.au/#website",
+        "@id": "https://officeexperts.com.au#website",
       },
       datePublished: "2024-01-23T00:00:00+00:00",
       dateModified: "2024-01-23T00:00:00+00:00",
       description:
         "Stay up to date with the latest Microsoft Office tips, tricks, and best practices from Office Experts Australia.",
       breadcrumb: {
-        "@id": "https://officeexperts.com.au/blog/#breadcrumb",
+        "@id": "https://officeexperts.com.au/blog#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://officeexperts.com.au/blog/"],
+          target: ["https://officeexperts.com.au/blog"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://officeexperts.com.au/blog/#breadcrumb",
+      "@id": "https://officeexperts.com.au/blog#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://officeexperts.com.au/",
+          item: "https://officeexperts.com.au",
         },
         {
           "@type": "ListItem",

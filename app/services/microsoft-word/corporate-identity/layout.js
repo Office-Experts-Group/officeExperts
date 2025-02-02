@@ -44,13 +44,6 @@ export const metadata = {
     // "template management system",
     // "brand compliant documents",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/corporate-identity",
-    languages: {
-      "en-AU": "/services/microsoft-word/corporate-identity",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

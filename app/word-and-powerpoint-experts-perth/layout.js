@@ -29,13 +29,6 @@ export const metadata = {
     // "PowerPoint experts Perth",
     // "Word consultants Perth",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/word-and-powerpoint-experts-perth",
-    languages: {
-      "en-AU": "/word-and-powerpoint-experts-perth",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

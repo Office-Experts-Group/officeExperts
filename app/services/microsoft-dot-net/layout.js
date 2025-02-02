@@ -39,13 +39,6 @@ export const metadata = {
     // "NET Office integration",
     // "NET SharePoint development",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-dot-net",
-    languages: {
-      "en-AU": "/services/microsoft-dot-net",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

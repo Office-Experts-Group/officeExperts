@@ -32,14 +32,6 @@ export const metadata = {
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-excel-access-and-365-experts-wollongong",
-    languages: {
-      "en-AU": "/office-excel-access-and-365-experts-wollongong",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

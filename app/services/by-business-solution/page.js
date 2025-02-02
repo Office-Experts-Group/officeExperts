@@ -22,11 +22,11 @@ const schema = {
     generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/by-business-solution/",
-      url: "https://www.officeexperts.com.au/services/by-business-solution/",
+      "@id": "https://www.officeexperts.com.au/services/by-business-solution",
+      url: "https://www.officeexperts.com.au/services/by-business-solution",
       name: "Excel Custom Formula Service | Services By Business Solution",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
@@ -34,14 +34,14 @@ const schema = {
         "We can give you a quote or work to an hourly rate. Via remote access, we offer ongoing support and training, for your staff to learn specific tasks as required.",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/by-business-solution/#breadcrumb",
+          "https://www.officeexperts.com.au/services/by-business-solution#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/by-business-solution/",
+            "https://www.officeexperts.com.au/services/by-business-solution",
           ],
         },
       ],
@@ -49,19 +49,19 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/#breadcrumb",
+        "https://www.officeexperts.com.au/services/by-business-solution#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",

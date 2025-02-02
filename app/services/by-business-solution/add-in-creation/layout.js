@@ -35,14 +35,6 @@ export const metadata = {
     // "Enterprise Office add-ins",
     // "Commercial Office add-ins",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/by-business-solution/add-in-creation",
-    languages: {
-      "en-AU": "/services/by-business-solution/add-in-creation",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -22,34 +22,34 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/faq/",
-      url: "https://www.officeexperts.com.au/faq/",
+      "@id": "https://www.officeexperts.com.au/faq",
+      url: "https://www.officeexperts.com.au/faq",
       name: "Frequently Asked Questions | Office Experts Group",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
-        "@id": "https://www.officeexperts.com.au/faq/#breadcrumb",
+        "@id": "https://www.officeexperts.com.au/faq#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/faq/"],
+          target: ["https://www.officeexperts.com.au/faq"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/faq/#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/faq#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

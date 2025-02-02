@@ -41,13 +41,6 @@ export const metadata = {
     // "style guide enforcement",
     // "template standardization",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/corporate-global-template-solution",
-    languages: {
-      "en-AU": "/services/microsoft-word/corporate-global-template-solution",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

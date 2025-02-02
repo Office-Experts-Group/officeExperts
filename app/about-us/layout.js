@@ -62,14 +62,6 @@ export const metadata = {
       "Leading Microsoft Office consultants with expert developers and designers servicing all of Australia. Corporate business experience combined with software development expertise.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/about-us",
-    languages: {
-      "en-AU": "/about-us",
-    },
-  },
 };
 
 export default function AboutLayout({ children }) {

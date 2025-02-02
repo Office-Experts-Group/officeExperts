@@ -35,13 +35,6 @@ export const metadata = {
     // "Excel formula training",
     // "Excel formula solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
-    languages: {
-      "en-AU": "/services/microsoft-excel/excel-formulas-and-custom-formulas",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

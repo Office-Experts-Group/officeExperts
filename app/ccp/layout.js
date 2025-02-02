@@ -11,7 +11,7 @@ export const metadata = {
     title: "Credit Card Payments | Office Experts Group",
     description:
       "Secure credit card payment processing for Microsoft Office consulting services and solutions.",
-    url: "https://www.officeexperts.com.au/ccp/",
+    url: "https://www.officeexperts.com.au/ccp",
     siteName: "Office Experts Group",
     images: [
       {
@@ -39,16 +39,6 @@ export const metadata = {
     description:
       "Secure credit card payment processing for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
-  },
-
-  // Additional tags
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/ccp",
-    languages: {
-      "en-AU": "/ccp",
-    },
   },
 };
 

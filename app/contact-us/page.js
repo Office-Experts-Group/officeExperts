@@ -18,36 +18,36 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/contact-us/",
-      url: "https://www.officeexperts.com.au/contact-us/",
+      "@id": "https://www.officeexperts.com.au/contact-us",
+      url: "https://www.officeexperts.com.au/contact-us",
       name: "Contact | Microsoft Excel | Microsoft Access | Power BI | MS Office",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
         "We have expert consultants across Australia and can provide services onsite or by remote access. Contact us Today Consult@officeexperts.com.au",
       breadcrumb: {
-        "@id": "https://www.officeexperts.com.au/contact-us/#breadcrumb",
+        "@id": "https://www.officeexperts.com.au/contact-us#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/contact-us/"],
+          target: ["https://www.officeexperts.com.au/contact-us"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/contact-us/#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/contact-us#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

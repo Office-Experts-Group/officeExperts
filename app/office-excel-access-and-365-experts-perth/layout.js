@@ -28,14 +28,6 @@ export const metadata = {
       "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-excel-access-and-365-experts-perth",
-    languages: {
-      "en-AU": "/office-excel-access-and-365-experts-perth",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

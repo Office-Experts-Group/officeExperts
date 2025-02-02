@@ -33,63 +33,36 @@ const schema = {
     generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/microsoft-office/",
-      url: "https://www.officeexperts.com.au/services/microsoft-office/",
-      name: "Microsoft Office Services | Excel Consultancy Services",
+      "@id": "https://www.officeexperts.com.au/",
+      url: "https://www.officeexperts.com.au",
+      name: "Microsoft Office Services | Office Experts Group",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
         "We provide Microsoft office services, Custom office Solutions, VBA and Macro Development, Cloud Based Solution with Azure. Call us today 1300 102 810",
       breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/microsoft-office/#breadcrumb",
+        "@id": "https://www.officeexperts.com.au#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/microsoft-office/",
-          ],
-        },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-office/#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Our Microsoft Office Services",
+          target: ["https://www.officeexperts.com.au"],
         },
       ],
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.officeexperts.com.au/#website",
-      url: "https://www.officeexperts.com.au/",
+      "@id": "https://www.officeexperts.com.au#website",
+      url: "https://www.officeexperts.com.au",
       name: "Office Experts Group: Microsoft Excel Experts, Microsoft Access Database Experts, Microsoft Word Experts, PowerPoint Experts, Azure, Power BI, SQL Server, SharePoint, Microsoft Office 365",
       description:
         "Your Microsoft Office Design, Development and Consulting Experts",
       publisher: {
-        "@id": "https://www.officeexperts.com.au/#organization",
+        "@id": "https://www.officeexperts.com.au#organization",
       },
       potentialAction: [
         {
@@ -97,7 +70,7 @@ const schema = {
           target: {
             "@type": "EntryPoint",
             urlTemplate:
-              "https://www.officeexperts.com.au/?s={search_term_string}",
+              "https://www.officeexperts.com.au?s={search_term_string}",
           },
           "query-input": {
             "@type": "PropertyValueSpecification",

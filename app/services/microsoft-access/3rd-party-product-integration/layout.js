@@ -38,13 +38,6 @@ export const metadata = {
     // "Melbourne Access integration",
     // "Brisbane database services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access/3rd-party-product-integration",
-    languages: {
-      "en-AU": "/services/microsoft-access/3rd-party-product-integration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

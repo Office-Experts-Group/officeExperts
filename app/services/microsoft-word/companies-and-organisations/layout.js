@@ -24,14 +24,6 @@ export const metadata = {
     // "word formatting control",
     // "corporate document management",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/companies-and-organisations",
-    languages: {
-      "en-AU": "/services/microsoft-word/companies-and-organisations",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

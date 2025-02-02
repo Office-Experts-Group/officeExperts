@@ -46,13 +46,6 @@ export const metadata = {
     // "government template automation",
     // "government document consistency",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/government-departments",
-    languages: {
-      "en-AU": "/services/microsoft-word/government-departments",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

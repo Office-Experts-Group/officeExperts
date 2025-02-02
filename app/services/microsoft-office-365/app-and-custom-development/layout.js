@@ -40,13 +40,6 @@ export const metadata = {
     // "365 business automation",
     // "SharePoint business solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-office-365/app-and-custom-development",
-    languages: {
-      "en-AU": "/services/microsoft-office-365/app-and-custom-development",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

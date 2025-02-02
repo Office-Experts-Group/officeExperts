@@ -25,35 +25,35 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/client-testimonials/",
-      url: "https://www.officeexperts.com.au/client-testimonials/",
+      "@id": "https://www.officeexperts.com.au/client-testimonials",
+      url: "https://www.officeexperts.com.au/client-testimonials",
       name: "Client Testimonials | Client Referrals | Office Experts Group",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/client-testimonials/#breadcrumb",
+          "https://www.officeexperts.com.au/client-testimonials#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/client-testimonials/"],
+          target: ["https://www.officeexperts.com.au/client-testimonials"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/client-testimonials/#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/client-testimonials#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

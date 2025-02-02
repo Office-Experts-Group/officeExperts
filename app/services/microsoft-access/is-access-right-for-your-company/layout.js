@@ -36,14 +36,6 @@ export const metadata = {
     // "database reporting solutions",
     // "database migration services",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-access/is-access-right-for-your-company",
-    languages: {
-      "en-AU": "/services/microsoft-access/is-access-right-for-your-company",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

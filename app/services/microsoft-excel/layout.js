@@ -34,14 +34,6 @@ export const metadata = {
     // "Excel financial modeling",
     // "Excel data analysis",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel",
-    languages: {
-      "en-AU": "/services/microsoft-excel",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

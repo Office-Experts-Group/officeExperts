@@ -42,13 +42,6 @@ export const metadata = {
     // "template branding services",
     // "Word document solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/word-template-conversions",
-    languages: {
-      "en-AU": "/services/microsoft-word/word-template-conversions",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

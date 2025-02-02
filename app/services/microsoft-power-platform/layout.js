@@ -39,14 +39,6 @@ export const metadata = {
     // "Microsoft 365 integration",
     // "Dynamics 365 integration",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-power-platform",
-    languages: {
-      "en-AU": "/services/microsoft-power-platform",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

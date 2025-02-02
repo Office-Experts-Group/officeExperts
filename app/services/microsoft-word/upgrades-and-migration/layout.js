@@ -49,13 +49,6 @@ export const metadata = {
     // "corporate Word solutions",
     // "professional Word services",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/upgrades-and-migration",
-    languages: {
-      "en-AU": "/services/microsoft-word/upgrades-and-migration",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

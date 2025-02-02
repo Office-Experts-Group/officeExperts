@@ -41,13 +41,6 @@ export const metadata = {
     // "Microsoft Office product support",
     // "Microsoft Office software training",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/by-office-product",
-    languages: {
-      "en-AU": "/services/by-office-product",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

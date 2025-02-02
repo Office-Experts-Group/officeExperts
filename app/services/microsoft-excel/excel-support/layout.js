@@ -41,13 +41,6 @@ export const metadata = {
     // "professional Excel guidance",
     // "Excel business consulting",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/excel-support",
-    languages: {
-      "en-AU": "/services/microsoft-excel/excel-support",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

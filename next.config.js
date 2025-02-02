@@ -171,6 +171,21 @@ const REDIRECTS = [
     destination: "/services/microsoft-dot-net",
     permanent: true,
   },
+  {
+    source: "/by-business-solution",
+    destination: "/services/by-business-solution",
+    permanent: true,
+  },
+  {
+    source: "/testimonials/warringtonfire-australia-pty-ltd/",
+    destination: "/client-testimonials",
+    permanent: true,
+  },
+  {
+    source: "/electrical-estimating-solutions/attachment/lend-lease/",
+    destination: "/client-testimonials",
+    permanent: true,
+  },
 ];
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -180,6 +195,7 @@ const nextConfig = {
   optimizeFonts: true,
   productionBrowserSourceMaps: false,
   swcMinify: true,
+  trailingSlash: true,
 
   images: {
     formats: ["image/webp"],
@@ -188,6 +204,20 @@ const nextConfig = {
 
   async redirects() {
     return REDIRECTS;
+  },
+
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow",
+          },
+        ],
+      },
+    ];
   },
 
   webpack: (config, { dev, isServer }) => {

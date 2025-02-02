@@ -30,14 +30,6 @@ export const metadata = {
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/excel-and-access-experts-sydney",
-    languages: {
-      "en-AU": "/excel-and-access-experts-sydney",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

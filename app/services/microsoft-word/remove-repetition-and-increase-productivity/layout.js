@@ -46,15 +46,6 @@ export const metadata = {
     // "professional Word services",
     // "document productivity consulting",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical:
-      "/services/microsoft-word/remove-repetition-and-increase-productivity",
-    languages: {
-      "en-AU":
-        "/services/microsoft-word/remove-repetition-and-increase-productivity",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

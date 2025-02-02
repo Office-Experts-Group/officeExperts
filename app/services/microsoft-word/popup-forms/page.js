@@ -27,27 +27,27 @@ const schema = {
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
-      url: "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
+        "https://www.officeexperts.com.au/services/microsoft-word/popup-forms",
+      url: "https://www.officeexperts.com.au/services/microsoft-word/popup-forms",
       name: "Word Popup Form | Word Popup Window | Word Experts",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       about: {
-        "@id": "https://www.officeexperts.com.au/#organization",
+        "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
       dateModified: "2024-10-27T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/#breadcrumb",
+          "https://www.officeexperts.com.au/services/microsoft-word/popup-forms#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/",
+            "https://www.officeexperts.com.au/services/microsoft-word/popup-forms",
           ],
         },
       ],
@@ -55,25 +55,25 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/popup-forms/#breadcrumb",
+        "https://www.officeexperts.com.au/services/microsoft-word/popup-forms#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services/",
+          item: "https://www.officeexperts.com.au/services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Our Microsoft Word Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-word/",
+          item: "https://www.officeexperts.com.au/services/microsoft-word",
         },
         {
           "@type": "ListItem",
@@ -81,33 +81,6 @@ const schema = {
           name: "Popup Forms",
         },
       ],
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.officeexperts.com.au/#website",
-      url: "https://www.officeexperts.com.au/",
-      name: "Office Experts Group: Microsoft Excel Experts, Microsoft Access Database Experts, Microsoft Word Experts, PowerPoint Experts, Azure, Power BI, SQL Server, SharePoint, Microsoft Office 365",
-      description:
-        "Your Microsoft Office Design, Development and Consulting Experts",
-      publisher: {
-        "@id": "https://www.officeexperts.com.au/#organization",
-      },
-      potentialAction: [
-        {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate:
-              "https://www.officeexperts.com.au/?s={search_term_string}",
-          },
-          "query-input": {
-            "@type": "PropertyValueSpecification",
-            valueRequired: true,
-            valueName: "search_term_string",
-          },
-        },
-      ],
-      inLanguage: "en-AU",
     },
   ],
 };

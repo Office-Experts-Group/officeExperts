@@ -26,13 +26,6 @@ export const metadata = {
     // "Excel integration services",
     // "Excel workplace automation",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-excel/add-in-development",
-    languages: {
-      "en-AU": "/services/microsoft-excel/add-in-development",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

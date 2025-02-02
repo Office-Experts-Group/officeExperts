@@ -36,13 +36,6 @@ export const metadata = {
     // "presentation accuracy",
     // "PowerPoint process automation",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-powerpoint/automate-presentations-with-vba",
-    languages: {
-      "en-AU": "/services/microsoft-powerpoint/automate-presentations-with-vba",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

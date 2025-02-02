@@ -56,16 +56,6 @@ export const metadata = {
       "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies including Microsoft Office, Power Platform, and Azure as independent contractors.",
     images: ["/logo.png"],
   },
-
-  // Additional tags
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/looking-for-a-job",
-    languages: {
-      "en-AU": "/looking-for-a-job",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

@@ -32,14 +32,6 @@ export const metadata = {
     // "Office 365 workflow automation",
     // "legacy system integration",
   ],
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-automate",
-    languages: {
-      "en-AU": "/services/microsoft-power-platform/microsoft-power-automate",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

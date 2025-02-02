@@ -54,14 +54,6 @@ export const metadata = {
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     images: ["/logo.png"],
   },
-
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/word-and-powerpoint-experts-canberra",
-    languages: {
-      "en-AU": "/word-and-powerpoint-experts-canberra",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

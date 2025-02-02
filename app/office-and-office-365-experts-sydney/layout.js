@@ -30,13 +30,6 @@ export const metadata = {
       "Leading Microsoft Office and Office 365 consultants in Sydney. Specialising in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/office-and-office-365-experts-sydney",
-    languages: {
-      "en-AU": "/office-and-office-365-experts-sydney",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

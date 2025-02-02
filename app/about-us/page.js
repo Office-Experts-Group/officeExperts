@@ -28,36 +28,36 @@ const schema = {
     generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/about-us/",
-      url: "https://www.officeexperts.com.au/about-us/",
+      "@id": "https://www.officeexperts.com.au/about-us",
+      url: "https://www.officeexperts.com.au/about-us",
       name: "About Us | Office Experts Group",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au/#website",
+        "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2024-10-26T00:00:00+00:00",
       description:
         "We are specialists in Microsoft Excel, Microsoft Access, Microsoft Outlook, Microsoft Word, and Microsoft PowerPoint. Email us Consult@officeexperts.com.au",
       breadcrumb: {
-        "@id": "https://www.officeexperts.com.au/about-us/#breadcrumb",
+        "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/about-us/"],
+          target: ["https://www.officeexperts.com.au/about-us"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/about-us/#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au/",
+          item: "https://www.officeexperts.com.au",
         },
         {
           "@type": "ListItem",

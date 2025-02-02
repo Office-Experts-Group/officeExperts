@@ -41,13 +41,6 @@ export const metadata = {
     // "Word template assistance",
     // "professional Word guidance",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/training",
-    languages: {
-      "en-AU": "/services/microsoft-word/training",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

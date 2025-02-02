@@ -40,13 +40,6 @@ export const metadata = {
     // "power apps sharepoint integration",
     // "power apps azure solutions",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-apps",
-    languages: {
-      "en-AU": "/services/microsoft-power-platform/microsoft-power-apps",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

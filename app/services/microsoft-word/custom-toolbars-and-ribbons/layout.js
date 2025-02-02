@@ -43,13 +43,6 @@ export const metadata = {
     // "word ribbon experts brisbane",
     // "custom word solutions perth",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
-  alternates: {
-    canonical: "/services/microsoft-word/custom-toolbars-and-ribbons",
-    languages: {
-      "en-AU": "/services/microsoft-word/custom-toolbars-and-ribbons",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {
