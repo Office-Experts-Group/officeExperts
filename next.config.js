@@ -337,7 +337,6 @@ const nextConfig = {
   optimizeFonts: true,
   productionBrowserSourceMaps: false,
   swcMinify: true,
-  trailingSlash: true,
 
   images: {
     formats: ["image/webp"],
