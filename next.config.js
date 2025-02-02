@@ -187,6 +187,148 @@ const REDIRECTS = [
     permanent: true,
   },
 ];
+
+const NOINDEX_REDIRECTS = [
+  {
+    source:
+      "/testimonials/electrical-estimating-solutions/attachment/window-line/feed",
+    destination: "/client-testimonials",
+    permanent: true,
+  },
+  {
+    source:
+      "/faq-items/do-you-come-onsite-or-work-remotely/attachment/skype-button/feed",
+    destination: "/faqs",
+    permanent: true,
+  },
+  {
+    source:
+      "/services/microsoft-excel/data-manipulation/attachment/netwok-hologram-over-young-woman-s-face/feed",
+    destination: "/services/microsoft-excel",
+    permanent: true,
+  },
+  {
+    source:
+      "/services/microsoft-excel/attachment/microsoft-office-microsoft-excel-integration/feed",
+    destination: "/services/microsoft-excel",
+    permanent: true,
+  },
+  {
+    source:
+      "/services/microsoft-word/attachment/upgrade-microsoft-word-icon/feed",
+    destination: "/services/microsoft-word",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office/attachment/online-solutions-icon/feed",
+    destination: "/services/microsoft-office",
+    permanent: true,
+  },
+  {
+    source:
+      "/blog/office-experts-the-best-excel-consultants/attachment/expert-highlighted-in-green/feed",
+    destination: "/blog",
+    permanent: true,
+  },
+  {
+    source:
+      "/faq-items/how-can-we-pay-you/attachment/payment-method_mastercard/feed",
+    destination: "/faqs",
+    permanent: true,
+  },
+  {
+    source: "/2018/12",
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source: "/2019/02",
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source: "/2018/11",
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source: "/:path*",
+    has: [
+      {
+        type: "query",
+        key: "s",
+        value: "%7Bsearch_term_string%7D",
+      },
+    ],
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source:
+      "/testimonials/electrical-estimating-solutions/attachment/uniting-care-australia/feed",
+    destination: "/client-testimonials",
+    permanent: true,
+  },
+  {
+    source: "/testimonials/mad-clarity/attachment/mad-clarity/feed",
+    destination: "/client-testimonials",
+    permanent: true,
+  },
+  {
+    source:
+      "/services/microsoft-office/attachment/microsoft-office-add-ins-icon/feed",
+    destination: "/services/microsoft-office",
+    permanent: true,
+  },
+  {
+    source: "/feed",
+    has: [
+      {
+        type: "query",
+        key: "attachment_id",
+        value: "73",
+      },
+    ],
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source:
+      "/services/microsoft-office-365/cloud-backup-with-onedrive/attachment/cloud-database/feed",
+    destination: "/services/microsoft-office/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/comments/feed",
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source: "/feed",
+    has: [
+      {
+        type: "query",
+        key: "attachment_id",
+        value: "75",
+      },
+    ],
+    destination: "/404",
+    permanent: true,
+  },
+  {
+    source: "/feed",
+    has: [
+      {
+        type: "query",
+        key: "attachment_id",
+        value: "78",
+      },
+    ],
+    destination: "/404",
+    permanent: true,
+  },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
@@ -203,7 +345,7 @@ const nextConfig = {
   },
 
   async redirects() {
-    return REDIRECTS;
+    return [...REDIRECTS, ...NOINDEX_REDIRECTS];
   },
 
   async headers() {

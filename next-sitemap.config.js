@@ -7,4 +7,5 @@ module.exports = {
   priority: 0.7,
   exclude: ["/api/*"],
   generateIndexSitemap: false,
+  trailingSlash: false,
 };

@@ -1,9 +1,23 @@
 import { NextResponse } from "next/server";
+import { goneUrls } from "./utils/goneUrls";
 
 export function middleware(request) {
+  const path = request.nextUrl.pathname;
+
+  // Check if the requested path is in our goneUrls list
+  if (goneUrls.includes(path.toLowerCase())) {
+    return new NextResponse(null, {
+      status: 410,
+      statusText: "Gone",
+      headers: {
+        "X-Robots-Tag": "noindex",
+      },
+    });
+  }
+
   const response = NextResponse.next();
 
-  // Security headers
+  // Your existing security headers
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-XSS-Protection", "1; mode=block");
@@ -15,9 +29,9 @@ export function middleware(request) {
       "style-src 'self' 'unsafe-inline'; " +
       "img-src 'self' data: https: *.vimeocdn.com; " +
       "font-src 'self'; " +
-      "frame-src 'self' *.vimeo.com player.vimeo.com; " + // Added this line
-      "media-src 'self' *.vimeo.com *.vimeocdn.com; " + // Added this line
-      "connect-src 'self' *.vimeo.com *.vimeocdn.com;" // Added this line
+      "frame-src 'self' *.vimeo.com player.vimeo.com; " +
+      "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com;"
   );
 
   if (
