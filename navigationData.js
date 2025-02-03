@@ -218,10 +218,6 @@ export const navigationData = {
             href: `${ACCESS_EXPERTS_URL}/is-access-right-for-your-company`,
           },
           {
-            label: "Upgrade your existing Database",
-            href: `${ACCESS_EXPERTS_URL}/upgrades-and-migration`,
-          },
-          {
             label: "3rd Party Product Integration",
             href: `${ACCESS_EXPERTS_URL}/3rd-party-product-integration`,
           },
