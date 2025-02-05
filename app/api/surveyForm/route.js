@@ -22,6 +22,7 @@ export async function POST(req) {
 
     const clientTextMessage = `
      You have received a survey from ${name} (${email}).
+    
      Referral Details: ${referralDetails}
 
      *This is an automated message from officeexperts.com.au
@@ -29,7 +30,7 @@ export async function POST(req) {
 
     await sgMail.send({
       from: "consult@officeexperts.com.au",
-      to: "joshua@officeexperts.com.au",
+      to: "consult@officeexperts.com.au",
       subject: "New Survey Form Submission",
       text: clientTextMessage,
       replyTo: email,

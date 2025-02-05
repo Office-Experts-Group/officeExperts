@@ -24,6 +24,20 @@ export async function POST(req) {
       );
     }
 
+    // Format current time in AEST
+    const timeFormatter = new Intl.DateTimeFormat("en-AU", {
+      timeZone: "Australia/Sydney",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    });
+
+    const currentTimeAEST = timeFormatter.format(new Date());
+
     // Get the email signature
     const { htmlSignature, textSignature } = getEmailSignature();
 
@@ -33,7 +47,7 @@ export async function POST(req) {
       Phone: ${phone || "Not provided"}.
       Message: ${message}
 
-      This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}
+      This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST
     `;
 
     const customerTextMessage = `
@@ -53,7 +67,7 @@ export async function POST(req) {
       <p><strong>Message:</strong></p>
       <p>${message}</p>
       
-      <em>This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}</em>
+      <em>This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST</em>
     `;
 
     const customerHtmlMessage = `
@@ -65,15 +79,6 @@ export async function POST(req) {
 
     // Send emails
     try {
-      await sgMail.send({
-        from: "consult@officeexperts.com.au",
-        to: "joshua@officeexperts.com.au",
-        subject: "New Contact Form Submission",
-        text: clientTextMessage,
-        html: clientHtmlMessage,
-        replyTo: email, // Add reply-to header
-      });
-
       await sgMail.send({
         from: "consult@officeexperts.com.au",
         to: "consult@officeexperts.com.au",

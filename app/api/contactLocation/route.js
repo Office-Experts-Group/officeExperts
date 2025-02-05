@@ -33,6 +33,20 @@ export async function POST(req) {
       );
     }
 
+    // Format current time in AEST
+    const timeFormatter = new Intl.DateTimeFormat("en-AU", {
+      timeZone: "Australia/Sydney",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    });
+
+    const currentTimeAEST = timeFormatter.format(new Date());
+
     const { htmlSignature, textSignature } = getEmailSignature();
 
     // Updated messages to include location and service information
@@ -45,7 +59,7 @@ export async function POST(req) {
       Operating System: ${operatingSystem || "Not specified"}
       Message: ${message}
 
-      This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}
+      This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST
     `;
 
     const customerTextMessage = `
@@ -70,7 +84,7 @@ export async function POST(req) {
       <p><strong>Message:</strong></p>
       <p>${message}</p>
       
-      <em>This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}</em>
+      <em>This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST</em>
     `;
 
     const customerHtmlMessage = `
@@ -85,16 +99,6 @@ export async function POST(req) {
       await sgMail.send({
         from: "consult@officeexperts.com.au",
         to: "joshua@officeexperts.com.au",
-        subject: `New Contact Form Submission from ${location || "Website"}`,
-        text: clientTextMessage,
-        html: clientHtmlMessage,
-        replyTo: email,
-      });
-
-      //   Send to general business email
-      await sgMail.send({
-        from: "consult@officeexperts.com.au",
-        to: "consult@officeexperts.com.au",
         subject: `New Contact Form Submission from ${location || "Website"}`,
         text: clientTextMessage,
         html: clientHtmlMessage,

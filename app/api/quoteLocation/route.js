@@ -67,6 +67,20 @@ export async function POST(req) {
       );
     }
 
+    // Format current time in AEST
+    const timeFormatter = new Intl.DateTimeFormat("en-AU", {
+      timeZone: "Australia/Sydney",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    });
+
+    const currentTimeAEST = timeFormatter.format(new Date());
+
     // File validation
     let attachments = [];
     if (file) {
@@ -103,7 +117,7 @@ export async function POST(req) {
       Website: ${website || "Not provided"}
       Message: ${message || "Not provided"}
 
-      ${textSignature}
+      This email was sent at ${currentTimeAEST} from officeexperts.com.au
     `;
 
     const customerTextMessage = `
@@ -131,7 +145,7 @@ export async function POST(req) {
       <p><strong>Website:</strong> ${website || "Not provided"}</p>
       <p><strong>Message:</strong></p>
       <p>${message || "Not provided"}</p>
-      ${htmlSignature}
+      <em>This email was sent at ${currentTimeAEST} from officeexperts.com.au</em>
     `;
 
     const customerHtmlMessage = `
@@ -142,17 +156,6 @@ export async function POST(req) {
     `;
 
     try {
-      // Send to primary business email
-      await sgMail.send({
-        from: "consult@officeexperts.com.au",
-        to: "joshua@officeexperts.com.au",
-        subject: `New Quote Request from ${location || "Website"}`,
-        text: clientTextMessage,
-        html: clientHtmlMessage,
-        ...(attachments.length > 0 && { attachments }),
-        replyTo: email,
-      });
-
       // Send to general business email
       await sgMail.send({
         from: "consult@officeexperts.com.au",

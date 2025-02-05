@@ -68,6 +68,20 @@ export async function POST(req) {
       );
     }
 
+    // Format current time in AEST
+    const timeFormatter = new Intl.DateTimeFormat("en-AU", {
+      timeZone: "Australia/Sydney",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    });
+
+    const currentTimeAEST = timeFormatter.format(new Date());
+
     // File validation (only if a file is provided)
     let attachments = [];
     if (file) {
@@ -103,9 +117,7 @@ export async function POST(req) {
       Software Versions: ${softwareVersions || "Not provided"}.
       Website: ${website || "Not provided"}.
       Message: ${message || "Not provided"}
-            This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}
-
-      ${textSignature}
+            This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST
     `;
 
     const customerTextMessage = `
@@ -130,8 +142,7 @@ export async function POST(req) {
       <p><strong>Website:</strong> ${website || "Not provided"}</p>
       <p><strong>Message:</strong></p>
       <p>${message || "Not provided"}</p>
-            <em>This form was filled out on the website: https://officeexperts.com.au @ ${new Date().toLocaleString()}</em>
-      ${htmlSignature}
+            <em>This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST</em>
     `;
 
     const customerHtmlMessage = `
@@ -143,16 +154,6 @@ export async function POST(req) {
 
     try {
       // Send email to business
-      await sgMail.send({
-        from: "consult@officeexperts.com.au",
-        to: "joshua@officeexperts.com.au",
-        subject: "New Quote Request Submission",
-        text: clientTextMessage,
-        html: clientHtmlMessage,
-        ...(attachments.length > 0 && { attachments }),
-        replyTo: email,
-      });
-
       await sgMail.send({
         from: "consult@officeexperts.com.au",
         to: "consult@officeexperts.com.au",
