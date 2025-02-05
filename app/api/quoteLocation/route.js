@@ -50,6 +50,7 @@ export async function POST(req) {
       honeypot,
       location,
       service,
+      company,
     } = body;
 
     // Validate required fields
@@ -111,6 +112,7 @@ export async function POST(req) {
       location || "Unknown location"
     }.
       Phone: ${phone || "Not provided"}
+      Company: ${company || "Not provided"}
       Service Requested: ${service || "Not specified"}
       Operating System: ${operatingSystem || "Not provided"}
       Software Versions: ${softwareVersions || "Not provided"}
@@ -136,6 +138,7 @@ export async function POST(req) {
     }.</p>
       <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
       <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
+      <p><strong>Company:</strong> ${company || "Not provided"}</p>
       <p><strong>Operating System:</strong> ${
         operatingSystem || "Not provided"
       }</p>

@@ -51,6 +51,7 @@ export async function POST(req) {
       softwareVersions,
       website,
       honeypot,
+      company,
     } = body;
 
     // Validate required fields
