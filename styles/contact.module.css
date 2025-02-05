@@ -218,19 +218,19 @@
   display: flex;
   flex-direction: column;
 }
-.formField:nth-of-type(2) {
-  grid-row: span 3;
+.formField:nth-of-type(4) {
+  grid-row: span 2;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.formField:nth-of-type(2) textarea {
+.formField:nth-of-type(4) textarea {
   flex: 1;
   max-height: 100%;
   padding: 0.5rem 0;
 }
 @media screen and (max-width: 768px) {
-  .formField:nth-of-type(2) {
+  .formField:nth-of-type(4) {
     margin-bottom: 4rem;
   }
 }
@@ -240,12 +240,15 @@
   }
   .formField:nth-of-type(2) {
     order: 4;
-    height: 150px;
   }
   .formField:nth-of-type(3) {
     order: 2;
   }
   .formField:nth-of-type(4) {
+    order: 5;
+    height: 150px;
+  }
+  .formField:nth-of-type(5) {
     order: 3;
   }
 }
@@ -255,12 +258,15 @@
   }
   .formField:nth-of-type(2) {
     order: 4;
-    height: 150px;
   }
   .formField:nth-of-type(3) {
     order: 2;
   }
   .formField:nth-of-type(4) {
+    order: 5;
+    height: 150px;
+  }
+  .formField:nth-of-type(5) {
     order: 3;
   }
 }
@@ -393,6 +399,11 @@
   grid-column: span 2;
   display: flex;
   gap: 1rem;
+}
+
+.messageField {
+  grid-column: span 2;
+  grid-row: 3;
 }
 
 .uploadField label {

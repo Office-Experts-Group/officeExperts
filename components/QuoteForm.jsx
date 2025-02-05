@@ -5,9 +5,7 @@ import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
 
-const SurveyForm = dynamic(() => import("./SurveyForm"), {
-  ssr: false,
-});
+const SurveyForm = dynamic(() => import("./SurveyForm"));
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
@@ -55,6 +53,7 @@ const QuoteForm = () => {
     softwareVersions: "",
     website: "",
     acceptTerms: false,
+    company: "",
     honeypot: "",
   });
 
@@ -203,6 +202,7 @@ const QuoteForm = () => {
           operatingSystem: "",
           softwareVersions: "",
           website: "",
+          company: "",
           acceptTerms: false,
           honeypot: "",
         });
@@ -291,30 +291,6 @@ const QuoteForm = () => {
         </div>
 
         <div className={styles.formField}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            aria-describedby={error.message ? "message-error" : undefined}
-            placeholder="Enter details about your project here..."
-            ref={messageRef}
-            disabled={isSubmitting}
-          />
-          {error.message && (
-            <p
-              id="message-error"
-              className={styles.errorMessage}
-              role="alert"
-              aria-live="polite"
-            >
-              {error.message}
-            </p>
-          )}
-        </div>
-
-        <div className={styles.formField}>
           <label htmlFor="email" className={styles.requiredField}>
             Email
             <span className={styles.requiredIndicator} aria-hidden="true">
@@ -347,7 +323,7 @@ const QuoteForm = () => {
           )}
         </div>
 
-        <div className={styles.formField}>
+        <div className={`${styles.formField} ${styles.phoneField}`}>
           <label htmlFor="phone">Phone</label>
           <input
             type="tel"
@@ -360,21 +336,47 @@ const QuoteForm = () => {
             disabled={isSubmitting}
           />
         </div>
+
+        <div className={`${styles.formField} ${styles.messageField}`}>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            aria-describedby={error.message ? "message-error" : undefined}
+            placeholder="Enter details about your project here..."
+            ref={messageRef}
+            disabled={isSubmitting}
+          />
+          {error.message && (
+            <p
+              id="message-error"
+              className={styles.errorMessage}
+              role="alert"
+              aria-live="polite"
+            >
+              {error.message}
+            </p>
+          )}
+        </div>
       </div>
 
       <div className={styles.quoteForm}>
-        <div className={styles.formField}>
-          <label htmlFor="softwareVersions">Software Versions</label>
+        <div className={`${styles.formField} ${styles.companyField}`}>
+          <label className={styles.label} htmlFor="company">
+            Company
+          </label>
           <input
             type="text"
-            id="softwareVersions"
-            name="softwareVersions"
-            value={formData.softwareVersions}
+            id="company"
+            name="company"
+            value={formData.company}
             onChange={handleChange}
-            placeholder="e.g. Office 365, Excel 2019"
-            disabled={isSubmitting}
+            placeholder="optional..."
           />
         </div>
+
         <div className={styles.formField}>
           <label htmlFor="website">Website</label>
           <input
@@ -388,6 +390,20 @@ const QuoteForm = () => {
             disabled={isSubmitting}
           />
         </div>
+
+        <div className={styles.formField}>
+          <label htmlFor="softwareVersions">Software Versions</label>
+          <input
+            type="text"
+            id="softwareVersions"
+            name="softwareVersions"
+            value={formData.softwareVersions}
+            onChange={handleChange}
+            placeholder="e.g. Office 365, Excel 2019"
+            disabled={isSubmitting}
+          />
+        </div>
+
         <div className={styles.radioField}>
           <label className={styles.groupLabel}>Operating System</label>
           <div className={styles.radioOptions}>
