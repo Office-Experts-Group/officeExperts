@@ -25,6 +25,9 @@ export const metadata = {
       "Find answers to common questions about our Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/faq",
+  },
 };
 
 export default function RootLayout({ children }) {

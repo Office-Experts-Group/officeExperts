@@ -35,6 +35,10 @@ export const metadata = {
     // "Excel formula training",
     // "Excel formula solutions",
   ],
+  alternates: {
+    canonical:
+      "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+  },
 };
 
 export default function RootLayout({ children }) {

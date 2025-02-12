@@ -40,6 +40,9 @@ export const metadata = {
     // "enterprise Access solutions",
     // "professional Access help",
   ],
+  alternates: {
+    canonical: "https://accessexperts.com.au/access-support",
+  },
 };
 
 export default function RootLayout({ children }) {

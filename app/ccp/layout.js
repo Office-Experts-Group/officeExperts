@@ -40,6 +40,15 @@ export const metadata = {
       "Secure credit card payment processing for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
+
+  robots: {
+    index: false,
+    follow: false,
+  },
+
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/ccp",
+  },
 };
 
 export default function RootLayout({ children }) {

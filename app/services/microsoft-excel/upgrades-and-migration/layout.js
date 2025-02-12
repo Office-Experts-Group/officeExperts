@@ -38,6 +38,9 @@ export const metadata = {
     // "Excel consultants Melbourne",
     // "Excel experts Brisbane",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au/excel-upgrades-and-migration",
+  },
 };
 
 export default function RootLayout({ children }) {

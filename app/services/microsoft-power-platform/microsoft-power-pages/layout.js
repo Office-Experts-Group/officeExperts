@@ -37,11 +37,11 @@ export const metadata = {
     // "data-driven websites",
     // "enterprise web development",
   ],
-  metadataBase: new URL("https://www.officeexperts.com.au"),
   alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-pages",
+    canonical:
+      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
     languages: {
-      "en-AU": "/services/microsoft-power-platform/microsoft-power-pages",
+      en: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
     },
   },
 };

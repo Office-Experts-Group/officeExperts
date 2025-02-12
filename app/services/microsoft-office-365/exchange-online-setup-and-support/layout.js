@@ -41,6 +41,11 @@ export const metadata = {
     // "business email branding",
     // "company email management",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support",
+  },
 };
 
 export default function RootLayout({ children }) {

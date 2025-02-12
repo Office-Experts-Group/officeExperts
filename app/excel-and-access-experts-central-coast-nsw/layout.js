@@ -31,6 +31,10 @@ export const metadata = {
       "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimization.",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
+  },
 };
 
 export default function RootLayout({ children }) {

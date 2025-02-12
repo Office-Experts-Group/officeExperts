@@ -10,6 +10,9 @@ export const metadata = {
     "Microsoft access database migration",
     "Microsoft access database upgrade",
   ],
+  alternates: {
+    canonical: "https://accessexperts.com.au/upgrades-and-migration",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -36,6 +36,11 @@ export const metadata = {
     // "presentation accuracy",
     // "PowerPoint process automation",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
+  },
 };
 
 export default function RootLayout({ children }) {

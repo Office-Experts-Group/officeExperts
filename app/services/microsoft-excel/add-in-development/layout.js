@@ -26,6 +26,9 @@ export const metadata = {
     // "Excel integration services",
     // "Excel workplace automation",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au/add-in-development",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -22,6 +22,9 @@ export const metadata = {
       "We have expert consultants across Australia and can provide services onsite or by remote access. Contact us Today Consult@officeexperts.com.au",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/contact-us",
+  },
 };
 
 export default function RootLayout({ children }) {

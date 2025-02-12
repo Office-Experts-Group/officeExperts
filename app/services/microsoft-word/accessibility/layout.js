@@ -38,6 +38,12 @@ export const metadata = {
     // "document accessibility automation",
     // "accessibility standards compliance",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/accessibility",
+    languages: {
+      en: "https://wordexperts.com.au/accessibility",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

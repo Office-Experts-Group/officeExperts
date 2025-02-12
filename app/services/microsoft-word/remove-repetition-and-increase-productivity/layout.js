@@ -46,6 +46,13 @@ export const metadata = {
     // "professional Word services",
     // "document productivity consulting",
   ],
+  alternates: {
+    canonical:
+      "https://wordexperts.com.au/remove-repetition-and-increase-productivity",
+    languages: {
+      en: "https://wordexperts.com.au/remove-repetition-and-increase-productivity",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

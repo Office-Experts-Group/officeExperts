@@ -44,6 +44,12 @@ export const metadata = {
     // "template management system",
     // "brand compliant documents",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/corporate-identity",
+    languages: {
+      en: "https://wordexperts.com.au/corporate-identity",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -46,6 +46,12 @@ export const metadata = {
     // "government template automation",
     // "government document consistency",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/government-departments",
+    languages: {
+      en: "https://wordexperts.com.au/government-departments",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

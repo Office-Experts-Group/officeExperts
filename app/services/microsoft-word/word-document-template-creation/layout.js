@@ -47,6 +47,12 @@ export const metadata = {
     // "company document templates",
     // "document branding services",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/word-document-template-creation",
+    languages: {
+      en: "https://wordexperts.com.au/word-document-template-creation",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

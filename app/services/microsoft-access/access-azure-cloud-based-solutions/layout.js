@@ -36,6 +36,10 @@ export const metadata = {
     // "cloud database management",
     // "Access business solutions",
   ],
+  alternates: {
+    canonical:
+      "https://accessexperts.com.au/access-azure-cloud-based-solutions",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -41,6 +41,9 @@ export const metadata = {
     // "automated backup solutions",
     // "Windows automation services",
   ],
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/services/microsoft-vbscript",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -14,17 +14,6 @@ export const metadata = {
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
   },
 
   // Additional metadata
@@ -68,6 +57,9 @@ export const metadata = {
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/services/by-business-solution",
   },
 };
 

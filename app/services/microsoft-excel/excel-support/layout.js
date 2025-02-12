@@ -41,6 +41,9 @@ export const metadata = {
     // "professional Excel guidance",
     // "Excel business consulting",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au/excel-support",
+  },
 };
 
 export default function RootLayout({ children }) {

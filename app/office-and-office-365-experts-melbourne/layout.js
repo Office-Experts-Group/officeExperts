@@ -30,6 +30,11 @@ export const metadata = {
       "Leading Microsoft Office consulting and Office 365 expertise in Melbourne. Our expert consultants specialise in custom Office development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-and-office-365-experts-melbourne",
+  },
 };
 
 export default function RootLayout({ children }) {

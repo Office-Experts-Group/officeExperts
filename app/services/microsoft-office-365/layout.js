@@ -39,6 +39,10 @@ export const metadata = {
     // "Office 365 cloud solutions",
     // "Office 365 custom development",
   ],
+
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/services/microsoft-office-365",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -62,6 +62,9 @@ export const metadata = {
       "Leading Microsoft Office consultants with expert developers and designers servicing all of Australia. Corporate business experience combined with software development expertise.",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/about-us",
+  },
 };
 
 export default function AboutLayout({ children }) {

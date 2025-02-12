@@ -41,6 +41,12 @@ export const metadata = {
     // "style guide enforcement",
     // "template standardization",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/corporate-global-template-solution",
+    languages: {
+      en: "https://wordexperts.com.au/corporate-global-template-solution",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

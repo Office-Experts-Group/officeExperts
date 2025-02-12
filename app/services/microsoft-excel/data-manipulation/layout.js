@@ -38,6 +38,9 @@ export const metadata = {
     // "Excel automation Brisbane",
     // "data processing Perth",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au/data-manipulation",
+  },
 };
 
 export default function RootLayout({ children }) {

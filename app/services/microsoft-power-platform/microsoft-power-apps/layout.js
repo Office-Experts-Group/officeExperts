@@ -40,6 +40,13 @@ export const metadata = {
     // "power apps sharepoint integration",
     // "power apps azure solutions",
   ],
+  alternates: {
+    canonical:
+      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    languages: {
+      en: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

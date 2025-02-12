@@ -36,6 +36,10 @@ export const metadata = {
     // "database automation solutions",
     // "database consulting services",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
+  },
 };
 
 export default function RootLayout({ children }) {

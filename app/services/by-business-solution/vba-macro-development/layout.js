@@ -35,6 +35,10 @@ export const metadata = {
     // "VBA add-in development",
     // "form automation VBA",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
+  },
 };
 
 export default function RootLayout({ children }) {

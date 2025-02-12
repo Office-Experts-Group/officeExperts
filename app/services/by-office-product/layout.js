@@ -41,6 +41,9 @@ export const metadata = {
     // "Microsoft Office product support",
     // "Microsoft Office software training",
   ],
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/services/by-office-product",
+  },
 };
 
 export default function RootLayout({ children }) {

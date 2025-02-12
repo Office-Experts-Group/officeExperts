@@ -36,6 +36,11 @@ export const metadata = {
     // "Exchange Online deployment",
     // "Teams implementation",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device",
+  },
 };
 
 export default function RootLayout({ children }) {

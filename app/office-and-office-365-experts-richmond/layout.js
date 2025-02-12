@@ -30,6 +30,11 @@ export const metadata = {
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
     images: ["/logo.png"],
   },
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",
+  },
 };
 
 export default function RootLayout({ children }) {

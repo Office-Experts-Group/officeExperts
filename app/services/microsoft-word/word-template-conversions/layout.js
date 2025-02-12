@@ -42,6 +42,12 @@ export const metadata = {
     // "template branding services",
     // "Word document solutions",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/word-template-conversions",
+    languages: {
+      en: "https://wordexperts.com.au/word-template-conversions",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

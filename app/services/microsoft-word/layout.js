@@ -49,6 +49,9 @@ export const metadata = {
     // "Word custom toolbars",
     // "Word template migration",
   ],
+  alternates: {
+    canonical: "https://www.wordexperts.com.au",
+  },
 };
 
 export default function RootLayout({ children }) {

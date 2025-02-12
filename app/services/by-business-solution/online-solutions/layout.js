@@ -40,6 +40,10 @@ export const metadata = {
     // "PowerPoint web sharing",
     // "Outlook online solutions",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+  },
 };
 
 export default function RootLayout({ children }) {

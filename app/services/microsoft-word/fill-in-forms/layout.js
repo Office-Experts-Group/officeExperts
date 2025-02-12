@@ -44,6 +44,12 @@ export const metadata = {
     // "form development",
     // "business documentation",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/fill-in-forms",
+    languages: {
+      en: "https://wordexperts.com.au/fill-in-forms",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,0 +1,887 @@
+[
+  {
+    "path": "/(components)",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/about-us",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/about-us/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/api",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/api/contactForm",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/api/contactLocation",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/api/quoteForm",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/api/quoteLocation",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/api/surveyForm",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/blog",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/ccp",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/client-testimonials",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/client-testimonials/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/contact-us",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/contact-us/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/contact-us/request-a-quote",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/excel-and-access-experts-central-coast-nsw",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/excel-and-access-experts-melbourne",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/excel-and-access-experts-richmond",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/excel-and-access-experts-sydney",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/faq",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/looking-for-a-job",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/looking-for-a-job/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/meet-the-team",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/meet-the-team/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/office-and-office-365-experts-melbourne",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-and-office-365-experts-richmond",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-and-office-365-experts-sydney",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-adelaide",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-brisbane",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-darwin",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-northern-rivers-nsw",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-perth",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/office-excel-access-and-365-experts-wollongong",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/privacy-policy",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/refund-policy",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/services",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/services/(components)",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/3rd-party-application-or-office-integration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/3rd-party-application-or-office-integration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/add-in-creation",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/add-in-creation/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/cloud-based-solutions-with-azure",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/cloud-based-solutions-with-azure/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/custom-office-solutions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/custom-office-solutions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/dashboards",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/dashboards/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/database-development-and-solutions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/database-development-and-solutions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/office-and-sql-server-integration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/office-and-sql-server-integration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/online-solutions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/online-solutions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/vba-macro-development",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-business-solution/vba-macro-development/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-office-product",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/by-office-product/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/3rd-party-product-integration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/3rd-party-product-integration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-azure-cloud-based-solutions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-azure-cloud-based-solutions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-online",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-online/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-support",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/access-support/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/is-access-right-for-your-company",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/is-access-right-for-your-company/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/upgrades-and-migration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-access/upgrades-and-migration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-dot-net",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-dot-net/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/add-in-development",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/add-in-development/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/custom-design-and-development",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/custom-design-and-development/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/data-manipulation",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/data-manipulation/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/excel-formulas-and-custom-formulas",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/excel-formulas-and-custom-formulas/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/excel-support",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/excel-support/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/upgrades-and-migration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/upgrades-and-migration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/vba-macro-development",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-excel/vba-macro-development/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/app-and-custom-development",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/app-and-custom-development/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/business-process-automation",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/business-process-automation/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/cloud-backup-with-onedrive",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/cloud-backup-with-onedrive/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/exchange-online-setup-and-support",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/exchange-online-setup-and-support/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/office-365-implementation",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/office-365-implementation/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/office-365-migration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/office-365-migration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/remote-data-gathering-from-any-device/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/support-and-managed-services",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office-365/support-and-managed-services/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office/upgrades-and-migration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-office/upgrades-and-migration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-apps",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-apps/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-automate",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-automate/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-bi",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-bi/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-pages",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-power-platform/microsoft-power-pages/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/automate-presentations-with-vba",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/automate-presentations-with-vba/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/existing-presentation-redesign",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/existing-presentation-redesign/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-publisher",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-publisher/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-vbscript",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-vbscript/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word",
+    "depth": 1,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/(components)",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/accessibility",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/accessibility/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/companies-and-organisations",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/companies-and-organisations/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/corporate-global-template-solution",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/corporate-global-template-solution/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/corporate-identity",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/corporate-identity/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/custom-toolbars-and-ribbons",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/custom-toolbars-and-ribbons/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/fill-in-forms",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/fill-in-forms/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/government-departments",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/government-departments/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/popup-forms",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/popup-forms/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/quick-parts",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/quick-parts/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/remove-repetition-and-increase-productivity",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/remove-repetition-and-increase-productivity/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/training",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/training/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/upgrades-and-migration",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/upgrades-and-migration/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/word-document-template-creation",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/word-document-template-creation/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/word-template-conversions",
+    "depth": 2,
+    "type": "directory"
+  },
+  {
+    "path": "/services/microsoft-word/word-template-conversions/(components)",
+    "depth": 3,
+    "type": "directory"
+  },
+  {
+    "path": "/terms-and-conditions",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-canberra",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-gold-coast",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-melbourne",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-perth",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-richmond",
+    "depth": 0,
+    "type": "directory"
+  },
+  {
+    "path": "/word-and-powerpoint-experts-sydney",
+    "depth": 0,
+    "type": "directory"
+  }
+]

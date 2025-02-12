@@ -30,6 +30,10 @@ export const metadata = {
       "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing.",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/excel-and-access-experts-melbourne",
+  },
 };
 
 export default function RootLayout({ children }) {

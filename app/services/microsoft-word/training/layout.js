@@ -41,6 +41,12 @@ export const metadata = {
     // "Word template assistance",
     // "professional Word guidance",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/training",
+    languages: {
+      en: "https://wordexperts.com.au/training",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

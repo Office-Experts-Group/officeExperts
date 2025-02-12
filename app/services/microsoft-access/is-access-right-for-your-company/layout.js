@@ -36,6 +36,9 @@ export const metadata = {
     // "database reporting solutions",
     // "database migration services",
   ],
+  alternates: {
+    canonical: "https://accessexperts.com.au/is-access-right-for-your-company",
+  },
 };
 
 export default function RootLayout({ children }) {

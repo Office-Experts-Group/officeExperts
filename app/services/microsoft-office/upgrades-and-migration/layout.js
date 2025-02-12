@@ -38,6 +38,11 @@ export const metadata = {
     // "access database migration",
     // "vba code upgrade services",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+  },
 };
 
 export default function RootLayout({ children }) {

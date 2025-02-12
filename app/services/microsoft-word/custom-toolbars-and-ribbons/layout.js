@@ -43,6 +43,12 @@ export const metadata = {
     // "word ribbon experts brisbane",
     // "custom word solutions perth",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/custom-toolbars-and-ribbons",
+    languages: {
+      en: "https://wordexperts.com.au/custom-toolbars-and-ribbons",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

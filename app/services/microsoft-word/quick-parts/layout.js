@@ -50,6 +50,12 @@ export const metadata = {
     // "microsoft office automation",
     // "word template solutions",
   ],
+  alternates: {
+    canonical: "https://wordexperts.com.au/quick-parts",
+    languages: {
+      en: "https://wordexperts.com.au/quick-parts",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

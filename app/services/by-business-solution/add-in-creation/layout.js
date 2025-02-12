@@ -35,6 +35,10 @@ export const metadata = {
     // "Enterprise Office add-ins",
     // "Commercial Office add-ins",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
+  },
 };
 
 export default function RootLayout({ children }) {

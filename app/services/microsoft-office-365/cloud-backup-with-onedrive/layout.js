@@ -40,6 +40,11 @@ export const metadata = {
     // "Microsoft cloud storage",
     // "cross-platform cloud backup",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -11,6 +11,9 @@ export const metadata = {
     locale: "en-AU",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/blog",
+  },
 };
 
 export default function BlogLayout({ children }) {

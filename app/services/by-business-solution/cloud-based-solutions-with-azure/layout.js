@@ -58,6 +58,11 @@ export const metadata = {
       "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
     images: ["/logo.png"],
   },
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
+  },
 };
 
 export default function RootLayout({ children }) {

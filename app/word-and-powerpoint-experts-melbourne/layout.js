@@ -54,6 +54,11 @@ export const metadata = {
       "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
     images: ["/logo.png"],
   },
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-melbourne",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -20,6 +20,9 @@ export const metadata = {
       "Request a quote for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote",
+  },
 };
 
 export default function RootLayout({ children }) {

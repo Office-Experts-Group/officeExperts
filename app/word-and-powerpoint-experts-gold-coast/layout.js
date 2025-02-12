@@ -55,6 +55,11 @@ export const metadata = {
       "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, document design, presentation solutions, and business automation.",
     images: ["/logo.png"],
   },
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast",
+  },
 };
 
 export default function RootLayout({ children }) {

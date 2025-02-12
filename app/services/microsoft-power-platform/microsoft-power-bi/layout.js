@@ -38,6 +38,13 @@ export const metadata = {
     // "Power BI Excel integration",
     // "Power BI business intelligence",
   ],
+  alternates: {
+    canonical:
+      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    languages: {
+      en: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

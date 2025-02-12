@@ -38,6 +38,9 @@ export const metadata = {
     // "Melbourne Access integration",
     // "Brisbane database services",
   ],
+  alternates: {
+    canonical: "https://accessexperts.com.au/3rd-party-product-integration",
+  },
 };
 
 export default function RootLayout({ children }) {

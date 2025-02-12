@@ -40,6 +40,11 @@ export const metadata = {
     // "document consistency solutions",
     // "presentation design services",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney",
+  },
 };
 
 export default function RootLayout({ children }) {

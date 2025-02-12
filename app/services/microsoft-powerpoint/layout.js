@@ -39,6 +39,9 @@ export const metadata = {
     // "PowerPoint template automation",
     // "PowerPoint brand compliance",
   ],
+  alternates: {
+    canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint",
+  },
 };
 
 export default function RootLayout({ children }) {

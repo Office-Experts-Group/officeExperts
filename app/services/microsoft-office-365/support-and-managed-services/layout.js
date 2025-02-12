@@ -27,6 +27,11 @@ export const metadata = {
     // "Office 365 integration services",
     // "Office 365 technical consulting",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office-365/support-and-managed-services",
+  },
 };
 
 export default function RootLayout({ children }) {

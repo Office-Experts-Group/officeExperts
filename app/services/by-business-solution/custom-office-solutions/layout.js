@@ -36,6 +36,10 @@ export const metadata = {
     // "productivity enhancement tools",
     // "document management solutions",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions",
+  },
 };
 
 export default function RootLayout({ children }) {

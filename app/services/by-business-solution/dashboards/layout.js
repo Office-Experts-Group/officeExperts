@@ -37,6 +37,10 @@ export const metadata = {
     // "cloud dashboard development",
     // "enterprise dashboard systems",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -40,6 +40,10 @@ export const metadata = {
     // "Excel charting services",
     // "pivot table specialists",
   ],
+  alternates: {
+    canonical:
+      "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+  },
 };
 
 export default function RootLayout({ children }) {

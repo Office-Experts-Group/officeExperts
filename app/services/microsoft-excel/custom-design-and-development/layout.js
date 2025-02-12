@@ -35,6 +35,9 @@ export const metadata = {
     // "Excel business solutions",
     // "Excel efficiency tools",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au/custom-design-and-development",
+  },
 };
 
 export default function RootLayout({ children }) {

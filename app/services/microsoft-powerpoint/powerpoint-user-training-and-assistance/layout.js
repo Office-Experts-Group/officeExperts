@@ -39,6 +39,10 @@ export const metadata = {
     // "PowerPoint creation assistance",
     // "PowerPoint skills development",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -39,6 +39,11 @@ export const metadata = {
     // "business email migration",
     // "corporate Office 365 setup",
   ],
+
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-migration",
+  },
 };
 
 export default function RootLayout({ children }) {

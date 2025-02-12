@@ -34,6 +34,9 @@ export const metadata = {
     // "access cost effective solutions",
     // "cloud database management",
   ],
+  alternates: {
+    canonical: "https://accessexperts.com.au/access-online",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -32,6 +32,13 @@ export const metadata = {
     // "Office 365 workflow automation",
     // "legacy system integration",
   ],
+  alternates: {
+    canonical:
+      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    languages: {
+      en: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -44,6 +44,10 @@ export const metadata = {
     // "Office automation Richmond",
     // "document workflow Richmond",
   ],
+  alternates: {
+    canonical:
+      "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
+  },
 };
 
 export default function RootLayout({ children }) {

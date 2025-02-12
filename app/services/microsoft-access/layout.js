@@ -42,6 +42,9 @@ export const metadata = {
     // "database repair services",
     // "Access database training",
   ],
+  alternates: {
+    canonical: "https://www.accessexperts.com.au",
+  },
 };
 
 export default function RootLayout({ children }) {

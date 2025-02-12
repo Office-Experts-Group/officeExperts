@@ -3,9 +3,21 @@ import { goneUrls } from "./utils/goneUrls";
 
 export function middleware(request) {
   const path = request.nextUrl.pathname;
+  const normalizedPath = path.toLowerCase();
 
-  // Check if the requested path is in our goneUrls list
-  if (goneUrls.includes(path.toLowerCase())) {
+  // Handle static media files - prevent URL indexing while preserving image discovery
+  if (path.includes("/_next/static/media/")) {
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noimageindex, noindex");
+    return response;
+  }
+
+  const pathWithSlash = normalizedPath.endsWith("/")
+    ? normalizedPath
+    : `${normalizedPath}/`;
+
+  // Check both with and without trailing slash for gone URLs
+  if (goneUrls.includes(normalizedPath) || goneUrls.includes(pathWithSlash)) {
     return new NextResponse(null, {
       status: 410,
       statusText: "Gone",
@@ -17,7 +29,7 @@ export function middleware(request) {
 
   const response = NextResponse.next();
 
-  // Your existing security headers
+  // Security headers
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-XSS-Protection", "1; mode=block");
@@ -34,6 +46,7 @@ export function middleware(request) {
       "connect-src 'self' *.vimeo.com *.vimeocdn.com;"
   );
 
+  // Handle Next.js system paths
   if (
     request.nextUrl.pathname.startsWith("/_next/") &&
     !request.nextUrl.pathname.startsWith("/_next/image")
@@ -47,6 +60,7 @@ export function middleware(request) {
 export const config = {
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
+    "/_next/static/media/:path*",
     "/_next/image",
   ],
 };

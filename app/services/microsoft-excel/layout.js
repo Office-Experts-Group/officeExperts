@@ -34,6 +34,9 @@ export const metadata = {
     // "Excel financial modeling",
     // "Excel data analysis",
   ],
+  alternates: {
+    canonical: "https://www.excelexperts.com.au",
+  },
 };
 
 export default function RootLayout({ children }) {
