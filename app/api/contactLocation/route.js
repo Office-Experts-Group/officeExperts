@@ -98,7 +98,7 @@ export async function POST(req) {
       // Send to primary business email
       await sgMail.send({
         from: "consult@officeexperts.com.au",
-        to: "joshua@officeexperts.com.au",
+        to: "consult@officeexperts.com.au",
         subject: `New Contact Form Submission from ${location || "Website"}`,
         text: clientTextMessage,
         html: clientHtmlMessage,
