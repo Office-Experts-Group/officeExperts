@@ -180,18 +180,18 @@
   }
 }
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 4rem auto -2rem auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 60px;
-  border: 1px solid transparent;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin: 4rem auto -2rem auto !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  height: 60px !important;
+  border: 1px solid transparent !important;
 }
 .btn:hover {
-  border: 1px solid #046999;
+  border: 1px solid #046999 !important;
 }
 
 .teamHeading {
