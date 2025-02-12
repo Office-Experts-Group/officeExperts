@@ -92,6 +92,10 @@ export const metadata = {
     type: "website",
   },
 
+  verification: {
+    google: "BBH8G2GzABtUPV2EssluNW7cQwPIQ9_CDpC1N6lKJMo",
+  },
+
   // Additional metadata
   keywords: [
     // Core Office services

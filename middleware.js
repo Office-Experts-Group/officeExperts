@@ -37,13 +37,13 @@ export function middleware(request) {
   response.headers.set(
     "Content-Security-Policy",
     "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com; " +
       "style-src 'self' 'unsafe-inline'; " +
-      "img-src 'self' data: https: *.vimeocdn.com; " +
+      "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com; " +
       "font-src 'self'; " +
-      "frame-src 'self' *.vimeo.com player.vimeo.com; " +
+      "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
       "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-      "connect-src 'self' *.vimeo.com *.vimeocdn.com;"
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au;"
   );
 
   // Handle Next.js system paths

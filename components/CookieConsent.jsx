@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/cookieConsent.module.css";
 
+const GA_ID = "G-JE7MYMKBCR";
+
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -14,16 +16,15 @@ const CookieConsent = () => {
     const consentChoice = localStorage.getItem("cookieConsent");
     if (consentChoice === "accepted") {
       initializeAnalytics();
-      return; // Exit early if consent already given
+      return;
     }
 
     // Add scroll listener
     const handleScroll = () => {
       if (!hasScrolled && window.scrollY > 100) {
-        // Show after 100px scroll
         setHasScrolled(true);
         setIsVisible(true);
-        window.removeEventListener("scroll", handleScroll); // Clean up listener
+        window.removeEventListener("scroll", handleScroll);
       }
     };
 
@@ -32,28 +33,33 @@ const CookieConsent = () => {
   }, [hasScrolled]);
 
   const initializeAnalytics = () => {
-    if (typeof window === "undefined" || window.GA_INITIALIZED) return;
-
-    window.GA_INITIALIZED = true;
+    if (typeof window === "undefined") return;
 
     try {
-      const gtmScript = document.createElement("script");
-      gtmScript.defer = true;
-      gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`;
+      // Initialize gtag
+      const gaScript = document.createElement("script");
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(gaScript);
 
-      const initScript = document.createElement("script");
-      initScript.defer = true;
-      initScript.textContent = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
-          page_path: window.location.pathname,
-        });
-      `;
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", GA_ID);
 
-      document.head.appendChild(gtmScript);
-      document.head.appendChild(initScript);
+      // Add noscript iframe
+      const noscript = document.createElement("noscript");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.googletagmanager.com/ns.html?id=${GA_ID}`;
+      iframe.height = "0";
+      iframe.width = "0";
+      iframe.style.display = "none";
+      iframe.style.visibility = "hidden";
+      noscript.appendChild(iframe);
+      document.body.insertBefore(noscript, document.body.firstChild);
     } catch (error) {
       console.error("Failed to initialize analytics:", error);
     }
