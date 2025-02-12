@@ -321,11 +321,8 @@ const Page = () => {
           <a href="mailto:consult@officeexperts.com.au">
             consult@officeexperts.com.au
           </a>
-          , or refer to our{" "}
-          <Link href="https://www.officeexperts.com.au/contact-us">
-            Contact Us
-          </Link>{" "}
-          page for the latest contact details.
+          , or refer to our <Link href="/contact-us">Contact Us</Link> page for
+          the latest contact details.
         </p>
         <p>
           To opt-out of receiving certain Office Experts marketing materials,
@@ -334,11 +331,8 @@ const Page = () => {
           <a href="mailto:consult@officeexperts.com.au">
             consult@officeexperts.com.au
           </a>
-          , or refer to our{" "}
-          <Link href="https://www.officeexperts.com.au/contact-us">
-            Contact Us
-          </Link>{" "}
-          page for the latest contact details.
+          , or refer to our <Link href="/contact-us">Contact Us</Link> page for
+          the latest contact details.
         </p>
         <p>
           Please note that if you have an account with Office Experts, we will
