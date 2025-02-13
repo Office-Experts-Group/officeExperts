@@ -28,17 +28,19 @@ const LocationPages = ({ location }) => {
             <p>Microsoft Office consultants</p>
             <h2>{location}</h2>
             <p>
-              Our Microsoft Office consultants at Office Experts Group{" "}
-              {location} specialise in custom development across the entire
-              suite of Office products. We are second to none in databases,
-              custom coding, document design, dashboards and reporting
-              solutions.
+              At Office Experts Group, we provide innovative, high-performance
+              solutions across the entire Microsoft Office suite.
             </p>
             <p>
-              Through our extensive and growing customer base, our highly
-              trained Microsoft Office consulting team is known for efficiency,
-              excellent customer service, innovative solutions, tailored
-              education, expert troubleshooting and reliable support.
+              From custom software development and database optimisation to
+              automation, document design, dashboards, and reporting, our expert
+              consultants craft solutions that drive efficiency and streamline
+              business operations.{" "}
+            </p>
+            <p>
+              We also specialise in corporate branding, seamless system
+              integration, advanced data processing and personalised training to
+              help businesses maximise their Microsoft tools.
             </p>
           </div>
           <a href="#contact" className={`${styles.btn} ${styles.locationBtn}`}>
