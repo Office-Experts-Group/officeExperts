@@ -30,7 +30,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://www.officeexperts.com.au/client-testimonials",
+    canonical: "/client-testimonials",
   },
 };
 

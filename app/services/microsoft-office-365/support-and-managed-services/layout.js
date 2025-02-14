@@ -8,29 +8,10 @@ export const metadata = {
   keywords: [
     "Microsoft Office 365 managed services",
     "Microsoft Office 365 support",
-    // "Office 365 technical support",
-    // "Office 365 business solutions",
-    // "Office 365 maintenance",
-    // "Office 365 consulting services",
-    // "Office 365 help desk",
-    // "Office 365 troubleshooting",
-    // "Office 365 expert support",
-    // "Office 365 management",
-    // "Office 365 business automation",
-    // "Office 365 remote support",
-    // "Office 365 onsite support",
-    // "Office 365 ongoing support",
-    // "Office 365 enterprise support",
-    // "Office 365 support specialists",
-    // "Office 365 business consulting",
-    // "Office 365 migration support",
-    // "Office 365 integration services",
-    // "Office 365 technical consulting",
   ],
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/microsoft-office-365/support-and-managed-services",
+    canonical: "/services/microsoft-office-365/support-and-managed-services",
   },
 };
 

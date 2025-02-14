@@ -18,36 +18,6 @@ export const metadata = {
   keywords: [
     // Core Word services
     "Microsoft Word professional consultants",
-    // "Word template design",
-    // "corporate Word templates",
-    // "Word document solutions",
-    // "Word accessibility services",
-
-    // // Location-based
-    // "Word consultants Sydney",
-    // "Word experts Melbourne",
-    // "Word specialists Brisbane",
-    // "Word consultants Perth",
-
-    // // Service-specific long tail
-    // "Word VBA development",
-    // "Word form creation",
-    // "Word document automation",
-    // "Word corporate branding",
-    // "Word template conversion",
-
-    // // Industry-specific
-    // "government Word solutions",
-    // "corporate Word templates",
-    // "enterprise Word consulting",
-    // "business Word automation",
-
-    // // Feature-specific
-    // "Word popup forms",
-    // "Word quick parts",
-    // "Word document accessibility",
-    // "Word custom toolbars",
-    // "Word template migration",
   ],
   alternates: {
     canonical: "https://www.wordexperts.com.au",

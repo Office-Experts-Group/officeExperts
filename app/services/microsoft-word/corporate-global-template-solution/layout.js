@@ -17,35 +17,10 @@ export const metadata = {
     "corporate Word template solutions",
     // "Word document automation",
     "corporate branding templates",
-    // "business document templates",
-    // "Word template design",
-
-    // // Features
-    // "document formatting control",
-    // "corporate style management",
-    // "template automation",
-    // "document consistency",
-    // "brand guideline compliance",
-
-    // // Benefits
-    // "improved document efficiency",
-    // "corporate identity protection",
-    // "document standardization",
-    // "formatting consistency",
-    // "controlled document environment",
-
-    // // Use cases
-    // "corporate document creation",
-    // "business template management",
-    // "document branding control",
-    // "style guide enforcement",
-    // "template standardization",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/corporate-global-template-solution",
-    languages: {
-      en: "https://wordexperts.com.au/corporate-global-template-solution",
-    },
+    canonical:
+      "https://www.wordexperts.com.au/corporate-global-template-solution",
   },
 };
 

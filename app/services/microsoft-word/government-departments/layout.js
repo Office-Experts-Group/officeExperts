@@ -15,42 +15,9 @@ export const metadata = {
   keywords: [
     // Core government services
     "government microsoft document solutions",
-    // "government word templates",
-    // "federal government word services",
-    // "state government word services",
-    // "accessible government documents",
-
-    // // Service-specific
-    // "government document design",
-    // "government template creation",
-    // "government accessibility compliance",
-    // "government corporate identity",
-    // "government document automation",
-
-    // // Location-based
-    // "australian government word services",
-    // "federal department word solutions",
-    // "state department word solutions",
-
-    // // Technical aspects
-    // "government document accessibility",
-    // "government template management",
-    // "government document standards",
-    // "government compliant documents",
-    // "government document formatting",
-
-    // // Specific solutions
-    // "government master templates",
-    // "government sub templates",
-    // "government document controls",
-    // "government template automation",
-    // "government document consistency",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/government-departments",
-    languages: {
-      en: "https://wordexperts.com.au/government-departments",
-    },
+    canonical: "https://www.wordexperts.com.au/government-departments",
   },
 };
 

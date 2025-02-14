@@ -56,8 +56,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-melbourne",
+    canonical: "/word-and-powerpoint-experts-melbourne",
   },
 };
 

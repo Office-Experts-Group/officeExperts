@@ -37,7 +37,7 @@ const PageSegment4 = () => {
 
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.6}>
               <Link
-                href={"https://accessexperts.com.au"}
+                href={"https://www.accessexperts.com.au"}
                 className={`"btn" ${styles.btnLink}`}
               >
                 Access
@@ -46,7 +46,7 @@ const PageSegment4 = () => {
 
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.6}>
               <Link
-                href={"https://wordexperts.com.au"}
+                href={"https://www.wordexperts.com.au"}
                 className={`"btn" ${styles.btnLink}`}
               >
                 Word

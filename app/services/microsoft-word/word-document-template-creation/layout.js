@@ -17,41 +17,9 @@ export const metadata = {
   },
 
   // Additional metadata
-  keywords: [
-    "Custom word template designers",
-    // Core template services
-    // "Word template creation",
-    // "Word document design",
-    // "custom Word templates",
-    // "professional Word templates",
-    // "Word document creation",
-
-    // // Specific services
-    // "corporate Word templates",
-    // "business document templates",
-    // "branded Word templates",
-    // "Word template design",
-    // "Word document solutions",
-
-    // // Features
-    // "Word template automation",
-    // "Word document formatting",
-    // "Word template customisation",
-    // "Word branding solutions",
-    // "Word document consistency",
-
-    // // Business focus
-    // "professional document design",
-    // "business document creation",
-    // "corporate template solutions",
-    // "company document templates",
-    // "document branding services",
-  ],
+  keywords: ["Custom word template designers"],
   alternates: {
-    canonical: "https://wordexperts.com.au/word-document-template-creation",
-    languages: {
-      en: "https://wordexperts.com.au/word-document-template-creation",
-    },
+    canonical: "https://www.wordexperts.com.au/word-document-template-creation",
   },
 };
 

@@ -18,37 +18,9 @@ export const metadata = {
   keywords: [
     // Core form services
     "Word fill inform designers",
-    // "fill in forms Word",
-    // "Word form templates",
-    // "form controls Word",
-    // "Word data entry forms",
-
-    // // Technical aspects
-    // "VBA form integration",
-    // "Word form automation",
-    // "form data extraction",
-    // "protected Word forms",
-    // "Word form controls",
-
-    // // Service-specific
-    // "user friendly forms",
-    // "Word document forms",
-    // "business form design",
-    // "form template creation",
-    // "custom Word forms",
-
-    // // Business benefits
-    // "consistent data entry",
-    // "form design services",
-    // "professional forms",
-    // "form development",
-    // "business documentation",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/fill-in-forms",
-    languages: {
-      en: "https://wordexperts.com.au/fill-in-forms",
-    },
+    canonical: "https://www.wordexperts.com.au/fill-in-forms",
   },
 };
 

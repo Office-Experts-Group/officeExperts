@@ -11,7 +11,7 @@ export const metadata = {
     "Microsoft access database upgrade",
   ],
   alternates: {
-    canonical: "https://accessexperts.com.au/upgrades-and-migration",
+    canonical: "https://www.accessexperts.com.au/upgrades-and-migration",
   },
 };
 

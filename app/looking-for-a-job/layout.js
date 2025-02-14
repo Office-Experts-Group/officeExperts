@@ -57,7 +57,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://www.officeexperts.com.au/looking-for-a-job",
+    canonical: "/looking-for-a-job",
   },
 };
 

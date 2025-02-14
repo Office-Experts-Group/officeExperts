@@ -61,7 +61,7 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
+      "/services/by-business-solution/cloud-based-solutions-with-azure",
   },
 };
 

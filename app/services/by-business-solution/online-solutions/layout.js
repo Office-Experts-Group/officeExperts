@@ -41,8 +41,7 @@ export const metadata = {
     // "Outlook online solutions",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+    canonical: "/services/by-business-solution/online-solutions",
   },
 };
 

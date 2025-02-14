@@ -40,7 +40,7 @@ export const metadata = {
     // "NET SharePoint development",
   ],
   alternates: {
-    canonical: "https://www.officeexperts.com.au/services/microsoft-dot-net",
+    canonical: "/services/microsoft-dot-net",
   },
 };
 

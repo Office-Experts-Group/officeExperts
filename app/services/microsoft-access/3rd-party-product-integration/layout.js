@@ -39,7 +39,7 @@ export const metadata = {
     // "Brisbane database services",
   ],
   alternates: {
-    canonical: "https://accessexperts.com.au/3rd-party-product-integration",
+    canonical: "https://www.accessexperts.com.au/3rd-party-product-integration",
   },
 };
 

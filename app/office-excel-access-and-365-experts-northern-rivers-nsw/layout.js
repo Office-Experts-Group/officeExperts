@@ -31,8 +31,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
+    canonical: "/office-excel-access-and-365-experts-northern-rivers-nsw",
   },
 };
 

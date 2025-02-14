@@ -6,6 +6,7 @@ import CTAMainProps from "../(components)/CTAMainProps";
 import ContactLocationSegment from "../../components/ContactLocationSegment";
 import ServicesLocation from "../(components)/ServicesLocation";
 import Promo from "../../components/Promo";
+import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
 import centralCoast from "../../public/pageHeros/centralCoast.webp";
 import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
@@ -14,7 +15,6 @@ import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../utils/schemaGenerators";
-import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
 const schema = {
   "@context": "https://schema.org",

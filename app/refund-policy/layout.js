@@ -7,7 +7,7 @@ export const metadata = {
     "Read the refund policy for Office Experts, detailing how we accept and process refunds for our professional services.",
   keywords: "refund policy, office experts",
   alternates: {
-    canonical: "https://www.officeexperts.com.au/refund-policy",
+    canonical: "/refund-policy",
   },
 };
 

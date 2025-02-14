@@ -36,8 +36,7 @@ export const metadata = {
     // "form automation VBA",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
+    canonical: "/services/by-business-solution/vba-macro-development",
   },
 };
 

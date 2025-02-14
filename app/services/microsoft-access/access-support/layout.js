@@ -41,7 +41,7 @@ export const metadata = {
     // "professional Access help",
   ],
   alternates: {
-    canonical: "https://accessexperts.com.au/access-support",
+    canonical: "https://www.accessexperts.com.au/access-support",
   },
 };
 

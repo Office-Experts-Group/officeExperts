@@ -38,7 +38,7 @@ export const metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
+      "/services/by-business-solution/database-development-and-solutions",
   },
 };
 

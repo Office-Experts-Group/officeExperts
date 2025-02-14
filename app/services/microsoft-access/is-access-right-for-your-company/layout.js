@@ -37,7 +37,8 @@ export const metadata = {
     // "database migration services",
   ],
   alternates: {
-    canonical: "https://accessexperts.com.au/is-access-right-for-your-company",
+    canonical:
+      "https://www.accessexperts.com.au/is-access-right-for-your-company",
   },
 };
 

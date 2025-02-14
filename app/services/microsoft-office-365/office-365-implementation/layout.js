@@ -8,37 +8,10 @@ export const metadata = {
   keywords: [
     // Core Office 365 services
     "Office 365 implementation",
-    // "Microsoft Office 365 setup",
-    // "Office 365 migration services",
-    // "Office 365 subscription plans",
-    // "Microsoft Office consultants",
-    // "Office 365 support experts",
-
-    // // Specific services
-    // "Office 365 plan selection",
-    // "Office 365 setup for businesses",
-    // "Office 365 migration for enterprises",
-    // "custom Office 365 solutions",
-    // "tailored Office 365 subscriptions",
-
-    // // Integration/Migration
-    // "Office 365 migration consultants",
-    // "Office 365 integration services",
-    // "cloud email migration Office 365",
-    // "business software upgrade Office 365",
-    // "Microsoft Office 365 onboarding",
-
-    // // Business-specific
-    // "Office 365 for small businesses",
-    // "enterprise Office 365 solutions",
-    // "corporate Office 365 setup",
-    // "business email setup with Office 365",
-    // "company productivity tools Office 365",
   ],
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation",
+    canonical: "/services/microsoft-office-365/office-365-implementation",
   },
 };
 

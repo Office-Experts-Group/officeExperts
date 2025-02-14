@@ -59,7 +59,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://www.officeexperts.com.au/services/by-business-solution",
+    canonical: "/services/by-business-solution",
   },
 };
 

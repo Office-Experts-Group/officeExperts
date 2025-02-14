@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.officeexperts.com.au/blog",
+    canonical: "/blog",
   },
 };
 

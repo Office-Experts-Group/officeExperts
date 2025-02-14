@@ -57,8 +57,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast",
+    canonical: "/word-and-powerpoint-experts-gold-coast",
   },
 };
 

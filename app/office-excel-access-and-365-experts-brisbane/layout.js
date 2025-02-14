@@ -33,8 +33,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane",
+    canonical: "/office-excel-access-and-365-experts-brisbane",
   },
 };
 

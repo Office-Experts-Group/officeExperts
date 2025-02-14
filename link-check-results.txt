@@ -534,8 +534,8 @@ CHECK RESULTS
 95/152: /services/microsoft-excel/pivot-tables-charts-and-reporting-solutions - Status: 404
 96/152: /services/microsoft-excel/upgrades-and-migration - Status: 404
 97/152: /services/microsoft-excel/vba-macro-development - Status: 404
-98/152: https://accessexperts.com.au - Status: 200
-99/152: https://wordexperts.com.au - Status: 200
+98/152: https://www.accessexperts.com.au - Status: 200
+99/152: https://www.wordexperts.com.au - Status: 200
 100/152: /services/microsoft-office/upgrades-and-migration - Status: 404
 101/152: /services/microsoft-office-365/business-process-automation - Status: 404
 102/152: /services/microsoft-office-365/cloud-backup-with-onedrive - Status: 404

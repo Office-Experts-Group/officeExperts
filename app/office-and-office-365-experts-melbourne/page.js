@@ -1,10 +1,12 @@
 import React from "react";
 
 import ServiceHero from "../../components/ServiceHero";
-import ContactLocationSegment from "../../components/ContactLocationSegment";
 import LocationPages from "../(components)/LocationPages";
 import CTAMainProps from "../(components)/CTAMainProps";
-import LocationPromos from "../(components)/LocationPromos";
+import ContactLocationSegment from "../../components/ContactLocationSegment";
+import ServicesLocation from "../(components)/ServicesLocation";
+import Promo from "../../components/Promo";
+import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
 import melbourne from "../../public/pageHeros/melbourne.webp";
 import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
@@ -78,25 +80,19 @@ const Page = () => {
         title={`Office and Office 365 Consultants ${location}`}
         desktopImage={melbourne}
         mobileImage={melbourneMob}
-        altMob="Melbourne"
         altDesk="Melbourne"
+        altMob="Melbourne"
       />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
-      <LocationPromos location={location} />
-      <p
-        style={{
-          textAlign: "center",
-          fontStyle: "italic",
-          margin: "2rem 1rem 6rem 1rem",
-          color: "#046999;",
-          fontWeight: "700",
-        }}
-      >
-        <strong>NOTE* </strong>Our services are available Australia-wide via
-        remote access which is typically the most cost and time effective
-        method.
-      </p>
+      <ServicesLocation location={location} />
+      <Promo
+        h2={"Let's do this!"}
+        p={
+          "Unlock the full potential of Microsoft Office with our expert-driven solutions—designed to enhance productivity and streamline your operations."
+        }
+      />
+      <GoodToKnow />
       <ContactLocationSegment location={location} />
     </>
   );

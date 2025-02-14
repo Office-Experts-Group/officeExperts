@@ -45,8 +45,7 @@ export const metadata = {
     // "document workflow Richmond",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
+    canonical: "/word-and-powerpoint-experts-richmond",
   },
 };
 

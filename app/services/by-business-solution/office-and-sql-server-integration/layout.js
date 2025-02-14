@@ -37,7 +37,7 @@ export const metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration",
+      "/services/by-business-solution/office-and-sql-server-integration",
   },
 };
 

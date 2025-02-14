@@ -72,6 +72,9 @@ export const metadata = {
   title: "Microsoft Office Consulting & Solutions | Office Experts Group",
   description:
     "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
+  alternates: {
+    canonical: "https://www.officeexperts.com.au",
+  },
 
   // OpenGraph
   openGraph: {

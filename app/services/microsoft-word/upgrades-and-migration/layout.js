@@ -18,42 +18,9 @@ export const metadata = {
   keywords: [
     // Core services
     "Word upgrade and migration assistance",
-    // "Word migration services",
-    // "Microsoft Word version upgrade",
-    // "Word document conversion",
-    // "PDF to Word conversion",
-
-    // // Specific services
-    // "Word template migration",
-    // "Word macro upgrade",
-    // "Word formatting fixes",
-    // "Word version compatibility",
-    // "Word document repair",
-
-    // // Problem-specific
-    // "fix Word formatting issues",
-    // "repair broken Word documents",
-    // "Word version compatibility issues",
-    // "Word document recovery",
-    // "Word template repair",
-
-    // // Location-based
-    // "Word migration services Australia",
-    // "Word upgrade consultants Sydney",
-    // "Word document experts Melbourne",
-    // "Microsoft Word specialists Brisbane",
-
-    // // Business solutions
-    // "business Word migration",
-    // "enterprise Word upgrade",
-    // "corporate Word solutions",
-    // "professional Word services",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/upgrades-and-migration",
-    languages: {
-      en: "https://wordexperts.com.au/upgrades-and-migration",
-    },
+    canonical: "https://www.wordexperts.com.au/upgrades-and-migration",
   },
 };
 

@@ -8,36 +8,10 @@ export const metadata = {
   keywords: [
     // Core automation services
     "Microsoft Power Automate developers",
-    // "Power Automate consulting",
-    // "workflow automation Australia",
-    // "business process automation",
-    // "RPA solutions",
-
-    // // Service-specific
-    // "cloud flows development",
-    // "business process flows",
-    // "robotic process automation",
-    // "process mining services",
-    // "workflow optimization",
-
-    // // Location-based
-    // "Power Automate consultants Sydney",
-    // "Power Automate experts Melbourne",
-    // "workflow automation Brisbane",
-    // "RPA solutions Perth",
-
-    // // Technology combinations
-    // "Microsoft Power Platform integration",
-    // "Power Automate Azure integration",
-    // "Office 365 workflow automation",
-    // "legacy system integration",
   ],
   alternates: {
     canonical:
       "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
-    languages: {
-      en: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
-    },
   },
 };
 

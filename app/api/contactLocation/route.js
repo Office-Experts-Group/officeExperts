@@ -59,7 +59,7 @@ export async function POST(req) {
       Operating System: ${operatingSystem || "Not specified"}
       Message: ${message}
 
-      This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST
+      This form was filled out on the website: https://www.officeexperts.com.au @ ${currentTimeAEST} AEST
     `;
 
     const customerTextMessage = `
@@ -84,7 +84,7 @@ export async function POST(req) {
       <p><strong>Message:</strong></p>
       <p>${message}</p>
       
-      <em>This form was filled out on the website: https://officeexperts.com.au @ ${currentTimeAEST} AEST</em>
+      <em>This form was filled out on the website: https://www.officeexperts.com.au @ ${currentTimeAEST} AEST</em>
     `;
 
     const customerHtmlMessage = `

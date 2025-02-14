@@ -42,7 +42,7 @@ export const metadata = {
     // "Microsoft Office software training",
   ],
   alternates: {
-    canonical: "https://www.officeexperts.com.au/services/by-office-product",
+    canonical: "/services/by-office-product",
   },
 };
 

@@ -7,28 +7,9 @@ export const metadata = {
   description:
     "Our team of Word design experts deliver versatile templates that meet the needs of any company or organisation. We ensure your corporate identity is protected and can cut costs through setting you up to produce your own inhouse reports.",
 
-  keywords: [
-    "word template designers",
-    // "corporate document solutions",
-    // "microsoft word templates",
-    // "document branding",
-    // "corporate identity protection",
-    // "word document formatting",
-    // "inhouse report generation",
-    // "corporate branding guidelines",
-    // "document automation",
-    // "word template consulting",
-    // "corporate style management",
-    // "document standardization",
-    // "business document templates",
-    // "word formatting control",
-    // "corporate document management",
-  ],
+  keywords: ["word template designers"],
   alternates: {
-    canonical: "https://wordexperts.com.au/companies-and-organisations",
-    languages: {
-      en: "https://wordexperts.com.au/companies-and-organisations",
-    },
+    canonical: "https://www.wordexperts.com.au/companies-and-organisations",
   },
 };
 

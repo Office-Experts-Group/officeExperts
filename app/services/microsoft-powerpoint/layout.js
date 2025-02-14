@@ -9,38 +9,9 @@ export const metadata = {
   keywords: [
     // Core PowerPoint services
     "Microsoft PowerPoint consultation",
-    // "PowerPoint presentation design",
-    // "PowerPoint template creation",
-    // "PowerPoint VBA automation",
-    // "PowerPoint training services",
-
-    // // Location-based
-    // "PowerPoint consultants Sydney",
-    // "PowerPoint experts Melbourne",
-    // "PowerPoint services Brisbane",
-    // "PowerPoint specialists Perth",
-
-    // // Service-specific
-    // "corporate PowerPoint templates",
-    // "PowerPoint master slides",
-    // "PowerPoint presentation redesign",
-    // "PowerPoint automation solutions",
-    // "PowerPoint user training",
-
-    // // Industry-specific
-    // "corporate presentation design",
-    // "business PowerPoint solutions",
-    // "enterprise PowerPoint consulting",
-    // "professional presentation services",
-
-    // // Technical combinations
-    // "PowerPoint VBA development",
-    // "PowerPoint data integration",
-    // "PowerPoint template automation",
-    // "PowerPoint brand compliance",
   ],
   alternates: {
-    canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint",
+    canonical: "/services/microsoft-powerpoint",
   },
 };
 

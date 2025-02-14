@@ -21,7 +21,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote",
+    canonical: "/contact-us/request-a-quote",
   },
 };
 

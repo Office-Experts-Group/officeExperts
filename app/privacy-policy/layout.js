@@ -5,10 +5,10 @@ export const metadata = {
   title: "Privacy Policy | Office Experts Group",
   description:
     "Read the privacy policy for Office Experts, detailing how we collect, use, and protect your personal information.",
-  url: "https://officeexperts.com.au/privacy-policy",
+  url: "https://www.officeexperts.com.au/privacy-policy",
   keywords: "privacy policy, office experts",
   alternates: {
-    canonical: "https://www.officeexperts.com.au/privacy-policy",
+    canonical: "/privacy-policy",
   },
 };
 

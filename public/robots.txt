@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://officeexperts.com.au
+Host: https://www.officeexperts.com.au
 
 # Sitemaps
-Sitemap: https://officeexperts.com.au/sitemap.xml
+Sitemap: https://www.officeexperts.com.au/sitemap.xml

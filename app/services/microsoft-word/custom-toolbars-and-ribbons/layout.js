@@ -19,35 +19,9 @@ export const metadata = {
     "custom word ribbon design",
     // "word toolbar customisation",
     "microsoft word toolbar development",
-    // "word ribbon automation",
-    // "custom toolbar services",
-
-    // // Specific features
-    // "word document automation",
-    // "custom word buttons",
-    // "word interface customisation",
-    // "word toolbar programming",
-    // "word ribbon modification",
-
-    // // Business benefits
-    // "business document automation",
-    // "document workflow optimization",
-    // "document creation efficiency",
-    // "document productivity tools",
-    // "automated document elements",
-
-    // // Location-specific
-    // "word toolbar services australia",
-    // "word customisation sydney",
-    // "document automation melbourne",
-    // "word ribbon experts brisbane",
-    // "custom word solutions perth",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/custom-toolbars-and-ribbons",
-    languages: {
-      en: "https://wordexperts.com.au/custom-toolbars-and-ribbons",
-    },
+    canonical: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
   },
 };
 

@@ -38,8 +38,7 @@ export const metadata = {
     // "enterprise dashboard systems",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
+    canonical: "/services/by-business-solution/dashboards",
   },
 };
 

@@ -15,14 +15,14 @@ const LocationPromos = ({ location }) => {
       <Promo
         h2={`Microsoft Access Consulting – ${location}`}
         p={`Our cross-industry Access database consultants at Access Experts ${location} each have over 15 years experience and deliver a prompt, quality service with innovative solutions and competitive pricing. We excel in design, development, database work, integration, support, data manipulation and reporting solutions.`}
-        link={"https://accessexperts.com.au"}
+        link={"https://www.accessexperts.com.au"}
         linkText={"Access Experts"}
         isLocation={true}
       />
       <Promo
         h2={`Microsoft Word Designers – ${location}`}
         p={`When it comes to Microsoft Word, our Australia-based, cross-industry consultants at Word Experts ${location} deliver a prompt, quality service with competitive pricing. Our Microsoft Word experts specialise in templates, document design, forms, online documents, accessibility, integration, training and support.`}
-        link={"https://wordexperts.com.au"}
+        link={"https://www.wordexperts.com.au"}
         linkText={"Word Experts"}
         isLocation={true}
       />

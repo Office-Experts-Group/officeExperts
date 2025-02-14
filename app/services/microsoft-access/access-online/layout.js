@@ -35,7 +35,7 @@ export const metadata = {
     // "cloud database management",
   ],
   alternates: {
-    canonical: "https://accessexperts.com.au/access-online",
+    canonical: "https://www.accessexperts.com.au/access-online",
   },
 };
 

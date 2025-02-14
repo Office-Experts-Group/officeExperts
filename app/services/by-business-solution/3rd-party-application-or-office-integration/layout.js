@@ -38,7 +38,7 @@ export const metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
+      "/services/by-business-solution/3rd-party-application-or-office-integration",
   },
 };
 

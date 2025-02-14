@@ -55,8 +55,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
+    canonical: "/word-and-powerpoint-experts-canberra",
   },
 };
 

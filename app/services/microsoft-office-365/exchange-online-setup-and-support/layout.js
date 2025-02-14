@@ -10,41 +10,11 @@ export const metadata = {
     // Core Exchange/Email services
     "Microsoft Exchange Online setup",
     "Microsoft Exchange Online support",
-    // "business email configuration",
-    // "email domain setup",
-    // "Exchange migration services",
-    // "Exchange 365 support",
-    // "Exchange Online experts",
-
-    // // Specific services
-    // "shared inbox setup",
-    // "custom email addresses",
-    // "email forwarding configuration",
-    // "business domain email",
-    // "professional email setup",
-
-    // // Location-based
-    // "Exchange setup Sydney",
-    // "Exchange experts Melbourne",
-    // "Exchange migration Brisbane",
-    // "email setup Perth",
-
-    // // Integration/Migration
-    // "Office 365 email migration",
-    // "Exchange Online integration",
-    // "email system upgrade",
-    // "business email migration",
-
-    // // Business-specific
-    // "corporate email setup",
-    // "enterprise email configuration",
-    // "business email branding",
-    // "company email management",
   ],
 
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support",
+      "/services/microsoft-office-365/exchange-online-setup-and-support",
   },
 };
 

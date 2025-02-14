@@ -8,38 +8,11 @@ export const metadata = {
   keywords: [
     // Core implementation
     "Office 365 remote data gathering",
-    // "Office 365 deployment services",
-    // "365 setup services",
-    // "Office 365 rollout",
-
-    // // Migration focused
-    // "Office 365 migration planning",
-    // "365 transition services",
-    // "email migration Office 365",
-    // "SharePoint migration",
-
-    // // Location-based
-    // "Office 365 consultants Sydney",
-    // "365 implementation Melbourne",
-    // "Office 365 services Brisbane",
-    // "Microsoft 365 experts Perth",
-
-    // // Service-specific
-    // "enterprise 365 deployment",
-    // "business 365 setup",
-    // "Office 365 configuration",
-    // "365 tenant setup",
-
-    // // Technical
-    // "Office 365 integration",
-    // "365 security setup",
-    // "Exchange Online deployment",
-    // "Teams implementation",
   ],
 
   alternates: {
     canonical:
-      "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device",
+      "/services/microsoft-office-365/remote-data-gathering-from-any-device",
   },
 };
 

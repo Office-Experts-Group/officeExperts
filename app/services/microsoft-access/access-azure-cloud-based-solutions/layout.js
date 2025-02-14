@@ -38,7 +38,7 @@ export const metadata = {
   ],
   alternates: {
     canonical:
-      "https://accessexperts.com.au/access-azure-cloud-based-solutions",
+      "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
   },
 };
 

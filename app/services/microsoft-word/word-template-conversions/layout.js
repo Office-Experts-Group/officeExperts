@@ -18,35 +18,9 @@ export const metadata = {
     // Core services
     "Word template design",
     "Word template conversion",
-    // "Word document design",
-    // "Adobe to Word conversion",
-    // "InDesign to Word conversion",
-
-    // // Service-specific
-    // "Word template services",
-    // "Word document templates",
-    // "Word template solutions",
-    // "professional Word templates",
-    // "corporate Word templates",
-
-    // // Location-based
-    // "Word template designers Australia",
-    // "Word design services Sydney",
-    // "Word template conversion Melbourne",
-    // "Word document experts Brisbane",
-
-    // // Business focus
-    // "business Word templates",
-    // "corporate document templates",
-    // "professional document design",
-    // "template branding services",
-    // "Word document solutions",
   ],
   alternates: {
-    canonical: "https://wordexperts.com.au/word-template-conversions",
-    languages: {
-      en: "https://wordexperts.com.au/word-template-conversions",
-    },
+    canonical: "https://www.wordexperts.com.au/word-template-conversions",
   },
 };
 

@@ -10,33 +10,6 @@ export const metadata = {
     // Core upgrade services
     "Excel migration services",
     "Excel upgrade solutions",
-    // "Excel version compatibility",
-
-    // // Specific issues
-    // "slow Excel workbooks",
-    // "Excel compatibility issues",
-    // "Excel VBA migration",
-    // "Excel macro upgrades",
-    // "Excel 32-bit to 64-bit",
-
-    // // Solutions
-    // "Excel performance optimization",
-    // "Excel workbook repair",
-    // "Excel database migration",
-    // "Excel cloud migration",
-    // "Excel version upgrade",
-
-    // // Business focus
-    // "business Excel solutions",
-    // "enterprise Excel migration",
-    // "corporate Excel upgrades",
-    // "Excel consulting services",
-
-    // // Location specific
-    // "Excel migration Australia",
-    // "Excel upgrade services Sydney",
-    // "Excel consultants Melbourne",
-    // "Excel experts Brisbane",
   ],
   alternates: {
     canonical: "https://www.excelexperts.com.au/excel-upgrades-and-migration",

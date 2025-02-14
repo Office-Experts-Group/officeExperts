@@ -30,10 +30,10 @@ const PageSegmentMain = () => {
             <h2>Custom Document and Template Solutions</h2>
             <p>
               Our team of{" "}
-              <Link href="https://wordexperts.com.au">Word designers</Link> can
-              create your company documents and templates with our easy to use
-              templates, complete with your branding, a consistent look and a
-              professional feel.
+              <Link href="https://www.wordexperts.com.au">Word designers</Link>{" "}
+              can create your company documents and templates with our easy to
+              use templates, complete with your branding, a consistent look and
+              a professional feel.
             </p>
             <p>
               Let us help you create templates that are easy to use and

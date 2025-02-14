@@ -41,8 +41,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-migration",
+    canonical: "/services/microsoft-office-365/office-365-migration",
   },
 };
 

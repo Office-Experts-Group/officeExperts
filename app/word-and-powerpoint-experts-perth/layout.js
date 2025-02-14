@@ -30,8 +30,7 @@ export const metadata = {
     // "Word consultants Perth",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth",
+    canonical: "/word-and-powerpoint-experts-perth",
   },
 };
 

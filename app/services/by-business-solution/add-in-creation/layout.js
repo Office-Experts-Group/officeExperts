@@ -36,8 +36,7 @@ export const metadata = {
     // "Commercial Office add-ins",
   ],
   alternates: {
-    canonical:
-      "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
+    canonical: "/services/by-business-solution/add-in-creation",
   },
 };
 
