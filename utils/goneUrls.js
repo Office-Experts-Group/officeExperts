@@ -41,7 +41,6 @@ export const goneUrls = [
   "/blog/did-you-know-we-work-with-most-microsoft-technologies/attachment/microsoft-logo/",
 
   "/blog/office-experts-is-now-on-linkedin/attachment/linked-in_clipart/",
-  "/ccp/",
 
   "/faq-items/do-you-come-onsite-or-work-remotely/attachment/onsite-services/",
 

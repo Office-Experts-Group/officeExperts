@@ -1,10 +1,7 @@
 import Link from "next/link";
 import React from "react";
-// import Image from "next/image";
 
 import styles from "../styles/socialLinks.module.css";
-
-// import x from "../public/icons/x.png";
 
 const SocialLinks = ({ inNav }) => {
   return (
@@ -12,7 +9,7 @@ const SocialLinks = ({ inNav }) => {
       <Link
         href="https://www.facebook.com/MSOfficeExperts"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noopener noreferrer"
         aria-label="visit our facebook page"
         className={inNav ? styles.socialLinkNav : ""}
       >
@@ -33,7 +30,7 @@ const SocialLinks = ({ inNav }) => {
       <Link
         href="https://www.instagram.com/officeexpertsgroup"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noopener noreferrer"
         aria-label="visit our instagram page"
         className={inNav ? styles.socialLinkNav : ""}
       >
@@ -55,27 +52,10 @@ const SocialLinks = ({ inNav }) => {
         </svg>
       </Link>
 
-      {/* <Link
-        href="https://www.twitter.com/OfficeExpertsG1"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="visit our X formerly twitter page"
-        className={inNav ? styles.socialLinkNav : ""}
-      >
-        <Image
-          src={x}
-          alt="X (formerly Twitter) icon"
-          width={15}
-          height={15}
-          style={{ filter: "brightness(150%)" }}
-          priority
-        />
-      </Link> */}
-
       <Link
         href="https://www.youtube.com/channel/UCw2Xf02ukEwvM6fQ2lVZxuw"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noopener noreferrer"
         aria-label="visit our youtube channel"
         className={inNav ? styles.socialLinkNav : ""}
       >
@@ -99,7 +79,7 @@ const SocialLinks = ({ inNav }) => {
       <Link
         href="https://www.linkedin.com/company/office-experts-group"
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noopener noreferrer"
         aria-label="Visit our LinkedIn page"
         className={inNav ? styles.socialLinkNav : ""}
       >

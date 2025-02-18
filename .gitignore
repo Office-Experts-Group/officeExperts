@@ -29,3 +29,9 @@ yarn-error.log*
 build
 dist
 out
+
+# misc 
+analyze-app-structure.js
+app-routes.js
+check404s.js
+link-check-results.txt

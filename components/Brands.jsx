@@ -16,7 +16,7 @@ export default function Brands() {
       <Link
         href="https://www.dulux.com.au"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={styles.brandLink}
       >
         <Image
@@ -30,7 +30,7 @@ export default function Brands() {
       <Link
         href="https://www.bekaert.com/en/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={styles.brandLink}
       >
         <Image
@@ -44,7 +44,7 @@ export default function Brands() {
       <Link
         href="http://www.queenslandrail.com.au/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={styles.brandLink}
       >
         <Image
@@ -58,7 +58,7 @@ export default function Brands() {
       <Link
         href="https://www.hyundai.com.au/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={styles.brandLink}
       >
         <Image
@@ -72,7 +72,7 @@ export default function Brands() {
       <Link
         href="https://www.sgwater.com.au/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={styles.brandLink}
       >
         <Image

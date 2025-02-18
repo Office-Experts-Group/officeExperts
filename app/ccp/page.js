@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "../../styles/ccp.module.css";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -46,12 +48,15 @@ const schema = {
 
 const Page = () => {
   return (
-    <>
+    <main className={styles.ccp}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-    </>
+      <h1>Online payments are currently unavailable</h1>
+      <h2>We apologise for the inconvenience.</h2>
+      <p>Please contact us directly for further assistance.</p>
+    </main>
   );
 };
 

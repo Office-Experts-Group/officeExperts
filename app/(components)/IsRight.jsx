@@ -67,8 +67,8 @@ const IsRight = () => {
             </div>
           </div>
 
-          <Link href={"/services"} className={`btn ${styles.btn}`}>
-            Explore Our Services
+          <Link href={"/about-us"} className={`btn ${styles.btn}`}>
+            About us
           </Link>
         </div>
       </AnimateOnScroll>
