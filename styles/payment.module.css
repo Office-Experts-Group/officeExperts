@@ -1,0 +1,379 @@
+.successWrapper {
+  max-width: 800px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.successWrapper h1 {
+  font-size: 2.5rem;
+  color: #046999;
+  margin: 1rem 0 2rem;
+}
+@media (max-width: 449px) {
+  .successWrapper h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .successWrapper {
+    padding: 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .successWrapper {
+    padding: 1.5rem;
+  }
+}
+
+.successIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.successIcon svg {
+  width: 80px;
+  height: 80px;
+  color: #4caf50;
+}
+@media (max-width: 449px) {
+  .successIcon svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.receiptDetails {
+  margin: 2rem 0;
+}
+.receiptDetails > p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #454545;
+  margin-bottom: 2rem;
+}
+
+.receiptGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: rgba(4, 105, 153, 0.03);
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.receiptRow:last-child {
+  border-bottom: none;
+}
+
+.receiptLabel {
+  font-weight: 600;
+  color: #454545;
+}
+
+.receiptValue {
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.receiptActions {
+  margin: 2.5rem 0;
+}
+.receiptActions p {
+  margin-bottom: 1.5rem;
+  color: #777a7e;
+}
+
+.contactInfo {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contactInfo p {
+  color: #777a7e;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.contactInfo a {
+  color: #046999;
+  font-weight: 600;
+}
+.contactInfo a:hover {
+  text-decoration: underline;
+}
+
+.paymentContainer {
+  min-height: 100vh;
+  padding: 10rem 2rem 5rem;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.paymentWrapper {
+  max-width: 900px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 0 auto;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .paymentWrapper {
+    padding: 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .paymentWrapper {
+    padding: 1.5rem;
+  }
+}
+
+.paymentHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.paymentHeader h1 {
+  font-size: 2.5rem;
+  color: #046999;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 449px) {
+  .paymentHeader h1 {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+@media (max-width: 449px) {
+  .description {
+    font-size: 1.125rem;
+  }
+}
+
+.surcharge {
+  font-size: 1.125rem;
+  color: #454545;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 449px) {
+  .surcharge {
+    font-size: 1rem;
+  }
+}
+
+.formContainer {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.paymentFrame {
+  width: 100%;
+  min-height: 650px;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .paymentFrame {
+    min-height: 600px;
+  }
+}
+@media (max-width: 449px) {
+  .paymentFrame {
+    min-height: 550px;
+  }
+}
+.paymentFrame.hidden {
+  visibility: hidden;
+  height: 0;
+  min-height: 0;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+.loadingState p {
+  margin-top: 2rem;
+  color: #046999;
+  font-size: 1.125rem;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #046999;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  background-color: rgba(255, 235, 235, 0.5);
+  border-radius: 4px;
+  padding: 2rem;
+}
+.errorState p {
+  color: #d32f2f;
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contactSupport {
+  margin-top: 2rem !important;
+  font-size: 0.95rem !important;
+  color: #454545 !important;
+}
+.contactSupport a {
+  color: #046999;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.contactSupport a:hover {
+  color: #034767;
+}
+
+.retryButton {
+  background-color: #046999;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.retryButton:hover {
+  background-color: #034767;
+}
+
+.securityInfo {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.securityInfo p {
+  color: #777a7e;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.errorWrapper {
+  max-width: 700px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.errorWrapper h1 {
+  font-size: 2rem;
+  color: #046999;
+  margin-bottom: 2rem;
+}
+@media (max-width: 449px) {
+  .errorWrapper h1 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .errorWrapper {
+    padding: 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .errorWrapper {
+    padding: 1.5rem;
+  }
+}
+
+.errorMessage p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+@media (max-width: 449px) {
+  .errorMessage p {
+    font-size: 1rem;
+  }
+}
+
+.contactEmail {
+  margin: 2rem 0;
+}
+.contactEmail a {
+  color: #046999;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+.contactEmail a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 449px) {
+  .contactEmail a {
+    font-size: 1.125rem;
+  }
+}
+
+.homeLink {
+  margin-top: 3rem;
+}
+.homeLink a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #046999;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.homeLink a:hover {
+  background-color: #034767;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=payment.module.css.map */

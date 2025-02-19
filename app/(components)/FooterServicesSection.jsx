@@ -54,19 +54,34 @@ const FooterServicesSection = () => {
         <div className={styles.dropdownContainer}>
           <div className={styles.dropdownBackground}></div>
           <div className={styles.dropdownContent}>
-            <Link href="https://www.powerplatformexperts.com.au/">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.powerplatformexperts.com.au/"
+            >
               Microsoft Power Platform
             </Link>
-            <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps"
+            >
               Microsoft Power Apps
             </Link>
-            <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi"
+            >
               Microsoft Power BI
             </Link>
-            <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate"
+            >
               Microsoft Power Automate
             </Link>
-            <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages"
+            >
               Microsoft Power Pages
             </Link>
           </div>
@@ -85,11 +100,24 @@ const FooterServicesSection = () => {
           <div className={styles.dropdownBackground}></div>
           <div className={styles.dropdownContent}>
             <Link href="/services/microsoft-office">Microsoft Office</Link>
-            <Link href="https://www.excelexperts.com.au/">Microsoft Excel</Link>
-            <Link href="https://www.accessexperts.com.au/">
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.excelexperts.com.au/"
+            >
+              Microsoft Excel
+            </Link>
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.accessexperts.com.au/"
+            >
               Microsoft Access
             </Link>
-            <Link href="https://www.wordexperts.com.au/">Microsoft Word</Link>
+            <Link
+              rel="nofollow noopener noreferrer"
+              href="https://www.wordexperts.com.au/"
+            >
+              Microsoft Word
+            </Link>
             <Link href="/services/microsoft-powerpoint">
               Microsoft PowerPoint
             </Link>

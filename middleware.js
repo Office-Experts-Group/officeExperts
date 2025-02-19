@@ -29,22 +29,53 @@ export function middleware(request) {
 
   const response = NextResponse.next();
 
+  // Special handling for payment page - allow iframe embedding and sensors
+  if (normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")) {
+    response.headers.set("X-Frame-Options", "SAMEORIGIN");
+
+    // Add permissions policy to allow necessary features for payment processing
+    // The asterisk (*) allows all origins for these features
+    response.headers.set(
+      "Permissions-Policy",
+      "accelerometer=*, gyroscope=*, magnetometer=*, payment=*, interest-cohort=(), camera=(), microphone=(), geolocation=()"
+    );
+  } else {
+    response.headers.set("X-Frame-Options", "DENY");
+    // Default restrictive permissions policy for other pages
+    response.headers.set(
+      "Permissions-Policy",
+      "accelerometer=(), gyroscope=(), magnetometer=(), payment=self, interest-cohort=(), camera=(), microphone=(), geolocation=()"
+    );
+  }
+
   // Security headers
   response.headers.set("X-Content-Type-Options", "nosniff");
-  response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-XSS-Protection", "1; mode=block");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-  response.headers.set(
-    "Content-Security-Policy",
-    "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com; " +
-      "style-src 'self' 'unsafe-inline'; " +
-      "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com; " +
-      "font-src 'self'; " +
-      "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
-      "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au;"
-  );
+
+  // Modified CSP with special handling for payment page
+  const cspValue =
+    normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")
+      ? // More permissive CSP for payment page
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.simplify.com api.simplify.com; " +
+        "style-src 'self' 'unsafe-inline' *.simplify.com; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.simplify.com; " +
+        "font-src 'self' *.simplify.com; " +
+        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.simplify.com; " +
+        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.simplify.com api.simplify.com;"
+      : // Standard CSP for other pages
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com; " +
+        "style-src 'self' 'unsafe-inline'; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com; " +
+        "font-src 'self'; " +
+        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
+        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au;";
+
+  response.headers.set("Content-Security-Policy", cspValue);
 
   // Handle Next.js system paths
   if (
