@@ -9,35 +9,40 @@ export const metadata = {
   keywords: [
     // Core integration services
     "SQL Server integration",
-    // "Office SQL integration",
-    // "database integration Australia",
-    // "SQL Server consultants",
-    // "database integration services",
-
-    // // Application specific
-    // "Excel SQL integration",
-    // "Access SQL integration",
-    // "Word SQL integration",
-    // "Visual Studio SQL integration",
-    // "Office database connectivity",
-
-    // // Solution specific
-    // "automated data extraction",
-    // "SQL reporting solutions",
-    // "database interface development",
-    // "SQL Server automation",
-    // "custom SQL integration",
-
-    // // Technical terms
-    // "SQL data extraction",
-    // "database connectivity",
-    // "automated SQL reporting",
-    // "SQL Server development",
-    // "database interface design",
   ],
+
   alternates: {
     canonical:
       "/services/by-business-solution/office-and-sql-server-integration",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Office and SQL Server Integration | Office Experts Group",
+    description:
+      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
+    url: "https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Office and SQL Server Integration | Office Experts Group",
+    description:
+      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
+    images: ["/logo.png"],
   },
 };
 

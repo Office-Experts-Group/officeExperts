@@ -8,34 +8,39 @@ export const metadata = {
   keywords: [
     // Core service keywords
     "online access database solutions",
-    // "cloud access database",
-    // "access online solutions",
-    // "microsoft access cloud",
-    // "sharepoint access integration",
-
-    // // Feature-specific
-    // "access office 365 integration",
-    // "access mobile solutions",
-    // "access cloud storage",
-    // "access database hosting",
-    // "access remote database",
-
-    // // Solution-specific
-    // "access ipad solutions",
-    // "access iphone compatibility",
-    // "access cloud migration",
-    // "access database conversion",
-    // "access web integration",
-
-    // // Business focus
-    // "business database solutions",
-    // "enterprise access solutions",
-    // "corporate database systems",
-    // "access cost effective solutions",
-    // "cloud database management",
   ],
+
   alternates: {
     canonical: "https://www.accessexperts.com.au/access-online",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Online Access Database Solutions | Office Experts Group",
+    description:
+      "Innovative online Microsoft Access database solutions with cloud integration, including Office 365 and SharePoint compatibility. Cost-effective development with comprehensive mobile support.",
+    url: "https://www.accessexperts.com.au/access-online",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Online Access Database Solutions | Office Experts Group",
+    description:
+      "Innovative online Microsoft Access database solutions with cloud integration, including Office 365 and SharePoint compatibility. Cost-effective development with comprehensive mobile support.",
+    images: ["/logo.png"],
   },
 };
 

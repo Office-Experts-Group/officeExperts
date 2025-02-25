@@ -9,34 +9,39 @@ export const metadata = {
   keywords: [
     // Core service keywords
     "Excel custom design and development",
-    // "Excel design services",
-    // "Excel VBA development",
-    // "Excel programming services",
-    // "Excel integration solutions",
-
-    // // Feature-specific
-    // "custom Excel workbooks",
-    // "Excel template development",
-    // "Excel data manipulation",
-    // "Excel reporting solutions",
-    // "Excel macro development",
-
-    // // Integration-focused
-    // "Excel third party integration",
-    // "Excel SQL integration",
-    // "Excel Azure integration",
-    // "Excel Office integration",
-    // "Excel database connection",
-
-    // // Business solutions
-    // "Excel business automation",
-    // "Excel process automation",
-    // "Excel workflow solutions",
-    // "Excel business solutions",
-    // "Excel efficiency tools",
   ],
+
   alternates: {
     canonical: "https://www.excelexperts.com.au/custom-design-and-development",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Excel Custom Design and Development | Office Experts Group",
+    description:
+      "Professional Excel custom design and development services across Australia. Specialising in custom workbooks, VBA development, and Excel integration solutions.",
+    url: "https://www.excelexperts.com.au/custom-design-and-development",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Excel Custom Design and Development | Office Experts Group",
+    description:
+      "Professional Excel custom design and development services across Australia. Specialising in custom workbooks, VBA development, and Excel integration solutions.",
+    images: ["/logo.png"],
   },
 };
 

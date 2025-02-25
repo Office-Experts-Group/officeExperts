@@ -12,6 +12,17 @@ export const metadata = {
     description:
       "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata
@@ -19,8 +30,19 @@ export const metadata = {
     // Core form services
     "Word fill inform designers",
   ],
+
   alternates: {
     canonical: "https://www.wordexperts.com.au/fill-in-forms",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Word Fill In Forms & Form Design Services | Office Experts Group",
+    description:
+      "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
+    images: ["/logo.png"],
   },
 };
 

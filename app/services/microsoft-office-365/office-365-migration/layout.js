@@ -9,39 +9,39 @@ export const metadata = {
   keywords: [
     // Core migration services
     "Office 365 migration services",
-    // "email migration Office 365",
-    // "Office 365 data migration",
-    // "Office 365 upgrade services",
-    // "Office 365 transition",
-
-    // // Location-based
-    // "Office 365 migration Sydney",
-    // "Office 365 migration Melbourne",
-    // "Office 365 migration Brisbane",
-    // "Office 365 migration Perth",
-
-    // // Service-specific long tail
-    // "Exchange to Office 365 migration",
-    // "Gmail to Office 365 migration",
-    // "OneDrive migration services",
-    // "Office 365 email transfer",
-    // "business Office 365 migration",
-
-    // // Technical specifics
-    // "zero downtime migration",
-    // "data loss prevention migration",
-    // "secure Office 365 migration",
-    // "Exchange migration specialist",
-
-    // // Migration combinations
-    // "email and file migration",
-    // "complete Office 365 transition",
-    // "business email migration",
-    // "corporate Office 365 setup",
   ],
 
   alternates: {
     canonical: "/services/microsoft-office-365/office-365-migration",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Office 365 Migration | Office Experts Group",
+    description:
+      "Professional Office 365 migration services with no downtime or data loss. Expert migration of emails, files, and systems to Office 365.",
+    url: "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-migration",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Office 365 Migration | Office Experts Group",
+    description:
+      "Professional Office 365 migration services with no downtime or data loss. Expert migration of emails, files, and systems to Office 365.",
+    images: ["/logo.png"],
   },
 };
 

@@ -6,44 +6,39 @@ export const metadata = {
   description:
     "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
 
-  keywords: [
-    "Microsoft Access database migration",
-    // Core database services
-    // "Microsoft Access consulting",
-    // "Access database development",
-    // "database solutions Australia",
-    // "custom database development",
+  keywords: ["Microsoft Access database migration"],
 
-    // // Specific solutions
-    // "Access cloud solutions",
-    // "Azure database integration",
-    // "Access database upgrade",
-    // "database conversion services",
-    // "Access online solutions",
-
-    // // Service-specific long tail
-    // "Access data management solutions",
-    // "Access multi-user databases",
-    // "Access reporting solutions",
-    // "database structuring services",
-    // "Access query optimization",
-
-    // // Integration focused
-    // "Access SQL integration",
-    // "SharePoint database integration",
-    // "third party database integration",
-    // "Access Azure migration",
-    // "database cloud solutions",
-
-    // // Support and maintenance
-    // "Access database support",
-    // "database maintenance services",
-    // "Access troubleshooting",
-    // "database repair services",
-    // "Access database training",
-  ],
   alternates: {
     canonical: "https://www.accessexperts.com.au",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Microsoft Access Services | Office Experts Group",
+    description:
+      "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
+    url: "https://www.accessexperts.com.au/services/microsoft-access",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Microsoft Access Services | Office Experts Group",
+    description:
+      "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
+    images: ["/logo.png"],
   },
 };
 

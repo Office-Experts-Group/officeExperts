@@ -6,37 +6,39 @@ export const metadata = {
   description:
     "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
 
-  keywords: [
-    "VBA programming",
-    // Core VBA services
-    // "VBA macro development",
-    // "Office VBA solutions",
-    // "macro automation",
-    // "VBA consultants Australia",
+  keywords: ["VBA programming"],
 
-    // // Product-specific
-    // "Excel VBA development",
-    // "Access VBA programming",
-    // "Word VBA solutions",
-    // "Outlook VBA macros",
-    // "PowerPoint VBA automation",
-
-    // // Service-specific
-    // "custom macro development",
-    // "VBA code optimization",
-    // "macro troubleshooting",
-    // "VBA debugging services",
-    // "macro conversion services",
-
-    // // Business solutions
-    // "business process automation",
-    // "workflow automation",
-    // "data processing macros",
-    // "VBA add-in development",
-    // "form automation VBA",
-  ],
   alternates: {
     canonical: "/services/by-business-solution/vba-macro-development",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "VBA Macro Development | Office Experts Group",
+    description:
+      "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
+    url: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "VBA Macro Development | Office Experts Group",
+    description:
+      "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
+    images: ["/logo.png"],
   },
 };
 

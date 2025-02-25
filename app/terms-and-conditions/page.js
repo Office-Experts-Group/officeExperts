@@ -538,7 +538,7 @@ export default function TermsAndConditionsPage() {
           11.1 (Privacy): Office Experts Group is bound by the privacy
           principles contained under the Privacy Act 1988 (Cth). Office Experts
           Group's privacy policy is available at its website{" "}
-          <Link href="http://www.officeexperts.com.au">
+          <Link href="https://www.officeexperts.com.au">
             www.officeexperts.com.au
           </Link>
           . You must ensure that any personal information you give us is given

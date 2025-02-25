@@ -12,6 +12,17 @@ export const metadata = {
     description:
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata
@@ -19,30 +30,6 @@ export const metadata = {
     // Location-specific
     "Canberra Word experts",
     "Canberra PowerPoint experts",
-    // "Microsoft Office consultants Canberra",
-    // "document design Canberra",
-    // "presentation design Canberra",
-
-    // // Service-specific
-    // "Word template design",
-    // "PowerPoint presentation services",
-    // "document automation",
-    // "corporate templates",
-    // "accessibility solutions",
-
-    // // Industry-specific
-    // "government document solutions",
-    // "corporate presentation design",
-    // "business document templates",
-    // "professional PowerPoint design",
-    // "document consulting services",
-
-    // // Technology combinations
-    // "Microsoft Word solutions",
-    // "PowerPoint automation",
-    // "Office 365 integration",
-    // "document accessibility",
-    // "template development",
   ],
 
   // Twitter Card
@@ -54,6 +41,7 @@ export const metadata = {
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     images: ["/logo.png"],
   },
+
   alternates: {
     canonical: "/word-and-powerpoint-experts-canberra",
   },

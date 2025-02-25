@@ -10,33 +10,39 @@ export const metadata = {
   keywords: [
     // Core Add-in services
     "Microsoft Office add-in developers",
-    // "VSTO add-in creation",
-    // "Custom Office add-ins",
-    // "Microsoft Office add-ins",
-    // "Office extension development",
-
-    // // Location-based
-    // "Add-in developers Australia",
-    // "VSTO developers Sydney",
-    // "Office add-in services Melbourne",
-    // "Add-in creation Brisbane",
-
-    // // Service-specific long tail
-    // "Excel VSTO add-in development",
-    // "Word add-in creation",
-    // "PowerPoint add-in solutions",
-    // "Outlook add-in programming",
-    // "Office automation add-ins",
-
-    // // Technology combinations
-    // "Visual Studio add-in development",
-    // "Office 365 add-in integration",
-    // "SharePoint add-in creation",
-    // "Enterprise Office add-ins",
-    // "Commercial Office add-ins",
   ],
+
   alternates: {
     canonical: "/services/by-business-solution/add-in-creation",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Add-in Creation | Office Experts Group",
+    description:
+      "Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
+    url: "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Add-in Creation | Office Experts Group",
+    description:
+      "Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
+    images: ["/logo.png"],
   },
 };
 

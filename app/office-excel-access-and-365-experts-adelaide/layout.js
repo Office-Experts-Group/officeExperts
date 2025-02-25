@@ -12,6 +12,17 @@ export const metadata = {
     description:
       "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions. Expert development, integration and support.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-adelaide",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata

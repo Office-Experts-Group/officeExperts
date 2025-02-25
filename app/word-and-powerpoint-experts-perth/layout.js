@@ -10,24 +10,22 @@ export const metadata = {
     description:
       "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   keywords: [
     "Microsoft PowerPoint designers Perth",
     "Microsoft Word designers Perth",
-    // "Word presentation templates Perth",
-    // "PowerPoint customisation Perth",
-    // "Microsoft Office consultants Perth",
-    // "Document design services Perth",
-    // "PowerPoint automation Perth",
-    // "Word template solutions Perth",
-    // "Microsoft Office Perth",
-    // "Professional presentations Perth",
-    // "Document automation Perth",
-    // "Corporate templates Perth",
-    // "Business documents Perth",
-    // "PowerPoint experts Perth",
-    // "Word consultants Perth",
   ],
   alternates: {
     canonical: "/word-and-powerpoint-experts-perth",

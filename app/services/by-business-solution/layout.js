@@ -14,38 +14,23 @@ export const metadata = {
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata
   keywords: [
     // Core business solutions
     "microsoft office business solutions",
-    // "custom office development",
-    // "vba macro development",
-    // "database solutions australia",
-    // "office integration services",
-    // "sql server integration",
-
-    // // Service-specific
-    // "office automation solutions",
-    // "custom add-in development",
-    // "cloud based office solutions",
-    // "office upgrade services",
-    // "office migration services",
-
-    // // Location-based
-    // "office solutions sydney",
-    // "office development melbourne",
-    // "office consultants brisbane",
-    // "office experts perth",
-
-    // // Technology combinations
-    // "office azure integration",
-    // "office sql development",
-    // "office cloud migration",
-    // "office 365 solutions",
-    // "sharepoint integration",
-    // "office automation systems",
   ],
 
   // Twitter Card

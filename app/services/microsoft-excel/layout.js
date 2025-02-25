@@ -10,32 +10,39 @@ export const metadata = {
     // Core Excel services
     "Excel consulting services",
     "Excel programmers Australia",
-    // "Excel VBA development",
-    // "Excel automation solutions",
-
-    // // Feature specific
-    // "Excel dashboard development",
-    // "Excel data manipulation",
-    // "Excel formula experts",
-    // "Excel pivot table solutions",
-    // "Excel charting services",
-
-    // // Integration focused
-    // "Excel database integration",
-    // "Excel SharePoint connection",
-    // "Excel API integration",
-    // "Excel cloud solutions",
-    // "Excel SQL integration",
-
-    // // Business solutions
-    // "Excel business automation",
-    // "Excel reporting solutions",
-    // "Excel analytics tools",
-    // "Excel financial modeling",
-    // "Excel data analysis",
   ],
+
   alternates: {
     canonical: "https://www.excelexperts.com.au",
+  },
+
+  // OpenGraph
+  openGraph: {
+    title: "Microsoft Excel Consulting | Office Experts Group",
+    description:
+      "Our Microsoft Excel programming services can enhance your productivity. Contact our expert Excel specialists to help your business excel.",
+    url: "https://www.excelexperts.com.au",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Microsoft Excel Consulting | Office Experts Group",
+    description:
+      "Our Microsoft Excel programming services can enhance your productivity. Contact our expert Excel specialists to help your business excel.",
+    images: ["/logo.png"],
   },
 };
 

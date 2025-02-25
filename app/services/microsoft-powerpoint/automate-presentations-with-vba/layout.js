@@ -16,6 +16,37 @@ export const metadata = {
   alternates: {
     canonical: "/services/microsoft-powerpoint/automate-presentations-with-vba",
   },
+
+  // OpenGraph
+  openGraph: {
+    title:
+      "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
+    description:
+      "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
+    url: "https://powerplatformexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title:
+      "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
+    description:
+      "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -12,6 +12,17 @@ export const metadata = {
     description:
       "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata
@@ -19,33 +30,20 @@ export const metadata = {
     // Core services
     "Microsoft Word experts Richmond",
     "PowerPoint consultants Richmond",
-    // "document design Richmond",
-    // "presentation design Richmond",
-    // "Word template design Richmond",
-    // "PowerPoint template design Richmond",
-
-    // // Service specific
-    // "Word automation Richmond",
-    // "PowerPoint automation Richmond",
-    // "document solutions Richmond",
-    // "presentation solutions Richmond",
-    // "Word document design Richmond",
-    // "PowerPoint slide design Richmond",
-
-    // // Business focused
-    // "business document solutions Richmond",
-    // "corporate presentation design Richmond",
-    // "business template design Richmond",
-    // "professional document services Richmond",
-
-    // // Integration/Technical
-    // "Word integration Richmond",
-    // "PowerPoint integration Richmond",
-    // "Office automation Richmond",
-    // "document workflow Richmond",
   ],
+
   alternates: {
     canonical: "/word-and-powerpoint-experts-richmond",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Word and PowerPoint Experts Richmond | Office Experts Group",
+    description:
+      "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
+    images: ["/logo.png"],
   },
 };
 
