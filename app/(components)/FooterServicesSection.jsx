@@ -148,13 +148,11 @@ const FooterServicesSection = () => {
             <Link href="/services/by-business-solution/online-solutions">
               Microsoft SharePoint
             </Link>
-            <Link href="/services/by-product-and-technology/microsoft-dot-net">
-              Microsoft .NET
-            </Link>
+            <Link href="/services/microsoft-dot-net">Microsoft .NET</Link>
             <Link href="/services/by-business-solution/custom-office-solutions">
               Microsoft Outlook
             </Link>
-            <Link href="/services/by-product-and-technology/microsoft-publisher">
+            <Link href="/services/microsoft-publisher">
               Microsoft Publisher
             </Link>
           </div>

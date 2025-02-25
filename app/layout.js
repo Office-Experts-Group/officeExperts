@@ -6,6 +6,7 @@ import { EB_Garamond } from "next/font/google";
 
 import HeadTop from "../components/HeadTop";
 import Header from "./(components)/Header";
+import AhrefsAnalytics from "../components/AhrefsAnalytics";
 
 const CookieConsent = dynamic(() => import("../components/CookieConsent"), {
   ssr: false, // Client-side only
@@ -147,6 +148,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-AU">
       <body className={`${aptos.variable} ${garamond.variable}`}>
+        <AhrefsAnalytics />
         <HeadTop />
         <Header />
         {children}
