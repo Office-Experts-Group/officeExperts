@@ -12,8 +12,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+    canonical: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

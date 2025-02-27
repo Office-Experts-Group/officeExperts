@@ -32,7 +32,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/corporate-identity",
+    canonical: "/services/microsoft-word/corporate-identity",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/corporate-identity",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

@@ -25,8 +25,10 @@ const PageSegment4 = () => {
               Add-in files created in Excel are workbooks saved with an add-in
               file extension. In Excel 2007 and above, the ribbon or toolbar can
               be customised and buttons added to run{" "}
-              <Link href="/vba-macro-developmentVBA macros">VBA macros</Link>.
-              VBA add-in files are copied into Excel's add-in or start up
+              <Link href="/services/microsoft-excel/vba-macro-development">
+                VBA macros
+              </Link>
+              . VBA add-in files are copied into Excel's add-in or start up
               directories on each user's PC. Those add-in files are
               automatically loaded each time Excel starts up and the VBA macros
               contained within are available to all workbooks.

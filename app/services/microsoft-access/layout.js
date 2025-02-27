@@ -9,7 +9,13 @@ export const metadata = {
   keywords: ["Microsoft Access database migration"],
 
   alternates: {
-    canonical: "https://www.accessexperts.com.au",
+    canonical: "/services/microsoft-access",
+    alternate: [
+      {
+        url: "https://www.accessexperts.com.au",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

@@ -12,7 +12,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.accessexperts.com.au/upgrades-and-migration",
+    canonical: "/services/microsoft-access/upgrades-and-migration",
+    alternate: [
+      {
+        url: "https://www.accessexperts.com.au/upgrades-and-migration",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

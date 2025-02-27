@@ -13,8 +13,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.accessexperts.com.au/is-access-right-for-your-company",
+    canonical: "/services/microsoft-access/is-access-right-for-your-company",
+    alternate: [
+      {
+        url: "https://www.accessexperts.com.au/is-access-right-for-your-company",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

@@ -29,7 +29,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/government-departments",
+    canonical: "/services/microsoft-word/government-departments",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/government-departments",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

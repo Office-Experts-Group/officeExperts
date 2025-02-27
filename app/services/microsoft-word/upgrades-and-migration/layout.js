@@ -30,14 +30,20 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/upgrades-and-migration",
+    canonical: "/services/microsoft-word/upgrades-and-migration",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/upgrades-and-migration",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word Fill In Forms & Form Design Services | Office Experts Group",
+    title: "Word Upgrades and Migration Services | Office Experts Group",
     description:
       "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
     images: ["/logo.png"],

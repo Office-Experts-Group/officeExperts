@@ -11,7 +11,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/data-manipulation",
+    canonical: "/services/microsoft-excel/data-manipulation",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/data-manipulation",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

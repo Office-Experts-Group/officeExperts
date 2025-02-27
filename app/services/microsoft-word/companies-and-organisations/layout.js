@@ -10,7 +10,13 @@ export const metadata = {
   keywords: ["word template designers"],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/companies-and-organisations",
+    canonical: "/services/microsoft-word/companies-and-organisations",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/companies-and-organisations",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

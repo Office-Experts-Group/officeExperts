@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Online Solutions",
-      link: "/access-support",
+      link: "/services/microsoft-access/access-support",
       image: project2,
       description: [
         "Do you want your documents, spreadsheets and databases online?",

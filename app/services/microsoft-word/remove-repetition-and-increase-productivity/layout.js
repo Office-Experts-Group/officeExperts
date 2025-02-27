@@ -35,7 +35,13 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
+      "/services/microsoft-word/remove-repetition-and-increase-productivity",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

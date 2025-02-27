@@ -19,7 +19,7 @@ export const metadata = {
     title: "PowerPoint Presentation Redesign Services | Office Experts Group",
     description:
       "Professional PowerPoint presentation redesign services. Transform existing presentations into high-quality templates with master slides and brand guidelines.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-powerpoint/existing-presentation-redesign",
+    url: "https://officeexperts.com.au/services/microsoft-powerpoint/existing-presentation-redesign",
     siteName: "Office Experts Group",
     images: [
       {

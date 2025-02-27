@@ -33,7 +33,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/quick-parts",
+    canonical: "/services/microsoft-word/quick-parts",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/quick-parts",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

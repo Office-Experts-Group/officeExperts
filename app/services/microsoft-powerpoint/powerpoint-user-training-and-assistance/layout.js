@@ -22,7 +22,7 @@ export const metadata = {
     title: "PowerPoint Training | PowerPoint Assistance | Office Experts Group",
     description:
       "Expert PowerPoint training and assistance services. Get professional guidance on creating effective presentations with our PowerPoint specialists.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    url: "https://officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
     siteName: "Office Experts Group",
     images: [
       {

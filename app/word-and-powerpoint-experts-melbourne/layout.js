@@ -11,7 +11,7 @@ export const metadata = {
     title: "Word and PowerPoint Experts Melbourne | Office Experts Group",
     description:
       "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
-    url: "https://www.wordexperts.com.au/word-and-powerpoint-experts-melbourne",
+    url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-melbourne",
     siteName: "Office Experts Group",
     images: [
       {

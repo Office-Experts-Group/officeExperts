@@ -13,8 +13,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+    canonical: "/services/microsoft-access/access-azure-cloud-based-solutions",
+    alternate: [
+      {
+        url: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

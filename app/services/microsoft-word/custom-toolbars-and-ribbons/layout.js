@@ -33,7 +33,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+    canonical: "/services/microsoft-word/custom-toolbars-and-ribbons",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

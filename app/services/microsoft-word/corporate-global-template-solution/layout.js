@@ -31,8 +31,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.wordexperts.com.au/corporate-global-template-solution",
+    canonical: "/services/microsoft-word/corporate-global-template-solution",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/corporate-global-template-solution",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

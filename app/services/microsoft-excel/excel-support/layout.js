@@ -13,7 +13,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/excel-support",
+    canonical: "/services/microsoft-excel/excel-support",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/excel-support",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

@@ -12,7 +12,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/custom-design-and-development",
+    canonical: "/services/microsoft-excel/custom-design-and-development",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/custom-design-and-development",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

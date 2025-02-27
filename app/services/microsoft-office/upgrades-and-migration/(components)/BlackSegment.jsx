@@ -68,7 +68,7 @@ const BlackSegment = () => {
               on a commercial database such as SQL Server.{" "}
               <Link
                 href={
-                  "services/by-business-solution/database-development-and-solutions"
+                  "/services/by-business-solution/database-development-and-solutions"
                 }
               >
                 Click here

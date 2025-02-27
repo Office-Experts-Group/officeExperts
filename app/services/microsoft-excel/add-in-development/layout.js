@@ -7,7 +7,13 @@ export const metadata = {
   keywords: ["Excel add-in deployment"],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/add-in-development",
+    canonical: "/services/microsoft-excel/add-in-development",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/add-in-development",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

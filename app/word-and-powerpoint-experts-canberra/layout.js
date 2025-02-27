@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Word and PowerPoint Experts Canberra | Office Experts Group",
+  title: "Word and PowerPoint Consultants Canberra | Office Experts Group",
   description:
     "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Word and PowerPoint Experts Canberra | Office Experts Group",
+    title: "Word and PowerPoint Consultants Canberra | Office Experts Group",
     description:
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",

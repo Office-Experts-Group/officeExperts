@@ -20,7 +20,7 @@ export const metadata = {
     title: "VBScript Support | Office Experts Group",
     description:
       "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-vbscript",
+    url: "https://officeexperts.com.au/services/microsoft-vbscript",
     siteName: "Office Experts Group",
     images: [
       {

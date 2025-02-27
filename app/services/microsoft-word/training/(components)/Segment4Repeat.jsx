@@ -12,11 +12,11 @@ const Segment4Repeat = () => {
   const benefits = [
     {
       text: "Templates",
-      link: "/word-document-template-creation",
+      link: "/services/microsoft-word/word-document-template-creation",
     },
     {
       text: "Corporate styles",
-      link: "/corporate-global-template-solution",
+      link: "/services/microsoft-word/corporate-global-template-solution",
     },
     {
       text: "Help and training",
@@ -24,7 +24,7 @@ const Segment4Repeat = () => {
     },
     {
       text: "Corporate identity",
-      link: "/corporate-identity",
+      link: "/services/microsoft-word/corporate-identity",
     },
     {
       text: "Custom coding",
@@ -36,7 +36,7 @@ const Segment4Repeat = () => {
     },
     {
       text: "Accessibility",
-      link: "/accessibility",
+      link: "/services/microsoft-word/accessibility",
     },
     {
       text: "Online documents",

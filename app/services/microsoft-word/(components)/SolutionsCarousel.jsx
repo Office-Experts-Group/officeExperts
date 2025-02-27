@@ -21,7 +21,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Corporate Identity",
-      link: "/corporate-identity",
+      link: "/services/microsoft-word/corporate-identity",
       image: keyboard,
       alt: "keyboard",
       description: [
@@ -45,7 +45,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Government Departments",
-      link: "/government-departments",
+      link: "/services/microsoft-word/government-departments",
       image: dashboard,
       alt: "dashboard design",
       description: [
@@ -57,7 +57,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Companies and Organisations",
-      link: "/companies-and-organisations",
+      link: "/services/microsoft-word/companies-and-organisations",
       image: graph,
       alt: "graph",
       description: [
@@ -68,7 +68,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Remove Repetition and Increase Productivity",
-      link: "/remove-repetition-and-increase-productivity",
+      link: "/services/microsoft-word/remove-repetition-and-increase-productivity",
       image: automation,
       alt: "automation",
       description: [
@@ -79,7 +79,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Popup Forms",
-      link: "/popup-forms",
+      link: "/services/microsoft-word/popup-forms",
       image: magnify,
       alt: "magnifying glass over graphs",
       description: [
@@ -88,7 +88,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Fill In Forms",
-      link: "/fill-in-forms",
+      link: "/services/microsoft-word/fill-in-forms",
       image: code,
       alt: "code on a screen",
       description: [
@@ -99,7 +99,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrading Word To 2016",
-      link: "/upgrades-and-migration",
+      link: "/services/microsoft-word/upgrades-and-migration",
       image: hands,
       alt: "hands",
       description: [
@@ -121,7 +121,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Convert Adobe To Word",
-      link: "/word-template-conversions",
+      link: "/services/microsoft-word/word-template-conversions",
       image: laptop,
       alt: "laptop",
       description: [
@@ -130,7 +130,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Custom Toolbars and Ribbons",
-      link: "/custom-toolbars-and-ribbons",
+      link: "/services/microsoft-word/custom-toolbars-and-ribbons",
       image: graph2,
       alt: "graph",
       description: [
@@ -140,7 +140,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Help and Training",
-      link: "/training",
+      link: "/services/microsoft-word/training",
       image: desk,
       alt: "desk in an office",
       description: [

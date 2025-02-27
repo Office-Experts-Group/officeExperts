@@ -29,7 +29,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/training",
+    canonical: "/services/microsoft-word/training",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/training",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

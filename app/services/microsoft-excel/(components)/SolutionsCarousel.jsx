@@ -17,7 +17,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Help and Training",
-      link: "/excel-support",
+      link: "/services/microsoft-excel/excel-support",
       image: keyboard,
       alt: "computer keyboard",
       description: [
@@ -28,7 +28,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Data Manipulation",
-      link: "/data-manipulation",
+      link: "/services/microsoft-excel/data-manipulation",
       image: coder,
       alt: "coder",
       description: [
@@ -73,7 +73,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Charting & Pivot Tables",
-      link: "/pivot-tables-charts-and-reporting-solutions",
+      link: "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
       image: magnify,
       alt: "magnifying glass",
       description: [
@@ -84,7 +84,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrades and Migration",
-      link: "/upgrades-and-migration",
+      link: "/services/microsoft-excel/upgrades-and-migration",
       image: code,
       alt: "code",
       description: [

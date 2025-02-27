@@ -9,9 +9,15 @@ export const metadata = {
     // Core automation services
     "Microsoft Power Automate developers",
   ],
+
   alternates: {
-    canonical:
-      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    canonical: "/services/microsoft-power-platform/microsoft-power-automate",
+    alternate: [
+      {
+        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

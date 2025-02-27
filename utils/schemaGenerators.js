@@ -1,23 +1,24 @@
 // utils/schemaGenerators.js
 export const generateProfessionalServiceSchema = () => ({
   "@type": "ProfessionalService",
-  "@id": `https://www.officeexperts.com.au#business`,
+  "@id": "https://www.officeexperts.com.au#business",
   name: "Microsoft Office Consulting Services",
   url: "https://www.officeexperts.com.au",
   description: "Professional Microsoft Office consulting and support services",
   priceRange: "$$",
-  serviceType: "Microsoft Office Consulting",
-  availableService: [
+  offers: [
     {
-      "@type": "Service",
+      "@type": "Offer",
       name: "Remote Consulting",
       description: "Australia-wide remote Microsoft Office consulting services",
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
     },
     {
-      "@type": "Service",
+      "@type": "Offer",
       name: "On-site Consulting",
       description:
         "In-house Microsoft Office consulting services available in major metropolitan areas",
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
     },
   ],
   areaServed: [
@@ -249,13 +250,9 @@ export const generateProfessionalServiceSchema = () => ({
       },
     },
   ],
-  virtualLocation: {
-    "@type": "VirtualLocation",
-    name: "Remote Service Available Australia-wide",
-  },
   provider: {
     "@type": "Organization",
-    "@id": `https://www.officeexperts.com.au#organization`,
+    "@id": "https://www.officeexperts.com.au#organization",
   },
   telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
@@ -277,323 +274,361 @@ export const generateOrganizationSchema = () => ({
       email: "consult@officeexperts.com.au",
       availableLanguage: ["en", "en-AU"],
       contactOption: "TollFree",
-      hoursAvailable: "Mo,Tu,We,Th,Fr 09:00-17:00",
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
     },
   ],
   // Remote service availability
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Microsoft Office Consulting Services",
-    itemListElement: [
-      // Excel Experts (excelexperts.com.au)
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Add-in Development",
-          description:
-            "Custom Excel add-in development for enhanced spreadsheet functionality",
-        },
+  makesOffer: [
+    // Excel Experts (excelexperts.com.au)
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Add-in Development",
+        description:
+          "Custom Excel add-in development for enhanced spreadsheet functionality",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Data Manipulation",
-          description:
-            "Professional data cleaning, transformation, and analysis services",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Data Manipulation",
+        description:
+          "Professional data cleaning, transformation, and analysis services",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Pivot Tables & Reporting",
-          description:
-            "Advanced pivot table creation and custom reporting solutions",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Pivot Tables & Reporting",
+        description:
+          "Advanced pivot table creation and custom reporting solutions",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Excel Support",
-          description:
-            "Ongoing technical support and maintenance for Excel solutions",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Excel Support",
+        description:
+          "Ongoing technical support and maintenance for Excel solutions",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Development",
-          description: "Tailored Excel solution design and implementation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Custom Development",
+        description: "Tailored Excel solution design and implementation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Formula Development",
-          description: "Complex Excel formula creation and optimisation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Formula Development",
+        description: "Complex Excel formula creation and optimisation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Upgrades & Migration",
-          description: "Excel version upgrades and workbook migration services",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Upgrades & Migration",
+        description: "Excel version upgrades and workbook migration services",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "VBA Macro Development",
-          description: "Custom VBA macro programming for Excel automation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "VBA Macro Development",
+        description: "Custom VBA macro programming for Excel automation",
       },
-      // Access Experts (accessexperts.com.au)
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Azure Cloud Integration",
-          description: "Access database integration with Azure cloud services",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    // Access Experts (accessexperts.com.au)
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Azure Cloud Integration",
+        description: "Access database integration with Azure cloud services",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Online Access Solutions",
-          description: "Web-enabled Microsoft Access application development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Online Access Solutions",
+        description: "Web-enabled Microsoft Access application development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Third-party Integration",
-          description:
-            "Integration of Access with external systems and applications",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Third-party Integration",
+        description:
+          "Integration of Access with external systems and applications",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Technical Support",
-          description: "Comprehensive Access database support and maintenance",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Technical Support",
+        description: "Comprehensive Access database support and maintenance",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Database Migration",
-          description: "Access database upgrades and data migration services",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Database Migration",
+        description: "Access database upgrades and data migration services",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Solutions",
-          description: "Bespoke Access database design and development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Custom Solutions",
+        description: "Bespoke Access database design and development",
       },
-      // Word Experts (wordexperts.com.au)
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Template Creation",
-          description: "Professional Word document template development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    // Word Experts (wordexperts.com.au)
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Template Creation",
+        description: "Professional Word document template development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Template Conversion",
-          description: "Legacy template modernisation and conversion services",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Template Conversion",
+        description: "Legacy template modernisation and conversion services",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Accessibility Solutions",
-          description: "WCAG compliance and accessibility implementation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Accessibility Solutions",
+        description: "WCAG compliance and accessibility implementation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom UI Development",
-          description: "Customised toolbar and ribbon interface development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Custom UI Development",
+        description: "Customised toolbar and ribbon interface development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Training Services",
-          description: "Specialised Microsoft Word training programs",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Training Services",
+        description: "Specialised Microsoft Word training programs",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Form Development",
-          description: "Interactive form creation and automation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Form Development",
+        description: "Interactive form creation and automation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Government Solutions",
-          description:
-            "Specialised documentation solutions for government departments",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Government Solutions",
+        description:
+          "Specialised documentation solutions for government departments",
       },
-      // Power Platform Experts (powerplatformexperts.com.au)
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Power BI Solutions",
-          description: "Custom dashboard development and data visualisation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    // Power Platform Experts (powerplatformexperts.com.au)
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power BI Solutions",
+        description: "Custom dashboard development and data visualisation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Power Apps Development",
-          description: "Custom business application development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power Apps Development",
+        description: "Custom business application development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Power Automate",
-          description: "Workflow automation and business process optimization",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power Automate",
+        description: "Workflow automation and business process optimization",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Power Pages",
-          description: "External-facing website development and portals",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power Pages",
+        description: "External-facing website development and portals",
       },
-      // Office Experts (officeexperts.com.au)
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Office 365 Migration",
-          description: "Complete Office 365 migration and implementation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    // Office Experts (officeexperts.com.au)
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Office 365 Migration",
+        description: "Complete Office 365 migration and implementation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Development",
-          description: "Tailored Microsoft Office solution development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Custom Development",
+        description: "Tailored Microsoft Office solution development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Process Automation",
-          description: "Office-wide business process automation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Process Automation",
+        description: "Office-wide business process automation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Cloud Solutions",
-          description: "OneDrive and SharePoint implementation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Cloud Solutions",
+        description: "OneDrive and SharePoint implementation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Exchange Setup",
-          description: "Exchange Online configuration and management",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Exchange Setup",
+        description: "Exchange Online configuration and management",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Remote Solutions",
-          description: "Cross-device data access and management",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Remote Solutions",
+        description: "Cross-device data access and management",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Managed Services",
-          description: "Comprehensive Office 365 support and maintenance",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Managed Services",
+        description: "Comprehensive Office 365 support and maintenance",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Excel Services",
-          description: "Advanced Excel development and support",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Excel Services",
+        description: "Advanced Excel development and support",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Access Solutions",
-          description: "Database development and maintenance",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Access Solutions",
+        description: "Database development and maintenance",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Word Services",
-          description: "Document automation and template development",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Word Services",
+        description: "Document automation and template development",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "PowerPoint Services",
-          description: "Presentation design and automation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "PowerPoint Services",
+        description: "Presentation design and automation",
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Power Platform Integration",
-          description: "Business intelligence and process automation",
-        },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power Platform Integration",
+        description: "Business intelligence and process automation",
       },
-    ],
-  },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+  ],
   location: [
     // New South Wales
     {
@@ -785,10 +820,6 @@ export const generateOrganizationSchema = () => ({
       },
     },
   ],
-  virtualLocation: {
-    "@type": "VirtualLocation",
-    name: "Remote Service Available Australia-wide",
-  },
   logo: {
     "@type": "ImageObject",
     inLanguage: "en-AU",

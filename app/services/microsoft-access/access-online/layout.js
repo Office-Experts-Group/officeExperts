@@ -11,7 +11,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.accessexperts.com.au/access-online",
+    canonical: "/services/microsoft-access/access-online",
+    alternate: [
+      {
+        url: "https://www.accessexperts.com.au/access-online",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

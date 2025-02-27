@@ -22,7 +22,7 @@ const Promo = ({ h2, p }) => {
             <p style={{ marginBottom: "1rem" }}>
               Our consultants can cloud enable your existing database by
               migrating part of your database to{" "}
-              <Link href="/access-azure-cloud-based-solutions">
+              <Link href="/services/microsoft-access/access-azure-cloud-based-solutions">
                 Microsoft Azure
               </Link>
               . Then your data will be{" "}

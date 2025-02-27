@@ -19,11 +19,11 @@ const PageSegmentCenter = () => {
     { text: "Troubleshoot Existing Solutions" },
     {
       text: "Upgrades and Migration",
-      href: "/upgrades-and-migration",
+      href: "/services/microsoft-excel/upgrades-and-migration",
     },
     {
       text: "Data Conversions",
-      href: "/data-manipulation",
+      href: "/services/microsoft-excel/data-manipulation",
     },
     { text: "Documentation of Existing Solutions" },
   ];

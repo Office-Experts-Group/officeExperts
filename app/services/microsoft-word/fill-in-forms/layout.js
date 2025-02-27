@@ -32,7 +32,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/fill-in-forms",
+    canonical: "/services/microsoft-word/fill-in-forms",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/fill-in-forms",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

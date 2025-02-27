@@ -20,7 +20,7 @@ export const metadata = {
     title: "PowerPoint Consulting Services | Office Experts Group",
     description:
       "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-powerpoint",
+    url: "https://officeexperts.com.au/services/microsoft-powerpoint",
     siteName: "Office Experts Group",
     images: [
       {

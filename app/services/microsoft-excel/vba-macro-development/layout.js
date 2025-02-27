@@ -12,7 +12,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/vba-macro-development",
+    canonical: "/services/microsoft-excel/vba-macro-development",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/vba-macro-development",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

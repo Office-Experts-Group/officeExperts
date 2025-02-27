@@ -14,8 +14,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+    canonical: "/services/microsoft-power-platform/microsoft-power-pages",
+    alternate: [
+      {
+        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

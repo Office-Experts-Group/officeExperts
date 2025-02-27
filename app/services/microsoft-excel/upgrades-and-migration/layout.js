@@ -8,7 +8,13 @@ export const metadata = {
   keywords: ["Excel migration services", "Excel upgrade solutions"],
 
   alternates: {
-    canonical: "https://www.excelexperts.com.au/excel-upgrades-and-migration",
+    canonical: "/services/microsoft-excel/upgrades-and-migration",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/upgrades-and-migration",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

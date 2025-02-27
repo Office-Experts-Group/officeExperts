@@ -13,7 +13,13 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+      "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
+    alternate: [
+      {
+        url: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph

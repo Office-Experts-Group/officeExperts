@@ -29,7 +29,13 @@ export const metadata = {
   keywords: ["Word popup form development"],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/popup-forms",
+    canonical: "/services/microsoft-word/popup-forms",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/popup-forms",
+        type: "alternate",
+      },
+    ],
   },
 
   // Twitter Card

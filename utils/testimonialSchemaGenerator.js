@@ -18,14 +18,13 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
     "@type": "Review",
     "@id": generateTestimonialId(domain, page, index),
     itemReviewed: {
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "@id": `${domain}#business`,
       name: `Microsoft ${serviceName} Consulting Services`,
       provider: {
         "@type": "Organization",
         "@id": `${domain}#organization`,
       },
-      serviceType: `Microsoft ${serviceName} Consulting`,
       description: `Professional Microsoft ${serviceName} consulting and support services`,
       areaServed: [
         {
@@ -66,12 +65,12 @@ const generateTestimonialSchema = (testimonial, domain, page, index) => {
         },
       ],
       priceRange: "$$",
-      // Remove specific address and add availableService instead
-      availableService: {
-        "@type": "Service",
+      offers: {
+        "@type": "Offer",
         name: "Remote Consulting",
         description:
           "Australia-wide remote Microsoft Office consulting services",
+        businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
       },
     },
     reviewRating: {
@@ -99,7 +98,7 @@ const generateAggregateSchema = (testimonials, domain) => {
     "@type": "AggregateRating",
     "@id": `${domain}#aggregateRating`,
     itemReviewed: {
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "@id": `${domain}/#business`,
       name: "Office Experts Group",
       priceRange: "$$",
@@ -141,11 +140,12 @@ const generateAggregateSchema = (testimonials, domain) => {
           name: "Northern Territory",
         },
       ],
-      availableService: {
-        "@type": "Service",
+      offers: {
+        "@type": "Offer",
         name: "Remote Consulting",
         description:
           "Australia-wide remote Microsoft Office consulting services",
+        businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
       },
     },
     ratingValue: "5",

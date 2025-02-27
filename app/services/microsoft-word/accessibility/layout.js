@@ -12,7 +12,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.wordexperts.com.au/accessibility",
+    canonical: "/services/microsoft-word/accessibility",
+    alternate: [
+      {
+        url: "https://www.wordexperts.com.au/accessibility",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph
