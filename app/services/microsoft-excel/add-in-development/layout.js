@@ -21,7 +21,7 @@ export const metadata = {
     title: "Microsoft Excel Add-in Development | Office Experts Group",
     description:
       "Expert Excel add-in development services for extending Excel functionality. Specialising in VBA and VSTO add-ins to automate tasks and enhance Excel capabilities.",
-    url: "https://www.excelexperts.com.au/add-in-development",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/add-in-development",
     siteName: "Office Experts Group",
     images: [
       {

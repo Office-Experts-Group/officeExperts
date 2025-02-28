@@ -5,10 +5,22 @@ export function middleware(request) {
   const path = request.nextUrl.pathname;
   const normalizedPath = path.toLowerCase();
 
-  // Handle static media files - prevent URL indexing while preserving image discovery
-  if (path.includes("/_next/static/media/")) {
+  // Enhanced handling for Next.js static media and system paths
+  if (
+    path.includes("/_next/static/media/") ||
+    path.includes("/_next/static/chunks/") ||
+    path.includes("/_next/static/css/") ||
+    path.includes("/_next/static/images/") ||
+    path.includes("/_next/image") ||
+    path.includes("/_next/data/")
+  ) {
     const response = NextResponse.next();
-    response.headers.set("X-Robots-Tag", "noimageindex, noindex");
+    // Strong directives to prevent crawling and indexing
+    response.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
+    response.headers.set(
+      "Cache-Control",
+      "public, max-age=31536000, immutable"
+    );
     return response;
   }
 
@@ -58,32 +70,24 @@ export function middleware(request) {
     normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")
       ? // More permissive CSP for payment page
         "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.simplify.com api.simplify.com; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com; " +
         "style-src 'self' 'unsafe-inline' *.simplify.com; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.simplify.com; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.simplify.com *.ahrefs.com; " +
         "font-src 'self' *.simplify.com; " +
         "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.simplify.com; " +
         "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.simplify.com api.simplify.com;"
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com;"
       : // Standard CSP for other pages
         "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
         "style-src 'self' 'unsafe-inline'; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
         "font-src 'self'; " +
         "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
         "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au;";
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
 
   response.headers.set("Content-Security-Policy", cspValue);
-
-  // Handle Next.js system paths
-  if (
-    request.nextUrl.pathname.startsWith("/_next/") &&
-    !request.nextUrl.pathname.startsWith("/_next/image")
-  ) {
-    response.headers.set("X-Robots-Tag", "noindex, nofollow");
-  }
 
   return response;
 }
@@ -91,7 +95,8 @@ export function middleware(request) {
 export const config = {
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-    "/_next/static/media/:path*",
-    "/_next/image",
+    "/_next/static/:path*",
+    "/_next/image/:path*",
+    "/_next/data/:path*",
   ],
 };

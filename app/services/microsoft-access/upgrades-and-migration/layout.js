@@ -26,7 +26,7 @@ export const metadata = {
     title: "Access Upgrades and Migration | Office Experts Group",
     description:
       "Extensive experience in Microsoft Access database upgrades and migrations to ensure smooth transitions, mitigate compatibility risks, and resolve database issues.",
-    url: "https://www.accessexperts.com.au/upgrades-and-migration",
+    url: "https://www.officeexperts.com.au/services/microsoft-access/upgrades-and-migration",
     siteName: "Office Experts Group",
     images: [
       {

@@ -27,7 +27,7 @@ export const metadata = {
     title: "Microsoft Excel Consulting | Office Experts Group",
     description:
       "Our Microsoft Excel programming services can enhance your productivity. Contact our expert Excel specialists to help your business excel.",
-    url: "https://www.excelexperts.com.au",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel",
     siteName: "Office Experts Group",
     images: [
       {

@@ -21,7 +21,7 @@ export const metadata = {
     title: "Microsoft Publisher Services | Office Experts Group",
     description:
       "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
-    url: "https://officeexperts.com.au/services/microsoft-publisher",
+    url: "https://www.officeexperts.com.au/services/microsoft-publisher",
     siteName: "Office Experts Group",
     images: [
       {

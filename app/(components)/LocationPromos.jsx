@@ -8,7 +8,7 @@ const LocationPromos = ({ location }) => {
       <Promo
         h2={`Microsoft Excel Consulting – ${location}`}
         p={`Our expert Microsoft Excel programmers at Excel Experts ${location} are the very best when it comes to custom Excel development, databases, integration, understanding your business needs, support, data manipulation and so much more.`}
-        link={"https://excelexperts.com.au"}
+        link={"https://www.excelexperts.com.au"}
         linkText={"Excel Experts"}
         isLocation={true}
       />

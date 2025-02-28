@@ -16,7 +16,7 @@ const SegmentMainCopy = () => {
             <p>VBA Programming</p>
           </div>
         </Link>
-        <Link href="https://excelexperts.com.au">
+        <Link href="https://www.excelexperts.com.au">
           <div className={styles.contentLink}>
             <p>Microsoft Excel</p>
           </div>

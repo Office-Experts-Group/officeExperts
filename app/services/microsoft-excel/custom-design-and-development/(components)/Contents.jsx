@@ -53,7 +53,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="https://excelexperts.com.au/vba-macro-development"
+            href="https://www.excelexperts.com.au/vba-macro-development"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>
@@ -69,7 +69,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="https://excelexperts.com.au/data-manipulation"
+            href="https://www.excelexperts.com.au/data-manipulation"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>
@@ -93,7 +93,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="https://excelexperts.com.au/add-in-development"
+            href="https://www.excelexperts.com.au/add-in-development"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>

@@ -17,7 +17,7 @@ export const metadata = {
     canonical: "/services/microsoft-power-platform/microsoft-power-pages",
     alternate: [
       {
-        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
         type: "alternate",
       },
     ],
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Microsoft Power Pages Consulting | Office Experts Group",
     description:
       "If Microsoft Power Pages is right for your business, our certified experts can rapidly build websites that deliver crucial information and services to your customers.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+    url: "https://wwww.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
     siteName: "Office Experts Group",
     images: [
       {

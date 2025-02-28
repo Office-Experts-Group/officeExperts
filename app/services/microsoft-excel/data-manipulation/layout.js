@@ -25,7 +25,7 @@ export const metadata = {
     title: "Data Manipulation | Office Experts Group",
     description:
       "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
-    url: "https://www.excelexperts.com.au/data-manipulation",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/data-manipulation",
     siteName: "Office Experts Group",
     images: [
       {

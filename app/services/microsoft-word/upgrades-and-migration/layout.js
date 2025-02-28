@@ -21,6 +21,8 @@ export const metadata = {
         alt: "Office Experts Group Logo",
       },
     ],
+    locale: "en-AU",
+    type: "website",
   },
 
   // Additional metadata

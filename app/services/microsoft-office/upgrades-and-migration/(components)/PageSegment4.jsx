@@ -28,7 +28,7 @@ const PageSegment4 = () => {
           <div className={styles.btns}>
             <AnimateOnScroll animation="slide-left" duration={1} delay={0.4}>
               <Link
-                href={"https://excelexperts.com.au"}
+                href={"https://www.excelexperts.com.au"}
                 className={`"btn" ${styles.btnLink}`}
               >
                 Excel

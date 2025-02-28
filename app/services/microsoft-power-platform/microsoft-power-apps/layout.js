@@ -16,7 +16,7 @@ export const metadata = {
     canonical: "/services/microsoft-power-platform/microsoft-power-apps",
     alternate: [
       {
-        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
         type: "alternate",
       },
     ],
@@ -27,7 +27,7 @@ export const metadata = {
     title: "Microsoft Power Apps Services Australia | Office Experts Group",
     description:
       "Our certified experts develop custom business apps for mobile and web, using Microsoft Power Apps canvas and model-driven solutions. Competitive pricing and minimal coding approach.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    url: "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
     siteName: "Office Experts Group",
     images: [
       {

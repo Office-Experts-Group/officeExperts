@@ -26,7 +26,7 @@ export const metadata = {
     title: "VBA Macro Developers | Office Experts Group",
     description:
       "All Microsoft Office products including Excel, Access, Word, Outlook, PowerPoint and Office 365 come with a built-in macro language called VBA. Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
-    url: "https://www.excelexperts.com.au/vba-macro-development",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/vba-macro-development",
     siteName: "Office Experts Group",
     images: [
       {

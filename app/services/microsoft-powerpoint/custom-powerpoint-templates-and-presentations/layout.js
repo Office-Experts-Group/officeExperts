@@ -17,7 +17,7 @@ export const metadata = {
       "Custom PowerPoint Templates and Presentations | Office Experts Group",
     description:
       "Professional PowerPoint template design services with Master Slides that meet your brand guidelines and maintain consistency across corporate presentations.",
-    url: "https://officeexperts.com.au/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
+    url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
     siteName: "Office Experts Group",
     images: [
       {

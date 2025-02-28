@@ -28,7 +28,7 @@ export const metadata = {
       "Pivot Tables | Charts and Reporting Solutions | Office Experts Group",
     description:
       "Expert Microsoft Excel pivot table, charting and reporting solutions. Get professional help with creating pivot tables, charts, and customised reporting solutions.",
-    url: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
     siteName: "Office Experts Group",
     images: [
       {

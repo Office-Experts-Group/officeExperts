@@ -9,7 +9,7 @@ export const metadata = {
     title: "Microsoft Word Training | Office Experts Group",
     description:
       "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
-    url: "https://www.wordexperts.com.au/services/microsoft-word/training",
+    url: "https://www.officeexperts.com.au/services/microsoft-word/training",
     siteName: "Office Experts Group",
     images: [
       {

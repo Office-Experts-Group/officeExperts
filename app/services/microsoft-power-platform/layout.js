@@ -14,7 +14,7 @@ export const metadata = {
     canonical: "/services/microsoft-power-platform",
     alternate: [
       {
-        url: "https://powerplatformexperts.com.au",
+        url: "https://www.powerplatformexperts.com.au",
         type: "alternate",
       },
     ],
@@ -25,7 +25,7 @@ export const metadata = {
     title: "Microsoft Power Platform Services | Office Experts Group",
     description:
       "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-power-platform",
+    url: "https://www.officeexperts.com.au/services/microsoft-power-platform",
     siteName: "Office Experts Group",
     images: [
       {

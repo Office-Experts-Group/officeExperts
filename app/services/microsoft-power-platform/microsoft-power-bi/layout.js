@@ -15,7 +15,7 @@ export const metadata = {
     canonical: "/services/microsoft-power-platform/microsoft-power-bi",
     alternate: [
       {
-        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
         type: "alternate",
       },
     ],
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Microsoft Power BI Services | Office Experts Group",
     description:
       "We build reports and dashboards which connect your Power BI services to your financial and accounting systems, databases, Azure services and spreadsheets.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    url: "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
     siteName: "Office Experts Group",
     images: [
       {

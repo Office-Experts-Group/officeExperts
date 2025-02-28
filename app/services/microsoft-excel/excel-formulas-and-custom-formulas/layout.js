@@ -26,7 +26,7 @@ export const metadata = {
     title: "Excel Formulas and Custom Formulas | Office Experts Group",
     description:
       "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
-    url: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas",
     siteName: "Office Experts Group",
     images: [
       {

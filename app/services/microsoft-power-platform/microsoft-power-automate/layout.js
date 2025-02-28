@@ -14,7 +14,7 @@ export const metadata = {
     canonical: "/services/microsoft-power-platform/microsoft-power-automate",
     alternate: [
       {
-        url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
         type: "alternate",
       },
     ],
@@ -25,7 +25,7 @@ export const metadata = {
     title: "Our Microsoft Power Automate Services | Office Experts Group",
     description:
       "Whether your automation needs are simple or complex, our certified experts can mix and match the components of Microsoft Power Automate to deliver competitively priced solutions to meet your business needs.",
-    url: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    url: "https://wwww.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
     siteName: "Office Experts Group",
     images: [
       {

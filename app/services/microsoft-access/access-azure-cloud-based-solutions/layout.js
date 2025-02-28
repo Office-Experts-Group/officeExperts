@@ -27,7 +27,7 @@ export const metadata = {
     title: "Azure Cloud Access Solution | Office Experts Group",
     description:
       "Microsoft Azure cloud hosting solutions for Access databases. Host your data securely in the cloud and access it from anywhere with our custom built Access databases and cloud integration services.",
-    url: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+    url: "https://www.officeexperts.com.au/services/microsoft-access/access-azure-cloud-based-solutions",
     siteName: "Office Experts Group",
     images: [
       {

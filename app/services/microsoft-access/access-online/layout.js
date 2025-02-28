@@ -25,7 +25,7 @@ export const metadata = {
     title: "Online Access Database Solutions | Office Experts Group",
     description:
       "Innovative online Microsoft Access database solutions with cloud integration, including Office 365 and SharePoint compatibility. Cost-effective development with comprehensive mobile support.",
-    url: "https://www.accessexperts.com.au/access-online",
+    url: "https://www.officeexperts.com.au/services/microsoft-access/access-online",
     siteName: "Office Experts Group",
     images: [
       {

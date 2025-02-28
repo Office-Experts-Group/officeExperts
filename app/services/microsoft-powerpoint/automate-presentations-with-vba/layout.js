@@ -23,7 +23,7 @@ export const metadata = {
       "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
     description:
       "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
-    url: "https://officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
+    url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
     siteName: "Office Experts Group",
     images: [
       {

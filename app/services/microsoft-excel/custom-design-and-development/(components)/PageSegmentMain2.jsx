@@ -28,7 +28,7 @@ const PageSegmentMain2 = () => {
             <p>Integration with Office products</p>
           </div>
         </Link>
-        <Link href="https://excelexperts.com.au/vba-macro-development">
+        <Link href="https://www.excelexperts.com.au/vba-macro-development">
           <div className={styles.contentLink}>
             <p>VBA Macro Development</p>
           </div>
@@ -38,7 +38,7 @@ const PageSegmentMain2 = () => {
             <p>Integration with 3rd Party Apps</p>
           </div>
         </Link>
-        <Link href="https://excelexperts.com.au/data-manipulation">
+        <Link href="https://www.excelexperts.com.au/data-manipulation">
           <div className={styles.contentLink}>
             <p>Data Manipulation/Conversion</p>
           </div>
@@ -53,7 +53,7 @@ const PageSegmentMain2 = () => {
             <p>Custom Workbooks and Templates</p>
           </div>
         </Link>
-        <Link href="https://excelexperts.com.au/add-in-development">
+        <Link href="https://www.excelexperts.com.au/add-in-development">
           <div className={styles.contentLink}>
             <p>Add-in Development</p>
           </div>

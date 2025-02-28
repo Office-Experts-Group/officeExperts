@@ -23,7 +23,7 @@ export const metadata = {
     title: "Microsoft Access Services | Office Experts Group",
     description:
       "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
-    url: "https://www.accessexperts.com.au/services/microsoft-access",
+    url: "https://www.officeexperts.com.au/services/microsoft-access",
     siteName: "Office Experts Group",
     images: [
       {
