@@ -25,7 +25,7 @@ const LocationPages = ({ location }) => {
       <div className={styles.contentWrapper}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
-            <p>Microsoft Office consultants</p>
+            <p>Microsoft Office Experts</p>
             <h2>Our {location} Support Team</h2>
             <p>
               At Office Experts Group, we provide innovative, high-performance

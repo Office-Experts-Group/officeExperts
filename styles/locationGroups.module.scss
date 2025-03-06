@@ -1,0 +1,154 @@
+@import "./globals.scss";
+
+.remoteIntro {
+  padding: 4rem 0;
+  p {
+    line-height: 1.4;
+  }
+}
+
+.locationSection {
+  padding: 4rem 0;
+  background-color: $background;
+
+  &:nth-child(odd) {
+    background-color: $offWhite;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: $theme;
+  margin-bottom: 2.5rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 4rem;
+    height: 4px;
+    background-color: $theme;
+  }
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.locationCard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+
+.locationImage {
+  object-fit: cover;
+}
+
+.locationName {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1.5rem 1rem;
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.locationContent {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.locationDescription {
+  color: $darkGrayText;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.serviceLinks {
+  margin-top: auto;
+
+  h4 {
+    color: $black;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 0.75rem;
+}
+
+.serviceLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background-color: $grayBGC;
+  border-radius: 0.25rem;
+  color: $body;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $theme;
+    color: white;
+
+    .linkIcon {
+      stroke: white;
+    }
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.linkIcon {
+  width: 16px;
+  height: 16px;
+  stroke: $theme;
+  fill: none;
+  transition: stroke 0.3s ease;
+}

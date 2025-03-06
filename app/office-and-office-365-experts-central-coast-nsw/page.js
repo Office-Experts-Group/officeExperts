@@ -8,8 +8,8 @@ import ServicesLocation from "../(components)/ServicesLocation";
 import Promo from "../../components/Promo";
 import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
-import northernRivers from "../../public/pageHeros/northernRivers.webp";
-import northernRiversMob from "../../public/pageHeros/mob/northernRiversMob.webp";
+import centralCoast from "../../public/pageHeros/melbourne.webp";
+import centralCoastMob from "../../public/pageHeros/mob/melbourneMob.webp";
 
 import { getHomePageSchema } from "../../utils/testimonialSchemaGenerator";
 import {
@@ -27,12 +27,13 @@ const schema = {
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
     ...getHomePageSchema(testimonials, "office")["@graph"],
+
     {
       "@type": "WebPage",
       "@id":
-        "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
-      url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
-      name: "Office, Excel, Access and 365 Experts - Northern Rivers, NSW",
+        "https://www.officeexperts.com.au/office-and-office-365-experts-central-coast-nsw",
+      url: "https://www.officeexperts.com.au/office-and-office-365-experts-central-coast-nsw",
+      name: "Office and Office 365 Experts - Central Coast, NSW",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -40,14 +41,14 @@ const schema = {
       dateModified: "2024-10-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw#breadcrumb",
+          "https://www.officeexperts.com.au/office-and-office-365-experts-central-coast-nsw#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
+            "https://www.officeexperts.com.au/office-and-office-365-experts-central-coast-nsw",
           ],
         },
       ],
@@ -55,7 +56,7 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw#breadcrumb",
+        "https://www.officeexperts.com.au/office-and-office-365-experts-central-coast-nsw#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -66,7 +67,7 @@ const schema = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Office, Excel, Access and 365 Experts - Northern Rivers, NSW",
+          name: "Office and Office 365 Experts - Central Coast, NSW",
         },
       ],
     },
@@ -74,7 +75,7 @@ const schema = {
 };
 
 const Page = () => {
-  const location = "Northern Rivers, NSW";
+  const location = "Central Coast, NSW";
 
   return (
     <>
@@ -83,13 +84,13 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title={`Office and Office 365 Consultants ${location}`}
-        desktopImage={northernRivers}
-        mobileImage={northernRiversMob}
-        altDesk="Northern Rivers NSW"
-        altMob="Northern Rivers NSW"
+        title={`Microsoft Office Consultants ${location}`}
+        desktopImage={centralCoast}
+        mobileImage={centralCoastMob}
+        altDesk="Central Coast, NSW"
+        altMob="Central Coast, NSW"
       />
-      <LocationSummary location={location} service="Microsoft Office" />
+      <LocationSummary location={location} service={"Microsoft Office"} />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
       <ServicesLocation location={location} />

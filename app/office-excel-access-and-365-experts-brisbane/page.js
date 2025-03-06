@@ -83,13 +83,13 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title={`Office 365 Support ${location}`}
+        title={`Microsoft Office Support ${location}`}
         desktopImage={brisbane}
         mobileImage={brisbaneMob}
         altDesk="Brisbane"
         altMob="Brisbane"
       />
-      <LocationSummary location={location} service={"Office 365"} />
+      <LocationSummary location={location} service={"Microsoft Office"} />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
       <ServicesLocation location={location} />

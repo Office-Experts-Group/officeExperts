@@ -13,11 +13,12 @@ const LocationSummary = ({ location, service }) => {
       </div>
 
       <p>
-        Our {service} support provides local businesses with expert technical
-        assistance, troubleshooting and ongoing maintenance for Microsoft's
-        cloud-based productivity suite. Our {location}-based team offers
-        responsive support, migration services, and user training to help your
-        business maximise its {service} investment and solve problems quickly.
+        Our {service} expertise provides {location} businesses with professional
+        consulting, development, and support services tailored to your specific
+        needs. Our local team of Microsoft-certified specialists offers custom
+        solutions, troubleshooting assistance, and comprehensive training to
+        help your organisation leverage the full power of Microsoft
+        technologies.
       </p>
     </div>
   );

@@ -11,16 +11,22 @@ import GoodToKnow from "../about-us/(components)/GoodToKnow";
 import richmond from "../../public/pageHeros/richmond.webp";
 import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
 
+import { getHomePageSchema } from "../../utils/testimonialSchemaGenerator";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../utils/schemaGenerators";
+import { testimonials } from "../../testimonials";
+
+import LocationSummary from "../(components)/LocationSummary";
+import Testimonials from "../(components)/Testimonials";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    ...getHomePageSchema(testimonials, "office")["@graph"],
     {
       "@type": "WebPage",
       "@id":
@@ -77,12 +83,13 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title={`Office and Office 365 Consultants ${location}`}
+        title={`Microsoft Office Consultants ${location}`}
         desktopImage={richmond}
         mobileImage={richmondMob}
         altDesk="Richmond"
         altMob="Richmond"
       />
+      <LocationSummary location={location} service={"Microsoft Office"} />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
       <ServicesLocation location={location} />
@@ -93,6 +100,7 @@ const Page = () => {
         }
       />
       <GoodToKnow />
+      <Testimonials testimonials={testimonials} />
       <ContactLocationSegment location={location} />
     </>
   );

@@ -11,16 +11,22 @@ import GoodToKnow from "../about-us/(components)/GoodToKnow";
 import wollongong from "../../public/pageHeros/wollongong.webp";
 import wollongongMob from "../../public/pageHeros/mob/wollongongMob.webp";
 
+import { getHomePageSchema } from "../../utils/testimonialSchemaGenerator";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../utils/schemaGenerators";
+import { testimonials } from "../../testimonials";
+
+import LocationSummary from "../(components)/LocationSummary";
+import Testimonials from "../(components)/Testimonials";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    ...getHomePageSchema(testimonials, "office")["@graph"],
     {
       "@type": "WebPage",
       "@id":
@@ -83,6 +89,7 @@ const Page = () => {
         altDesk="Wollongong"
         altMob="Wollongong"
       />
+      <LocationSummary location={location} service="Microsoft Office" />
       <LocationPages location={location} />
       <CTAMainProps location={location} />
       <ServicesLocation location={location} />
@@ -93,6 +100,7 @@ const Page = () => {
         }
       />
       <GoodToKnow />
+      <Testimonials testimonials={testimonials} />
       <ContactLocationSegment location={location} />
     </>
   );

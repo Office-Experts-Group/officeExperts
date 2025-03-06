@@ -65,7 +65,9 @@ export default function FooterLocationsSection() {
 
   return (
     <div className={styles.locationsSection}>
-      <h3>Our Locations</h3>
+      <Link href="/locations">
+        <h3>Our Locations</h3>
+      </Link>
       <p className={styles.remoteAccess}>Australia-wide via remote access</p>
 
       <div className={styles.statesGrid}>
