@@ -26,17 +26,16 @@ const WhyChooseUs = () => {
           <p>
             We provide high quality solutions and offer personalised customer
             service. It is our objective to exceed your expectations and be
-            acknowledged as your own personal
-            <Link href={"/services/microsoft-office"}>
-              Microsoft Office
-            </Link>, <Link href={"/services"}>Microsoft technologies</Link> and{" "}
+            acknowledged as your own personal{" "}
+            <Link href={"/services/microsoft-office"}>Microsoft Office</Link>,
+            Microsoft{" "}
             <Link
               href={
                 "/services/by-business-solution/3rd-party-application-or-office-integration"
               }
             >
-              integration
-            </Link>
+              technologies and integration
+            </Link>{" "}
             experts.
           </p>
         </div>

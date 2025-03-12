@@ -1,12 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title: "Word and PowerPoint Experts Sydney | Office Experts Group",
+  title: "Word and PowerPoint Experts Sydney",
   description:
     "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
 
   openGraph: {
-    title: "Word and PowerPoint Experts Sydney | Office Experts Group",
+    title: "Word and PowerPoint Experts Sydney",
     description:
       "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney",
@@ -37,7 +37,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Canberra | Office Experts Group",
+    title: "Word and PowerPoint Experts Canberra",
     description:
       "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     images: ["/logo.png"],

@@ -11,7 +11,8 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.accessexperts.com.au/3rd-party-product-integration",
+    canonical:
+      "https://www.accessexperts.com.au/services/microsoft-access/3rd-party-product-integration",
   },
 
   // OpenGraph

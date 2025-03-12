@@ -13,7 +13,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Power Apps",
-      link: "/services/microsoft-power-platform/microsoft-power-apps",
+      link: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
       image: magnify,
       alt: "magnifying glass on graph",
       description: [
@@ -24,7 +24,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Power Automate",
-      link: "/services/microsoft-access",
+      link: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
       image: handShake,
       alt: "handshake",
       description: [
@@ -35,7 +35,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Power BI",
-      link: "/services/microsoft-power-platform/microsoft-power-bi",
+      link: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
       image: graph,
       alt: "graph",
       description: [
@@ -47,7 +47,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Power Pages",
-      link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+      link: "https://powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
       image: desk,
       alt: "desk in an office",
       description: [

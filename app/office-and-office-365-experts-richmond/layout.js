@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Office and Office 365 Experts Richmond | Office Experts Group",
+  title: "Office and Office 365 Experts Richmond",
   description:
     "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
 
   // OpenGraph
   openGraph: {
-    title: "Office and Office 365 Experts Richmond | Office Experts Group",
+    title: "Office and Office 365 Experts Richmond",
     description:
       "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",

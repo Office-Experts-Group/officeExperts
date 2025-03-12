@@ -6,6 +6,7 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import styles from "../../../../../styles/pageSegment4.module.css";
 
 import programmer from "../../../../../public/programmer600x400.webp";
+import Link from "next/link";
 
 const PageSegment8 = () => {
   return (
@@ -16,10 +17,14 @@ const PageSegment8 = () => {
             <h2>We Build Custom Solutions!</h2>
           </div>
           <p>
-            Our designers can help create custom Word documents and PowerPoint
-            presentations to suit your company needs and to protect your
-            corporate identity. They can also convert InDesign files into Word
-            documents so you get a fully functional, matching file in Word.
+            Our designers can help create custom Word documents and{" "}
+            <Link href="/services/microsoft-powerpoint">
+              {" "}
+              PowerPoint presentations
+            </Link>{" "}
+            to suit your company needs and to protect your corporate identity.
+            They can also convert InDesign files into Word documents so you get
+            a fully functional, matching file in Word.
           </p>
           <p>
             Our programmers can help create solutions that automate your

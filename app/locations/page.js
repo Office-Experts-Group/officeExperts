@@ -134,10 +134,10 @@ const Page = () => {
           description:
             "Our Melbourne team delivers expert Microsoft consulting services throughout the Greater Melbourne area. We specialise in custom Office development, database solutions, and business process automation using the entire Microsoft suite.",
           serviceLinks: {
-            excel: "https://www.excelexperts.com.au",
-            word: "https://www.wordexperts.com.au",
-            access: "https://www.accessexperts.com.au",
-            powerplatform: "https://www.powerplatformexperts.com.au",
+            excel: "https://www.excelexperts.com.au/contact-us",
+            word: "https://www.wordexperts.com.au/contact-us",
+            access: "https://www.accessexperts.com.au/contact-us",
+            powerplatform: "https://www.powerplatformexperts.com.au/contact-us",
             office: "/office-and-office-365-experts-melbourne",
           },
         },

@@ -23,6 +23,7 @@ import james from "./public/team/james.webp";
 import deva from "./public/team/deva.webp";
 import ganesh from "./public/team/ganesh.webp";
 import jamie from "./public/team/jamie.webp";
+import dan from "./public/team/dan.webp";
 
 export const teamMembers = [
   {
@@ -298,6 +299,12 @@ export const teamMembers = [
     role: "SENIOR WORD/POWERPOINT DESIGNER",
     skills: ["Word", "PowerPoint"],
     image: lani,
+  },
+  {
+    name: "Dan",
+    role: "WEBSITE DEVELOPER",
+    skills: ["NextJS", "Node", "WordPress", "SQL", "MongoDB", "React"],
+    image: dan,
   },
   {
     name: "Jamie",

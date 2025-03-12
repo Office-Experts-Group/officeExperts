@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Request a Quote - Office Experts Group",
+    title: "Request a Quote | Office Experts Group",
     description:
       "Request a quote for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],

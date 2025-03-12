@@ -22,7 +22,7 @@ export const metadata = {
     title: "Excel Upgrades and Migration | Office Experts Group",
     description:
       "Expert Microsoft Excel migration and upgrade services. We help resolve Excel workbook issues, optimise performance, and ensure smooth transitions between versions.",
-    url: "https://www.officeexperts.com.au/services/microsoft-excel/excel-upgrades-and-migration",
+    url: "https://www.officeexperts.com.au/services/microsoft-excel/upgrades-and-migration",
     siteName: "Office Experts Group",
     images: [
       {

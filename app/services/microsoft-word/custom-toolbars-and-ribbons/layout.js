@@ -1,14 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title:
-    "Word Toolbar Customisation | Custom Word Ribbon Design | Office Experts Group",
+  title: "Word Custom Toolbars and Ribbons | Office Experts Group",
   description:
     "Expert customisation of Microsoft Word toolbars and ribbons to improve productivity and streamline document creation. Our team delivers automated solutions for efficient business documentation.",
 
   openGraph: {
-    title:
-      "Word Toolbar Customisation | Custom Word Ribbon Design | Office Experts Group",
+    title: "Word Custom Toolbars and Ribbons | Office Experts Group",
     description:
       "Expert customisation of Microsoft Word toolbars and ribbons to improve productivity and streamline document creation. Our team delivers automated solutions for efficient business documentation.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons",
@@ -46,8 +44,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Word Toolbar Customisation | Custom Word Ribbon Design | Office Experts Group",
+    title: "Word Custom Toolbars and Ribbons | Office Experts Group",
     description:
       "Expert customisation of Microsoft Word toolbars and ribbons to improve productivity and streamline document creation. Our team delivers automated solutions for efficient business documentation.",
     images: ["/logo.png"],

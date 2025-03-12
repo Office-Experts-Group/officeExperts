@@ -46,6 +46,11 @@
     color: $darkGrayText;
     line-height: 2rem;
   }
+
+  a {
+    color: $theme;
+    font-weight: 700;
+  }
 }
 
 // FAQS ***********

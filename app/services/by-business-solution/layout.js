@@ -2,15 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Business Solutions & Office Development Services | Office Experts Group",
+  title: "Business Solutions & Office Development Services",
   description:
     "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
 
   // OpenGraph
   openGraph: {
-    title:
-      "Business Solutions & Office Development Services | Office Experts Group",
+    title: "Business Solutions & Office Development Services",
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution",
@@ -37,8 +35,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Business Solutions & Custom Office Development Services | Office Experts Group",
+    title: "Business Solutions & Custom Office Development Services",
     description:
       "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
     images: ["/logo.png"],

@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Office Consulting Services | Office Experts Group",
+  title: "Office Experts Darwin",
   description:
     "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Office Consulting Services | Office Experts Group",
+    title: "Office Experts Darwin",
     description:
       "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Office Experts Darwin | Microsoft Office Solutions",
+    title: "Office Experts Darwin",
     description:
       "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
     images: ["/logo.png"],

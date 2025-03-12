@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Office Consultants Wollongong | Office Experts Group",
+  title: "Microsoft Office Consultants Wollongong",
   description:
     "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Office Consultants Wollongong | Office Experts Group",
+    title: "Microsoft Office Consultants Wollongong",
     description:
       "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-wollongong",

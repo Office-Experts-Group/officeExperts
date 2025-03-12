@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel and Access Database Experts Sydney | Office Experts Group",
+  title: "Excel and Access Database Experts Sydney",
   description:
     "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
 
   // OpenGraph
   openGraph: {
-    title: "Excel and Access Database Experts Sydney | Office Experts Group",
+    title: "Excel and Access Database Experts Sydney",
     description:
       "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney",

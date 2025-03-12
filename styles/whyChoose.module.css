@@ -45,6 +45,10 @@
   color: #777a7e;
   line-height: 2rem;
 }
+.content a {
+  color: #046999;
+  font-weight: 700;
+}
 
 .faqContainer {
   display: flex;

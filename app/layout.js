@@ -116,7 +116,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Office Experts Group | Microsoft Office Consulting & Solutions",
+    title: "Microsoft Office Consulting & Solutions | Office Experts Group",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     images: ["/logo.png"],

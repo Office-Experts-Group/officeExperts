@@ -27,7 +27,7 @@ const PageSegmentMain = () => {
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
             <p>Need An Office Expert?</p>
-            <h2>Excel, Access, Word, PowerPoint, Outlook</h2>
+            <h2>Customise your entire Microsoft Office Suite</h2>
             <p>
               Need an expert to help you with Excel, Access, Word, Outlook or
               PowerPoint? We have designers and programmers who can create
@@ -35,11 +35,14 @@ const PageSegmentMain = () => {
               quote or work to an hourly rate. We can work remotely or onsite.
             </p>
             <p>
-              Our good reputation is based on the{" "}
-              <Link href={"/client-testimonials"}>success of our clients</Link>.
-              Let us help ensure your success!
+              Our solid reputation is based on the{" "}
+              <Link href={"/client-testimonials"}>success of our clients</Link>,
+              and over 25 years of experience in the industry.
             </p>
-            <p>Our experts are ready to talk through your requirements.</p>
+            <p>
+              Let us help ensure your success! Our experts are ready to talk
+              through your requirements.
+            </p>
           </div>
         </AnimateOnScroll>
       </div>

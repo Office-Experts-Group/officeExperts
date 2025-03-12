@@ -2,14 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Excel & Access Consultants Central Coast NSW | Office Experts Group",
+  title: "Excel & Access Consultants Central Coast NSW",
   description:
     "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimisation.",
 
   // OpenGraph
   openGraph: {
-    title:
-      "Excel & Access Consultants Central Coast NSW | Office Experts Group",
+    title: "Excel & Access Consultants Central Coast NSW",
     description:
       "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimisation.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",

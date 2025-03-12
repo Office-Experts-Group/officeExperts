@@ -1,14 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title:
-    "Office, Excel, Access and 365 Consultants Perth | Office Experts Group",
+  title: "Office, Excel, Access and 365 Consultants Perth",
   description:
     "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
 
   openGraph: {
-    title:
-      "Office, Excel, Access and 365 Consultants Perth | Office Experts Group",
+    title: "Office, Excel, Access and 365 Consultants Perth",
     description:
       "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-perth",

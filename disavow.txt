@@ -1,0 +1,7 @@
+# Disavow file for officeexperts.com.au - Created March 10, 2025
+
+# Low quality directories and link farms
+domain:panarab.org
+domain:recoverwordfile.org
+domain:seoflx.net
+domain:exlinko.net
