@@ -1,0 +1,183 @@
+.supportPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageHeader {
+  max-width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .pageHeader {
+    max-width: 90vw;
+  }
+}
+
+.leadText {
+  color: #046999;
+  font-weight: 700;
+  margin: 6rem 0 3rem 0;
+}
+@media screen and (max-width: 700px) {
+  .leadText {
+    margin: 3rem 0 1rem 0;
+  }
+}
+
+.pageSegment {
+  display: flex;
+  gap: 5vw;
+  margin: 3rem 0;
+  padding: 0 5vw;
+}
+@media screen and (max-width: 700px) {
+  .pageSegment {
+    margin: 3rem 0 1rem 0;
+  }
+}
+.pageSegment h2 {
+  margin-bottom: 2rem;
+}
+.pageSegment p {
+  color: #777a7e;
+  line-height: 1.6;
+}
+.pageSegment ul {
+  margin: 2rem 0 0 2rem;
+}
+.pageSegment li {
+  color: #777a7e;
+  line-height: 1.6;
+}
+@media screen and (max-width: 1040px) {
+  .pageSegment img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .pageSegment {
+    flex-direction: column;
+    margin: 2rem 0 -2rem 0;
+  }
+}
+
+.imgWrapper {
+  display: flex;
+}
+.imgWrapper img {
+  margin: 0 auto;
+}
+
+.lastSegment {
+  margin-bottom: 6rem;
+}
+@media screen and (max-width: 700px) {
+  .lastSegment {
+    margin: -2rem 0 2rem 0;
+  }
+}
+
+.points {
+  margin-top: 2rem;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 449px) {
+  .pointsGrid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pointsGrid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.point p {
+  color: #777a7e;
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #046999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.tick svg {
+  stroke: #046999;
+  color: #046999;
+}
+.tick:hover {
+  transition: all 0.5s ease;
+  background-color: #046999;
+}
+.tick:hover svg {
+  stroke: #f8f8f8;
+  color: #f8f8f8;
+}
+
+.checkIcon {
+  background-color: rgb(0, 193, 0);
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8f8f8;
+  margin-bottom: 0.5rem;
+}
+
+.checks {
+  margin-top: 2rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 449px) {
+  .experts {
+    margin-bottom: 2rem;
+  }
+}
+
+.conclusion {
+  max-width: 70vw;
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.conclusion h2 {
+  text-align: center;
+}
+.conclusion p {
+  color: #777a7e;
+  line-height: 1.6;
+  margin-top: 1rem;
+  text-align: center;
+}/*# sourceMappingURL=supportPage.module.css.map */
