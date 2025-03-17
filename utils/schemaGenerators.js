@@ -289,6 +289,36 @@ export const generateOrganizationSchema = () => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
+        name: "Excel Dashboard Creation",
+        description:
+          "Creation of interactive and appealing Excel dashboards to provide real-time insights in your business.",
+      },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Financial Modeling and Forecasting",
+        description:
+          "Creation of tools for financial models and forecasting using Excel for planning and strategy.",
+      },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Power Pivot & Power Query",
+        description:
+          "Development of advanced data modelling, analytics, transformations and reporting using Power Pivot & Power Query.",
+      },
+      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
         name: "Add-in Development",
         description:
           "Custom Excel add-in development for enhanced spreadsheet functionality",
@@ -319,9 +349,9 @@ export const generateOrganizationSchema = () => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Excel Support",
+        name: "Excel Support and Troubleshooting",
         description:
-          "Ongoing technical support and maintenance for Excel solutions",
+          "Ongoing technical support and troubleshooting for your Excel solutions",
       },
       businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
     },
@@ -385,8 +415,7 @@ export const generateOrganizationSchema = () => ({
       itemOffered: {
         "@type": "Service",
         name: "Third-party Integration",
-        description:
-          "Integration of Access with external systems and applications",
+        description: "Integration of Access with external systems and API's",
       },
       businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
     },
@@ -587,7 +616,7 @@ export const generateOrganizationSchema = () => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Excel Services",
+        name: "Excel Support",
         description: "Advanced Excel development and support",
       },
       businessFunction: "http://purl.org/goodrelations/v1#ProvideService",

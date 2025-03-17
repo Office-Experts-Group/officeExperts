@@ -1,0 +1,185 @@
+.hubPage {
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .hubPage {
+    padding: 1rem;
+  }
+}
+.hubPage .pageHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.hubPage .pageHeader .leadText {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 6rem 0 3rem 0;
+  color: #046999;
+}
+@media (max-width: 768px) {
+  .hubPage .pageHeader .leadText {
+    font-size: 2rem;
+  }
+}
+.hubPage .pageHeader .subText {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .hubPage .pageHeader .subText {
+    font-size: 1rem;
+  }
+}
+.hubPage .locationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  margin: 0 5vw;
+}
+@media (max-width: 1024px) {
+  .hubPage .locationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .hubPage .locationGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.hubPage .locationCard {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: white;
+  text-decoration: none;
+  height: 100%;
+}
+.hubPage .locationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.hubPage .locationCard:hover .overlay {
+  opacity: 1;
+}
+.hubPage .locationCard .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.hubPage .locationCard .imageContainer .locationImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.hubPage .locationCard .imageContainer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--primary-rgb), 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hubPage .locationCard .imageContainer .overlay span {
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+.hubPage .locationCard .cardContent {
+  padding: 1.25rem;
+}
+.hubPage .locationCard .cardContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #046999;
+}
+.hubPage .locationCard .cardContent p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.hubPage .whyChooseUs {
+  margin: 4rem 0;
+  text-align: center;
+}
+.hubPage .whyChooseUs h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #046999;
+}
+.hubPage .whyChooseUs .features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin: 0 5vw 6rem 5vw;
+}
+@media (max-width: 768px) {
+  .hubPage .whyChooseUs .features {
+    grid-template-columns: 1fr;
+  }
+}
+.hubPage .whyChooseUs .features .feature {
+  text-align: center;
+}
+.hubPage .whyChooseUs .features .feature .featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: #046999;
+}
+.hubPage .whyChooseUs .features .feature h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #046999;
+}
+.hubPage .whyChooseUs .features .feature p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.hubPage .experts {
+  margin: 2rem 0;
+}
+.hubPage .conclusion {
+  margin: 4rem 1rem;
+  padding: 2rem;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.hubPage .conclusion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #046999;
+  text-align: center;
+}
+.hubPage .conclusion p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  text-align: center;
+}
+.hubPage .conclusion p:last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=supportTrainingHub.module.css.map */
