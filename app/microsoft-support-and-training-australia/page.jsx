@@ -87,6 +87,22 @@ const schemaData = {
 // Location data for the cards
 const locationData = [
   {
+    name: "Sydney",
+    image: sydneyMob,
+    alt: "Sydney cityscape",
+    description:
+      "Comprehensive Microsoft support and training services for Australia's largest business hub, tailored to meet the unique needs of Sydney companies.",
+    url: "/microsoft-support-and-training-sydney",
+  },
+  {
+    name: "Melbourne",
+    image: melbourneMob,
+    alt: "Melbourne cityscape",
+    description:
+      "Specialised Microsoft support and customised training programs for Melbourne's diverse business community, delivered by local experts.",
+    url: "/microsoft-support-and-training-melbourne",
+  },
+  {
     name: "Adelaide",
     image: adelaideMob,
     alt: "Adelaide city view",
@@ -135,14 +151,6 @@ const locationData = [
     url: "/microsoft-support-and-training-gold-coast",
   },
   {
-    name: "Melbourne",
-    image: melbourneMob,
-    alt: "Melbourne cityscape",
-    description:
-      "Specialised Microsoft support and customised training programs for Melbourne's diverse business community, delivered by local experts.",
-    url: "/microsoft-support-and-training-melbourne",
-  },
-  {
     name: "Northern Rivers, NSW",
     image: northernRiversMob,
     alt: "Northern Rivers region",
@@ -165,14 +173,6 @@ const locationData = [
     description:
       "Specialised Microsoft support and training for Richmond businesses, with solutions tailored to local needs and priorities.",
     url: "/microsoft-support-and-training-richmond",
-  },
-  {
-    name: "Sydney",
-    image: sydneyMob,
-    alt: "Sydney cityscape",
-    description:
-      "Comprehensive Microsoft support and training services for Australia's largest business hub, tailored to meet the unique needs of Sydney companies.",
-    url: "/microsoft-support-and-training-sydney",
   },
   {
     name: "Wollongong",

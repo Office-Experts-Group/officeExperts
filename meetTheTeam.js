@@ -24,6 +24,7 @@ import deva from "./public/team/deva.webp";
 import ganesh from "./public/team/ganesh.webp";
 import jamie from "./public/team/jamie.webp";
 import dan from "./public/team/dan.webp";
+import emma from "./public/team/emma.webp";
 
 export const teamMembers = [
   {
@@ -299,6 +300,12 @@ export const teamMembers = [
     role: "SENIOR WORD/POWERPOINT DESIGNER",
     skills: ["Word", "PowerPoint"],
     image: lani,
+  },
+  {
+    name: "Emma",
+    role: "WORD/POWERPOINT DESIGNER",
+    skills: ["Word", "PowerPoint"],
+    image: emma,
   },
   {
     name: "Dan",

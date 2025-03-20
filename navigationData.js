@@ -75,6 +75,10 @@ export const navigationData = {
             label: "VBScript",
             href: `/services/microsoft-vbscript`,
           },
+          {
+            label: "Support & Training",
+            href: "/microsoft-support-and-training-australia",
+          },
         ],
       },
       {
