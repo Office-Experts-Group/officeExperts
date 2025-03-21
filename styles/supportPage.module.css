@@ -4,9 +4,13 @@
 }
 
 .pageHeader {
-  max-width: 60vw;
+  max-width: 75vw;
   margin: 0 auto;
   text-align: center;
+}
+.pageHeader h2 {
+  font-size: 1.75rem;
+  line-height: 1.5;
 }
 @media screen and (max-width: 700px) {
   .pageHeader {
@@ -108,6 +112,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 .point p {
   color: #777a7e;

@@ -80,23 +80,20 @@ const schemaData = {
 
 const PerthSupportTraining = () => {
   const supportServices = [
-    "Immediate remote troubleshooting for critical issues",
-    "Routine maintenance and system health checks",
-    "Custom solution development and debugging",
-    "Office 365 setup, migration and administration",
-    "Integration between Microsoft applications",
-    "Security and compliance implementation",
-    "Data recovery and system restoration",
+    "Immediate Remote Troubleshooting – Resolving critical Excel crashes, recovering corrupted Word documents or rectifying Access database errors.",
+    "Routine Maintenance & System Health Checks – Ensuring your applications and tools run efficiently with proactive monitoring and reviews.",
+    "Custom Solution Debugging – Fixing errors and improving functionality in custom-built Excel models, Access databases, Word documents or Power App solutions.",
+    "Office 365 Setup & Administration – Undergoing user management, updating security configurations and migrating data from legacy systems.",
+    "Microsoft Application Integration – Automating workflows between Excel, Outlook, SharePoint, Power Automate and other Microsoft products.",
+    "Security & Compliance Implementation – Protecting sensitive data with appropriate permission controls, encryption and audit tracking functionality.",
+    "Data Recovery & System Restoration – Recovering lost Excel spreadsheets, restoring Access database backups and repairing Power Automate flows.",
   ];
 
   const trainingServices = [
-    "Personalised one-on-one training sessions",
-    "Small group workshops for teams",
-    "Department-specific training modules",
-    "Executive-level advanced features training",
-    "New feature adoption training for upgrades",
-    "Custom documentation and training materials",
-    "Ongoing learning and support programs",
+    "Excel – Running through advanced formulas, Power Query automation, VBA macros, interactive dashboards and financial modelling.",
+    "Word – Efficient document formatting, automated templates, custom formatting ribbons and mail merge functionality for bulk communications.",
+    "Access – Database structuring, query optimization and migrating legacy Access applications to the cloud.",
+    "Power Platform – Creating Power Apps for internal business workflows, automating tasks with Power Automate and visualising data in Power BI.",
   ];
 
   return (
@@ -108,17 +105,21 @@ const PerthSupportTraining = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Support and Training Perth"
+          title="Microsoft Office Support & Personalised Training – Perth"
           desktopImage={perth}
           mobileImage={perthMob}
-          altDesk="Perth cityscape"
+          altDesk="Perth"
           altMob="Perth"
         />
         <section className={styles.supportPage}>
           <section className={styles.pageHeader}>
             <h2 className={styles.leadText}>
-              Professional On-site, Online or Remote Access Microsoft support
-              and Training with local Perth Experts.
+              At Office Experts Group, we specialise in expert support and
+              tailored training for all Microsoft products including Excel,
+              Word, Access and Microsoft's Power Platform. With over 25 years of
+              industry experience, we help businesses of all sizes resolve
+              issues, optimise workflows and gain deeper expertise in their
+              Microsoft tools.
             </h2>
           </section>
 
@@ -135,35 +136,44 @@ const PerthSupportTraining = () => {
             </AnimateOnScroll>
             <AnimateOnScroll animation="slide-right" duration={1} delay={0}>
               <div className={styles.contentWrapper}>
-                <h2>Microsoft Support Services</h2>
+                <h2>Expert Microsoft Support Services</h2>
                 <p>
-                  Our Perth Microsoft support team provides comprehensive
-                  technical assistance for businesses throughout Southeast
-                  Queensland. Whether you're facing challenges with Office 365
-                  or Word templates, encountering Excel formula errors, or need
-                  help troubleshooting complex Access database issues, our local
-                  Perth support team deliver prompt, expert solutions.
+                  We provide fast, reliable assistance to keep your Microsoft
+                  Office environment and tools running smoothly. We offer both
+                  on-demand troubleshooting and ongoing support, ensuring your
+                  systems remain efficient, secure and optimised for business
+                  operations. Examples of the types of services we offer
+                  include:
                 </p>
 
                 <div className={styles.points}>
-                  {supportServices.map((text, index) => (
-                    <div key={index} className={styles.point}>
-                      <div className={styles.checkIcon}>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          strokeWidth="1"
-                          viewBox="0 0 24 24"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
-                        </svg>
+                  {supportServices.map((text, index) => {
+                    const parts = text.split(" – ");
+                    const title = parts[0];
+                    const description =
+                      parts.length > 1 ? parts.slice(1).join(" – ") : "";
+
+                    return (
+                      <div key={index} className={styles.point}>
+                        <div className={styles.checkIcon}>
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth="1"
+                            viewBox="0 0 24 24"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                          </svg>
+                        </div>
+                        <p>
+                          <strong>{title}</strong> – {description}
+                        </p>
                       </div>
-                      <p>{text}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </AnimateOnScroll>
@@ -179,34 +189,44 @@ const PerthSupportTraining = () => {
           <section className={`${styles.pageSegment} ${styles.lastSegment}`}>
             <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
               <div className={styles.contentWrapper}>
-                <h2>Professional Microsoft Training</h2>
+                <h2>Personalised Training for Your Business Needs</h2>
                 <p>
-                  Our customised Microsoft training programs help Perth
-                  businesses maximise productivity with their Microsoft software
-                  investments. We deliver tailored training sessions designed
-                  for your specific business needs, conducted on-site at your
-                  Perth location or via remote sessions.
+                  Our customised Microsoft is targeted and hands-on, designed to
+                  help you or your team master specific tools and solutions. We
+                  provide practical, real-world sessions tailored to your
+                  business needs. Our sessions can be delivered one-on-one or in
+                  small teams, focusing on solving real challenges and enhancing
+                  efficiency with the right Microsoft tools.
                 </p>
 
                 <div className={styles.points}>
-                  {trainingServices.map((text, index) => (
-                    <div key={index} className={styles.point}>
-                      <div className={styles.checkIcon}>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          strokeWidth="1"
-                          viewBox="0 0 24 24"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
-                        </svg>
+                  {trainingServices.map((text, index) => {
+                    const parts = text.split(" – ");
+                    const title = parts[0];
+                    const description =
+                      parts.length > 1 ? parts.slice(1).join(" – ") : "";
+
+                    return (
+                      <div key={index} className={styles.point}>
+                        <div className={styles.checkIcon}>
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth="1"
+                            viewBox="0 0 24 24"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                          </svg>
+                        </div>
+                        <p>
+                          <strong>{title}</strong> – {description}
+                        </p>
                       </div>
-                      <p>{text}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </AnimateOnScroll>
