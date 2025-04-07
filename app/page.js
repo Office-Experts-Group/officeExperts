@@ -40,7 +40,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-03-26T00:00:00+00:00",
       description:
         "We provide Microsoft office services, Custom office Solutions, VBA and Macro Development, Cloud Based Solution with Azure. Call us today 1300 102 810",
       breadcrumb: {
@@ -80,6 +80,17 @@ const schema = {
         },
       ],
       inLanguage: "en-AU",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.officeexperts.com.au#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+        },
+      ],
     },
   ],
 };

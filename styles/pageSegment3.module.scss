@@ -13,6 +13,11 @@
     max-width: 80%;
   }
 
+  a {
+    color: $theme !important;
+    font-weight: 700 !important;
+  }
+
   img {
     filter: grayscale(0%);
     transition: all 0.3s ease;
@@ -100,11 +105,6 @@
   h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    // display: inline; // Makes the element only as wide as its content
-    // background-image: linear-gradient($theme, $theme); // Use your theme color
-    // background-size: 100% 6px;
-    // background-repeat: no-repeat;
-    // background-position: 0 calc(100% + 4px); // Positions the line below the text
   }
 }
 

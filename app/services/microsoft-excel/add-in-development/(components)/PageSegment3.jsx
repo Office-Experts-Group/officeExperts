@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -30,7 +31,7 @@ const PageSegment3 = () => {
           </div>
           <p>
             VSTO is a set of development tools available with Microsoft Visual
-            Studio that supports the Microsoft .NET Framework. It is used by
+            Studio that supports the <Link style={{ color: "#046999", fontWeight: "700"}} href={"/services/microsoft-dot-net"}>Microsoft .NET Framework.</Link> It is used by
             developers to write code connecting Microsoft Office applications.
             Developers using VSTO can use .NET languages, instead of using VBA.
             VSTO add-ins are installed on a PC and are compiled applications.

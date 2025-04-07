@@ -30,9 +30,9 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-03-26T0010-:00:00+00:00",
       description:
-        "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
+      "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem. Get expert advice today!",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration#breadcrumb",

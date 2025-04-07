@@ -2,13 +2,12 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Add-in Creation | Office Experts Group",
+  title: "Office Add-in Development & Integration Services ",
   description:
-    "Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
+      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
 
   // Additional metadata
   keywords: [
-    // Core Add-in services
     "Microsoft Office add-in developers",
   ],
 
@@ -18,9 +17,9 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Add-in Creation | Office Experts Group",
+    title: "Office Add-in Development & Integration Services",
     description:
-      "Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
+      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
     url: "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
     siteName: "Office Experts Group",
     images: [
@@ -39,9 +38,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Add-in Creation | Office Experts Group",
+    title: "Office Add-in Development & Integration Services",
     description:
-      "Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
+      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
     images: ["/logo.png"],
   },
 };

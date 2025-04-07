@@ -25,7 +25,7 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateProfessionalServiceSchema(), 
     {
       "@type": "WebPage",
       "@id":

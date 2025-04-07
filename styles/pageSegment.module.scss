@@ -66,8 +66,8 @@
   }
 
   a {
-    color: $theme;
-    font-weight: 700;
+    color: $theme !important;
+    font-weight: 700 !important;
   }
 
   p:first-child {

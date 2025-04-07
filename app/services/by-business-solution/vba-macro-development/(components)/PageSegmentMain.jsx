@@ -25,17 +25,10 @@ const PageSegmentMain = () => {
       <div className={styles.contentWrapper}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
-            <p>Macro / VBA Programmers</p>
-            <h2>We are VBA Macro Experts!</h2>
+            <p>Transform Your Business</p>
+            <h2>Professional VBA Consultants</h2>
             <p>
-              All Microsoft Office products including Excel, Access, Word,
-              Outlook, PowerPoint and Office 365 come with a built-in macro
-              language called VBA.
-            </p>
-            <p>
-              Whichever Office products you are working with, our highly
-              experienced VBA macro programmers are ready to advise you of the
-              best solution to take your business to the next level.
+            At Office Experts Group, we leverage the power of Visual Basic for Applications (VBA) to transform how your business interacts with Microsoft Office. Our team of certified VBA developers brings over 20 years of experience creating bespoke solutions that automate workflows, enhance functionality, and drive productivity across your organisation.
             </p>
           </div>
         </AnimateOnScroll>

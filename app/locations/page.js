@@ -39,8 +39,8 @@ const schema = {
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      datePublished: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-03-26T00:00:00+00:00",
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/locations#breadcrumb",
       },

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../../../../../styles/pageSegment.module.css";
 
@@ -34,7 +35,7 @@ const PageSegmentMain = () => {
           <h2>Extending Microsoft Excel Functionality</h2>
           <p>
             An Excel add-in contains code to extend Excel's functionality,
-            usually in the form of new functions, custom ribbon or toolbar
+            usually in the form of new functions, <Link href={"/services/microsoft-word/custom-toolbars-and-ribbons"}>custom ribbon or toolbar</Link>{" "}
             buttons. Once an add-in is deployed to your Excel environment, the
             new functions and buttons are available to all of your Excel
             workbooks to automate your repetitive tasks and processes. Excel

@@ -76,6 +76,10 @@ export const navigationData = {
             href: `/services/microsoft-vbscript`,
           },
           {
+            label: "Add-in Creation",
+            href: `/services/by-business-solution/add-in-creation`,
+          },
+          {
             label: "Support & Training",
             href: "/microsoft-support-and-training-australia",
           },
@@ -202,10 +206,6 @@ export const navigationData = {
           {
             label: "Office Integration with Excel",
             href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
-          },
-          {
-            label: "Add-in Creation",
-            href: `/services/by-business-solution/add-in-creation`,
           },
         ],
       },

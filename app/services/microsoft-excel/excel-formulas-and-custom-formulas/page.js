@@ -17,6 +17,7 @@ import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../../../utils/schemaGenerators";
+import PageSegmentCenter from "./(components)/PageSegmentCenter";
 
 const schema = {
   "@context": "https://schema.org",
@@ -33,9 +34,9 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-03-26T00:00:00+00:00",
       description:
-        "We provide Office Microsoft Excel Help Support and Training in Australia. Visit www.officeexperts.com.au to get more info",
+        "Professional Excel support and training services via remote access or phone. Our expert consultants provide instant guidance, troubleshooting, and dedicated support for individuals and teams.",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas#breadcrumb",
@@ -101,6 +102,7 @@ const Page = () => {
       <PageSegment4 />
       <VideoSegment />
       <ExpertsAwait />
+      <PageSegmentCenter />
       <div style={{ marginTop: "6rem" }}>
         <FAQ faqs={faqs} />
       </div>
