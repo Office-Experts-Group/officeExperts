@@ -1,21 +1,327 @@
-@import "./globals.scss";
+@import './globals.scss';
+
+.headFiller {
+    background-color: #1e1e1e;
+    width: 100vw;
+    height: 175px;
+}
+
+.blogHeader {
+  width: 100%;
+  background-color: $theme;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
 
 .blogContainer {
-  min-height: 60vh;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+/* Featured section styles */
+.featuredSection {
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $theme;
+    border-bottom: 3px solid $theme;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+  }
+}
+
+/* Add this to your blog.module.scss file */
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .featuredPostCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    background-color: white;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .postCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    background-color: white;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .postImageContainer {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .postImage {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .postCard:hover .postImage,
+  .featuredPostCard:hover .postImage {
+    transform: scale(1.05);
+  }
+  
+  .categoryBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: $theme;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 1;
+  }
+  
+  .postContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: $theme;
+      line-height: 1.3;
+    }
+  
+    p {
+      color: $darkGrayText;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+  }
+  
+  .postMeta {
+    display: flex;
+    align-items: center;
+    color: $darkGrayText;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+
+.featuredContent {
+  flex: 0 0 60%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $body;
 
-  h1 {
-    color: $offWhite;
+  h3 {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    color: $theme;
+    line-height: 1.3;
   }
 
   p {
     color: $darkGrayText;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.5;
   }
+}
+
+/* Filter section styles */
+.filterSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.searchBox {
+  position: relative;
+  flex: 0 0 300px;
+
+  @media (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: 1px solid $darkGrayText;
+  border-radius: 6px;
+  font-size: 1rem;
+  
+  &:focus {
+    outline: none;
+    border-color: $theme;
+    box-shadow: 0 0 0 2px rgba($theme, 0.2);
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: $darkGrayText;
+}
+
+.categoryFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categoryButton {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.244);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  color: $darkGrayText;
+
+  &:hover {
+    background-color: darken($darkGrayText, 5%);
+  }
+
+  &.active {
+    background-color: $theme;
+    color: white;
+  }
+}
+
+/* All posts section styles */
+.allPostsSection {
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $theme;
+    border-bottom: 3px solid $theme;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+  }
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.postImageContainer {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .postImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .postCard:hover .postImage {
+    transform: scale(1.05);
+  }
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  background-color: $darkGrayText;
+  border-radius: 8px;
+  color: $darkGrayText;
+}
+
+.ctaContainer {
+    padding-top: 6rem;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -26,8 +27,8 @@ const Segment4Repeat = () => {
           <div className={styles.content}>
             <h2 style={{ marginBottom: "1rem" }}>No More Headaches!</h2>
             <p>
-              We can help you put an end to messy documents that break corporate
-              branding.
+              We can help you put an end to messy documents that break <Link href="/services/microsoft-word/corporate-identity">corporate
+              branding.</Link>
             </p>
           </div>
 

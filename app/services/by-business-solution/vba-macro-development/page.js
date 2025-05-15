@@ -5,7 +5,7 @@ import ServicePageCards from "./(components)/ServicePageCards";
 import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
-import PageSegment8 from "./(components)/PageSegment8";
+import PageSegmentCenter from "./(components)/PageSegmentCenter";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
@@ -101,7 +101,7 @@ const Page = () => {
       />
       <ServicePageCards />
       <PageSegmentMain />
-      <PageSegment8 />
+      <PageSegmentCenter />
       <BlackSegment />
       <PageSegment4 />
       <PageSegment5 />

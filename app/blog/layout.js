@@ -1,13 +1,18 @@
+import React from "react";
+
 export const metadata = {
-  title: "Blog | Office Experts Australia",
+  // Basic metadata
+  title: "Office Experts Blog",
   description:
-    "Stay up to date with the latest Microsoft Office tips, tricks, and best practices from Office Experts Australia.",
+    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
+
+  // OpenGraph
   openGraph: {
-    title: "Blog | Office Experts Australia",
+    title: "Office Experts Blog",
     description:
-      "Stay up to date with the latest Microsoft Office tips, tricks, and best practices from Office Experts Australia.",
+    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
     url: "https://www.officeexperts.com.au/blog",
-    siteName: "Office Experts Group",
+    siteName: "Office Experts",
     images: [
       {
         url: "/logo.png",
@@ -19,6 +24,22 @@ export const metadata = {
     locale: "en-AU",
     type: "website",
   },
+
+  // Additional metadata
+  keywords: [
+    "Office Experts Blog",
+  ],
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title: "Office Experts Blog",
+    description:
+    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
+    images: ["/logo.png"],
+  },
+
   alternates: {
     canonical: "/blog",
   },

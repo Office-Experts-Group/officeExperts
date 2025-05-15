@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
@@ -19,12 +19,36 @@ const ContactForm = () => {
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasConversionTracking, setHasConversionTracking] = useState(false);
 
   // props to pass to SurveyForm
   const [surveyName, setSurveyName] = useState("");
   const [surveyEmail, setSurveyEmail] = useState("");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Check if conversion tracking is available
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Check if the conversion function exists
+      setHasConversionTracking(typeof window.gtag_report_conversion === 'function');
+      
+      // Set up a MutationObserver to detect when conversion tracking becomes available
+      if (!window.gtag_report_conversion) {
+        const observer = new MutationObserver(() => {
+          if (typeof window.gtag_report_conversion === 'function') {
+            setHasConversionTracking(true);
+            observer.disconnect();
+          }
+        });
+        
+        // Watch for changes to the body element
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+        return () => observer.disconnect();
+      }
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,18 +96,32 @@ const ContactForm = () => {
 
       const data = await res.json();
 
-      if (res.ok) {
-        setSurveyName(formData.name);
-        setSurveyEmail(formData.email);
-        setSuccess(true);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-          honeypot: "",
-        });
-      } else {
+if (res.ok) {
+  // Track conversion if available - this follows Google's pattern more closely
+  if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
+    // You can pass a URL to redirect to after conversion, or leave it empty
+    window.gtag_report_conversion();
+  }
+  
+  // Send additional event to Google Analytics
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'contact_form_submission', {
+      'event_category': 'Forms',
+      'event_label': 'Contact Form'
+    });
+  }
+  
+  setSurveyName(formData.name);
+  setSurveyEmail(formData.email);
+  setSuccess(true);
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    honeypot: "",
+  });
+} else {
         setError({
           general: data.message || "Something went wrong. Please try again.",
         });
@@ -278,6 +316,7 @@ const ContactForm = () => {
         className={`btn ${styles.submitBtn}`}
         aria-label="Submit contact form"
         disabled={isSubmitting}
+          onClick={() => hasConversionTracking ? gtag_report_conversion() : null}
       >
         {isSubmitting ? "Sending..." : "Submit"}
       </button>

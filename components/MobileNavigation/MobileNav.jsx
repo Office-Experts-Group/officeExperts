@@ -76,7 +76,7 @@ export default function MobileNav() {
 
       {isOpen && (
         <div className={styles.overlay} onClick={closeNav}>
-          <btn className={styles.closeBtn}>CLOSE</btn>
+          <button className={styles.closeBtn}>CLOSE</button>
         </div>
       )}
     </div>

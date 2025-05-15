@@ -5,22 +5,10 @@ export function middleware(request) {
   const path = request.nextUrl.pathname;
   const normalizedPath = path.toLowerCase();
 
-  // Enhanced handling for Next.js static media and system paths
-  if (
-    path.includes("/_next/static/media/") ||
-    path.includes("/_next/static/chunks/") ||
-    path.includes("/_next/static/css/") ||
-    path.includes("/_next/static/images/") ||
-    path.includes("/_next/image") ||
-    path.includes("/_next/data/")
-  ) {
+  // Handle static media files - completely block from crawling
+  if (path.includes("/_next/static/media/")) {
     const response = NextResponse.next();
-    // Strong directives to prevent crawling and indexing
-    response.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
-    response.headers.set(
-      "Cache-Control",
-      "public, max-age=31536000, immutable"
-    );
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
   }
 
@@ -29,7 +17,10 @@ export function middleware(request) {
     : `${normalizedPath}/`;
 
   // Check both with and without trailing slash for gone URLs
-  if (goneUrls.includes(normalizedPath) || goneUrls.includes(pathWithSlash)) {
+  if (
+    goneUrls.includes(normalizedPath) ||
+    goneUrls.includes(pathWithSlash)
+  ) {
     return new NextResponse(null, {
       status: 410,
       statusText: "Gone",
@@ -41,53 +32,84 @@ export function middleware(request) {
 
   const response = NextResponse.next();
 
-  // Special handling for payment page - allow iframe embedding and sensors
-  if (normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")) {
-    response.headers.set("X-Frame-Options", "SAMEORIGIN");
-
-    // Add permissions policy to allow necessary features for payment processing
-    // The asterisk (*) allows all origins for these features
-    response.headers.set(
-      "Permissions-Policy",
-      "accelerometer=*, gyroscope=*, magnetometer=*, payment=*, interest-cohort=(), camera=(), microphone=(), geolocation=()"
-    );
-  } else {
-    response.headers.set("X-Frame-Options", "DENY");
-    // Default restrictive permissions policy for other pages
-    response.headers.set(
-      "Permissions-Policy",
-      "accelerometer=(), gyroscope=(), magnetometer=(), payment=self, interest-cohort=(), camera=(), microphone=(), geolocation=()"
-    );
-  }
-
   // Security headers
   response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-XSS-Protection", "1; mode=block");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  
+  // Comprehensive CSP that covers all Google Ads and Analytics requirements
+  response.headers.set(
+    "Content-Security-Policy",
+    "default-src 'self'; " +
+    // Script sources
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
+      "*.vimeo.com " +
+      "*.googletagmanager.com " +
+      "*.google-analytics.com " +
+      "analytics.google.com " +
+      "tagmanager.google.com " +
+      "www.googleadservices.com " +
+      "*.doubleclick.net " +
+      "googleads.g.doubleclick.net " +
+      "www.google.com " +
+      "www.gstatic.com " +
+      "*.ahrefs.com " +
+      "analytics.ahrefs.com; " +
+    // Style sources
+    "style-src 'self' 'unsafe-inline' fonts.googleapis.com; " +
+    // Image sources
+    "img-src 'self' data: https: " +
+      "*.vimeocdn.com " +
+      "*.google-analytics.com " +
+      "*.googletagmanager.com " +
+      "www.google.com " +
+      "www.google.com.au " +
+      "www.googleadservices.com " +
+      "*.doubleclick.net " +
+      "*.g.doubleclick.net " +
+      "*.ahrefs.com; " +
+    // Font sources
+    "font-src 'self' data: fonts.gstatic.com; " +
+    // Frame sources 
+    "frame-src 'self' " +
+      "*.vimeo.com " +
+      "player.vimeo.com " +
+      "*.googletagmanager.com " +
+      "www.google.com " +
+      "*.doubleclick.net " +
+      "td.doubleclick.net " +
+      "bid.g.doubleclick.net " +
+      "www.youtube.com; " +
+    // Media sources
+    "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+    // Connect sources - crucial for analytics tracking
+    "connect-src 'self' " +
+      "*.vimeo.com " +
+      "*.vimeocdn.com " +
+      "*.google-analytics.com " +
+      "analytics.google.com " +
+      "stats.g.doubleclick.net " +
+      "*.doubleclick.net " +
+      "*.googletagmanager.com " +
+      "www.google.com " +
+      "*.officeexperts.com.au " +
+      "*.ahrefs.com " +
+      "analytics.ahrefs.com; " +
+    // Object sources
+    "object-src 'self' data:; " +
+    // Form action sources
+    "form-action 'self' " +
+      "*.google.com " +
+      "*.doubleclick.net; " +
+    // Base URI restriction
+    "base-uri 'self';"
+  );
 
-  // Modified CSP with special handling for payment page
-  const cspValue =
-    normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")
-      ? // More permissive CSP for payment page
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com; " +
-        "style-src 'self' 'unsafe-inline' *.simplify.com; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.simplify.com *.ahrefs.com; " +
-        "font-src 'self' *.simplify.com; " +
-        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.simplify.com; " +
-        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com;"
-      : // Standard CSP for other pages
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
-        "style-src 'self' 'unsafe-inline'; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
-        "font-src 'self'; " +
-        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
-        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
-
-  response.headers.set("Content-Security-Policy", cspValue);
+  // Handle ALL Next.js system paths
+  if (path.startsWith("/_next/")) {
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
 
   return response;
 }
@@ -95,8 +117,7 @@ export function middleware(request) {
 export const config = {
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-    "/_next/static/:path*",
-    "/_next/image/:path*",
-    "/_next/data/:path*",
+    "/_next/static/media/:path*",
+    "/_next/:path*",
   ],
 };
