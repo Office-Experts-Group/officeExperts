@@ -1,0 +1,73 @@
+.codeBlockContainer {
+  margin: 2rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #1e1e1e; /* VSCode-like header color */
+  color: #d4d4d4;
+  border-bottom: 1px solid #333;
+}
+
+.languageBadge {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  background-color: #4d4d4d;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+/* Override Prism styles with global selectors attached to a local class */
+.codeBlockContainer :global(pre[class*="language-"]) {
+  margin: 0 !important;
+  padding: 1.5rem !important;
+  background-color: #1e1e1e !important;
+  font-size: 14px;
+}
+
+.codeBlockContainer :global(.line-numbers .line-numbers-rows) {
+  border-right: 1px solid #333 !important;
+}
+
+/* Add VSCode-like highlight for the current line */
+.codeBlockContainer :global(.highlight-line) {
+  background-color: rgba(255, 255, 255, 0.07);
+  display: block;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+/* Customize the toolbar */
+.codeBlockContainer :global(div.code-toolbar > .toolbar) {
+  opacity: 1 !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+}
+
+.codeBlockContainer :global(div.code-toolbar > .toolbar > .toolbar-item > button) {
+  background-color: #333 !important;
+  color: #ddd !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 0.8rem !important;
+}
+
+.codeBlockContainer :global(div.code-toolbar > .toolbar > .toolbar-item > button:hover) {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .codeBlockContainer :global(pre[class*="language-"]) {
+    font-size: 12px;
+    padding: 1rem !important;
+  }
+}

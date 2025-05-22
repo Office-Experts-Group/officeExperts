@@ -10,9 +10,14 @@ export const metadata = {
     "Access database integration",
   ],
 
-  alternates: {
-    canonical:
-      "https://www.accessexperts.com.au/services/microsoft-access/3rd-party-product-integration",
+    alternates: {
+    canonical: "/services/microsoft-access/3rd-party-product-integration",
+    alternate: [
+      {
+        url:  "https://www.accessexperts.com.au/services/microsoft-access/3rd-party-product-integration",
+        type: "alternate",
+      },
+    ],
   },
 
   // OpenGraph
@@ -20,7 +25,7 @@ export const metadata = {
     title: "Access Database Integration | Office Experts Group",
     description:
       "Our Microsoft Access database experts can help determine whether your integration requirements are viable and build the required functionality for your company with competitive pricing and a prompt, high quality service.",
-    url: "https://www.accessexperts.com.au/3rd-party-product-integration",
+    url:  "https://www.accessexperts.com.au/services/microsoft-access/3rd-party-product-integration",
     siteName: "Office Experts Group",
     images: [
       {

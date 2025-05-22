@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Office Experts Blog",
   description:
-    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
+    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
 
   // OpenGraph
   openGraph: {
     title: "Office Experts Blog",
     description:
-    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
+    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
     url: "https://www.officeexperts.com.au/blog",
     siteName: "Office Experts",
     images: [
@@ -36,7 +36,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Blog",
     description:
-    "Explore tutorials, tips, and best practices for Microsoft advanced Microsoft software techniques.",
+    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
     images: ["/logo.png"],
   },
 

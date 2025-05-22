@@ -3,12 +3,12 @@ import React from "react";
 export const metadata = {
   title: "Request a Quote | Office Experts Group",
   description:
-    "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
+    "Request a personalised quote for professional Microsoft Office consulting services and solutions from Office Experts Group. Our experienced consultants specialise in Excel, Word, PowerPoint, Power BI, and more",
   keywords: ["Office experts request a quote"],
   openGraph: {
     title: "Request a Quote | Office Experts Group",
     description:
-      "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
+      "Request a personalised quote for professional Microsoft Office consulting services and solutions from Office Experts Group. Our experienced consultants specialise in Excel, Word, PowerPoint, Power BI, and more",
     url: "https://www.officeexperts.com.au/contact-us/request-a-quote",
     siteName: "Office Experts Group",
     images: [
@@ -28,7 +28,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Request a Quote | Office Experts Group",
     description:
-      "Request a quote for Microsoft Office consulting services and solutions.",
+      "Request a personalised quote for professional Microsoft Office consulting services and solutions from Office Experts Group. Our experienced consultants specialise in Excel, Word, PowerPoint, Power BI, and more",
     images: ["/logo.png"],
   },
   alternates: {

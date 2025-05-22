@@ -39,6 +39,7 @@ const FooterServicesSection = () => {
         <Link href="/about-us">Our Company</Link>
         <Link href="/meet-the-team">Our Team</Link>
         <Link href="/client-testimonials">Testimonials</Link>
+        <Link href={"/blog"}>Blog</Link>
       </div>
 
       {/* Power Platform Services Dropdown */}

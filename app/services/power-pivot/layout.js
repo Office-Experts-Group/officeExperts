@@ -4,7 +4,7 @@ export const metadata = {
   // Basic metadata
   title: "Power Pivot | Office Experts Group",
   description:
-    "",
+    "Unlock powerful data insights with Power Pivot in Excel. Office Experts offers advanced Power Pivot training and consulting to help you model, analyze, and visualize complex data with ease.",
 
   keywords: [
     "Power Pivot",
@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Power Pivot | Office Experts Group",
     description:
-      "",
+      "Unlock powerful data insights with Power Pivot in Excel. Office Experts offers advanced Power Pivot training and consulting to help you model, analyze, and visualize complex data with ease.",
     url: "https://www.officeexperts.com.au/services/power-pivot",
     siteName: "Office Experts Group",
     images: [

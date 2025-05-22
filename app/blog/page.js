@@ -26,6 +26,7 @@ const blogPosts = [
     category: 'Power Apps',
     featured: true,
     youtubeId: '_mgLYllGY-Y',
+    imagePath: null, // Default to null when using youtubeId
   },
   {
     id: 2,
@@ -38,6 +39,7 @@ const blogPosts = [
     category: 'Power Apps',
     featured: true,
     youtubeId: 'awsNLPGNI4w',
+    imagePath: null,
   },
   {
     id: 3,
@@ -50,6 +52,7 @@ const blogPosts = [
     category: 'Power Apps',
     featured: false,
     youtubeId: 'BiOCK1jDOMo',
+    imagePath: null,
   },
   {
     id: 4,
@@ -62,7 +65,34 @@ const blogPosts = [
     category: 'Power Apps',
     featured: false,
     youtubeId: 'yC0W5am6M3Q',
-  }
+    imagePath: null,
+  },
+  {
+    id: 5,
+    title: 'How to Convert a Canva Design into a Microsoft Word Template',
+    description: 'Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.',
+    slug: 'convert-canva-to-word',
+    date: 'April 14, 2025',
+    author: 'Daniel Thomas',
+    readingTime: '5 min',
+    category: 'Conversions',
+    featured: false,
+    youtubeId: null,
+    imagePath: '/canva-to-word.webp',
+  },
+  {
+    id: 6,
+    title: 'Ultimate Guide to Microsoft Word Templates',
+    description: 'What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.',
+    slug: 'ultimate-guide-to-word-templates',
+    date: 'April 8, 2025',
+    author: 'Daniel Thomas',
+    readingTime: '8 min',
+    category: 'Templates',
+    featured: false,
+    youtubeId: null,
+    imagePath: '/template.webp',
+  },
 ];
 
   // Extract unique categories
@@ -79,6 +109,17 @@ const blogPosts = [
   // Get featured posts
   const featuredPosts = blogPosts.filter(post => post.featured);
 
+  // Function to get the correct image source for a post
+  const getImageSource = (post) => {
+    if (post.youtubeId) {
+      return `https://img.youtube.com/vi/${post.youtubeId}/maxresdefault.jpg`;
+    } else if (post.imagePath) {
+      return post.imagePath;
+    }
+    // Fallback image if neither youtubeId nor imagePath is available
+    return '/default-blog-image.webp';
+  };
+
   // Function to render a card (used for both featured and regular posts)
   const renderPostCard = (post, isFeatured = false) => (
     <Link 
@@ -88,7 +129,7 @@ const blogPosts = [
     >
       <div className={styles.postImageContainer}>
         <Image 
-          src={`https://img.youtube.com/vi/${post.youtubeId}/maxresdefault.jpg`}
+          src={getImageSource(post)}
           alt={post.title}
           className={styles.postImage}
           fill
@@ -129,34 +170,40 @@ const blogPosts = [
           </section>
         )}
 
-        {/* Search and filter section */}
-        <section className={styles.filterSection}>
-          <div className={styles.searchBox}>
-            <input 
-              type="text" 
-              placeholder="Search articles..." 
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className={styles.searchInput}
-            />
-            <svg className={styles.searchIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </div>
-          
-          <div className={styles.categoryFilters}>
-            {categories.map(category => (
-              <button 
-                key={category}
-                className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </section>
+       {/* Search and filter section */}
+<section className={styles.filterSection}>
+  <div className={styles.searchBox}>
+    <input 
+      type="text" 
+      placeholder="Search articles..." 
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className={styles.searchInput}
+      list="searchList"
+    />
+    <datalist id="searchList">
+      {blogPosts.map(post => (
+        <option key={post.id} value={post.title} />
+      ))}
+    </datalist>
+    <svg className={styles.searchIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+  
+  <div className={styles.categoryFilters}>
+    {categories.map(category => (
+      <button 
+        key={category}
+        className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
+        onClick={() => setSelectedCategory(category)}
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+</section>
 
         {/* All posts section */}
         <section className={styles.allPostsSection}>
@@ -172,8 +219,8 @@ const blogPosts = [
           )}
         </section>
         <div className={styles.ctaContainer}>
-<CTAMain />
-</div>
+          <CTAMain />
+        </div>
       </div>
       
       <Contact />
