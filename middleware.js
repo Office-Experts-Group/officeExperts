@@ -39,72 +39,17 @@ export function middleware(request) {
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   
   // Comprehensive CSP that covers all Google Ads and Analytics requirements
-  response.headers.set(
-    "Content-Security-Policy",
-    "default-src 'self'; " +
-    // Script sources
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
-      "*.vimeo.com " +
-      "*.googletagmanager.com " +
-      "*.google-analytics.com " +
-      "analytics.google.com " +
-      "tagmanager.google.com " +
-      "www.googleadservices.com " +
-      "*.doubleclick.net " +
-      "googleads.g.doubleclick.net " +
-      "www.google.com " +
-      "www.gstatic.com " +
-      "*.ahrefs.com " +
-      "analytics.ahrefs.com; " +
-    // Style sources
-    "style-src 'self' 'unsafe-inline' fonts.googleapis.com; " +
-    // Image sources
-    "img-src 'self' data: https: " +
-      "*.vimeocdn.com " +
-      "*.google-analytics.com " +
-      "*.googletagmanager.com " +
-      "www.google.com " +
-      "www.google.com.au " +
-      "www.googleadservices.com " +
-      "*.doubleclick.net " +
-      "*.g.doubleclick.net " +
-      "*.ahrefs.com; " +
-    // Font sources
-    "font-src 'self' data: fonts.gstatic.com; " +
-    // Frame sources 
-    "frame-src 'self' " +
-      "*.vimeo.com " +
-      "player.vimeo.com " +
-      "*.googletagmanager.com " +
-      "www.google.com " +
-      "*.doubleclick.net " +
-      "td.doubleclick.net " +
-      "bid.g.doubleclick.net " +
-      "www.youtube.com; " +
-    // Media sources
-    "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-    // Connect sources - crucial for analytics tracking
-    "connect-src 'self' " +
-      "*.vimeo.com " +
-      "*.vimeocdn.com " +
-      "*.google-analytics.com " +
-      "analytics.google.com " +
-      "stats.g.doubleclick.net " +
-      "*.doubleclick.net " +
-      "*.googletagmanager.com " +
-      "www.google.com " +
-      "*.officeexperts.com.au " +
-      "*.ahrefs.com " +
-      "analytics.ahrefs.com; " +
-    // Object sources
-    "object-src 'self' data:; " +
-    // Form action sources
-    "form-action 'self' " +
-      "*.google.com " +
-      "*.doubleclick.net; " +
-    // Base URI restriction
-    "base-uri 'self';"
-  );
+ response.headers.set(
+  "Content-Security-Policy",
+  "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com analytics.ahrefs.com googleads.g.doubleclick.net; " +
+    "style-src 'self' 'unsafe-inline' fonts.googleapis.com *.googletagmanager.com; " +
+    "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+    "font-src 'self' fonts.gstatic.com fonts.googleapis.com; " +
+    "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.youtube.com www.youtube.com youtube.com td.doubleclick.net; " +
+    "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com; " +
+    "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com *.google-analytics.com *.googletagmanager.com www.google.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com googleads.g.doubleclick.net;"
+);
 
   // Handle ALL Next.js system paths
   if (path.startsWith("/_next/")) {
