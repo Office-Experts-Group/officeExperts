@@ -38,18 +38,36 @@ export function middleware(request) {
   response.headers.set("X-XSS-Protection", "1; mode=block");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   
-  // Comprehensive CSP that covers all Google Ads and Analytics requirements
- response.headers.set(
-  "Content-Security-Policy",
-  "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com analytics.ahrefs.com googleads.g.doubleclick.net; " +
-    "style-src 'self' 'unsafe-inline' fonts.googleapis.com *.googletagmanager.com; " +
-    "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
-    "font-src 'self' fonts.gstatic.com fonts.googleapis.com; " +
-    "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.youtube.com www.youtube.com youtube.com td.doubleclick.net; " +
-    "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com; " +
-    "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com *.google-analytics.com *.googletagmanager.com www.google.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com googleads.g.doubleclick.net;"
-);
+  // Special CSP for payment pages
+  if (path.startsWith("/ccp") || path.includes("debug-payment") || path.includes("test-invoice")) {
+    // Relaxed CSP for payment processing pages
+    response.headers.set(
+      "Content-Security-Policy",
+      "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com analytics.ahrefs.com googleads.g.doubleclick.net *.simplify.com *.commbank.com.au; " +
+        "style-src 'self' 'unsafe-inline' fonts.googleapis.com *.googletagmanager.com *.simplify.com; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com *.simplify.com *.commbank.com.au; " +
+        "font-src 'self' fonts.gstatic.com fonts.googleapis.com *.simplify.com; " +
+        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.youtube.com www.youtube.com youtube.com td.doubleclick.net *.simplify.com *.commbank.com.au; " +
+        "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com; " +
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com *.google-analytics.com *.googletagmanager.com www.google.com google.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com googleads.g.doubleclick.net *.simplify.com *.commbank.com.au api.simplify.com; " +
+        "form-action 'self' *.simplify.com *.commbank.com.au; " +
+        "frame-ancestors 'none';"
+    );
+  } else {
+    // Regular CSP for all other pages
+    response.headers.set(
+      "Content-Security-Policy",
+      "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com analytics.ahrefs.com googleads.g.doubleclick.net; " +
+        "style-src 'self' 'unsafe-inline' fonts.googleapis.com *.googletagmanager.com; " +
+        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+        "font-src 'self' fonts.gstatic.com fonts.googleapis.com; " +
+        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.youtube.com www.youtube.com youtube.com td.doubleclick.net; " +
+        "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com; " +
+        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com www.youtube.com youtube.com *.google-analytics.com *.googletagmanager.com www.google.com google.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com googleads.g.doubleclick.net;"
+    );
+  }
 
   // Handle ALL Next.js system paths
   if (path.startsWith("/_next/")) {
