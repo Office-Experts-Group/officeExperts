@@ -36,7 +36,7 @@ const schemaData = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-13T00:00:00+00:00",
-      dateModified: "2025-03-13T00:00:00+00:00",
+      dateModified: "2025-05-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/microsoft-support-and-training-brisbane#breadcrumb",
@@ -65,12 +65,6 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Locations",
-          item: "https://www.officeexperts.com.au/locations",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
           name: "Microsoft Support and Training Brisbane",
         },
       ],
@@ -92,7 +86,7 @@ const BrisbaneSupportTraining = () => {
   const trainingServices = [
     "Excel – Running through advanced formulas, Power Query automation, VBA macros, interactive dashboards and financial modelling.",
     "Word – Efficient document formatting, automated templates, custom formatting ribbons and mail merge functionality for bulk communications.",
-    "Access – Database structuring, query optimization and migrating legacy Access applications to the cloud.",
+    "Access – Database structuring, query optimisation and migrating legacy Access applications to the cloud.",
     "Power Platform – Creating Power Apps for internal business workflows, automating tasks with Power Automate and visualising data in Power BI.",
   ];
 

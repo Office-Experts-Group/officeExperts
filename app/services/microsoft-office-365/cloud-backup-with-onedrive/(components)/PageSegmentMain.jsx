@@ -28,7 +28,7 @@ const PageSegmentMain = () => {
             <p>Microsoft Office 365</p>
             <h2>OneDrive Online Storage</h2>
             <p>
-              Online storage has been a growing trend over the past few years,
+              Online storage has been a growing trend over the past decade,
               and one of the best options available on the market is OneDrive
               from Microsoft. It's a powerful tool that provides users of all
               levels with a number of benefits. OneDrive is available for

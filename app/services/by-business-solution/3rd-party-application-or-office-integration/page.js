@@ -30,7 +30,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T0010-:00:00+00:00",
+      dateModified: "2025-05-29T00:00:00+00:00",
       description:
       "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem. Get expert advice today!",
       breadcrumb: {

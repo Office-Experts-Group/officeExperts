@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -35,8 +36,7 @@ const PageSegment7 = () => {
           <p>
             All Office products come with macro recorders which allow you to
             record a series of steps you would like to be able to repeat. In
-            recording a macro, the Office product automatically creates the VBA
-            code for those steps, but the macro recorder is just the tip of the
+            recording a macro, the Office product automatically creates the <Link href= "/services/microsoft-excel/vba-macro-development">VBA code</Link> for those steps, but the macro recorder is just the tip of the
             iceberg.
           </p>
         </AnimateOnScroll>

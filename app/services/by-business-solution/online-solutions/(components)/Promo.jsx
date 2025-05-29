@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -22,10 +21,10 @@ const Promo = () => {
           </div>
           <div className={`${styles.text} ${styles.textML}`}>
             <h2>Share Your Documents Online!</h2>
-            <Link href={"/services/microsoft-office-365"}>- Office 365</Link>
-            <Link href={"/services/by-business-solution/online-solutions"}>
+            <p>- Office 365</p>
+            <p>
               - Microsoft SharePoint
-            </Link>
+            </p>
             <p>- Google Docs</p>
           </div>
         </div>

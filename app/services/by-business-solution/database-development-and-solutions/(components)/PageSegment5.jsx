@@ -32,7 +32,7 @@ const PageSegment3 = () => {
           <p>
             With a lot of data, over 15 concurrent users or a need to extend
             access to your data, you'll need an SQL Server database which can be
-            installed on your local network or in the cloud using Azure. Azure
+            installed on your local network or <Link href={"/services/by-business-solution/cloud-based-solutions-with-azure"}>in the cloud using Azure.</Link> Azure
             ensures your data is safe, secure, and accessible from anywhere with
             internet.
           </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -27,7 +28,7 @@ const PageSegment7 = () => {
           <p>
             Our developers can work in all areas of add-in development. If you
             need help with design or with determining what is best for your
-            organisation, then our experienced programmers can help analyse and
+            organisation, then <Link href={"/meet-the-team"}>our experienced programmers</Link> can help analyse and
             develop a solution that suits your business requirements.
           </p>
         </AnimateOnScroll>

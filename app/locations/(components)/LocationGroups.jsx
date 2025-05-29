@@ -106,6 +106,21 @@ const LocationGroups = ({ sectionTitle, locations }) => {
                         />
                       </svg>
                     </Link>
+                    
+                    <Link
+                      href={location.supportLink}
+                      className={styles.serviceLink}
+                    >
+                      <span>Support & Training</span>
+                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
+                        <path
+                          d="M7 17L17 7M17 7H8M17 7V16"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>

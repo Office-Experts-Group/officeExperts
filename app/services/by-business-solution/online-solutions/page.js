@@ -30,7 +30,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-05-29T00:00:00+00:00",
       description:
         "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
       breadcrumb: {

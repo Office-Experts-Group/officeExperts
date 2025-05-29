@@ -216,9 +216,8 @@ const QuoteForm = () => {
       });
 
 if (res.ok) {
-  // Track conversion if available - this follows Google's pattern more closely
+  // Track conversion if available
   if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
-    // You can pass a URL to redirect to after conversion, or leave it empty
     window.gtag_report_conversion();
   }
   
@@ -226,7 +225,7 @@ if (res.ok) {
   if (typeof window.gtag === 'function') {
     window.gtag('event', 'contact_form_submission', {
       'event_category': 'Forms',
-      'event_label': 'Contact Form'
+      'event_label': 'Quote Form'
     });
   }
   

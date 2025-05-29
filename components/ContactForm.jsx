@@ -97,9 +97,8 @@ const ContactForm = () => {
       const data = await res.json();
 
 if (res.ok) {
-  // Track conversion if available - this follows Google's pattern more closely
+  // Track conversion if available
   if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
-    // You can pass a URL to redirect to after conversion, or leave it empty
     window.gtag_report_conversion();
   }
   
