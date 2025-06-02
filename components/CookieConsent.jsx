@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import Script from "next/script";
 import styles from "../styles/cookieConsent.module.css";
 
-// Google Analytics ID
+// Google Analytics ID for Office Experts
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PPD9KDBZCN";
-// Google Ads Conversion ID and Label
+// Google Ads Conversion ID and Label (same across all sites)
 const GADS_CONVERSION_ID = "AW-1062762865";
 const GADS_CONVERSION_LABEL = "ZqwXCP_M6MYaEPHy4foD";
 
@@ -78,7 +78,7 @@ const CookieConsent = () => {
               gtag('config', '${GADS_CONVERSION_ID}', {
                 'send_page_view': false,
                 'linker': {
-                  'domains': ['excelexperts.com.au', 'officeexperts.com.au']
+                  'domains': ['excelexperts.com.au', 'officeexperts.com.au', 'accessexperts.com.au', 'wordexperts.com.au', 'powerplatformexperts.com.au']
                 }
               });
               
@@ -111,6 +111,26 @@ const CookieConsent = () => {
                   return false;
                 }
               };
+            `}
+          </Script>
+
+          {/* Automatic conversion tracking from Google instructions */}
+          <Script id="conversion-tracking-auto" strategy="afterInteractive">
+            {`
+              window.addEventListener('load', function() {
+                document.addEventListener('click', function(e) {
+                  if (e.target.closest('.contact_submitBtn__e1DBC')) {
+                    var contactTimer = setInterval(function() {
+                      if (document.querySelectorAll('.contact_successMessage__LYjcy').length > 0) {
+                        if (typeof gtag === 'function') {
+                          gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
+                        }
+                        clearInterval(contactTimer);
+                      }
+                    }, 1000);
+                  }
+                });
+              });
             `}
           </Script>
         </>
