@@ -114,25 +114,37 @@ const CookieConsent = () => {
             `}
           </Script>
 
-          {/* Automatic conversion tracking from Google instructions */}
-          <Script id="conversion-tracking-auto" strategy="afterInteractive">
-            {`
-              window.addEventListener('load', function() {
-                document.addEventListener('click', function(e) {
-                  if (e.target.closest('.contact_submitBtn__e1DBC')) {
-                    var contactTimer = setInterval(function() {
-                      if (document.querySelectorAll('.contact_successMessage__LYjcy').length > 0) {
-                        if (typeof gtag === 'function') {
-                          gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
-                        }
-                        clearInterval(contactTimer);
-                      }
-                    }, 1000);
+          {/* Enhanced conversion tracking with GA4 events */}
+<Script id="conversion-tracking-auto" strategy="afterInteractive">
+  {`
+    window.addEventListener('load', function() {
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.contact_submitBtn__e1DBC')) {
+          var contactTimer = setInterval(function() {
+            if (document.querySelectorAll('.contact_successMessage__LYjcy').length > 0) {
+              // Google Ads conversion (only counts if from ad click)
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
+                
+                // Google Analytics event (tracks ALL form submissions)
+                gtag('event', 'form_submit', {
+                  'event_category': 'Contact',
+                  'event_label': 'Contact Form Submission',
+                  'value': 1,
+                  'custom_parameters': {
+                    'form_type': 'contact',
+                    'page_location': window.location.href
                   }
                 });
-              });
-            `}
-          </Script>
+              }
+              clearInterval(contactTimer);
+            }
+          }, 1000);
+        }
+      });
+    });
+  `}
+</Script>
         </>
       )}
 
