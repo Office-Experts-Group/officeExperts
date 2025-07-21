@@ -1,238 +1,147 @@
-@import "./globals.scss";
-
-.successWrapper {
-  max-width: 800px;
-  width: 100%;
-  background-color: $offWhite;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 3rem;
-  margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    font-size: 2.5rem;
-    color: $theme;
-    margin: 1rem 0 2rem;
-
-    @include phone {
-      font-size: 2rem;
-    }
-  }
-
-  @include tablet {
-    padding: 2rem;
-  }
-
-  @include phone {
-    padding: 1.5rem;
-  }
-}
-
-.successIcon {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-
-  svg {
-    width: 80px;
-    height: 80px;
-    color: #4caf50;
-
-    @include phone {
-      width: 60px;
-      height: 60px;
-    }
-  }
-}
-
-.receiptDetails {
-  margin: 2rem 0;
-
-  > p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: $gray;
-    margin-bottom: 2rem;
-  }
-}
-
-.receiptGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 2rem auto;
-  max-width: 500px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 1.5rem;
-  background-color: rgba(4, 105, 153, 0.03);
-}
-
-.receiptRow {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
-.receiptLabel {
-  font-weight: 600;
-  color: $gray;
-}
-
-.receiptValue {
-  font-weight: 500;
-  color: $black;
-}
-
-.receiptActions {
-  margin: 2.5rem 0;
-
-  p {
-    margin-bottom: 1.5rem;
-    color: $darkGrayText;
-  }
-}
-
-.contactInfo {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-  p {
-    color: $darkGrayText;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  a {
-    color: $theme;
-    font-weight: 600;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-@import "./globals.scss";
-
+// styles/payment.module.scss - ENHANCED VERSION
 .paymentContainer {
+  margin-top: 145px;
   min-height: 100vh;
-  padding: 10rem 2rem 5rem;
-  background-color: $background;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .paymentWrapper {
-  max-width: 900px;
+  max-width: 600px;
   width: 100%;
-  background-color: $offWhite;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 3rem;
-  margin: 0 auto;
-
-  @include tablet {
-    padding: 2rem;
-  }
-
-  @include phone {
-    padding: 1.5rem;
-  }
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .paymentHeader {
+  background: linear-gradient(135deg, #046999 0%, #0056b3 100%);
+  color: white;
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 2.5rem;
 
   h1 {
-    font-size: 2.5rem;
-    color: $theme;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 
-    @include phone {
-      font-size: 2rem;
-    }
+  .description {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
   }
 }
 
-.description {
-  font-size: 1.25rem;
-  color: $body;
-  margin-bottom: 1rem;
+.surchargeBreakdown {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
 
-  @include phone {
-    font-size: 1.125rem;
+  .surchargeDetail {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
   }
-}
 
-.surcharge {
-  font-size: 1.125rem;
-  color: $gray;
-  margin-bottom: 1.5rem;
-
-  @include phone {
-    font-size: 1rem;
+  .totalAmount {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 0.5rem;
   }
 }
 
 .formContainer {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: center;
+  padding: 2rem;
+  position: relative;
 }
 
-.paymentFrame {
-  width: 100%;
-  min-height: 650px;
-  border: none;
-  overflow: hidden;
-  background-color: transparent;
-
-  @include tablet {
-    min-height: 600px;
-  }
-
-  @include phone {
-    min-height: 550px;
-  }
-
-  &.hidden {
-    visibility: hidden;
-    height: 0;
-    min-height: 0;
-  }
-}
-
-.loadingState {
+// Loading Overlay
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
-  width: 100%;
+  z-index: 10;
+  border-radius: 0 0 12px 12px;
+}
+
+.loadingContent {
+  text-align: center;
+
+  h3 {
+    margin: 1rem 0 0.5rem 0;
+    color: #046999;
+    font-size: 1.3rem;
+  }
 
   p {
-    margin-top: 2rem;
-    color: $theme;
-    font-size: 1.125rem;
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
   }
 }
 
+.progressBar {
+  width: 200px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin: 1rem auto 0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #046999, #0056b3);
+  border-radius: 2px;
+  animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+// Spinner Animation
 .spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #046999;
   border-radius: 50%;
-  border-top: 4px solid $theme;
-  width: 50px;
-  height: 50px;
   animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+.buttonSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
 }
 
 @keyframes spin {
@@ -244,148 +153,1249 @@
   }
 }
 
+// Error State
 .errorState {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  width: 100%;
-  background-color: rgba(255, 235, 235, 0.5);
-  border-radius: 4px;
+  text-align: center;
   padding: 2rem;
+  background: #ffeaea;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+
+  .errorIcon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: #d32f2f;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+  }
 
   p {
-    color: #d32f2f;
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.contactSupport {
-  margin-top: 2rem !important;
-  font-size: 0.95rem !important;
-  color: $gray !important;
-
-  a {
-    color: $theme;
-    text-decoration: underline;
-    font-weight: 600;
-
-    &:hover {
-      color: darken($theme, 10%);
-    }
+    color: #666;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
   }
 }
 
 .retryButton {
-  background-color: $theme;
+  background: #046999;
   color: white;
   border: none;
-  border-radius: 4px;
   padding: 0.75rem 1.5rem;
+  border-radius: 6px;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
+  margin-bottom: 1rem;
 
   &:hover {
-    background-color: darken($theme, 10%);
+    background: #0056b3;
   }
 }
 
-.securityInfo {
-  text-align: center;
+.contactSupport {
+  font-size: 0.9rem;
+  color: #666;
+
+  a {
+    color: #046999;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Form Styles
+.paymentForm {
+  transition: opacity 0.3s ease;
+
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  h3 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    font-size: 1.3rem;
+  }
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+    position: relative;
+  }
+}
+
+.cardTypeBadge {
+  background: #046999;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 0.5rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #046999;
+    box-shadow: 0 0 0 3px rgba(4, 105, 153, 0.1);
+  }
+
+  &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.helpText {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.payButton {
+  width: 100%;
+  background: linear-gradient(135deg, #046999 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(4, 105, 153, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// Payment Summary
+.paymentSummary {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
   margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  h4 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.1rem;
+  }
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  span:first-child {
+    color: #666;
+  }
+
+  span:last-child {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+// Security Info
+.securityInfo {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  text-align: center;
+
+  .securityIcons {
+    margin-bottom: 0.5rem;
+  }
+
+  .lockIcon {
+    font-size: 1.5rem;
+    color: #046999;
+  }
 
   p {
-    color: $darkGrayText;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
   }
 }
 
-// Error page styles
-.errorWrapper {
-  max-width: 700px;
+// Success Page Styles
+.successWrapper {
+  max-width: 800px;
   width: 100%;
-  background-color: $offWhite;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.successIconWrapper {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+
+  .checkIcon {
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  .checkCircle {
+    animation: checkCircle 0.6s ease-in-out;
+  }
+
+  .checkMark {
+    animation: checkMark 0.8s ease-in-out 0.3s both;
+  }
+}
+
+@keyframes checkCircle {
+  0% {
+    stroke-dasharray: 0 70;
+  }
+  100% {
+    stroke-dasharray: 70 70;
+  }
+}
+
+@keyframes checkMark {
+  0% {
+    stroke-dasharray: 0 15;
+  }
+  100% {
+    stroke-dasharray: 15 15;
+  }
+}
+
+.successMessage {
+  h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+}
+
+.successSubtext {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+// Receipt Card
+.receiptCard {
+  padding: 2rem;
+}
+
+.receiptHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.6rem;
+  }
+}
+
+.receiptNumber {
+  background: #e3f2fd;
+  color: #046999;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.receiptDetails {
+  .receiptGrid {
+    display: grid;
+    gap: 2rem;
+  }
+}
+
+.receiptSection {
+  h3 {
+    color: #046999;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.receiptRowTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.receiptLabel {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.receiptValue {
+  font-weight: 600;
+  color: #333;
+}
+
+.receiptValueTotal {
+  font-weight: 700;
+  color: #046999;
+  font-size: 1.2rem;
+}
+
+// Action Buttons
+.receiptActions {
+  padding: 2rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.printButton,
+.emailButton {
+  padding: 0.75rem 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 3rem;
-  margin: 0 auto;
+  border: 2px solid #046999;
+  background: white;
+  color: #046999;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: #046999;
+  }
+}
+
+.homeButton {
+  background: linear-gradient(135deg, #046999 0%, #0056b3 100%);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+    border: 1px solid #046999;
+  }
+}
+
+// Additional Info
+.additionalInfo {
+  padding: 2rem;
+  background: #f8f9fa;
+
+  h4 {
+    color: #333;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.confirmationNote {
+  margin-bottom: 2rem;
+
+  ul {
+    margin: 0;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #666;
+      line-height: 1.5;
+    }
+  }
+}
+
+.contactInfo {
+  p {
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.contactDetails {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  a {
+    color: #046999;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Security Footer
+.securityFooter {
+  padding: 1.5rem 2rem;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+.securityBadges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.securityBadge {
+  background: white;
+  color: #046999;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+// Error Page Styles
+.errorWrapper {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
   text-align: center;
 
   h1 {
-    font-size: 2rem;
-    color: $theme;
-    margin-bottom: 2rem;
-
-    @include phone {
-      font-size: 1.75rem;
-    }
-  }
-
-  @include tablet {
-    padding: 2rem;
-  }
-
-  @include phone {
-    padding: 1.5rem;
+    color: #d32f2f;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.8rem;
   }
 }
 
 .errorMessage {
   p {
-    font-size: 1.125rem;
+    color: #666;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: $body;
+    margin-bottom: 1rem;
 
-    @include phone {
-      font-size: 1rem;
+    &:last-of-type {
+      margin-bottom: 1.5rem;
     }
   }
 }
 
 .contactEmail {
-  margin: 2rem 0;
-
   a {
-    color: $theme;
+    color: #046999;
+    text-decoration: none;
     font-weight: 600;
-    font-size: 1.25rem;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
 
     &:hover {
       text-decoration: underline;
-    }
-
-    @include phone {
-      font-size: 1.125rem;
     }
   }
 }
 
 .homeLink {
-  margin-top: 3rem;
+  margin-top: 2rem;
 
   a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: $theme;
+    background: #046999;
     color: white;
-    border-radius: 4px;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
 
     &:hover {
-      background-color: darken($theme, 10%);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background: #0056b3;
     }
+  }
+}
+
+// Loading wrapper for success page
+.loadingWrapper {
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+
+  p {
+    margin: 1rem 0 0 0;
+    color: #666;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .paymentContainer {
+    padding: 1rem;
+  }
+
+  .paymentWrapper {
+    margin: 0;
+  }
+
+  .paymentHeader {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+
+  .formContainer {
+    padding: 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .receiptCard {
+    padding: 1.5rem;
+  }
+
+  .receiptActions {
+    padding: 1.5rem;
+  }
+
+  .additionalInfo {
+    padding: 1.5rem;
+  }
+
+  .securityBadges {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .paymentContainer {
+    padding: 0.5rem;
+  }
+
+  .paymentHeader {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+
+  .formContainer {
+    padding: 1rem;
+  }
+
+  .receiptCard {
+    padding: 1rem;
+  }
+
+  .receiptActions {
+    padding: 1rem;
+  }
+
+  .additionalInfo {
+    padding: 1rem;
+  }
+
+  .successMessage h1 {
+    font-size: 1.8rem;
+  }
+
+  .receiptRowTotal {
+    font-size: 1rem;
+  }
+
+  .receiptValueTotal {
+    font-size: 1.1rem;
+  }
+}
+
+// Enhanced Error Page Styles
+.errorHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.errorIconLarge {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.errorSubtext {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.errorDetails {
+  margin-bottom: 2rem;
+}
+
+.suggestedAction {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  h4 {
+    margin: 0 0 0.5rem 0;
+    color: #856404;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+    color: #856404;
+  }
+}
+
+.technicalDetails {
+  margin-top: 1.5rem;
+
+  details {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 1rem;
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+    p {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}
+
+.errorActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .retryButton {
+    background: #28a745;
+    color: white;
+
+    &:hover {
+      background: #218838;
+    }
+  }
+
+  .supportButton {
+    background: #6c757d;
+    color: white;
+
+    &:hover {
+      background: #545b62;
+    }
+  }
+
+  .homeButton {
+    background: #046999;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      background: #0056b3;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.helpSection {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+
+  h4 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.1rem;
+  }
+}
+
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.helpItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+
+  .helpIcon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  h5 {
+    margin: 0 0 0.25rem 0;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  p {
+    margin: 0;
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+.contactMethods {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.businessHours {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+// Responsive updates for error page
+@media (max-width: 768px) {
+  .errorActions {
+    .retryButton,
+    .supportButton,
+    .homeButton {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+
+  .helpGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorIconLarge {
+    font-size: 3rem;
+  }
+
+  .helpItem {
+    padding: 0.75rem;
+
+    .helpIcon {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* Add these styles to your payment.module.scss */
+
+/* Email Status Notification */
+.emailStatusNotification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 400px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideInFromRight 0.3s ease-out;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.emailStatusNotification.emailSuccess {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.emailStatusNotification.emailWarning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.emailStatusContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.emailStatusIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.emailStatusContent div {
+  flex: 1;
+}
+
+.emailStatusContent strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.emailStatusContent p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.dismissButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.dismissButton:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emailSuccess .dismissButton {
+  color: #155724;
+}
+
+.emailWarning .dismissButton {
+  color: #856404;
+}
+
+/* Animation for the notification */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .emailStatusNotification {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+    padding: 14px 16px;
+  }
+
+  .emailStatusContent {
+    gap: 10px;
+  }
+
+  .emailStatusIcon {
+    font-size: 20px;
+  }
+
+  .emailStatusContent strong {
+    font-size: 13px;
+  }
+
+  .emailStatusContent p {
+    font-size: 12px;
+  }
+}
+
+/* Enhanced success page styles */
+.successWrapper {
+  position: relative;
+}
+
+.receiptCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.receiptHeader {
+  background: linear-gradient(135deg, #046999 0%, #0586c7 100%);
+  color: white;
+  padding: 24px 30px;
+  text-align: center;
+}
+
+.receiptHeader h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.receiptNumber {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.receiptDetails {
+  padding: 30px;
+}
+
+.receiptGrid {
+  display: grid;
+  gap: 30px;
+}
+
+.receiptSection h3 {
+  margin: 0 0 16px 0;
+  color: #046999;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 8px;
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.receiptRow:last-child {
+  border-bottom: none;
+}
+
+.receiptLabel {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.receiptValue {
+  color: #212529;
+  font-weight: 500;
+  text-align: right;
+}
+
+.receiptRowTotal {
+  background-color: #f8f9fa;
+  margin: 16px -30px 0 -30px;
+  padding: 16px 30px;
+  border-top: 2px solid #046999;
+}
+
+.receiptRowTotal .receiptLabel,
+.receiptRowTotal .receiptValue {
+  font-size: 18px;
+  font-weight: bold;
+  color: #046999;
+}
+
+.cardTypeBadge {
+  background-color: #e3f2fd;
+  color: #046999;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Action buttons */
+.receiptActions {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #046999 0%, #0586c7 100%);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.homeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(4, 105, 153, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+/* Additional info sections */
+.additionalInfo {
+  display: grid;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.confirmationNote,
+.contactInfo {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.confirmationNote h4,
+.contactInfo h4 {
+  margin: 0 0 16px 0;
+  color: #046999;
+  font-size: 16px;
+}
+
+.confirmationNote ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.confirmationNote li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.contactDetails {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactMethod a {
+  color: #046999;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contactMethod a:hover {
+  text-decoration: underline;
+}
+
+/* Security footer */
+.securityFooter {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e9ecef;
+}
+
+.securityBadges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.securityBadge {
+  background-color: #e8f5e8;
+  color: #2d5a2d;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #c3e6cb;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .receiptHeader,
+  .receiptDetails {
+    padding: 20px;
+  }
+
+  .receiptGrid {
+    gap: 24px;
+  }
+
+  .receiptRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .receiptValue {
+    text-align: left;
+  }
+
+  .receiptRowTotal {
+    margin: 16px -20px 0 -20px;
+    padding: 16px 20px;
+  }
+
+  .contactDetails {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .securityBadges {
+    gap: 12px;
+  }
+
+  .additionalInfo {
+    gap: 20px;
+  }
+
+  .confirmationNote,
+  .contactInfo {
+    padding: 20px;
   }
 }

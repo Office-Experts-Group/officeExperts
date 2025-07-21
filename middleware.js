@@ -1,9 +1,17 @@
+// middleware.js - FIXED VERSION
 import { NextResponse } from "next/server";
 import { goneUrls } from "./utils/goneUrls";
 
 export function middleware(request) {
   const path = request.nextUrl.pathname;
   const normalizedPath = path.toLowerCase();
+
+  // Determine payment method
+  const isDev = process.env.NODE_ENV === "development";
+  const isBpointBranch =
+    process.env.VERCEL_GIT_COMMIT_REF === "bpoint-integration";
+  const bpointEnabled = process.env.BPOINT_ENABLED === "true";
+  const useBpoint = isDev || isBpointBranch || bpointEnabled;
 
   // Enhanced handling for Next.js static media and system paths
   if (
@@ -15,7 +23,6 @@ export function middleware(request) {
     path.includes("/_next/data/")
   ) {
     const response = NextResponse.next();
-    // Strong directives to prevent crawling and indexing
     response.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
     response.headers.set(
       "Cache-Control",
@@ -41,53 +48,52 @@ export function middleware(request) {
 
   const response = NextResponse.next();
 
-  // Special handling for payment page - allow iframe embedding and sensors
+  // Special handling for payment page
   if (normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")) {
     response.headers.set("X-Frame-Options", "SAMEORIGIN");
-
-    // Add permissions policy to allow necessary features for payment processing
-    // The asterisk (*) allows all origins for these features
     response.headers.set(
       "Permissions-Policy",
       "accelerometer=*, gyroscope=*, magnetometer=*, payment=*, interest-cohort=(), camera=(), microphone=(), geolocation=()"
     );
+
+    // Combined CSP for both Bpoint and Simplify + Google services
+    const paymentCSP =
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
+      "style-src 'self' 'unsafe-inline' *.bpoint.com.au *.simplify.com *.googleapis.com; " +
+      "img-src 'self' data: https: *.bpoint.com.au *.simplify.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+      "font-src 'self' *.bpoint.com.au *.simplify.com *.gstatic.com; " +
+      "frame-src 'self' *.bpoint.com.au *.simplify.com *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
+      "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+      "connect-src 'self' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
+
+    response.headers.set("Content-Security-Policy", paymentCSP);
   } else {
+    // Non-payment pages
     response.headers.set("X-Frame-Options", "DENY");
-    // Default restrictive permissions policy for other pages
     response.headers.set(
       "Permissions-Policy",
       "accelerometer=(), gyroscope=(), magnetometer=(), payment=self, interest-cohort=(), camera=(), microphone=(), geolocation=()"
     );
+
+    // Standard CSP for other pages
+    const standardCSP =
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
+      "style-src 'self' 'unsafe-inline'; " +
+      "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+      "font-src 'self'; " +
+      "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
+      "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
+
+    response.headers.set("Content-Security-Policy", standardCSP);
   }
 
-  // Security headers
+  // Common security headers
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("X-XSS-Protection", "1; mode=block");
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-
-  // Modified CSP with special handling for payment page
-  const cspValue =
-    normalizedPath === "/ccp" || normalizedPath.startsWith("/ccp?")
-      ? // More permissive CSP for payment page
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com; " +
-        "style-src 'self' 'unsafe-inline' *.simplify.com; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.simplify.com *.ahrefs.com; " +
-        "font-src 'self' *.simplify.com; " +
-        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com *.simplify.com; " +
-        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.simplify.com api.simplify.com *.ahrefs.com analytics.ahrefs.com;"
-      : // Standard CSP for other pages
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
-        "style-src 'self' 'unsafe-inline'; " +
-        "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
-        "font-src 'self'; " +
-        "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
-        "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-        "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
-
-  response.headers.set("Content-Security-Policy", cspValue);
 
   return response;
 }
