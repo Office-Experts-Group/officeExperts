@@ -1,17 +1,10 @@
-// middleware.js - FIXED VERSION
+// middleware.js - FIXED CSP VERSION
 import { NextResponse } from "next/server";
 import { goneUrls } from "./utils/goneUrls";
 
 export function middleware(request) {
   const path = request.nextUrl.pathname;
   const normalizedPath = path.toLowerCase();
-
-  // Determine payment method
-  const isDev = process.env.NODE_ENV === "development";
-  const isBpointBranch =
-    process.env.VERCEL_GIT_COMMIT_REF === "bpoint-integration";
-  const bpointEnabled = process.env.BPOINT_ENABLED === "true";
-  const useBpoint = isDev || isBpointBranch || bpointEnabled;
 
   // Enhanced handling for Next.js static media and system paths
   if (
@@ -56,16 +49,16 @@ export function middleware(request) {
       "accelerometer=*, gyroscope=*, magnetometer=*, payment=*, interest-cohort=(), camera=(), microphone=(), geolocation=()"
     );
 
-    // Combined CSP for both Bpoint and Simplify + Google services
+    // FIXED: Combined CSP with all required Google domains
     const paymentCSP =
       "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.ahrefs.com analytics.ahrefs.com; " +
       "style-src 'self' 'unsafe-inline' *.bpoint.com.au *.simplify.com *.googleapis.com; " +
-      "img-src 'self' data: https: *.bpoint.com.au *.simplify.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+      "img-src 'self' data: https: *.bpoint.com.au *.simplify.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.google.com *.gstatic.com *.ahrefs.com; " +
       "font-src 'self' *.bpoint.com.au *.simplify.com *.gstatic.com; " +
       "frame-src 'self' *.bpoint.com.au *.simplify.com *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
       "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-      "connect-src 'self' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
+      "connect-src 'self' *.bpoint.com.au *.simplify.com api.simplify.com *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.google.com *.gstatic.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
 
     response.headers.set("Content-Security-Policy", paymentCSP);
   } else {
@@ -76,16 +69,16 @@ export function middleware(request) {
       "accelerometer=(), gyroscope=(), magnetometer=(), payment=self, interest-cohort=(), camera=(), microphone=(), geolocation=()"
     );
 
-    // Standard CSP for other pages
+    // FIXED: Standard CSP with all required Google domains
     const standardCSP =
       "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.ahrefs.com analytics.ahrefs.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.ahrefs.com analytics.ahrefs.com; " +
       "style-src 'self' 'unsafe-inline'; " +
-      "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.ahrefs.com; " +
+      "img-src 'self' data: https: *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.google.com *.gstatic.com *.ahrefs.com; " +
       "font-src 'self'; " +
       "frame-src 'self' *.vimeo.com player.vimeo.com *.googletagmanager.com; " +
       "media-src 'self' *.vimeo.com *.vimeocdn.com; " +
-      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.google-analytics.com *.googletagmanager.com *.google.com *.gstatic.com *.officeexperts.com.au *.ahrefs.com analytics.ahrefs.com;";
 
     response.headers.set("Content-Security-Policy", standardCSP);
   }
