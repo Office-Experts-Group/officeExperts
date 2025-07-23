@@ -272,35 +272,16 @@ const BpointPaymentForm = ({ params }) => {
       PT_V21: "Transaction blocked",
       PT_V22: "Invalid payment method for browser integration",
       PT_V23: "Currency mismatch in refund transaction",
+
+      // Default fallback
+      DEFAULT:
+        "Payment could not be processed. Please check your card details and try again, or contact your bank.",
     };
 
-    // Check if we have a specific mapped message
-    if (errorMessages[responseCode]) {
-      return errorMessages[responseCode];
-    }
-
-    // Check if we have the response text from Bpoint and it's meaningful
-    if (
-      responseText &&
-      responseText.trim() !== "" &&
-      responseText !== "Unknown" &&
-      responseText !== "Response Unknown" &&
-      responseText.toLowerCase() !== "error"
-    ) {
-      // Clean up the response text and make it user-friendly
-      const cleanedText = responseText.trim();
-
-      // If it's already a complete sentence, use it as-is
-      if (cleanedText.endsWith(".") || cleanedText.endsWith("!")) {
-        return `${cleanedText} Please try again or contact your bank if the problem persists.`;
-      }
-
-      // Otherwise, format it nicely
-      return `${cleanedText}. Please check your details and try again, or contact your bank for assistance.`;
-    }
-
-    // Final fallback for completely unknown errors
-    return "Your payment could not be processed at this time. Please check your card details and try again, or contact your bank for assistance.";
+    return (
+      errorMessages[responseCode] ||
+      `Payment declined (Code: ${responseCode}). Please contact your bank or try a different card.`
+    );
   };
 
   const handlePayment = async () => {
