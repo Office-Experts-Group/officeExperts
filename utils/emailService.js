@@ -326,7 +326,7 @@ export function generatePaymentConfirmationEmail({
                 </ul>
             </div>
             
-            <p>Thank you for choosing Office Experts Group for your Microsoft Office consulting needs. We look forward to delivering exceptional results for your project.</p>
+            <p>Thank you for choosing Office Experts Group. We look forward to delivering exceptional results for your project.</p>
             
             <div class="contact-section">
                 <h3>📞 Need Assistance?</h3>
@@ -334,7 +334,7 @@ export function generatePaymentConfirmationEmail({
                 <div class="contact-details">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:consult@officeexperts.com.au">consult@officeexperts.com.au</a>
+                        <a href="mailto:accounts@officeexperts.com.au">accounts@officeexperts.com.au</a>
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
