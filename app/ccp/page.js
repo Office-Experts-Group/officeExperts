@@ -91,7 +91,7 @@ import React from "react";
 import { decodeUrlParams } from "../../utils/paymentUtils";
 import PaymentForm from "./(components)/PaymentForm";
 import NoParamsMessage from "./(components)/NoParamsMessage";
-import SimplifyScriptLoader from "./(components)/SimplifyScriptLoader";
+// import SimplifyScriptLoader from "./(components)/SimplifyScriptLoader";
 import SuccessMessage from "./(components)/SuccessMessage";
 
 export const metadata = {
@@ -153,7 +153,7 @@ export default function CCPPage({ searchParams }) {
 
   return (
     <>
-      <SimplifyScriptLoader />
+      {/* <SimplifyScriptLoader /> */}
       <PaymentForm params={decodedParams} />
     </>
   );
