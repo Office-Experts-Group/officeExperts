@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -40,8 +41,8 @@ const PageSegmentMain = () => {
               option is best.
             </p>
             <p>
-              We work with many online solutions including SharePoint, Office
-              365, ASP.NET, Azure and Google Docs.
+              We work with many online solutions including SharePoint, <Link href={"/services/microsoft-office-365"}>Office
+              365</Link>, <Link href="/services/microsoft-dot-net">ASP.NET</Link>, <Link href={"/services/by-business-solution/cloud-based-solutions-with-azure"}>Azure</Link> and Google Docs.
             </p>
           </div>
         </AnimateOnScroll>

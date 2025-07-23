@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -34,10 +35,7 @@ const Segment3copy = () => {
             workbooks, then an add-in could be a smart choice.
           </p>
           <p>
-            If the add-in features are for your organisation only and security
-            and deployment won&apos;t be a barrier for you, then a simple VBA
-            add-in will suit your needs, otherwise a VSTO add-in may be
-            required.
+          If the Excel add-in features are for your organisation only and security and deployment won't be a barrier for you, then a simple VBA add-in will suit your needs, otherwise a VSTO add-in may be required. For solutions that need to work across multiple Microsoft Office applications beyond Excel, you may want to explore our <Link style={{ color: "#046999", fontWeight: "700" }} href={"/services/by-business-solution/add-in-creation"}>Office add-in creation services</Link>, which provide broader integration capabilities.
           </p>
         </AnimateOnScroll>
       </div>

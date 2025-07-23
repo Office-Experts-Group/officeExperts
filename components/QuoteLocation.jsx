@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
@@ -11,40 +11,18 @@ const SurveyForm = dynamic(() => import("./SurveyForm"), {
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
-  // Documents
   "application/pdf",
   "application/msword",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-  "application/vnd.oasis.opendocument.text",
-  "application/rtf",
   "text/plain",
-  "text/csv",
-  "text/html",
-  "text/markdown",
-
-  // Images
-  "image/jpeg",
-  "image/png",
-  "image/gif",
-  "image/bmp",
-  "image/webp",
-  "image/svg+xml",
-  "image/tiff",
-
-  // Archives (if needed)
   "application/zip",
-  "application/x-rar-compressed",
-
-  // Spreadsheets
-  "application/vnd.ms-excel",
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-  "application/vnd.oasis.opendocument.spreadsheet",
 ];
 
 const QuoteLocation = ({ location }) => {
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasConversionTracking, setHasConversionTracking] = useState(false);
   const [formData, setFormData] = useState({
     location: location,
     service: "",
@@ -60,15 +38,34 @@ const QuoteLocation = ({ location }) => {
     honeypot: "",
   });
 
-  // States to pass to SurveyForm
-  const [surveyName, setSurveyName] = useState("");
-  const [surveyEmail, setSurveyEmail] = useState("");
-
   // Create refs for form fields that might need focus
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
   const termsRef = useRef(null);
+
+  // Check if conversion tracking is available
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Check if the conversion function exists
+      setHasConversionTracking(typeof window.gtag_report_conversion === 'function');
+      
+      // Set up a MutationObserver to detect when conversion tracking becomes available
+      if (!window.gtag_report_conversion) {
+        const observer = new MutationObserver(() => {
+          if (typeof window.gtag_report_conversion === 'function') {
+            setHasConversionTracking(true);
+            observer.disconnect();
+          }
+        });
+        
+        // Watch for changes to the body element
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+        return () => observer.disconnect();
+      }
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -88,10 +85,7 @@ const QuoteLocation = ({ location }) => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (!file) {
-      setFormData((prev) => ({ ...prev, file: null }));
-      return;
-    }
+    if (!file) return;
 
     if (file.size > MAX_FILE_SIZE) {
       setError((prev) => ({
@@ -136,11 +130,8 @@ const QuoteLocation = ({ location }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setError({});
-
-    setSurveyName(formData.name);
-    setSurveyEmail(formData.email);
+    setIsSubmitting(true);
 
     if (formData.honeypot) {
       setIsSubmitting(false);
@@ -164,7 +155,7 @@ const QuoteLocation = ({ location }) => {
     if (Object.keys(newError).length > 0) {
       setError(newError);
       setIsSubmitting(false);
-
+      
       // Get the first error field
       const firstErrorField = Object.keys(newError)[0];
       // Get the corresponding ref
@@ -181,13 +172,27 @@ const QuoteLocation = ({ location }) => {
     }
 
     try {
-      const res = await fetch("/api/quoteLocation", {
+      const res = await fetch("/api/quoteForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (res.ok) {
+        // Track conversion if available
+        if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
+          window.gtag_report_conversion();
+        }
+        
+        // Send additional event to Google Analytics
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'quote_location_submission', {
+            'event_category': 'Forms',
+            'event_label': `Location Quote: ${location}`,
+            'value': 1
+          });
+        }
+        
         setSuccess(true);
         setFormData({
           location: location,
@@ -204,16 +209,10 @@ const QuoteLocation = ({ location }) => {
           honeypot: "",
         });
       } else {
-        const data = await res.json();
-        setError({
-          general: data.error || "Something went wrong. Please try again.",
-        });
+        setError({ general: "Something went wrong. Please try again." });
       }
     } catch (err) {
-      setError({
-        general:
-          "There was an error submitting the form. Please try again later.",
-      });
+      setError({ general: "There was an error submitting the form." });
     } finally {
       setIsSubmitting(false);
     }
@@ -222,7 +221,7 @@ const QuoteLocation = ({ location }) => {
   if (success) {
     return (
       <div className={styles.successMessage} role="alert" aria-live="polite">
-        <SurveyForm name={surveyName} email={surveyEmail} />
+        <SurveyForm name={formData.name || ""} email={formData.email || ""} />
       </div>
     );
   }
@@ -372,7 +371,6 @@ const QuoteLocation = ({ location }) => {
             disabled={isSubmitting}
           />
         </div>
-
         <div className={styles.formField}>
           <label htmlFor="website">Website</label>
           <input
@@ -390,52 +388,129 @@ const QuoteLocation = ({ location }) => {
         <div className={styles.radioFieldSpan}>
           <label className={styles.groupLabel}>Microsoft Service</label>
           <div className={styles.radioOptionsGrid}>
-            {[
-              "Office",
-              "Access",
-              "Excel",
-              "Power Platform",
-              "Word",
-              "Not Sure",
-            ].map((serviceName) => (
-              <div key={serviceName} className={styles.radioOption}>
-                <input
-                  type="radio"
-                  id={serviceName.toLowerCase().replace(" ", "-")}
-                  name="service"
-                  value={serviceName}
-                  checked={formData.service === serviceName}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                />
-                <label htmlFor={serviceName.toLowerCase().replace(" ", "-")}>
-                  {serviceName}
-                </label>
-              </div>
-            ))}
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="Office"
+                name="service"
+                value="Office"
+                checked={formData.service === "Office"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="Office">Office</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="Access"
+                name="service"
+                value="Access"
+                checked={formData.service === "Access"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="Access">Access</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="Excel"
+                name="service"
+                value="Excel"
+                checked={formData.service === "Excel"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="Excel">Excel</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="power-platform"
+                name="service"
+                value="Power Platform"
+                checked={formData.service === "Power Platform"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="power-platform">Power Platform</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="Word"
+                name="service"
+                value="Word"
+                checked={formData.service === "Word"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="Word">Word</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="not-sure"
+                name="service"
+                value="Not Sure"
+                checked={formData.service === "Not Sure"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="not-sure">Not Sure</label>
+            </div>
           </div>
         </div>
 
         <div className={styles.radioFieldSpan}>
           <label className={styles.groupLabel}>Operating System</label>
           <div className={styles.radioOptions}>
-            {["Windows", "Mac", "Other"].map((system) => (
-              <div key={system} className={styles.radioOption}>
-                <input
-                  type="radio"
-                  id={system.toLowerCase()}
-                  name="operatingSystem"
-                  value={system}
-                  checked={formData.operatingSystem === system}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                />
-                <label htmlFor={system.toLowerCase()}>{system}</label>
-              </div>
-            ))}
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="windows"
+                name="operatingSystem"
+                value="Windows"
+                checked={formData.operatingSystem === "Windows"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="windows">Windows</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="mac"
+                name="operatingSystem"
+                value="Mac"
+                checked={formData.operatingSystem === "Mac"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="mac">Mac</label>
+            </div>
+
+            <div className={styles.radioOption}>
+              <input
+                type="radio"
+                id="other"
+                name="operatingSystem"
+                value="Other"
+                checked={formData.operatingSystem === "Other"}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+              <label htmlFor="other">Other</label>
+            </div>
           </div>
         </div>
-
         <div className={styles.uploadField}>
           <label htmlFor="file">
             Upload a file
@@ -461,7 +536,6 @@ const QuoteLocation = ({ location }) => {
             </p>
           )}
         </div>
-
         <div className={styles.termsField}>
           <label className={styles.checkboxLabel}>
             <input
@@ -505,8 +579,8 @@ const QuoteLocation = ({ location }) => {
         </div>
       </div>
 
-      <button
-        type="submit"
+      <button 
+        type="submit" 
         className={`btn ${styles.submitBtn}`}
         disabled={isSubmitting}
       >

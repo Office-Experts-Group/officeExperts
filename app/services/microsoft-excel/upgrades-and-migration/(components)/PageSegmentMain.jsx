@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "../../../../../styles/pageSegment.module.scss";
 
-import dreadLady from "../../../../../public/dreadLady.webp";
+import upgrade from "../../../../../public/upgrade600x400.webp";
 import semi from "../../../../../public/shapes/semi600x600.webp";
 
 const PageSegmentMain = () => {
@@ -22,8 +22,8 @@ const PageSegmentMain = () => {
       />
       <div className={styles.imgWrapper}>
         <Image
-          src={dreadLady}
-          alt="lady in an office environment"
+          src={upgrade}
+          alt="time to upgrade text on a clock"
           width={540}
           height={480}
         />

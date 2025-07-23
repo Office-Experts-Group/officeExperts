@@ -30,7 +30,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-05-29T00:00:00+00:00",
       description:
         "Why Use Add-Ins? Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
       breadcrumb: {

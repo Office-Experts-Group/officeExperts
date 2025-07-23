@@ -33,9 +33,9 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-03-26T00:00:00+00:00",
       description:
-        "We can build What You Need! We have extensive experience in all aspects of Excel custom design and development including. Call us 1300102810",
+        "We can build What You Need! We have extensive experience in all aspects of Excel custom design and development. Call us 1300 102 810",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development#breadcrumb",

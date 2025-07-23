@@ -1,6 +1,6 @@
 // app/api/bpoint/create-authkey/route.js
 import { NextResponse } from "next/server";
-import { getPaymentConfig } from "../../../../utils/paymentConfig";
+import { getPaymentConfig } from "../../../utils/paymentConfig";
 
 export async function POST(request) {
   try {

@@ -310,7 +310,7 @@ export const teamMembers = [
   {
     name: "Dan",
     role: "WEBSITE DEVELOPER",
-    skills: ["NextJS", "Node", "WordPress", "SQL", "MongoDB", "React"],
+    skills: ["NextJS", "Node", "WordPress", "SQL", "PHP", "React", "Excel"],
     image: dan,
   },
   {

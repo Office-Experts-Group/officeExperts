@@ -28,9 +28,9 @@ const PageSegmentMain = () => {
             <p>Exchange Online</p>
             <h2>We'll Set You Up In No Time!</h2>
             <p>
-              Online storage has been a growing trend over the past few years,
+              Online storage has been a growing trend over the past decade,
               and one of the best options available on the market is OneDrive
-              from Microsoft. It’s a powerful tool that provides users of all
+              from Microsoft. It's a powerful tool that provides users of all
               levels with a number of benefits. OneDrive is available for
               iPhones, Android phones, Windows Phones, iPads, Android tablets,
               Windows tablets, Windows PCs and Macs.

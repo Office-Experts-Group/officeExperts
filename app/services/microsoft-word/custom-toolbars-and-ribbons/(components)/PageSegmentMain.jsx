@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -28,11 +29,15 @@ const PageSegmentMain = () => {
             <p>Custom Built</p>
             <h2>Enhanced Toolbars & Ribbons for Seamless Document Control</h2>
             <p>
-              Our team of Word design experts will deliver your document
-              templates with levels of automation that can include custom
-              toolbars and ribbons that will improve your staff productivity,
-              bringing cost savings, while improving consistency and overall
-              quality of your business documentation.
+              Our team of Word design experts will deliver your{" "}
+              <Link href="/services/microsoft-word/corporate-global-template-solution">
+                {" "}
+                document templates
+              </Link>{" "}
+              with levels of automation that can include custom toolbars and
+              ribbons that will improve your staff productivity, bringing cost
+              savings, while improving consistency and overall quality of your
+              business documentation.
             </p>
           </div>
         </AnimateOnScroll>

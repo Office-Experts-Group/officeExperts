@@ -69,9 +69,11 @@ h6 a {
 h1 {
   font-size: 40px;
   font-weight: 500;
+  text-wrap: balance;
 }
 h2 {
   font-size: 35px;
+  text-wrap: balance;
 }
 h3 {
   font-size: 28px;
@@ -89,6 +91,9 @@ ul {
   margin: 0px;
   padding: 0px;
   margin-bottom: 20px;
+}
+p {
+  text-wrap: pretty;
 }
 
 button {

@@ -31,7 +31,7 @@ const PageSegmentMain = () => {
             <h2>Stuck on an Old Version?</h2>
             <p>
               Are you experiencing the cold reality or unsettling concerns that
-              your Microsoft Access databases won&apos;t function correctly with
+              your Microsoft Access databases won't function correctly with
               your upgraded version of Microsoft Office?
             </p>
             <p>

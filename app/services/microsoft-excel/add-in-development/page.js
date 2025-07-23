@@ -37,7 +37,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-03-26T00:00:00+00:00",
       description:
         "What is an Excel Add-In? An Excel add-in contains code that adds additional functionality to Excel, usually in the form of new functions. Call us 1300102810",
       breadcrumb: {
@@ -96,7 +96,7 @@ const Page = () => {
       />
       <Contents />
       <ServiceHero
-        title={"3rd Party Product Integration"}
+        title={"Add-in Development"}
         desktopImage={party}
         mobileImage={coffeeMob}
         altDesk={"lady in an office environment"}

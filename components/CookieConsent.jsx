@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import Script from "next/script";
 import styles from "../styles/cookieConsent.module.css";
 
-// Google Analytics ID
+// Google Analytics ID for Office Experts
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PPD9KDBZCN";
+// Google Ads Conversion ID and Label (same across all sites)
+const GADS_CONVERSION_ID = "AW-1062762865";
+const GADS_CONVERSION_LABEL = "ZqwXCP_M6MYaEPHy4foD";
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,8 +75,76 @@ const CookieConsent = () => {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${GA_ID}');
+              gtag('config', '${GADS_CONVERSION_ID}', {
+                'send_page_view': false,
+                'linker': {
+                  'domains': ['excelexperts.com.au', 'officeexperts.com.au', 'accessexperts.com.au', 'wordexperts.com.au', 'powerplatformexperts.com.au']
+                }
+              });
+              
+              // Single definition of conversion tracking function
+              window.gtag_report_conversion = function(url) {
+                try {
+                  var callback = function () {
+                    if (typeof(url) != 'undefined') {
+                      window.location = url;
+                    }
+                  };
+                  
+                  if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                      'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}',
+                      'event_callback': callback
+                    });
+                  } else {
+                    console.log("Google Analytics not available yet, no conversion tracked");
+                    if (typeof callback === 'function') {
+                      callback();
+                    }
+                  }
+                  return false;
+                } catch (error) {
+                  console.error("Error in conversion tracking:", error);
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                  return false;
+                }
+              };
             `}
           </Script>
+
+          {/* Enhanced conversion tracking with GA4 events */}
+<Script id="conversion-tracking-auto" strategy="afterInteractive">
+  {`
+    window.addEventListener('load', function() {
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.contact_submitBtn__e1DBC')) {
+          var contactTimer = setInterval(function() {
+            if (document.querySelectorAll('.contact_successMessage__LYjcy').length > 0) {
+              // Google Ads conversion (only counts if from ad click)
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
+                
+                // Google Analytics event (tracks ALL form submissions)
+                gtag('event', 'form_submit', {
+                  'event_category': 'Contact',
+                  'event_label': 'Contact Form Submission',
+                  'value': 1,
+                  'custom_parameters': {
+                    'form_type': 'contact',
+                    'page_location': window.location.href
+                  }
+                });
+              }
+              clearInterval(contactTimer);
+            }
+          }, 1000);
+        }
+      });
+    });
+  `}
+</Script>
         </>
       )}
 

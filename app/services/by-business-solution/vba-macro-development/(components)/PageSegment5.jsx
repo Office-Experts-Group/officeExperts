@@ -1,19 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 import styles from "../../../../../styles/pageSegment3.module.css";
 
-import template from "../../../../../public/template600x400.webp";
+import upgrade from "../../../../../public/upgrade600x400.webp";
 
 const PageSegment3 = () => {
   return (
     <section className={`${styles.pageSegment} ${styles.padded}`} id="upgrade">
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
         <Image
-          src={template}
-          alt="person clicking a computer mouse"
+          src={upgrade}
+          alt="time to upgrade text on a clock"
           width={600}
           height={400}
         />
@@ -31,7 +32,7 @@ const PageSegment3 = () => {
           </p>
           <p>
             If your workbooks are not functioning correctly under your version
-            of Excel, or your documents and templates are not functioning
+            of Excel, or your <Link href="/services/microsoft-word/word-document-template-creation">documents and templates</Link> are not functioning
             correctly under your version of Word, contact us today to clear up
             your technology issues.
           </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -20,11 +21,11 @@ const Segment4Repeat = () => {
               We Understand Accessibility!
             </h2>
             <p>
-              Office Experts Group have worked with many Government departments,
+              Office Experts Group have worked with many <Link href="/services/microsoft-word/government-departments">Government departments,</Link>
               state, federal and corporate, over many years. We understand the
-              department&aspos;s needs and can tailor a solution that will
+              department's needs and can tailor a solution that will
               assist hundreds of users in creating documents that not only look
-              great but also adhere to Accessibility guidelines.
+              great but also adhere to the latest accessibility guidelines.
             </p>
             <p>
               With our master templates, users can create many sub templates in

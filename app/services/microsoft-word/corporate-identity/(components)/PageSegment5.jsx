@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -25,13 +26,11 @@ const PageSegment3 = () => {
             Secure and Customisable Document Solutions
           </h2>
           <p>
-            We can create a branded consistent solution for your company that is
-            protected and will not allow users to do anything other than what
-            they are permitted. We can create highly complex documents by using
-            features such as headers/footers, styles, protection, tables,
-            columns, content controls, VBA, quick parts, bookmarks, fields,
-            table of contents and many other features.
-          </p>
+              We can create professional, <Link href={"/services/microsoft-word/corporate-global-template-solution"}>easy to use templates</Link> that will keep
+              to your company's branding, thus creating a consistent look and a
+              professional feel. One of our designers would be happy to help you
+              with your requirements.
+            </p>
           <p>
             If you need a Word template created properly, contact one of our
             designers to discuss your requirements further.

@@ -26,7 +26,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2024-10-27T00:00:00+00:00",
+      dateModified: "2025-03-27T00:00:00+00:00",
       description:
         "Meet our team of experienced Microsoft Office consultants. Expert developers and consultants in all fields of Microsoft technologies.",
       breadcrumb: {

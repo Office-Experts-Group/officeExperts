@@ -22,7 +22,7 @@ const PageSegment4 = () => {
               Outlook. An online database will give you a central data store
               which you can link to remotely via your Desktop PC, Windows tablet
               or Windows Mobile device. This way of working with online data
-              allows your staff to work anywhere and you’ll be pleasantly
+              allows your staff to work anywhere and you'll be pleasantly
               surprised to know our quotes are very competitive!
             </p>
           </div>

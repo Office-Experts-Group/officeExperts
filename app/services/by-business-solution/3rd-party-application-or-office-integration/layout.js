@@ -4,7 +4,7 @@ export const metadata = {
   // Basic metadata
   title: "3rd Party Application | Office Experts Group",
   description:
-    "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
+    "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem. Get expert advice today!",
 
   keywords: [
     // Core integration services
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "3rd Party Application | Office Experts Group",
     description:
-      "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
+    "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem. Get expert advice today!",
     url: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
     siteName: "Office Experts Group",
     images: [
@@ -40,7 +40,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "3rd Party Application | Office Experts Group",
     description:
-      "We are Integration Experts! Do you have a Microsoft Office or CRM application, an accounting package. Visit our website www.officeexperts.com.au",
+    "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem. Get expert advice today!",
     images: ["/logo.png"],
   },
 };

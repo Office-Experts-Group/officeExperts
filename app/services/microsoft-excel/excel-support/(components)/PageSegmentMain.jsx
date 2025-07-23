@@ -29,20 +29,14 @@ const PageSegmentMain = () => {
       </div>
 
       <div className={styles.contentWrapper}>
-        <div className={styles.content}>
-          <p>Excel Expert Consultants</p>
-          <h2>Help and Training</h2>
+      <div className={styles.content}>
+          <p>Expert Consultants</p>
+          <h2>Excel Support and Training</h2>
           <p>
-            Are you struggling with some of the features in Excel? Do you need
-            some guidance from time to time?
+          Whether you're struggling with complex formulas, data analysis, pivot tables, or automation tasks, our Excel experts provide tailored support through remote access, over the phone or in house. We deliver instant guidance and practical solutions that keep your business moving forward.
           </p>
           <p>
-            Via remote access (Skype, Team Viewer or your preferred app) and the
-            phone, we can offer you instant support and advice. Whether you are
-            an individual or have a team of people, our team of experts are
-            ready to talk through your requirements and help work through your
-            issues. You'll appreciate having your own dedicated consultant
-            available for support when you need them most.
+          From individual professionals to entire departments, we offer flexible support options tailored to your specific needs. Having a dedicated Excel consultant means you'll always have expert help available when deadlines approach or unexpected issues arise.
           </p>
         </div>
       </div>

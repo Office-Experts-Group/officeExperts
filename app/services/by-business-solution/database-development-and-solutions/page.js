@@ -38,9 +38,8 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
-      description:
-        "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
+      dateModified: "2025-05-29T00:00:00+00:00",
+description: "Custom Microsoft database solutions built by certified experts. We design, develop and support Access databases, SQL Server solutions, and cloud database systems tailored to your business needs.",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions#breadcrumb",

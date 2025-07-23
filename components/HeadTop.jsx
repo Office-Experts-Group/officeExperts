@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import PhoneLink from "./PhoneLink";
+
 import styles from "../styles/header.module.css";
 
 import maps from "../public/icons/mapsBlue.webp";
@@ -47,10 +49,13 @@ const HeadTop = () => {
         </div>
 
         <div>
-          <Link href="tel:+61-1300-102-810">
-            <Image src={msg} alt="email" width={12} height={12} priority />
-            1300 102 810
-          </Link>
+          <PhoneLink 
+            phoneNumber="+61-1300-102-810"
+            displayText="1300 102 810"
+            icon={msg}
+            iconWidth={12}
+            iconHeight={12}
+          />
         </div>
       </div>
     </div>

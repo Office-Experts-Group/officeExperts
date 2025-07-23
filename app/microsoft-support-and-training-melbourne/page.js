@@ -36,7 +36,7 @@ const schemaData = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-13T00:00:00+00:00",
-      dateModified: "2025-03-13T00:00:00+00:00",
+      dateModified: "2025-05-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/microsoft-support-and-training-melbourne#breadcrumb",
@@ -65,12 +65,6 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Locations",
-          item: "https://www.officeexperts.com.au/locations",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
           name: "Microsoft Support and Training Melbourne",
         },
       ],
@@ -92,7 +86,7 @@ const MelbourneSupportTraining = () => {
   const trainingServices = [
     "Excel – Running through advanced formulas, Power Query automation, VBA macros, interactive dashboards and financial modelling.",
     "Word – Efficient document formatting, automated templates, custom formatting ribbons and mail merge functionality for bulk communications.",
-    "Access – Database structuring, query optimization and migrating legacy Access applications to the cloud.",
+    "Access – Database structuring, query optimisation and migrating legacy Access applications to the cloud.",
     "Power Platform – Creating Power Apps for internal business workflows, automating tasks with Power Automate and visualising data in Power BI.",
   ];
 
@@ -255,7 +249,7 @@ const MelbourneSupportTraining = () => {
               Working with our Melbourne-based Microsoft specialists ensures you
               receive responsive, personalised service that understands local
               business needs. Our consultants are familiar with the unique
-              requirements of Queensland businesses and can provide both
+              requirements of Victorian businesses and can provide both
               scheduled on-site visits and rapid remote assistance when urgent
               issues arise. Our combined support and training approach has
               helped hundreds of businesses over the last 25 years.

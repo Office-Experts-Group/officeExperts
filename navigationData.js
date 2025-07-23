@@ -76,6 +76,18 @@ export const navigationData = {
             href: `/services/microsoft-vbscript`,
           },
           {
+            label: "Add-in Creation",
+            href: `/services/by-business-solution/add-in-creation`,
+          },
+          {
+            label: "Power Query",
+            href: "/services/power-query",
+          },
+          {
+            label: "Power Pivot",
+            href: "/services/power-pivot",
+          },
+          {
             label: "Support & Training",
             href: "/microsoft-support-and-training-australia",
           },
@@ -149,6 +161,14 @@ export const navigationData = {
             label: "Training and User Support",
             href: `${WORD_EXPERTS_URL}/training`,
           },
+                    {
+            label: "Document Rebranding",
+            href: `${WORD_EXPERTS_URL}/document-rebranding-services`,
+          },
+          {
+            label: "Brand Templates",
+            href: `${WORD_EXPERTS_URL}/brand-templates`,
+          }
         ],
       },
       {
@@ -203,10 +223,6 @@ export const navigationData = {
             label: "Office Integration with Excel",
             href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
           },
-          {
-            label: "Add-in Creation",
-            href: `/services/by-business-solution/add-in-creation`,
-          },
         ],
       },
       {
@@ -258,6 +274,14 @@ export const navigationData = {
           {
             label: "Simple, Scalable Websites with Power Pages",
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
+          },
+          {
+            label: "Power Bi Support",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-support`
+          },
+          {
+            label: "Power Apps Support",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/power-apps-support`
           },
         ],
       },

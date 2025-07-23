@@ -1,12 +1,23 @@
 // utils/bpointSurchargeUtils.js
+// export const SURCHARGE_RATES = {
+//   VISA: 1.27,
+//   MASTERCARD: 1.27,
+//   AMEX: 2.35,
+//   AMERICAN_EXPRESS: 2.35,
+//   DINERS: 1.27, // Assuming same as Visa/MC
+//   JCB: 1.27, // Assuming same as Visa/MC
+//   MASTERCARD_2_SERIES: 1.27,
+// };
+
+// temporary rates until change over of invoice system
 export const SURCHARGE_RATES = {
-  VISA: 1.27,
-  MASTERCARD: 1.27,
-  AMEX: 2.35,
-  AMERICAN_EXPRESS: 2.35,
-  DINERS: 1.27, // Assuming same as Visa/MC
-  JCB: 1.27, // Assuming same as Visa/MC
-  MASTERCARD_2_SERIES: 1.27,
+  VISA: 0.79,
+  MASTERCARD: 0.79,
+  AMEX: 0.79,
+  AMERICAN_EXPRESS: 0.79,
+  DINERS: 0.79,
+  JCB: 0.79,
+  MASTERCARD_2_SERIES: 0.79,
 };
 
 export const CARD_TYPE_PATTERNS = {

@@ -34,7 +34,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2024-10-27T00:00:00+00:00",
+      dateModified: "2025-03-27T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney#breadcrumb",
