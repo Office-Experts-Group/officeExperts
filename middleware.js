@@ -13,10 +13,16 @@ export function middleware(request) {
   const bpointEnabled = process.env.BPOINT_ENABLED === "true";
   const useBpoint = isDev || isBpointBranch || bpointEnabled;
 
-  // Handle static media files - completely block from crawling
-  if (path.includes("/_next/static/media/")) {
+  // Enhanced handling for Next.js static media and system paths
+  if (
+    path.includes("/_next/static/media/") ||
+    path.includes("/_next/static/chunks/") ||
+    path.includes("/_next/static/css/") ||
+    path.includes("/_next/static/images/") ||
+    path.includes("/_next/image") ||
+    path.includes("/_next/data/")
+  ) {
     const response = NextResponse.next();
-    // Strong directives to prevent crawling and indexing
     response.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
     response.headers.set(
       "Cache-Control",
@@ -95,7 +101,8 @@ export function middleware(request) {
 export const config = {
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-    "/_next/static/media/:path*",
-    "/_next/:path*",
+    "/_next/static/:path*",
+    "/_next/image/:path*",
+    "/_next/data/:path*",
   ],
 };

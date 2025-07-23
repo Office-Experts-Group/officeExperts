@@ -1,3 +1,4 @@
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const REDIRECTS = [
   {
     source: "/services/by-product-and-technology/microsoft-dot-net",
@@ -333,8 +334,6 @@ const NOINDEX_REDIRECTS = [
   },
 ];
 
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
@@ -347,18 +346,10 @@ const nextConfig = {
   images: {
     formats: ["image/webp"],
     minimumCacheTTL: 31536000,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'img.youtube.com',
-        pathname: '/**',
-      },
-    ],
   },
-  
 
   async redirects() {
-    return REDIRECTS;
+    return [...REDIRECTS, ...NOINDEX_REDIRECTS];
   },
 
   async headers() {
@@ -429,7 +420,6 @@ const nextConfig = {
   },
 
   webpack: (config, { dev, isServer }) => {
-    // Add CSS minification in production builds
     if (!dev && !isServer) {
       config.optimization.minimizer.push(new CssMinimizerPlugin());
     }

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Invoice URL Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .url-box {
+        background: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 10px 0;
+        word-break: break-all;
+      }
+      .params {
+        background: #e8f4fd;
+        padding: 10px;
+        border-radius: 3px;
+      }
+      button {
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .copy-btn {
+        background: #007cba;
+        color: white;
+        border: none;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Test Invoice URL Generator</h1>
+
+      <h2>🔗 Ready-to-Use Test URLs:</h2>
+
+      <h3>$1.00 Test Invoice</h3>
+      <div class="params">
+        Parameters: A=100, I=TEST001, C=Test Customer,
+        E=test@officeexperts.com.au, S=0
+      </div>
+      <div class="url-box" id="url1"></div>
+      <button class="copy-btn" onclick="copyUrl('url1')">Copy URL</button>
+
+      <h3>$5.00 Test Invoice</h3>
+      <div class="params">
+        Parameters: A=500, I=TEST005, C=John Smith, E=john@test.com, S=0
+      </div>
+      <div class="url-box" id="url2"></div>
+      <button class="copy-btn" onclick="copyUrl('url2')">Copy URL</button>
+
+      <h3>$10.50 Test Invoice (with surcharge)</h3>
+      <div class="params">
+        Parameters: A=1050, I=TEST010, C=Jane Doe, E=jane@test.com, S=50
+      </div>
+      <div class="url-box" id="url3"></div>
+      <button class="copy-btn" onclick="copyUrl('url3')">Copy URL</button>
+
+      <hr />
+
+      <h2>🛠️ Custom Test Invoice Generator</h2>
+      <form id="invoiceForm">
+        <p>
+          <label
+            >Amount (in cents):
+            <input
+              type="number"
+              id="amount"
+              value="100"
+              placeholder="100 = $1.00"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Invoice Number:
+            <input
+              type="text"
+              id="invoice"
+              value="CUSTOM001"
+              placeholder="CUSTOM001"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Customer Name:
+            <input
+              type="text"
+              id="customer"
+              value="Test Customer"
+              placeholder="Test Customer"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Email:
+            <input
+              type="email"
+              id="email"
+              value="test@example.com"
+              placeholder="test@example.com"
+          /></label>
+        </p>
+        <p>
+          <label
+            >Surcharge (in cents):
+            <input type="number" id="surcharge" value="0" placeholder="0"
+          /></label>
+        </p>
+        <button type="button" onclick="generateCustomUrl()">
+          Generate Custom URL
+        </button>
+      </form>
+
+      <div id="customResult" style="display: none">
+        <h3>Custom URL Generated:</h3>
+        <div class="url-box" id="customUrl"></div>
+        <button class="copy-btn" onclick="copyUrl('customUrl')">
+          Copy Custom URL
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function generateTestUrls() {
+        // Test invoice data
+        const testInvoices = [
+          {
+            A: "100", // $1.00
+            I: "TEST001",
+            C: "Test Customer",
+            E: "test@officeexperts.com.au",
+            S: "0",
+          },
+          {
+            A: "500", // $5.00
+            I: "TEST005",
+            C: "John Smith",
+            E: "john@test.com",
+            S: "0",
+          },
+          {
+            A: "1050", // $10.50
+            I: "TEST010",
+            C: "Jane Doe",
+            E: "jane@test.com",
+            S: "50",
+          },
+        ];
+
+        testInvoices.forEach((params, index) => {
+          const searchParams = new URLSearchParams(params);
+          const paramString = searchParams.toString();
+          const encodedParams = btoa(paramString);
+          const testUrl = `https://www.officeexperts.com.au/ccp?q=${encodeURIComponent(
+            encodedParams
+          )}`;
+
+          document.getElementById(`url${index + 1}`).textContent = testUrl;
+        });
+      }
+
+      function generateCustomUrl() {
+        const params = {
+          A: document.getElementById("amount").value,
+          I: document.getElementById("invoice").value,
+          C: document.getElementById("customer").value,
+          E: document.getElementById("email").value,
+          S: document.getElementById("surcharge").value,
+        };
+
+        const searchParams = new URLSearchParams(params);
+        const paramString = searchParams.toString();
+        const encodedParams = btoa(paramString);
+        const customUrl = `https://www.officeexperts.com.au/ccp?q=${encodeURIComponent(
+          encodedParams
+        )}`;
+
+        document.getElementById("customUrl").textContent = customUrl;
+        document.getElementById("customResult").style.display = "block";
+      }
+
+      function copyUrl(elementId) {
+        const urlText = document.getElementById(elementId).textContent;
+        navigator.clipboard.writeText(urlText).then(() => {
+          alert("URL copied to clipboard!");
+        });
+      }
+
+      // Generate URLs when page loads
+      window.onload = generateTestUrls;
+    </script>
+  </body>
+</html>
