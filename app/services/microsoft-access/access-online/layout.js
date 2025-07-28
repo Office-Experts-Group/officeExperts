@@ -11,13 +11,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "/services/microsoft-access/access-online",
-    alternate: [
-      {
-        url: "https://www.accessexperts.com.au/access-online",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.accessexperts.com.au/access-online",
   },
 
   // OpenGraph
@@ -25,7 +19,7 @@ export const metadata = {
     title: "Online Access Database Solutions | Office Experts Group",
     description:
       "Innovative online Microsoft Access database solutions with cloud integration, including Office 365 and SharePoint compatibility. Cost-effective development with comprehensive mobile support.",
-    url: "https://www.officeexperts.com.au/services/microsoft-access/access-online",
+    url: "https://www.accessexperts.com.au/access-online",
     siteName: "Office Experts Group",
     images: [
       {

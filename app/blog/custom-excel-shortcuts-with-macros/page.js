@@ -418,7 +418,15 @@ End Sub`;
                   sorting, filtering, and formulas. One press of this shortcut
                   instantly clears all merged formatting so you can reshape the
                   data into something usable. It's a lifesaver for data cleanup
-                  and importing into databases or Power BI.
+                  and importing into databases or{" "}
+                  <Link
+                    href={
+                      "https://www.powerplatform.com.au/services/microsoft-power-bi"
+                    }
+                  >
+                    Power BI
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

@@ -210,6 +210,16 @@
 .about p {
   margin-top: 1rem;
 }
+@media (max-width: 449px) {
+  .about {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .about {
+    flex-direction: column-reverse;
+  }
+}
 
 .authorImage {
   display: flex;

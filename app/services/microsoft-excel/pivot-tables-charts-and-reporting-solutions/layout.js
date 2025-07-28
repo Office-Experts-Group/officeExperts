@@ -5,21 +5,9 @@ export const metadata = {
   description:
     "Expert Microsoft Excel pivot table, charting and reporting solutions. Get professional help with creating pivot tables, charts, and customised reporting solutions.",
 
-  keywords: [
-    // Core pivot table services
-    "Excel pivot tables",
-    "Excel Charts and Reporting Solutions",
-  ],
-
   alternates: {
     canonical:
-      "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
-    alternate: [
-      {
-        url: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
-        type: "alternate",
-      },
-    ],
+      "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
   },
 
   // OpenGraph

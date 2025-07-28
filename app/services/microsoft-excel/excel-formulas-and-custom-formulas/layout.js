@@ -6,19 +6,9 @@ export const metadata = {
   description:
     "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
 
-  keywords: [
-    // Core formula keywords
-    "Excel formula help",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
-    alternate: [
-      {
-        url: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
-        type: "alternate",
-      },
-    ],
+    canonical:
+      "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
   },
 
   // OpenGraph
@@ -26,7 +16,7 @@ export const metadata = {
     title: "Excel Formulas and Custom Formulas | Office Experts Group",
     description:
       "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
-    url: "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas",
+    url: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
     siteName: "Office Experts Group",
     images: [
       {

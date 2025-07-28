@@ -25,20 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  keywords: [
-    // Core services
-    "Word template design",
-    "Word template conversion",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/word-template-conversions",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/word-template-conversions",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/word-template-conversions",
   },
 
   // Twitter Card

@@ -25,17 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: ["Word popup form development"],
-
   alternates: {
-    canonical: "/services/microsoft-word/popup-forms",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/popup-forms",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/popup-forms",
   },
 
   // Twitter Card

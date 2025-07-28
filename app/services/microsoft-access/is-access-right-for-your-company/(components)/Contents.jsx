@@ -37,7 +37,7 @@ const Contents = () => {
               <p>Data management</p>
             </div>
           </Link>
-          <Link href="/3rd-party-product-integration">
+          <Link href="https://www.accessexperts.com.au/3rd-party-product-integration">
             <div className={styles.contentLink}>
               <p>Data structuring and querying</p>
             </div>

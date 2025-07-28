@@ -14,6 +14,7 @@ import gold from "../../../public/blog/gold.webp";
 import teplate from "../../../public/blog/teplate.webp";
 import computer from "../../../public/blog/computer.webp";
 import books from "../../../public/blog/books.webp";
+import Link from "next/link";
 
 const LegalTemplatesBlogPost = () => {
   const articleSchema = {
@@ -164,9 +165,12 @@ const LegalTemplatesBlogPost = () => {
           <p>
             In a profession where precision and professionalism are
             non-negotiable, your documents must reflect your expertise. This
-            blog explores how legal teams can create smart, scalable, and secure
-            Microsoft Word templates—backed by the latest insights from legal
-            tech leaders and document workflow experts.
+            blog explores how legal teams can create smart, scalable, and{" "}
+            <Link href="https://www.wordexperts.com.au/corporate-global-template-solution">
+              secure Microsoft Word templates
+            </Link>
+            —backed by the latest insights from legal tech leaders and document
+            workflow experts.
           </p>
 
           <div className={styles.BgImageContainer}>

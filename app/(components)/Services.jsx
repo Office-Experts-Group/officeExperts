@@ -63,7 +63,7 @@ const Services = () => {
                 "Pivot tables, reports, charts",
                 "Forms/formulas/functions",
               ]}
-              link={"/services/microsoft-excel"}
+              link={"https://www.excelexperts.com.au"}
               linkText={"Excel"}
             />
           </CardIntersectionWrapper>
@@ -79,7 +79,7 @@ const Services = () => {
                 "Template creation",
                 "Macro development",
               ]}
-              link={"/services/microsoft-word"}
+              link={"https://www.wordexperts.com.au"}
               linkText={"Word"}
             />
           </CardIntersectionWrapper>
@@ -95,7 +95,7 @@ const Services = () => {
                 "Effortlessly drill down into your data.",
                 "Graphs, charts and other visual solutions to easily monitor the data that matters.",
               ]}
-              link={"https://www.powerplatformexperts.com.au/"}
+              link={"https://www.powerplatformexperts.com.au"}
               linkText={"Power Platform"}
             />
           </CardIntersectionWrapper>

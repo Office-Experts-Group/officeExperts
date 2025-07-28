@@ -25,17 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: ["Custom word template designers"],
-
   alternates: {
-    canonical: "/services/microsoft-word/word-document-template-creation",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/word-document-template-creation",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/word-document-template-creation",
   },
 
   // Twitter Card

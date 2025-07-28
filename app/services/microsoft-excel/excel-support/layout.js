@@ -13,13 +13,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "/services/microsoft-excel/excel-support",
-    alternate: [
-      {
-        url: "https://www.excelexperts.com.au/excel-support",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.excelexperts.com.au/excel-support",
   },
 
   // OpenGraph
@@ -27,7 +21,7 @@ export const metadata = {
     title: "Microsoft Excel Help & Support | Office Experts Group",
     description:
       "Professional Excel training and support services across Australia. Get instant expert guidance via remote access or onsite with our experienced Excel consultants.",
-    url: "https://www.officeexperts.com.au/services/microsoft-excel/excel-support",
+    url: "https://www.excelexperts.com.au/excel-support",
     siteName: "Office Experts Group",
     images: [
       {

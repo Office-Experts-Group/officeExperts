@@ -23,19 +23,8 @@ export const metadata = {
     type: "website",
   },
 
-  keywords: [
-    // Core government services
-    "government microsoft document solutions",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/government-departments",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/government-departments",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/government-departments",
   },
 
   // Twitter Card

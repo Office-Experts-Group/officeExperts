@@ -21,7 +21,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Corporate Identity",
-      link: "/services/microsoft-word/corporate-identity",
+      link: "https://www.wordexperts.com.au/corporate-identity",
       image: keyboard,
       alt: "keyboard",
       description: [
@@ -32,7 +32,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "VBA & Macro Development",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
+      link: "https://www.wordexperts.com.au/vba-macro-development",
       image: coder,
       alt: "coder working",
       description: [
@@ -45,7 +45,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Government Departments",
-      link: "/services/microsoft-word/government-departments",
+      link: "https://www.wordexperts.com.au/government-departments",
       image: dashboard,
       alt: "dashboard design",
       description: [
@@ -57,7 +57,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Companies and Organisations",
-      link: "/services/microsoft-word/companies-and-organisations",
+      link: "https://www.wordexperts.com.au/companies-and-organisations",
       image: graph,
       alt: "graph",
       description: [
@@ -68,7 +68,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Remove Repetition and Increase Productivity",
-      link: "/services/microsoft-word/remove-repetition-and-increase-productivity",
+      link: "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
       image: automation,
       alt: "automation",
       description: [
@@ -79,7 +79,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Popup Forms",
-      link: "/services/microsoft-word/popup-forms",
+      link: "https://www.wordexperts.com.au/popup-forms",
       image: magnify,
       alt: "magnifying glass over graphs",
       description: [
@@ -88,7 +88,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Fill In Forms",
-      link: "/services/microsoft-word/fill-in-forms",
+      link: "https://www.wordexperts.com.au/fill-in-forms",
       image: code,
       alt: "code on a screen",
       description: [
@@ -99,7 +99,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrading Word To 2016",
-      link: "/services/microsoft-word/upgrades-and-migration",
+      link: "https://www.wordexperts.com.au/upgrades-and-migration",
       image: hands,
       alt: "hands",
       description: [
@@ -121,7 +121,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Convert Adobe To Word",
-      link: "/services/microsoft-word/word-template-conversions",
+      link: "https://www.wordexperts.com.au/word-template-conversions",
       image: laptop,
       alt: "laptop",
       description: [
@@ -130,7 +130,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Custom Toolbars and Ribbons",
-      link: "/services/microsoft-word/custom-toolbars-and-ribbons",
+      link: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
       image: graph2,
       alt: "graph",
       description: [
@@ -140,7 +140,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Help and Training",
-      link: "/services/microsoft-word/training",
+      link: "https://www.wordexperts.com.au/training",
       image: desk,
       alt: "desk in an office",
       description: [

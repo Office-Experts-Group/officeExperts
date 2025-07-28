@@ -5,19 +5,8 @@ export const metadata = {
   description:
     "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
 
-  keywords: [
-    // Core data manipulation
-    "Excel data manipulation",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-excel/data-manipulation",
-    alternate: [
-      {
-        url: "https://www.excelexperts.com.au/data-manipulation",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.excelexperts.com.au/data-manipulation",
   },
 
   // OpenGraph
@@ -25,7 +14,7 @@ export const metadata = {
     title: "Data Manipulation | Office Experts Group",
     description:
       "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
-    url: "https://www.officeexperts.com.au/services/microsoft-excel/data-manipulation",
+    url: "https://www.excelexperts.com.au/data-manipulation",
     siteName: "Office Experts Group",
     images: [
       {

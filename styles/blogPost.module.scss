@@ -209,6 +209,12 @@
   p {
     margin-top: 1rem;
   }
+  @include phone {
+    flex-direction: column-reverse;
+  }
+  @include phoneLandscape {
+    flex-direction: column-reverse;
+  }
 }
 
 .authorImage {

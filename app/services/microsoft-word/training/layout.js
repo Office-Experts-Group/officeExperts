@@ -23,19 +23,8 @@ export const metadata = {
     type: "website",
   },
 
-  keywords: [
-    // Core training services
-    "Microsoft Word remote support",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/training",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/training",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/training",
   },
 
   // Twitter Card

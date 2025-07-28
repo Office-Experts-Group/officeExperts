@@ -25,20 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core services
-    "Word upgrade and migration assistance",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/upgrades-and-migration",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/upgrades-and-migration",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/upgrades-and-migration",
   },
 
   // Twitter Card

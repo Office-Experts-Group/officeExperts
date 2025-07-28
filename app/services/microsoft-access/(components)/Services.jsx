@@ -72,7 +72,9 @@ const Services = () => {
                 "Need an Access database setup to be used remotely?",
                 "Using Azure in combination with Access we can setup a custom, cost effective cloud database to suit your needs.",
               ]}
-              link={"/access-azure-cloud-based-solutions"}
+              link={
+                "https://www.accesseexperts.com.au/access-azure-cloud-based-solutions"
+              }
             />
           </CardIntersectionWrapper>
           <CardIntersectionWrapper>

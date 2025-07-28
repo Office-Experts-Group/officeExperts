@@ -73,7 +73,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Charting & Pivot Tables",
-      link: "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
+      link: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
       image: magnify,
       alt: "magnifying glass",
       description: [
@@ -84,7 +84,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrades and Migration",
-      link: "/services/microsoft-excel/upgrades-and-migration",
+      link: "https://www.excelexperts.com.au/upgrades-and-migration",
       image: code,
       alt: "code",
       description: [

@@ -5,20 +5,9 @@ export const metadata = {
   description:
     "We build reports and dashboards which connect your Power BI services to your financial and accounting systems, databases, Azure services and spreadsheets.",
 
-  keywords: [
-    // Core Power BI services
-    "Power BI development",
-    "custom Power BI dashboards",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-bi",
-    alternate: [
-      {
-        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
-        type: "alternate",
-      },
-    ],
+    canonical:
+      "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
   },
 
   // OpenGraph
@@ -26,7 +15,7 @@ export const metadata = {
     title: "Microsoft Power BI Services | Office Experts Group",
     description:
       "We build reports and dashboards which connect your Power BI services to your financial and accounting systems, databases, Azure services and spreadsheets.",
-    url: "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
     siteName: "Office Experts Group",
     images: [
       {

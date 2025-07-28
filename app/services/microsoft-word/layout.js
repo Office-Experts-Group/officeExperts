@@ -25,20 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core Word services
-    "Microsoft Word professional consultants",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au",
   },
 
   // Twitter Card

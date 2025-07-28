@@ -58,7 +58,7 @@ const Services = ({ location }) => {
                 "Pivot tables, reports, charts",
                 "Forms/formulas/functions",
               ]}
-              link={"/services/microsoft-excel"}
+              link={"https://www.excelexperts.com.au"}
               linkText={"Excel"}
             />
           </CardIntersectionWrapper>
@@ -74,7 +74,7 @@ const Services = ({ location }) => {
                 "Template creation",
                 "Macro development",
               ]}
-              link={"/services/microsoft-word"}
+              link={"https://www.wordexperts.com.au/"}
               linkText={"Word"}
             />
           </CardIntersectionWrapper>
@@ -90,7 +90,7 @@ const Services = ({ location }) => {
                 "Effortlessly drill down into your data.",
                 "Graphs, charts and other visual solutions to easily monitor the data that matters.",
               ]}
-              link={"https://www.powerplatformexperts.com.au/"}
+              link={"https://www.powerplatformexperts.com.au"}
               linkText={"Power Platform"}
             />
           </CardIntersectionWrapper>
@@ -106,7 +106,7 @@ const Services = ({ location }) => {
                 "Review code and fix defects",
                 "Integrate financial systems",
               ]}
-              link={"/services/microsoft-access"}
+              link={"https://www.accessexperts.com.au"}
               linkText={"Access"}
             />
           </CardIntersectionWrapper>

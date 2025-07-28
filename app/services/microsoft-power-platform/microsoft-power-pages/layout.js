@@ -6,21 +6,9 @@ export const metadata = {
   description:
     "If Microsoft Power Pages is right for your business, our certified experts can rapidly build websites that deliver crucial information and services to your customers.",
 
-  // Additional metadata
-  keywords: [
-    // Core services
-    "Power Pages consulting",
-    "Microsoft Power Pages developers",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-power-platform/microsoft-power-pages",
-    alternate: [
-      {
-        url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
-        type: "alternate",
-      },
-    ],
+    canonical:
+      "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
   },
 
   // OpenGraph
@@ -28,7 +16,7 @@ export const metadata = {
     title: "Microsoft Power Pages Consulting | Office Experts Group",
     description:
       "If Microsoft Power Pages is right for your business, our certified experts can rapidly build websites that deliver crucial information and services to your customers.",
-    url: "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+    url: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
     siteName: "Office Experts Group",
     images: [
       {

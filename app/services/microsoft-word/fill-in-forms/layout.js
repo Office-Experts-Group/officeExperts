@@ -25,20 +25,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core form services
-    "Word fill inform designers",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/fill-in-forms",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/fill-in-forms",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/fill-in-forms",
   },
 
   // Twitter Card

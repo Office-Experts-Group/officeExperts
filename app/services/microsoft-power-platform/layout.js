@@ -5,19 +5,8 @@ export const metadata = {
   description:
     "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
 
-  keywords: [
-    // Core Power Platform services
-    "Microsoft Power Platform consultants",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-power-platform",
-    alternate: [
-      {
-        url: "https://www.powerplatformexperts.com.au",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.powerplatformexperts.com.au",
   },
 
   // OpenGraph
@@ -25,7 +14,7 @@ export const metadata = {
     title: "Microsoft Power Platform Services | Office Experts Group",
     description:
       "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
-    url: "https://www.officeexperts.com.au/services/microsoft-power-platform",
+    url: "https://www.powerplatformexperts.com.au",
     siteName: "Office Experts Group",
     images: [
       {

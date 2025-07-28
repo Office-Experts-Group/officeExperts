@@ -12,7 +12,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Excel ",
-      link: "/services/microsoft-excel",
+      link: "https://www.excelexperts.com.au/",
       image: project1,
       description: [
         "Spreadsheets and Add-ins",
@@ -24,7 +24,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Access",
-      link: "/services/microsoft-access",
+      link: "https://www.accessexperts.com.au",
       image: project2,
       description: [
         "Create and design databases",
@@ -35,7 +35,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Word",
-      link: "/services/microsoft-word",
+      link: "https://www.wordexperts.com.au/",
       image: project3,
       description: [
         "Format and design documents",

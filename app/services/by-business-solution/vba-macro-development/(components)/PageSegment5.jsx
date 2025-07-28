@@ -32,9 +32,12 @@ const PageSegment3 = () => {
           </p>
           <p>
             If your workbooks are not functioning correctly under your version
-            of Excel, or your <Link href="/services/microsoft-word/word-document-template-creation">documents and templates</Link> are not functioning
-            correctly under your version of Word, contact us today to clear up
-            your technology issues.
+            of Excel, or your{" "}
+            <Link href="https://www.wordexperts.com.au/word-document-template-creation">
+              documents and templates
+            </Link>{" "}
+            are not functioning correctly under your version of Word, contact us
+            today to clear up your technology issues.
           </p>
         </AnimateOnScroll>
       </div>

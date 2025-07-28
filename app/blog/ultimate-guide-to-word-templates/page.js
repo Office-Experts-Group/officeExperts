@@ -8,7 +8,7 @@ import word from "../../../public/blog/word-template.webp";
 import wordMob from "../../../public/blog/mob/word-template.webp";
 import meme from "../../../public/blog/automate-meme.webp";
 import math from "../../../public/blog/math-meme.webp";
-import template from "../../../public/template.webp"
+import template from "../../../public/template.webp";
 
 export default function WordTemplatesBlogPost() {
   return (
@@ -76,7 +76,10 @@ export default function WordTemplatesBlogPost() {
               while maintaining the consistent structure defined by the
               template. Templates are crucial when dealing with large-scale
               document creation, as they save time and ensure consistency and{" "}
-              <Link href="/corporate-identity">brand consistency</Link>.
+              <Link href="https://www.wordexperts.com.au//corporate-identity">
+                brand consistency
+              </Link>
+              .
             </p>
           </section>
 

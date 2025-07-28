@@ -6,20 +6,9 @@ export const metadata = {
   description:
     "Expert guidance on whether Microsoft Access is the right solution for your business needs. Get professional advice on database solutions, data management, and business automation.",
 
-  // Additional metadata
-  keywords: [
-    // Core Access services
-    "Microsoft Access solutions",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-access/is-access-right-for-your-company",
-    alternate: [
-      {
-        url: "https://www.accessexperts.com.au/is-access-right-for-your-company",
-        type: "alternate",
-      },
-    ],
+    canonical:
+      "https://www.accessexperts.com.au/is-access-right-for-your-company",
   },
 
   // OpenGraph
@@ -27,7 +16,7 @@ export const metadata = {
     title: "Why To Choose Access for your Company | Office Experts Group",
     description:
       "Expert guidance on whether Microsoft Access is the right solution for your business needs. Get professional advice on database solutions, data management, and business automation.",
-    url: "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company",
+    url: "https://www.accessexperts.com.au/is-access-right-for-your-company",
     siteName: "Office Experts Group",
     images: [
       {

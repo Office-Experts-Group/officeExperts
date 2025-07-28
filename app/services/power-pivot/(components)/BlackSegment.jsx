@@ -21,16 +21,16 @@ const BlackSegment = () => {
       style={{ marginTop: "8rem" }}
       id="existing-data"
     >
-              <Image 
-          className={styles.bgImg} 
-          src={bg} 
-          alt="shape icon" 
-          fill 
-          sizes="100vw"
-          style={{
-            objectFit: 'cover',
-          }}
-        />
+      <Image
+        className={styles.bgImg}
+        src={bg}
+        alt="shape icon"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
 
       <AnimateOnScroll animation="slide-left" delay={0.1} duration={1.2}>
         <div className={styles.content}>
@@ -41,8 +41,11 @@ const BlackSegment = () => {
             <h2>How Our Power Pivot Consultants Can Help</h2>
           </div>
           <div className={`${styles.text} ${styles.marginText}`}>
-            <p style={{ marginTop: "-3rem"}}>
-            We specialise in Microsoft tools, so your Power Query setup will integrate seamlessly with Excel, Power BI, Power Automate, and more. From planning to deployment, we work closely with you to deliver practical, sustainable solutions.
+            <p style={{ marginTop: "-3rem" }}>
+              We specialise in Microsoft tools, so your Power Query setup will
+              integrate seamlessly with Excel, Power BI, Power Automate, and
+              more. From planning to deployment, we work closely with you to
+              deliver practical, sustainable solutions.
             </p>
             <div className={styles.link}>
               <Link href="tel:+61-1300-102-810" className={`${styles.btn} btn`}>
@@ -80,7 +83,10 @@ const BlackSegment = () => {
               className={`${styles.icon} ${styles.hidden}`}
             />
             <p className={styles.centerText}>
-            <strong>Data Modeling & Relationships -</strong> We design clean, efficient data models that connect multiple data sources and eliminate redundancy. With properly structured relationships, your team can slice and analyse data in meaningful ways.
+              <strong>Data Modeling & Relationships -</strong> We design clean,
+              efficient data models that connect multiple data sources and
+              eliminate redundancy. With properly structured relationships, your
+              team can slice and analyse data in meaningful ways.
             </p>
           </div>
 
@@ -93,7 +99,11 @@ const BlackSegment = () => {
               className={`${styles.icon} ${styles.hidden}`}
             />
             <p className={styles.centerText}>
-            <strong>DAX Formulas & Business Logic -</strong> Our consultants write optimised DAX formulas that capture your business rules — from simple metrics to complex KPIs. We make sure calculations are not only accurate, but fast and scalable.</p>
+              <strong>DAX Formulas & Business Logic -</strong> Our consultants
+              write optimised DAX formulas that capture your business rules —
+              from simple metrics to complex KPIs. We make sure calculations are
+              not only accurate, but fast and scalable.
+            </p>
           </div>
 
           <div className={styles.point}>
@@ -105,10 +115,14 @@ const BlackSegment = () => {
               className={`${styles.icon} ${styles.hidden}`}
             />
             <p className={styles.centerText}>
-            <strong>Integration with Power Query -</strong> Already using Power Query? We help you take the next step by feeding transformed data directly into Power Pivot models — giving you a seamless end-to-end data solution.</p>
+              <strong>Integration with Power Query -</strong> Already using
+              Power Query? We help you take the next step by feeding transformed
+              data directly into Power Pivot models — giving you a seamless
+              end-to-end data solution.
+            </p>
           </div>
 
-          <div className={styles.point} >
+          <div className={styles.point}>
             <Image
               src={chartBlue}
               alt="chart icon"
@@ -117,10 +131,14 @@ const BlackSegment = () => {
               className={`${styles.icon} ${styles.hidden}`}
             />
             <p className={styles.centerText}>
-            <strong>Performance Optimisation -</strong> Slow reports and bloated workbooks are common with poorly built models. We apply proven best practices to improve performance, reduce file size, and deliver responsive reporting.</p>
+              <strong>Performance Optimisation -</strong> Slow reports and
+              bloated workbooks are common with poorly built models. We apply
+              proven best practices to improve performance, reduce file size,
+              and deliver responsive reporting.
+            </p>
           </div>
 
-          <div className={styles.point} >
+          <div className={styles.point}>
             <Image
               src={handShakeBlue}
               alt="handShake icon"
@@ -129,7 +147,18 @@ const BlackSegment = () => {
               className={`${styles.icon} ${styles.hidden}`}
             />
             <p className={styles.centerText}>
-            <strong>Dashboard-Ready Reporting -</strong> From <Link href={'/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions'}>Excel pivot tables</Link> to Power BI dashboards, we design reports that are easy to explore, share, and understand. No more manual updates or disconnected spreadsheets.</p>
+              <strong>Dashboard-Ready Reporting -</strong> From{" "}
+              <Link
+                href={
+                  "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions"
+                }
+              >
+                Excel pivot tables
+              </Link>{" "}
+              to Power BI dashboards, we design reports that are easy to
+              explore, share, and understand. No more manual updates or
+              disconnected spreadsheets.
+            </p>
           </div>
         </div>
       </AnimateOnScroll>

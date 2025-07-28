@@ -25,21 +25,9 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core services
-    "Remove repetition in Microsoft Word",
-  ],
-
   alternates: {
     canonical:
-      "/services/microsoft-word/remove-repetition-and-increase-productivity",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
-        type: "alternate",
-      },
-    ],
+      "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
   },
 
   // Twitter Card

@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Excel",
-      link: "/services/microsoft-excel",
+      link: "https://www.excelexperts.com.au/",
       image: graph,
       alt: "graph",
       description: [
@@ -35,7 +35,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Access",
-      link: "/services/microsoft-access",
+      link: "https://www.accessexperts.com.au/",
       image: code,
       alt: "code",
       description: [
@@ -82,7 +82,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Word",
-      link: "/services/microsoft-word",
+      link: "https://www.wordexperts.com.au/",
       image: coder,
       alt: "coder",
       description: [

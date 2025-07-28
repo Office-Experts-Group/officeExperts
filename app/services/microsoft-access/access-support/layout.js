@@ -9,13 +9,7 @@ export const metadata = {
   keywords: ["Access database support"],
 
   alternates: {
-    canonical: "/services/microsoft-access/access-support",
-    alternate: [
-      {
-        url: "https://www.accessexperts.com.au/access-support",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.accessexperts.com.au/access-support",
   },
 
   // OpenGraph
@@ -23,7 +17,7 @@ export const metadata = {
     title: "Microsoft Access Support and Training | Office Experts Group",
     description:
       "Our expert team provides Microsoft Access database support and training services. We offer instant help and advice through remote access or phone support, with competitive rates and dedicated consultants available when you need them most.",
-    url: "https://www.officeexperts.com.au/services/microsoft-access/access-support",
+    url: "https://www.accessexperts.com.au/access-support",
     siteName: "Office Experts Group",
     images: [
       {

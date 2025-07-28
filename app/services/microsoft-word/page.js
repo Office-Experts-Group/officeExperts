@@ -37,7 +37,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2024-10-27T00:00:00+00:00",
+      dateModified: "2025-07-28T00:00:00+00:00",
       description:
         "We offer ongoing support and training, Microsoft Word services in Australia for your staff to learn specific tasks as required. Call us Today 1300 102 810",
       breadcrumb: {

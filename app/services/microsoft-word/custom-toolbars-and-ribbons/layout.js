@@ -23,21 +23,8 @@ export const metadata = {
     type: "website",
   },
 
-  keywords: [
-    // Core services
-    "custom word ribbon design",
-    // "word toolbar customisation",
-    "microsoft word toolbar development",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/custom-toolbars-and-ribbons",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
   },
 
   // Twitter Card

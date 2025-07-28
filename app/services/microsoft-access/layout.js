@@ -6,16 +6,8 @@ export const metadata = {
   description:
     "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
 
-  keywords: ["Microsoft Access database migration"],
-
   alternates: {
-    canonical: "/services/microsoft-access",
-    alternate: [
-      {
-        url: "https://www.accessexperts.com.au",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.accessexperts.com.au",
   },
 
   // OpenGraph
@@ -23,7 +15,7 @@ export const metadata = {
     title: "Microsoft Access Services | Office Experts Group",
     description:
       "Professional Microsoft Access database consulting and development services across Australia. Specialising in custom database solutions, cloud integration, and business automation.",
-    url: "https://www.officeexperts.com.au/services/microsoft-access",
+    url: "https://www.accessexperts.com.au",
     siteName: "Office Experts Group",
     images: [
       {

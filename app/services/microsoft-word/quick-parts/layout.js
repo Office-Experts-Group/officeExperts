@@ -26,20 +26,8 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core Quick Parts services
-    "microsoft word quick parts creation",
-  ],
-
   alternates: {
-    canonical: "/services/microsoft-word/quick-parts",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/quick-parts",
-        type: "alternate",
-      },
-    ],
+    canonical: "https://www.wordexperts.com.au/quick-parts",
   },
 
   // Twitter Card
