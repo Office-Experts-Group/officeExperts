@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "How to Convert a Canva Design into a Microsoft Word Template",
   description:
-  "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
+    "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
 
   // OpenGraph
   openGraph: {
     title: "How to Convert a Canva Design into a Microsoft Word Template",
     description:
-    "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
+      "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
     url: "https://www.officeexperts.com.au/blog/convert-canva-to-word-template",
     siteName: "Office Experts",
     images: [
@@ -26,9 +26,7 @@ export const metadata = {
   },
 
   // Additional metadata
-  keywords: [
-    "Canva to Word template",
-  ],
+  keywords: ["Canva to Word template"],
 
   // Twitter Card
   twitter: {
@@ -36,16 +34,15 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "How to Convert a Canva Design into a Microsoft Word Template",
     description:
-    "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
+      "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
     images: ["/logo.png"],
   },
-  
-    alternates: {
+
+  alternates: {
     canonical: "/blog/convert-canva-to-word-template",
     alternate: [
       {
-        url:  "https://www.wordexperts.com.au/blog/convert-canva-to-word-template",
-        type: "alternate",
+        url: "https://www.wordexperts.com.au/blog/convert-canva-to-word-template",
       },
     ],
   },

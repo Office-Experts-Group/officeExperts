@@ -34,12 +34,11 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-          alternates: {
+  alternates: {
     canonical: "/blog/ultimate-guide-to-word-templates",
     alternate: [
       {
-        url:  "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
-        type: "alternate",
+        url: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
       },
     ],
   },

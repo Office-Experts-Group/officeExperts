@@ -1,0 +1,687 @@
+.preface {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #777a7e;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.svgs {
+  display: flex;
+  gap: 0.5rem;
+}
+.svgs svg {
+  height: 25px;
+  width: 25px;
+}
+
+.head {
+  width: 100vw;
+  height: 175px;
+  background-color: #1e1e1e;
+}
+@media (max-width: 449px) {
+  .head {
+    height: 100px;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .head {
+    height: 140px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .head {
+    height: 140px;
+  }
+}
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 2rem auto 3rem auto;
+  padding: 2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.blogTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  border-bottom: 3px solid #046999;
+  padding-bottom: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.videoContainer {
+  margin: 2rem auto;
+  position: relative;
+  padding-bottom: 28%;
+  height: 0;
+  overflow: hidden;
+}
+.videoContainer .videoEmbed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 90vw;
+  border: none;
+  aspect-ratio: 16/9;
+  width: 560px;
+  height: 315px;
+}
+@media screen and (max-width: 1200px) {
+  .videoContainer {
+    padding-bottom: 38%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .videoContainer {
+    padding-bottom: 48%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .videoContainer {
+    padding-bottom: 58%;
+  }
+}
+@media screen and (max-width: 630px) {
+  .videoContainer {
+    padding-bottom: 68%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .videoContainer {
+    padding-bottom: 78%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .videoContainer {
+    padding-bottom: 88%;
+  }
+}
+
+.blogContent {
+  display: flex;
+  flex-direction: column;
+}
+.blogContent h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #046999;
+}
+.blogContent h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  color: #046999;
+}
+.blogContent p {
+  margin-bottom: 1.2rem;
+}
+.blogContent ul,
+.blogContent ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+.blogContent ul li,
+.blogContent ol li {
+  margin-bottom: 0.5rem;
+}
+.blogContent a {
+  color: #046999;
+  font-weight: 700;
+}
+.blogContent .codeBlock {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.blogContent .codeBlock pre {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+}
+.github svg {
+  margin-right: 1rem;
+  height: 40px;
+  width: 40px;
+}
+.github a {
+  margin: 0 0 -0.1rem 0.3rem;
+}
+
+.codeBox {
+  max-width: 90vw;
+  overflow-x: auto; /* Ensures horizontal scroll if needed */
+  white-space: pre-wrap; /* Allows text wrapping */
+  word-wrap: break-word; /* Ensures long words break */
+  background-color: #f5f5f5; /* Optional: Light gray background */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.codeBox pre {
+  white-space: pre-wrap; /* Ensures text wraps inside <pre> */
+  word-wrap: break-word; /* Breaks long words */
+}
+
+.codeBox code {
+  display: block; /* Ensures full-width behavior */
+  white-space: pre-wrap; /* Wrap text */
+  word-wrap: break-word;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .blogContainer {
+    padding: 1rem;
+  }
+  .blogTitle {
+    font-size: 2rem;
+  }
+  .blogContent h2 {
+    font-size: 1.5rem;
+  }
+  .blogContent h3 {
+    font-size: 1.2rem;
+  }
+}
+.about {
+  background-color: rgba(185, 185, 185, 0.149);
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.about p {
+  margin-top: 1rem;
+}
+
+.authorImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #046999;
+}
+.authorImage img {
+  border-radius: 50%;
+}
+
+.quote {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto 4rem auto;
+}
+.quote p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #046999;
+  font-style: italic;
+  text-align: center;
+}
+@media (max-width: 449px) {
+  .quote {
+    margin: 0 auto 1rem auto;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .quote {
+    margin: 0 auto 1rem auto;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+  }
+}
+
+.mainImage {
+  margin: 0 auto;
+  max-width: 90vw;
+  height: auto;
+}
+
+/* Shortcuts Table Styles */
+.shortcutsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.shortcutRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.shortcutKeys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.keyCombo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyImage {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 2px;
+}
+
+.plus {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6b7280;
+  margin: 0 0.25rem;
+}
+
+.pcVersion {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.shortcutContent h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.shortcutContent p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Mobile responsive - stack vertically */
+@media (max-width: 768px) {
+  .shortcutRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+  .shortcutKeys {
+    order: -1; /* Put keys above content on mobile */
+  }
+  .keyCombo {
+    justify-content: center;
+  }
+  .shortcutContent {
+    text-align: left;
+  }
+}
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .shortcutRow {
+    padding: 1rem;
+  }
+  .keyImage {
+    width: 35px;
+    height: 35px;
+  }
+  .keyCombo {
+    gap: 0.25rem;
+  }
+  .plus {
+    font-size: 1rem;
+    margin: 0 0.1rem;
+  }
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 0.5rem;
+}
+.flex .shortcutKeys {
+  min-width: 30%;
+}
+@media screen and (max-width: 700px) {
+  .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .flex .shortcutKeys {
+    min-width: 80%;
+  }
+}
+
+.BgImageContainer {
+  position: relative;
+}
+
+.paste {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -12rem;
+  right: -6rem;
+}
+
+.BgImage {
+  position: absolute;
+  opacity: 0.07;
+  top: -4rem;
+  right: 0;
+}
+
+.scale {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -2rem;
+  right: 0;
+}
+
+.teplate {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -5rem;
+  right: -2rem;
+}
+
+.computer {
+  position: absolute;
+  opacity: 0.07;
+  bottom: 4rem;
+  right: 12vw;
+}
+
+.books {
+  position: absolute;
+  opacity: 0.07;
+  top: -8rem;
+  right: -4rem;
+}
+
+.dataSwirl {
+  position: absolute;
+  opacity: 0.15;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* This centers horizontally */
+  z-index: -1;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3rem;
+  scale: 1.2;
+}
+
+.split {
+  display: flex;
+  margin-top: 2rem;
+}
+.split div:first-of-type {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  .split {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+}
+
+.splitPit {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 5vw;
+}
+.splitPit img {
+  opacity: 0.45;
+}
+@media screen and (max-width: 800px) {
+  .splitPit {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .splitPit img {
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+.splitCenter {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 5vw;
+}
+.splitCenter p:first-of-type {
+  line-height: 2;
+}
+
+.splitImage {
+  float: right;
+  shape-outside: url("/blog/waste.webp"); /* Correct path - no ../public */
+  shape-image-threshold: 0.1;
+  width: 600px; /* Use fixed dimensions */
+  height: 400px;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .splitImage {
+    float: none;
+    margin: 0 auto;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+.padTitle {
+  margin: 2rem 0 4.5vw 0;
+}
+
+.director {
+  float: left;
+  shape-outside: url("/blog/director.webp");
+  shape-image-threshold: 0.1;
+  width: 600px; /* Use fixed dimensions */
+  height: 400px;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .director {
+    float: none;
+    margin: 0 auto;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 449px) {
+  #pitfall {
+    margin: 0 auto;
+    max-width: 60vw;
+    height: auto;
+  }
+}
+
+.BgImageContainer {
+  position: relative;
+}
+
+.paste {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -12rem;
+  right: -6rem;
+}
+
+.BgImage {
+  position: absolute;
+  opacity: 0.07;
+  top: -4rem;
+  right: 0;
+}
+
+.scale {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -2rem;
+  right: 0;
+}
+
+.teplate {
+  position: absolute;
+  opacity: 0.07;
+  bottom: -5rem;
+  right: -2rem;
+}
+
+.computer {
+  position: absolute;
+  opacity: 0.07;
+  bottom: 4rem;
+  right: 12vw;
+}
+
+.books {
+  position: absolute;
+  opacity: 0.07;
+  top: -8rem;
+  right: -4rem;
+}
+
+.dataSwirl {
+  position: absolute;
+  opacity: 0.15;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* This centers horizontally */
+  z-index: -1;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3rem;
+  scale: 1.2;
+}
+
+.split {
+  display: flex;
+  margin-top: 2rem;
+}
+.split div:first-of-type {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  .split {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+}
+
+.splitPit {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 5vw;
+}
+.splitPit img {
+  opacity: 0.45;
+}
+@media screen and (max-width: 800px) {
+  .splitPit {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .splitPit img {
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+.splitCenter {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 5vw;
+}
+.splitCenter p:first-of-type {
+  line-height: 2;
+}
+
+.splitImage {
+  float: right;
+  shape-outside: url("/blog/waste.webp"); /* Correct path - no ../public */
+  shape-image-threshold: 0.1;
+  width: 600px; /* Use fixed dimensions */
+  height: 400px;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .splitImage {
+    float: none;
+    margin: 0 auto;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+.padTitle {
+  margin: 2rem 0 4.5vw 0;
+}
+
+.director {
+  float: left;
+  shape-outside: url("/blog/director.webp");
+  shape-image-threshold: 0.1;
+  width: 600px; /* Use fixed dimensions */
+  height: 400px;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .director {
+    float: none;
+    margin: 0 auto;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 449px) {
+  #pitfall {
+    margin: 0 auto;
+    max-width: 60vw;
+    height: auto;
+  }
+}/*# sourceMappingURL=blogPost.module.css.map */
