@@ -39,7 +39,7 @@ const BlogPage = () => {
       author: "Marcello Brocchi",
       readingTime: "8 min",
       category: "Power Apps",
-      featured: true,
+      featured: false,
       youtubeId: "awsNLPGNI4w",
       imagePath: null,
     },
@@ -154,8 +154,21 @@ const BlogPage = () => {
       author: "Daniel Thomas",
       readingTime: "12 min",
       category: "Templates",
-      featured: true,
+      featured: false,
       imagePath: "/blog/waste.webp",
+    },
+    {
+      id: 11,
+      title: "Creating Word Templates for Legal Firms: Best Practices",
+      description:
+        "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
+      slug: "word-templates-for-legal-firms",
+      date: "July 25, 2025",
+      author: "Daniel Thomas",
+      readingTime: "10 min",
+      category: "Legal",
+      featured: false,
+      imagePath: "/blog/legal.webp",
     },
   ];
 
