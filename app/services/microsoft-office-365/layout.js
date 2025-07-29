@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Office 365 Services | Office Experts Group",
+  title: "Microsoft Office 365 Services",
   description:
     "Professional Office 365 consulting services including implementation, migration, business automation, and managed services across Australia.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Office 365 Services | Office Experts Group",
+    title: "Microsoft Office 365 Services",
     description:
       "Professional Office 365 consulting services including implementation, migration, business automation, and managed services across Australia.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Office 365 Services | Office Experts Group",
+    title: "Microsoft Office 365 Services",
     description:
       "Professional Office 365 consulting services including implementation, migration, business automation, and managed services across Australia.",
     images: ["/logo.png"],

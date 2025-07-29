@@ -51,7 +51,7 @@ const FieldsRepeatingDataBlogPost = () => {
 
     // Dates
     datePublished: "2025-07-24T09:00:00+10:00",
-    dateModified: "2025-07-24T09:00:00+10:00",
+    dateModified: "2025-07-29T09:00:00+10:00",
 
     // Article structure
     articleSection: "Word Templates",

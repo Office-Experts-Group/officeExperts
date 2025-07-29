@@ -76,7 +76,7 @@ export default function WordTemplatesBlogPost() {
               while maintaining the consistent structure defined by the
               template. Templates are crucial when dealing with large-scale
               document creation, as they save time and ensure consistency and{" "}
-              <Link href="https://www.wordexperts.com.au//corporate-identity">
+              <Link href="https://www.wordexperts.com.au/corporate-identity">
                 brand consistency
               </Link>
               .
@@ -315,8 +315,10 @@ export default function WordTemplatesBlogPost() {
               <p>
                 Add-in templates can significantly extend Word's capabilities
                 through{" "}
-                <Link href="/custom-toolbars-and-ribbons">custom ribbons</Link>,
-                task panes, and advanced functionality. Microsoft's COM add-in
+                <Link href="https://www.wordexperts.com.au/custom-toolbars-and-ribbons">
+                  custom ribbons
+                </Link>
+                , task panes, and advanced functionality. Microsoft's COM add-in
                 architecture allows developers to create sophisticated tools
                 that integrate seamlessly with Word.
               </p>
@@ -493,7 +495,7 @@ export default function WordTemplatesBlogPost() {
           <section className={styles.blogSection}>
             <h2>
               When to Consider{" "}
-              <Link href="/corporate-global-template-solution">
+              <Link href="https://www.wordexperts.com.au/corporate-global-template-solution">
                 Professional Template Services
               </Link>
             </h2>
@@ -547,7 +549,9 @@ export default function WordTemplatesBlogPost() {
               Need expert assistance developing custom Word templates for your
               organisation? Our team specialises in creating professional,
               automated templates that save time and ensure consistency.{" "}
-              <Link href="/contact-us">Contact our Word Template Experts</Link>{" "}
+              <Link href="../../contact-us">
+                Contact our Word Template Experts
+              </Link>{" "}
               to discuss your specific needs.
             </p>
           </div>

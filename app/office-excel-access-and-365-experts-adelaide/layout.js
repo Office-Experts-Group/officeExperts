@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Office Consultants Adelaide",
   description:
-    "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions. Expert development, integration and support.",
+    "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Office Consultants Adelaide",
     description:
-      "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions. Expert development, integration and support.",
+      "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-adelaide",
     siteName: "Office Experts Group",
     images: [
@@ -29,8 +29,6 @@ export const metadata = {
   keywords: [
     // Location-specific
     "Microsoft Office consultants Adelaide",
-    "Excel consultants Adelaide",
-    "Access database specialists Adelaide",
   ],
 
   // Twitter Card
@@ -39,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Adelaide | Microsoft Office Solutions",
     description:
-      "Leading Microsoft Office consultants in Adelaide Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions. Expert development, integration and support.",
+      "Leading Microsoft Office consultants in Adelaide specialising in Excel, Access, Word, PowerPoint and Office 365 solutions.",
     images: ["/logo.png"],
   },
 

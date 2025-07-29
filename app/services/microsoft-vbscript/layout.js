@@ -4,7 +4,7 @@ export const metadata = {
   // Basic metadata
   title: "VBScript Support | Office Experts Group",
   description:
-    "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
+    "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
 
   keywords: [
     // Core VBScript services
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "VBScript Support | Office Experts Group",
     description:
-      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
+      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
     url: "https://www.officeexperts.com.au/services/microsoft-vbscript",
     siteName: "Office Experts Group",
     images: [
@@ -40,7 +40,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "VBScript Support | Office Experts Group",
     description:
-      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks. Contact us for expert VBScript development.",
+      "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
     images: ["/logo.png"],
   },
 };

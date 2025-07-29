@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Word and PowerPoint Consultants Canberra",
   description:
-    "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
+    "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Word and PowerPoint Consultants Canberra",
     description:
-      "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
+      "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
     siteName: "Office Experts Group",
     images: [
@@ -29,7 +29,6 @@ export const metadata = {
   keywords: [
     // Location-specific
     "Canberra Word experts",
-    "Canberra PowerPoint experts",
   ],
 
   // Twitter Card
@@ -38,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Word and PowerPoint Experts Canberra",
     description:
-      "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
+      "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
     images: ["/logo.png"],
   },
 

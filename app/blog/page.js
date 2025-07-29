@@ -75,7 +75,7 @@ const BlogPage = () => {
       id: 5,
       title: "How to Convert a Canva Design into a Microsoft Word Template",
       description:
-        "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
+        "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
       slug: "convert-canva-to-word",
       date: "April 14, 2025",
       author: "Daniel Thomas",

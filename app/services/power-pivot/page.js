@@ -28,6 +28,8 @@ const schema = {
       "@id": "https://www.officeexperts.com.au/services/power-pivot",
       url: "https://www.officeexperts.com.au/services/power-pivot",
       name: "Power Query | Excel Experts",
+      description:
+        "Office Experts offers advanced Power Pivot training and consulting to help you model, analyze, and visualize complex data with ease.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -35,7 +37,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2025-04-10T00:00:00+00:00",
-      dateModified: "2025-04-10T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/power-pivot#breadcrumb",
@@ -44,16 +46,13 @@ const schema = {
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/power-pivot",
-          ],
+          target: ["https://www.officeexperts.com.au/services/power-pivot"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/power-query#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/services/power-query#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -85,7 +84,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-            <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

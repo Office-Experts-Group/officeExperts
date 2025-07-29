@@ -2,15 +2,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Word and PowerPoint Experts Melbourne",
+  title: "Word and PowerPoint Consultants Melbourne",
   description:
-    "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
+    "Expert Microsoft Consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Word and PowerPoint Experts Melbourne",
+    title: "Word and PowerPoint Consultants Melbourne",
     description:
-      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
+      "Expert Microsoft Consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-melbourne",
     siteName: "Office Experts Group",
     images: [
@@ -29,16 +29,15 @@ export const metadata = {
   keywords: [
     // Location-specific
     "word experts melbourne",
-    "powerpoint experts melbourne",
   ],
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Melbourne",
+    title: "Word and PowerPoint Consultants Melbourne",
     description:
-      "Expert Microsoft Word and PowerPoint consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
+      "Expert Microsoft Consulting services in Melbourne. Specialising in templates, document design, presentations, automation and corporate solutions.",
     images: ["/logo.png"],
   },
 

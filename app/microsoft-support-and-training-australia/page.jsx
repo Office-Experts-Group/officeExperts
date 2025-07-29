@@ -44,11 +44,13 @@ const schemaData = {
         "https://www.officeexperts.com.au/microsoft-support-and-training-australia",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-australia",
       name: "Microsoft Support and Training Australia | Office Experts Group",
+      description:
+        "Professional Microsoft support and training services across Australia. Our local experts provide customised training, technical support and troubleshooting.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-14T00:00:00+00:00",
-      dateModified: "2025-03-14T00:00:00+00:00",
+      dateModified: "2025-02-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/microsoft-support-and-training-australia#breadcrumb",

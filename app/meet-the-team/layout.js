@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Meet Our Microsoft Office Specialists | Office Experts Group",
   description:
-    "Connect with our expert team of Microsoft Office specialists, focusing on advanced spreadsheet development, VBA automation, and Power Query solutions for businesses across Australia.",
+    "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
 
   // OpenGraph
   openGraph: {
     title: "Meet Our Microsoft Office Specialists | Office Experts Group",
     description:
-      "Connect with our expert team of Microsoft Office specialists, focusing on advanced spreadsheet development, VBA automation, and Power Query solutions for businesses across Australia.",
+      "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
     url: "https://www.officeexperts.com.au/meet-the-team",
     siteName: "Office Experts Group",
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Meet Our Microsoft Office Specialists | Office Experts Group",
     description:
-      "Connect with our expert team of Microsoft Office specialists, focusing on advanced spreadsheet development, VBA automation, and Power Query solutions for businesses across Australia.",
+      "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
     images: ["/logo.png"],
   },
 

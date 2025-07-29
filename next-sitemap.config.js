@@ -46,11 +46,30 @@ module.exports = {
       "/services/microsoft-access/is-access-right-for-your-company",
       "/services/microsoft-access/upgrades-and-migration",
       // power platform
+      "/services/microsoft-power-platform",
       "/services/microsoft-power-platform/",
       "/services/microsoft-power-platform/microsoft-power-apps",
       "/services/microsoft-power-platform/microsoft-power-automate",
       "/services/microsoft-power-platform/microsoft-power-bi",
       "/services/microsoft-power-platform/microsoft-power-pages",
+      // locations
+      "/office-and-office-365-experts-gold-coast",
+      "excel-and-access-experts-melbourne",
+      "excel-and-access-experts-sydney",
+      "word-and-powerpoint-experts-richmond",
+      // blogs
+      "/blog/20-advanced-excel-shortcuts",
+      "/blog/convert-canva-to-word",
+      "/blog/convert-custom-excel-shortcuts-with-macros",
+      "/blog/export-to-pdf-in-power-apps",
+      "/blog/fields-and-repeating-data-in-word",
+      "/blog/file-attachments-in-power-apps",
+      "/blog/power-apps-pdf-function",
+      "/blog/power-apps-with-sql-database",
+      "/blog/sharepoint-lists",
+      "/blog/spreadsheet-errors-in-excel",
+      "/blog/ultimate-guide-to-word-templates",
+      "/blog/word-templates-for-legal-firms",
     ];
 
     // Exclude paths that have different canonical URLs

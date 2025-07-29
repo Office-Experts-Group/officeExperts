@@ -2,15 +2,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Word and PowerPoint Experts Gold Coast",
+  title: "Word and PowerPoint Consultants Gold Coast",
   description:
-    "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, document design, presentation solutions, and business automation.",
+    "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, design, presentation and automation.",
 
   // OpenGraph
   openGraph: {
-    title: "Word and PowerPoint Experts Gold Coast",
+    title: "Word and PowerPoint Consultants Gold Coast",
     description:
-      "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, document design, presentation solutions, and business automation.",
+      "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, design, presentation and automation.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-gold-coast",
     siteName: "Office Experts Group",
     images: [
@@ -29,16 +29,15 @@ export const metadata = {
   keywords: [
     // Location-specific
     "Gold Coast Word experts",
-    "Gold Coast PowerPoint experts",
   ],
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Gold Coast",
+    title: "Word and PowerPoint Consultants Gold Coast",
     description:
-      "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, document design, presentation solutions, and business automation.",
+      "Leading Microsoft Word and PowerPoint consulting and solutions provider in Gold Coast. Specialising in templates, design, presentation and automation.",
     images: ["/logo.png"],
   },
 

@@ -19,7 +19,7 @@ const ExcelShortcutsBlogPost = () => {
     alternativeHeadline:
       "Master These Mac Excel Shortcuts for Maximum Productivity",
     description:
-      "Master 20 advanced Excel shortcuts for Mac that will transform your productivity. From data analysis to formatting, these keyboard shortcuts will save you hours and impress your team.",
+      "Master 20 advanced Excel shortcuts that will transform your productivity. From data analysis to formatting, these keyboard shortcuts will save you hours and impress your team.",
 
     // Author information
     author: {

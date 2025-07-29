@@ -4,7 +4,7 @@ export const metadata = {
   // Basic metadata
   title: "Dashboard Experts | Office Experts Group",
   description:
-    "We are experts in Data! Data import/export, parsing and processing Data formatting automation Automated data manipulation solutions using VBA. Call us 1300102810",
+    "We are experts in Data! VBA, dashoboards, import/export, parsing and processing, formatting and automation.",
 
   keywords: ["excel dashboard consultants"],
 
@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Dashboard Experts | Office Experts Group",
     description:
-      "We are experts in Data! Data import/export, parsing and processing Data formatting automation Automated data manipulation solutions using VBA. Call us 1300102810",
+      "We are experts in Data! VBA, dashoboards, import/export, parsing and processing, formatting and automation.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
     siteName: "Office Experts Group",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Dashboard Experts | Office Experts Group",
     description:
-      "We are experts in Data! Data import/export, parsing and processing Data formatting automation Automated data manipulation solutions using VBA. Call us 1300102810",
+      "We are experts in Data! VBA, dashoboards, import/export, parsing and processing, formatting and automation.",
     images: ["/logo.png"],
   },
 };

@@ -238,7 +238,6 @@ Gallery1.Items = SQLOrderData;
             with loads of tricks and tips on the entire Power Platform suite.
           </p>
           <div className={styles.videoContainer}>
-            <h4>Server-side iframe (renders on server):</h4>
             <iframe
               src="https://www.youtube.com/embed/awsNLPGNI4w?si=hn-0Ak_weB4vWeBT"
               width="560"

@@ -58,13 +58,12 @@ const CanvaToWordBlogPost = () => {
       },
     },
     datePublished: "2025-04-14T09:00:00+10:00",
-    dateModified: "2025-04-14T09:00:00+10:00",
+    dateModified: "2025-07-29T09:00:00+10:00",
     description:
       "Learn how to convert Canva designs into functional Microsoft Word templates. This guide shows you the best methods for creating editable Word documents while maintaining your brand elements from Canva designs.",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id":
-        "https://www.wordexperts.com.au/blog/convert-canva-to-word-template",
+      "@id": "https://www.wordexperts.com.au/blog/convert-canva-to-word",
     },
   };
 

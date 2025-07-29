@@ -4,14 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Support and Training Sydney | Office Experts Group",
   description:
-    "Professional Microsoft support and training services in Sydney. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+    "Professional Microsoft support and training services in Sydney. Our experts provide customised training, technical support and troubleshooting.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Support and Training Sydney | Office Experts Group",
-
     description:
-      "Professional Microsoft support and training services in Sydney. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+      "Professional Microsoft support and training services in Sydney. Our experts provide customised training, technical support and troubleshooting.",
     url: "https://www.officeexperts.com.au/microsoft-support-and-training-sydney",
     siteName: "Office Experts Group",
     images: [
@@ -39,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Microsoft Support and Training Sydney | Office Experts Group",
     description:
-      "Professional Microsoft support and training services in Sydney. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+      "Professional Microsoft support and training services in Sydney. Our experts provide customised training, technical support and troubleshooting.",
     images: ["/logo.png"],
   },
 

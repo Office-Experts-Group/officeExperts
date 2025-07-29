@@ -25,18 +25,20 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(), 
+    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-adelaide",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-adelaide",
       name: "Microsoft Support and Training Adelaide | Office Experts Group",
+      description:
+        "Professional Microsoft support and training services in Adelaide. Our local experts provide customised training, technical support and troubleshooting.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-13T00:00:00+00:00",
-      dateModified: "2025-05-29T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/microsoft-support-and-training-adelaide#breadcrumb",

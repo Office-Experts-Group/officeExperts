@@ -27,11 +27,13 @@ const schema = {
         "https://www.officeexperts.com.au/excel-and-access-experts-melbourne",
       url: "https://www.officeexperts.com.au/excel-and-access-experts-melbourne",
       name: "Excel and Access Experts - Melbourne",
+      description:
+        "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Melbourne.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/excel-and-access-experts-melbourne#breadcrumb",

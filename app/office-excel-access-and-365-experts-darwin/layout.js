@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Office Experts Darwin",
   description:
-    "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
+    "Leading Microsoft Office consulting services in Darwin. Specialising in Microsoft solutions, integration, and business automation.",
 
   // OpenGraph
   openGraph: {
     title: "Office Experts Darwin",
     description:
-      "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting services in Darwin. Specialising in Microsoft solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-darwin",
     siteName: "Office Experts Group",
     images: [
@@ -29,9 +29,6 @@ export const metadata = {
   keywords: [
     // Core services
     "Microsoft Office consultants Darwin",
-    "Excel consulting Darwin",
-    "Access database specialists Darwin",
-    "Office 365 services Darwin",
   ],
 
   // Twitter Card
@@ -40,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Darwin",
     description:
-      "Leading Microsoft Office consulting services in Darwin. Specialising in Excel, Access, Word, PowerPoint and Office 365 solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting services in Darwin. Specialising in Microsoft solutions, integration, and business automation.",
     images: ["/logo.png"],
   },
 

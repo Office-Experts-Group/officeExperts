@@ -33,11 +33,13 @@ const schema = {
         "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong",
       url: "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong",
       name: "Office, Excel, Access and Word Experts - Wollongong",
+      description:
+        "Our Consultants in Wollongong specialise in custom development. Professionals in databases, custom coding, document design, dashboards and reporting solutions.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/office-excel-access-and-word-experts-wollongong#breadcrumb",

@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Office and Office 365 Experts Richmond",
   description:
-    "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
+    "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Office and Office 365 Experts Richmond",
     description:
-      "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
+      "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",
     siteName: "Office Experts Group",
     images: [
@@ -29,7 +29,6 @@ export const metadata = {
   keywords: [
     // Location specific
     "Microsoft office experts richmond",
-    "office 365 consultants richmond",
   ],
 
   // Twitter Card
@@ -38,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office and Office 365 Experts Richmond",
     description:
-      "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions with excellent customer service.",
+      "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions.",
     images: ["/logo.png"],
   },
 

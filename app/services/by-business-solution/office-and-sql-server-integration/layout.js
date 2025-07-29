@@ -4,7 +4,7 @@ export const metadata = {
   // Basic metadata
   title: "Office and SQL Server Integration | Office Experts Group",
   description:
-    "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
+    "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases.",
 
   keywords: [
     // Core integration services
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Office and SQL Server Integration | Office Experts Group",
     description:
-      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
+      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration",
     siteName: "Office Experts Group",
     images: [
@@ -41,7 +41,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office and SQL Server Integration | Office Experts Group",
     description:
-      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases. Contact us for integration solutions.",
+      "We can setup custom solutions for you in Access, Excel, Word and Visual Studio which can modify and interact with SQL Server databases.",
     images: ["/logo.png"],
   },
 };

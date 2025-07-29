@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Office Experts Blog",
   description:
-    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
+    "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
 
   // OpenGraph
   openGraph: {
     title: "Office Experts Blog",
     description:
-    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
+      "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
     url: "https://www.officeexperts.com.au/blog",
     siteName: "Office Experts",
     images: [
@@ -26,9 +26,7 @@ export const metadata = {
   },
 
   // Additional metadata
-  keywords: [
-    "Office Experts Blog",
-  ],
+  keywords: ["Office Experts Blog"],
 
   // Twitter Card
   twitter: {
@@ -36,7 +34,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Blog",
     description:
-    "Explore in-depth tutorials, expert tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more. Learn how to streamline your workflow, analyze data effectively, and unlock the full potential of Microsoft's powerful tools.",
+      "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
     images: ["/logo.png"],
   },
 

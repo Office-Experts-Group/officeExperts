@@ -2,15 +2,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultants Locations | Office Experts Group",
+  title: "Microsoft Consultants Locations",
   description:
-    "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra and more locations.",
+    "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in all major cities.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Consultants Locations | Office Experts Group",
+    title: "Microsoft Consultants Locations",
     description:
-      "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra and more locations.",
+      "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in all major cities.",
     url: "https://www.officeexperts.com.au/locations",
     siteName: "Office Experts Group",
     images: [
@@ -35,9 +35,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Office Experts Consultants Locations | Office Experts Group",
+    title: "Microsoft Consultants Locations",
     description:
-      "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra and more locations.",
+      "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in all major cities.",
     images: ["/logo.png"],
   },
 

@@ -83,6 +83,7 @@ const REDIRECTS = [
     destination: "https://www.wordexperts.com.au/word-template-conversions",
     permanent: true,
   },
+  // access
   {
     source: "/access-azure-cloud-based-solutions",
     destination:
@@ -111,6 +112,7 @@ const REDIRECTS = [
       "https://www.accessexperts.com.au/is-access-right-for-your-company",
     permanent: true,
   },
+  // excel
   {
     source: "/excel-formulas-and-custom-formulas",
     destination:
@@ -364,6 +366,28 @@ const REDIRECTS = [
   {
     source: "/services/microsoft-word/word-template-conversions",
     destination: "https://www.wordexperts.com.au/word-template-conversions",
+    permanent: true,
+  },
+
+  // locations
+  {
+    source: "/excel-and-access-experts-melbourne",
+    destination: "/microsoft-support-and-training-melbourne",
+    permanent: true,
+  },
+  {
+    source: "/excel-and-access-experts-sydney",
+    destination: "/microsoft-support-and-training-sydney",
+    permanent: true,
+  },
+  {
+    source: "/word-and-powerpoint-experts-richmond",
+    destination: "/microsoft-support-and-training-richmond",
+    permanent: true,
+  },
+  {
+    source: "/office-and-office-365-experts-gold-coast",
+    destination: "/microsoft-support-and-training-gold-coast",
     permanent: true,
   },
 ];

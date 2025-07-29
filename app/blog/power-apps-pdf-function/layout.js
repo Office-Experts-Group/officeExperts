@@ -4,14 +4,14 @@ export const metadata = {
   // Basic metadata
   title: "Power Apps PDF Function - The Best Way to Export to PDF?",
   description:
-    "In this tutorial, we will discuss the benefits of using the PDF function for exporting to PDF in Power Apps. The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
+    "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
 
   // OpenGraph
   openGraph: {
     title: "Power Apps PDF Function - The Best Way to Export to PDF?",
     description:
-      "In this tutorial, we will discuss the benefits of using the PDF function for exporting to PDF in Power Apps. The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
-    url: "https://www.officeexperts.com.au/blog/power-apps-pdf-function",
+      "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
+    url: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
     siteName: "Power Platform Experts",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Power Apps PDF Function - The Best Way to Export to PDF?",
     description:
-      "In this tutorial, we will discuss the benefits of using the PDF function for exporting to PDF in Power Apps. The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
+      "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
     images: ["/logo.png"],
   },
 

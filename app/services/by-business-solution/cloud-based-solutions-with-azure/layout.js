@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Cloud Based Solutions | Office Experts Group",
   description:
-    "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
+    "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Cloud Based Solutions | Office Experts Group",
     description:
-      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
+      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
     siteName: "Office Experts Group",
     images: [
@@ -34,7 +34,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Microsoft Cloud Based Solutions | Office Experts Group",
     description:
-      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions. Contact us for Azure cloud expertise.",
+      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
     images: ["/logo.png"],
   },
 

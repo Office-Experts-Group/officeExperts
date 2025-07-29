@@ -32,11 +32,13 @@ const schemaData = {
         "https://www.officeexperts.com.au/microsoft-support-and-training-perth",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-perth",
       name: "Microsoft Support and Training Perth | Office Experts Group",
+      description:
+        "Professional Microsoft support and training services in Perth. Our experts provide customised training, technical support and troubleshooting.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-13T00:00:00+00:00",
-      dateModified: "2025-05-29T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/microsoft-support-and-training-perth#breadcrumb",
@@ -249,10 +251,10 @@ const PerthSupportTraining = () => {
               Working with our Perth-based Microsoft specialists ensures you
               receive responsive, personalised service that understands local
               business needs. Our consultants are familiar with the unique
-              requirements of WA businesses and can provide both
-              scheduled on-site visits and rapid remote assistance when urgent
-              issues arise. Our combined support and training approach has
-              helped hundreds of businesses over the last 25 years.
+              requirements of WA businesses and can provide both scheduled
+              on-site visits and rapid remote assistance when urgent issues
+              arise. Our combined support and training approach has helped
+              hundreds of businesses over the last 25 years.
             </p>
           </section>
 

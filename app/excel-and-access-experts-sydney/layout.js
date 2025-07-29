@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Excel and Access Database Experts Sydney",
   description:
-    "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
+    "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Sydney.",
 
   // OpenGraph
   openGraph: {
     title: "Excel and Access Database Experts Sydney",
     description:
-      "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Sydney.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-sydney",
     siteName: "Office Experts Group",
     images: [
@@ -25,20 +25,13 @@ export const metadata = {
     type: "website",
   },
 
-  // Keywords extrapolated from content
-  keywords: [
-    // Core services
-    "Excel consulting Sydney",
-    "Access specialists Sydney",
-  ],
-
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Excel and Access Database Experts Sydney",
     description:
-      "Leading Microsoft Excel and Access consultants in Sydney. Excel development, Access database solutions, macros, VBA programming, custom solutions and integration.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Sydney.",
     images: ["/logo.png"],
   },
   alternates: {

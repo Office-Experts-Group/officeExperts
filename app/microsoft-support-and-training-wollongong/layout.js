@@ -4,14 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Support and Training Wollongong | Office Experts Group",
   description:
-    "Professional Microsoft support and training services in Wollongong. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+    "Professional Microsoft support and training services in Wollongong. Our experts provide customised training, technical support and troubleshooting.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Support and Training Wollongong | Office Experts Group",
-
     description:
-      "Professional Microsoft support and training services in Wollongong. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+      "Professional Microsoft support and training services in Wollongong. Our experts provide customised training, technical support and troubleshooting.",
     url: "https://www.officeexperts.com.au/microsoft-support-and-training-wollongong",
     siteName: "Office Experts Group",
     images: [
@@ -39,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Microsoft Support and Training Wollongong | Office Experts Group",
     description:
-      "Professional Microsoft support and training services in Wollongong. Our local experts provide customised training, technical support and troubleshooting for all Microsoft applications.",
+      "Professional Microsoft support and training services in Wollongong. Our experts provide customised training, technical support and troubleshooting.",
     images: ["/logo.png"],
   },
 

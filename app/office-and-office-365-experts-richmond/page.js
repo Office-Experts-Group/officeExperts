@@ -33,11 +33,13 @@ const schema = {
         "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",
       url: "https://www.officeexperts.com.au/office-and-office-365-experts-richmond",
       name: "Office and Office 365 Experts - Richmond",
+      description:
+        "Expert Microsoft Office consulting team in Richmond specialising in custom development, databases, document design, dashboards and reporting solutions.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/office-and-office-365-experts-richmond#breadcrumb",

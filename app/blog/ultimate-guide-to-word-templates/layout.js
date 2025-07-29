@@ -10,7 +10,7 @@ export const metadata = {
     title: "Ultimate Guide to Microsoft Word Templates",
     description:
       "What is a Word Template? Expert insights, tips, and guides for Microsoft Word users from Australia's leading Word specialists.",
-    url: "https://www.officeexperts.com.au/blog/ultimate-guide-to-word-templates",
+    url: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
     siteName: "Office Experts",
     images: [
       {

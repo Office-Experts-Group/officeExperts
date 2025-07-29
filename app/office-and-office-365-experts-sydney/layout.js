@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Office and Office 365 Experts Sydney",
   description:
-    "Leading Microsoft Office and Office 365 consultants in Sydney. Specialising in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
+    "Leading Microsoft Office consultants in Sydney. Our experts specialise in custom Office development, integration, and business automation solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Office and Office 365 Experts Sydney",
     description:
-      "Leading Microsoft Office and Office 365 consultants in Sydney. Specialising in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
+      "Leading Microsoft Office consultants in Sydney. Our experts specialise in custom Office development, integration, and business automation solutions.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-sydney",
     siteName: "Office Experts Group",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office and Office 365 Experts Sydney",
     description:
-      "Leading Microsoft Office and Office 365 consultants in Sydney. Specialising in Excel, Access, Word, PowerPoint development, integration, and business automation solutions.",
+      "Leading Microsoft Office consultants in Sydney. Our experts specialise in custom Office development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
 

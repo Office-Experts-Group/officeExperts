@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "PowerPoint Consulting Services | Office Experts Group",
+  title: "PowerPoint Consulting Services",
   description:
     "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "PowerPoint Consulting Services | Office Experts Group",
+    title: "PowerPoint Consulting Services",
     description:
       "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "PowerPoint Consulting Services | Office Experts Group",
+    title: "PowerPoint Consulting Services",
     description:
       "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
     images: ["/logo.png"],

@@ -26,7 +26,8 @@ const schema = {
       "@id": "https://www.officeexperts.com.au#website",
       url: "https://www.officeexperts.com.au",
       name: "Office experts",
-      description: "Microsoft Excel, Microsoft Access, Power BI, MS Office",
+      description:
+        "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
       potentialAction: {
         "@type": "SearchAction",
         target: "https://www.officeexperts.com.au?s={search_term_string}",

@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Excel & Access Consultants Central Coast NSW",
   description:
-    "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimisation.",
+    "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Central Coast NSW.",
 
   // OpenGraph
   openGraph: {
     title: "Excel & Access Consultants Central Coast NSW",
     description:
-      "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimisation.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Central Coast NSW.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
     siteName: "Office Experts Group",
     images: [
@@ -39,7 +39,7 @@ export const metadata = {
     title:
       "Excel & Access Experts Group | Microsoft Excel & Access Consulting Central Coast NSW",
     description:
-      "Leading Microsoft Excel and Access consulting and solutions provider in Central Coast NSW. Specialising in comprehensive database solutions, Excel automation, and business process optimization.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Central Coast NSW.",
     images: ["/logo.png"],
   },
   alternates: {

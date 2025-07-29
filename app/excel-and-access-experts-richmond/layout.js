@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Excel and Access Experts Richmond",
   description:
-    "Expert Microsoft Excel programmers and Access database consultants in Richmond. Specialising in custom development, databases, integration, data manipulation and business solutions.",
+    "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Richmond.",
 
   // OpenGraph
   openGraph: {
     title: "Excel and Access Experts Richmond",
     description:
-      "Expert Microsoft Excel programmers and Access database consultants in Richmond. Specialising in custom development, databases, integration, data manipulation and business solutions.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Richmond.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-richmond",
     siteName: "Office Experts Group",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Excel and Access Experts Richmond",
     description:
-      "Expert Microsoft Excel programmers and Access database consultants in Richmond. Specialising in custom development, databases, integration, data manipulation and business solutions.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Richmond.",
     images: ["/logo.png"],
   },
   alternates: {

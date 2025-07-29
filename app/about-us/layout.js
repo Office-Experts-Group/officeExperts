@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "About Us | Office Experts Group",
+  title: "About Us",
   description:
-    "Office Experts Group is a leading Microsoft Office consulting team with expert developers and designers highly experienced in Microsoft Office for both PC and Mac, servicing all of Australia.",
+    "Office Experts Group is a leading Microsoft Office consulting team with expert developers, designers & consultants. Microsoft Office support Australia-wide.",
 
   openGraph: {
-    title: "About Us | Office Experts Group",
+    title: "About Us",
     description:
-      "Leading Microsoft Office consultants with expert developers and designers servicing all of Australia. Corporate business experience combined with software development expertise.",
+      "Office Experts Group is a leading Microsoft Office consulting team with expert developers, designers & consultants. Microsoft Office support Australia-wide.",
     url: "https://www.officeexperts.com.au/about-us",
     siteName: "Office Experts Group",
     images: [
@@ -28,9 +28,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "About Us | Office Experts Group",
+    title: "About Us",
     description:
-      "Leading Microsoft Office consultants with expert developers and designers servicing all of Australia. Corporate business experience combined with software development expertise.",
+      "Office Experts Group is a leading Microsoft Office consulting team with expert developers, designers & consultants. Microsoft Office support Australia-wide.",
     images: ["/logo.png"],
   },
   alternates: {

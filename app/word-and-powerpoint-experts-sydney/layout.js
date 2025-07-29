@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Word and PowerPoint Experts Sydney",
+  title: "Word and PowerPoint Consultants Sydney",
   description:
-    "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
+    "Sydney's leading consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
 
   openGraph: {
-    title: "Word and PowerPoint Experts Sydney",
+    title: "Word and PowerPoint Consultants Sydney",
     description:
-      "Sydney's leading Microsoft Word and PowerPoint consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
+      "Sydney's leading consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-sydney",
     siteName: "Office Experts Group",
     images: [
@@ -26,7 +26,6 @@ export const metadata = {
   keywords: [
     // Location-based
     "word powerpoint experts sydney",
-    "powerpoint designers sydney",
   ],
 
   alternates: {
@@ -37,9 +36,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Canberra",
+    title: "Word and PowerPoint Consultants Sydney",
     description:
-      "Our team of Microsoft Word and PowerPoint experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
+      "Sydney's leading consultants specialising in document design, presentation templates, automation solutions and corporate branding implementation.",
     images: ["/logo.png"],
   },
 };

@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Excel and Access Experts Melbourne",
   description:
-    "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing. Specialists in custom development, databases, integration, and business solutions.",
+    "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Melbourne.",
 
   // OpenGraph
   openGraph: {
     title: "Excel and Access Experts Melbourne",
     description:
-      "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing. Specialists in custom development, databases, integration, and business solutions.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Melbourne.",
     url: "https://www.officeexperts.com.au/excel-and-access-experts-melbourne",
     siteName: "Office Experts Group",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Excel and Access Experts Melbourne",
     description:
-      "Experienced Microsoft Excel programmers and Access database consultants in Melbourne delivering prompt, quality service with innovative solutions and competitive pricing.",
+      "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Melbourne.",
     images: ["/logo.png"],
   },
   alternates: {

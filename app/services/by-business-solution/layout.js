@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Business Solutions & Office Development Services",
   description:
-    "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
+    "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Business Solutions & Office Development Services",
     description:
-      "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
+      "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions.",
     url: "https://www.officeexperts.com.au/services/by-business-solution",
     siteName: "Office Experts Group",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Business Solutions & Custom Office Development Services",
     description:
-      "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions. Contact us for business solutions.",
+      "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions.",
     images: ["/logo.png"],
   },
   alternates: {

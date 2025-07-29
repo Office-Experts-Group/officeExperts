@@ -45,7 +45,7 @@ const SpreadsheetErrorBlogPost = () => {
 
     // Dates
     datePublished: "2025-07-23T09:00:00+10:00",
-    dateModified: "2025-07-23T09:00:00+10:00",
+    dateModified: "2025-07-29T09:00:00+10:00",
 
     // Article structure
     articleSection: "Excel Tips",

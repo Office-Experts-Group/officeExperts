@@ -26,7 +26,9 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
       url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
-      name: "Word and PowerPoint Experts - Canberra - Office Experts Group: Microsoft Excel Experts, Microsoft Access Database Experts, Microsoft Word Experts, PowerPoint Experts, Azure, Power BI, SQL Server, SharePoint, Microsoft Office 365",
+      name: "Word and PowerPoint Experts - Canberra",
+      description:
+        "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -34,7 +36,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2025-03-27T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra#breadcrumb",

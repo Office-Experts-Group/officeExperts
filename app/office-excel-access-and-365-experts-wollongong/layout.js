@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Office Consultants Wollongong",
   description:
-    "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
+    "Our Consultants in Wollongong specialise in custom development. Professionals in databases, custom coding, document design, dashboards and reporting solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Office Consultants Wollongong",
     description:
-      "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
+      "Our Consultants in Wollongong specialise in custom development. Professionals in databases, custom coding, document design, dashboards and reporting solutions.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-wollongong",
     siteName: "Office Experts Group",
     images: [
@@ -29,9 +29,6 @@ export const metadata = {
   keywords: [
     // Location based
     "microsoft office consultants wollongong",
-    "excel consulting wollongong",
-    "access database specialists wollongong",
-    "office 365 consulting wollongong",
   ],
 
   // Twitter Card
@@ -40,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Wollongong",
     description:
-      "Our Microsoft Office consultants at Office Experts Group Wollongong specialise in custom development across the entire suite of Office products. Expert in databases, custom coding, document design, dashboards and reporting solutions.",
+      "Our Consultants in Wollongong specialise in custom development. Professionals in databases, custom coding, document design, dashboards and reporting solutions.",
     images: ["/logo.png"],
   },
 

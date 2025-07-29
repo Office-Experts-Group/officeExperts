@@ -27,11 +27,13 @@ const schema = {
         "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
       url: "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw",
       name: "Excel and Access Experts - Central Coast, NSW",
+      description:
+        "With over 25 years of experience, we are Australia's leading Microsoft solutions provider in Central Coast NSW.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/excel-and-access-experts-central-coast-nsw#breadcrumb",

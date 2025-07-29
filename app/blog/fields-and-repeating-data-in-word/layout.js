@@ -2,17 +2,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Fields and Repeating Data in Word: Best Practices for Business Templates",
+  title: "Fields and Repeating Data in Word - Business Templates",
   description:
-    "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
+    "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
 
   // OpenGraph
   openGraph: {
-    title:
-      "Fields and Repeating Data in Word: Best Practices for Business Templates",
+    title: "Fields and Repeating Data in Word - Business Templates",
     description:
-      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
+      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
     url: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
     siteName: "Word Experts",
     images: [
@@ -34,20 +32,15 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Fields and Repeating Data in Word: Best Practices for Business Templates",
+    title: "Fields and Repeating Data in Word - Business Templates",
     description:
-      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
+      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
     images: ["/logo.png"],
   },
 
   alternates: {
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
-      },
-    ],
-    canonical: "/blog/fields-and-repeating-data-in-word",
+    canonical:
+      "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
   },
 };
 

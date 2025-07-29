@@ -3,12 +3,12 @@ import React from "react";
 export const metadata = {
   title: "Microsoft Office Consulting Northern Rivers NSW",
   description:
-    "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW. Specialising in comprehensive Office solutions, integration, and business automation.",
+    "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW with over 25+ years of experience.",
 
   openGraph: {
     title: "Microsoft Office Consulting Northern Rivers NSW",
     description:
-      "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW. Specialising in comprehensive Office solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW with over 25+ years of experience.",
     url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-northern-rivers-nsw",
     siteName: "Office Experts Group",
     images: [
@@ -26,8 +26,6 @@ export const metadata = {
   keywords: [
     // Location-specific
     "Microsoft Office consulting Northern Rivers NSW",
-    "Office solutions Northern Rivers NSW",
-    "Microsoft Office programmers Northern Rivers NSW",
   ],
 
   twitter: {
@@ -35,7 +33,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Group Northern Rivers NSW",
     description:
-      "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW. Specialising in comprehensive Office solutions, integration, and business automation.",
+      "Leading Microsoft Office consulting and solutions provider in Northern Rivers NSW with over 25+ years of experience.",
     images: ["/logo.png"],
   },
   alternates: {

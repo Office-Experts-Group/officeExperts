@@ -24,14 +24,14 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/by-business-solution",
       url: "https://www.officeexperts.com.au/services/by-business-solution",
-      name: "Excel Custom Formula Service | Services By Business Solution",
+      name: "Excel Experts | Services By Business Solution",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       description:
-        "We can give you a quote or work to an hourly rate. Via remote access, we offer ongoing support and training, for your staff to learn specific tasks as required.",
+        "Expert Microsoft Office development and consulting services including VBA macros, database solutions, cloud integration, and custom Office solutions.",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution#breadcrumb",

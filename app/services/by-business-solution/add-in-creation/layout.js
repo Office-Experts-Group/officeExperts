@@ -4,12 +4,10 @@ export const metadata = {
   // Basic metadata
   title: "Office Add-in Development & Integration Services ",
   description:
-      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
+    "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem.",
 
   // Additional metadata
-  keywords: [
-    "Microsoft Office add-in developers",
-  ],
+  keywords: ["Microsoft Office add-in developers"],
 
   alternates: {
     canonical: "/services/by-business-solution/add-in-creation",
@@ -19,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "Office Add-in Development & Integration Services",
     description:
-      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
+      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
     siteName: "Office Experts Group",
     images: [
@@ -40,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Add-in Development & Integration Services",
     description:
-      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem. Get a quote today!",
+      "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem.",
     images: ["/logo.png"],
   },
 };

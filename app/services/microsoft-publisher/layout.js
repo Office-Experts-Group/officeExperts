@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Publisher Services | Office Experts Group",
+  title: "Microsoft Publisher Services",
   description:
     "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
 
@@ -18,7 +18,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Publisher Services | Office Experts Group",
+    title: "Microsoft Publisher Services",
     description:
       "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
     url: "https://www.officeexperts.com.au/services/microsoft-publisher",
@@ -39,7 +39,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Publisher Services | Office Experts Group",
+    title: "Microsoft Publisher Services",
     description:
       "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
     images: ["/logo.png"],

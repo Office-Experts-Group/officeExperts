@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Word and PowerPoint Experts Richmond",
+  title: "Word and PowerPoint Consultants Richmond",
   description:
     "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Word and PowerPoint Experts Richmond",
+    title: "Word and PowerPoint Consultants Richmond",
     description:
       "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
@@ -25,13 +25,6 @@ export const metadata = {
     type: "website",
   },
 
-  // Additional metadata
-  keywords: [
-    // Core services
-    "Microsoft Word experts Richmond",
-    "PowerPoint consultants Richmond",
-  ],
-
   alternates: {
     canonical: "/word-and-powerpoint-experts-richmond",
   },
@@ -40,7 +33,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Word and PowerPoint Experts Richmond",
+    title: "Word and PowerPoint Consultants Richmond",
     description:
       "Leading Microsoft Word and PowerPoint consulting experts in Richmond. Specialising in templates, document design, presentations, automation and business solutions.",
     images: ["/logo.png"],

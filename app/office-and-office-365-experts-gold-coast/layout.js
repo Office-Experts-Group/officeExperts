@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Microsoft Office Consultants Gold Coast",
   description:
-    "Leading Microsoft Office consulting and Office 365 expertise in Gold Coast. Our expert consultants specialise in custom Office development, integration, and business automation solutions.",
+    "Leading Microsoft Office consultants on the Gold Coast. Our experts specialise in custom Office development, integration, and business automation solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Microsoft Office Consultants Gold Coast",
     description:
-      "Leading Microsoft Office consulting and Office 365 expertise in Gold Coast. Our expert consultants specialise in custom Office development, integration, and business automation solutions.",
+      "Leading Microsoft Office consultants on the Gold Coast. Our experts specialise in custom Office development, integration, and business automation solutions.",
     url: "https://www.officeexperts.com.au/office-and-office-365-experts-gold-coast",
     siteName: "Office Experts Group",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Consultants Gold Coast",
     description:
-      "Leading Microsoft Office consulting and Office 365 expertise in Gold Coast. Our expert consultants specialise in custom Office development, integration, and business automation solutions.",
+      "Leading Microsoft Office consultants on the Gold Coast. Our experts specialise in custom Office development, integration, and business automation solutions.",
     images: ["/logo.png"],
   },
 

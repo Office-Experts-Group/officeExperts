@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Creating Word Templates for Legal Firms: Best Practices",
   description:
-    "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
+    "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
 
   // OpenGraph
   openGraph: {
     title: "Creating Word Templates for Legal Firms: Best Practices",
     description:
-      "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
+      "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
     url: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
     siteName: "Word Experts",
     images: [
@@ -34,17 +34,13 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Creating Word Templates for Legal Firms: Best Practices",
     description:
-      "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
+      "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
     images: ["/logo.png"],
   },
 
   alternates: {
-    canonical: "/blog/word-templates-for-legal-firms",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
-      },
-    ],
+    canonical:
+      "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
   },
 };
 

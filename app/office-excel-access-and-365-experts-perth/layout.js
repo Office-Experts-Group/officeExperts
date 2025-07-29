@@ -3,7 +3,7 @@ import React from "react";
 export const metadata = {
   title: "Office, Excel, Access and 365 Consultants Perth",
   description:
-    "Leading Microsoft Office consulting and solutions provider in Perth. Specialising in Excel, Access, and Office 365 solutions, integration, and business automation.",
+    "Our Consultants in Perth specialise in custom development. Professionals in databases, custom coding, document design, dashboards and reporting solutions.",
 
   openGraph: {
     title: "Office, Excel, Access and 365 Consultants Perth",
@@ -25,10 +25,7 @@ export const metadata = {
 
   keywords: [
     // Perth-specific
-    "Microsoft Office consultants Perth",
-    "Excel consultants Perth",
     "Office 365 consultants Perth",
-    "Access database specialists Perth",
   ],
 
   twitter: {

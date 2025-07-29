@@ -3,7 +3,7 @@ import React from "react";
 export const metadata = {
   title: "Microsoft Power Platform Services | Office Experts Group",
   description:
-    "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
+    "We specialise in applications that efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
 
   alternates: {
     canonical: "https://www.powerplatformexperts.com.au",
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Microsoft Power Platform Services | Office Experts Group",
     description:
-      "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
+      "We specialise in applications that efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
     url: "https://www.powerplatformexperts.com.au",
     siteName: "Office Experts Group",
     images: [
@@ -34,7 +34,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Microsoft Power Platform Services | Office Experts Group",
     description:
-      "With competitive pricing and a prompt high quality service, our consultants excel in the Microsoft Power Platform of low-code tools and software. We specialise in custom business applications to efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
+      "We specialise in applications that efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
     images: ["/logo.png"],
   },
 };

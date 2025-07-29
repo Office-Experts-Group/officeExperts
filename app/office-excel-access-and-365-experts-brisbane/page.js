@@ -33,11 +33,13 @@ const schema = {
         "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane",
       url: "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane",
       name: "Office, Excel, Access and 365 Experts - Brisbane",
+      description:
+        "Leading Microsoft Office consultants in Brisbane specialising in Excel, Access, Word, PowerPoint and Office 365 solutions.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-03-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/office-excel-access-and-365-experts-brisbane#breadcrumb",

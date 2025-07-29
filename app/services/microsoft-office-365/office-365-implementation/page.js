@@ -23,7 +23,9 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation",
       url: "https://www.officeexperts.com.au/services/microsoft-office-365/office-365-implementation",
-      name: "Microsoft Office 365 Implementation Experts | Office 365 Implementation Consultants | Office Experts Group",
+      name: "Microsoft Office 365 Implementation Experts",
+      description:
+        "Microsoft offers an overwhelming choice of apps and  subscriptions. Our experts are ready to consult with you to find the best choice for you.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

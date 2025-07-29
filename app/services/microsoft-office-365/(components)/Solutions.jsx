@@ -21,7 +21,7 @@ const Solutions = () => {
     },
     {
       title: "Office 365 Migration",
-      link: "/services/microsoft-access",
+      link: "https://www.accessexperts.com.au",
       image: project2,
       description: [
         "Need to migrate emails and/or files to Office 365?",

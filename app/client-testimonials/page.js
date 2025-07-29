@@ -28,11 +28,13 @@ const schema = {
       "@id": "https://www.officeexperts.com.au/client-testimonials",
       url: "https://www.officeexperts.com.au/client-testimonials",
       name: "Client Testimonials | Client Referrals | Office Experts Group",
+      description:
+        "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-07-29T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/client-testimonials#breadcrumb",

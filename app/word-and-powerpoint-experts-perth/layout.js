@@ -3,12 +3,12 @@ import React from "react";
 export const metadata = {
   title: "Word and PowerPoint Consultants Perth",
   description:
-    "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
+    "Expert Microsoft Consulting services in Perth. Specialising in templates, document design, presentations, automation and corporate solutions.",
 
   openGraph: {
     title: "Word and PowerPoint Consultants Perth",
     description:
-      "Leading Microsoft Word and PowerPoint consulting services in Perth. Specialising in presentation design, document templates, and business automation solutions.",
+      "Expert Microsoft Consulting services in Perth. Specialising in templates, document design, presentations, automation and corporate solutions.",
     url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-perth",
     siteName: "Office Experts Group",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Word and PowerPoint Experts Perth",
     description:
-      "Leading Microsoft Word and PowerPoint consulting experts in Perth. Specialising in templates, document design, presentations, automation and business solutions.",
+      "Expert Microsoft Consulting services in Perth. Specialising in templates, document design, presentations, automation and corporate solutions.",
     images: ["/logo.png"],
   },
 };
