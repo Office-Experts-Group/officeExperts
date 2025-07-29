@@ -20,7 +20,7 @@ const BlogPage = () => {
       title: "Export to PDF in Power Apps - The Best Way to Do It!",
       description:
         "Learn how to export data from Power Apps to PDF using Power Automate. This tutorial shows the easiest and most effective way to generate professional PDF documents directly from your Power Apps.",
-      slug: "export-to-pdf-in-power-apps",
+      slug: "https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps",
       date: "April 11, 2025",
       author: "Marcello Brocchi",
       readingTime: "6 min",
@@ -34,7 +34,7 @@ const BlogPage = () => {
       title: "Getting Started with Power Apps and Microsoft SQL Database",
       description:
         "Learn how to evolve your Power Apps development by connecting to Microsoft SQL databases. This comprehensive guide covers setting up an Azure SQL database and building applications.",
-      slug: "power-apps-with-sql-database",
+      slug: "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
       date: "April 11, 2025",
       author: "Marcello Brocchi",
       readingTime: "8 min",
@@ -48,7 +48,7 @@ const BlogPage = () => {
       title: "Power Apps PDF Function - The Best Way to Export to PDF?",
       description:
         "Discover how to use the new experimental PDF function in Power Apps to generate PDF documents directly from your applications without complex workarounds.",
-      slug: "power-apps-pdf-function",
+      slug: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
       date: "April 11, 2025",
       author: "Marcello Brocchi",
       readingTime: "4 min",
@@ -62,7 +62,7 @@ const BlogPage = () => {
       title: "File Attachments in Power Apps - The Best Way to Do Them",
       description:
         "Learn the best approach to implement file attachments in Power Apps using the new Power Automate action that makes uploading documents to SharePoint document libraries simple and efficient.",
-      slug: "file-attachments-in-power-apps",
+      slug: "https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps",
       date: "April 11, 2025",
       author: "Marcello Brocchi",
       readingTime: "5 min",
@@ -76,7 +76,7 @@ const BlogPage = () => {
       title: "How to Convert a Canva Design into a Microsoft Word Template",
       description:
         "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
-      slug: "convert-canva-to-word",
+      slug: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
       date: "April 14, 2025",
       author: "Daniel Thomas",
       readingTime: "5 min",
@@ -90,7 +90,7 @@ const BlogPage = () => {
       title: "Ultimate Guide to Microsoft Word Templates",
       description:
         "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.",
-      slug: "ultimate-guide-to-word-templates",
+      slug: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
       date: "April 8, 2025",
       author: "Daniel Thomas",
       readingTime: "8 min",
@@ -105,7 +105,7 @@ const BlogPage = () => {
         "The Hidden Risk of Spreadsheet Errors in Your Business—and How to Prevent Them",
       description:
         "Research shows that 88% of spreadsheets contain errors. Learn why spreadsheet errors are so common, how to identify warning signs, and practical strategies to prevent costly mistakes in your business.",
-      slug: "spreadsheet-errors-in-excel",
+      slug: "https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel",
       date: "July 23, 2025",
       author: "Daniel Thomas",
       readingTime: "8 min",
@@ -119,7 +119,7 @@ const BlogPage = () => {
       title: "20 Advanced Excel Shortcuts That Will Supercharge Your Workflow",
       description:
         "Master 20 advanced Excel shortcuts for Mac that will transform your productivity. From data analysis to formatting, these keyboard shortcuts will save you hours and impress your team.",
-      slug: "20-advanced-excel-shortcuts",
+      slug: "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
       date: "July 24, 2025",
       author: "Daniel Thomas",
       readingTime: "6 min",
@@ -134,7 +134,7 @@ const BlogPage = () => {
         "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
       description:
         "Learn how to create your own Excel shortcuts using macros to automate repetitive tasks. Discover 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-      slug: "custom-excel-shortcuts-with-macros",
+      slug: "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
       date: "July 24, 2025",
       author: "Daniel Thomas",
       readingTime: "7 min",
@@ -149,7 +149,7 @@ const BlogPage = () => {
         "Fields and Repeating Data in Word: Best Practices for Business Templates",
       description:
         "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
-      slug: "fields-and-repeating-data-in-word",
+      slug: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
       date: "July 24, 2025",
       author: "Daniel Thomas",
       readingTime: "12 min",
@@ -162,7 +162,7 @@ const BlogPage = () => {
       title: "Creating Word Templates for Legal Firms: Best Practices",
       description:
         "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
-      slug: "word-templates-for-legal-firms",
+      slug: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
       date: "July 25, 2025",
       author: "Daniel Thomas",
       readingTime: "10 min",
@@ -205,7 +205,7 @@ const BlogPage = () => {
   // Function to render a card (used for both featured and regular posts)
   const renderPostCard = (post, isFeatured = false) => (
     <Link
-      href={`/blog/${post.slug}`}
+      href={post.slug}
       key={post.id}
       className={isFeatured ? styles.featuredPostCard : styles.postCard}
     >

@@ -25,6 +25,8 @@ const schema = {
         "https://www.officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
       url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
       name: "VBA Automation Experts | Macro Automation Experts | Excel Experts",
+      description:
+        "Our team of PowerPoint consultants and programmers provide data linking services, VBA automation solutions and brand consistency for PowerPoint presentations.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

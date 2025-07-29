@@ -28,7 +28,7 @@ const schema = {
       url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-canberra",
       name: "Word and PowerPoint Experts - Canberra",
       description:
-        "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency, customer service, and innovative solutions.",
+        "Our team of experts in Canberra deliver comprehensive document and presentation solutions with a focus on efficiency & customer service.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

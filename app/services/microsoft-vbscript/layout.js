@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "VBScript Support | Office Experts Group",
+  title: "VBScript Support",
   description:
     "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "VBScript Support | Office Experts Group",
+    title: "VBScript Support",
     description:
       "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
     url: "https://www.officeexperts.com.au/services/microsoft-vbscript",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "VBScript Support | Office Experts Group",
+    title: "VBScript Support",
     description:
       "Our VBScript programmers are experienced across all VBScript needs including Windows automation, batch processing, and system tasks.",
     images: ["/logo.png"],

@@ -39,12 +39,8 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/blog/power-apps-pdf-function",
-    alternate: [
-      {
-        url: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
-      },
-    ],
+    canonical:
+      "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
   },
 };
 

@@ -1,12 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title: "Microsoft Office Services | Office Experts Group",
+  title: "Microsoft Office Services",
   description:
     "The Office Experts Group specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
 
   openGraph: {
-    title: "Microsoft Office Services | Office Experts Group",
+    title: "Microsoft Office Services",
     description:
       "The Office Experts Group specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
     url: "https://www.officeexperts.com.au/services/microsoft-office",
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Office Services | Office Experts Group",
+    title: "Microsoft Office Services",
     description:
       "The Office Experts Group specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
     images: ["/logo.png"],

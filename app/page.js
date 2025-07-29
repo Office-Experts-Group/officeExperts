@@ -35,7 +35,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/",
       url: "https://www.officeexperts.com.au",
-      name: "Microsoft Office Services | Office Experts Group",
+      name: "Microsoft Office Consulting & Solutions",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -58,7 +58,7 @@ const schema = {
       "@type": "WebSite",
       "@id": "https://www.officeexperts.com.au#website",
       url: "https://www.officeexperts.com.au",
-      name: "Office Experts Group: Microsoft Excel Experts, Microsoft Access Database Experts, Microsoft Word Experts, PowerPoint Experts, Azure, Power BI, SQL Server, SharePoint, Microsoft Office 365",
+      name: "Microsoft Office Consulting & Solutions",
       description:
         "Your Microsoft Office Design, Development and Consulting Experts",
       publisher: {

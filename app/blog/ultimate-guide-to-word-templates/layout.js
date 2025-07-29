@@ -35,12 +35,8 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/blog/ultimate-guide-to-word-templates",
-    alternate: [
-      {
-        url: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
-      },
-    ],
+    canonical:
+      "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
   },
 };
 

@@ -27,7 +27,7 @@ const schema = {
       url: "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
       name: "Add-in Creation | Microsoft Office Expert Australia",
       description:
-        "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions that enhance your entire Microsoft ecosystem.",
+        "Create custom Office add-ins that work across Word, PowerPoint, Outlook & more. Our experts build cross-application solutions for your Microsoft ecosystem.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

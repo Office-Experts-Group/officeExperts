@@ -73,7 +73,10 @@ const ContentsCopy = () => {
               <p>Microsoft Azure</p>
             </div>
           </Link>
-          <Link href="/services/microsoft-access" onClick={handleLinkClick}>
+          <Link
+            href="https://www.accessexperts.com.au"
+            onClick={handleLinkClick}
+          >
             <div className={styles.contentLink}>
               <p>Microsoft Access</p>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "VBA Macro Development | Office Experts Group",
+  title: "VBA Macro Development",
   description:
     "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
 
@@ -14,7 +14,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "VBA Macro Development | Office Experts Group",
+    title: "VBA Macro Development",
     description:
       "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
@@ -35,7 +35,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "VBA Macro Development | Office Experts Group",
+    title: "VBA Macro Development",
     description:
       "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
     images: ["/logo.png"],

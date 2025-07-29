@@ -70,20 +70,20 @@ const garamond = EB_Garamond({
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Office Consulting & Solutions | Office Experts Group",
+  title: "Microsoft Office Consulting & Solutions",
   description:
     "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
   alternates: {
     canonical: "https://www.officeexperts.com.au",
-        languages: {
+    languages: {
       "en-AU": "https://www.officeexperts.com.au",
-      "x-default": "https://www.officeexperts.com.au"
+      "x-default": "https://www.officeexperts.com.au",
     },
   },
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Office Consulting & Solutions | Office Experts Group",
+    title: "Microsoft Office Consulting & Solutions",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     url: "https://www.officeexperts.com.au",
@@ -111,16 +111,13 @@ export const metadata = {
     "Microsoft Office solutions",
     "Microsoft Office programmers",
     "Microsoft Office Experts",
-    "Office automation solutions",
-    "Microsoft Office integration services",
-    "Office 365 migration services",
   ],
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Office Consulting & Solutions | Office Experts Group",
+    title: "Microsoft Office Consulting & Solutions",
     description:
       "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
     images: ["/logo.png"],

@@ -11,7 +11,7 @@ const SegmentMainCopy = () => {
     <section className={styles.pageSegmentReverse}>
       <div className={styles.contents}>
         <h3>Our Services</h3>
-        <Link href="/services/microsoft-excel/vba-macro-development">
+        <Link href="https://www.excelexperts.com.au/vba-macro-development">
           <div className={styles.contentLink}>
             <p>VBA Programming</p>
           </div>
@@ -38,12 +38,12 @@ const SegmentMainCopy = () => {
             <p>Microsoft Azure</p>
           </div>
         </Link>
-        <Link href="/services/microsoft-access">
+        <Link href="https://www.accessexperts.com.au">
           <div className={styles.contentLink}>
             <p>Microsoft Access</p>
           </div>
         </Link>
-        <Link href="/services/microsoft-power-platform/microsoft-power-bi">
+        <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi">
           <div className={styles.contentLink}>
             <p>Power BI</p>
           </div>
@@ -58,7 +58,7 @@ const SegmentMainCopy = () => {
             <p>VB.NET</p>
           </div>
         </Link>
-        <Link href="/services/microsoft-word">
+        <Link href="https://www.wordexperts.com.au">
           <div className={styles.contentLink}>
             <p>Microsoft Word</p>
           </div>

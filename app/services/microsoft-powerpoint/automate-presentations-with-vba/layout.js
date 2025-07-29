@@ -5,7 +5,7 @@ export const metadata = {
   title:
     "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
   description:
-    "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
+    "Our team of PowerPoint consultants and programmers provide data linking services, VBA automation solutions and brand consistency for PowerPoint presentations.",
 
   keywords: [
     "automated PowerPoint presentations with VBA",
@@ -22,7 +22,7 @@ export const metadata = {
     title:
       "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
     description:
-      "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
+      "Our team of PowerPoint consultants and programmers provide data linking services, VBA automation solutions and brand consistency for PowerPoint presentations.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/automate-presentations-with-vba",
     siteName: "Office Experts Group",
     images: [
@@ -44,7 +44,7 @@ export const metadata = {
     title:
       "VBA Automation Experts | PowerPoint Automation | Office Experts Group",
     description:
-      "PowerPoint experts providing data linking and VBA automation solutions for PowerPoint presentations. Professional automation services for time-saving and accuracy.",
+      "Our team of PowerPoint consultants and programmers provide data linking services, VBA automation solutions and brand consistency for PowerPoint presentations.",
     images: ["/logo.png"],
   },
 };

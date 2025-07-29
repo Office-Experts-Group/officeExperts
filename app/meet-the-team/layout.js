@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Meet Our Microsoft Office Specialists | Office Experts Group",
+  title: "Meet Our Microsoft Office Specialists",
   description:
     "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
 
   // OpenGraph
   openGraph: {
-    title: "Meet Our Microsoft Office Specialists | Office Experts Group",
+    title: "Meet Our Microsoft Office Specialists",
     description:
       "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
     url: "https://www.officeexperts.com.au/meet-the-team",
@@ -31,7 +31,7 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Meet Our Microsoft Office Specialists | Office Experts Group",
+    title: "Meet Our Microsoft Office Specialists",
     description:
       "Connect with our expert team of Microsoft Office specialists, designers, programmers and consultants.",
     images: ["/logo.png"],

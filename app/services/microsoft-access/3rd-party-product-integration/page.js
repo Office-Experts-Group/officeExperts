@@ -69,7 +69,7 @@ const schema = {
           "@type": "ListItem",
           position: 3,
           name: "Access Experts Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-access",
+          item: "https://www.accessexperts.com.au",
         },
         {
           "@type": "ListItem",

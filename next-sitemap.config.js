@@ -11,6 +11,7 @@ module.exports = {
   transform: async (config, path) => {
     // List of paths that have different canonicals (you'd maintain this list)
     const pathsWithDifferentCanonicals = [
+      "/services",
       // word
       "/services/microsoft-word",
       "/services/microsoft-word/accessibility",
@@ -54,9 +55,9 @@ module.exports = {
       "/services/microsoft-power-platform/microsoft-power-pages",
       // locations
       "/office-and-office-365-experts-gold-coast",
-      "excel-and-access-experts-melbourne",
-      "excel-and-access-experts-sydney",
-      "word-and-powerpoint-experts-richmond",
+      "/excel-and-access-experts-melbourne",
+      "/excel-and-access-experts-sydney",
+      "/word-and-powerpoint-experts-richmond",
       // blogs
       "/blog/20-advanced-excel-shortcuts",
       "/blog/convert-canva-to-word",
