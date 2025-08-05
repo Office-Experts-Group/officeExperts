@@ -1,11 +1,8 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
-import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
-
-const SurveyForm = dynamic(() => import("./SurveyForm"));
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
@@ -57,10 +54,7 @@ const QuoteForm = () => {
     company: "",
     honeypot: "",
   });
-
-  // states to hand to SurveyForm
-  const [surveyName, setSurveyName] = useState("");
-  const [surveyEmail, setSurveyEmail] = useState("");
+  const [messageName, setMessageName] = useState("");
 
   // Create refs for form fields that might need focus
   const nameRef = useRef(null);
@@ -70,22 +64,24 @@ const QuoteForm = () => {
 
   // Check if conversion tracking is available
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Check if the conversion function exists
-      setHasConversionTracking(typeof window.gtag_report_conversion === 'function');
-      
+      setHasConversionTracking(
+        typeof window.gtag_report_conversion === "function"
+      );
+
       // Set up a MutationObserver to detect when conversion tracking becomes available
       if (!window.gtag_report_conversion) {
         const observer = new MutationObserver(() => {
-          if (typeof window.gtag_report_conversion === 'function') {
+          if (typeof window.gtag_report_conversion === "function") {
             setHasConversionTracking(true);
             observer.disconnect();
           }
         });
-        
+
         // Watch for changes to the body element
         observer.observe(document.body, { childList: true, subtree: true });
-        
+
         return () => observer.disconnect();
       }
     }
@@ -157,8 +153,7 @@ const QuoteForm = () => {
     setError({});
     setIsSubmitting(true);
 
-    setSurveyName(formData.name);
-    setSurveyEmail(formData.email);
+    setMessageName(formData.name);
 
     if (formData.honeypot) {
       setIsSubmitting(false);
@@ -215,31 +210,33 @@ const QuoteForm = () => {
         body: JSON.stringify(requestBody),
       });
 
-if (res.ok) {
-  // Track conversion if available
-  if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
-    window.gtag_report_conversion();
-  }
-  
-  // Send additional event to Google Analytics
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', 'contact_form_submission', {
-      'event_category': 'Forms',
-      'event_label': 'Quote Form'
-    });
-  }
-  
-  setSurveyName(formData.name);
-  setSurveyEmail(formData.email);
-  setSuccess(true);
-  setFormData({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    honeypot: "",
-  });
-} else {
+      if (res.ok) {
+        // Track conversion if available - this follows Google's pattern more closely
+        if (
+          hasConversionTracking &&
+          typeof window.gtag_report_conversion === "function"
+        ) {
+          // You can pass a URL to redirect to after conversion, or leave it empty
+          window.gtag_report_conversion();
+        }
+
+        // Send additional event to Google Analytics
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "contact_form_submission", {
+            event_category: "Forms",
+            event_label: "Contact Form",
+          });
+        }
+
+        setSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          honeypot: "",
+        });
+      } else {
         const data = await res.json();
         setError({
           general: data.error || "Something went wrong. Please try again.",
@@ -257,8 +254,12 @@ if (res.ok) {
 
   if (success) {
     return (
-      <div className={styles.successMessage} role="alert" aria-live="polite">
-        <SurveyForm name={surveyName} email={surveyEmail} />
+      <div className={styles.successMessage}>
+        <h2>Thank you {messageName} for your message!</h2>
+        <p>
+          We have received your message and one of our team will contact you
+          shortly.
+        </p>
       </div>
     );
   }
@@ -552,7 +553,9 @@ if (res.ok) {
         type="submit"
         className={`btn ${styles.submitBtn}`}
         disabled={isSubmitting}
-          onClick={() => hasConversionTracking ? gtag_report_conversion() : null}
+        onClick={() =>
+          hasConversionTracking ? gtag_report_conversion() : null
+        }
       >
         {isSubmitting ? "Sending..." : "Submit"}
       </button>

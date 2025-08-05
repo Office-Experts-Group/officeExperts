@@ -161,14 +161,14 @@ export const navigationData = {
             label: "Training and User Support",
             href: `${WORD_EXPERTS_URL}/training`,
           },
-                    {
+          {
             label: "Document Rebranding",
             href: `${WORD_EXPERTS_URL}/document-rebranding-services`,
           },
           {
             label: "Brand Templates",
             href: `${WORD_EXPERTS_URL}/brand-templates`,
-          }
+          },
         ],
       },
       {
@@ -250,7 +250,7 @@ export const navigationData = {
             href: `${ACCESS_EXPERTS_URL}/upgrades-and-migration`,
           },
           {
-            label: "Cloud-based and Online Database Solutions",
+            label: "Cloud-based Solutions",
             href: `${ACCESS_EXPERTS_URL}/access-online`,
           },
         ],
@@ -277,11 +277,11 @@ export const navigationData = {
           },
           {
             label: "Power Bi Support",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-support`
+            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-support`,
           },
           {
             label: "Power Apps Support",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/power-apps-support`
+            href: `${POWER_PLATFORM_EXPERTS_URL}/power-apps-support`,
           },
         ],
       },

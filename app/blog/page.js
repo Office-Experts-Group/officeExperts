@@ -9,168 +9,91 @@ import CTAMain from "../(components)/CTAMain";
 
 import styles from "../../styles/blog.module.scss";
 
+import { blogPosts } from "./blogPosts";
+
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "../../utils/schemaGenerators";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
+    {
+      "@type": "WebPage",
+      "@id": "https://www.officeexperts.com.au/blog",
+      url: "https://www.officeexperts.com.au/blog",
+      name: "Excel Experts Australia Blog",
+      isPartOf: {
+        "@id": "https://www.officeexperts.com.au#website",
+      },
+      datePublished: "2024-10-26T00:00:00+00:00",
+      dateModified: "2025-07-30T00:00:00+00:00",
+      description:
+        "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
+      breadcrumb: {
+        "@id": "https://www.officeexperts.com.au/blog#breadcrumb",
+      },
+      inLanguage: "en-AU",
+      potentialAction: [
+        {
+          "@type": "ReadAction",
+          target: ["https://www.officeexperts.com.au/blog"],
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.officeexperts.com.au/blog#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.officeexperts.com.au",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+        },
+      ],
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.officeexperts.com.au/blog#blog",
+      url: "https://www.officeexperts.com.au/blog",
+      name: "Office Experts Australia Blog",
+      description:
+        "Expert tutorials, tips, and best practices for Microsoft Office",
+      inLanguage: "en-AU",
+      publisher: {
+        "@type": "Organization",
+        name: "Office Experts Australia",
+        url: "https://www.officeexperts.com.au",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.officeexperts.com.au/logo.png",
+        },
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.officeexperts.com.au#website",
+      url: "https://www.officeexperts.com.au",
+      name: "Office Experts Australia",
+      description:
+        "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
+      inLanguage: "en-AU",
+    },
+  ],
+};
+
 const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  // Blog post data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Export to PDF in Power Apps - The Best Way to Do It!",
-      description:
-        "Learn how to export data from Power Apps to PDF using Power Automate. This tutorial shows the easiest and most effective way to generate professional PDF documents directly from your Power Apps.",
-      slug: "https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps",
-      date: "April 11, 2025",
-      author: "Marcello Brocchi",
-      readingTime: "6 min",
-      category: "Power Apps",
-      featured: true,
-      youtubeId: "_mgLYllGY-Y",
-      imagePath: null, // Default to null when using youtubeId
-    },
-    {
-      id: 2,
-      title: "Getting Started with Power Apps and Microsoft SQL Database",
-      description:
-        "Learn how to evolve your Power Apps development by connecting to Microsoft SQL databases. This comprehensive guide covers setting up an Azure SQL database and building applications.",
-      slug: "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
-      date: "April 11, 2025",
-      author: "Marcello Brocchi",
-      readingTime: "8 min",
-      category: "Power Apps",
-      featured: false,
-      youtubeId: "awsNLPGNI4w",
-      imagePath: null,
-    },
-    {
-      id: 3,
-      title: "Power Apps PDF Function - The Best Way to Export to PDF?",
-      description:
-        "Discover how to use the new experimental PDF function in Power Apps to generate PDF documents directly from your applications without complex workarounds.",
-      slug: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
-      date: "April 11, 2025",
-      author: "Marcello Brocchi",
-      readingTime: "4 min",
-      category: "Power Apps",
-      featured: false,
-      youtubeId: "BiOCK1jDOMo",
-      imagePath: null,
-    },
-    {
-      id: 4,
-      title: "File Attachments in Power Apps - The Best Way to Do Them",
-      description:
-        "Learn the best approach to implement file attachments in Power Apps using the new Power Automate action that makes uploading documents to SharePoint document libraries simple and efficient.",
-      slug: "https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps",
-      date: "April 11, 2025",
-      author: "Marcello Brocchi",
-      readingTime: "5 min",
-      category: "Power Apps",
-      featured: false,
-      youtubeId: "yC0W5am6M3Q",
-      imagePath: null,
-    },
-    {
-      id: 5,
-      title: "How to Convert a Canva Design into a Microsoft Word Template",
-      description:
-        "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
-      slug: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
-      date: "April 14, 2025",
-      author: "Daniel Thomas",
-      readingTime: "5 min",
-      category: "Conversions",
-      featured: false,
-      youtubeId: null,
-      imagePath: "/canva-to-word.webp",
-    },
-    {
-      id: 6,
-      title: "Ultimate Guide to Microsoft Word Templates",
-      description:
-        "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.",
-      slug: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
-      date: "April 8, 2025",
-      author: "Daniel Thomas",
-      readingTime: "8 min",
-      category: "Templates",
-      featured: false,
-      youtubeId: null,
-      imagePath: "/template.webp",
-    },
-    {
-      id: 7,
-      title:
-        "The Hidden Risk of Spreadsheet Errors in Your Business—and How to Prevent Them",
-      description:
-        "Research shows that 88% of spreadsheets contain errors. Learn why spreadsheet errors are so common, how to identify warning signs, and practical strategies to prevent costly mistakes in your business.",
-      slug: "https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel",
-      date: "July 23, 2025",
-      author: "Daniel Thomas",
-      readingTime: "8 min",
-      category: "Spreadsheets",
-      featured: true,
-      youtubeId: null,
-      imagePath: "/blog/mistake.webp",
-    },
-    {
-      id: 8,
-      title: "20 Advanced Excel Shortcuts That Will Supercharge Your Workflow",
-      description:
-        "Master 20 advanced Excel shortcuts for Mac that will transform your productivity. From data analysis to formatting, these keyboard shortcuts will save you hours and impress your team.",
-      slug: "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
-      date: "July 24, 2025",
-      author: "Daniel Thomas",
-      readingTime: "6 min",
-      category: "Shortcuts",
-      featured: false,
-      youtubeId: null,
-      imagePath: "/blog/shortcut.webp",
-    },
-    {
-      id: 9,
-      title:
-        "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
-      description:
-        "Learn how to create your own Excel shortcuts using macros to automate repetitive tasks. Discover 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-      slug: "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
-      date: "July 24, 2025",
-      author: "Daniel Thomas",
-      readingTime: "7 min",
-      category: "Shortcuts",
-      featured: false,
-      youtubeId: null,
-      imagePath: "/blog/custom.webp",
-    },
-    {
-      id: 10,
-      title:
-        "Fields and Repeating Data in Word: Best Practices for Business Templates",
-      description:
-        "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
-      slug: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
-      date: "July 24, 2025",
-      author: "Daniel Thomas",
-      readingTime: "12 min",
-      category: "Templates",
-      featured: false,
-      imagePath: "/blog/waste.webp",
-    },
-    {
-      id: 11,
-      title: "Creating Word Templates for Legal Firms: Best Practices",
-      description:
-        "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
-      slug: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
-      date: "July 25, 2025",
-      author: "Daniel Thomas",
-      readingTime: "10 min",
-      category: "Legal",
-      featured: false,
-      imagePath: "/blog/legal.webp",
-    },
-  ];
 
   // Extract unique categories
   const categories = [
@@ -233,6 +156,10 @@ const BlogPage = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className={styles.headFiller}></div>
       <div className={styles.blogHeader}>
         <div className={styles.headerContent}>

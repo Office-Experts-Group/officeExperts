@@ -1,13 +1,8 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
-import dynamic from "next/dynamic";
 
 import styles from "../styles/contact.module.css";
-
-const SurveyForm = dynamic(() => import("./SurveyForm"), {
-  ssr: false,
-});
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
@@ -37,6 +32,7 @@ const QuoteLocation = ({ location }) => {
     acceptTerms: false,
     honeypot: "",
   });
+  const [messageName, setMessageName] = useState("");
 
   // Create refs for form fields that might need focus
   const nameRef = useRef(null);
@@ -46,22 +42,24 @@ const QuoteLocation = ({ location }) => {
 
   // Check if conversion tracking is available
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Check if the conversion function exists
-      setHasConversionTracking(typeof window.gtag_report_conversion === 'function');
-      
+      setHasConversionTracking(
+        typeof window.gtag_report_conversion === "function"
+      );
+
       // Set up a MutationObserver to detect when conversion tracking becomes available
       if (!window.gtag_report_conversion) {
         const observer = new MutationObserver(() => {
-          if (typeof window.gtag_report_conversion === 'function') {
+          if (typeof window.gtag_report_conversion === "function") {
             setHasConversionTracking(true);
             observer.disconnect();
           }
         });
-        
+
         // Watch for changes to the body element
         observer.observe(document.body, { childList: true, subtree: true });
-        
+
         return () => observer.disconnect();
       }
     }
@@ -131,6 +129,7 @@ const QuoteLocation = ({ location }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError({});
+    setMessageName(formData.name);
     setIsSubmitting(true);
 
     if (formData.honeypot) {
@@ -155,7 +154,7 @@ const QuoteLocation = ({ location }) => {
     if (Object.keys(newError).length > 0) {
       setError(newError);
       setIsSubmitting(false);
-      
+
       // Get the first error field
       const firstErrorField = Object.keys(newError)[0];
       // Get the corresponding ref
@@ -180,19 +179,22 @@ const QuoteLocation = ({ location }) => {
 
       if (res.ok) {
         // Track conversion if available
-        if (hasConversionTracking && typeof window.gtag_report_conversion === 'function') {
+        if (
+          hasConversionTracking &&
+          typeof window.gtag_report_conversion === "function"
+        ) {
           window.gtag_report_conversion();
         }
-        
+
         // Send additional event to Google Analytics
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'quote_location_submission', {
-            'event_category': 'Forms',
-            'event_label': `Location Quote: ${location}`,
-            'value': 1
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "quote_location_submission", {
+            event_category: "Forms",
+            event_label: `Location Quote: ${location}`,
+            value: 1,
           });
         }
-        
+
         setSuccess(true);
         setFormData({
           location: location,
@@ -220,8 +222,12 @@ const QuoteLocation = ({ location }) => {
 
   if (success) {
     return (
-      <div className={styles.successMessage} role="alert" aria-live="polite">
-        <SurveyForm name={formData.name || ""} email={formData.email || ""} />
+      <div className={styles.successMessage}>
+        <h2>Thank you {messageName} for your message!</h2>
+        <p>
+          We have received your message and one of our team will contact you
+          shortly.
+        </p>
       </div>
     );
   }
@@ -579,8 +585,8 @@ const QuoteLocation = ({ location }) => {
         </div>
       </div>
 
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         className={`btn ${styles.submitBtn}`}
         disabled={isSubmitting}
       >
