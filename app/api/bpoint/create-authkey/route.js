@@ -90,16 +90,6 @@ export async function POST(request) {
     // USE PRODUCTION MODE FROM CONFIG
     const isTestMode = !isProduction;
 
-    console.log("🌍 Transaction Mode:", {
-      NODE_ENV: process.env.NODE_ENV,
-      VERCEL_ENV: process.env.VERCEL_ENV,
-      FORCE_PRODUCTION_MODE: process.env.FORCE_PRODUCTION_MODE,
-      isProduction,
-      isTestMode,
-      willProcessRealPayment: isProduction,
-      timestamp: new Date().toISOString(),
-    });
-
     // Prepare transaction request
     const requestData = {
       TxnReq: {
@@ -139,31 +129,23 @@ export async function POST(request) {
     const credentials = Buffer.from(authString).toString("base64");
     const apiUrl = "https://www.bpoint.com.au/webapi/v3/txns/";
 
-    console.log("📡 Sending to Bpoint:", {
-      apiUrl,
-      merchantNumber: config.merchantNumber,
-      amount,
-      testMode: isTestMode,
-      timestamp: new Date().toISOString(),
-    });
-
-    // Critical logging for production debugging
-    if (isTestMode) {
-      console.log("🧪 TEST MODE - Using test processing");
-      console.log(
-        "💡 For success in test mode, use amount ending in 00 (like 10000 = $100.00)"
-      );
-      console.log(
-        "💡 Current amount:",
-        amount,
-        "Last 2 digits:",
-        String(amount).slice(-2)
-      );
-      console.log("💡 Expected response code:", String(amount).slice(-2));
-    } else {
-      console.log("💰 LIVE MODE - Processing real payment");
-      console.log("⚠️  REAL MONEY WILL BE CHARGED");
-    }
+    // // Critical logging for production debugging
+    // if (isTestMode) {
+    //   console.log("🧪 TEST MODE - Using test processing");
+    //   console.log(
+    //     "💡 For success in test mode, use amount ending in 00 (like 10000 = $100.00)"
+    //   );
+    //   console.log(
+    //     "💡 Current amount:",
+    //     amount,
+    //     "Last 2 digits:",
+    //     String(amount).slice(-2)
+    //   );
+    //   console.log("💡 Expected response code:", String(amount).slice(-2));
+    // } else {
+    //   console.log("💰 LIVE MODE - Processing real payment");
+    //   console.log("⚠️  REAL MONEY WILL BE CHARGED");
+    // }
 
     // Make API call to Bpoint
     const bpointResponse = await fetch(apiUrl, {
@@ -178,13 +160,13 @@ export async function POST(request) {
     const responseText = await bpointResponse.text();
 
     // Detailed response logging
-    console.log("📨 Bpoint response:", {
-      status: bpointResponse.status,
-      statusText: bpointResponse.statusText,
-      ok: bpointResponse.ok,
-      contentLength: responseText.length,
-      headers: Object.fromEntries(bpointResponse.headers.entries()),
-    });
+    // console.log("📨 Bpoint response:", {
+    //   status: bpointResponse.status,
+    //   statusText: bpointResponse.statusText,
+    //   ok: bpointResponse.ok,
+    //   contentLength: responseText.length,
+    //   headers: Object.fromEntries(bpointResponse.headers.entries()),
+    // });
 
     if (!bpointResponse.ok) {
       console.error("❌ HTTP Error from Bpoint:", {
@@ -253,30 +235,10 @@ export async function POST(request) {
       );
     }
 
-    console.log("💳 Transaction processed:", {
-      txnNumber: transaction.TxnNumber,
-      responseCode: transaction.ResponseCode,
-      responseText: transaction.ResponseText,
-      amount: transaction.Amount,
-      processedAmount: transaction.ProcessedAmount,
-      isTestMode,
-      timestamp: new Date().toISOString(),
-    });
-
     // Handle successful payment
     if (transaction.ResponseCode === "0") {
       console.log("✅ PAYMENT SUCCESSFUL!");
 
-      // Log successful transaction details
-      console.log("💰 Payment completed:", {
-        txnNumber: transaction.TxnNumber,
-        amount: transaction.Amount,
-        authCode: transaction.authoriseId,
-        receiptNumber: transaction.ReceiptNumber,
-        customer: customerEmail,
-        invoice: invoiceNumber,
-        mode: isTestMode ? "TEST" : "LIVE",
-      });
 
       // 🔥 NEW: Send confirmation emails
       let emailStatus = {
@@ -405,14 +367,6 @@ export async function POST(request) {
         },
       });
     } else {
-      // Handle declined payment
-      console.log("❌ PAYMENT DECLINED:", {
-        responseCode: transaction.ResponseCode,
-        responseText: transaction.ResponseText,
-        txnNumber: transaction.TxnNumber,
-        bankResponseCode: transaction.BankResponseCode,
-        mode: isTestMode ? "TEST" : "LIVE",
-      });
 
       const declineInfo = getDeclineInfo(
         transaction.ResponseCode,

@@ -169,6 +169,10 @@ export const navigationData = {
             label: "Brand Templates",
             href: `${WORD_EXPERTS_URL}/brand-templates`,
           },
+          {
+            label: "Google Docs Migration",
+            href: `${WORD_EXPERTS_URL}/google-docs-to-word-migration`,
+          },
         ],
       },
       {

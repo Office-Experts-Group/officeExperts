@@ -524,9 +524,9 @@ export async function sendInternalPaymentNotification(paymentDetails) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
-      to: "consult@officeexperts.com.au",
+      to: "accounts@officeexperts.com.au",
       from: {
-        email: "system@officeexperts.com.au",
+        email: customerEmail,
         name: "Office Experts Payment System",
       },
       subject: `Payment Received - ${invoiceNumber} - ${formattedAmount}`,
