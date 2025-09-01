@@ -1,13 +1,17 @@
 @import "./globals.scss";
 
 .brands {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 6rem 0;
+  padding: 3rem 0;
   border-top: 1px solid #dddddd;
   position: relative;
   z-index: 1;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  min-height: 250px;
+
   @include phone {
     display: none;
   }
@@ -16,19 +20,136 @@
   }
 }
 
+.brandContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 70px; // Prevents layout shift during transitions
+}
+
+.brandPosition {
+  flex: 0 1 auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
 .brandLink {
   display: block;
   cursor: pointer;
   position: relative;
   z-index: 2;
+  flex: 0 1 auto;
+  margin: 0 1rem;
 }
 
 .brandImage {
   filter: grayscale(0%) brightness(100%);
-  transition: 0.5s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  max-width: 100%;
+  height: auto;
 }
 
 .brandImage:hover {
   filter: grayscale(100%) brightness(120%);
-  transition: 0.5s ease-in-out;
+}
+
+// Controls for pause/play functionality
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pauseButton {
+  background: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+}
+
+// Staggered animation effects for individual positions
+.brandPosition {
+  animation-fill-mode: both;
+}
+
+.brandPosition.visible {
+  animation: fadeInScale 0.5s ease-out;
+}
+
+.brandPosition.hidden {
+  animation: fadeOutScale 0.5s ease-in;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+// Responsive adjustments
+@include tablet {
+  .brands {
+    padding: 4rem 0;
+  }
+
+  .brandLink {
+    margin: 0 0.5rem;
+  }
+
+  .brandImage {
+    max-width: 120px;
+  }
+}
+
+@include phoneLandscape {
+  .brands {
+    padding: 3rem 0;
+  }
+
+  .brandContainer {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .brandLink {
+    margin: 0.5rem;
+  }
 }
