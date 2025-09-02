@@ -229,7 +229,7 @@ const Page = () => {
               "https://www.accessexperts.com.au/access-consultants-gold-coast",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-gold-coast",
-            office: "/word-and-powerpoint-experts-gold-coast",
+            office: "/contact-us",
           },
           supportLink: "/microsoft-support-and-training-gold-coast",
         },
