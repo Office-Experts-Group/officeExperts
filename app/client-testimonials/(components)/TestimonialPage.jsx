@@ -13,6 +13,11 @@ const TestimonialPage = ({ testimonials }) => {
 
   return (
     <section className={styles.testimonialPage}>
+      <h2 className={styles.padded}>
+        We are grateful to our clients for providing the following references
+        <br></br>
+        and feedback for our consultants and our services.
+      </h2>
       <div className={styles.testimonialGrid}>
         {validTestimonials.map((testimonial, index) => {
           // Create a unique key using multiple properties
