@@ -12,7 +12,7 @@ import {
 
 import aboutUs from "../../public/pageHeros/aboutUs.webp";
 import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
-import Intro from "./(components)/intro";
+import Intro from "./(components)/Intro";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
