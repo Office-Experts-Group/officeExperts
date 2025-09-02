@@ -110,7 +110,7 @@ const Page = () => {
             access:
               "https://www.accessexperts.com.au/access-consultants-central-coast-nsw",
             powerplatform:
-              "https://www.powerplatformexperts.com.au/power-platform-consultants-ncentral-coast-nsw",
+              "https://www.powerplatformexperts.com.au/power-platform-consultants-central-coast-nsw",
             office: "/office-and-office-365-experts-central-coast-nsw",
           },
           supportLink: "/microsoft-support-and-training-central-coast-nsw",
