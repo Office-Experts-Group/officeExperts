@@ -1,0 +1,28 @@
+@import "./globals.scss";
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 15vw;
+
+  @include phone {
+    margin: 3rem 1rem;
+  }
+  @include phoneLandscape {
+    margin: 3rem 1rem;
+  }
+  @include tablet {
+    margin: 3rem 5vw;
+  }
+
+  p {
+    color: $theme;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: center;
+  }
+}

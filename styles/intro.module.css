@@ -1,0 +1,30 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 15vw;
+}
+@media (max-width: 449px) {
+  .intro {
+    margin: 3rem 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .intro {
+    margin: 3rem 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .intro {
+    margin: 3rem 5vw;
+  }
+}
+.intro p {
+  color: #046999;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+}/*# sourceMappingURL=intro.module.css.map */
