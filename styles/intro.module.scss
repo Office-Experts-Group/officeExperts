@@ -26,3 +26,16 @@
     text-align: center;
   }
 }
+
+.deskImage {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(242, 243, 245);
+  margin-top: 3rem;
+
+  @media screen and (max-width: 1160px) {
+    img {
+      display: none;
+    }
+  }
+}

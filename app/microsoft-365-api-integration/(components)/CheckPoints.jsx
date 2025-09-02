@@ -35,7 +35,7 @@ const PageSegment4 = () => {
       style={{ display: "flex", marginBottom: "3rem auto", maxWidth: "90%" }}
     >
       <div className={styles.pageSegment} style={{ margin: "0" }}>
-        <AnimateOnScroll animation="scale-up" duration={1} delay={0.2}>
+        <AnimateOnScroll animation="slide-left" duration={1} delay={0.2}>
           <div className={styles.points}>
             {checkItems.map((text, index) => (
               <div

@@ -18,6 +18,8 @@ import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
 import CheckPoints from "./(components)/CheckPoints";
 import DeskImage from "./(components)/DeskImage";
+import UseCases from "./(components)/UseCases";
+import WhyExperts from "./(components)/WhyExperts";
 
 const schema = {
   "@context": "https://schema.org",
@@ -92,13 +94,8 @@ const Page = () => {
       <DeskImage />
       <PageSegment5 />
       <ExpertsAwait />
-      <Promo
-        h2={"Let's Build Smarter Apps"}
-        p={
-          "Our team will design and implement custom Microsoft 365 API solutions that extend your environment—secure, scalable, and user-friendly."
-        }
-      />
-
+      <UseCases />
+      <WhyExperts />
       <Contact />
     </>
   );

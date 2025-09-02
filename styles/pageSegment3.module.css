@@ -10,6 +10,10 @@
   line-height: 2rem;
   max-width: 80%;
 }
+.pageSegment a {
+  color: #046999 !important;
+  font-weight: 700 !important;
+}
 .pageSegment img {
   filter: grayscale(0%);
   transition: all 0.3s ease;
@@ -290,5 +294,54 @@
 @media (max-width: 449px) {
   .paddedTop {
     padding: 4rem 1rem 0 1rem;
+  }
+}
+
+.useCases {
+  margin-top: 3rem;
+  padding: 0 5vw;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .useCases {
+    padding: 0;
+  }
+}
+.useCases h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.flexHolder {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.flexHolder div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.flexHolder p {
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .flexHolder {
+    flex-direction: column;
+  }
+  .flexHolder img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 449px) {
+  .DeskImg {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .DeskImg {
+    display: none;
   }
 }/*# sourceMappingURL=pageSegment3.module.css.map */
