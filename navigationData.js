@@ -106,10 +106,6 @@ export const navigationData = {
             href: `${WORD_EXPERTS_URL}/word-document-template-creation`,
           },
           {
-            label: "VBA & Macro Development",
-            href: `/services/by-business-solution/vba-macro-development`,
-          },
-          {
             label: "Government Departments",
             href: `${WORD_EXPERTS_URL}/government-departments`,
           },
