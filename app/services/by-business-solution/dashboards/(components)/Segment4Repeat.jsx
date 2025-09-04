@@ -5,20 +5,9 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 import styles from "../../../../../styles/pageSegment4.module.css";
 
-import eyes from "../../../../../public/eyes600x394.webp";
+import dashboards from "../../../../../public/dashboards.webp";
 
 const Segment4Repeat = () => {
-  const checkItems = [
-    "Users can view in a web browser",
-    "Support data drill through",
-    "Highlight KPIs",
-    "Refresh on a schedule",
-    "Leverage Business Intelligence",
-    "Link from your data sources",
-    "Provide a wide array of visuals",
-    "Perform well with large data sets",
-  ];
-
   return (
     <div className="animate-wrapper">
       <div
@@ -27,43 +16,33 @@ const Segment4Repeat = () => {
       >
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
-            <h2 style={{ marginBottom: "1rem" }}>Our Team Is Ready To Help!</h2>
+            <h2 style={{ marginBottom: "1rem" }}>
+              Comprehensive Dashboard Solutions
+            </h2>
             <p>
-              We can set you up with dashboards that allow you to keep a close
-              eye on and better understand the dynamics of your business. We can
-              build dashboards that:
+              Modern businesses generate data from dozens of different systems,
+              your CRM tracks customer interactions, your accounting software
+              monitors financial performance, your project management tools
+              measure productivity, and your Microsoft 365 environment captures
+              collaboration patterns. The challenge isn't collecting this data;
+              it's turning it into actionable insights that drive better
+              business decisions.
             </p>
-          </div>
-
-          <div className={styles.pointsGrid}>
-            {checkItems.map((text, index) => (
-              <div key={index} className={styles.point}>
-                <div className={styles.tick}>
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="1"
-                    viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
-                  </svg>
-                </div>
-                <p>{text}</p>
-              </div>
-            ))}
+            <p>
+              Our dashboard solutions bring all these disparate data sources
+              together into unified, interactive visualisations that tell the
+              story of your business.
+            </p>
           </div>
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="scale-up" duration={1} delay={0.2}>
           <div className="image-wrapper">
             <Image
-              src={eyes}
-              alt="person clicking a computer mouse"
+              src={dashboards}
+              alt="dashboards on a computer screen"
               width={450}
-              height={295}
+              height={300}
             />
           </div>
         </AnimateOnScroll>

@@ -183,7 +183,7 @@
   margin-bottom: 2rem;
 }
 .underline h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -310,18 +310,6 @@
   gap: 0.5rem;
 }
 
-.point {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-left: 1rem;
-}
-.point p {
-  color: #777a7e;
-  margin: 0 !important;
-  line-height: 1.5rem;
-}
-
 .tick {
   height: 30px;
   width: 30px;
@@ -442,5 +430,21 @@
 @media screen and (min-width: 800px) {
   .btmMargin {
     margin-bottom: 6rem;
+  }
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered h2,
+.centered p {
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .centered h2,
+  .centered p {
+    text-align: left;
   }
 }/*# sourceMappingURL=pageSegment4.module.css.map */

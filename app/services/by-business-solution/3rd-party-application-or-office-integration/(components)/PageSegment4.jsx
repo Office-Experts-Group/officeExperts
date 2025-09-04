@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -14,13 +15,18 @@ const PageSegment4 = () => {
         <AnimateOnScroll animation="slide-right" duration={1} delay={0.2}>
           <div className={styles.content}>
             <div className={styles.underline}>
-              <h2>Integrate Applications</h2>
+              <h2>3rd Party Application's</h2>
             </div>
             <p>
               If your 3rd party product is ODBC or API enabled, we can link to
-              it and extract its data to use in Excel, Word, Access or
-              PowerPoint. We can also help you upload data to the 3rd party
-              application.
+              it and extract its data to use in{" "}
+              <Link href="https://www.excelexperts.com.au">Excel,</Link>,{" "}
+              <Link href="https://www.wordexperts.com.au">Word</Link>,{" "}
+              <Link href="https://www.accessexperts.com.au">Access</Link> or
+              <Link href="/services/by-business-solution/microsoft-powerpoint">
+                PowerPoint
+              </Link>
+              . We can also help you upload data to the 3rd party application.
             </p>
             <p>
               We have created custom solutions that link to products including

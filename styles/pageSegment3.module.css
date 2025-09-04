@@ -109,7 +109,7 @@
   margin-bottom: 2rem;
 }
 .underline h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -343,5 +343,35 @@
 @media (min-width: 450px) and (max-width: 766px) {
   .DeskImg {
     display: none;
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1100px) {
+  .centered {
+    flex-direction: column;
+  }
+  .centered img {
+    margin-bottom: 2rem;
+  }
+}
+.centered div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.centered h2,
+.centered p {
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .centered h2,
+  .centered p {
+    text-align: left;
   }
 }/*# sourceMappingURL=pageSegment3.module.css.map */

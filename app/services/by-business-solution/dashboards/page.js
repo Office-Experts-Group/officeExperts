@@ -7,6 +7,7 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import VideoSegment from "./(components)/VideoSegment";
 import VideoSegment2 from "./(components)/VideoSegment2";
+import PageSegment8 from "./(components)/PageSegment8";
 
 import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 import graph from "../../../../public/pageHeros/graph.webp";
@@ -28,12 +29,12 @@ const schema = {
       url: "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
       name: "Dashboard Experts | Excel Dashboard Demo | Office Expert",
       description:
-        "We are experts in Data! VBA, dashoboards, import/export, parsing and processing, formatting and automation.",
+        "We are experts in Data! VBA, dashboards, import/export, parsing and processing, formatting and automation.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-07-29T00:00:00+00:00",
+      dateModified: "2025-09-04T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/dashboards#breadcrumb",
@@ -97,6 +98,7 @@ const Page = () => {
       />
       <PageSegmentMain />
       <Segment4Repeat />
+      <PageSegment8 />
       <VideoSegment />
       <VideoSegment2 />
       <ExpertsAwait />

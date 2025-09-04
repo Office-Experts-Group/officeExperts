@@ -44,10 +44,6 @@ export const navigationData = {
             href: `/services/by-business-solution/vba-macro-development`,
           },
           {
-            label: "Custom Office Solutions",
-            href: `/services/by-business-solution/custom-office-solutions`,
-          },
-          {
             label: "Database Development Solutions",
             href: `/services/by-business-solution/database-development-and-solutions`,
           },

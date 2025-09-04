@@ -15,6 +15,11 @@ export const metadata = {
     canonical: "/services/by-business-solution/custom-office-solutions",
   },
 
+  robots: {
+    index: false,
+    follow: true,
+  },
+
   // OpenGraph
   openGraph: {
     title: "Custom Office Solutions",

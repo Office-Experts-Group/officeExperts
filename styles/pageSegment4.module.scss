@@ -168,13 +168,8 @@
   margin-bottom: 2rem;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    // display: inline; // Makes the element only as wide as its content
-    // background-image: linear-gradient($theme, $theme); // Use your theme color
-    // background-size: 100% 6px;
-    // background-repeat: no-repeat;
-    // background-position: 0 calc(100% + 4px); // Positions the line below the text
   }
 }
 
@@ -300,18 +295,6 @@
   gap: 0.5rem;
 }
 
-.point {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-left: 1rem;
-  p {
-    color: $darkGrayText;
-    margin: 0 !important;
-    line-height: 1.5rem;
-  }
-}
-
 .tick {
   height: 30px;
   width: 30px;
@@ -419,5 +402,18 @@
 .btmMargin {
   @media screen and (min-width: 800px) {
     margin-bottom: 6rem;
+  }
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2,
+  p {
+    text-align: center;
+    @media screen and (max-width: 800px) {
+      text-align: left;
+    }
   }
 }

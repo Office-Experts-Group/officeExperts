@@ -6,6 +6,7 @@ import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment7 from "./(components)/PageSegment7";
+import PageSegment8 from "./(components)/PageSegment8";
 
 import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
 import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
@@ -30,7 +31,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-07-29T00:00:00+00:00",
+      dateModified: "2025-09-04T00:00:00+00:00",
       description:
         "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem.",
       breadcrumb: {
@@ -96,6 +97,7 @@ const Page = () => {
       />
       <PageSegmentMain />
       <PageSegment4 />
+      <PageSegment8 />
       <PageSegment7 />
       <ExpertsAwait />
       <Contact />
