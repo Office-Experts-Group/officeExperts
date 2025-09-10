@@ -74,6 +74,8 @@ import sacasting from "./public/logos/sa-casting187x131.webp";
 import cem from "./public/logos/cem.webp";
 import tsubaki from "./public/logos/tsubaki.webp";
 import rcs from "./public/logos/rcs.webp";
+// new testimonials 10/9/2025
+import fbrice from "./public/logos/fbrice.png";
 
 export const testimonials = [
   {
@@ -624,6 +626,24 @@ export const testimonials = [
     image: jemenax,
     width: 150,
     height: 104,
+  },
+  {
+    content:
+      "FB Rice engaged Office Experts to update our templates and Microsoft styles, and we are very pleased with the outcome. Rochelle and Aleisha brought the expertise we needed, delivering professional output in a new font for the firm. Communication was clear and consistent throughout the project, and they demonstrated strong knowledge, responsiveness, and reliability in meeting our deadlines. We would recommend Office Experts to others seeking specialised Microsoft support.",
+    name: "Jacinta Dague",
+    contact: "FB Rice",
+    image: fbrice,
+    width: 200,
+    height: 40,
+  },
+  {
+    content:
+      "Fantastic results, we had a custom system built in Microsoft Access by Stephen at Office Experts. Overall, the system works very well and has boosted our overall efficiency. Stephen made the process of information gathering and build easy and smooth, highly recommended.",
+    name: "Brenna Allmey",
+    contact: "SeaSide Joinery Pty Ltd",
+    // image: ,
+    // width: 200,
+    // height: 40,
   },
   {
     content:
