@@ -3,10 +3,12 @@ import React from "react";
 import TestimonialCard from "../../../components/TestimonialCard";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
+import { filterAndSortTestimonials } from "../../../utils/filterTestimonials";
+
 import styles from "../../../styles/testimonialPage.module.scss";
 
 const TestimonialPage = ({ testimonials }) => {
-  const validTestimonials = testimonials;
+  const validTestimonials = filterAndSortTestimonials(testimonials, "office");
 
   return (
     <section className={styles.testimonialPage}>

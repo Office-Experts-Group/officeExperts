@@ -5,22 +5,25 @@ import styles from "../../styles/testimonialsSection.module.css";
 
 import TestimonialCard from "../../components/TestimonialCard";
 
+import { filterAndSortTestimonials } from "../../utils/filterTestimonials";
+
 const Testimonials = ({ testimonials }) => {
-  const getRandomTestimonials = (count = 10) => {
-    // Filter out testimonials without images or content first
-    const validTestimonials = testimonials.filter(
+  const getTestimonials = (count = 10) => {
+    const sortedTestimonials = filterAndSortTestimonials(
+      testimonials,
+      "office"
+    );
+
+    // Filter out testimonials without images or content
+    const validTestimonials = sortedTestimonials.filter(
       (testimonial) => testimonial.image && testimonial.content.trim()
     );
 
-    // Create a shuffled copy of the filtered testimonials
-    const shuffled = [...validTestimonials].sort(() => 0.5 - Math.random());
-
     // Return the requested number of testimonials
-    return shuffled.slice(0, count);
+    return validTestimonials.slice(0, count);
   };
 
-  // Get 10 random testimonials (or adjust the number as needed)
-  const selectedTestimonials = getRandomTestimonials(10);
+  const selectedTestimonials = getTestimonials(10);
 
   // Calculate how many slides to append based on viewport size
   // We only need to duplicate enough slides to fill one viewport
