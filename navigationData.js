@@ -165,6 +165,10 @@ export const navigationData = {
             label: "Google Docs Migration",
             href: `${WORD_EXPERTS_URL}/google-docs-to-word-migration`,
           },
+          {
+            label: "API Integrations",
+            href: `${WORD_EXPERTS_URL}/microsoft-word-api-integrations`,
+          },
         ],
       },
       {
