@@ -83,8 +83,14 @@ const Page = () => {
           <p className={styles.introText}>
             This Refund Policy should be read in conjunction with our Service
             Agreement. Your rights under the{" "}
-            <Link href={"/terms-and-conditions"}>Service Agreement</Link> can be
-            found at section 15.
+            <Link
+              href={
+                "https://officeexpertstc.azurewebsites.net/Content/Office%20Experts%20Group%20-%20Client%20Terms.pdf"
+              }
+            >
+              Service Agreement
+            </Link>{" "}
+            are outlined in this document.
           </p>
 
           <article className={styles.policyArticle}>

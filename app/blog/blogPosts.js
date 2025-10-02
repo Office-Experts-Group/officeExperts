@@ -197,4 +197,18 @@ export const blogPosts = [
     youtubeId: null,
     imagePath: "/blog/google-docs-or-word.webp",
   },
+  {
+    id: 15,
+    title: "Power BI for Financial Services",
+    description:
+      "Discover how Power BI empowers financial organisations to turn raw data into actionable insights for compliance, risk management, and business growth.",
+    slug: "https://www.powerplatformexperts.com.au/blog/power-bi-for-financial-services",
+    date: "October 1, 2025",
+    author: "Power Platform Team",
+    readingTime: "10 min",
+    category: "Power BI",
+    featured: false,
+    youtubeId: null, // Set to null when using custom image
+    imagePath: "/blog/financial/financial-services.webp",
+  },
 ];

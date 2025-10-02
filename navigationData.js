@@ -283,6 +283,14 @@ export const navigationData = {
             label: "Power Apps Support",
             href: `${POWER_PLATFORM_EXPERTS_URL}/power-apps-support`,
           },
+          {
+            label: "Data Integration",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-data-integration`,
+          },
+          {
+            label: "Excel to Power BI Migration",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/excel-to-power-bi-migration`,
+          },
         ],
       },
       {
