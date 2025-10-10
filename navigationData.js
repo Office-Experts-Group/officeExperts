@@ -142,7 +142,7 @@ export const navigationData = {
             href: `${WORD_EXPERTS_URL}/accessibility`,
           },
           {
-            label: "Convert Adobe to Word",
+            label: "Converting to Word Documents",
             href: `${WORD_EXPERTS_URL}/word-template-conversions`,
           },
           {

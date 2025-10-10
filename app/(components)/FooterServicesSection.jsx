@@ -57,9 +57,9 @@ const FooterServicesSection = () => {
           <div className={styles.dropdownContent}>
             <Link
               rel="nofollow noopener noreferrer"
-              href="https://www.powerplatformexperts.com.au/"
+              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform"
             >
-              Microsoft Power Platform
+              Power Platform Services
             </Link>
             <Link
               rel="nofollow noopener noreferrer"
