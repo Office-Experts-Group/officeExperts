@@ -24,8 +24,18 @@ const Promo = () => {
             </div>
             <div className={`${styles.text} ${styles.textML}`}>
               <h2>Take It Further with Power Pivot!</h2>
-              <p>Power Query and Power Pivot work hand in hand to create a complete data solution.</p>
-              <p>While Power Query handles data extraction and transformation, Power Pivot takes your reporting to the next level with advanced data modeling and calculations — perfect for building dynamic, interactive dashboards and in-depth analysis.</p>
+              <p>
+                Power Query and Power Pivot work hand in hand to create a
+                complete data solution.
+              </p>
+              <p>
+                While Power Query handles data extraction and transformation,{" "}
+                <Link href="/services/power-pivot">
+                  Power Pivot takes your reporting to the next level
+                </Link>{" "}
+                with advanced data modeling and calculations — perfect for
+                building dynamic, interactive dashboards and in-depth analysis.
+              </p>
             </div>
           </div>
         </AnimateOnScroll>

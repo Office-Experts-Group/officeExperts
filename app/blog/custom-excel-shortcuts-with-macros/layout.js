@@ -11,8 +11,8 @@ export const metadata = {
     title: "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
     description:
       "Learn how to create your own Excel shortcuts using macros. 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-    url: "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
-    siteName: "Excel Experts",
+    url: "https://www.officeexperts.com.au/blog/custom-excel-shortcuts-with-macros",
+    siteName: "Office Experts",
     images: [
       {
         url: "/logo.png",
@@ -41,10 +41,11 @@ export const metadata = {
   alternates: {
     alternate: [
       {
-        url: "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
+        url: "https://www.officeexperts.com.au/blog/custom-excel-shortcuts-with-macros",
       },
     ],
-    canonical: "/blog/custom-excel-shortcuts-with-macros",
+    canonical:
+      "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
   },
 };
 

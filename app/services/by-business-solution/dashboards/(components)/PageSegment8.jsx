@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
@@ -41,7 +42,10 @@ const PageSegment8 = () => {
                 documents drive the most engagement, and which meeting patterns
                 correlate with successful project outcomes. Microsoft Graph can
                 pull data from Teams conversations, SharePoint document
-                activity, Outlook calendar patterns, and OneDrive file sharing
+                activity, Outlook calendar patterns, and{" "}
+                <Link href="/services/microsoft-office-365/cloud-backup-with-onedrive ">
+                  OneDrive file sharing
+                </Link>
                 to create a comprehensive picture of organisational
                 productivity.
               </p>

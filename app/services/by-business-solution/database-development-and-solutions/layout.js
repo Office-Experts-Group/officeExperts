@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Database Development and Solutions",
+  title: "Microsoft Database Development and Solutions",
   description:
     "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
 
@@ -16,7 +16,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Database Development and Solutions",
+    title: "Microsoft Database Development and Solutions",
     description:
       "Custom Microsoft database solutions built by certified experts. We design, develop and support Access databases, SQL Server solutions, and cloud database systems tailored to your business needs.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",

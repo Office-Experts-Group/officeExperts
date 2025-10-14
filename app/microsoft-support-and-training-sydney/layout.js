@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Support and Training Sydney | Office Experts Group",
+  title: "Microsoft Support and Training Sydney",
   description:
     "Professional Microsoft support and training services in Sydney. Our experts provide customised training, technical support and troubleshooting.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Support and Training Sydney | Office Experts Group",
+    title: "Microsoft Support and Training Sydney",
     description:
       "Professional Microsoft support and training services in Sydney. Our experts provide customised training, technical support and troubleshooting.",
     url: "https://www.officeexperts.com.au/microsoft-support-and-training-sydney",

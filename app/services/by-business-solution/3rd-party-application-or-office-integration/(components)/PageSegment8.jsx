@@ -38,7 +38,11 @@ const PageSegment8 = () => {
             <p>
               While VBA macros have served businesses well for years, Office.js
               add-ins represent the future of Office customisation. These{" "}
-              <Link href={"/cloud-based-solutions-with-azure"}>
+              <Link
+                href={
+                  "https://www.accessexperts.com.au/cloud-based-solutions-with-azure"
+                }
+              >
                 cloud-based solutions
               </Link>{" "}
               work across all Office platforms and offer enhanced user

@@ -1,12 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title: "About Us",
+  title: "About Us - Office Experts Group",
   description:
     "Office Experts Group is a leading Microsoft Office consulting team with expert developers, designers & consultants. Microsoft Office support Australia-wide.",
 
   openGraph: {
-    title: "About Us",
+    title: "About Us - Office Experts Group",
     description:
       "Office Experts Group is a leading Microsoft Office consulting team with expert developers, designers & consultants. Microsoft Office support Australia-wide.",
     url: "https://www.officeexperts.com.au/about-us",

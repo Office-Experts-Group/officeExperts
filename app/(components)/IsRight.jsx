@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 import styles from "../../styles/isRight.module.css";
 
 import isRight from "../../public/isRight.webp";
-import isRight2 from "../../public/isRight2.webp";
-import Link from "next/link";
 
 const IsRight = () => {
   return (
@@ -51,8 +50,12 @@ const IsRight = () => {
                 <h3>Comprehensive Expertise</h3>
               </div>
               <p>
-                Expert development in Excel, Access, Word, PowerPoint, and
-                complete Office integration solutions.
+                Expert development in{" "}
+                <Link href="https://www.excelexperts.com.au">Excel</Link>,{" "}
+                <Link href="https://www.accessexperts.com.au">Access</Link>,{" "}
+                <Link href="https://www.wordexperts.com.au">Word</Link>,{" "}
+                <Link href="/services/microsoft-powerpoint">PowerPoint</Link>,
+                and complete Office integration solutions.
               </p>
             </div>
             <div className={styles.excerpt}>
@@ -61,8 +64,10 @@ const IsRight = () => {
                 <h3>Australia-Wide Service</h3>
               </div>
               <p>
-                Professional consultants across Australia providing remote and
-                onsite support.
+                Professional consultants across Australia providing remote and{" "}
+                <Link href="/microsoft-support-and-training-australia">
+                  onsite support.
+                </Link>
               </p>
             </div>
           </div>

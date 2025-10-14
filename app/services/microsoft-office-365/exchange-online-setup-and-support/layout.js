@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Exchange Online Setup and Support | Office Experts Group",
+  title: "Exchange Online Setup and Support",
   description:
     "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
 
@@ -19,7 +19,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Exchange Online Setup and Support | Office Experts Group",
+    title: "Exchange Online Setup and Support",
     description:
       "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support",

@@ -23,10 +23,8 @@ const PageSegment4 = () => {
               <Link href="https://www.excelexperts.com.au">Excel,</Link>,{" "}
               <Link href="https://www.wordexperts.com.au">Word</Link>,{" "}
               <Link href="https://www.accessexperts.com.au">Access</Link> or
-              <Link href="/services/by-business-solution/microsoft-powerpoint">
-                PowerPoint
-              </Link>
-              . We can also help you upload data to the 3rd party application.
+              <Link href="/services/microsoft-powerpoint">PowerPoint</Link>. We
+              can also help you upload data to the 3rd party application.
             </p>
             <p>
               We have created custom solutions that link to products including

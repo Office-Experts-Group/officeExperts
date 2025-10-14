@@ -176,6 +176,11 @@
   padding-right: 2vw;
   line-height: 1.5rem;
 }
+.excerpt a {
+  color: #046999;
+  text-decoration: none;
+  font-weight: 700;
+}
 
 .listItem {
   display: flex;

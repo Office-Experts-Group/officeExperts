@@ -27,9 +27,9 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/power-pivot",
       url: "https://www.officeexperts.com.au/services/power-pivot",
-      name: "Power Query | Excel Experts",
+      name: "Power Pivot | Office Experts",
       description:
-        "Office Experts offers advanced Power Pivot training and consulting to help you model, analyze, and visualize complex data with ease.",
+        "Office Experts offers advanced Power Pivot training and consulting to help you model, analyse, and visualise complex data with ease.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -37,7 +37,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2025-04-10T00:00:00+00:00",
-      dateModified: "2025-07-29T00:00:00+00:00",
+      dateModified: "2025-10-14T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/power-pivot#breadcrumb",
@@ -69,7 +69,7 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Power Query Services",
+          name: "Power Pivot Services",
           item: "https://www.officeexperts.com.au/services/power-pivot",
         },
       ],

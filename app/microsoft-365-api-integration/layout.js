@@ -3,7 +3,7 @@ import React from "react";
 export const metadata = {
   title: "Microsoft 365 API Integration Services | Office Experts Group",
   description:
-    "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs—secure, mobile-ready, and tailored to your workflows.",
+    "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
 
   robots: {
     index: false,
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Microsoft 365 API Integration Services | Office Experts Group",
     description:
-      "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs—secure, mobile-ready, and tailored to your workflows.",
+      "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
     url: "https://www.officeexperts.com.au/microsoft-365-api-integration",
     siteName: "Office Experts Group",
     images: [

@@ -6,6 +6,7 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import styles from "../../../../../styles/pageSegment4.module.css";
 
 import eyes from "../../../../../public/eyes600x394.webp";
+import Link from "next/link";
 
 const Segment4Repeat = () => {
   const checkItems = [
@@ -31,11 +32,15 @@ const Segment4Repeat = () => {
             </h2>
             <p>
               Power Pages facilitates data connectivity from various data
-              sources and the ability to utilise Power Query for data
-              manipulation/shaping. Accessible from any device, Power Pages
-              promote collaborative and mobile working. With robust role-based
-              security protocols and data governance features, your data remains
-              protected.
+              sources and the ability to utilise
+              <Link href="https://www.powerplatformexperts.com.au/services/power-query">
+                {" "}
+                Power Query
+              </Link>{" "}
+              for data manipulation/shaping. Accessible from any device, Power
+              Pages promote collaborative and mobile working. With robust
+              role-based security protocols and data governance features, your
+              data remains protected.
             </p>
           </div>
 
