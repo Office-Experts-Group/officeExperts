@@ -10,6 +10,11 @@ export const metadata = {
 
   alternates: {
     canonical: "https://www.wordexperts.com.au/companies-and-organisations",
+    alternate: [
+      {
+        url: "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations",
+      },
+    ],
   },
 
   // OpenGraph

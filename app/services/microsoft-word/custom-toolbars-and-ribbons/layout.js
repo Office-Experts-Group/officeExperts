@@ -25,6 +25,11 @@ export const metadata = {
 
   alternates: {
     canonical: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+    alternate: [
+      {
+        url: "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons",
+      },
+    ],
   },
 
   // Twitter Card

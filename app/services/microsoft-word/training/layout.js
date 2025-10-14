@@ -25,6 +25,11 @@ export const metadata = {
 
   alternates: {
     canonical: "https://www.wordexperts.com.au/training",
+    alternate: [
+      {
+        url: "https://www.officeexperts.com.au/services/microsoft-word/training",
+      },
+    ],
   },
 
   // Twitter Card

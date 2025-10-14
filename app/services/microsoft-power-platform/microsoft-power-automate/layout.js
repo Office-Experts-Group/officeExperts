@@ -8,6 +8,11 @@ export const metadata = {
   alternates: {
     canonical:
       "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    alternate: [
+      {
+        url: "https://www.officeeexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      },
+    ],
   },
 
   // OpenGraph

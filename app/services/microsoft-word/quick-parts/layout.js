@@ -28,6 +28,11 @@ export const metadata = {
 
   alternates: {
     canonical: "https://www.wordexperts.com.au/quick-parts",
+    alternate: [
+      {
+        url: "https://www.officeexperts.com.au/services/microsoft-word/quick-parts",
+      },
+    ],
   },
 
   // Twitter Card
