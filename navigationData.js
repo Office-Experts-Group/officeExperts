@@ -293,44 +293,44 @@ export const navigationData = {
           },
         ],
       },
-      {
-        label: "Office 365",
-        href: `/services/microsoft-office-365`,
-        items: [
-          {
-            label: "365 Implementation",
-            href: `/services/microsoft-office-365/office-365-implementation`,
-          },
-          {
-            label: "365 Migration",
-            href: `/services/microsoft-office-365/office-365-migration`,
-          },
-          {
-            label: "Business Process Automation",
-            href: `/services/microsoft-office-365/business-process-automation`,
-          },
-          {
-            label: "Remote Data Gathering",
-            href: `/services/microsoft-office-365/remote-data-gathering-from-any-device`,
-          },
-          {
-            label: "Exchange Setup & Assistance",
-            href: `/services/microsoft-office-365/exchange-online-setup-and-support`,
-          },
-          {
-            label: "Help & Managed Services",
-            href: `/services/microsoft-office-365/support-and-managed-services`,
-          },
-          {
-            label: "Cloud Backup with OneDrive",
-            href: `/services/microsoft-office-365/cloud-backup-with-onedrive`,
-          },
-          {
-            label: "App & Custom Development",
-            href: `/services/microsoft-office-365/app-and-custom-development`,
-          },
-        ],
-      },
+      // {
+      //   label: "Office 365",
+      //   href: `/services/microsoft-office-365`,
+      //   items: [
+      //     {
+      //       label: "365 Implementation",
+      //       href: `/services/microsoft-office-365/office-365-implementation`,
+      //     },
+      //     {
+      //       label: "365 Migration",
+      //       href: `/services/microsoft-office-365/office-365-migration`,
+      //     },
+      //     {
+      //       label: "Business Process Automation",
+      //       href: `/services/microsoft-office-365/business-process-automation`,
+      //     },
+      //     {
+      //       label: "Remote Data Gathering",
+      //       href: `/services/microsoft-office-365/remote-data-gathering-from-any-device`,
+      //     },
+      //     {
+      //       label: "Exchange Setup & Assistance",
+      //       href: `/services/microsoft-office-365/exchange-online-setup-and-support`,
+      //     },
+      //     {
+      //       label: "Help & Managed Services",
+      //       href: `/services/microsoft-office-365/support-and-managed-services`,
+      //     },
+      //     {
+      //       label: "Cloud Backup with OneDrive",
+      //       href: `/services/microsoft-office-365/cloud-backup-with-onedrive`,
+      //     },
+      //     {
+      //       label: "App & Custom Development",
+      //       href: `/services/microsoft-office-365/app-and-custom-development`,
+      //     },
+      //   ],
+      // },
       {
         label: "Other Services",
         href: `/services/by-business-solution`,
