@@ -253,6 +253,10 @@ export const navigationData = {
             label: "Cloud-based Solutions",
             href: `${ACCESS_EXPERTS_URL}/access-online`,
           },
+          {
+            label: "Power BI Integration",
+            href: `${ACCESS_EXPERTS_URL}/integrate-access-with-power-bi`,
+          },
         ],
       },
       {

@@ -71,7 +71,7 @@
   bottom: 0;
   background: rgba(255, 255, 255, 0.95);
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1061,7 +1061,7 @@
 .receiptNumber {
   font-size: 14px;
   opacity: 0.9;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .receiptDetails {
@@ -1268,4 +1268,4 @@
   .contactInfo {
     padding: 20px;
   }
-}/*# sourceMappingURL=payment.module.css.map */
+} /*# sourceMappingURL=payment.module.css.map */

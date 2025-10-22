@@ -100,7 +100,7 @@
   transform: translateY(-50%);
   color: #1e1e1e;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 .faqItem .questionNumber {

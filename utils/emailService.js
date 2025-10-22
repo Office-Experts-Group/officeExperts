@@ -77,7 +77,7 @@ export function generatePaymentConfirmationEmail({
         .header h1 {
             margin: 0;
             font-size: 28px;
-            font-weight: 300;
+            font-weight: 400;
         }
         .header .subtitle {
             margin: 10px 0 0 0;
