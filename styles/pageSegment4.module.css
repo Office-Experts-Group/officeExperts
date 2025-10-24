@@ -447,4 +447,13 @@
   .centered p {
     text-align: left;
   }
+}
+
+.flip {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 900px) {
+  .flip {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=pageSegment4.module.css.map */

@@ -28,6 +28,8 @@
   z-index: 2;
   flex: 1;
   border-bottom: 15px solid #046999;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .imgWrapper img {
   width: 100%;
@@ -78,8 +80,8 @@
   font-weight: 900;
 }
 .content a {
-  color: #046999;
-  font-weight: 700;
+  color: #046999 !important;
+  font-weight: 700 !important;
 }
 .content p:first-child {
   color: #046999;
@@ -313,4 +315,10 @@
   flex: 0 0 auto;
   width: 1.5em;
   height: 1.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .deskOnly {
+    display: none;
+  }
 }/*# sourceMappingURL=pageSegment.module.css.map */

@@ -417,3 +417,10 @@
     }
   }
 }
+
+.flip {
+  flex-direction: row-reverse;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
