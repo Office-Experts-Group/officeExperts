@@ -2,38 +2,46 @@ import sgMail from "@sendgrid/mail";
 import { getEmailSignature } from "../../../utils/emailSignature";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
-const VALID_FILE_TYPES = [
-  // Documents
-  "application/pdf",
-  "application/msword",
-  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-  "application/vnd.oasis.opendocument.text",
-  "application/rtf",
-  "text/plain",
-  "text/csv",
-  "text/html",
-  "text/markdown",
 
-  // Images
-  "image/jpeg",
-  "image/png",
-  "image/gif",
-  "image/bmp",
-  "image/webp",
-  "image/svg+xml",
-  "image/tiff",
-
-  // Archives (if needed)
-  "application/zip",
-  "application/x-rar-compressed",
-
-  // Spreadsheets
-  "application/vnd.ms-excel",
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-  "application/vnd.oasis.opendocument.spreadsheet",
+// Dangerous file extensions to block
+const BLOCKED_EXTENSIONS = [
+  // Executables
+  'exe', 'com', 'bat', 'cmd', 'scr', 'pif', 'msi', 'app',
+  
+  // Scripts
+  'vbs', 'js', 'jse', 'ws', 'wsf', 'wsh', 'ps1', 'sh', 'csh',
+  
+  // System files
+  'dll', 'sys', 'drv',
+  
+  // Shortcuts
+  'lnk', 'scf',
+  
+  // Java
+  'jar', 'class',
+  
+  // Web files (HIGH RISK for phishing)
+  'html', 'htm', 'xhtml', 'hta', 'mht', 'mhtml',
+  
+  // Modern web/app development files
+  'jsx', 'tsx', 'ts',
+  
+  // Other programming language source files
+  'py', 'rb', 'php', 'asp', 'aspx', 'jsp',
+  'c', 'cpp', 'h', 'swift', 'go', 'rs',
+  
+  // Configuration/build files that could contain malicious code
+  'json', 'yaml', 'yml', 'toml', 'xml',
 ];
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// Helper function to get file extension
+const getFileExtension = (filename) => {
+  if (!filename || typeof filename !== 'string') return '';
+  const parts = filename.split('.');
+  return parts.length > 1 ? parts.pop().toLowerCase() : '';
+};
 
 export async function POST(req) {
   try {
@@ -85,10 +93,17 @@ export async function POST(req) {
     // File validation
     let attachments = [];
     if (file) {
-      if (!VALID_FILE_TYPES.includes(file.type)) {
-        return Response.json({ error: "Invalid file type" }, { status: 400 });
+      // Check file extension against blocklist
+      const extension = getFileExtension(file.name);
+      
+      if (BLOCKED_EXTENSIONS.includes(extension)) {
+        return Response.json(
+          { error: "This file type is not allowed for security reasons" },
+          { status: 400 }
+        );
       }
 
+      // Check file size
       if (Buffer.byteLength(file.content, "base64") > MAX_FILE_SIZE) {
         return Response.json(
           { error: "File size exceeds limit" },

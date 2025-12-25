@@ -169,6 +169,10 @@ export const navigationData = {
             label: "API Integrations",
             href: `${WORD_EXPERTS_URL}/microsoft-word-api-integrations`,
           },
+          {
+            label: "Mail Merge",
+            href: `${WORD_EXPERTS_URL}/mail-merge`,
+          },
         ],
       },
       {
