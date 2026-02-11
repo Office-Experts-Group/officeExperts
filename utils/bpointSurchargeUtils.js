@@ -1,23 +1,18 @@
 // utils/bpointSurchargeUtils.js
-// export const SURCHARGE_RATES = {
-//   VISA: 1.27,
-//   MASTERCARD: 1.27,
-//   AMEX: 2.35,
-//   AMERICAN_EXPRESS: 2.35,
-//   DINERS: 1.27, // Assuming same as Visa/MC
-//   JCB: 1.27, // Assuming same as Visa/MC
-//   MASTERCARD_2_SERIES: 1.27,
-// };
+/**
+ * Bpoint Credit Card Surcharge Utilities
+ * Updated to use correct Bpoint/CommBank standard rates
+ */
 
-// temporary rates until change over of invoice system
+// ✅ CORRECT BPOINT RATES (as of 2025) ✅make them all 1.27************************************
 export const SURCHARGE_RATES = {
-  VISA: 0.79,
-  MASTERCARD: 0.79,
-  AMEX: 0.79,
-  AMERICAN_EXPRESS: 0.79,
-  DINERS: 0.79,
-  JCB: 0.79,
-  MASTERCARD_2_SERIES: 0.79,
+  VISA: 1.27,
+  MASTERCARD: 1.27,
+  AMEX: 1.27,
+  AMERICAN_EXPRESS: 1.27,
+  DINERS: 1.27, // Typically same as Visa/MC
+  JCB: 1.27, // Typically same as Visa/MC
+  MASTERCARD_2_SERIES: 1.27,
 };
 
 export const CARD_TYPE_PATTERNS = {
@@ -104,3 +99,22 @@ export function getCardDisplayName(cardType) {
 
   return displayNames[cardType] || cardType;
 }
+
+// Bpoint test cards for testing
+export const TEST_CARDS = {
+  VISA: {
+    number: "4987654321098769",
+    cvn: "123",
+    expiry: "1226",
+  },
+  MASTERCARD: {
+    number: "5123456789012346",
+    cvn: "123",
+    expiry: "1226",
+  },
+  AMEX: {
+    number: "345678901234564",
+    cvn: "1234",
+    expiry: "1226",
+  },
+};
