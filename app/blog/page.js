@@ -14,6 +14,7 @@ import { blogPosts } from "./blogPosts";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 const schema = {
@@ -21,16 +22,23 @@ const schema = {
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
+
+    // WebPage — describes this specific blog listing page
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/blog",
+      "@id": "https://www.officeexperts.com.au/blog#webpage",
       url: "https://www.officeexperts.com.au/blog",
-      name: "Excel Experts Australia Blog",
+      name: "Blog | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-02-12T00:00:00+00:00",
+      dateModified: "2026-02-03T00:00:00+00:00",
       description:
         "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
       breadcrumb: {
@@ -44,6 +52,8 @@ const schema = {
         },
       ],
     },
+
+    // BreadcrumbList — item URL required on all positions including current page
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.officeexperts.com.au/blog#breadcrumb",
@@ -58,35 +68,26 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Blog",
+          item: "https://www.officeexperts.com.au/blog",
         },
       ],
     },
+
+    // Blog — publisher references #organization @id rather than duplicating org data
     {
       "@type": "Blog",
       "@id": "https://www.officeexperts.com.au/blog#blog",
       url: "https://www.officeexperts.com.au/blog",
-      name: "Office Experts Australia Blog",
+      name: "Office Experts Group Blog",
       description:
         "Expert tutorials, tips, and best practices for Microsoft Office",
       inLanguage: "en-AU",
-      publisher: {
-        "@type": "Organization",
-        name: "Office Experts Australia",
-        url: "https://www.officeexperts.com.au",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://www.officeexperts.com.au/logo.png",
-        },
+      isPartOf: {
+        "@id": "https://www.officeexperts.com.au#website",
       },
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.officeexperts.com.au#website",
-      url: "https://www.officeexperts.com.au",
-      name: "Office Experts Australia",
-      description:
-        "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
-      inLanguage: "en-AU",
+      publisher: {
+        "@id": "https://www.officeexperts.com.au#organization",
+      },
     },
   ],
 };

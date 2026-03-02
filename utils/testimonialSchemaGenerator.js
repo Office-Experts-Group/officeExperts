@@ -1,217 +1,135 @@
-// Helper function to generate unique IDs for testimonials
-const generateTestimonialId = (domain, page, index) => {
-  return `${domain}#testimonial-${page}-${index}`;
-};
+// utils/testimonialSchemaGenerator.js
+// Generates Review and AggregateRating schemas for testimonial sections
+// Used on home, about, and dedicated testimonials pages across all 5 sites
 
-// Helper to format date in ISO 8601
-const formatDate = (date) => {
-  return date.toISOString();
-};
+// Generates a unique @id for each review node
+const generateReviewId = (domain, page, index) =>
+  `${domain}#review-${page.replace(/\//g, "-")}-${index}`;
 
-// Generate schema for a single testimonial
-const generateTestimonialSchema = (testimonial, domain, page, index) => {
-  const domainName = domain.split(".")[1];
-  const serviceName =
-    domainName.charAt(0).toUpperCase() + domainName.slice(1, -7);
-
-  return {
-    "@type": "Review",
-    "@id": generateTestimonialId(domain, page, index),
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      "@id": `${domain}#business`,
-      name: `Microsoft ${serviceName} Consulting Services`,
-      provider: {
-        "@type": "Organization",
-        "@id": `${domain}#organization`,
-      },
-      description: `Professional Microsoft ${serviceName} consulting and support services`,
-      areaServed: [
-        {
-          "@type": "Country",
-          name: "Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "New South Wales",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Victoria",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Queensland",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Western Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "South Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Tasmania",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Australian Capital Territory",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Northern Territory",
-        },
-      ],
-      priceRange: "$$",
-      offers: {
-        "@type": "Offer",
-        name: "Remote Consulting",
-        description:
-          "Australia-wide remote Microsoft Office consulting services",
-        businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-      },
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    author: {
-      "@type": "Person",
-      name: testimonial.name,
-    },
-    reviewBody: testimonial.content,
-    datePublished: formatDate(new Date("2024-01-01")),
-    publisher: {
-      "@type": "Organization",
-      "@id": `${domain}#organization`,
-    },
-  };
-};
-
-// Generate aggregated review schema
-const generateAggregateSchema = (testimonials, domain) => {
-  return {
-    "@type": "AggregateRating",
-    "@id": `${domain}#aggregateRating`,
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      "@id": `${domain}/#business`,
-      name: "Office Experts Group",
-      priceRange: "$$",
-      areaServed: [
-        {
-          "@type": "Country",
-          name: "Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "New South Wales",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Victoria",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Queensland",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Western Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "South Australia",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Tasmania",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Australian Capital Territory",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Northern Territory",
-        },
-      ],
-      offers: {
-        "@type": "Offer",
-        name: "Remote Consulting",
-        description:
-          "Australia-wide remote Microsoft Office consulting services",
-        businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-      },
-    },
+// Generates a single Review schema node
+// itemReviewed points to the site's LocalBusiness @id — no offers/provider/businessFunction
+const generateReviewSchema = (
+  testimonial,
+  domain,
+  page,
+  index,
+  businessName,
+) => ({
+  "@type": "Review",
+  "@id": generateReviewId(domain, page, index),
+  itemReviewed: {
+    "@type": "LocalBusiness",
+    "@id": `${domain}#business`,
+    name: businessName,
+  },
+  reviewRating: {
+    "@type": "Rating",
     ratingValue: "5",
-    reviewCount: testimonials.length,
     bestRating: "5",
     worstRating: "1",
-  };
-};
+  },
+  author: {
+    "@type": "Person",
+    name: testimonial.name,
+  },
+  reviewBody: testimonial.content,
+  // Use a real or approximate date if known; avoid all-same hardcoded dates for large sets
+  datePublished: testimonial.date || "2024-01-01",
+  publisher: {
+    "@type": "Organization",
+    "@id": `${domain}#organization`,
+    name: "Office Experts Group",
+  },
+});
 
-// Main schema generator for testimonials pages
-export const generateTestimonialsSchema = (
+// Generates an AggregateRating schema node
+// itemReviewed points to the LocalBusiness @id — clean, no nested offers
+const generateAggregateRatingSchema = (testimonials, domain, businessName) => ({
+  "@type": "AggregateRating",
+  "@id": `${domain}#aggregateRating`,
+  itemReviewed: {
+    "@type": "LocalBusiness",
+    "@id": `${domain}#business`,
+    name: businessName,
+  },
+  ratingValue: "5",
+  bestRating: "5",
+  worstRating: "1",
+  reviewCount: testimonials.length,
+});
+
+// Core generator — builds the full schema @graph for a given page
+// domain: full URL e.g. "https://www.officeexperts.com.au"
+// page: page path slug e.g. "/" or "about-us"
+// includeAll: true for testimonials page, false for home/about (uses first 3)
+const generateTestimonialsSchema = (
   testimonials,
   domain,
   page,
-  includeAll = false
+  businessName,
+  includeAll = false,
 ) => {
-  // Base schema
-  const baseSchema = {
-    "@context": "https://schema.org",
-    "@graph": [],
-  };
+  const subset = includeAll ? testimonials : testimonials.slice(0, 3);
 
-  // Add testimonial schemas based on page
-  let testimonialsToInclude = testimonials;
-  if (!includeAll) {
-    // For home and about pages, only include a subset
-    testimonialsToInclude = testimonials.slice(0, 3);
-  }
-
-  const testimonialSchemas = testimonialsToInclude.map((testimonial, index) =>
-    generateTestimonialSchema(testimonial, domain, page, index)
+  const reviewSchemas = subset.map((testimonial, index) =>
+    generateReviewSchema(testimonial, domain, page, index, businessName),
   );
 
-  // Add aggregate rating
-  const aggregateSchema = generateAggregateSchema(testimonials, domain);
+  const aggregateSchema = generateAggregateRatingSchema(
+    testimonials,
+    domain,
+    businessName,
+  );
 
-  // Combine all schemas
-  baseSchema["@graph"] = [aggregateSchema, ...testimonialSchemas];
-
-  return baseSchema;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [aggregateSchema, ...reviewSchemas],
+  };
 };
 
-// Usage example for different pages:
-export const getHomePageSchema = (testimonials) => {
-  return generateTestimonialsSchema(
+// Page-specific exports — import these directly into page.js files
+// Each returns a "@graph" array to be spread into the page's master schema
+
+export const getHomePageSchema = (testimonials) =>
+  generateTestimonialsSchema(
     testimonials,
     "https://www.officeexperts.com.au",
     "/",
-    false
+    "Microsoft Office Consulting Services",
+    false,
   );
-};
 
-export const getAboutPageSchema = (testimonials) => {
-  return generateTestimonialsSchema(
+export const getAboutPageSchema = (testimonials) =>
+  generateTestimonialsSchema(
     testimonials,
     "https://www.officeexperts.com.au",
-    "https://www.officeexperts.com.au/about-us",
-    false
+    "about-us",
+    "Microsoft Office Consulting Services",
+    false,
   );
-};
 
-export const getTestimonialsPageSchema = (testimonials) => {
-  return generateTestimonialsSchema(
+export const getTestimonialsPageSchema = (testimonials) =>
+  generateTestimonialsSchema(
     testimonials,
     "https://www.officeexperts.com.au",
-    "/client-testimonials",
-    true
+    "client-testimonials",
+    "Microsoft Office Consulting Services",
+    true,
   );
-};
+
+// For use on sub-sites (e.g. excelexperts.com.au)
+// Pass the domain, page slug, and business name appropriate to that site
+export const getSiteTestimonialsSchema = (
+  testimonials,
+  domain,
+  page,
+  businessName,
+  includeAll = false,
+) =>
+  generateTestimonialsSchema(
+    testimonials,
+    domain,
+    page,
+    businessName,
+    includeAll,
+  );

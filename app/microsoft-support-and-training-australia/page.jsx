@@ -29,6 +29,7 @@ import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
@@ -38,6 +39,11 @@ const schemaData = {
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id":

@@ -13,6 +13,7 @@ import faqMob from "../../public/pageHeros/mob/faqMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 const schema = {
@@ -20,11 +21,17 @@ const schema = {
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/faq",
       url: "https://www.officeexperts.com.au/faq",
       name: "Frequently Asked Questions | Office Experts Group",
+      description: "Microsoft Office Design, Development and Consulting FAQ's",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

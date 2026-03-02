@@ -14,6 +14,7 @@ import resumeMob from "../../public/pageHeros/mob/resumeMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 const schema = {
@@ -21,24 +22,18 @@ const schema = {
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
-    {
-      "@type": "WebSite",
-      "@id": "https://www.officeexperts.com.au#website",
-      url: "https://www.officeexperts.com.au",
-      name: "Office experts",
-      description:
-        "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://www.officeexperts.com.au?s={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
-    },
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/looking-for-a-job",
       url: "https://www.officeexperts.com.au/looking-for-a-job",
       name: "Looking for a job?",
+      description:
+        "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

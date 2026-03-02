@@ -1,263 +1,237 @@
 // utils/schemaGenerators.js
+// Generates reusable Organization, LocalBusiness, and WebSite schemas for Office Experts Group
+// Used across all 5 sites: officeexperts, excelexperts, wordexperts, accessexperts, powerplatformexperts
+
+// Shared service area used by both Organization and ProfessionalService schemas
+const SERVICE_AREAS = [
+  { "@type": "Country", name: "Australia" },
+  { "@type": "AdministrativeArea", name: "New South Wales" },
+  { "@type": "AdministrativeArea", name: "Victoria" },
+  { "@type": "AdministrativeArea", name: "Queensland" },
+  { "@type": "AdministrativeArea", name: "Western Australia" },
+  { "@type": "AdministrativeArea", name: "South Australia" },
+  { "@type": "AdministrativeArea", name: "Tasmania" },
+  { "@type": "AdministrativeArea", name: "Australian Capital Territory" },
+  { "@type": "AdministrativeArea", name: "Northern Territory" },
+];
+
+// Physical/operational locations for the business
+const LOCATIONS = [
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "NSW",
+      addressLocality: "Sydney",
+      postalCode: "2000",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "NSW",
+      addressLocality: "Grafton",
+      postalCode: "2460",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "NSW",
+      addressLocality: "Newcastle",
+      postalCode: "2300",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "NSW",
+      addressLocality: "Wollongong",
+      postalCode: "2500",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "VIC",
+      addressLocality: "Melbourne",
+      postalCode: "3000",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "VIC",
+      addressLocality: "Richmond",
+      postalCode: "3121",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "VIC",
+      addressLocality: "Geelong",
+      postalCode: "3220",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "QLD",
+      addressLocality: "Brisbane",
+      postalCode: "4000",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "QLD",
+      addressLocality: "Gold Coast",
+      postalCode: "4217",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "WA",
+      addressLocality: "Perth",
+      postalCode: "6000",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "SA",
+      addressLocality: "Adelaide",
+      postalCode: "5000",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "NT",
+      addressLocality: "Darwin",
+      postalCode: "0800",
+    },
+  },
+  {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+      addressRegion: "ACT",
+      addressLocality: "Canberra",
+      postalCode: "2600",
+    },
+  },
+];
+
+// Services offered — using valid schema.org Service type with serviceType string (not deprecated businessFunction URL)
+const SERVICES = [
+  // Excel
+  { name: "Excel Dashboard Creation", serviceType: "Excel Consulting" },
+  {
+    name: "Financial Modelling and Forecasting",
+    serviceType: "Excel Consulting",
+  },
+  { name: "Power Pivot & Power Query", serviceType: "Excel Consulting" },
+  { name: "VBA Macro Development", serviceType: "Excel Consulting" },
+  { name: "Formula Development", serviceType: "Excel Consulting" },
+  { name: "Data Manipulation", serviceType: "Excel Consulting" },
+  { name: "Pivot Tables & Reporting", serviceType: "Excel Consulting" },
+  {
+    name: "Excel Support and Troubleshooting",
+    serviceType: "Excel Consulting",
+  },
+  { name: "Excel Upgrades & Migration", serviceType: "Excel Consulting" },
+  // Access
+  { name: "Access Database Development", serviceType: "Access Consulting" },
+  { name: "Azure Cloud Integration", serviceType: "Access Consulting" },
+  { name: "Database Migration", serviceType: "Access Consulting" },
+  { name: "Third-party Integration", serviceType: "Access Consulting" },
+  { name: "Access Technical Support", serviceType: "Access Consulting" },
+  // Word
+  { name: "Word Template Creation", serviceType: "Word Consulting" },
+  { name: "Template Conversion", serviceType: "Word Consulting" },
+  { name: "Accessibility Solutions", serviceType: "Word Consulting" },
+  { name: "Custom UI Development", serviceType: "Word Consulting" },
+  { name: "Form Development", serviceType: "Word Consulting" },
+  {
+    name: "Government Documentation Solutions",
+    serviceType: "Word Consulting",
+  },
+  // Power Platform
+  { name: "Power BI Solutions", serviceType: "Power Platform Consulting" },
+  { name: "Power Apps Development", serviceType: "Power Platform Consulting" },
+  { name: "Power Automate", serviceType: "Power Platform Consulting" },
+  { name: "Power Pages", serviceType: "Power Platform Consulting" },
+  // Office 365
+  { name: "Office 365 Migration", serviceType: "Microsoft Office Consulting" },
+  { name: "Process Automation", serviceType: "Microsoft Office Consulting" },
+  {
+    name: "SharePoint & OneDrive Solutions",
+    serviceType: "Microsoft Office Consulting",
+  },
+  { name: "Managed Services", serviceType: "Microsoft Office Consulting" },
+];
+
+// Builds an Offer node — no businessFunction, no provider
+// hasOfferCatalog is on Organization; individual Offer nodes just describe the service
+const buildOffers = () =>
+  SERVICES.map((s) => ({
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: s.name,
+      serviceType: s.serviceType,
+    },
+  }));
+
+// ProfessionalService schema — valid properties only
+// Note: areaServed and location are valid on LocalBusiness (ProfessionalService extends this)
 export const generateProfessionalServiceSchema = () => ({
   "@type": "ProfessionalService",
   "@id": "https://www.officeexperts.com.au#business",
   name: "Microsoft Office Consulting Services",
   url: "https://www.officeexperts.com.au",
-  description: "Professional Microsoft Office consulting and support services",
+  description:
+    "Professional Microsoft Office consulting and support services across Australia",
   priceRange: "$$",
-  offers: [
-    {
-      "@type": "Offer",
-      name: "Remote Consulting",
-      description: "Australia-wide remote Microsoft Office consulting services",
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      name: "On-site Consulting",
-      description:
-        "In-house Microsoft Office consulting services available in major metropolitan areas",
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-  ],
-  areaServed: [
-    {
-      "@type": "Country",
-      name: "Australia",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "New South Wales",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Victoria",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Queensland",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Western Australia",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "South Australia",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Tasmania",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Australian Capital Territory",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Northern Territory",
-    },
-  ],
-  location: [
-    // New South Wales
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Sydney",
-        postalCode: "2000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Sydney Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Grafton",
-        postalCode: "2460",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Grafton Region",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Newcastle",
-        postalCode: "2300",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Newcastle Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Wollongong",
-        postalCode: "2500",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Wollongong Metropolitan Area",
-      },
-    },
-    // Victoria
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Melbourne",
-        postalCode: "3000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Melbourne Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Richmond",
-        postalCode: "3121",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Richmond Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Geelong",
-        postalCode: "3220",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Geelong Metropolitan Area",
-      },
-    },
-    // Queensland
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "QLD",
-        addressLocality: "Brisbane",
-        postalCode: "4000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Brisbane Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "QLD",
-        addressLocality: "Gold Coast",
-        postalCode: "4217",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Gold Coast Metropolitan Area",
-      },
-    },
-    // Western Australia
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "WA",
-        addressLocality: "Perth",
-        postalCode: "6000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Perth Metropolitan Area",
-      },
-    },
-    // South Australia
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "SA",
-        addressLocality: "Adelaide",
-        postalCode: "5000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Adelaide Metropolitan Area",
-      },
-    },
-    // Northern Territory
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NT",
-        addressLocality: "Darwin",
-        postalCode: "0800",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Darwin Metropolitan Area",
-      },
-    },
-    // ACT
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "ACT",
-        addressLocality: "Canberra",
-        postalCode: "2600",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Canberra Metropolitan Area",
-      },
-    },
-  ],
-  provider: {
-    "@type": "Organization",
-    "@id": "https://www.officeexperts.com.au#organization",
-  },
   telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
+  areaServed: SERVICE_AREAS,
+  location: LOCATIONS,
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Microsoft Office Consulting Services",
+    itemListElement: buildOffers(),
+  },
 });
 
+// Organization schema — clean, no invalid nested properties
 export const generateOrganizationSchema = () => ({
   "@type": "Organization",
   "@id": "https://www.officeexperts.com.au#organization",
@@ -265,14 +239,14 @@ export const generateOrganizationSchema = () => ({
   url: "https://www.officeexperts.com.au",
   telephone: "1300 102 810",
   email: "consult@officeexperts.com.au",
-  // Enhanced contact point information
+  foundingDate: "2000",
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer service",
       telephone: "1300 102 810",
       email: "consult@officeexperts.com.au",
-      availableLanguage: ["en", "en-AU"],
+      availableLanguage: "en-AU",
       contactOption: "TollFree",
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
@@ -282,585 +256,17 @@ export const generateOrganizationSchema = () => ({
       },
     },
   ],
-  // Remote service availability
-  makesOffer: [
-    // Excel Experts (excelexperts.com.au)
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Excel Dashboard Creation",
-        description:
-          "Creation of interactive and appealing Excel dashboards to provide real-time insights in your business.",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Financial Modeling and Forecasting",
-        description:
-          "Creation of tools for financial models and forecasting using Excel for planning and strategy.",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power Pivot & Power Query",
-        description:
-          "Development of advanced data modelling, analytics, transformations and reporting using Power Pivot & Power Query.",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Add-in Development",
-        description:
-          "Custom Excel add-in development for enhanced spreadsheet functionality",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Data Manipulation",
-        description:
-          "Professional data cleaning, transformation, and analysis services",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Pivot Tables & Reporting",
-        description:
-          "Advanced pivot table creation and custom reporting solutions",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Excel Support and Troubleshooting",
-        description:
-          "Ongoing technical support and troubleshooting for your Excel solutions",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Custom Development",
-        description: "Tailored Excel solution design and implementation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Formula Development",
-        description: "Complex Excel formula creation and optimisation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Upgrades & Migration",
-        description: "Excel version upgrades and workbook migration services",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "VBA Macro Development",
-        description: "Custom VBA macro programming for Excel automation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    // Access Experts (accessexperts.com.au)
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Azure Cloud Integration",
-        description: "Access database integration with Azure cloud services",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Online Access Solutions",
-        description: "Web-enabled Microsoft Access application development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Third-party Integration",
-        description: "Integration of Access with external systems and API's",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Technical Support",
-        description: "Comprehensive Access database support and maintenance",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Database Migration",
-        description: "Access database upgrades and data migration services",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Custom Solutions",
-        description: "Bespoke Access database design and development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    // Word Experts (wordexperts.com.au)
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Template Creation",
-        description: "Professional Word document template development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Template Conversion",
-        description: "Legacy template modernisation and conversion services",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Accessibility Solutions",
-        description: "WCAG compliance and accessibility implementation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Custom UI Development",
-        description: "Customised toolbar and ribbon interface development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Training Services",
-        description: "Specialised Microsoft Word training programs",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Form Development",
-        description: "Interactive form creation and automation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Government Solutions",
-        description:
-          "Specialised documentation solutions for government departments",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    // Power Platform Experts (powerplatformexperts.com.au)
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power BI Solutions",
-        description: "Custom dashboard development and data visualisation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power Apps Development",
-        description: "Custom business application development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power Automate",
-        description: "Workflow automation and business process optimization",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power Pages",
-        description: "External-facing website development and portals",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    // Office Experts (officeexperts.com.au)
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Office 365 Migration",
-        description: "Complete Office 365 migration and implementation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Custom Development",
-        description: "Tailored Microsoft Office solution development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Process Automation",
-        description: "Office-wide business process automation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Cloud Solutions",
-        description: "OneDrive and SharePoint implementation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Exchange Setup",
-        description: "Exchange Online configuration and management",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Remote Solutions",
-        description: "Cross-device data access and management",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Managed Services",
-        description: "Comprehensive Office 365 support and maintenance",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Excel Support",
-        description: "Advanced Excel development and support",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Access Solutions",
-        description: "Database development and maintenance",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Word Services",
-        description: "Document automation and template development",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "PowerPoint Services",
-        description: "Presentation design and automation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Power Platform Integration",
-        description: "Business intelligence and process automation",
-      },
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService",
-    },
-  ],
-  location: [
-    // New South Wales
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Sydney",
-        postalCode: "2000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Sydney Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Grafton",
-        postalCode: "2460",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Grafton Region",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Newcastle",
-        postalCode: "2300",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Newcastle Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NSW",
-        addressLocality: "Wollongong",
-        postalCode: "2500",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Wollongong Metropolitan Area",
-      },
-    },
-    // Victoria
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Melbourne",
-        postalCode: "3000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Melbourne Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Richmond",
-        postalCode: "3121",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Richmond Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "VIC",
-        addressLocality: "Geelong",
-        postalCode: "3220",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Geelong Metropolitan Area",
-      },
-    },
-    // Queensland
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "QLD",
-        addressLocality: "Brisbane",
-        postalCode: "4000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Brisbane Metropolitan Area",
-      },
-    },
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "QLD",
-        addressLocality: "Gold Coast",
-        postalCode: "4217",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Gold Coast Metropolitan Area",
-      },
-    },
-    // Western Australia
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "WA",
-        addressLocality: "Perth",
-        postalCode: "6000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Perth Metropolitan Area",
-      },
-    },
-    // South Australia
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "SA",
-        addressLocality: "Adelaide",
-        postalCode: "5000",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Adelaide Metropolitan Area",
-      },
-    },
-    // Northern Territory
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "NT",
-        addressLocality: "Darwin",
-        postalCode: "0800",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Darwin Metropolitan Area",
-      },
-    },
-    // ACT
-    {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "AU",
-        addressRegion: "ACT",
-        addressLocality: "Canberra",
-        postalCode: "2600",
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Canberra Metropolitan Area",
-      },
-    },
-  ],
   logo: {
     "@type": "ImageObject",
-    inLanguage: "en-AU",
-    "@id": "/logo.png",
-    url: "/logo.png",
-    contentUrl: "/logo.png",
+    "@id": "https://www.officeexperts.com.au/logo.png",
+    url: "https://www.officeexperts.com.au/logo.png",
+    contentUrl: "https://www.officeexperts.com.au/logo.png",
     width: 1200,
     height: 630,
     caption: "Office Experts Group",
   },
   image: {
-    "@id": "/logo.png",
+    "@id": "https://www.officeexperts.com.au/logo.png",
   },
   sameAs: [
     "https://www.facebook.com/MSOfficeExperts",
@@ -869,4 +275,32 @@ export const generateOrganizationSchema = () => ({
     "https://www.linkedin.com/company/office-experts-group",
     "https://www.youtube.com/channel/UCw2Xf02ukEwvM6fQ2lVZxuw",
   ],
+});
+
+// WebSite schema — parameterised so it works across all 5 sites
+// domain:      full origin URL e.g. "https://www.excelexperts.com.au"
+// name:        site brand name e.g. "Excel Experts"
+// description: short site tagline for the description field
+export const generateWebSiteSchema = (domain, name, description) => ({
+  "@type": "WebSite",
+  "@id": `${domain}#website`,
+  url: domain,
+  name,
+  description,
+  publisher: {
+    // References the Organization node in the same @graph — no need to repeat org data
+    "@id": `${domain}#organization`,
+  },
+  potentialAction: [
+    {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${domain}?s={search_term_string}`,
+      },
+      // Must be a plain string — object format (PropertyValueSpecification) causes validation errors
+      "query-input": "required name=search_term_string",
+    },
+  ],
+  inLanguage: "en-AU",
 });

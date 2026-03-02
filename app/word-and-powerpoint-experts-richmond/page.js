@@ -14,6 +14,7 @@ import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 const schema = {
@@ -21,12 +22,17 @@ const schema = {
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id":
         "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
       url: "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond",
-      name: "Word and PowerPoint Experts - Richmond - Office Experts Group: Microsoft Excel Experts, Microsoft Access Database Experts, Microsoft Word Experts, PowerPoint Experts, Azure, Power BI, SQL Server, SharePoint, Microsoft Office 365",
+      name: "Word and PowerPoint Experts - Richmond - Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -34,7 +40,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2025-03-27T00:00:00+00:00",
+      dateModified: "2026-02-03T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/word-and-powerpoint-experts-richmond#breadcrumb",

@@ -15,6 +15,7 @@ import testimonialsMob from "../../public/pageHeros/mob/testimonialsMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 const schema = {
@@ -23,6 +24,11 @@ const schema = {
     ...getTestimonialsPageSchema(serviceTestimonials, "office")["@graph"],
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/client-testimonials",
@@ -34,7 +40,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-09-02T00:00:00+00:00",
+      dateModified: "2026-02-03T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/client-testimonials#breadcrumb",

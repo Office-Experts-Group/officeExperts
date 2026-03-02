@@ -15,6 +15,7 @@ import { testimonials } from "../../testimonials";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
 import aboutUs from "../../public/pageHeros/aboutUs.webp";
@@ -23,21 +24,38 @@ import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getAboutPageSchema(testimonials, "office")["@graph"],
+    // Review + AggregateRating nodes (3 reviews on about page)
+    ...getAboutPageSchema(testimonials)["@graph"],
+
+    // Organization (company identity, sameAs social links etc.)
     generateOrganizationSchema(),
+
+    // LocalBusiness / ProfessionalService
     generateProfessionalServiceSchema(),
+
+    // WebSite (same on every page — generated from shared utility)
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
+
+    // WebPage — describes this specific about us page
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/about-us",
+      "@id": "https://www.officeexperts.com.au/about-us#webpage",
       url: "https://www.officeexperts.com.au/about-us",
       name: "About Us | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
+      about: {
+        "@id": "https://www.officeexperts.com.au#business",
+      },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2026-02-03T00:00:00+00:00",
       description:
-        "We are specialists in Microsoft Excel, Microsoft Access, Microsoft Outlook, Microsoft Word, and Microsoft PowerPoint. Email us Consult@officeexperts.com.au",
+        "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide consulting, support and system integration since 2000.",
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
       },
@@ -49,6 +67,8 @@ const schema = {
         },
       ],
     },
+
+    // BreadcrumbList — item URL required on all positions including current page
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
@@ -62,7 +82,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "About Us: Design, Development and Consulting Services Australia",
+          name: "About Us",
+          item: "https://www.officeexperts.com.au/about-us",
         },
       ],
     },
