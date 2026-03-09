@@ -10,21 +10,33 @@ const getMenuItems = (currentView = "main") => {
       return [
         { label: "Home", href: "/" },
         { label: "Services", items: navigationData.services.items },
-        { label: "About Us", href: "/about-us" },
+        { label: "Locations", items: navigationData.locations.items },
+        {
+          label: "About Us",
+          href: "/about-us",
+        },
         { label: "Meet Our Team", href: "/meet-the-team" },
         { label: "Testimonials", href: "/client-testimonials" },
         { label: "Contact Us", href: "/contact-us" },
       ];
     case "Services":
       return navigationData.services.items;
+    case "Locations":
+      return navigationData.locations.items;
     case "About Us":
       return navigationData.aboutUs.items || [];
     default:
       const serviceCategory = navigationData.services.items.find(
-        (item) => item.label === currentView
+        (item) => item.label === currentView,
       );
       if (serviceCategory?.items) {
         return serviceCategory.items;
+      }
+      const locationCategory = navigationData.locations.items.find(
+        (item) => item.label === currentView,
+      );
+      if (locationCategory?.items) {
+        return locationCategory.items;
       }
       return getMenuItems("main");
   }

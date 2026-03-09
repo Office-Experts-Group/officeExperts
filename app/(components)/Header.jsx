@@ -13,6 +13,7 @@ import MobileNav from "../../components/MobileNavigation/MobileNav";
 import logo from "../../public/logo300x130.webp";
 import certified from "../../public/microsoft/partnerLogo.webp";
 import ideaBlue from "../../public/icons/ideaBlue.webp";
+import LocationsDropdown from "../../components/LocationsDropdown";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -63,13 +64,6 @@ const Header = () => {
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          {/* Home */}
-          <li className={styles.navItem}>
-            <Link href="/" className={styles.navLink}>
-              <span>Home</span>
-            </Link>
-          </li>
-
           {/* Services dropdown */}
           <li
             className={styles.navItem}
@@ -81,6 +75,20 @@ const Header = () => {
             </div>
             {activeDropdown === "services" && (
               <ServicesDropdown handleLinkClick={handleLinkClick} />
+            )}
+          </li>
+
+          {/* Locations dropdown */}
+          <li
+            className={styles.navItem}
+            onMouseEnter={() => handleMouseEnter("locations")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className={styles.navLink}>
+              <span>Locations</span>
+            </div>
+            {activeDropdown === "locations" && (
+              <LocationsDropdown handleLinkClick={handleLinkClick} />
             )}
           </li>
 

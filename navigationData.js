@@ -6,29 +6,99 @@ const POWER_PLATFORM_EXPERTS_URL = "https://www.powerplatformexperts.com.au";
 const ACCESS_EXPERTS_URL = "https://www.accessexperts.com.au";
 
 export const navigationData = {
-  home: {
-    label: "Home",
-    href: "/",
+  locations: {
+    label: "Locations",
+    href: "/locations",
     items: [
       {
-        label: "Office Experts",
-        href: "/",
+        label: "New South Wales",
+        href: "/locations",
+        items: [
+          {
+            label: "Sydney",
+            href: "/word-and-powerpoint-experts-sydney/",
+          },
+          {
+            label: "Wollongong",
+            href: "/office-excel-access-and-365-experts-wollongong/",
+          },
+          {
+            label: "Central Coast",
+            href: "/excel-and-access-experts-central-coast-nsw/",
+          },
+          {
+            label: "Northern Rivers",
+            href: "/office-excel-access-and-365-experts-northern-rivers-nsw/",
+          },
+        ],
       },
       {
-        label: "Excel Experts",
-        href: EXCEL_EXPERTS_URL,
+        label: "Victoria",
+        href: "/locations",
+        items: [
+          {
+            label: "Melbourne",
+            href: "/word-and-powerpoint-experts-melbourne/",
+          },
+          {
+            label: "Richmond",
+            href: "/office-and-office-365-experts-richmond/",
+          },
+        ],
       },
       {
-        label: "Power Platform Experts",
-        href: POWER_PLATFORM_EXPERTS_URL,
+        label: "Queensland",
+        href: "/locations",
+        items: [
+          {
+            label: "Brisbane",
+            href: "/office-excel-access-and-365-experts-brisbane/",
+          },
+          {
+            label: "Gold Coast",
+            href: "/word-and-powerpoint-experts-gold-coast/",
+          },
+        ],
       },
       {
-        label: "Access Experts",
-        href: ACCESS_EXPERTS_URL,
+        label: "Western Australia",
+        href: "/locations",
+        items: [
+          {
+            label: "Perth",
+            href: "/word-and-powerpoint-experts-perth/",
+          },
+        ],
       },
       {
-        label: "Word Experts",
-        href: WORD_EXPERTS_URL,
+        label: "ACT",
+        href: "/locations",
+        items: [
+          {
+            label: "Canberra",
+            href: "/word-and-powerpoint-experts-canberra/",
+          },
+        ],
+      },
+      {
+        label: "Northern Territory",
+        href: "/locations",
+        items: [
+          {
+            label: "Darwin",
+            href: "/office-excel-access-and-365-experts-darwin/",
+          },
+        ],
+      },
+      {
+        label: "South Australia",
+        href: "/locations",
+        items: [
+          {
+            label: "Adelaide",
+            href: "/office-excel-access-and-365-experts-adelaide/",
+          },
+        ],
       },
     ],
   },
@@ -389,12 +459,12 @@ export const navigationData = {
   },
   staticLinks: [
     {
-      label: "Testimonials",
-      href: "/client-testimonials",
-    },
-    {
       label: "About Us",
       href: `/about-us`,
+    },
+    {
+      label: "Testimonials",
+      href: "/client-testimonials",
     },
     {
       label: "Meet Our Team",
