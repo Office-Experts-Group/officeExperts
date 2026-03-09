@@ -196,6 +196,14 @@ const SERVICES = [
     serviceType: "Microsoft Office Consulting",
   },
   { name: "Managed Services", serviceType: "Microsoft Office Consulting" },
+  {
+    name: "Remote Consulting",
+    serviceType: "Australia-wide services",
+  },
+  {
+    name: "On-site Consulting",
+    serviceType: "In-house Microsoft Office consultation",
+  },
 ];
 
 // Builds an Offer node — no businessFunction, no provider

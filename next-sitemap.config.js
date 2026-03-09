@@ -11,7 +11,6 @@ module.exports = {
   transform: async (config, path) => {
     // List of paths that have different canonicals (you'd maintain this list)
     const pathsWithDifferentCanonicals = [
-      "/services",
       // word
       "/services/microsoft-word",
       "/services/microsoft-word/accessibility",
@@ -71,10 +70,15 @@ module.exports = {
       "/blog/spreadsheet-errors-in-excel",
       "/blog/ultimate-guide-to-word-templates",
       "/blog/word-templates-for-legal-firms",
+      "/blog/custom-excel-shortcuts-with-macros",
     ];
 
     // Exclude paths that have different canonical URLs
     if (pathsWithDifferentCanonicals.includes(path)) {
+      return null; // Exclude from sitemap
+    }
+
+    if (path === "/test-invoice") {
       return null; // Exclude from sitemap
     }
 
