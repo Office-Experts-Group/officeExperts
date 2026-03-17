@@ -126,6 +126,12 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/custom-design-and-development",
+    destination:
+      "https://www.excelexperts.com.au/custom-design-and-development",
+    permanent: true,
+  },
+  {
     source: "/data-manipulation",
     destination: "https://www.excelexperts.com.au/data-manipulation",
     permanent: true,
@@ -166,7 +172,8 @@ const REDIRECTS = [
   },
   {
     source: "/services/microsoft-power-bi",
-    destination: "https://www.powerplatformexperts.com.au/microsoft-power-bi",
+    destination:
+      "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
     permanent: true,
   },
   {
@@ -426,6 +433,11 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/excel-consultants-central-coast-nsw",
+    destination: "/microsoft-support-and-training-central-coast-nsw",
+    permanent: true,
+  },
+  {
     source: "/excel-consultants-perth",
     destination: "/microsoft-support-and-training-perth",
     permanent: true,
@@ -433,6 +445,21 @@ const REDIRECTS = [
   {
     source: "/excel-consultants-richmond",
     destination: "/microsoft-support-and-training-richmond",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-wollongong",
+    destination: "/microsoft-support-and-training-wollongong",
+    permanent: true,
+  },
+  {
+    source: "/office-consultants-central-coast-nsw",
+    destination: "/microsoft-support-and-training-central-coast-nsw",
+    permanent: true,
+  },
+  {
+    source: "/blog/excel-problems-on-mac",
+    destination: "https://www.excelexperts.com.au/excel-problems-on-mac",
     permanent: true,
   },
 ];
