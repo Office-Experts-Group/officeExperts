@@ -250,6 +250,11 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/add-in-development",
+    destination: "https://www.excelexperts.com.au/add-in-development",
+    permanent: true,
+  },
+  {
     source: "/services/microsoft-excel/custom-design-and-development",
     destination:
       "https://www.excelexperts.com.au/custom-design-and-development",
@@ -388,6 +393,46 @@ const REDIRECTS = [
   {
     source: "/office-and-office-365-experts-gold-coast",
     destination: "/microsoft-support-and-training-gold-coast",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-melbourne",
+    destination: "/microsoft-support-and-training-melbourne",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-adelaide",
+    destination: "/microsoft-support-and-training-adelaide",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-canberra",
+    destination: "/microsoft-support-and-training-canberra",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-darwin",
+    destination: "/microsoft-support-and-training-darwin",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-gold-coast",
+    destination: "/microsoft-support-and-training-gold-coast",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-northern-rivers-nsw",
+    destination: "/microsoft-support-and-training-northern-rivers-nsw",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-perth",
+    destination: "/microsoft-support-and-training-perth",
+    permanent: true,
+  },
+  {
+    source: "/excel-consultants-richmond",
+    destination: "/microsoft-support-and-training-richmond",
     permanent: true,
   },
 ];
