@@ -386,7 +386,7 @@
   border-radius: 50%;
 }
 .radioOption input[type=radio]:hover:not(:checked) {
-  border-color: #034767;
+  border-color: rgb(2.7006369427, 70.8917197452, 103.2993630573);
 }
 .radioOption label {
   font-weight: 400;
@@ -481,7 +481,7 @@
   transform: rotate(45deg);
 }
 .termsField .checkboxLabel input[type=checkbox]:hover:not(:checked) {
-  border-color: #034767;
+  border-color: rgb(2.7006369427, 70.8917197452, 103.2993630573);
 }
 .termsField .checkboxLabel .checkboxText {
   line-height: 1.4;

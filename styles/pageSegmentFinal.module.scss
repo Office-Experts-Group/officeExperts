@@ -1,0 +1,378 @@
+@import "./globals.scss";
+
+// ─── Wrapper ────────────────────────────────────────────────────────────────
+
+.wrapper {
+  padding: 8rem 0;
+  background: transparent;
+
+  @include tablet {
+    padding: 6rem 0;
+  }
+
+  @include phone {
+    padding: 5rem 0;
+  }
+}
+
+.inner {
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include tablet {
+    margin: 0 5vw;
+    gap: 4rem;
+  }
+
+  @include phone {
+    margin: 0 1rem;
+    gap: 3rem;
+  }
+}
+
+// ─── Header ─────────────────────────────────────────────────────────────────
+
+.header {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: $theme;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: #1e1e1e;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+}
+
+.subheading {
+  color: #777a7e;
+  line-height: 2rem;
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+// ─── Stats Bar ──────────────────────────────────────────────────────────────
+
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(4, 105, 153, 0.15);
+  border-radius: 0.15rem;
+  overflow: hidden;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include phone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(4, 105, 153, 0.15);
+  transition: background-color 0.3s ease;
+  gap: 0.5rem;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: rgba(4, 105, 153, 0.04);
+  }
+
+  @include tablet {
+    &:nth-child(2) {
+      border-right: none;
+    }
+    &:nth-child(3) {
+      border-top: 1px solid rgba(4, 105, 153, 0.15);
+    }
+    &:nth-child(4) {
+      border-top: 1px solid rgba(4, 105, 153, 0.15);
+    }
+  }
+
+  @include phone {
+    padding: 2rem 1rem;
+
+    &:nth-child(2) {
+      border-right: none;
+    }
+    &:nth-child(3) {
+      border-top: 1px solid rgba(4, 105, 153, 0.15);
+    }
+    &:nth-child(4) {
+      border-top: 1px solid rgba(4, 105, 153, 0.15);
+    }
+  }
+}
+
+.statValue {
+  display: block;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 900;
+  color: $theme;
+  line-height: 1;
+  font-family: var(--font-garamond);
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: #777a7e;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+// ─── Capabilities Grid ───────────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background-color: rgba(4, 105, 153, 0.1);
+  border: 1px solid rgba(4, 105, 153, 0.1);
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    width: 0;
+    height: 3px;
+    background-color: $theme;
+    transition: width 0.4s ease;
+  }
+
+  &:hover {
+    background-color: #fafcfd;
+
+    &::after {
+      width: calc(100% - 4rem);
+    }
+
+    .cardNumber {
+      color: $theme;
+    }
+  }
+
+  @include phone {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.cardNumber {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(4, 105, 153, 0.3);
+  transition: color 0.3s ease;
+  font-family: var(--font-aptos);
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1e1e1e;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: #777a7e;
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: $theme;
+  background-color: rgba(4, 105, 153, 0.07);
+  padding: 0.3rem 0.75rem;
+  border-radius: 2px;
+  border: 1px solid rgba(4, 105, 153, 0.15);
+  white-space: nowrap;
+}
+
+// ─── CTA Strip ──────────────────────────────────────────────────────────────
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3.5rem 3rem;
+  border: 1px solid rgba(4, 105, 153, 0.15);
+  border-left: 5px solid $theme;
+  background-color: #fafcfd;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.ctaText {
+  flex: 1;
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #1e1e1e;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #777a7e;
+    line-height: 1.75;
+    margin: 0;
+    max-width: 520px;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  @include phone {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+// ─── Buttons ─────────────────────────────────────────────────────────────────
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: $theme;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1.25rem 2rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $theme;
+    border-color: $theme;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  @include phone {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: transparent;
+  color: $theme;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1.25rem 2rem;
+  border: 1px solid $theme;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $theme;
+    color: #fff;
+  }
+
+  @include phone {
+    width: 100%;
+    text-align: center;
+  }
+}

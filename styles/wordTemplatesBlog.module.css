@@ -264,14 +264,14 @@
   padding: 1.5rem;
   border-radius: 6px;
   margin: 2rem 0 1rem;
-  border: 1px solid #6ecefb;
+  border: 1px solid rgb(109.7961783439, 205.6496815287, 251.2038216561);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 .bestPracticesBox h3 {
   color: #046999;
   margin-top: 0;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #3cbdfa;
+  border-bottom: 1px solid rgb(60.0955414013, 188.7579617834, 249.9044585987);
 }
 .bestPracticesBox ul {
   margin-top: 1rem;

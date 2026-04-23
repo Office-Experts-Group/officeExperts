@@ -76,11 +76,13 @@
 .pageSegmentCentered img {
   filter: grayscale(0%);
   transition: all 0.3s ease;
-  max-width: 95vw;
 }
 .pageSegmentCentered img:hover {
   filter: grayscale(100%);
   transition: all 0.3s ease;
+}
+.pageSegmentCentered img {
+  max-width: 95vw;
 }
 @media (max-width: 449px) {
   .pageSegmentCentered {
@@ -172,21 +174,21 @@
 }
 
 @media (max-width: 449px) {
+  .noImg img {
+    display: none;
+  }
   .noImg {
     margin-bottom: 0 !important;
     padding-bottom: 0;
-  }
-  .noImg img {
-    display: none;
   }
 }
 @media (min-width: 450px) and (max-width: 766px) {
+  .noImg img {
+    display: none;
+  }
   .noImg {
     margin-bottom: 0 !important;
     padding-bottom: 0;
-  }
-  .noImg img {
-    display: none;
   }
 }
 

@@ -25,7 +25,7 @@
   }
 }
 .scrollIndicator:hover {
-  background-color: #034767;
+  background-color: rgb(2.7006369427, 70.8917197452, 103.2993630573);
 }
 .scrollIndicator svg {
   transition: transform 0.2s ease-in-out;

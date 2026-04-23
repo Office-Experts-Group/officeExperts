@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@media screen and (min-width: 1200px) {
+  .mobContents {
+    display: none;
+  }
+}
 .mobContents {
   position: fixed;
   top: 25vh;
@@ -6,11 +11,6 @@
   right: -3.7rem;
   z-index: 1500;
   transition: right 0.5s ease;
-}
-@media screen and (min-width: 1200px) {
-  .mobContents {
-    display: none;
-  }
 }
 .mobContents button {
   background-color: #333;

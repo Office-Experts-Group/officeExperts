@@ -30,7 +30,7 @@ const PageSegmentMain = () => {
               Seamless Integration via Modern API's
             </h2>
             <p>
-              In 2025, businesses demand mobility, flexibility, and speed.
+              In 2026, businesses demand mobility, flexibility, and speed.
               That's why we go beyond traditional desktop-bound Microsoft 365
               setups to deliver responsive portals that surface live data for
               your entire team. Our mobile apps for field workers are designed

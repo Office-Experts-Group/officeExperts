@@ -561,8 +561,7 @@
   gap: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: #f8f8f8;
   font-size: 0.9rem;
   border-radius: 5px;
@@ -580,7 +579,6 @@
   filter: brightness(80%);
   scale: 1;
   transition: all 0.5s ease;
-  margin-left: auto;
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .microLogo {
@@ -601,6 +599,9 @@
   .microLogo {
     scale: 0.5;
   }
+}
+.microLogo {
+  margin-left: auto;
 }
 
 .microLogoScrolled {

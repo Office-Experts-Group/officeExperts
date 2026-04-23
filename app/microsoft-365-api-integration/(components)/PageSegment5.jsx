@@ -14,12 +14,12 @@ const WebMobileIntegrationSolution = () => {
     {
       title: "Mobile Apps with Offline Sync",
       description:
-        "Empower field teams with mobile access to SharePoint libraries, task lists, and forms—even when offline.",
+        "Empower field teams with mobile access to SharePoint libraries, task lists, and forms, even when offline.",
     },
     {
       title: "Progressive Web Apps for Office Workflows",
       description:
-        "Lightweight, installable apps that streamline document management, approvals, and reporting—optimized for speed and usability.",
+        "Lightweight, installable apps that streamline document management, approvals, and reporting, optimised for speed and usability.",
     },
     {
       title: "Secure Azure AD Integration",

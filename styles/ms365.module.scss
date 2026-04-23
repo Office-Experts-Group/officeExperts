@@ -1,0 +1,250 @@
+.wrapper {
+  width: 100%;
+  padding: 0 0 3rem 0;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 10vw;
+}
+
+// ─── Image column ───────────────────────────────────────────────
+
+.imageCol {
+  flex: 0 0 auto;
+}
+
+.imageContainer {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  em {
+    margin-top: -4rem !important;
+  }
+}
+
+// ─── Hotspot overlay ────────────────────────────────────────────
+
+.hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotspot {
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  pointer-events: all;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  transform: translate(-50%, -50%);
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--app-color) 40%, transparent);
+    }
+    70% {
+      box-shadow: 0 0 0 10px
+        color-mix(in srgb, var(--app-color) 0%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--app-color) 0%, transparent);
+    }
+  }
+
+  &:hover,
+  &.hotspotActive {
+    border-color: var(--app-color);
+    animation: pulse 1.5s ease-out infinite;
+  }
+}
+
+// Hotspot positions — calibrated to the diagram image
+// Each position is percentage-based relative to the 560x560 container
+
+.copilot {
+  top: 18%;
+  left: 47.3%;
+}
+
+.sharepoint {
+  top: 28.5%;
+  left: 68.8%;
+}
+
+.powerplatform {
+  top: 47.5%;
+  left: 78.4%;
+}
+
+.powerautomate {
+  top: 66.5%;
+  left: 68.8%;
+}
+
+.azure {
+  top: 76.5%;
+  left: 47.2%;
+}
+
+.security {
+  top: 66.5%;
+  left: 25.4%;
+}
+
+.powerbi {
+  top: 47.5%;
+  left: 15.5%;
+}
+
+.teams {
+  top: 28.5%;
+  left: 25.4%;
+}
+
+// ─── Info column ────────────────────────────────────────────────
+
+.infoCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.infoCard {
+  background: #fff;
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.infoLabel {
+  //   display: inline-block;
+  //   padding: 0.3rem 1rem;
+  //   border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  //   text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding: 0 1rem 0.3rem 0;
+  width: fit-content;
+}
+
+.infoText {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.infoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--app-color);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--app-color) 30%, transparent);
+  padding-bottom: 1px;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+  margin-bottom: 1.5rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// ─── Progress bar ───────────────────────────────────────────────
+
+.progressBar {
+  width: 100%;
+  height: 3px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  background: var(--app-color);
+  border-radius: 2px;
+}
+
+.progressAnimate {
+  animation: progressSweep 12s linear forwards;
+}
+
+@keyframes progressSweep {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+// ─── Dot navigation ─────────────────────────────────────────────
+
+.dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.dotActive {
+  transform: scale(1.2);
+}

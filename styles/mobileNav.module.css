@@ -1,6 +1,5 @@
 .mobileNavContainer {
   position: relative;
-  margin-left: auto;
 }
 @media (min-width: 1200px) {
   .mobileNavContainer {
@@ -26,6 +25,9 @@
   .mobileNavContainer {
     display: flex;
   }
+}
+.mobileNavContainer {
+  margin-left: auto;
 }
 
 .menuButton {

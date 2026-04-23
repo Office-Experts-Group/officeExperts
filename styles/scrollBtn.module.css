@@ -20,7 +20,7 @@
   will-change: transform, opacity;
 }
 .scrollBtn:hover {
-  background-color: #034767;
+  background-color: rgb(2.7006369427, 70.8917197452, 103.2993630573);
 }
 .scrollBtn.visible {
   opacity: 1;

@@ -18,8 +18,7 @@
   background-color: #046999;
   width: 300px;
   text-align: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-          clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
   margin-bottom: 2rem;
 }
 .goodToKnow .triangleDiv h2 {
