@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../../styles/quote.module.css";
+import styles from "../../../../styles/quote.module.css";
 
 const Quote = () => {
   return (

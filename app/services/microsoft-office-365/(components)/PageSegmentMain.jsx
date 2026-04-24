@@ -5,7 +5,7 @@ import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
 import styles from "../../../../styles/pageSegment.module.css";
 
-import office from "../../../../public/office600x400.webp";
+import office from "../../../../public/cloudOffice.webp";
 
 const PageSegmentMain = () => {
   return (
@@ -26,14 +26,20 @@ const PageSegmentMain = () => {
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
             <p>Our Expertise</p>
-            <h2>365 Experts Consulting Services</h2>
+            <h2>Unlock the Power of Office 365</h2>
             <p>
-              When it comes to Microsoft Office 365, our innovative and
-              versatile consultants deliver a prompt, quality service with
-              competitive pricing. Our 365 experts specialise in getting
-              businesses just like yours efficiently running online through
-              expert design, development, integration, support and training,
-              migration, automation and cloud solutions.
+              Most businesses are using a fraction of what Office 365 can do.
+              Behind the familiar icons of Word, Excel and Outlook lies a
+              connected ecosystem of automation, AI, custom applications,
+              intelligent data pipelines, and cloud infrastructure, all included
+              in your existing subscription and all waiting to be utilised.
+            </p>
+            <p>
+              Our team of consultants and developers work across the entire
+              Microsoft ecosystem. We cover initial setup or migration through
+              to Copilot AI implementation, Power Platform automation,
+              SharePoint intranets, Azure cloud solutions, and deep app-level
+              customisation.
             </p>
           </div>
         </AnimateOnScroll>

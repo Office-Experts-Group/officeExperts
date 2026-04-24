@@ -1,0 +1,243 @@
+@import "./globals.scss";
+
+$ms-theme: #046999;
+$ms-theme-light: #e8f4fa;
+$ms-black: #1a1a1a;
+$ms-gray: #777a7e;
+$ms-border: rgba(0, 0, 0, 0.08);
+$ms-bg: #f7f8f9;
+$ms-card-bg: #ffffff;
+
+.section {
+  background: $ms-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $ms-theme;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: $ms-black;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+
+  em {
+    font-style: normal;
+    color: $ms-theme;
+  }
+}
+
+// ── Grid ──────────────────────────────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  // Make all direct children (the AnimateOnScroll divs) stretch to row height
+  align-items: stretch;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Card ──────────────────────────────────────────────────────────────────────
+.card {
+  background: $ms-card-bg;
+  border: 1px solid $ms-border;
+  border-bottom: 4px solid transparent;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    border-bottom-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    border-bottom-color: $ms-theme;
+    box-shadow: 0 8px 32px rgba(4, 105, 153, 0.1);
+    transform: translateY(-3px);
+  }
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  color: $ms-theme;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cardNum {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(4, 105, 153, 0.2);
+}
+
+.cardCategory {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $ms-theme;
+  background: $ms-theme-light;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cardHeading {
+  font-size: 1rem;
+  font-weight: 800;
+  color: $ms-black;
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.cardBody {
+  font-size: 0.88rem;
+  color: $ms-gray;
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.pointList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid $ms-border;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pointItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: $ms-gray;
+  line-height: 1.4;
+}
+
+.pointDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: $ms-theme;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+
+// ── CTA tile — spans full width on its row ────────────────────────────────────
+.ctaCard {
+  background: $ms-theme;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(4, 105, 153, 0.25);
+    transform: translateY(-3px);
+  }
+}
+
+.ctaCardEyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.ctaCardTitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.ctaCardBody {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 480px;
+}
+
+.ctaCardBtn {
+  display: inline-block;
+  width: fit-content;
+  background: #fff;
+  color: $ms-theme;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 0.85rem 1.75rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    border-color 0.25s;
+
+  &:hover {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.55);
+  }
+}

@@ -16,7 +16,7 @@ const SolutionsCarousel = () => {
       image: calcGraph,
       description: [
         "Need help setting up Office 365 in your organisation?",
-        "Our experts can assist you in planning and utilizing Office 365 features to maximize your ROI.",
+        "Our experts can assist you in planning and utilising Office 365 features to maximize your ROI.",
       ],
     },
     {
@@ -25,7 +25,7 @@ const SolutionsCarousel = () => {
       image: data,
       description: [
         "Need to migrate emails and/or files to Office 365?",
-        "Our consultants can help move your organisation’s email and files to the cloud using Office 365.",
+        "Our consultants can help move your organisation's email and files to the cloud using Office 365.",
       ],
     },
     {
@@ -55,7 +55,7 @@ const SolutionsCarousel = () => {
   return (
     <div className={styles.solutions}>
       <div className={styles.title}>
-        <h2>Experts In...</h2>
+        <h2>Dive Deeper into Our Services...</h2>
       </div>
 
       <div className={styles.carouselContainer}>

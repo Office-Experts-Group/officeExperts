@@ -2,13 +2,14 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Online Solution | Office Experts Group",
+  title:
+    "Microsoft Online Solutions | Power Pages, SharePoint & Custom Web Apps",
   description:
-    "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
+    "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
 
   keywords: [
     // Core online services
-    "custom online spreadsheet solutions",
+    "custom online solutions",
   ],
 
   alternates: {
@@ -17,9 +18,10 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Online Solution | Office Experts Group",
+    title:
+      "Microsoft Online Solutions | Power Pages, SharePoint & Custom Web Apps",
     description:
-      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
+      "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
     url: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
     siteName: "Office Experts Group",
     images: [
@@ -38,9 +40,10 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Online Solution | Office Experts Group",
+    title:
+      "Microsoft Online Solutions | Power Pages, SharePoint & Custom Web Apps",
     description:
-      "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
+      "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
     images: ["/logo.png"],
   },
 };

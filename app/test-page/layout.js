@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Test Page for Content",
-  description:
-    "Internal use only",
+  title: "Test Page",
+  description: "Not intended for public display.",
+
   robots: {
+    index: false,
     follow: false,
-    index: false
-  }
+  },
 };
 
 export default function RootLayout({ children }) {

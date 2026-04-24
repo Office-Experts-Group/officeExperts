@@ -1,0 +1,338 @@
+.section {
+  background: #111820;
+  padding: 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.topBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  margin-bottom: 6rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .topBlock {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 449px) {
+  .topBlock {
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+  }
+}
+.topBlock > div {
+  height: 100%;
+}
+
+.leftCol {
+  position: sticky;
+  top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .leftCol {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(4, 105, 153, 0.9);
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(4, 105, 153, 0.35);
+  border-radius: 2rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.accent {
+  color: #046999;
+}
+
+.intro {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.9;
+  margin: 0;
+  max-width: 420px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #046999;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+.ctaBtn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform: translateX(-101%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+.ctaBtn:hover {
+  color: #046999;
+  border-color: #046999;
+}
+.ctaBtn:hover::before {
+  transform: translateX(0);
+}
+.ctaBtn, .ctaBtn * {
+  position: relative;
+  z-index: 1;
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 449px) {
+  .reasonsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reasonCard {
+  background: #18232e;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: background 0.25s ease;
+}
+.reasonCard:hover {
+  background: #1e2f3e;
+}
+
+.reasonDot {
+  width: 28px;
+  height: 4px;
+  background: #046999;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.reasonHeading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.reasonBody {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.85;
+  margin: 0;
+}
+
+.processBlock {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 5rem;
+}
+@media (max-width: 449px) {
+  .processBlock {
+    padding-top: 3.5rem;
+  }
+}
+
+.processHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 449px) {
+  .processHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.processLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.processSub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 520px;
+}
+
+.stepList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .stepList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  padding: 2rem 2rem 2rem 0.3rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: default;
+  outline: none;
+  transition: background 0.25s ease;
+}
+.step:last-child {
+  border-right: none;
+}
+.step:first-child {
+  padding-left: 0;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.75rem 0;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: start;
+    gap: 1.25rem;
+  }
+  .step:last-child {
+    border-bottom: none;
+  }
+}
+.step:focus-visible {
+  outline: 2px solid rgba(4, 105, 153, 0.6);
+  outline-offset: 2px;
+}
+
+.stepActive .stepNum {
+  color: #046999;
+}
+.stepActive .stepLine {
+  background: #046999;
+}
+.stepActive .stepLabel {
+  color: #ffffff;
+}
+
+.stepTrack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .stepTrack {
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0.1rem;
+  }
+}
+
+.stepNum {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.18);
+  transition: color 0.25s ease;
+  line-height: 1;
+}
+
+.stepLine {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  transition: background 0.25s ease;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .stepLine {
+    width: 20px;
+  }
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .stepBody {
+    padding-right: 0;
+  }
+}
+
+.stepLabel {
+  font-size: 1rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.25s ease;
+}
+
+.stepDetail {
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.38);
+  line-height: 1.85;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+.stepActive .stepDetail {
+  color: rgba(255, 255, 255, 0.55);
+}/*# sourceMappingURL=howWeWork.module.css.map */

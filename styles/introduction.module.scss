@@ -1,0 +1,500 @@
+@import "./globals.scss";
+
+// ─── Tokens (extend the site palette) ───────────────────────────────────────
+$theme: #046999;
+$themeLight: #e8f4fa;
+$black: #1a1a1a;
+$grayText: #777a7e;
+$offWhite: #f7f8f9;
+$border: rgba(0, 0, 0, 0.08);
+
+// ─── Breakpoint helpers (mirror site convention) ─────────────────────────────
+// (assumes globals.scss already has phone/tablet/desktop mixins)
+
+// ─── Entrance animation ──────────────────────────────────────────────────────
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes counterPop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// ─── Section wrapper ─────────────────────────────────────────────────────────
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin: 8rem;
+  align-items: start;
+  opacity: 0;
+  transition: opacity 0.1s;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 6rem 4rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 5rem 1.25rem;
+  }
+}
+
+.introVisible {
+  opacity: 1;
+
+  .eyebrow {
+    animation: fadeSlideUp 0.55s ease both;
+    animation-delay: 0.05s;
+  }
+  .headline {
+    animation: fadeSlideUp 0.65s ease both;
+    animation-delay: 0.15s;
+  }
+  .introBody {
+    animation: fadeSlideUp 0.65s ease both;
+    animation-delay: 0.28s;
+  }
+  .statStrip {
+    animation: fadeSlideUp 0.65s ease both;
+    animation-delay: 0.42s;
+  }
+  .serviceBlock {
+    animation: fadeSlideUp 0.75s ease both;
+    animation-delay: 0.2s;
+  }
+}
+
+// ─── Left column: headline block ─────────────────────────────────────────────
+.headlineBlock {
+  position: sticky;
+  top: 130px; // below site nav
+  padding-bottom: 2rem;
+
+  @include tablet {
+    position: static;
+  }
+  @include phone {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $theme;
+  margin-bottom: 1.25rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba($theme, 0.3);
+  border-radius: 2rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $black;
+  line-height: 1.18;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.accentLine {
+  color: $theme;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: $theme;
+    border-radius: 2px;
+    transition: width 1.2s ease 0.7s;
+  }
+
+  .introVisible & ::after,
+  &::after {
+    // triggered by parent visibility class
+    width: 100%;
+  }
+}
+
+.introVisible .accentLine::after {
+  width: 100%;
+}
+
+.introBody {
+  p {
+    color: $grayText;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ─── Stat strip ──────────────────────────────────────────────────────────────
+.statStrip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border;
+
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0 1.5rem;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  @include phone {
+    padding: 0;
+  }
+}
+
+.counterValue {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: $theme;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: $grayText;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.statDivider {
+  width: 1px;
+  height: 48px;
+  background: $border;
+  flex-shrink: 0;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// ─── Right column: service list ───────────────────────────────────────────────
+.serviceBlock {
+  position: relative;
+}
+
+.serviceBlockLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: lighten($grayText, 15%);
+  margin-bottom: 1rem;
+  padding-left: 2rem; // align with list content
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+// ── Vertical animated track line ─────────────────────────────────────────────
+.trackLine {
+  position: absolute;
+  left: 8px; // centre on the dot column
+  top: 0;
+  width: 2px;
+  background: $theme;
+  border-radius: 2px;
+  height: 0;
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+// ── Individual service item ───────────────────────────────────────────────────
+.serviceItem {
+  cursor: pointer;
+  outline: none;
+  border-bottom: 1px solid $border;
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $theme;
+    outline-offset: -2px;
+  }
+}
+
+.serviceItemInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  transition: padding 0.25s ease;
+
+  .serviceItemActive & {
+    padding: 1.75rem 0;
+  }
+}
+
+// left gutter: number + dot
+.serviceLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 20px;
+  padding-top: 2px;
+}
+
+.serviceNum {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: lighten($grayText, 20%);
+  letter-spacing: 1px;
+  transition: color 0.2s;
+
+  .serviceItemActive & {
+    color: $theme;
+  }
+}
+
+.serviceDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: lighten($grayText, 25%);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  position: relative;
+  z-index: 2;
+
+  .serviceItemActive & {
+    background: $theme;
+    transform: scale(1.4);
+  }
+}
+
+// content
+.serviceContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.serviceLabel {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $black;
+  margin: 0;
+  transition: color 0.2s;
+
+  .serviceItemActive & {
+    color: $theme;
+  }
+}
+
+.serviceTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $theme;
+  background: $themeLight;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(8px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  flex-shrink: 0;
+
+  .serviceItemActive & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.serviceDesc {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease 0.05s;
+
+  .serviceItemActive & {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  p {
+    color: $grayText;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0.75rem 0 0.75rem;
+  }
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $theme;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    border-bottom-color: $theme;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// arrow on the right
+.serviceArrow {
+  color: lighten($grayText, 20%);
+  padding-top: 2px;
+  flex-shrink: 0;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+
+  .serviceItemActive & {
+    color: $theme;
+    transform: translateX(4px);
+  }
+}
+
+// ─── CTA strip ───────────────────────────────────────────────────────────────
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: $theme;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 1rem 2.25rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  span,
+  &:not(.nospan) {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: $theme;
+    border-color: $theme;
+
+    &::before {
+      transform: translateX(0);
+    }
+  }
+}
+
+.ctaNote {
+  font-size: 0.82rem;
+  color: $grayText;
+  font-style: italic;
+}

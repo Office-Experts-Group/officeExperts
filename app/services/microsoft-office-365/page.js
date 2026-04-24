@@ -5,8 +5,10 @@ import ExpertsAwait from "../../../components/ExpertsAwait";
 import Contact from "../../../components/Contact";
 import Testimonials from "../../(components)/Testimonials";
 import PageSegmentMain from "./(components)/PageSegmentMain";
+import PageSegment4 from "./(components)/PageSegment4";
 import SolutionsCarousel from "./(components)/SolutionsCarousel";
 import SolutionsCarouselReverse from "./(components)/SolutionsCarouselReverse";
+import CTAFull from "../../(components)/CTAFull";
 
 import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
 import { testimonials } from "../../../testimonials";
@@ -18,6 +20,9 @@ import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../../utils/schemaGenerators";
+import Ms365 from "./(components)/Ms365";
+import Quote from "./(components)/Quote";
+import PageSegmentFinal from "./(components)/Pagesegmentfinal";
 
 const schema = {
   "@context": "https://schema.org",
@@ -29,12 +34,12 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-office-365",
       url: "https://www.officeexperts.com.au/services/microsoft-office-365",
-      name: "Microsoft Office 365 Services | Excel Professional Australia",
+      name: "Microsoft Office 365 Consultants",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2026-04-24T00:00:00+00:00",
       description:
         "We offer best Microsoft office Services in Australia. Visit www.officeexperts.com.au to get more info or Email us Consult@officeexperts.com.au",
       breadcrumb: {
@@ -48,30 +53,6 @@ const schema = {
           target: [
             "https://www.officeexperts.com.au/services/microsoft-office-365",
           ],
-        },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-office-365#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: "https://www.officeexperts.com.au/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Our Microsoft Office 365 Services",
         },
       ],
     },
@@ -93,10 +74,15 @@ const Page = () => {
         altMob={"graphs on a table"}
       />
       <PageSegmentMain />
+      <PageSegment4 />
+      <Quote />
+      <Ms365 />
+      <ExpertsAwait />
+      <Testimonials testimonials={testimonials} />
       <SolutionsCarousel />
       <SolutionsCarouselReverse />
-      <Testimonials testimonials={testimonials} />
-      <ExpertsAwait />
+      <CTAFull />
+      <PageSegmentFinal />
       <Contact />
     </>
   );

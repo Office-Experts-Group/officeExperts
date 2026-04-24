@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment4.module.css";
+import styles from "../../../../styles/pageSegment4.module.css";
 
-import office365 from "../../../public/365.webp";
+import office365 from "../../../../public/365.webp";
 
 const WhatIs365 = () => {
   return (

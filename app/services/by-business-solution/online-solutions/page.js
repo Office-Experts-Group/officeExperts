@@ -1,10 +1,10 @@
 import React from "react";
+
 import ServiceHero from "../../../../components/ServiceHero";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import Promo from "./(components)/Promo";
-import PageSegment3 from "./(components)/PageSegment3";
-import PageSegment4 from "./(components)/PageSegment4";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
+import PageSegmentIntro from "./(components)/PageSegmentIntro";
+import MicrosoftSolutions from "./(components)/MicrosoftSolutions";
+import WebCapabilities from "./(components)/Webcapabilities";
+import HowWeWork from "./(components)/Howwework";
 import Contact from "../../../../components/Contact";
 
 import graphic from "../../../../public/pageHeros/graphic.webp";
@@ -25,14 +25,14 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
       url: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
-      name: "Online Solution | Microsoft Office | Office Expert Australia",
+      name: "Microsoft Online Solutions | Power Pages, SharePoint & Custom Web Apps",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-05-29T00:00:00+00:00",
+      dateModified: "2026-04-24T00:00:00+00:00",
       description:
-        "We are Online Solution Experts! Do you need your spreadsheets online? Do you need them connected to a database? Call us 1300 102 810",
+        "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/online-solutions#breadcrumb",
@@ -88,17 +88,16 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title={"Online Solutions"}
+        title={"Custom Online Solutions"}
         desktopImage={graphic}
         mobileImage={graphTableMob}
         altDesk={"digital graphic"}
         altMob={"graphs on a table"}
       />
-      <PageSegmentMain />
-      <Promo />
-      <PageSegment3 />
-      <PageSegment4 />
-      <ExpertsAwait />
+      <PageSegmentIntro />
+      <MicrosoftSolutions />
+      <WebCapabilities />
+      <HowWeWork />
       <Contact />
     </>
   );
