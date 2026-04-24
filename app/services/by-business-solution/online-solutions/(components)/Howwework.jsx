@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
-import ProcessSteps from "./ProcessSteps";
+import ProcessSteps from "./Processsteps";
 import styles from "../../../../../styles/howWeWork.module.css";
 
 const reasons = [
