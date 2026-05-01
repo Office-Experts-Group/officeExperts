@@ -1,0 +1,232 @@
+@keyframes bodyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section {
+  background: #111820;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 4rem;
+}
+@media (max-width: 449px) {
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  margin-bottom: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.1rem;
+}
+
+.subheading {
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.rows {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 3rem;
+}
+
+.row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.rowSummary {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+.rowSummary:focus-visible {
+  outline: 2px solid rgba(4, 105, 153, 0.6);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.rowSummary:hover .rowCategory {
+  color: rgba(255, 255, 255, 0.88);
+}
+.rowSummary:hover .rowNum {
+  color: #046999;
+}
+@media (max-width: 449px) {
+  .rowSummary {
+    gap: 1rem;
+    padding: 1.4rem 0;
+  }
+}
+
+.rowNum {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.25);
+  padding-top: 3px;
+  flex-shrink: 0;
+  min-width: 24px;
+  transition: color 0.18s ease;
+}
+
+.rowMeta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.rowCategory {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.2;
+  transition: color 0.18s ease;
+}
+.rowOpen .rowCategory {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.rowHook {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.6;
+}
+@media (max-width: 449px) {
+  .rowHook {
+    display: none;
+  }
+}
+
+.rowChevron {
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  padding-top: 2px;
+  transition: transform 0.25s ease, color 0.18s ease;
+  display: flex;
+  align-items: center;
+}
+.rowSummary:hover .rowChevron {
+  color: #046999;
+}
+
+.rowBody {
+  padding: 0 0 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: bodyReveal 0.28s ease both;
+}
+@media (max-width: 449px) {
+  .rowBody {
+    padding: 0 0 1.75rem 0;
+  }
+}
+
+.rowList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.rowList li {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.rowList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #046999;
+  opacity: 0.7;
+}
+
+.rowInsight {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.75;
+  font-style: italic;
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7ec8e3;
+  text-decoration: none !important;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid rgba(126, 200, 227, 0.3);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  transition: border-color 0.18s ease;
+}
+.rowLink svg {
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.rowLink:hover {
+  border-bottom-color: #7ec8e3;
+}
+.rowLink:hover svg {
+  transform: translate(2px, -2px);
+}/*# sourceMappingURL=migrationChallenges.module.css.map */

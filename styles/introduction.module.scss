@@ -1,8 +1,8 @@
 @import "./globals.scss";
 
 // ─── Tokens (extend the site palette) ───────────────────────────────────────
-$theme: #046999;
-$themeLight: #e8f4fa;
+$accent: #046999;
+$accentLight: #e8f4fa;
 $black: #1a1a1a;
 $grayText: #777a7e;
 $offWhite: #f7f8f9;
@@ -114,10 +114,10 @@ $border: rgba(0, 0, 0, 0.08);
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: $theme;
+  color: $accent;
   margin-bottom: 1.25rem;
   padding: 0.35rem 0.85rem;
-  border: 1px solid rgba($theme, 0.3);
+  border: 1px solid rgba($accent, 0.3);
   border-radius: 2rem;
 }
 
@@ -131,7 +131,7 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .accentLine {
-  color: $theme;
+  color: $accent;
   position: relative;
   display: inline-block;
 
@@ -142,7 +142,7 @@ $border: rgba(0, 0, 0, 0.08);
     left: 0;
     width: 0;
     height: 3px;
-    background: $theme;
+    background: $accent;
     border-radius: 2px;
     transition: width 1.2s ease 0.7s;
   }
@@ -206,7 +206,7 @@ $border: rgba(0, 0, 0, 0.08);
 .counterValue {
   font-size: 2.4rem;
   font-weight: 900;
-  color: $theme;
+  color: $accent;
   letter-spacing: -0.03em;
   line-height: 1;
   display: block;
@@ -259,7 +259,7 @@ $border: rgba(0, 0, 0, 0.08);
   left: 8px; // centre on the dot column
   top: 0;
   width: 2px;
-  background: $theme;
+  background: $accent;
   border-radius: 2px;
   height: 0;
   transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -278,7 +278,7 @@ $border: rgba(0, 0, 0, 0.08);
   }
 
   &:focus-visible {
-    outline: 2px solid $theme;
+    outline: 2px solid $accent;
     outline-offset: -2px;
   }
 }
@@ -313,7 +313,7 @@ $border: rgba(0, 0, 0, 0.08);
   transition: color 0.2s;
 
   .serviceItemActive & {
-    color: $theme;
+    color: $accent;
   }
 }
 
@@ -329,7 +329,7 @@ $border: rgba(0, 0, 0, 0.08);
   z-index: 2;
 
   .serviceItemActive & {
-    background: $theme;
+    background: $accent;
     transform: scale(1.4);
   }
 }
@@ -355,7 +355,7 @@ $border: rgba(0, 0, 0, 0.08);
   transition: color 0.2s;
 
   .serviceItemActive & {
-    color: $theme;
+    color: $accent;
   }
 }
 
@@ -364,8 +364,8 @@ $border: rgba(0, 0, 0, 0.08);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: $theme;
-  background: $themeLight;
+  color: $accent;
+  background: $accentLight;
   padding: 0.2rem 0.6rem;
   border-radius: 2rem;
   white-space: nowrap;
@@ -409,7 +409,7 @@ $border: rgba(0, 0, 0, 0.08);
   gap: 0.4rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: $theme;
+  color: $accent;
   text-decoration: none;
   letter-spacing: 0.5px;
   padding-bottom: 0.5rem;
@@ -421,7 +421,7 @@ $border: rgba(0, 0, 0, 0.08);
   }
 
   &:hover {
-    border-bottom-color: $theme;
+    border-bottom-color: $accent;
 
     svg {
       transform: translateX(4px);
@@ -439,7 +439,7 @@ $border: rgba(0, 0, 0, 0.08);
     transform 0.2s;
 
   .serviceItemActive & {
-    color: $theme;
+    color: $accent;
     transform: translateX(4px);
   }
 }
@@ -455,7 +455,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 .ctaBtn {
   display: inline-block;
-  background: $theme;
+  background: $accent;
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
@@ -484,8 +484,8 @@ $border: rgba(0, 0, 0, 0.08);
   }
 
   &:hover {
-    color: $theme;
-    border-color: $theme;
+    color: $accent;
+    border-color: $accent;
 
     &::before {
       transform: translateX(0);

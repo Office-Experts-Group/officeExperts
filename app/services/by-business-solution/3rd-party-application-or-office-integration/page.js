@@ -8,8 +8,8 @@ import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment7 from "./(components)/PageSegment7";
 import PageSegment8 from "./(components)/PageSegment8";
 
-import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
-import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
+import thirdParty from "../../../../public/pageHeros/thirdParty.webp";
+import thirdPartyMob from "../../../../public/pageHeros/mob/thirdPartyMob.webp";
 
 import {
   generateProfessionalServiceSchema,
@@ -90,10 +90,10 @@ const Page = () => {
       />
       <ServiceHero
         title="Third Party Application or Office Integration"
-        desktopImage={deskGraph}
-        mobileImage={seatMob}
-        altDesk={"Desk with graphs"}
-        altMob={"empty office chair"}
+        desktopImage={thirdParty}
+        mobileImage={thirdPartyMob}
+        altDesk={"Microsoft Integrations design"}
+        altMob={"Microsoft Integrations design"}
       />
       <PageSegmentMain />
       <PageSegment4 />

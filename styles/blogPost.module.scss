@@ -47,7 +47,7 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: #1a1a1a;
-  border-bottom: 3px solid $theme;
+  border-bottom: 3px solid $accent;
   padding-bottom: 0.5rem;
   width: fit-content;
 }
@@ -100,13 +100,13 @@
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: $theme;
+    color: $accent;
   }
 
   h3 {
     font-size: 1.4rem;
     margin-top: 1.5rem;
-    color: $theme;
+    color: $accent;
   }
 
   p {
@@ -124,7 +124,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700;
   }
 
@@ -224,7 +224,7 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: 10px solid $theme;
+  border: 10px solid $accent;
   img {
     border-radius: 50%;
   }
@@ -240,7 +240,7 @@
   p {
     font-size: 1.25rem;
     font-weight: 700;
-    color: $theme;
+    color: $accent;
     font-style: italic;
     text-align: center;
   }

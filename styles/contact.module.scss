@@ -62,7 +62,7 @@
   h2 {
     text-align: center;
     padding: 1.5rem 2rem;
-    background: $theme;
+    background: $accent;
     transition: all 1s ease;
     color: $offWhite;
     font-size: 1rem;
@@ -97,8 +97,8 @@
       }
     }
     h2:hover {
-      color: $theme;
-      border-color: $theme;
+      color: $accent;
+      border-color: $accent;
 
       &::before {
         left: 0;
@@ -297,7 +297,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #b7b7b7f6;
-    outline: $theme;
+    outline: $accent;
     font-size: 1.125rem;
     color: $grayText;
     &::placeholder {
@@ -388,7 +388,7 @@
     position: relative;
 
     &:checked {
-      border-color: $theme;
+      border-color: $accent;
 
       &::after {
         content: "";
@@ -398,13 +398,13 @@
         transform: translate(-50%, -50%);
         width: 0.75rem;
         height: 0.75rem;
-        background-color: $theme;
+        background-color: $accent;
         border-radius: 50%;
       }
     }
 
     &:hover:not(:checked) {
-      border-color: darken($theme, 10%);
+      border-color: darken($accent, 10%);
     }
   }
 
@@ -487,8 +487,8 @@
       flex-shrink: 0; // Prevent checkbox from shrinking
 
       &:checked {
-        border-color: $theme;
-        background-color: $theme;
+        border-color: $accent;
+        background-color: $accent;
 
         &::after {
           content: "";
@@ -504,7 +504,7 @@
       }
 
       &:hover:not(:checked) {
-        border-color: darken($theme, 10%);
+        border-color: darken($accent, 10%);
       }
     }
 
@@ -514,7 +514,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     text-decoration: underline;
     font-weight: 500;
 
@@ -525,7 +525,7 @@
 }
 
 .errorMessage {
-  color: $theme;
+  color: $accent;
   font-size: 0.8rem;
   font-style: italic;
   margin: 0.5rem 0 0 0.5rem;
@@ -549,7 +549,7 @@
   }
 
   &:hover {
-    border: 1px solid $theme;
+    border: 1px solid $accent;
   }
 }
 
@@ -570,7 +570,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   h2 {
-    color: $theme;
+    color: $accent;
     margin-bottom: 1.5rem;
     font-size: 2rem;
   }
@@ -617,7 +617,7 @@
   margin: 2rem 0 1rem 0;
   font-size: 1.25rem !important;
   font-weight: 700;
-  color: $theme;
+  color: $accent;
   font-family: var(--font-garamond);
 }
 

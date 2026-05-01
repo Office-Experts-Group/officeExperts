@@ -1,7 +1,6 @@
 // colors
 $body: #333;
-// $theme: #046999;
-$theme: #046999;
+$accent: #046999;
 $background: #f6f6f6;
 $offWhite: #f8f8f8;
 $black: #1e1e1e;
@@ -11,6 +10,39 @@ $grayBGC: #f2f3f5;
 $darkGrayText: #777a7e;
 $cardBGC: #1a1c1e;
 $footerBGC: #252629;
+
+$light-bg: #f7f8f9;
+$accent-light: #e8f4fa;
+$accent-border: rgba(4, 105, 153, 0.28);
+$text-primary: #0d1b2a;
+$text-secondary: #4a5568;
+$text-muted: #9a9da1;
+$border: rgba(0, 0, 0, 0.08);
+$replace-x: #c0392b;
+
+$dark-bg: #111820;
+$dark-surface: #18232e;
+$dark-mid: #1a2a3a;
+$accent-dim: rgba(4, 105, 153, 0.15);
+$accent-border: rgba(4, 105, 153, 0.3);
+
+$white-90: rgba(255, 255, 255, 0.9);
+$white-88: rgba(255, 255, 255, 0.88);
+$white-65: rgba(255, 255, 255, 0.65);
+$white-55: rgba(255, 255, 255, 0.55);
+$white-35: rgba(255, 255, 255, 0.35);
+$white-18: rgba(255, 255, 255, 0.18);
+$white-12: rgba(255, 255, 255, 0.12);
+$white-08: rgba(255, 255, 255, 0.08);
+$white: #ffffff;
+
+$before-border: #c0392b;
+$before-bg: #fdf6f5;
+$text-primary: #0d1b2a;
+$text-secondary: #4a5568;
+$text-muted: #9a9da1;
+$border-strong: rgba(0, 0, 0, 0.11);
+$shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
 
 // breakpoints
 @mixin smallPhone {

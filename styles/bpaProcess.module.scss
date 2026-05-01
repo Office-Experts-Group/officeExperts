@@ -1,0 +1,542 @@
+// bpaProcess.module.scss
+
+// ── Tokens ───────────────────────────────────
+$dark-bg: #111820;
+$dark-surface: #18232e;
+$dark-hover: #1e2f3e;
+$dark-drawer: #161e28;
+$accent: #046999;
+$accent-border: rgba(4, 105, 153, 0.35);
+$accent-dim: rgba(4, 105, 153, 0.12);
+$white-90: rgba(255, 255, 255, 0.9);
+$white-88: rgba(255, 255, 255, 0.88);
+$white-65: rgba(255, 255, 255, 0.65);
+$white-55: rgba(255, 255, 255, 0.55);
+$white-45: rgba(255, 255, 255, 0.45);
+$white-38: rgba(255, 255, 255, 0.38);
+$white-18: rgba(255, 255, 255, 0.18);
+$white-10: rgba(255, 255, 255, 0.1);
+$white-08: rgba(255, 255, 255, 0.08);
+$white-05: rgba(255, 255, 255, 0.05);
+$check-green: rgba(46, 200, 120, 0.85);
+
+// ── Breakpoints ──────────────────────────────
+$bp-tablet-min: 767px;
+$bp-tablet-max: 1024px;
+$bp-phone: 449px;
+
+// ─────────────────────────────────────────────
+// Section shell
+// ─────────────────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    padding: 6rem 4rem;
+  }
+  @media (max-width: $bp-phone) {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Top block — left headline + right diff grid
+// ─────────────────────────────────────────────
+.topBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  margin-bottom: 6rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  @media (max-width: $bp-phone) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.leftCol {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    position: static;
+  }
+  @media (max-width: $bp-phone) {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  padding: 0.3rem 0.85rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+
+  span {
+    font-style: normal;
+    color: $accent;
+  }
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.9;
+
+  max-width: 420px;
+}
+
+// ─────────────────────────────────────────────
+// Differentiator cards — 2×2 grid
+// ─────────────────────────────────────────────
+.diffGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: $white-08;
+  border: 1px solid $white-08;
+
+  @media (max-width: $bp-phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diffCard {
+  background: $dark-surface;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: $dark-hover;
+  }
+}
+
+.diffBar {
+  width: 28px;
+  height: 4px;
+  background: $accent;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.diffHeading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: $white-88;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.diffBody {
+  font-size: 0.88rem;
+  color: $white-45;
+  line-height: 1.85;
+}
+
+// ─────────────────────────────────────────────
+// Process block — header + progress + steps
+// ─────────────────────────────────────────────
+.processBlock {
+  border-top: 1px solid $white-08;
+  padding-top: 5rem;
+
+  @media (max-width: $bp-phone) {
+    padding-top: 3.5rem;
+  }
+}
+
+.processHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp-phone) {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.processLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-18;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+// ─────────────────────────────────────────────
+// Progress track
+// A horizontal bar with five node buttons.
+// The .progressFill width is driven by inline
+// style from the component (JS state).
+// ─────────────────────────────────────────────
+.progressTrack {
+  position: relative;
+  height: 2px;
+  background: $white-08;
+  margin: 0 0 4rem;
+  border-radius: 2px;
+
+  @media (max-width: $bp-phone) {
+    display: none; // mobile uses the accordion only
+  }
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: $accent;
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Node button — sits on the track at each step position
+.progressNode {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $dark-surface;
+  border: 2px solid $white-18;
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid rgba($accent, 0.6);
+    outline-offset: 3px;
+  }
+
+  // Step phase label below the node
+  .progressNodeLabel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $white-18;
+    pointer-events: none;
+    transition: color 0.3s ease;
+  }
+}
+
+.progressNodeDone {
+  background: $accent;
+  border-color: $accent;
+
+  .progressNodeLabel {
+    color: rgba($accent, 0.55);
+  }
+}
+
+.progressNodeActive {
+  background: #ffffff;
+  border-color: $accent;
+  transform: translate(-50%, -50%) scale(1.4);
+  box-shadow: 0 0 0 4px rgba($accent, 0.22);
+
+  .progressNodeLabel {
+    color: rgba($accent, 0.9);
+  }
+}
+
+// ─────────────────────────────────────────────
+// Step list — vertical accordion
+// ─────────────────────────────────────────────
+.stepList {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid $white-08;
+}
+
+// ─────────────────────────────────────────────
+// Individual step
+// ─────────────────────────────────────────────
+.step {
+  border-bottom: 1px solid $white-08;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: $white-05;
+  }
+}
+
+.stepOpen {
+  background: $white-05;
+
+  .stepPhase {
+    color: #ffffff;
+  }
+  .stepNum {
+    color: $accent;
+  }
+  .stepToggle {
+    color: $accent;
+    border-color: $accent-border;
+  }
+}
+
+// ── Step header button ────────────────────────
+.stepHeader {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2rem 1rem;
+  text-align: left;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  &:focus-visible {
+    outline: 2px solid rgba($accent, 0.5);
+    outline-offset: -2px;
+  }
+}
+
+// Meta row: step number + time tag
+.stepMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stepNum {
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: $white-18;
+  transition: color 0.25s ease;
+  line-height: 1;
+}
+
+// Phase label + summary row with toggle icon
+.stepSummaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.stepPhase {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 800;
+  color: $white-65;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
+  transition: color 0.25s ease;
+  line-height: 1.25;
+}
+
+.stepSummary {
+  font-size: 0.9rem;
+  color: $white-38;
+  line-height: 1.6;
+}
+
+.stepToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $white-18;
+  color: $white-38;
+  flex-shrink: 0;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+// ── Expandable detail drawer ──────────────────
+.stepDrawer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 2rem;
+  transition:
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease 0.05s;
+
+  .stepOpen & {
+    max-height: 600px;
+    opacity: 1;
+  }
+}
+
+.stepDrawerInner {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-top: 1px solid $white-05;
+  padding-top: 1.75rem;
+  margin-top: 0;
+}
+
+// Detail prose paragraphs
+.stepDetail {
+  p {
+    font-size: 0.93rem;
+    color: $white-45;
+    line-height: 1.95;
+    margin: 0 0 0.9rem;
+    max-width: 680px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── Drawer footer — outputs + links ──────────
+.stepFooter {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: $bp-phone) {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+// Deliverables checklist
+.stepOutputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.outputsLabel {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-18;
+}
+
+.outputsList {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.outputItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: $white-55;
+  line-height: 1.5;
+}
+
+.outputCheck {
+  color: $check-green;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.12rem;
+}
+
+// Related service links
+.stepLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
+  flex-shrink: 0;
+  min-width: 180px;
+}
+
+.stepLinksLabel {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-18;
+}
+
+.stepLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba($accent, 0.8);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: rgba($accent, 1);
+    border-bottom-color: rgba($accent, 0.5);
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

@@ -19,7 +19,7 @@
 }
 
 .leadText {
-  color: $theme;
+  color: $accent;
   font-weight: 700;
   margin: 6rem 0 3rem 0;
   @media screen and (max-width: 700px) {
@@ -113,19 +113,19 @@
   height: 30px;
   width: 30px;
   min-width: 30px;
-  border: 1px solid $theme;
+  border: 1px solid $accent;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   transition: all 0.5s ease;
   svg {
-    stroke: $theme;
-    color: $theme;
+    stroke: $accent;
+    color: $accent;
   }
   &:hover {
     transition: all 0.5s ease;
-    background-color: $theme;
+    background-color: $accent;
     svg {
       stroke: $offWhite;
       color: $offWhite;

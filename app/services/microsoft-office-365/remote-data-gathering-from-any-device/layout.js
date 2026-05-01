@@ -1,26 +1,22 @@
+// app/services/microsoft-office-365/remote-data-gathering-from-any-device/layout.js
 import React from "react";
 
 export const metadata = {
-  title: "Microsoft Office 365 Implementation Services | Office Experts Group",
+  title: "Remote Data Gathering from Any Device | Office Experts",
   description:
-    "Professional Office 365 implementation and migration services. Expert consultants for successful Office 365 deployment across your organisation.",
+    "Collect data from field staff and remote sites in real time. We build Power Apps mobile forms, Power Automate API integrations, and Azure Logic Apps pipelines that connect your workforce to your systems automatically.",
 
-  keywords: [
-    // Core implementation
-    "Office 365 remote data gathering",
-  ],
+  keywords: ["remote data gathering"],
 
   alternates: {
     canonical:
       "/services/microsoft-office-365/remote-data-gathering-from-any-device",
   },
 
-  // OpenGraph
   openGraph: {
-    title:
-      "Microsoft Office 365 Remote Data Gathering Services | Office Experts Group",
+    title: "Remote Data Gathering from Any Device | Office Experts",
     description:
-      "Professional Office 365 remote data gathering services. Expert consultants for successful Office 365 deployment across your organisation.",
+      "Collect data from field staff and remote sites in real time. We build Power Apps mobile forms, Power Automate API integrations, and Azure Logic Apps pipelines that connect your workforce to your systems automatically.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device",
     siteName: "Office Experts Group",
     images: [
@@ -35,14 +31,12 @@ export const metadata = {
     type: "website",
   },
 
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Microsoft Office 365 Implementation Services | Office Experts Group",
+    title: "Remote Data Gathering from Any Device | Office Experts",
     description:
-      "Professional Office 365 implementation and migration services. Expert consultants for successful Office 365 deployment across your organisation.",
+      "Power Apps forms, Power Automate connectors, and Azure Logic Apps pipelines that move field data into your systems the moment it is captured. Built for Australian businesses.",
     images: ["/logo.png"],
   },
 };

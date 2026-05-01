@@ -1,0 +1,265 @@
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: 4.5rem;
+}
+@media (max-width: 449px) {
+  .header {
+    margin-bottom: 3rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  margin-bottom: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: #046999;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 64ch;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pillars {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 449px) {
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillar {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  transition: background 0.2s ease;
+}
+.pillar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.pillar:nth-child(1)::before {
+  background: #046999;
+}
+.pillar:nth-child(2)::before {
+  background: #0a85bf;
+}
+.pillar:nth-child(3)::before {
+  background: #035878;
+}
+.pillar:nth-child(4)::before {
+  background: #2d6a8a;
+}
+.pillar:hover {
+  background: #f2f3f5;
+}
+@media (max-width: 449px) {
+  .pillar {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.pillarTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pillarIndex {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #9a9da1;
+}
+
+.pillarCategory {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.pillarSummary {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pillarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1.25rem;
+}
+.pillarList li {
+  font-size: 0.85rem;
+  color: #4a5568;
+  line-height: 1.55;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.pillarList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #046999;
+  opacity: 0.6;
+}
+
+.pillarLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #046999;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  margin-top: auto;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  align-self: flex-start;
+  transition: border-color 0.18s ease;
+}
+.pillarLink svg {
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.pillarLink:hover {
+  border-bottom-color: #046999;
+}
+.pillarLink:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.connector {
+  background: #046999;
+  border-radius: 6px;
+  padding: 3.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.connector::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-55deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 28px);
+  pointer-events: none;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .connector {
+    padding: 2.75rem 2.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .connector {
+    padding: 2.25rem 1.5rem;
+    border-radius: 4px;
+  }
+}
+
+.connectorContent {
+  position: relative;
+  z-index: 1;
+  max-width: 68ch;
+}
+
+.connectorLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1.1rem;
+}
+
+.connectorText {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.8;
+  margin: 0 0 0.9rem;
+}
+@media (max-width: 449px) {
+  .connectorText {
+    font-size: 1rem;
+  }
+}
+
+.connectorSub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}/*# sourceMappingURL=migrationStack.module.css.map */

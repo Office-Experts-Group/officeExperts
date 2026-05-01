@@ -3,7 +3,7 @@
 .contact {
   display: flex;
   align-items: center;
-  background-color: $theme;
+  background-color: $accent;
   border-radius: 0.2rem;
   height: 25vh;
   width: 80%;
@@ -41,7 +41,7 @@
 .contactAlternate {
   display: flex;
   align-items: center;
-  background-color: $theme;
+  background-color: $accent;
   border-radius: 0.2rem;
   height: 25vh;
   width: 80%;
@@ -246,7 +246,7 @@
     border-radius: 50%;
     padding: 0.1rem;
     stroke: $offWhite;
-    background-color: $theme;
+    background-color: $accent;
 
     @include phone {
       height: 35px;
@@ -334,7 +334,7 @@
     border-radius: 50%;
     padding: 0.1rem;
     stroke: $offWhite;
-    background-color: $theme;
+    background-color: $accent;
 
     @include phone {
       height: 35px;

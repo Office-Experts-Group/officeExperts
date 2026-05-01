@@ -1,22 +1,27 @@
+// app/services/microsoft-office/upgrades-and-migration/layout.js
+
 import React from "react";
 
 export const metadata = {
-  // Basic metadata
-  title: "Office Upgrades And Migration | Office Experts Group",
+  // ── Primary metadata ─────────────────────
+  title:
+    "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
   description:
-    "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300102810",
+    "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
 
-  keywords: ["microsoft office upgrades and migration"],
+  keywords: ["Microsoft Office upgrades", "Microsoft migration services"],
 
+  // ── Canonical ────────────────────────────
   alternates: {
     canonical: "/services/microsoft-office/upgrades-and-migration",
   },
 
-  // OpenGraph
+  // ── OpenGraph ────────────────────────────
   openGraph: {
-    title: "Office Upgrades And Migration | Office Experts Group",
+    title:
+      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
     description:
-      "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300102810",
+      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
     url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
     siteName: "Office Experts Group",
     images: [
@@ -24,24 +29,25 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Office Experts Group — Microsoft Office Upgrades & Migration",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
 
-  // Twitter Card
+  // ── Twitter / X Card ─────────────────────
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Office Upgrades And Migration | Office Experts Group",
+    title:
+      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
     description:
-      "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300102810",
+      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
     images: ["/logo.png"],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function UpgradesMigrationLayout({ children }) {
   return <>{children}</>;
 }

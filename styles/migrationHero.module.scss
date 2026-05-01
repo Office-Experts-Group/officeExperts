@@ -1,0 +1,294 @@
+// app/services/microsoft-office/upgrades-and-migration/(components)/migrationHero.module.scss
+@import "./globals.scss";
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orbPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.18;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.28;
+  }
+}
+
+@keyframes tagFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+// ── Section shell ──────────────────────────────────────────
+.hero {
+  position: relative;
+  background: $dark-bg;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+// ── Inner two-column layout ───────────────────────────────
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 7rem 8rem 5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    padding: 6rem 4rem 4rem;
+    gap: 3rem;
+  }
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem 3.5rem;
+    gap: 2.5rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    padding: 4.5rem 1.25rem 3rem;
+    gap: 2rem;
+  }
+}
+
+// ── Content (left) ────────────────────────────────────────
+.content {
+  animation: fadeUp 0.7s ease both;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.3rem 0.85rem;
+  margin-bottom: 1.5rem;
+
+  @include phone {
+    font-size: 0.6rem;
+  }
+}
+
+.heading {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  color: $white;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.75rem;
+
+  @include phone {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+}
+
+.accent {
+  color: $accent;
+
+  // Subtle text shadow gives depth against dark background
+  text-shadow: 0 0 40px rgba(4, 105, 153, 0.45);
+}
+
+.lead {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: $white-88;
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+
+  @include phone {
+    font-size: 1rem;
+  }
+}
+
+.body {
+  font-size: 0.97rem;
+  color: $white-65;
+  line-height: 1.8;
+  margin: 0 0 2.25rem;
+}
+
+.inlineLink {
+  color: $accent;
+  // text-decoration: none !important;
+  border-bottom: 1px solid rgba(4, 105, 153, 0.4);
+  transition:
+    border-color 0.18s ease,
+    color 0.18s ease;
+
+  &:hover {
+    color: lighten(#046999, 12%);
+    border-bottom-color: currentColor;
+  }
+}
+
+// ── CTA row ───────────────────────────────────────────────
+.ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  background: $accent;
+  color: $white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: darken(#046999, 6%);
+    transform: translateY(-1px);
+  }
+}
+
+.ctaSecondary {
+  display: inline-block;
+  background: $white-08;
+  color: $white-90;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  border: 1px solid $white-18;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    background: $white-12;
+    border-color: $white-35;
+  }
+}
+
+// ── Ecosystem tag cloud (right) ───────────────────────────
+.ecosystem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  animation: fadeUp 0.7s ease 0.18s both;
+
+  @include tablet {
+    // Shown below content on smaller screens
+    padding-top: 1rem;
+  }
+
+  @include phone {
+    display: none; // reclaimed space on small phones
+  }
+}
+
+.ecosystemLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-35;
+}
+
+.tagGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+// Base tag
+.tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid;
+  letter-spacing: 0.2px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+// Tier tints
+.primary {
+  background: rgba(4, 105, 153, 0.22);
+  border-color: rgba(4, 105, 153, 0.55);
+  color: #7ec8e3;
+  animation: tagFloat 5s ease-in-out infinite;
+}
+
+.secondary {
+  background: rgba(4, 105, 153, 0.1);
+  border-color: rgba(4, 105, 153, 0.3);
+  color: $white-65;
+  animation: tagFloat 6s ease-in-out 0.8s infinite;
+}
+
+.tertiary {
+  background: $white-08;
+  border-color: $white-12;
+  color: $white-55;
+  animation: tagFloat 7s ease-in-out 1.6s infinite;
+}
+
+// Decorative glow orb behind tags
+.orb {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(4, 105, 153, 0.35) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: orbPulse 6s ease-in-out infinite;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+// Push tags above orb
+.tagGrid {
+  position: relative;
+  z-index: 1;
+}

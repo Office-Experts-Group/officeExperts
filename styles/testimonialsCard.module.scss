@@ -35,8 +35,8 @@
   // For devices that support hover
   @media (hover: hover) {
     &:hover {
-      border: 2px solid $theme;
-      border-bottom: 10px solid $theme;
+      border: 2px solid $accent;
+      border-bottom: 10px solid $accent;
 
       p {
         max-height: none;
@@ -54,8 +54,8 @@
   @media (hover: none) {
     &:focus,
     &:active {
-      border: 2px solid $theme;
-      border-bottom: 10px solid $theme;
+      border: 2px solid $accent;
+      border-bottom: 10px solid $accent;
       outline: none;
 
       p {
@@ -85,7 +85,7 @@
     margin-top: 0.5rem;
   }
   h5 {
-    color: $theme;
+    color: $accent;
     font-size: 0.8rem;
     letter-spacing: 1px;
   }

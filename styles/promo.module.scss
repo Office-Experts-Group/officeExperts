@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700;
     &:hover {
       text-decoration: underline;
@@ -35,7 +35,7 @@
   min-width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: $theme;
+  background-color: $accent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +64,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700 !important;
     line-height: 2rem;
     &:hover {
@@ -92,13 +92,13 @@
 }
 
 .bar {
-  background-color: $theme;
+  background-color: $accent;
   width: 10px;
   height: 60px;
 }
 
 .barLarge {
-  background-color: $theme;
+  background-color: $accent;
   width: 10px;
   height: 120px;
 }
@@ -135,7 +135,7 @@
   margin-left: 2rem;
 
   .text a {
-    color: $theme !important;
+    color: $accent !important;
     cursor: pointer;
     font-weight: 500;
     &:hover {
@@ -191,8 +191,8 @@
   }
 
   &:hover {
-    color: $theme !important;
-    border: 1px solid $theme;
+    color: $accent !important;
+    border: 1px solid $accent;
 
     &::before {
       left: 0;
@@ -253,8 +253,7 @@
   align-items: center;
   margin: 3rem 0;
 
-  .linkBtn
-  {
+  .linkBtn {
     margin: 3rem auto 0 auto;
     width: fit-content;
     display: flex;

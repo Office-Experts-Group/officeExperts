@@ -44,7 +44,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700;
   }
 }
@@ -135,7 +135,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700;
   }
 }
@@ -153,7 +153,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     font-weight: 700;
     &:hover {
       text-decoration: underline;
@@ -204,19 +204,19 @@
   height: 30px;
   width: 30px;
   min-width: 30px;
-  border: 1px solid $theme;
+  border: 1px solid $accent;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   transition: all 0.5s ease;
   svg {
-    stroke: $theme;
-    color: $theme;
+    stroke: $accent;
+    color: $accent;
   }
   &:hover {
     transition: all 0.5s ease;
-    background-color: $theme;
+    background-color: $accent;
     svg {
       stroke: $offWhite;
       color: $offWhite;
@@ -253,8 +253,8 @@
     transition: all 0.5s ease;
     background-color: $offWhite;
     svg {
-      stroke: $theme;
-      color: $theme;
+      stroke: $accent;
+      color: $accent;
     }
   }
   p {
@@ -331,12 +331,12 @@
 
   .btnLink {
     width: 180px;
-    border: 1px solid $theme;
+    border: 1px solid $accent;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     &:hover {
       border: 1px solid white;
-      background-color: $theme;
+      background-color: $accent;
       color: white;
     }
   }

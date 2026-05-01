@@ -11,7 +11,7 @@
     color: $darkGrayText;
     line-height: 2rem;
     &:last-of-type {
-      color: $theme;
+      color: $accent;
       letter-spacing: 1px;
       margin: 1rem 0;
     }
@@ -54,13 +54,13 @@
 }
 
 .bar {
-  background-color: $theme;
+  background-color: $accent;
   width: 10px;
   height: 60px;
 }
 
 .underline {
-  border-bottom: 6px solid $theme;
+  border-bottom: 6px solid $accent;
   width: fit-content;
   margin-bottom: 1rem;
 

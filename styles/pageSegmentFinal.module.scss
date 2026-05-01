@@ -39,7 +39,7 @@
 }
 
 .eyebrow {
-  color: $theme;
+  color: $accent;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 0.95rem;
@@ -129,7 +129,7 @@
   display: block;
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 900;
-  color: $theme;
+  color: $accent;
   line-height: 1;
   font-family: var(--font-garamond);
 }
@@ -177,7 +177,7 @@
     left: 2rem;
     width: 0;
     height: 3px;
-    background-color: $theme;
+    background-color: $accent;
     transition: width 0.4s ease;
   }
 
@@ -189,7 +189,7 @@
     }
 
     .cardNumber {
-      color: $theme;
+      color: $accent;
     }
   }
 
@@ -234,7 +234,7 @@
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  color: $theme;
+  color: $accent;
   background-color: rgba(4, 105, 153, 0.07);
   padding: 0.3rem 0.75rem;
   border-radius: 2px;
@@ -251,7 +251,7 @@
   gap: 3rem;
   padding: 3.5rem 3rem;
   border: 1px solid rgba(4, 105, 153, 0.15);
-  border-left: 5px solid $theme;
+  border-left: 5px solid $accent;
   background-color: #fafcfd;
 
   @include tablet {
@@ -307,7 +307,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: $theme;
+  background: $accent;
   color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
@@ -335,8 +335,8 @@
   }
 
   &:hover {
-    color: $theme;
-    border-color: $theme;
+    color: $accent;
+    border-color: $accent;
 
     &::before {
       left: 0;
@@ -355,11 +355,11 @@
   justify-content: center;
   gap: 0.75rem;
   background: transparent;
-  color: $theme;
+  color: $accent;
   font-weight: 700;
   letter-spacing: 1px;
   padding: 1.25rem 2rem;
-  border: 1px solid $theme;
+  border: 1px solid $accent;
   white-space: nowrap;
   text-decoration: none;
   transition:
@@ -367,7 +367,7 @@
     color 0.3s ease;
 
   &:hover {
-    background-color: $theme;
+    background-color: $accent;
     color: #fff;
   }
 

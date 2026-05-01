@@ -7,8 +7,8 @@ import WebCapabilities from "./(components)/Webcapabilities";
 import HowWeWork from "./(components)/Howwework";
 import Contact from "../../../../components/Contact";
 
-import graphic from "../../../../public/pageHeros/graphic.webp";
-import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
+import onlineSolutions from "../../../../public/pageHeros/onlineSolutions.webp";
+import onlineSolutionsMob from "../../../../public/pageHeros/mob/onlineSolutionsMob.webp";
 
 import {
   generateProfessionalServiceSchema,
@@ -89,10 +89,10 @@ const Page = () => {
       />
       <ServiceHero
         title={"Custom Online Solutions"}
-        desktopImage={graphic}
-        mobileImage={graphTableMob}
-        altDesk={"digital graphic"}
-        altMob={"graphs on a table"}
+        desktopImage={onlineSolutions}
+        mobileImage={onlineSolutionsMob}
+        altDesk={"computer with microsoft technologies"}
+        altMob={"computer with microsoft technologies"}
       />
       <PageSegmentIntro />
       <MicrosoftSolutions />

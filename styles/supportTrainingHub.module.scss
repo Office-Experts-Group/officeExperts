@@ -15,7 +15,7 @@
       font-size: 2.5rem;
       font-weight: 700;
       margin: 6rem 0 3rem 0;
-      color: $theme;
+      color: $accent;
 
       @media (max-width: 768px) {
         font-size: 2rem;
@@ -112,7 +112,7 @@
       h3 {
         font-size: 1.4rem;
         margin-bottom: 0.75rem;
-        color: $theme;
+        color: $accent;
       }
 
       p {
@@ -130,7 +130,7 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 2.5rem;
-      color: $theme;
+      color: $accent;
     }
 
     .features {
@@ -155,13 +155,13 @@
           margin: 0 auto 1rem;
           border-radius: 50%;
           background-color: rgba(var(--primary-rgb), 0.1);
-          color: $theme;
+          color: $accent;
         }
 
         h3 {
           font-size: 1.4rem;
           margin-bottom: 1rem;
-          color: $theme;
+          color: $accent;
         }
 
         p {
@@ -188,7 +188,7 @@
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
-      color: $theme;
+      color: $accent;
       text-align: center;
     }
 

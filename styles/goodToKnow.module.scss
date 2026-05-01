@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 6px solid $theme;
+  border-top: 6px solid $accent;
   position: relative;
 
   img {
@@ -18,7 +18,7 @@
 
   .triangleDiv {
     z-index: 2;
-    background-color: $theme;
+    background-color: $accent;
     width: 300px; // Adjust this value to control overall width
     text-align: center;
 

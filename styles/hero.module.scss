@@ -149,11 +149,11 @@
 }
 
 .bar {
-  color: $theme;
+  color: $accent;
   width: 24px;
   height: 1px;
   z-index: 2;
-  border: 3px solid $theme;
+  border: 3px solid $accent;
   margin: 0.4rem 0.5rem 0 0;
 }
 

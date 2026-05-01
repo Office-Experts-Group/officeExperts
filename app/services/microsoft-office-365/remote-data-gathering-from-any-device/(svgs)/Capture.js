@@ -1,0 +1,49 @@
+export const Capture = () => {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="9"
+        y="2"
+        width="18"
+        height="32"
+        rx="4"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <rect
+        x="12"
+        y="8"
+        width="12"
+        height="2.5"
+        rx="1.25"
+        fill="currentColor"
+        opacity=".4"
+      />
+      <rect
+        x="12"
+        y="13"
+        width="8"
+        height="2.5"
+        rx="1.25"
+        fill="currentColor"
+        opacity=".4"
+      />
+      <rect
+        x="12"
+        y="18"
+        width="10"
+        height="2.5"
+        rx="1.25"
+        fill="currentColor"
+        opacity=".4"
+      />
+      <circle cx="18" cy="28" r="2" fill="currentColor" opacity=".5" />
+    </svg>
+  );
+};

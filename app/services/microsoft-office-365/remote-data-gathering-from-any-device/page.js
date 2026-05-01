@@ -1,12 +1,17 @@
+// app/services/microsoft-office-365/remote-data-gathering-from-any-device/page.js
 import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
-import PageSegmentMain from "./(components)/PageSegmentMain";
+import Introduction from "./(components)/Introduction";
 
-import graphMeeting from "../../../../public/pageHeros/graphMeeting.webp";
-import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+const Contact = dynamic(() => import("../../../../components/Contact"));
+const RDGCapabilities = dynamic(() => import("./(components)/RDGCapabilities"));
+const RDGUseCases = dynamic(() => import("./(components)/RDGUseCases"));
+const RDGHowItWorks = dynamic(() => import("./(components)/RDGHowItWorks"));
+
+import remote from "../../../../public/pageHeros/remote.webp";
+import remoteMob from "../../../../public/pageHeros/mob/remoteMob.webp";
 
 import {
   generateProfessionalServiceSchema,
@@ -23,12 +28,12 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device",
       url: "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device",
-      name: "Take Your Business Mobile | Office 365 Setup and Support | Office 365 Experts",
+      name: "Remote Data Gathering from Any Device | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
+      dateModified: "2026-05-01T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/microsoft-office-365/remote-data-gathering-from-any-device#breadcrumb",
@@ -69,7 +74,7 @@ const schema = {
         {
           "@type": "ListItem",
           position: 4,
-          name: "Remote Data Gathering from any Device",
+          name: "Remote Data Gathering from Any Device",
         },
       ],
     },
@@ -84,14 +89,16 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title="Take Your Business Mobile with MS Office 365"
-        desktopImage={graphMeeting}
-        mobileImage={coffeeMob}
-        altDesk={"Office meeting with graphs"}
-        altMob={"coffee on an office desk"}
+        title="Remote Data Gathering from Any Device"
+        desktopImage={remote}
+        mobileImage={remoteMob}
+        altDesk={"remote data access with microsoft"}
+        altMob={"remote data access with microsoft"}
       />
-      <PageSegmentMain />
-      <ExpertsAwait />
+      <Introduction />
+      <RDGCapabilities />
+      <RDGUseCases />
+      <RDGHowItWorks />
       <Contact />
     </>
   );

@@ -122,8 +122,8 @@ export const navigationData = {
             href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
           },
           {
-            label: "SQL Server",
-            href: `/services/by-business-solution/office-and-sql-server-integration`,
+            label: "Remote Data Access",
+            href: `/services/microsoft-office-365/remote-data-gathering-from-any-device`,
           },
           {
             label: "Online Solutions",
@@ -422,8 +422,8 @@ export const navigationData = {
         href: `/services/by-business-solution`,
         items: [
           {
-            label: "SharePoint",
-            href: `/services/by-business-solution/online-solutions`,
+            label: "Office 365",
+            href: `/services/microsoft-office-365`,
           },
           {
             label: "Azure",

@@ -261,7 +261,11 @@ const PageSegmentIntro = () => {
         </ul>
 
         <div className={styles.cta}>
-          <Link href="#contact" className={styles.ctaBtn}>
+          <Link
+            href="#contact"
+            className="btn"
+            style={{ textTransform: "capitalize" }}
+          >
             Talk to our team
           </Link>
         </div>

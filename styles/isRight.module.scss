@@ -39,7 +39,7 @@
     left: -2rem;
     width: 2rem;
     height: 99.4%;
-    border: 8px solid $theme;
+    border: 8px solid $accent;
     border-right: none;
   }
 
@@ -97,7 +97,7 @@
   border-bottom: 6px solid #b7b7b754;
   width: fit-content;
   p {
-    color: $theme;
+    color: $accent;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: -0.5rem;
@@ -131,7 +131,7 @@
 .bar {
   height: 3px;
   width: 19px;
-  background-color: $theme;
+  background-color: $accent;
   margin-bottom: 0.5rem;
 }
 
@@ -161,7 +161,7 @@
   }
 
   a {
-    color: $theme;
+    color: $accent;
     text-decoration: none;
     font-weight: 700;
   }
@@ -179,7 +179,7 @@
   }
 
   svg {
-    color: $theme;
+    color: $accent;
   }
 }
 
@@ -187,6 +187,6 @@
   margin-top: 2.6rem;
   padding: 2rem 4rem;
   &:hover {
-    border: 1px solid $theme;
+    border: 1px solid $accent;
   }
 }

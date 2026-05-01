@@ -27,7 +27,7 @@
   border-bottom: 6px solid #b0b0b05b;
   width: fit-content;
   h2 {
-    color: $theme;
+    color: $accent;
     text-align: center;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -219,7 +219,7 @@
   height: 60px !important;
   border: 1px solid transparent !important;
   &:hover {
-    border: 1px solid $theme !important;
+    border: 1px solid $accent !important;
   }
 }
 

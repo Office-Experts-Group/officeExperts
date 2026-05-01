@@ -29,7 +29,7 @@
 }
 
 .subtitle {
-  color: $theme;
+  color: $accent;
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
@@ -61,8 +61,8 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  border: 2px solid $theme;
-  border-top-color: $theme;
+  border: 2px solid $accent;
+  border-top-color: $accent;
   animation: spin 1s linear infinite;
 }
 

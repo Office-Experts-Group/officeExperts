@@ -1,0 +1,247 @@
+// bpaApprovals.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Section header
+// ─────────────────────────────────────────────
+.header {
+  max-width: 680px;
+  margin-bottom: 5rem;
+
+  @include phone {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin: 0;
+  max-width: 540px;
+}
+
+// ─────────────────────────────────────────────
+// Main two-column grid
+// ─────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: start;
+
+  @media screen and (max-width: 770px) {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Left — Step list
+// ─────────────────────────────────────────────
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+// Individual step row
+.step {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+
+  @include phone {
+    gap: 1.25rem;
+  }
+}
+
+// Left column: number badge + spine line
+.stepLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stepNum {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $accent;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+
+  @include phone {
+    width: 36px;
+    height: 36px;
+    font-size: 0.72rem;
+  }
+}
+
+// Vertical connector line between steps
+.stepLine {
+  width: 2px;
+  flex: 1;
+  min-height: 2.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 105, 153, 0.4) 0%,
+    rgba(4, 105, 153, 0.1) 100%
+  );
+  margin-top: 2px;
+}
+
+// Step text content
+.stepContent {
+  padding: 0.6rem 0 3rem;
+  flex: 1;
+  min-width: 0;
+
+  // Last step: no extra bottom padding
+  .step:last-child & {
+    padding-bottom: 0;
+  }
+
+  @include phone {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.stepLabel {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: $text-primary;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6rem;
+  line-height: 1.3;
+}
+
+.stepBody {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.9;
+  margin: 0;
+}
+
+// ─────────────────────────────────────────────
+// Right column — SVG + replaces callout
+// ─────────────────────────────────────────────
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: sticky;
+  top: 100px;
+
+  @media screen and (max-width: 770px) {
+    position: static;
+  }
+}
+
+// SVG wrapper card
+.svgWrap {
+  background: #ffffff;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+// ─────────────────────────────────────────────
+// "What this replaces" callout
+// ─────────────────────────────────────────────
+.replaces {
+  background: #ffffff;
+  border: 1px solid $border;
+  border-left: 3px solid $replace-x;
+  border-radius: 6px;
+  padding: 1.75rem 1.75rem 1.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.replacesHeader {
+  margin-bottom: 1.1rem;
+}
+
+.replacesEyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba($replace-x, 0.75);
+}
+
+.replacesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.replacesItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.replacesX {
+  color: rgba($replace-x, 0.65);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.18rem;
+}

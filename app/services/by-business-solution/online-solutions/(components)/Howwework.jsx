@@ -41,7 +41,11 @@ const HowWeWork = () => {
               but because of poor communication and unclear expectations. We
               have built our process around making sure that does not happen.
             </p>
-            <Link href="#contact" className={styles.ctaBtn}>
+            <Link
+              href="#contact"
+              className="btn"
+              style={{ textTransform: "capitalize" }}
+            >
               Start a conversation
             </Link>
           </div>

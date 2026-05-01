@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
@@ -41,11 +42,15 @@ const WebMobileIntegrationSolution = () => {
             </h2>
           </div>
           <p>
-            At Office Experts, we bridge the gap between Microsoft 365's
-            powerful backend and the modern, mobile-first experiences your team
-            needs. Our custom-built solutions are designed to extend Microsoft
-            365 beyond the desktop, giving your workforce secure, intuitive
-            access to business-critical data wherever they are.
+            At Office Experts, we bridge the gap between
+            <Link href="/services/microsoft-office-365">
+              {" "}
+              Microsoft 365's powerful backend
+            </Link>{" "}
+            and the modern, mobile-first experiences your team needs. Our
+            custom-built solutions are designed to extend Microsoft 365 beyond
+            the desktop, giving your workforce secure, intuitive access to
+            business-critical data wherever they are.
           </p>
           <p style={{ marginTop: "1rem" }}>
             Our <strong>mobile apps for field workers</strong> are built with{" "}

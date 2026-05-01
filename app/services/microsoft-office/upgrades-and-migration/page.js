@@ -1,23 +1,34 @@
+// app/services/microsoft-office/upgrades-and-migration/page.js
+
 import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
-import ServicePageCards from "./(components)/ServicePageCards";
+import MigrationHero from "./(components)/MigrationHero";
 import Contact from "../../../../components/Contact";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import BlackSegment from "./(components)/BlackSegment";
-import Segment4Repeat from "./(components)/Segment4Repeat";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contents from "./(components)/Contents";
 
-import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
-import graph from "../../../../public/pageHeros/mob/graph.webp";
+import upgrades from "../../../../public/pageHeros/upgrades.webp";
+import upgradesMob from "../../../../public/pageHeros/mob/upgradesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
 } from "../../../../utils/schemaGenerators";
 
+// ── Below-the-fold dynamic imports ───────────────────────
+const MigrationProblem = dynamic(
+  () => import("./(components)/MigrationProblem"),
+);
+const MigrationStack = dynamic(() => import("./(components)/MigrationStack"));
+const MigrationPaths = dynamic(() => import("./(components)/MigrationPaths"));
+const MigrationChallenges = dynamic(
+  () => import("./(components)/MigrationChallenges"),
+);
+const MigrationScenarios = dynamic(
+  () => import("./(components)/MigrationScenarios"),
+);
+
+// ── Schema ────────────────────────────────────────────────
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -28,14 +39,14 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
       url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
-      name: "Office Upgrades And Migration | Office Experts Australia",
+      name: "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-05-29T00:00:00+00:00",
+      dateModified: "2026-05-01T00:00:00+00:00",
       description:
-        "Stuck on an Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks. Call us 1300 102 810",
+        "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration#breadcrumb",
@@ -83,6 +94,50 @@ const schema = {
   ],
 };
 
+// ── Metadata ──────────────────────────────────────────────
+export const metadata = {
+  title:
+    "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
+  description:
+    "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
+
+  openGraph: {
+    title:
+      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
+    description:
+      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments -- connecting your tools into a system that actually works together.",
+    url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+    siteName: "Office Experts Group",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Experts Group Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+
+  keywords: ["Microsoft Office upgrades", "Microsoft migration services"],
+
+  twitter: {
+    card: "summary_large_image",
+    site: "@OfficeExpertsG1",
+    title:
+      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
+    description:
+      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
+    images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "/services/microsoft-office/upgrades-and-migration",
+  },
+};
+
+// ── Page ──────────────────────────────────────────────────
 const Page = () => {
   return (
     <>
@@ -90,20 +145,19 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Contents />
       <ServiceHero
         title="Upgrades and Migration"
-        desktopImage={deskGraph}
-        mobileImage={graph}
-        altDesk={"Desk with graphs"}
-        altMob={"graph on a table"}
+        desktopImage={upgrades}
+        mobileImage={upgradesMob}
+        altDesk="Upgrading Microsoft Office"
+        altMob="Upgrading Microsoft Office"
       />
-      <ServicePageCards />
-      <PageSegmentMain />
-      <PageSegment4 />
-      <BlackSegment />
-      <Segment4Repeat />
-      <ExpertsAwait />
+      <MigrationHero />
+      <MigrationProblem />
+      <MigrationStack />
+      <MigrationPaths />
+      <MigrationChallenges />
+      <MigrationScenarios />
       <Contact />
     </>
   );

@@ -1,0 +1,249 @@
+// styles/migrationChallenges.module.scss
+@import "./globals.scss";
+
+@keyframes bodyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ── Section shell ──────────────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header ────────────────────────────────────────────────
+.header {
+  max-width: 760px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: $white-88;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.1rem;
+}
+
+.subheading {
+  font-size: 0.97rem;
+  color: $white-55;
+  line-height: 1.8;
+  margin: 0;
+}
+
+// ── Accordion rows container ──────────────────────────────
+.rows {
+  border-top: 1px solid $white-12;
+  margin-bottom: 3rem;
+}
+
+// ── Individual row ────────────────────────────────────────
+.row {
+  border-bottom: 1px solid $white-12;
+}
+
+// ── Summary button (always visible) ──────────────────────
+.rowSummary {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid rgba(4, 105, 153, 0.6);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &:hover {
+    .rowCategory {
+      color: $white-88;
+    }
+
+    .rowNum {
+      color: $accent;
+    }
+  }
+
+  @include phone {
+    gap: 1rem;
+    padding: 1.4rem 0;
+  }
+}
+
+.rowNum {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.25);
+  padding-top: 3px;
+  flex-shrink: 0;
+  min-width: 24px;
+  transition: color 0.18s ease;
+}
+
+.rowMeta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.rowCategory {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $white-65;
+  line-height: 1.2;
+  transition: color 0.18s ease;
+
+  .rowOpen & {
+    color: $white-88;
+  }
+}
+
+.rowHook {
+  font-size: 0.88rem;
+  color: $white-35;
+  line-height: 1.6;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.rowChevron {
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  padding-top: 2px;
+  transition:
+    transform 0.25s ease,
+    color 0.18s ease;
+  display: flex;
+  align-items: center;
+
+  .rowSummary:hover & {
+    color: $accent;
+  }
+}
+
+// ── Expanded body ─────────────────────────────────────────
+.rowBody {
+  padding: 0 0 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: bodyReveal 0.28s ease both;
+
+  @include phone {
+    padding: 0 0 1.75rem 0;
+  }
+}
+
+.rowList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+
+  li {
+    font-size: 0.88rem;
+    color: $white-55;
+    line-height: 1.65;
+    padding-left: 1.1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $accent;
+      opacity: 0.7;
+    }
+  }
+}
+
+.rowInsight {
+  font-size: 0.9rem;
+  color: $white-65;
+  line-height: 1.75;
+  font-style: italic;
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid $white-08;
+}
+
+.rowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7ec8e3;
+  text-decoration: none !important;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid rgba(126, 200, 227, 0.3);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: #7ec8e3;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

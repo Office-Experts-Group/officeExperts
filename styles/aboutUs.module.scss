@@ -27,7 +27,7 @@
   width: fit-content;
   p {
     font-size: 1.125rem;
-    color: $theme;
+    color: $accent;
     font-weight: 600;
     margin-bottom: -0.5rem;
   }
@@ -42,7 +42,7 @@
 }
 
 .themeText {
-  color: $theme;
+  color: $accent;
   font-style: italic;
   font-weight: 600;
 }
@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   &:hover {
-    border: 1px solid $theme;
+    border: 1px solid $accent;
   }
 }
 
@@ -111,6 +111,6 @@
   align-items: center;
   font-size: 1.125rem;
   gap: 0.5rem;
-  color: $theme;
+  color: $accent;
   font-weight: 700;
 }

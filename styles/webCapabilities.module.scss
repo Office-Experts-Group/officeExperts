@@ -1,9 +1,9 @@
 @import "./globals.scss";
 
 // ── Tokens ─────────────────────────────────────────────────────────────────
-$theme: #046999;
-$themeLight: #e8f4fa;
-$themeDark: #024d72;
+$accent: #046999;
+$accentLight: #e8f4fa;
+$accentDark: #024d72;
 $black: #1a1a1a;
 $grayText: #777a7e;
 $offWhite: #f7f8f9;
@@ -17,8 +17,8 @@ $darkText: rgba(255, 255, 255, 0.88);
 $darkSubtext: rgba(255, 255, 255, 0.55);
 
 // Accent card palette
-$accentBg: $theme;
-$accentDark: $themeDark;
+$accentBg: $accent;
+$accentDark: $accentDark;
 
 // ── Section wrapper ─────────────────────────────────────────────────────────
 .section {
@@ -49,10 +49,10 @@ $accentDark: $themeDark;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: $theme;
+  color: $accent;
   margin-bottom: 1.25rem;
   padding: 0.3rem 0.8rem;
-  border: 1px solid rgba($theme, 0.3);
+  border: 1px solid rgba($accent, 0.3);
   border-radius: 2rem;
 }
 
@@ -66,7 +66,7 @@ $accentDark: $themeDark;
 
   em {
     font-style: normal;
-    color: $theme;
+    color: $accent;
   }
 }
 
@@ -122,15 +122,15 @@ $accentDark: $themeDark;
   border: 1px solid $border;
 
   .cardMeta {
-    color: $theme;
+    color: $accent;
   }
 
   .cardIndex {
-    color: rgba($theme, 0.25);
+    color: rgba($accent, 0.25);
   }
 
   .cardEyebrow {
-    color: $theme;
+    color: $accent;
   }
 
   .cardHeading {
@@ -143,15 +143,15 @@ $accentDark: $themeDark;
   }
 
   .tag {
-    background: $themeLight;
-    color: $theme;
+    background: $accentLight;
+    color: $accent;
   }
 
   .expandBtn {
-    color: $theme;
+    color: $accent;
 
     &:hover {
-      background: $themeLight;
+      background: $accentLight;
     }
   }
 
@@ -161,7 +161,7 @@ $accentDark: $themeDark;
   }
 
   .statValue {
-    color: $theme;
+    color: $accent;
   }
 
   .statLabel {
@@ -183,12 +183,12 @@ $accentDark: $themeDark;
   }
 
   .cardEyebrow {
-    color: rgba($theme, 0.9);
+    color: rgba($accent, 0.9);
     // Override eyebrow for dark
-    background: rgba($theme, 0.15);
+    background: rgba($accent, 0.15);
     padding: 0.2rem 0.65rem;
     border-radius: 2rem;
-    border: 1px solid rgba($theme, 0.3);
+    border: 1px solid rgba($accent, 0.3);
   }
 
   .cardHeading {
@@ -201,9 +201,9 @@ $accentDark: $themeDark;
   }
 
   .tag {
-    background: rgba($theme, 0.2);
+    background: rgba($accent, 0.2);
     color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba($theme, 0.3);
+    border: 1px solid rgba($accent, 0.3);
   }
 
   .expandBtn {
@@ -232,7 +232,7 @@ $accentDark: $themeDark;
 
 // ── Accent card (blue) ──────────────────────────────────────────────────────
 .card--accent {
-  background: $theme;
+  background: $accent;
   border: 1px solid rgba(255, 255, 255, 0.15);
 
   .cardMeta {
@@ -277,7 +277,7 @@ $accentDark: $themeDark;
   }
 
   .cardVisual {
-    background: $themeDark;
+    background: $accentDark;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -426,12 +426,6 @@ $accentDark: $themeDark;
   @include phone {
     max-width: 240px;
   }
-}
-
-.svg {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 // ── Stat block ──────────────────────────────────────────────────────────────

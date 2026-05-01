@@ -1,0 +1,357 @@
+// bpaFaq.module.scss
+
+// ── Tokens ───────────────────────────────────
+$light-bg: #f7f8f9;
+$white: #ffffff;
+$accent: #046999;
+$accent-light: rgba(4, 105, 153, 0.08);
+$accent-border: rgba(4, 105, 153, 0.28);
+$text-primary: #0d1b2a;
+$text-secondary: #4a5568;
+$text-muted: #9a9da1;
+$border: rgba(0, 0, 0, 0.07);
+$border-strong: rgba(0, 0, 0, 0.11);
+$item-hover-bg: rgba(4, 105, 153, 0.03);
+
+// ── Breakpoints ──────────────────────────────
+$bp-tablet-min: 767px;
+$bp-tablet-max: 1024px;
+$bp-phone: 449px;
+
+// ─────────────────────────────────────────────
+// Section shell
+// ─────────────────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 8rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    padding: 6rem 4rem;
+  }
+  @media (max-width: $bp-phone) {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Header block
+// ─────────────────────────────────────────────
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 4rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media (max-width: $bp-phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.headerLeft {
+  max-width: 580px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.1rem;
+}
+
+// Accent underline span — editorial headline treatment
+.accentLine {
+  position: relative;
+  display: inline;
+  color: $accent;
+  padding-bottom: 4px;
+
+  // Thick bottom underline — wider than text via outline
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    background: $accent;
+    border-radius: 2px;
+    opacity: 0.35;
+  }
+}
+
+.intro {
+  font-size: 0.97rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin: 0;
+}
+
+// ─────────────────────────────────────────────
+// Category filter tabs
+// ─────────────────────────────────────────────
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  align-self: flex-start; // don't stretch to bottom of header
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    align-self: auto;
+  }
+}
+
+.filterBtn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: $text-muted;
+  background: $white;
+  border: 1px solid $border-strong;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: $accent-light;
+    color: $accent;
+    border-color: $accent-border;
+  }
+}
+
+.filterBtnActive {
+  background: $accent;
+  color: #ffffff;
+  border-color: $accent;
+
+  &:hover {
+    background: darken($accent, 5%);
+    color: #ffffff;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Two-column grid
+// ─────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 4rem;
+  margin-bottom: 4rem;
+
+  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media (max-width: $bp-phone) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+// ─────────────────────────────────────────────
+// Individual FAQ item
+// ─────────────────────────────────────────────
+.item {
+  border-bottom: 1px solid $border;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+  transition:
+    border-color 0.28s ease,
+    background 0.25s ease,
+    padding-left 0.28s ease;
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+
+  &:hover {
+    background: $item-hover-bg;
+  }
+}
+
+// Open state — left accent border appears
+.itemOpen {
+  border-left-color: $accent;
+  padding-left: 1rem;
+  background: rgba($accent, 0.025);
+
+  .chevron {
+    color: $accent;
+    transform: rotate(180deg);
+  }
+
+  .questionText {
+    color: $accent;
+  }
+}
+
+// ── Question button ───────────────────────────
+.question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1.4rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid rgba($accent, 0.45);
+    outline-offset: -2px;
+  }
+}
+
+.questionText {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: $text-primary;
+  line-height: 1.45;
+  transition: color 0.25s ease;
+  flex: 1;
+}
+
+.chevron {
+  color: $text-muted;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition:
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s ease;
+}
+
+// ── Answer drawer ─────────────────────────────
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease 0.05s;
+
+  .itemOpen & {
+    max-height: 700px;
+    opacity: 1;
+  }
+}
+
+.answerInner {
+  padding-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.answerText {
+  font-size: 0.93rem;
+  color: $text-secondary;
+  line-height: 1.95;
+  margin: 0;
+
+  em {
+    font-style: italic;
+    color: $text-primary;
+    font-weight: 500;
+  }
+}
+
+// Inline links inside answer text
+.link {
+  color: $accent;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+
+  &:hover {
+    border-bottom-color: $accent;
+  }
+}
+
+// ─────────────────────────────────────────────
+// "See also" related links
+// ─────────────────────────────────────────────
+.related {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 0.25rem;
+}
+
+.relatedLabel {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+  flex-shrink: 0;
+}
+
+.relatedLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition:
+    border-color 0.18s ease,
+    color 0.18s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

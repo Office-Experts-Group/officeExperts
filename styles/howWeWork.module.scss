@@ -1,8 +1,8 @@
 @import "./globals.scss";
 
 // ── Tokens ──────────────────────────────────────────────────────────────────
-$theme: #046999;
-$themeLight: #e8f4fa;
+$accent: #046999;
+$accentLight: #e8f4fa;
 $black: #1a1a1a;
 $grayText: #777a7e;
 $offWhite: #f7f8f9;
@@ -67,9 +67,9 @@ $darkBorder: rgba(255, 255, 255, 0.08);
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba($theme, 0.9);
+  color: rgba($accent, 0.9);
   padding: 0.3rem 0.85rem;
-  border: 1px solid rgba($theme, 0.35);
+  border: 1px solid rgba($accent, 0.35);
   border-radius: 2rem;
 }
 
@@ -83,7 +83,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 }
 
 .accent {
-  color: $theme;
+  color: $accent;
 }
 
 .intro {
@@ -96,7 +96,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 
 .ctaBtn {
   display: inline-block;
-  background: $theme;
+  background: $accent;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.88rem;
@@ -119,8 +119,8 @@ $darkBorder: rgba(255, 255, 255, 0.08);
   }
 
   &:hover {
-    color: $theme;
-    border-color: $theme;
+    color: $accent;
+    border-color: $accent;
 
     &::before {
       transform: translateX(0);
@@ -164,7 +164,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 .reasonDot {
   width: 28px;
   height: 4px;
-  background: $theme;
+  background: $accent;
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -271,18 +271,18 @@ $darkBorder: rgba(255, 255, 255, 0.08);
   }
 
   &:focus-visible {
-    outline: 2px solid rgba($theme, 0.6);
+    outline: 2px solid rgba($accent, 0.6);
     outline-offset: 2px;
   }
 }
 
 .stepActive {
   .stepNum {
-    color: $theme;
+    color: $accent;
   }
 
   .stepLine {
-    background: $theme;
+    background: $accent;
   }
 
   .stepLabel {
