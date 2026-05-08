@@ -130,10 +130,6 @@ export const navigationData = {
             href: `/services/by-business-solution/online-solutions`,
           },
           {
-            label: "Cloud Based Solutions with Azure",
-            href: `/services/by-business-solution/cloud-based-solutions-with-azure`,
-          },
-          {
             label: "Upgrades and Migration",
             href: `/services/microsoft-office/upgrades-and-migration`,
           },
@@ -184,7 +180,7 @@ export const navigationData = {
             href: `${WORD_EXPERTS_URL}/companies-and-organisations`,
           },
           {
-            label: "Remove Repitition, Increase Productivity",
+            label: "Remove Repetition, Increase Productivity",
             href: `${WORD_EXPERTS_URL}/remove-repetition-and-increase-productivity`,
           },
           {
@@ -202,10 +198,6 @@ export const navigationData = {
           {
             label: "Upgrading Word",
             href: `${WORD_EXPERTS_URL}/upgrades-and-migration`,
-          },
-          {
-            label: "Online Solutions",
-            href: `/services/by-business-solution/online-solutions`,
           },
           {
             label: "Accessibility",
@@ -274,14 +266,6 @@ export const navigationData = {
             href: `/services/by-business-solution/dashboards`,
           },
           {
-            label: "Online Solutions",
-            href: `/services/by-business-solution/online-solutions`,
-          },
-          {
-            label: "Office Integrations",
-            href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
-          },
-          {
             label: "Charting & Pivot Tables",
             href: `${EXCEL_EXPERTS_URL}/pivot-tables-charts-and-reporting-solutions`,
           },
@@ -293,20 +277,12 @@ export const navigationData = {
             label: "Add-In Development",
             href: `${EXCEL_EXPERTS_URL}/add-in-development`,
           },
-          {
-            label: "Office Integration with Excel",
-            href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
-          },
         ],
       },
       {
         label: "Microsoft Access",
         href: ACCESS_EXPERTS_URL,
         items: [
-          {
-            label: "Database Solutions",
-            href: `/services/by-business-solution/database-development-and-solutions`,
-          },
           {
             label: "Is Access right for you company?",
             href: `${ACCESS_EXPERTS_URL}/is-access-right-for-your-company`,
@@ -384,26 +360,22 @@ export const navigationData = {
       //   href: `/services/microsoft-office-365`,
       //   items: [
       //     {
+      // redirected to /services/microsoft-office-365
       //       label: "365 Implementation",
       //       href: `/services/microsoft-office-365/office-365-implementation`,
       //     },
       //     {
+      // redirected to /services/microsoft-office-365
       //       label: "365 Migration",
       //       href: `/services/microsoft-office-365/office-365-migration`,
       //     },
       //     {
-      //       label: "Business Process Automation",
-      //       href: `/services/microsoft-office-365/business-process-automation`,
-      //     },
-      //     {
-      //       label: "Remote Data Gathering",
-      //       href: `/services/microsoft-office-365/remote-data-gathering-from-any-device`,
-      //     },
-      //     {
+      // redirected to /microsoft-support-and-training-australia
       //       label: "Exchange Setup & Assistance",
       //       href: `/services/microsoft-office-365/exchange-online-setup-and-support`,
       //     },
       //     {
+      // redirected to /microsoft-support-and-training-australia
       //       label: "Help & Managed Services",
       //       href: `/services/microsoft-office-365/support-and-managed-services`,
       //     },
@@ -426,7 +398,15 @@ export const navigationData = {
             href: `/services/microsoft-office-365`,
           },
           {
-            label: "Azure",
+            label: "SharePoint",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/sharepoint-consulting-and-development`,
+          },
+          {
+            label: "Business Process Automation",
+            href: `/services/microsoft-office-365/business-process-automation`,
+          },
+          {
+            label: "Azure Cloud Solutions",
             href: `/services/by-business-solution/cloud-based-solutions-with-azure`,
           },
           {
@@ -448,10 +428,6 @@ export const navigationData = {
           {
             label: "Publisher",
             href: `/services/microsoft-publisher`,
-          },
-          {
-            label: "Microsoft Cloud Based Solutions",
-            href: `/services/by-business-solution/cloud-based-solutions-with-azure`,
           },
         ],
       },

@@ -575,6 +575,26 @@ const NOINDEX_REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/services/microsoft-office-365/office-365-implementation",
+    destination: "/services/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/office-365-migration",
+    destination: "/services/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/exchange-online-setup-and-support",
+    destination: "/microsoft-support-and-training-australia",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/support-and-managed-services",
+    destination: "/microsoft-support-and-training-australia",
+    permanent: true,
+  },
+  {
     source: "/comments/feed",
     destination: "/410",
     permanent: true,
