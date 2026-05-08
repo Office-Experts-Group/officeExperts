@@ -71,6 +71,10 @@ module.exports = {
       "/blog/ultimate-guide-to-word-templates",
       "/blog/word-templates-for-legal-firms",
       "/blog/custom-excel-shortcuts-with-macros",
+      // other
+      "/services/microsoft-office-365/office-365-implementation",
+      "/services/microsoft-office-365/office-365-migration",
+      "/services/microsoft-office-365/exchange-online-setup-and-support",
     ];
 
     // Exclude paths that have different canonical URLs
