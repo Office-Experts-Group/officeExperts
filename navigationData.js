@@ -338,6 +338,10 @@ export const navigationData = {
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
           },
           {
+            label: "Microsoft Fabric",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/microsoft-fabric`,
+          },
+          {
             label: "Power Bi Support",
             href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-support`,
           },
