@@ -338,7 +338,7 @@ export const navigationData = {
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
           },
           {
-            label: "Microsoft Fabric",
+            label: "Data Analytics with Microsoft Fabric",
             href: `${POWER_PLATFORM_EXPERTS_URL}/microsoft-fabric`,
           },
           {
