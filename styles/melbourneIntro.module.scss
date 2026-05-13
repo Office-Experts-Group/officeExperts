@@ -1,0 +1,142 @@
+// styles/melbourneIntro.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ── Two-column grid ───────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 6rem;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+// ── Left column ───────────────────────────────
+.left {
+  min-width: 0;
+}
+
+// ── Right column ─────────────────────────────
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Hide on mobile — copy is the priority
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Content block ────────────────────────────
+.content {
+  // No max-width constraint — left column is already bounded by the grid
+}
+
+// Eyebrow pill
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// Headline
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.18;
+  margin-bottom: 2rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+// Body copy
+.body {
+  p {
+    color: $text-secondary;
+    line-height: 1.9;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Inline link inside body
+.bodyLink {
+  color: $accent;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+
+  &:hover {
+    border-bottom-color: $accent;
+  }
+}
+
+// CTA button
+.btn {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: darken($accent, 8%);
+    transform: translateY(-1px);
+  }
+}

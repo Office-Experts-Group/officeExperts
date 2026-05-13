@@ -177,7 +177,7 @@ const Page = () => {
               "https://www.accessexperts.com.au/access-consultants-melbourne",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-melbourne",
-            office: "/office-and-office-365-experts-melbourne",
+            office: "/microsoft-consultants-melbourne",
           },
           supportLink: "/microsoft-support-and-training-melbourne",
         },

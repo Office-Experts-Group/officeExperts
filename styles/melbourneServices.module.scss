@@ -1,0 +1,248 @@
+// styles/melbourneServices.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+
+  // Faint dot texture carried from rdgIntroduction pattern
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle,
+      rgba(4, 105, 153, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 40px 40px;
+    pointer-events: none;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.5) 80%,
+      transparent 100%
+    );
+  }
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  max-width: 640px;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  color: $white-88;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.headingMuted {
+  color: $white-35;
+}
+
+// ── List ─────────────────────────────────────
+.list {
+  position: relative;
+  border-top: 1px solid $white-08;
+}
+
+// ── Individual row ────────────────────────────
+.item {
+  display: grid;
+  // index / title+category / description / link
+  grid-template-columns: 10vw 1fr 2fr 1fr;
+  gap: 0 3.5rem;
+  align-items: center;
+  padding: 2.75rem 0;
+  border-bottom: 1px solid $white-08;
+  position: relative;
+  transition: background 0.22s ease;
+
+  // Hover accent fill from the left
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -8rem;
+    right: -8rem;
+    background: rgba($accent, 0.04);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @include tablet {
+    grid-template-columns: 5rem 1fr 1fr auto;
+    gap: 0 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.75rem 1.5rem;
+    padding: 2.25rem 0;
+
+    // Remap grid areas for narrow layout
+    .itemIndex {
+      grid-row: 1;
+      grid-column: 1;
+      align-self: start;
+      padding-top: 0.2rem;
+    }
+
+    .itemLeft {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    .itemDesc {
+      grid-row: 2;
+      grid-column: 1 / -1;
+      padding-left: 5.5rem;
+    }
+
+    .itemLink {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      padding-left: 5.5rem;
+    }
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 2rem 0;
+
+    .itemIndex {
+      display: none;
+    }
+
+    .itemLeft {
+      grid-column: 1;
+    }
+
+    .itemDesc {
+      grid-column: 1;
+      padding-left: 0;
+    }
+
+    .itemLink {
+      grid-column: 1;
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// Ghost index number
+.itemIndex {
+  font-size: 4rem;
+  font-weight: 900;
+  color: $white-08;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  user-select: none;
+  transition: color 0.22s ease;
+
+  .item:hover & {
+    color: rgba($accent, 0.22);
+  }
+}
+
+// Left col: category + title
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.itemCategory {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+  opacity: 0.85;
+}
+
+.itemTitle {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 800;
+  color: $white-88;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+// Description
+.itemDesc {
+  font-size: 0.93rem;
+  color: $white-55;
+  line-height: 1.85;
+}
+
+// Link
+.itemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $white-35;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .item:hover & {
+    color: $accent;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+  }
+}

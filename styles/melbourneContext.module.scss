@@ -1,0 +1,167 @@
+// styles/melbourneContext.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Shared eyebrow ────────────────────────────
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Shared heading ────────────────────────────
+.heading {
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+// ── Block 1: sticky split ─────────────────────
+.split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.splitLeft {
+  position: sticky;
+  top: 130px;
+
+  @include tablet {
+    position: static;
+  }
+  @include phone {
+    position: static;
+  }
+}
+
+.splitRight {
+  p {
+    font-size: 1rem;
+    color: $text-secondary;
+    line-height: 1.9;
+    margin-bottom: 1.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── Divider ───────────────────────────────────
+.divider {
+  height: 1px;
+  background: $border;
+  margin: 6rem 0;
+
+  @include tablet {
+    margin: 4.5rem 0;
+  }
+  @include phone {
+    margin: 3.5rem 0;
+  }
+}
+
+// ── Block 2: coverage ─────────────────────────
+.coverage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.coverageLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.coverageLead {
+  font-size: 1.05rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// ── Coverage right: suburb tags ───────────────
+.coverageRight {
+  padding-top: 0.25rem;
+}
+
+.tagsLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 1.25rem;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $text-secondary;
+  background: $light-bg;
+  border: 1px solid $border;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  transition: all 0.18s ease;
+
+  &:hover {
+    background: $accent-light;
+    color: $accent;
+    border-color: $accent-border;
+  }
+}

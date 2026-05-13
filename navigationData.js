@@ -38,11 +38,11 @@ export const navigationData = {
         items: [
           {
             label: "Melbourne",
-            href: "/word-and-powerpoint-experts-melbourne/",
+            href: "/microsoft-consultants-melbourne",
           },
           {
             label: "Richmond",
-            href: "/office-and-office-365-experts-richmond/",
+            href: "/office-and-office-365-experts-richmond",
           },
         ],
       },

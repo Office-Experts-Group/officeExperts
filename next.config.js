@@ -384,7 +384,7 @@ const REDIRECTS = [
   // locations
   {
     source: "/excel-and-access-experts-melbourne",
-    destination: "/microsoft-support-and-training-melbourne",
+    destination: "/microsoft-consultants-melbourne",
     permanent: true,
   },
   {
@@ -404,7 +404,7 @@ const REDIRECTS = [
   },
   {
     source: "/excel-consultants-melbourne",
-    destination: "/microsoft-support-and-training-melbourne",
+    destination: "/microsoft-consultants-melbourne",
     permanent: true,
   },
   {

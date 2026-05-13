@@ -13,7 +13,7 @@ const locationsByState = {
       "/office-excel-access-and-365-experts-northern-rivers-nsw/",
   },
   Victoria: {
-    Melbourne: "/word-and-powerpoint-experts-melbourne/",
+    Melbourne: "/microsoft-consultants-melbourne/",
     Richmond: "/office-and-office-365-experts-richmond/",
   },
   Queensland: {
