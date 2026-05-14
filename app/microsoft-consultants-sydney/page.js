@@ -1,31 +1,30 @@
-// app/microsoft-consultants-melbourne/page.js
+// app/microsoft-consultants-sydney/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
+// Above-the-fold components loaded eagerly
 import ServiceHero from "../../components/ServiceHero";
-import MelbourneIntro from "./(components)/MelbourneIntro";
+import SydneyIntro from "./(components)/SydneyIntro";
 
-// Dynamically imported below the fold
-const MelbourneServices = dynamic(
-  () => import("./(components)/MelbourneServices"),
-);
-const MelbourneContext = dynamic(
-  () => import("./(components)/MelbourneContext"),
-);
-const MelbourneWhy = dynamic(() => import("./(components)/MelbourneWhy"));
+// Below-the-fold components loaded dynamically for performance
+const SydneyServices = dynamic(() => import("./(components)/SydneyServices"));
+const SydneyContext = dynamic(() => import("./(components)/SydneyContext"));
+const SydneyWhy = dynamic(() => import("./(components)/SydneyWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
+// Schema utility functions shared across all pages
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
-import melbourne from "../../public/pageHeros/melbourne.webp";
-import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
+// Hero images — Sydney-specific assets
+import sydney from "../../public/pageHeros/sydney.webp";
+import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
 
 const PAGE_URL =
-  "https://www.officeexperts.com.au/microsoft-consultants-melbourne";
+  "https://www.officeexperts.com.au/microsoft-consultants-sydney";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -42,7 +41,7 @@ const schemaData = {
     {
       "@type": "LocalBusiness",
       "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Melbourne",
+      name: "Office Experts Group Sydney",
       url: PAGE_URL,
       telephone: "1300102810",
       email: "consult@officeexperts.com.au",
@@ -50,13 +49,13 @@ const schemaData = {
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Melbourne",
-        addressRegion: "VIC",
+        addressLocality: "Sydney",
+        addressRegion: "NSW",
         addressCountry: "AU",
       },
       areaServed: {
         "@type": "State",
-        name: "Victoria",
+        name: "New South Wales",
       },
       knowsAbout: [
         "Microsoft Excel",
@@ -74,14 +73,14 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Melbourne | Office Experts Group Australia",
+      name: "Microsoft Consultants Sydney | Office Experts Group Australia",
       description:
-        "Office Experts Group is an Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
+        "Microsoft Office specialists operating nationally since 2000. Office Experts Group has local consultants in Sydney delivering expert solutions across the entire Microsoft suite.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
-      datePublished: "2026-05-13T00:00:00+10:00",
-      dateModified: "2026-05-13T00:00:00+10:00",
+      datePublished: "2026-05-14T00:00:00+10:00",
+      dateModified: "2026-05-14T00:00:00+10:00",
       breadcrumb: {
         "@id": `${PAGE_URL}#breadcrumb`,
       },
@@ -108,7 +107,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Consultants Melbourne",
+          name: "Microsoft Consultants Sydney",
         },
       ],
     },
@@ -125,16 +124,16 @@ const Page = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Consultants Melbourne"
-          desktopImage={melbourne}
-          mobileImage={melbourneMob}
-          altDesk="Melbourne skyline"
-          altMob="Melbourne skyline"
+          title="Microsoft Consultants Sydney"
+          desktopImage={sydney}
+          mobileImage={sydneyMob}
+          altDesk="Sydney harbour and city skyline"
+          altMob="Sydney harbour and city skyline"
         />
-        <MelbourneIntro />
-        <MelbourneServices />
-        <MelbourneContext />
-        <MelbourneWhy />
+        <SydneyIntro />
+        <SydneyServices />
+        <SydneyContext />
+        <SydneyWhy />
         <Contact />
       </main>
     </>

@@ -1,0 +1,272 @@
+// styles/sydneyContext.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// Dot-grid texture — consistent with other dark sections across the site
+.gridTexture {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(4, 105, 153, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0.5) 80%,
+    transparent 100%
+  );
+}
+
+.inner {
+  position: relative;
+}
+
+// ── Header ──────────────────────────────────
+.header {
+  max-width: 600px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: $white-88;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Industry panels — 3-column, equal height ─
+.panels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  // AnimateOnScroll wrappers must stretch so cards equalise
+  & > * {
+    display: flex;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.panel {
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: 6px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  // Stretch to match tallest sibling in the row
+  height: 100%;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    border-color: $accent-border;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.panelTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $white-88;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.panelBody {
+  font-size: 0.93rem;
+  color: $white-55;
+  line-height: 1.85;
+}
+
+// ── Niche industry CTA ──────────────────────
+.nicheCta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 8vw 0 auto;
+  width: fit-content;
+
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem 0 0 0;
+    width: 100%;
+  }
+}
+
+.nicheText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white-55;
+}
+
+.nicheBtn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: darken($accent, 8%);
+    transform: translateY(-1px);
+  }
+}
+
+// ── Divider ─────────────────────────────────
+.divider {
+  height: 1px;
+  background: $white-08;
+  margin: 5rem 0;
+
+  @include tablet {
+    margin: 4rem 0;
+  }
+  @include phone {
+    margin: 3rem 0;
+  }
+}
+
+// ── Coverage block ──────────────────────────
+.coverage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.coverageText {
+  display: flex;
+  flex-direction: column;
+}
+
+.coverageLead {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.85;
+  margin-top: 1.5rem;
+}
+
+// ── Suburb tags ─────────────────────────────
+.coverageTags {
+  padding-top: 7vw;
+}
+
+.tagsLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-35;
+  margin-bottom: 1.25rem;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $white-55;
+  background: $white-08;
+  border: 1px solid $white-08;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+
+  &:hover {
+    background: $accent-dim;
+    color: rgba($accent, 0.9);
+    border-color: $accent-border;
+  }
+}

@@ -1,0 +1,337 @@
+.section {
+  background: #111820;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+@media (max-width: 449px) {
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(4, 105, 153, 0.9);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.headingAccent {
+  color: #046999;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+}
+
+.featured {
+  background: #046999;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.featured:hover {
+  box-shadow: 0 16px 48px rgba(4, 105, 153, 0.35);
+}
+
+.featuredInner {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 3rem;
+  padding: 3.5rem;
+  align-items: end;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .featuredInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.75rem;
+  }
+}
+@media (max-width: 449px) {
+  .featuredInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.75rem;
+  }
+}
+
+.featuredContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featuredTag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.featuredTitle {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.featuredDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.85;
+  max-width: 60ch;
+}
+
+.featuredLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  align-self: flex-start;
+  padding: 0.65rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.featuredLink svg {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.featuredLink:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+.featuredLink:hover svg {
+  transform: translateX(3px);
+}
+
+.featuredStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-end;
+  text-align: right;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .featuredStat {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.featuredStatNum {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.12);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.featuredStatLabel {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.grid > *:nth-child(2) {
+  grid-row: span 2;
+}
+.grid > *:nth-child(2) .card {
+  height: 100%;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (max-width: 449px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+
+.card {
+  background: #18232e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(4, 105, 153, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cardBar {
+  width: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+.card:hover .cardBar {
+  background: #046999;
+  box-shadow: 0 0 12px rgba(4, 105, 153, 0.4);
+}
+
+.cardInner {
+  padding: 2rem 2rem 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+@media (max-width: 449px) {
+  .cardInner {
+    padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+  }
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cardIndex {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cardTag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(4, 105, 153, 0.8);
+  background: rgba(4, 105, 153, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #046999;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid rgba(4, 105, 153, 0.3);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.cardLink svg {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.cardLink:hover {
+  border-bottom-color: #046999;
+}
+.cardLink:hover svg {
+  transform: translateX(3px);
+}/*# sourceMappingURL=sydneyServices.module.css.map */

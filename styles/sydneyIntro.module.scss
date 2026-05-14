@@ -1,0 +1,185 @@
+// styles/sydneyIntro.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+// ── Headline block ──────────────────────────
+.headBlock {
+  max-width: 680px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.18;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Two-column body ─────────────────────────
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+
+  @include tablet {
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.colLeft {
+  border-left: 3px solid $accent;
+  padding-left: 1.75rem;
+
+  @include phone {
+    padding-left: 1.25rem;
+  }
+}
+
+.lead {
+  color: $text-primary;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.colRight {
+  p {
+    color: $text-secondary;
+    line-height: 1.9;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── Stat strip ──────────────────────────────
+.statStrip {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid $border;
+  border-radius: 6px;
+  overflow: hidden;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.5rem 2rem;
+  background: $light-bg;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: $accent-light;
+  }
+
+  @include phone {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+.statDivider {
+  width: 1px;
+  background: $border;
+  flex-shrink: 0;
+
+  @include phone {
+    width: auto;
+    height: 1px;
+  }
+}
+
+.statValue {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 900;
+  color: $accent;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $text-muted;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+// ── CTA button ──────────────────────────────
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  width: fit-content;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: darken($accent, 8%);
+    transform: translateY(-1px);
+  }
+}

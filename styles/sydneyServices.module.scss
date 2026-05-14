@@ -1,0 +1,353 @@
+// styles/sydneyServices.module.scss
+@import "./globals.scss";
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header ──────────────────────────────────
+.header {
+  max-width: 600px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: $white-88;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.85;
+}
+
+// ═══════════════════════════════════════════════
+// FEATURED CARD
+// ═══════════════════════════════════════════════
+.featured {
+  background: $accent;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 16px 48px rgba(4, 105, 153, 0.35);
+  }
+}
+
+.featuredInner {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 3rem;
+  padding: 3.5rem;
+  align-items: end;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.75rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.75rem;
+  }
+}
+
+.featuredContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featuredTag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.featuredTitle {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 900;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.featuredDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.85;
+  max-width: 60ch;
+}
+
+.featuredLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  align-self: flex-start;
+  padding: 0.65rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  svg {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// Decorative stat block — anchored bottom-right
+.featuredStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-end;
+  text-align: right;
+
+  @include tablet {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.featuredStatNum {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.12);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.featuredStatLabel {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+// ═══════════════════════════════════════════════
+// GRID CARDS — static, always expanded
+// ═══════════════════════════════════════════════
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  // Middle card in first row spans 2 rows for asymmetry
+  & > *:nth-child(2) {
+    grid-row: span 2;
+
+    .card {
+      height: 100%;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > *:nth-child(2) {
+      grid-row: span 1;
+    }
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > *:nth-child(2) {
+      grid-row: span 1;
+    }
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+
+    & > *:nth-child(2) {
+      grid-row: span 1;
+    }
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+
+    & > *:nth-child(2) {
+      grid-row: span 1;
+    }
+  }
+}
+
+.card {
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: $accent-border;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Left accent bar — glows on hover (CSS-only)
+.cardBar {
+  width: 4px;
+  background: $white-08;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+
+  .card:hover & {
+    background: $accent;
+    box-shadow: 0 0 12px rgba(4, 105, 153, 0.4);
+  }
+}
+
+.cardInner {
+  padding: 2rem 2rem 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include phone {
+    padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+  }
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cardIndex {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: $white-35;
+}
+
+.cardTag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.8);
+  background: $accent-dim;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $white-88;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: $white-55;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid $accent-border;
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  svg {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
