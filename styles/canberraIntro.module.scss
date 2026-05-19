@@ -1,0 +1,131 @@
+// styles/canberraIntro.module.scss
+@import "./globals.scss";
+
+// ── Section — light background ────────────────
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// ── Eyebrow pill ──────────────────────────────
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.32rem 0.9rem;
+  margin-bottom: 2rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Headline ──────────────────────────────────
+.headline {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  max-width: 20ch;
+  margin-bottom: 2rem;
+
+  @include phone {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.headlineAccent {
+  color: $accent;
+}
+
+// ── Single body paragraph ─────────────────────
+.body {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  max-width: 68ch;
+  margin-bottom: 2.5rem;
+}
+
+// ── CTA button ────────────────────────────────
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+  margin-bottom: 4rem;
+
+  &:hover {
+    background: darken($accent, 8%);
+    transform: translateY(-1px);
+  }
+}
+
+// ── Milestone strip ───────────────────────────
+.strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid $border;
+  padding-top: 2.5rem;
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phone {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.stripItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stripValue {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.stripLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+}

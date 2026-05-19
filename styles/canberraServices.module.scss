@@ -1,0 +1,176 @@
+// styles/canberraServices.module.scss
+@import "./globals.scss";
+
+// ── Section — dark background, contrasts with light intro above ──
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $white-88;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.headingMuted {
+  color: $white-35;
+}
+
+// ── Accordion list ────────────────────────────
+.list {
+  border-top: 1px solid $white-12;
+}
+
+// ── Accordion item ────────────────────────────
+.item {
+  border-bottom: 1px solid $white-12;
+  transition: background 0.2s ease;
+}
+
+.itemOpen {
+  background: $dark-surface;
+}
+
+// ── Trigger button ────────────────────────────
+.trigger {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.75rem 0;
+  cursor: pointer;
+  text-align: left;
+
+  @include phone {
+    grid-template-columns: 2rem 1fr auto;
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+}
+
+.triggerIndex {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $text-muted;
+  letter-spacing: 1.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.triggerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.triggerCategory {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.triggerTitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.2;
+}
+
+.triggerChevron {
+  color: $text-muted;
+  transition: color 0.2s ease;
+}
+
+.triggerChevronOpen {
+  color: $accent;
+}
+
+// ── Expandable panel ──────────────────────────
+.panel {
+  padding: 0 0 2rem 4.5rem;
+
+  @include phone {
+    padding: 0 0 1.5rem 3rem;
+  }
+}
+
+.panelBody {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  max-width: 72ch;
+  margin-bottom: 1.25rem;
+}
+
+.panelLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid $accent-border;
+  padding-bottom: 2px;
+  transition:
+    border-color 0.2s ease,
+    gap 0.2s ease;
+
+  &:hover {
+    border-bottom-color: $accent;
+    gap: 0.6rem;
+  }
+}

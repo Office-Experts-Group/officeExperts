@@ -403,13 +403,18 @@ const REDIRECTS = [
 
   // locations
   {
-    source: "/excel-and-access-experts-melbourne",
-    destination: "/microsoft-consultants-melbourne",
+    source: "/excel-and-access-experts-sydney",
+    destination: "/microsoft-consultants-sydney",
     permanent: true,
   },
   {
-    source: "/excel-and-access-experts-sydney",
-    destination: "/microsoft-support-and-training-sydney",
+    source: "/word-and-powerpoint-experts-sydney",
+    destination: "/microsoft-consultants-sydney",
+    permanent: true,
+  },
+  {
+    source: "/office-and-office-365-experts-sydney",
+    destination: "/microsoft-consultants-sydney",
     permanent: true,
   },
   {

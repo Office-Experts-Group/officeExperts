@@ -52,7 +52,7 @@ export const navigationData = {
         items: [
           {
             label: "Brisbane",
-            href: "/office-excel-access-and-365-experts-brisbane/",
+            href: "/microsoft-consultants-brisbane",
           },
           {
             label: "Gold Coast",
@@ -66,7 +66,7 @@ export const navigationData = {
         items: [
           {
             label: "Perth",
-            href: "/word-and-powerpoint-experts-perth/",
+            href: "/microsoft-consultants-perth/",
           },
         ],
       },
@@ -76,7 +76,7 @@ export const navigationData = {
         items: [
           {
             label: "Canberra",
-            href: "/word-and-powerpoint-experts-canberra/",
+            href: "/microsoft-consultants-canberra/",
           },
         ],
       },

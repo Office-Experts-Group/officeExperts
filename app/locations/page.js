@@ -217,7 +217,7 @@ const Page = () => {
               "https://www.accessexperts.com.au/access-consultants-brisbane",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-brisbane",
-            office: "/office-excel-access-and-365-experts-brisbane",
+            office: "/microsoft-consultants-brisbane",
           },
           supportLink: "/microsoft-support-and-training-brisbane",
         },
@@ -257,7 +257,7 @@ const Page = () => {
             access: "https://www.accessexperts.com.au/access-consultants-perth",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-perth",
-            office: "/office-excel-access-and-365-experts-perth",
+            office: "/microsoft-consultants-perth",
           },
           supportLink: "/microsoft-support-and-training-perth",
         },
@@ -303,7 +303,7 @@ const Page = () => {
               "https://www.accessexperts.com.au/access-consultants-canberra",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-canberra",
-            office: "/office-and-office-365-experts-canberra",
+            office: "/microsoft-consultants-canberra",
           },
           supportLink: "/microsoft-support-and-training-canberra",
         },

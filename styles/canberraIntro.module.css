@@ -1,0 +1,129 @@
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  padding: 0.32rem 0.9rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 900;
+  color: #0d1b2a;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  max-width: 20ch;
+  margin-bottom: 2rem;
+}
+@media (max-width: 449px) {
+  .headline {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.headlineAccent {
+  color: #046999;
+}
+
+.body {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.85;
+  max-width: 68ch;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #046999;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-bottom: 4rem;
+}
+.btn:hover {
+  background: rgb(2.9605095541, 77.7133757962, 113.2394904459);
+  transform: translateY(-1px);
+}
+
+.strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 2.5rem;
+  gap: 2rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 449px) {
+  .strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.stripItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stripValue {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: #0d1b2a;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.stripLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9a9da1;
+}/*# sourceMappingURL=canberraIntro.module.css.map */

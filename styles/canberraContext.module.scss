@@ -1,0 +1,230 @@
+// styles/canberraContext.module.scss
+@import "./globals.scss";
+
+// ── Section — off-white, distinct from white services above and dark Why below ──
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  margin-bottom: 4rem;
+  max-width: 60ch;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+// ── Sector card grid — 2×2 ────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+// ── Card — horizontal layout with left stat anchor ──
+// This left-stat + right-content layout is unique to the Canberra page
+.card {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 6rem 1fr;
+    padding: 2rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.75rem;
+  }
+}
+
+// ── Stat column ───────────────────────────────
+.cardStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.15rem;
+}
+
+.statValue {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  color: $accent;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.statNote {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  line-height: 1.3;
+}
+
+// ── Content column ────────────────────────────
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.25;
+}
+
+.cardBody {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Divider ───────────────────────────────────
+.divider {
+  height: 1px;
+  background: $border;
+  margin-bottom: 5rem;
+
+  @include phone {
+    margin-bottom: 3rem;
+  }
+}
+
+// ── Coverage block ────────────────────────────
+.coverage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.coverageLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.coverageHeading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.coverageCopy {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.85;
+}
+
+// ── Tags ──────────────────────────────────────
+.coverageRight {
+  padding-top: 0.5rem;
+}
+
+.tagsLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 1.25rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $text-secondary;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 3px;
+  padding: 0.4rem 0.85rem;
+}

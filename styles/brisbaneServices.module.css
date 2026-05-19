@@ -1,0 +1,206 @@
+.section {
+  background: #111820;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(4, 105, 153, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 640px;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(4, 105, 153, 0.9);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.headingMuted {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.list {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 10vw 1fr 2fr 1fr;
+  gap: 0 3.5rem;
+  align-items: center;
+  padding: 2.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: background 0.22s ease;
+}
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -8rem;
+  right: -8rem;
+  background: rgba(4, 105, 153, 0.04);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+}
+.item:hover::before {
+  opacity: 1;
+}
+.item > *:nth-child(2) {
+  grid-row: span 2;
+}
+.item > *:nth-child(2) .card {
+  height: 100%;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .item {
+    grid-template-columns: 5fr 1fr;
+    gap: 1rem;
+  }
+  .item > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .item {
+    grid-template-columns: 5fr 1fr;
+    gap: 1rem;
+  }
+  .item > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .item > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+@media (max-width: 449px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .item > *:nth-child(2) {
+    grid-row: span 1;
+  }
+}
+
+.itemIndex {
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: color 0.22s ease;
+}
+.item:hover .itemIndex {
+  color: rgba(4, 105, 153, 0.22);
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.itemCategory {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #046999;
+  opacity: 0.85;
+}
+
+.itemTitle {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.itemDesc {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+}
+
+.itemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.itemLink svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.item:hover .itemLink {
+  color: #046999;
+}
+.itemLink:hover svg {
+  transform: translateX(3px);
+}/*# sourceMappingURL=brisbaneServices.module.css.map */
