@@ -1,0 +1,152 @@
+.section {
+  background: #111820;
+  padding: 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  margin-bottom: 1rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.pricingBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background: #18232e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .pricingBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .pricingBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .pricingBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.pricingContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.pricingBody {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+.pricingBody:last-child {
+  margin-bottom: 0;
+}
+.pricingBody a {
+  color: #046999;
+  font-weight: 700;
+}
+
+.priceTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(4, 105, 153, 0.15);
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 8px;
+  padding: 1.75rem 2.25rem;
+  flex-shrink: 0;
+}
+@media (max-width: 449px) {
+  .priceTag {
+    align-self: stretch;
+  }
+}
+
+.priceFrom {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.25rem;
+}
+
+.priceValue {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.pricePer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0;
+}
+
+.priceNote {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 0.35rem;
+  letter-spacing: 0.3px;
+}/*# sourceMappingURL=copilotLicensing.module.css.map */

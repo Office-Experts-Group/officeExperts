@@ -74,6 +74,7 @@ module.exports = {
       // other
       "/services/microsoft-office-365/office-365-implementation",
       "/services/microsoft-office-365/office-365-migration",
+      "/services/microsoft-office-365/support-and-managed-services",
       "/services/microsoft-office-365/exchange-online-setup-and-support",
     ];
 

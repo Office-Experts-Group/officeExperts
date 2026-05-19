@@ -1,0 +1,232 @@
+// styles/copilotIntro.module.scss
+@import "./globals.scss";
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $white;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ── Two-column grid ─────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: start;
+
+  @include desktop {
+    grid-template-columns: 1fr 340px;
+    gap: 3.5rem;
+  }
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// ── Left column ─────────────────────────────
+.left {
+  min-width: 0;
+}
+
+// Eyebrow pill
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// Headline
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.18;
+  margin-bottom: 2rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+// Body copy
+.body {
+  p {
+    color: $text-secondary;
+    line-height: 1.9;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Inline link inside body
+.bodyLink {
+  color: $accent;
+  font-weight: 700;
+}
+
+// CTA button
+.btn {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: darken($accent, 8%);
+    transform: translateY(-1px);
+  }
+}
+
+// ── Right column ────────────────────────────
+// Offset down so the panel aligns with the body copy,
+// not the eyebrow/headline — feels more natural
+.right {
+  position: sticky;
+  top: 130px;
+  margin-top: 6rem;
+
+  @include tablet {
+    position: static;
+    margin-top: 0;
+  }
+  @include phoneLandscape {
+    position: static;
+    margin-top: 0;
+  }
+  @include phone {
+    position: static;
+    margin-top: 0;
+  }
+}
+
+// ── App integration panel — light accent theme ──
+.panel {
+  padding: 2.25rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.panelLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.5rem;
+}
+
+// ── App list ────────────────────────────────
+.appList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.appItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0.85rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: $accent-light;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: $white;
+    border-color: $accent-border;
+    transform: translateX(3px);
+  }
+}
+
+.appIndex {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: $accent;
+  opacity: 0.5;
+  min-width: 20px;
+}
+
+.appName {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  letter-spacing: 0.2px;
+}
+
+.appArrow {
+  color: $accent;
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  .appItem:hover & {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+}
+
+// ── Panel footer ────────────────────────────
+.panelFooter {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border;
+}
+
+.panelNote {
+  font-size: 0.82rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}

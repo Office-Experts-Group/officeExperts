@@ -1,0 +1,149 @@
+// styles/copilotLicensing.module.scss
+@import "./globals.scss";
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ── Header ──────────────────────────────────
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: $white-90;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Pricing overview block ──────────────────
+.pricingBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: 10px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.pricingContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.pricingBody {
+  color: $white-55;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+// ── Price tag — right side callout ──────────
+.priceTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: $accent-dim;
+  border: 1px solid $accent-border;
+  border-radius: 8px;
+  padding: 1.75rem 2.25rem;
+  flex-shrink: 0;
+
+  @include phone {
+    align-self: stretch;
+  }
+}
+
+.priceFrom {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-55;
+  margin-bottom: 0.25rem;
+}
+
+.priceValue {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: $white-90;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.pricePer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $white-55;
+  letter-spacing: 0;
+}
+
+.priceNote {
+  font-size: 0.72rem;
+  color: $white-35;
+  margin-top: 0.35rem;
+  letter-spacing: 0.3px;
+}

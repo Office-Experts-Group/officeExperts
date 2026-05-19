@@ -380,6 +380,26 @@ const REDIRECTS = [
     destination: "https://www.wordexperts.com.au/word-template-conversions",
     permanent: true,
   },
+  {
+    source: "/services/microsoft-office-365/office-365-implementation",
+    destination: "/services/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/office-365-migration",
+    destination: "/services/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/exchange-online-setup-and-support",
+    destination: "/microsoft-support-and-training-australia",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/support-and-managed-services",
+    destination: "/microsoft-support-and-training-australia",
+    permanent: true,
+  },
 
   // locations
   {
@@ -403,7 +423,22 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/office-and-office-365-experts-melbourne",
+    destination: "/microsoft-consultants-melbourne",
+    permanent: true,
+  },
+  {
     source: "/excel-consultants-melbourne",
+    destination: "/microsoft-consultants-melbourne",
+    permanent: true,
+  },
+  {
+    source: "/excel-and-access-experts-melbourne",
+    destination: "/microsoft-consultants-melbourne",
+    permanent: true,
+  },
+  {
+    source: "/word-and-powerpoint-experts-melbourne",
     destination: "/microsoft-consultants-melbourne",
     permanent: true,
   },
@@ -572,26 +607,6 @@ const NOINDEX_REDIRECTS = [
     source:
       "/services/microsoft-office-365/cloud-backup-with-onedrive/attachment/cloud-database/feed",
     destination: "/services/microsoft-office/microsoft-office-365",
-    permanent: true,
-  },
-  {
-    source: "/services/microsoft-office-365/office-365-implementation",
-    destination: "/services/microsoft-office-365",
-    permanent: true,
-  },
-  {
-    source: "/services/microsoft-office-365/office-365-migration",
-    destination: "/services/microsoft-office-365",
-    permanent: true,
-  },
-  {
-    source: "/services/microsoft-office-365/exchange-online-setup-and-support",
-    destination: "/microsoft-support-and-training-australia",
-    permanent: true,
-  },
-  {
-    source: "/services/microsoft-office-365/support-and-managed-services",
-    destination: "/microsoft-support-and-training-australia",
     permanent: true,
   },
   {

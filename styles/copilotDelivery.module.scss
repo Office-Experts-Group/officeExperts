@@ -1,0 +1,233 @@
+// styles/copilotDelivery.module.scss
+@import "./globals.scss";
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// ── Header ──────────────────────────────────
+.header {
+  max-width: 680px;
+  margin-bottom: 4.5rem;
+
+  @include phone {
+    margin-bottom: 3rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+// ── Timeline container ──────────────────────
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+
+  @include phone {
+    padding-left: 1.75rem;
+  }
+}
+
+// ── Vertical connecting line ────────────────
+.line {
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: $border;
+
+  @include phone {
+    left: 5px;
+  }
+}
+
+// ── Individual step ─────────────────────────
+.step {
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+// ── Node dot — sits on the vertical line ────
+.node {
+  position: absolute;
+  left: -3rem;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phone {
+    left: -1.75rem;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.nodeDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $accent;
+  border: 2px solid $white;
+  box-shadow: 0 0 0 2px $accent;
+
+  @include phone {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+// ── Content card ────────────────────────────
+.card {
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 2.25rem 2rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    border-color: $accent-border;
+    box-shadow: 0 4px 20px rgba(4, 105, 153, 0.08);
+  }
+
+  @include phone {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+// ── Card header — number + phase name ───────
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardNum {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: $text-muted;
+}
+
+.cardPhase {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.3;
+}
+
+// ── Card summary — short bold line ──────────
+.cardSummary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $accent;
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+}
+
+// ── Card body ───────────────────────────────
+.cardBody {
+  color: $text-secondary;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+// ── Deliverables ────────────────────────────
+.outputs {
+  padding-top: 1.25rem;
+  border-top: 1px solid $border;
+}
+
+.outputsLabel {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 0.75rem;
+}
+
+.outputsList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.outputItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: $text-secondary;
+  line-height: 1.4;
+}
+
+.outputCheck {
+  color: $accent;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}

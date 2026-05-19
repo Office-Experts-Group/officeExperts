@@ -40,12 +40,12 @@
 
 .serviceHero h1 {
   z-index: 2;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
   font-weight: 900;
   text-align: center;
   color: #f8f8f8;
   max-width: 70vw;
-  line-height: 4rem;
+  line-height: clamp(2.5rem, 5vw, 4.5rem);
   position: relative;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }

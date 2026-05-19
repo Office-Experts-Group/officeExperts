@@ -44,11 +44,6 @@ export const metadata = {
       "Expert business process automation using the entire Microsoft Suite. From Power Platform, 365 and custom web applications. Our 25+ consultants will save you time and money.",
     images: ["/logo.png"],
   },
-
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function BPALayout({ children }) {

@@ -41,7 +41,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-09-01T00:00:00+00:00",
-      dateModified: "2025-09-01T00:00:00+00:00",
+      dateModified: "2026-05-15T00:00:00+00:00",
       description:
         "Office Experts build custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs—secure, mobile-ready, and tailored to your workflows",
       breadcrumb: {

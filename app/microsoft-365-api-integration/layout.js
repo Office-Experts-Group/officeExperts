@@ -5,11 +5,6 @@ export const metadata = {
   description:
     "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
 
-  robots: {
-    index: false,
-    follow: true,
-  },
-
   openGraph: {
     title: "Microsoft 365 API Integration Services | Office Experts Group",
     description:

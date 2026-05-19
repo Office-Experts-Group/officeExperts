@@ -1,0 +1,220 @@
+.section {
+  background: #ffffff;
+  padding: 6rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 5rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: start;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: 1fr 340px;
+    gap: 3.5rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+@media (max-width: 449px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.left {
+  min-width: 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: #0d1b2a;
+  line-height: 1.18;
+  margin-bottom: 2rem;
+}
+
+.accent {
+  color: #046999;
+}
+
+.body p {
+  color: #4a5568;
+  line-height: 1.9;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+.bodyLink {
+  color: #046999;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #046999;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn:hover {
+  background: rgb(2.9605095541, 77.7133757962, 113.2394904459);
+  transform: translateY(-1px);
+}
+
+.right {
+  position: sticky;
+  top: 130px;
+  margin-top: 6rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .right {
+    position: static;
+    margin-top: 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .right {
+    position: static;
+    margin-top: 0;
+  }
+}
+@media (max-width: 449px) {
+  .right {
+    position: static;
+    margin-top: 0;
+  }
+}
+
+.panel {
+  padding: 2.25rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.panelLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  margin-bottom: 1.5rem;
+}
+
+.appList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.appItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0.85rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #e8f4fa;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.appItem:hover {
+  background: #ffffff;
+  border-color: rgba(4, 105, 153, 0.3);
+  transform: translateX(3px);
+}
+
+.appIndex {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #046999;
+  opacity: 0.5;
+  min-width: 20px;
+}
+
+.appName {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  letter-spacing: 0.2px;
+}
+
+.appArrow {
+  color: #046999;
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.appItem:hover .appArrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.panelFooter {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.panelNote {
+  font-size: 0.82rem;
+  color: #4a5568;
+  line-height: 1.6;
+}/*# sourceMappingURL=copilotIntro.module.css.map */
