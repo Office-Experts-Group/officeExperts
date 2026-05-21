@@ -1,0 +1,178 @@
+// styles/cairnsServices.module.scss
+@import "./globals.scss";
+
+// ── Section — white background ────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header block ──────────────────────────────
+.header {
+  max-width: 820px;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.32rem 0.9rem;
+  margin-bottom: 1.5rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  max-width: 65ch;
+}
+
+// ── 3-column card grid ────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+// ── Card ─────────────────────────────────────
+.card {
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+// ── Card top ──────────────────────────────────
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.cardCategory {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin-top: 0.5rem;
+}
+
+// ── Feature tag list ─────────────────────────
+.features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.feature {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $accent;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+}
+
+// ── Card link ────────────────────────────────
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  align-self: flex-start;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}

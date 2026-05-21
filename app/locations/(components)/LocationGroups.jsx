@@ -1,8 +1,28 @@
+// components/LocationGroups.jsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import styles from "../../../styles/locationGroups.module.css";
+
+// Helper — only renders a <Link> when href is a non-empty string.
+
+const ServiceLink = ({ href, label }) => {
+  if (!href) return null;
+  return (
+    <Link href={href} className={styles.serviceLink}>
+      <span>{label}</span>
+      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
+        <path
+          d="M7 17L17 7M17 7H8M17 7V16"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </Link>
+  );
+};
 
 const LocationGroups = ({ sectionTitle, locations }) => {
   return (
@@ -32,95 +52,30 @@ const LocationGroups = ({ sectionTitle, locations }) => {
                 <div className={styles.serviceLinks}>
                   <h4>Our Services in {location.name.split(",")[0]}</h4>
                   <div className={styles.linkGrid}>
-                    <Link
+                    <ServiceLink
                       href={location.serviceLinks.excel}
-                      className={styles.serviceLink}
-                    >
-                      <span>Excel Experts</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
-
-                    <Link
+                      label="Excel Experts"
+                    />
+                    <ServiceLink
                       href={location.serviceLinks.word}
-                      className={styles.serviceLink}
-                    >
-                      <span>Word Experts</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
-
-                    <Link
+                      label="Word Experts"
+                    />
+                    <ServiceLink
                       href={location.serviceLinks.access}
-                      className={styles.serviceLink}
-                    >
-                      <span>Access Experts</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
-
-                    <Link
+                      label="Access Experts"
+                    />
+                    <ServiceLink
                       href={location.serviceLinks.powerplatform}
-                      className={styles.serviceLink}
-                    >
-                      <span>Power Platform Experts</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
-
-                    <Link
+                      label="Power Platform Experts"
+                    />
+                    <ServiceLink
                       href={location.serviceLinks.office}
-                      className={styles.serviceLink}
-                    >
-                      <span>Office Experts</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
-                    
-                    <Link
+                      label="Office Experts"
+                    />
+                    <ServiceLink
                       href={location.supportLink}
-                      className={styles.serviceLink}
-                    >
-                      <span>Support & Training</span>
-                      <svg viewBox="0 0 24 24" className={styles.linkIcon}>
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
+                      label="Support & Training"
+                    />
                   </div>
                 </div>
               </div>

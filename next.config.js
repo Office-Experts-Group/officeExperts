@@ -300,6 +300,11 @@ const REDIRECTS = [
     destination: "https://www.excelexperts.com.au/vba-macro-development",
     permanent: true,
   },
+  {
+    source: "/services/microsoft-excel/vba-macro-development/",
+    destination: "https://www.excelexperts.com.au/vba-macro-development",
+    permanent: true,
+  },
   // WORD
   {
     source: "/services/microsoft-word",
@@ -497,9 +502,38 @@ const REDIRECTS = [
     destination: "/microsoft-support-and-training-central-coast-nsw",
     permanent: true,
   },
+  // blogs
   {
     source: "/blog/excel-problems-on-mac",
     destination: "https://www.excelexperts.com.au/excel-problems-on-mac",
+    permanent: true,
+  },
+  {
+    source: "/blog/convert-canva-to-word",
+    destination: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
+    permanent: true,
+  },
+  {
+    source: "/blog/20-advanced-excel-shortcuts",
+    destination:
+      "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
+    permanent: true,
+  },
+  {
+    source: "/blog/custom-excel-shortcuts-with-macros",
+    destination:
+      "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
+    permanent: true,
+  },
+  {
+    source: "/blog/spreadsheet-errors-in-excel",
+    destination:
+      "https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel",
+    permanent: true,
+  },
+  {
+    source: "/blog/convert-canva-to-word",
+    destination: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
     permanent: true,
   },
 ];
@@ -617,6 +651,16 @@ const NOINDEX_REDIRECTS = [
   {
     source: "/comments/feed",
     destination: "/410",
+    permanent: true,
+  },
+  {
+    source: "/services/microsoft-office-365/",
+    destination: "/services/microsoft-office-365",
+    permanent: true,
+  },
+  {
+    source: "/services/by-business-solution/vba-macro-development",
+    destination: "/services/by-business-solution/vba-macro-development",
     permanent: true,
   },
   {

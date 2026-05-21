@@ -1,0 +1,224 @@
+// styles/cairnsWhy.module.scss
+@import "./globals.scss";
+
+// ── Section — white background ────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Section header ────────────────────────────
+.header {
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.32rem 0.9rem;
+  margin-bottom: 1.5rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Reason rows ───────────────────────────────
+
+.row {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 4rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid $border;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem 0 2.5rem 0;
+  }
+}
+
+// ── Row left ──────────────────────────────────
+.rowLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rowEyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.rowTitle {
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.rowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ── Row body ──────────────────────────────────
+.rowBody {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.9;
+}
+
+// ── Coverage panel ────────────────────────────
+.coverage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding-top: 5rem;
+  border-top: 1px solid $border;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 3.5rem;
+  }
+}
+
+// ── Coverage left ────────────────────────────
+.coverageLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.coverageEyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.coverageHeading {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.coverageBody {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin-top: 0.5rem;
+}
+
+// ── Coverage right — suburb tags ──────────────
+.coverageRight {
+  padding-top: 0.25rem;
+}
+
+.tagsLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 1.25rem;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $text-secondary;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+
+  &:hover {
+    background: $accent-light;
+    color: $accent;
+    border-color: $accent-border;
+  }
+}

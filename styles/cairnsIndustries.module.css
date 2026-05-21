@@ -1,0 +1,220 @@
+.section {
+  background: #111820;
+  padding: 8rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem 0;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem 0;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem 0;
+  }
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: 5rem;
+}
+@media (max-width: 449px) {
+  .header {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(4, 105, 153, 0.9);
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  padding: 0.32rem 0.9rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.headingMuted {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.intro {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+  max-width: 60ch;
+}
+
+.rows {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rows::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent 0%, #046999 8%, #046999 92%, transparent 100%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 0 5rem 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(4, 105, 153, 0.07) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.row:hover::after {
+  opacity: 1;
+}
+.row::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #046999;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+.row:hover::before {
+  transform: translateY(-50%) scale(1);
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .row {
+    grid-template-columns: 44% 1fr;
+    gap: 3rem;
+    padding: 4rem 0 4rem 2.5rem;
+  }
+}
+@media (max-width: 860px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3.5rem 0 3.5rem 2.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .row {
+    padding: 3rem 0 3rem 1.5rem;
+    gap: 1.25rem;
+  }
+}
+
+.rowLeft {
+  position: relative;
+  min-height: 7rem;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 860px) {
+  .rowLeft {
+    min-height: 5rem;
+  }
+}
+@media (max-width: 449px) {
+  .rowLeft {
+    min-height: 4rem;
+  }
+}
+
+.rowNum {
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  transform: translateY(-55%);
+  font-size: clamp(6rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: rgba(255, 255, 255, 0.08);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  transition: color 0.35s ease;
+}
+.row:hover .rowNum {
+  color: rgba(4, 105, 153, 0.18);
+}
+@media (max-width: 860px) {
+  .rowNum {
+    font-size: clamp(4.5rem, 10vw, 6.5rem);
+  }
+}
+
+.rowName {
+  position: relative;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  padding-left: 0.25rem;
+  transition: color 0.25s ease;
+}
+.row:hover .rowName {
+  color: #ffffff;
+}
+@media (max-width: 860px) {
+  .rowName {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+  }
+}
+
+.rowDesc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.9;
+  max-width: 58ch;
+  transition: color 0.25s ease;
+}
+.row:hover .rowDesc {
+  color: rgba(255, 255, 255, 0.65);
+}
+@media (max-width: 860px) {
+  .rowDesc {
+    max-width: 100%;
+    font-size: 0.93rem;
+  }
+}/*# sourceMappingURL=cairnsIndustries.module.css.map */

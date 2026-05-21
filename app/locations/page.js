@@ -28,6 +28,7 @@ import richmond from "../../public/pageHeros/mob/richmondMob.webp";
 import darwin from "../../public/pageHeros/mob/darwinMob.webp";
 import centralCoast from "../../public/pageHeros/mob/centralCoastMob.webp";
 import goldCoast from "../../public/pageHeros/mob/goldCoastMob.webp";
+import cairns from "../../public/pageHeros/mob/cairnsMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
@@ -238,6 +239,16 @@ const Page = () => {
             office: "/contact-us",
           },
           supportLink: "/microsoft-support-and-training-gold-coast",
+        },
+        {
+          name: "Cairns",
+          image: cairns,
+          alt: "Palm Cove, Palm avenue",
+          description:
+            "The Cairns Office team are there to provide effective solutions for Far North Queensland businesses. We specialise in custom Office development, database solutions, and business process automation using the entire Microsoft suite.",
+          serviceLinks: {
+            office: "/microsoft-consultants-cairns",
+          },
         },
       ],
     },
