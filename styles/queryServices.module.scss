@@ -1,0 +1,309 @@
+// styles/queryServices.module.scss
+@import "./globals.scss";
+
+// ── Section shell ─────────────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Asymmetric two-col grid ───────────────────────────────
+.inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// ── Left: sticky heading block ────────────────────────────
+// align-self: start is required — without it the grid stretches
+// the cell to full row height and there is nothing to scroll against
+.leftCol {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+
+  @include tablet {
+    position: static;
+  }
+  @include phone {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem;
+  span {
+    color: $accent;
+  }
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.85;
+  margin: 0 0 1.75rem;
+}
+
+.sideLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($accent, 0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}
+
+// ── Right: service list ───────────────────────────────────
+.servicesList {
+  display: flex;
+  flex-direction: column;
+}
+
+// ── Individual service ────────────────────────────────────
+.service {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid $border;
+  position: relative;
+
+  // Animated left accent bar
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $accent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+  }
+
+  @include phone {
+    padding: 2rem 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.serviceTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.serviceHeading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $text-primary;
+  margin: 0;
+  line-height: 1.25;
+  transition: color 0.2s ease;
+
+  .service:hover & {
+    color: $accent;
+  }
+}
+
+.serviceTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.serviceDescription {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 60ch;
+}
+
+// ── Capability disclosure ─────────────────────────────────
+// Native <details>/<summary> — no JS, fully SSR compatible
+.details {
+  margin-top: 1rem;
+  border-top: 1px solid $border;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+  user-select: none;
+  transition: color 0.18s ease;
+
+  // Colour the native browser disclosure marker
+  &::marker {
+    color: $accent;
+  }
+
+  // WebKit uses a pseudo-element instead of ::marker
+  &::-webkit-details-marker {
+    color: $accent;
+  }
+
+  &:hover {
+    color: $accent;
+  }
+
+  details[open] & {
+    color: $accent;
+  }
+}
+
+// Grid-row trick: the inner wrapper starts at 0fr height (collapsed),
+// transitions to 1fr (natural height) when details[open].
+// overflow: hidden on the wrapper clips content during the transition.
+.capabilitiesInner {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  overflow: hidden;
+
+  details[open] & {
+    grid-template-rows: 1fr;
+  }
+
+  // Direct child must have min-height: 0 so grid-row: 0fr can fully collapse it
+  > div {
+    min-height: 0;
+  }
+}
+
+// ── Capability list ───────────────────────────────────────
+.capabilities {
+  list-style: none;
+  padding: 0.25rem 0 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+
+  li {
+    font-size: 0.85rem;
+    color: $text-secondary;
+    line-height: 1.55;
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $accent;
+      opacity: 0.55;
+    }
+  }
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($accent, 0.3);
+  padding-bottom: 1px;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

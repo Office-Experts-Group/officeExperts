@@ -4,11 +4,9 @@ export const metadata = {
   // Basic metadata
   title: "Power Query | Office Experts Group",
   description:
-    "Our Power Query developers create robust and efficient solutions for Excel, Access, Word, Outlook and PowerPoint. Contact us for expert Power Query development.",
+    "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
 
-  keywords: [
-    "Power Query",
-  ],
+  keywords: ["Power Query"],
 
   alternates: {
     canonical: "/services/power-query",
@@ -18,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Power Query | Office Experts Group",
     description:
-      "Our Power Query developers create robust and efficient solutions for Excel, Access, Word, Outlook and PowerPoint. Contact us for expert Power Query development.",
+      "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
     url: "https://www.officeexperts.com.au/services/power-query",
     siteName: "Office Experts Group",
     images: [
@@ -39,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Power Query | Office Experts Group",
     description:
-      "Our Power Query developers create robust and efficient solutions for Excel, Access, Word, Outlook and PowerPoint. Contact us for expert Power Query development.",
+      "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
     images: ["/logo.png"],
   },
 };

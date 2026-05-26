@@ -448,6 +448,11 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/office-excel-access-and-365-experts-melbourne",
+    destination: "/microsoft-consultants-melbourne",
+    permanent: true,
+  },
+  {
     source: "/word-and-powerpoint-experts-melbourne",
     destination: "/microsoft-consultants-melbourne",
     permanent: true,
@@ -459,7 +464,12 @@ const REDIRECTS = [
   },
   {
     source: "/excel-consultants-canberra",
-    destination: "/microsoft-support-and-training-canberra",
+    destination: "/microsoft-consultants-canberra",
+    permanent: true,
+  },
+  {
+    source: "/word-and-powerpoint-experts-canberra",
+    destination: "/microsoft-consultants-canberra",
     permanent: true,
   },
   {
@@ -484,7 +494,22 @@ const REDIRECTS = [
   },
   {
     source: "/excel-consultants-perth",
-    destination: "/microsoft-support-and-training-perth",
+    destination: "/microsoft-consultants-perth",
+    permanent: true,
+  },
+  {
+    source: "/word-and-powerpoint-experts-perth",
+    destination: "/microsoft-consultants-perth",
+    permanent: true,
+  },
+  {
+    source: "/office-excel-access-and-365-consultants-perth",
+    destination: "/microsoft-consultants-perth",
+    permanent: true,
+  },
+  {
+    source: "/office-excel-access-and-365-consultants-brisbane",
+    destination: "/microsoft-consultants-brisbane",
     permanent: true,
   },
   {

@@ -1,0 +1,337 @@
+// styles/queryComparison.module.scss
+@import "./globals.scss";
+
+// ── Section shell ─────────────────────────────────────────
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.bgImg {
+  opacity: 0.15;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+// ── Header ────────────────────────────────────────────────
+.header {
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  color: $white-88;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: rgba($accent, 0.9);
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.85;
+  margin: 0;
+  max-width: 60ch;
+}
+
+// ── Comparison table ──────────────────────────────────────
+.tableWrap {
+  border: 1px solid $white-12;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+// Column proportions
+$col-attr: 22%;
+$col-pq: 39%;
+$col-vba: 39%;
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: $col-attr $col-pq $col-vba;
+  background: $dark-surface;
+  border-bottom: 1px solid $white-12;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.attrCol {
+  padding: 1rem 1.5rem;
+  border-right: 1px solid $white-08;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.colHead {
+  padding: 1rem 1.5rem;
+  border-right: 1px solid $white-08;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.colTag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  background: $accent-dim;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+}
+
+.colTagAlt {
+  @extend .colTag;
+  color: $white-55;
+  background: $white-08;
+  border-color: $white-12;
+}
+
+// ── Data rows ─────────────────────────────────────────────
+.row {
+  display: grid;
+  grid-template-columns: $col-attr $col-pq $col-vba;
+  border-bottom: 1px solid $white-08;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  // Mobile: each row becomes a self-contained card.
+  // The attribute label sits at the top, the two value
+  // columns sit side-by-side beneath it with their own labels.
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 0.85rem;
+    border-bottom: 1px solid $white-08;
+  }
+}
+
+.rowAlt {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.attrCol {
+  padding: 1.25rem 1.5rem;
+  border-right: 1px solid $white-08;
+  display: flex;
+  align-items: center;
+
+  @include phone {
+    padding: 0;
+    border-right: none;
+  }
+}
+
+.attr {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $white-35;
+}
+
+// On mobile the two value columns sit side-by-side in a small grid
+// with a pill label above each one identifying which tool it belongs to
+.pqCol,
+.vbaCol {
+  padding: 1.25rem 1.5rem;
+  border-right: 1px solid $white-08;
+
+  p {
+    font-size: 0.9rem;
+    color: $white-65;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @include phone {
+    padding: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+// Mobile: wrap the two value cells in a two-col grid.
+// This requires a wrapping element in the JSX — handled via
+// a CSS selector targeting pqCol + vbaCol as adjacent siblings
+// inside the phone layout. We achieve the two-col split by
+// making pqCol and vbaCol each display as a flex column with
+// a pill label, then the row uses CSS grid on the two of them.
+// The cleanest approach without changing JSX is to use
+// :has() or nth-child. Instead we use a dedicated .valueCols
+// wrapper class added in JSX — see below for the grid rule.
+.valueCols {
+  // Mobile: two-col grid for the value cells, sitting below the attribute label
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+
+  // Desktop / tablet landscape: disappear as a layout container so
+  // pqCol and vbaCol slot directly into the parent 3-column grid
+  @include phoneLandscape {
+    display: contents;
+  }
+  @include tablet {
+    display: contents;
+  }
+  @media (min-width: 767px) {
+    display: contents;
+  }
+}
+
+// Mobile pill labels above each value (injected via ::before
+// using CSS attr() is not reliably supported, so we use the
+// .colLabel helper class rendered in JSX on mobile)
+.colLabel {
+  display: none;
+
+  @include phone {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.colLabelPq {
+  color: rgba($accent, 0.9);
+}
+
+.colLabelVba {
+  color: $white-35;
+}
+
+.pqCol p {
+  color: $white-88;
+}
+
+// ── Combined use panel ────────────────────────────────────
+.combined {
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  border-radius: 6px;
+  padding: 2.25rem;
+  max-width: 760px;
+}
+
+.combinedLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  margin: 0 0 0.85rem;
+}
+
+.combinedIntro {
+  font-size: 0.95rem;
+  color: $white-55;
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+}
+
+.combinedList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    font-size: 0.9rem;
+    color: $white-65;
+    line-height: 1.6;
+    padding-left: 1.1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba($accent, 0.7);
+    }
+  }
+}
+
+.combinedLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba($accent, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid $accent-border;
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-bottom-color: rgba($accent, 0.7);
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

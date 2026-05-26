@@ -56,7 +56,11 @@ export const navigationData = {
           },
           {
             label: "Gold Coast",
-            href: "/word-and-powerpoint-experts-gold-coast/",
+            href: "/word-and-powerpoint-experts-gold-coast",
+          },
+          {
+            label: "Cairns",
+            href: "/microsoft-consultants-cairns",
           },
         ],
       },
@@ -66,7 +70,7 @@ export const navigationData = {
         items: [
           {
             label: "Perth",
-            href: "/microsoft-consultants-perth/",
+            href: "/microsoft-consultants-perth",
           },
         ],
       },
@@ -76,7 +80,7 @@ export const navigationData = {
         items: [
           {
             label: "Canberra",
-            href: "/microsoft-consultants-canberra/",
+            href: "/microsoft-consultants-canberra",
           },
         ],
       },
@@ -86,7 +90,7 @@ export const navigationData = {
         items: [
           {
             label: "Darwin",
-            href: "/office-excel-access-and-365-experts-darwin/",
+            href: "/office-excel-access-and-365-experts-darwin",
           },
         ],
       },
@@ -96,7 +100,7 @@ export const navigationData = {
         items: [
           {
             label: "Adelaide",
-            href: "/office-excel-access-and-365-experts-adelaide/",
+            href: "/office-excel-access-and-365-experts-adelaide",
           },
         ],
       },
@@ -326,15 +330,15 @@ export const navigationData = {
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-apps`,
           },
           {
-            label: "Workflow Automation with Power Automate",
+            label: "Automation with Power Automate",
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-automate`,
           },
           {
-            label: "Data Analytics with Power BI",
+            label: "Data Visualisation with Power BI",
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-bi`,
           },
           {
-            label: "Simple, Scalable Websites with Power Pages",
+            label: "Websites with Power Pages",
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
           },
           {

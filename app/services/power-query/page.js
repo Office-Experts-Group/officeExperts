@@ -1,33 +1,44 @@
+// app/services/power-query/page.js
+
 import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../components/ServiceHero";
-import Contact from "../../../components/Contact";
-import FAQSection from "../../../components/FAQSection";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import Segment4Repeat from "./(components)/Segment4Repeat";
-import PromoLink from "./(components)/PromoLink";
-import BlackSegment from "./(components)/BlackSegment";
+import QuerySegmentMain from "./(components)/QuerySegmentMain";
 
-import desk from "../../../public/pageHeros/desk.webp";
-import seatMob from "../../../public/pageHeros/mob/seatMob.webp";
+// Dynamic imports for components below the fold
+const QueryServices = dynamic(() => import("./(components)/QueryServices"));
+const QueryComparison = dynamic(() => import("./(components)/QueryComparison"));
+const QueryProcess = dynamic(() => import("./(components)/QueryProcess"));
+const Contact = dynamic(() => import("../../../components/Contact"));
+
+import query from "../../../public/pageHeros/query.webp";
+import queryMob from "../../../public/pageHeros/mob/queryMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../../utils/schemaGenerators";
 import faqs from "../../../faqs/query";
-import faqSchema from "../../../faqs/querySchema";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Australia-wide Microsoft Office consulting, development and support services",
+    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/power-query",
       url: "https://www.officeexperts.com.au/services/power-query",
-      name: "Power Query | Excel Experts",
+      name: "Power Query | Office Experts Group",
+      description:
+        "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -35,7 +46,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       datePublished: "2025-04-10T00:00:00+00:00",
-      dateModified: "2025-04-10T00:00:00+00:00",
+      dateModified: "2026-05-26T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/power-query#breadcrumb",
@@ -44,16 +55,13 @@ const schema = {
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/power-query",
-          ],
+          target: ["https://www.officeexperts.com.au/services/power-query"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/power-query#breadcrumb",
+      "@id": "https://www.officeexperts.com.au/services/power-query#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -85,22 +93,17 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-            <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <ServiceHero
-        title="Power Query"
-        desktopImage={desk}
-        mobileImage={seatMob}
-        altDesk={"desk in an office"}
-        altMob={"seat at a desk"}
+        title="Power Query Services"
+        desktopImage={query}
+        mobileImage={queryMob}
+        altDesk={"laptop with Power Query displayed"}
+        altMob={"laptop with Power Query displayed"}
       />
-      <PageSegmentMain />
-      <Segment4Repeat />
-      <BlackSegment />
-      <PromoLink />
-      <FAQSection faqs={faqs} />
+      <QuerySegmentMain />
+      <QueryServices />
+      <QueryComparison />
+      <QueryProcess />
       <Contact />
     </>
   );

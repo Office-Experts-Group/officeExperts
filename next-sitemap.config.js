@@ -54,7 +54,15 @@ module.exports = {
       "/services/microsoft-power-platform/microsoft-power-pages",
       // locations
       "/office-and-office-365-experts-gold-coast",
+      "/office-excel-access-and-365-consultants-brisbane",
       "/excel-and-access-experts-melbourne",
+      "/office-and-office-365-experts-melbourne",
+      "/office-excel-access-and-365-experts-melbourne",
+      "/word-and-powerpoint-experts-sydney",
+      "/office-and-office-365-experts-sydney",
+      "/word-and-powerpoint-experts-perth",
+      "/office-excel-access-and-365-consultants-perth",
+      "/word-and-powerpoint-experts-canberra",
       "/excel-and-access-experts-sydney",
       "/word-and-powerpoint-experts-richmond",
       // blogs
