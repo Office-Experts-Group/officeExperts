@@ -11,7 +11,6 @@ import renee from "./public/team/renee.webp";
 import martin from "./public/team/martin.webp";
 import stephen from "./public/team/stephen.webp";
 import andreas from "./public/team/andreas.webp";
-import joshua from "./public/team/joshua.webp";
 import penny from "./public/team/penny.webp";
 import linda from "./public/team/linda.webp";
 import jason from "./public/team/jason.webp";
@@ -54,26 +53,6 @@ export const teamMembers = [
     location: "northernRivers",
     skills: ["Word", "PowerPoint", "Excel", "InDesign"],
     image: rochelle,
-  },
-  {
-    name: "Joshua",
-    role: "OPERATIONS MANAGER",
-    location: "melbourne",
-    skills: [
-      "Power Apps",
-      "Power Automate",
-      "Power BI",
-      "SharePoint",
-      "Excel",
-      "Word",
-      "Access",
-      "VBA",
-      "SQL Server",
-      "Azure",
-      "Office Script",
-      "Office 365",
-    ],
-    image: joshua,
   },
   {
     name: "David",
