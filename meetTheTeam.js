@@ -27,6 +27,7 @@ import dan from "./public/team/dan.webp";
 import emma from "./public/team/emma.webp";
 import richard from "./public/team/richard.webp";
 import dylan from "./public/team/dylan.webp";
+import nick from "./public/team/nick.webp";
 
 export const teamMembers = [
   {
@@ -325,6 +326,23 @@ export const teamMembers = [
     location: "melbourne",
     skills: ["Access", "SQL Server", "VBA", "Power BI"],
     image: dylan,
+  },
+  {
+    name: "Nick",
+    role: "SENIOR ANALYST PROGRAMMER",
+    location: null,
+    skills: [
+      "Access",
+      "Excel",
+      "SQL",
+      "VBA",
+      "Power Automate",
+      "Power Apps",
+      "Power BI",
+      "365",
+      "Dataverse",
+    ],
+    image: nick,
   },
   {
     name: "Jamie",
