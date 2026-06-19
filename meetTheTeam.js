@@ -346,9 +346,9 @@ export const teamMembers = [
   },
   {
     name: "Jamie",
-    role: "ADMINISTRATION",
+    role: "WORD/POWERPOINT DESIGNER",
     location: "northernRivers",
-    skills: ["Word", "Excel"],
+    skills: ["Word", "Excel", "PowerPoint"],
     image: jamie,
   },
   {
