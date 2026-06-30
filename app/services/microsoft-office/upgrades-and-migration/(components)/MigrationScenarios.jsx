@@ -151,8 +151,9 @@ const MigrationScenarios = () => {
             What these scenarios have in common
           </p>
           <p className={styles.ctaHeading}>
-            The system was built for a purpose. The business grew. The system
-            didn&rsquo;t.
+            The system was built for a purpose.
+            <span className={styles.accent}> The business grew.</span> The
+            system didn&rsquo;t.
           </p>
           <p className={styles.ctaBody}>
             Complexity accumulated, risk increased, and now it&rsquo;s both

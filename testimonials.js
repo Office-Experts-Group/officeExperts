@@ -80,11 +80,6 @@ import fbrice from "./public/logos/fbrice.png";
 export const testimonials = [
   {
     content:
-      "Happy to recommend Josh - I found him to be extremely helpful, especially as I have recently had eye surgery, and experienced difficulty in reading some of the date correctly. Josh managed to talk me through the issues I was having, and the result was the development of an automatically populating spreadsheet which has made life much simpler for me.",
-    name: "Bob McLagan",
-  },
-  {
-    content:
       "James provided an amazing service. He helped us resolve our MS Access program issues quickly and effectively, explaining each step clearly and ensuring everything was working perfectly before finishing. His professionalism and expertise made the whole process smooth and stress-free.",
     name: "Artur Wiedmann",
     contact: "Tsubaki Australia PTY LTD",
@@ -118,15 +113,6 @@ export const testimonials = [
     image: lowespetroleumservicebp150x,
     width: 150,
     height: 50,
-  },
-  {
-    content:
-      "Effortless to work with. Josh at Office Experts designed our project exactly as per the scope. Fast and reliable. I would definitely recommend Office Experts to anyone.",
-    name: "Carel Nel",
-    contact: "www.mayers.com.au",
-    image: mayersfinefood150x,
-    width: 150,
-    height: 61,
   },
   {
     content:
@@ -240,15 +226,6 @@ export const testimonials = [
     image: mortgagechoice150x,
     width: 150,
     height: 39,
-  },
-  {
-    content:
-      "Josh understood our requirements from the get go and has done a ripper job in providing us what we need, which is a rather complex leave sheet built in a spreadsheet. He managed this on time and in budget. An absolute pleasure to work with and I hope to do so again.",
-    name: "Rodney Murray",
-    contact: "sgwater.com.au",
-    image: southgippslandwater150x,
-    width: 150,
-    height: 63,
   },
   {
     content:
@@ -581,15 +558,6 @@ export const testimonials = [
     image: linkstratamanagement150x,
     width: 150,
     height: 51,
-  },
-  {
-    content:
-      "Joshua has been amazing to deal with. His capacity to understand the complex and varied needs for each project were always impressive. I also noted the courage to take creative license when it was granted and running with it, bringing rewarding results. Having worked on a number of projects now, I am comforted by the skill & detail displayed each time. Will certainly use again, Cheers Cody",
-    name: "Cody",
-    contact: "autokeepers.com.au",
-    image: autokeepers150x,
-    width: 150,
-    height: 24,
   },
   {
     content:
