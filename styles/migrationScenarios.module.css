@@ -47,6 +47,10 @@
   margin: 0 0 1rem;
 }
 
+.accent {
+  color: #046999;
+}
+
 .subheading {
   font-size: 1rem;
   color: #4a5568;

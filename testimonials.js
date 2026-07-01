@@ -282,6 +282,15 @@ export const testimonials = [
   },
   {
     content:
+      "Happy to recommend Office Experts Group - I found them to be extremely helpful, especially as I have recently had eye surgery, and experienced difficulty in reading some of the date correctly. They managed to talk me through the issues I was having, and the result was the development of an automatically populating spreadsheet which has made life much simpler for me.",
+    name: "Bob McLagan",
+    contact: "",
+    image: "",
+    width: 0,
+    height: 0,
+  },
+  {
+    content:
       "Penny provided a fantastic service in attending to our Excel needs. It was a pleasure working with someone who had such a genuine customer focus. Penny actively listened to our needs and provided quality value-added solutions that were delivered in a timely manner. It's great to deal with someone who gives you confidence that your needs are being met in a professional and sincere manner. I would have no hesitation in recommending Penny from Office Experts.",
     name: "Marney Shepherd",
     contact: "www.gymnastics.org.au",
@@ -414,6 +423,15 @@ export const testimonials = [
     image: carscoaustraliax,
     width: 150,
     height: 150,
+  },
+  {
+    content:
+      "Effortless to work with. Office Experts Group designed our project exactly as per the scope. Fast and reliable. I would definitely recommend Office Experts to anyone.",
+    name: "Carel Nel",
+    contact: "www.mayers.com.au",
+    image: mayersfinefood150x,
+    width: 150,
+    height: 61,
   },
   {
     content:
@@ -561,12 +579,30 @@ export const testimonials = [
   },
   {
     content:
+      "Office Experts Group have been amazing to deal with. Their capacity to understand the complex and varied needs for each project were always impressive. I also noted the courage to take creative license when it was granted and running with it, bringing rewarding results. Having worked on a number of projects now, I am comforted by the skill & detail displayed each time. Will certainly use again, Cheers Cody",
+    name: "Cody",
+    contact: "autokeepers.com.au",
+    image: autokeepers150x,
+    width: 150,
+    height: 24,
+  },
+  {
+    content:
       "I first contacted Office Experts and talked to Scott and he put me in touch with Martin one of their Excel programming experts to develop a complex spreadsheet to analyse data sets on numbers. Martin's professionalism went above and beyond to understand my needs. Martin completed an outstanding job in developing the app. One thing that was so helpful was being able to talk directly with Martin the programmer. It helped save time and confusion. I would highly recommend Martin and Office Experts for all of your Excel needs. Thank you.",
     name: "Brett Butler",
     contact: "",
     image: "",
     width: 0,
     height: 0,
+  },
+  {
+    content:
+      "Office Experts Group understood our requirements from the get go and has done a ripper job in providing us what we need, which is a rather complex leave sheet built in a spreadsheet. They managed this on time and in budget. An absolute pleasure to work with and I hope to do so again.",
+    name: "Rodney Murray",
+    contact: "sgwater.com.au",
+    image: southgippslandwater150x,
+    width: 150,
+    height: 63,
   },
   {
     content:
