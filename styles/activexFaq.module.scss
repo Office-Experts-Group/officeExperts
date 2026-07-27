@@ -1,0 +1,135 @@
+// styles/activexFaq.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Header ──────────────────────────────────────────────────
+.header {
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Two-column grid ─────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+// ── Accordion item ──────────────────────────────────────────
+.item {
+  border-bottom: 1px solid $border;
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 1.4rem 0;
+}
+
+.questionText {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: $text-primary;
+  line-height: 1.5;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: $accent;
+  transition: transform 0.25s ease;
+}
+
+.itemOpen .chevron {
+  transform: rotate(180deg);
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.itemOpen .answer {
+  max-height: 400px;
+}
+
+.answerInner {
+  padding-bottom: 1.4rem;
+}
+
+.answerText {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}

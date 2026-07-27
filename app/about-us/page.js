@@ -26,21 +26,15 @@ const schema = {
   "@graph": [
     // Review + AggregateRating nodes (3 reviews on about page)
     ...getAboutPageSchema(testimonials)["@graph"],
-
-    // Organization (company identity, sameAs social links etc.)
     generateOrganizationSchema(),
 
-    // LocalBusiness / ProfessionalService
     generateProfessionalServiceSchema(),
-
-    // WebSite (same on every page — generated from shared utility)
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
 
-    // WebPage — describes this specific about us page
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/about-us#webpage",
@@ -53,7 +47,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#business",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-02-03T00:00:00+00:00",
+      dateModified: "2026-07-02T00:00:00+00:00",
       description:
         "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide consulting, support and system integration since 2000.",
       breadcrumb: {

@@ -1,0 +1,189 @@
+// styles/activexHero.module.scss
+@import "./globals.scss";
+
+// ── Hero shell ──────────────────────────────────────────────
+.hero {
+  background: $dark-bg;
+  padding: 9rem 8rem 7rem;
+
+  @include tablet {
+    padding: 7rem 4rem 5rem;
+  }
+
+  @include phoneLandscape {
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  @include phone {
+    padding: 5.5rem 1.25rem 3.5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Left column ─────────────────────────────────────────────
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.35rem 1rem;
+  display: inline-block;
+  margin-bottom: 1.75rem;
+}
+
+.heading {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  color: $white-88;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: $white-65;
+  line-height: 1.75;
+  max-width: 54ch;
+  margin-bottom: 1.25rem;
+}
+
+.body {
+  font-size: 0.98rem;
+  color: $white-55;
+  line-height: 1.85;
+  max-width: 56ch;
+  margin-bottom: 2.5rem;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background: $accent;
+  color: $white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: darken(#046999, 6%);
+  }
+}
+
+.ctaSecondary {
+  color: $white-88;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid $white-35;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: $white-88;
+  }
+}
+
+// ── Right column: mock deprecation notice ──────────────────
+.notice {
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+
+  @media (max-width: 960px) {
+    max-width: 480px;
+  }
+}
+
+.noticeBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $replace-x;
+  margin-bottom: 1.25rem;
+}
+
+.noticeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $replace-x;
+  flex-shrink: 0;
+}
+
+.noticeTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $white-88;
+  margin-bottom: 0.6rem;
+}
+
+.noticeText {
+  font-size: 0.88rem;
+  color: $white-55;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid $white-08;
+}
+
+// ── Timeline strip ──────────────────────────────────────────
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.timelineRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
+.timelineDate {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: $accent;
+  min-width: 4.2rem;
+  flex-shrink: 0;
+}
+
+.timelineLabel {
+  font-size: 0.82rem;
+  color: $white-55;
+  line-height: 1.5;
+}

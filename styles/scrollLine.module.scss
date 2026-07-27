@@ -1,0 +1,45 @@
+// styles/scrollLine.module.scss
+@import "./globals.scss";
+
+// Full-height positioning context, sits behind the row content.
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  pointer-events: none;
+
+  @include phone {
+    display: none;
+  }
+}
+
+// The line is built from two stacked, full-height layers: a white base and
+// an accent-coloured overlay. ScrollLine.jsx writes --line-progress (0–1)
+// to fade the overlay's opacity in as the user scrolls, giving a smooth
+// colour transition without relying on newer colour-mix() support.
+.line {
+  --line-progress: 0;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.15s linear;
+}
+
+.line::before {
+  background: $white-35;
+}
+
+.line::after {
+  background: $accent;
+  opacity: var(--line-progress);
+}

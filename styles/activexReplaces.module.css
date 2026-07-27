@@ -1,0 +1,186 @@
+.section {
+  position: relative;
+  background: #111820;
+  padding: 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 620px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #046999;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  color: #454545;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.1rem;
+}
+
+.accentText {
+  color: #046999;
+  font-style: italic;
+}
+
+.intro {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+}
+
+.rowStack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+.row::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.row:last-child::after {
+  border-bottom: none;
+}
+@media (max-width: 449px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cell {
+  padding: 2.25rem 2rem;
+}
+
+.cellHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.xIcon {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #046999;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cellLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a0a2a6;
+  line-height: 1;
+}
+
+.tagPill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #046999;
+  background: rgba(4, 105, 153, 0.15);
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  padding: 0.18rem 0.65rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-left: auto;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+.tagPill:hover {
+  background: #046999;
+  color: #ffffff;
+}
+@media (max-width: 449px) {
+  .tagPill {
+    margin-left: 0;
+  }
+}
+
+.cellText {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+}
+
+.inlineLink {
+  color: #046999;
+  font-weight: 700;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.arrow svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex-shrink: 0;
+}
+@media (max-width: 449px) {
+  .arrow {
+    height: 36px;
+  }
+  .arrow svg {
+    transform: rotate(90deg);
+  }
+}/*# sourceMappingURL=activexReplaces.module.css.map */

@@ -1,0 +1,134 @@
+.section {
+  background: #ffffff;
+  padding: 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #046999;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 900;
+  color: #0d1b2a;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.accentText {
+  color: #046999;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 449px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 1.4rem 0;
+}
+
+.questionText {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.5;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: #046999;
+  transition: transform 0.25s ease;
+}
+
+.itemOpen .chevron {
+  transform: rotate(180deg);
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.itemOpen .answer {
+  max-height: 400px;
+}
+
+.answerInner {
+  padding-bottom: 1.4rem;
+}
+
+.answerText {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.8;
+}/*# sourceMappingURL=activexFaq.module.css.map */

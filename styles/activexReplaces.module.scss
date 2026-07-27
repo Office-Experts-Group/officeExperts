@@ -1,0 +1,207 @@
+// styles/activexReplaces.module.scss
+@import "./globals.scss";
+
+// ─────────────────────────────────────────────
+// Section shell — dark background, positioned
+// so the scroll line can sit centred behind rows
+// ─────────────────────────────────────────────
+.section {
+  position: relative;
+  background: $dark-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Header block
+// ─────────────────────────────────────────────
+.header {
+  max-width: 620px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  color: $gray;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.1rem;
+}
+
+.accentText {
+  color: $accent;
+  font-style: italic;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.85;
+}
+
+// ─────────────────────────────────────────────
+// Row stack — sits above the scroll line
+// ─────────────────────────────────────────────
+.rowStack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+
+  // Soft white border, only 80% of the row's width, centred.
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    border-bottom: 1px solid $white-12;
+  }
+
+  &:last-child::after {
+    border-bottom: none;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Cell — shared
+// ─────────────────────────────────────────────
+.cell {
+  padding: 2.25rem 2rem;
+}
+
+.cellHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.xIcon {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: $white-35;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: $accent;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cellLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $grayText;
+  line-height: 1;
+}
+
+.tagPill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $accent;
+  background: $accent-dim;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.18rem 0.65rem;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  margin-left: auto;
+  white-space: nowrap;
+  line-height: 1.6;
+
+  &:hover {
+    background: $accent;
+    color: $white;
+  }
+
+  @include phone {
+    margin-left: 0;
+  }
+}
+
+.cellText {
+  font-size: 0.93rem;
+  color: $white-55;
+  line-height: 1.85;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ─────────────────────────────────────────────
+// Arrow divider
+// ─────────────────────────────────────────────
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  @include phone {
+    height: 36px;
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

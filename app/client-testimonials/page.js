@@ -40,7 +40,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-02-03T00:00:00+00:00",
+      dateModified: "2026-07-01T00:00:00+00:00",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/client-testimonials#breadcrumb",
