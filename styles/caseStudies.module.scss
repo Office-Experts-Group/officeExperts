@@ -1,0 +1,198 @@
+// styles/caseStudies.module.scss
+@import "./globals.scss";
+
+// ── Hero ──────────────────────────────────────
+.hero {
+  background: $dark-bg;
+  padding: 7rem 8rem 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem 3rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem 2.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem 2rem;
+  }
+}
+
+.heroInner {
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: $white-65;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+// ── Section / grid ────────────────────────────
+.section {
+  padding: 5rem 8rem 8rem;
+  background: $light-bg;
+
+  @include tablet {
+    padding: 4rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 3rem 2rem;
+  }
+  @include phone {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Card ──────────────────────────────────────
+.card {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-color: $accent-border;
+    transform: translateY(-2px);
+
+    .cardTitle {
+      color: $accent;
+    }
+    .readMore svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: $grayBGC;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem;
+}
+
+.industry {
+  align-self: flex-start;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+  background: $accent-light;
+  padding: 0.22rem 0.6rem;
+  border-radius: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.cardSummary {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+// ── Results list ──────────────────────────────
+.resultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.resultItem {
+  font-size: 0.84rem;
+  color: $text-primary;
+  font-weight: 600;
+  padding-left: 1.1rem;
+  position: relative;
+
+  // Tick mark instead of a default list bullet
+  &::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $accent;
+  margin-top: 0.5rem;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}

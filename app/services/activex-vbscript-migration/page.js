@@ -47,8 +47,8 @@ const schema = {
       about: {
         "@id": "https://www.officeexperts.com.au#organization",
       },
-      datePublished: "2026-07-27T00:00:00+00:00",
-      dateModified: "2026-07-27T00:00:00+00:00",
+      datePublished: "2026-07-29T00:00:00+00:00",
+      dateModified: "2026-07-29T00:00:00+00:00",
       description:
         "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
       breadcrumb: {
