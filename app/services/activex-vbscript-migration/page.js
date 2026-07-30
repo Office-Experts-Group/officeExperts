@@ -20,8 +20,8 @@ import {
   generateWebSiteSchema,
 } from "../../../utils/schemaGenerators";
 
-import migrate from "../../../public/pageheros/migrate.webp";
-import migrateMob from "../../../public/pageheros/mob/migrateMob.webp";
+import migrate from "../../../public/pageHeros/migrate.webp";
+import migrateMob from "../../../public/pageHeros/mob/migrateMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/activex-vbscript-migration";
