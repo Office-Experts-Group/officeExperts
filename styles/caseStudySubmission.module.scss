@@ -1,0 +1,197 @@
+// styles/caseStudySubmission.module.scss
+@import "./globals.scss";
+
+.page {
+  background: $dark-bg;
+  padding-top: 11rem;
+  padding-bottom: 4rem;
+}
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 6rem 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+
+  @include phone {
+    padding: 3.5rem 1.25rem;
+  }
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: $text-primary;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 56ch;
+}
+
+// ── Form ─────────────────────────────────────
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.input,
+.textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: $text-primary;
+  background: $white;
+  border: 1px solid $border-strong;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $accent;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.submitBtn {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border: none;
+  border-radius: 6px;
+  padding: 0.85rem 1.75rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: darken(#046999, 6%);
+  }
+
+  &:disabled {
+    background: $text-muted;
+    cursor: not-allowed;
+  }
+}
+
+.errorMessage {
+  font-size: 0.9rem;
+  color: $replace-x;
+}
+
+// ── Attachment field ─────────────────────────
+.optional {
+  font-weight: 400;
+  color: $text-muted;
+}
+
+.fileInput {
+  font-size: 0.9rem;
+  color: $text-secondary;
+}
+
+.fileChip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+}
+
+.fileName {
+  font-size: 0.9rem;
+  color: $text-primary;
+  word-break: break-all;
+}
+
+.fileRemoveBtn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $accent;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+// ── Confirmation state ───────────────────────
+.confirmation {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 8px;
+}
+
+.confirmationHeading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: $text-primary;
+  margin-bottom: 0.75rem;
+}
+
+.confirmationBody {
+  color: $text-secondary;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.resetBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $accent;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+}
