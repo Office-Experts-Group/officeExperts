@@ -1,9 +1,8 @@
 // app/case-studies/page.js
 
-import React from "react";
-
 import { caseStudies } from "./caseStudies";
-import CaseStudyCard from "./(components)/CaseStudyCard";
+import CaseStudyRow from "./(components)/CaseStudyRow";
+
 import ServiceHero from "../../components/ServiceHero";
 import Contact from "../../components/Contact";
 
@@ -64,8 +63,7 @@ const schema = {
     },
   ],
 };
-
-const Page = () => {
+const CaseStudiesPage = () => {
   return (
     <>
       <script
@@ -79,30 +77,34 @@ const Page = () => {
         altDesk={"Microsoft Logos"}
         altMob={"Microsoft Logos"}
       />
-
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <span className={styles.eyebrow}>Case Studies</span>
-          <h1 className={styles.heroTitle}>
-            Real problems. <span className={styles.accent}>Real results.</span>
-          </h1>
+          <h2 className={styles.heroTitle}>
+            Real problems. Real businesses.{" "}
+            <span className={styles.accent}>Real fixes.</span>
+          </h2>
           <p className={styles.heroSubtitle}>
-            A selection of the work we've delivered for Australian businesses
-            across Excel, Access, Power Platform and custom Office solutions.
+            No hypotheticals here. Below is a small selection of the Microsoft
+            365 problems we&rsquo;ve actually walked into, what we built to fix
+            them, and the numbers that came out the other side.
           </p>
         </div>
       </section>
 
       <section className={styles.section}>
-        <div className={styles.grid}>
-          {caseStudies.map((study) => (
-            <CaseStudyCard key={study.slug} study={study} />
+        <div className={styles.rows}>
+          {caseStudies.map((study, index) => (
+            <CaseStudyRow
+              key={study.slug}
+              study={study}
+              reverse={index % 2 === 1}
+            />
           ))}
         </div>
       </section>
-      <Contact />
     </>
   );
 };
 
-export default Page;
+export default CaseStudiesPage;

@@ -326,6 +326,10 @@ export const navigationData = {
         href: POWER_PLATFORM_EXPERTS_URL,
         items: [
           {
+            label: "AI Integrations",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/ai-integrations`,
+          },
+          {
             label: "App Development with Power Apps",
             href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-apps`,
           },

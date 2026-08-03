@@ -1,0 +1,434 @@
+// styles/caseStudyDetail.module.scss
+@import "./globals.scss";
+
+// ─────────────────────────────────────────────
+// Hero
+// The site header is fixed at 12rem tall. Pages with a ServiceHero banner
+// image absorb that height within the banner itself. This template has no
+// banner image, so the hero's own top padding is pushed out to 12rem+ to
+// clear the header instead.
+// ─────────────────────────────────────────────
+.hero {
+  background: $dark-bg;
+  padding: 14rem 8rem 5rem;
+
+  @include tablet {
+    padding: 11rem 4rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 9rem 2rem 3rem;
+  }
+  @include phone {
+    padding: 8rem 1.25rem 2.5rem;
+  }
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 700px;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.1rem, 3.6vw, 3rem);
+  font-weight: 900;
+  color: $white;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.heroSummary {
+  font-size: 1.05rem;
+  color: $white-65;
+  line-height: 1.85;
+  margin-top: 1.25rem;
+  max-width: 560px;
+}
+
+// ── Results tick list — shared by hero and outcome ──
+.resultsList {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.resultItem {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: $white-88;
+  padding-left: 1.4rem;
+  position: relative;
+  line-height: 1.5;
+
+  &::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.heroImageWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid $white-08;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ─────────────────────────────────────────────
+// Stats strip
+// ─────────────────────────────────────────────
+.statsSection {
+  background: $light-bg;
+  padding: 0 8rem;
+
+  @include tablet {
+    padding: 0 4rem;
+  }
+  @include phoneLandscape {
+    padding: 0 2rem;
+  }
+  @include phone {
+    padding: 0 1.25rem;
+  }
+}
+
+.statsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  transform: translateY(-2.5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    transform: none;
+    margin-top: 2rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    transform: none;
+    margin-top: 1.5rem;
+  }
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 2.25rem 2rem;
+  text-align: center;
+  border-right: 1px solid $border;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @include phoneLandscape {
+    border-right: none;
+    border-bottom: 1px solid $border;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  @include phone {
+    border-right: none;
+    border-bottom: 1px solid $border;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.statValue {
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-weight: 900;
+  color: $accent;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  line-height: 1.5;
+}
+
+// ─────────────────────────────────────────────
+// Body — challenge / approach / outcome
+// ─────────────────────────────────────────────
+.body {
+  background: $light-bg;
+  padding: 3rem 8rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include tablet {
+    padding: 2.5rem 4rem 5rem;
+  }
+  @include phoneLandscape {
+    padding: 2rem 2rem 4rem;
+    gap: 3.5rem;
+  }
+  @include phone {
+    padding: 1.5rem 1.25rem 3rem;
+    gap: 3rem;
+  }
+}
+
+.blockLabel {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+}
+
+.bodyText {
+  font-size: 1rem;
+  color: $text-primary;
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ── Approach steps ──
+.approachList {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.approachItem {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+
+  @include phone {
+    grid-template-columns: 2rem 1fr;
+  }
+}
+
+.approachNum {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: $accent;
+  letter-spacing: 1px;
+}
+
+.approachHeading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.approachBody {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ─────────────────────────────────────────────
+// Pull quote
+// ─────────────────────────────────────────────
+.quoteSection {
+  background: $dark-bg;
+  padding: 5rem 8rem;
+
+  @include tablet {
+    padding: 4rem;
+  }
+  @include phoneLandscape {
+    padding: 3rem 2rem;
+  }
+  @include phone {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+.quote {
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 3px solid $accent;
+  padding-left: 2rem;
+}
+
+.quoteText {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: $white;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.quoteAttribution {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: $white-55;
+}
+
+// ─────────────────────────────────────────────
+// Related services / brand callout
+// ─────────────────────────────────────────────
+.relatedSection {
+  background: $light-bg;
+  padding: 3rem 8rem;
+  border-top: 1px solid $border;
+
+  @include tablet {
+    padding: 3rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 2.5rem 2rem;
+  }
+  @include phone {
+    padding: 2rem 1.25rem;
+  }
+}
+
+.relatedInner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.relatedBrand {
+  font-size: 0.9rem;
+  color: $text-secondary;
+}
+
+.relatedBrandLink {
+  color: $accent;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.relatedLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.relatedLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+// ─────────────────────────────────────────────
+// Back to case studies link
+// ─────────────────────────────────────────────
+.backSection {
+  background: $light-bg;
+  padding: 0 8rem 5rem;
+
+  @include tablet {
+    padding: 0 4rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 0 2rem 3rem;
+  }
+  @include phone {
+    padding: 0 1.25rem 2.5rem;
+  }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $text-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
