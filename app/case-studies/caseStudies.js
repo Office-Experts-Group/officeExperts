@@ -33,6 +33,79 @@
 
 export const caseStudies = [
   {
+    slug: "kula-rdao-application-ai-review-workflow",
+    client: "Kula",
+    industry: "Investment",
+    site: "powerplatform",
+    title:
+      "Cutting a 6-7 day investment review down to 90 minutes with an AI agent workflow",
+    summary:
+      "Kula finds remote companies globally who may struggle to get investment, then reviews each one against KYC, compliance, legal and financial criteria before deciding whether to invest. That review relied on one person manually researching every applicant and cross-checking Kula's own policy, taking six to seven days per application. We built an AI agentic workflow that pushes each application and its supporting documents through a series of skilled agents, producing a detailed, referenced, drillable review in around 90 minutes.",
+    results: [
+      "Review time cut from 6-7 days to around 90 minutes per application",
+      "Every finding fully traceable, with references built in throughout",
+      "Reviews now broader and more detailed than the manual process allowed",
+    ],
+    image: "/case-studies/kula.png",
+    featured: true,
+
+    stats: [
+      { value: "90 min", label: "Full RDAO review, down from 6-7 days" },
+      {
+        value: "5+ agents",
+        label: "KYC, compliance, legal, financial and more",
+      },
+      { value: "6 months", label: "For the workflow to pay for itself" },
+    ],
+
+    challenge: [
+      "Kula is an investor that finds remote companies around the world that may otherwise struggle to secure investment. Once a target company is identified, that company fills out a detailed application covering its business, the investment it needs, and a wide range of supporting documents.",
+      "Reviewing that application properly meant checking it against Kula's own investment policy across several distinct areas, including KYC, compliance, legal and financial due diligence, then researching each applicant company individually to verify what had been submitted.",
+      "All of that sat on one person's shoulders. Every application meant six to seven days of manual research, cross-referencing policy documents by hand, and writing up findings, before Kula could even begin deciding whether to invest.",
+      "That single-person bottleneck capped how many applications Kula could realistically review at once, and repetitive research was being redone from scratch on every application, with no way to draw on what had already been checked before.",
+    ],
+
+    approach: [
+      {
+        heading: "Mapping the manual review process",
+        body: "We worked through Kula's existing review process end to end, capturing exactly what a KYC, compliance, legal and financial reviewer each checked, which parts of Kula's own policy applied, and how the final decision was reached from that research.",
+      },
+      {
+        heading: "Designing the agentic workflow",
+        body: "We designed an AI agentic workflow where each application and its supporting documents are pushed through a series of skilled agents, with each agent focused on one review area, KYC, compliance, legal and financial among others, mirroring how Kula's own specialists approached the work.",
+      },
+      {
+        heading: "Grounding agents in research and policy",
+        body: "Each agent was built to research the internet for information on the applicant company and check the application against Kula's own investment policy, rather than relying on the application form alone, so findings are backed by evidence rather than assumption.",
+      },
+      {
+        heading: "Building traceable, drillable summaries",
+        body: "Individual agent findings are rolled up into a single, readable summary Kula can drill down from, with references built in throughout so any point raised can be traced straight back to its source, whether that's the applicant's own documents or external research.",
+      },
+      {
+        heading: "Connecting the Microsoft 365 and AI stack",
+        body: "We built the workflow across Power Automate, Power Apps, Power BI and Power Pages, connecting Kula's application intake through to the agentic review, and brought in OpenAI, Claude and Relevance.ai to run the agents themselves.",
+      },
+    ],
+
+    outcome: [
+      "What used to take one person six to seven days now takes around 90 minutes, with the AI agents working through KYC, compliance, legal, financial and other checks in parallel rather than one reviewer working through each area in sequence.",
+      "Reviews are now more detailed and broader than the manual process allowed, with duplicated research eliminated and every finding fully traceable back to its source, rather than resting on one reviewer's notes.",
+      "Kula no longer has a capacity ceiling on how many applications it can review at once, and the workflow runs at a lower cost than the manual process it replaced, expected to pay for itself within six months.",
+    ],
+
+    services: [
+      {
+        label: "Business process automation",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+      },
+      {
+        label: "AI-powered workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+      },
+    ],
+  },
+  {
     slug: "retail-power-bi-partner-reporting-security",
     client: "Retail Insights Provider",
     industry: "Retail",
@@ -106,7 +179,7 @@ export const caseStudies = [
       },
       {
         label: "Power BI reporting services",
-        href: "https://www.powerplatformexperts.com.au",
+        href: "https://www.powerplatformexperts.com.au/power-bi-support",
       },
     ],
   },
@@ -186,9 +259,9 @@ export const caseStudies = [
     industry: "Community Services",
     site: "excel",
     title:
-      "Replacing a 360MB linked spreadsheet with a one-click Power Query refresh",
+      "Replacing a 400MB linked spreadsheet with a one-click Power Query refresh",
     summary:
-      "A four-location community services provider had each site keying records into its own workbook, with a central file pulling them together through direct workbook links. The structure had grown past 360MB and thousands of columns wide, and every new reporting breakdown meant hours of manual rework. We rebuilt it as a row-based entry template consolidated with Power Query, migrating all existing data into the new structure.",
+      "A four-location community services provider had each site keying records into its own workbook, with a central file pulling them together through direct workbook links. The structure had grown past 400MB and thousands of columns wide, and every new reporting breakdown meant hours of manual rework. We rebuilt it as a row-based entry template consolidated with Power Query, migrating all existing data into the new structure.",
     results: [
       "Consolidation of 4 location workbooks reduced to a single refresh action",
       "File structure changed from growing sideways to a stable row-based dataset",
@@ -198,7 +271,7 @@ export const caseStudies = [
     featured: false,
 
     stats: [
-      { value: "360MB+", label: "Original file size before the rebuild" },
+      { value: "400MB+", label: "Original file size before the rebuild" },
       {
         value: "4 → 1",
         label: "Location workbooks reduced to a single refresh",
@@ -270,7 +343,7 @@ export const caseStudies = [
     summary:
       "An allied health provider was sending intake and milestone forms to every patient but tracking who had and had not responded entirely by hand, pulling clinical staff away from care to send reminders and escalations. We built two scheduled Power Automate flows against the provider's Microsoft Fabric data warehouse that send reminders, escalate overdue cases and close off completed forms automatically.",
     results: [
-      "Manual reminder and escalation work removed for roughly 1,000 active patients",
+      "Manual reminder and escalation work removed for roughly 1200 active patients",
       "Outstanding forms actioned daily without staff needing to check status",
       "Follow-up timing and escalation rules adjustable through configuration, not code",
     ],
@@ -278,7 +351,7 @@ export const caseStudies = [
     featured: false,
 
     stats: [
-      { value: "~1,000", label: "Active patients tracked automatically" },
+      { value: "~1200", label: "Active patients tracked automatically" },
       { value: "2", label: "Scheduled flows replacing manual chasing" },
       {
         value: "Daily",
@@ -415,7 +488,7 @@ export const caseStudies = [
     industry: "Retail",
     site: "powerplatform",
     title:
-      "Turning a days-long PowerPoint build into a one-click, 660-slide deck",
+      "Turning a days-long PowerPoint build into a one-click, 600+ slide deck",
     summary:
       "A retail analytics business was building large retailer review decks by hand, pulling figures out of Power BI, pasting them into templates slide by slide, and repeating that process across the whole range every time. We built a Python tool that reads a simple scope sheet, queries Power BI directly, and assembles a fully branded deck of around 660 slides in under five minutes.",
     results: [
