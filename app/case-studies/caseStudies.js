@@ -106,6 +106,67 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "gm-building-consultants-inspection-crm",
+    client: "GM Building Consultants",
+    industry: "Building and Construction",
+    site: "powerplatform",
+    title:
+      "Turning manual enquiry handling into an automated quote-to-email pipeline",
+    summary:
+      "GM Building Consultants were managing building inspection enquiries entirely by hand, from receiving the initial request through to putting together and sending a quote. The manual process was slow and prone to errors that meant rework and lost time. We built an automated system on SharePoint, Power Apps and Power Automate that receives enquiries, manages them through to completion, and generates quotes ready to send by email.",
+    results: [
+      "Enquiry handling moved from a fully manual process to an automated pipeline",
+      "Rework from manual errors eliminated from the quoting process",
+      "Business owners freed up to focus on clients and the business itself",
+    ],
+    image: "/case-studies/gm-building-consultants-inspection-crmLg.png",
+    featured: false,
+
+    stats: [
+      { value: "End-to-end", label: "Enquiry to quote, fully automated" },
+      { value: "0", label: "Manual rework from quoting errors" },
+      { value: "3 tools", label: "SharePoint, Power Apps and Power Automate" },
+    ],
+
+    challenge: [
+      "GM Building Consultants relied on a manual process to handle building inspection enquiries from start to finish. Every enquiry that came in had to be picked up, logged and managed by hand, with a quote then put together and sent out individually for each one.",
+      "That manual approach was time consuming at every step, and prone to the kind of errors that come with repetitive, hands-on work. When something was missed or entered incorrectly, it meant rework, and rework meant time lost that could have gone toward the next enquiry.",
+      "With enquiry handling and quoting taking up so much manual effort, the business owners had less capacity to focus on running and growing the business itself, or on the client relationships that mattered most.",
+    ],
+
+    approach: [
+      {
+        heading: "Mapping the enquiry and quoting process",
+        body: "We reviewed how GM Building Consultants' enquiries were currently received, logged and managed, and how quotes were put together and sent, to understand exactly where the manual process was costing the most time and introducing the most risk of error.",
+      },
+      {
+        heading: "Building the automated intake and management flow",
+        body: "We built an automated process on SharePoint, Power Apps and Power Automate that receives incoming enquiries and manages them through to completion, replacing the manual logging and tracking with a consistent, repeatable flow.",
+      },
+      {
+        heading: "Automating quote generation and delivery",
+        body: "We built automated quote generation into the same flow, so a quote can be produced and submitted by email without the manual, request-by-request effort the business relied on previously.",
+      },
+    ],
+
+    outcome: [
+      "GM Building Consultants can now process and address enquiries far more efficiently than the previous manual approach allowed, with the time previously spent on each individual request significantly reduced.",
+      "The automated process gives the business confidence that each request is being handled correctly and consistently, cutting out the rework that came from manual errors and strengthening the service and relationship clients experience.",
+      "With enquiry handling and quoting running automatically, the business owners now have the freedom to concentrate on running the business and working with clients, rather than being tied up in manual processing.",
+    ],
+
+    services: [
+      {
+        label: "Power Apps and Power Automate solutions",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+      },
+      {
+        label: "Business process automation",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+      },
+    ],
+  },
+  {
     slug: "retail-power-bi-partner-reporting-security",
     client: "Retail Insights Provider",
     industry: "Retail",

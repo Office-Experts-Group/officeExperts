@@ -137,10 +137,7 @@ export const navigationData = {
             label: "Upgrades and Migration",
             href: `/services/microsoft-office/upgrades-and-migration`,
           },
-          {
-            label: "VBScript",
-            href: `/services/microsoft-vbscript`,
-          },
+
           {
             label: "Add-in Creation",
             href: `/services/by-business-solution/add-in-creation`,
@@ -152,6 +149,10 @@ export const navigationData = {
           {
             label: "Power Pivot",
             href: "/services/power-pivot",
+          },
+          {
+            label: "VBScript and ActiveX",
+            href: `/services/activex-vbscript-migration`,
           },
           {
             label: "Support & Training",

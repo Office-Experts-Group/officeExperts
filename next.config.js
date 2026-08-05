@@ -561,6 +561,11 @@ const REDIRECTS = [
     destination: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
     permanent: true,
   },
+  {
+    source: "/services/microsoft-vbscript",
+    destination: "/services/activex-vbscript-migration",
+    permanent: true,
+  },
 ];
 
 const NOINDEX_REDIRECTS = [
