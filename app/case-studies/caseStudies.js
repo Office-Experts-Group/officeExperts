@@ -162,7 +162,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.officeexperts.com.au/services/microsoft-office-365/business-process-automation",
       },
     ],
   },
