@@ -43,11 +43,6 @@ export const metadata = {
   alternates: {
     canonical: "/case-studies",
   },
-
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function CaseStudiesLayout({ children }) {

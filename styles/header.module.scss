@@ -627,12 +627,13 @@ $cycle-duration: 33s;
     scale: 0.5;
   }
   margin-left: auto;
+  margin-right: 1rem;
 }
 
 .microLogoScrolled {
   filter: brightness(100%);
   scale: 0.7;
-  margin: 0 -1.2rem 0 auto;
+  margin: 0 1rem 0 auto;
   transition: all 0.5s ease;
   @include phone {
     scale: 0.5;

@@ -7,7 +7,7 @@ import styles from "../../styles/header.module.css";
 
 import { navigationData } from "../../navigationData";
 import ServicesDropdown from "../../components/ServicesDropdown";
-import SocialLinks from "../../components/SocialLinks";
+// import SocialLinks from "../../components/SocialLinks";
 import MobileNav from "../../components/MobileNavigation/MobileNav";
 
 import logo from "../../public/logo300x130.webp";
@@ -100,6 +100,12 @@ const Header = () => {
               </Link>
             </li>
           ))}
+
+          <li className={styles.navItem}>
+            <Link href="/case-studies" className={styles.navLink}>
+              <span>Case Studies</span>
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -134,9 +140,9 @@ const Header = () => {
       </div>
 
       <div className={styles.headerContacts}>
-        <div className={styles.socialLinks}>
+        {/* <div className={styles.socialLinks}>
           <SocialLinks />
-        </div>
+        </div> */}
         <Link
           href="/contact-us"
           className="btn"
