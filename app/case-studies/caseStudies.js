@@ -33,14 +33,15 @@
 
 export const caseStudies = [
   {
-    slug: "kula-rdao-application-ai-review-workflow",
+    slug: "rdao-application-ai-review-workflow",
     client: "Kula",
+    author: "Nick",
     industry: "Investment",
     site: "powerplatform",
     title:
       "Cutting a 6-7 day investment review down to 90 minutes with an AI agent workflow",
     summary:
-      "Kula finds remote companies globally who may struggle to get investment, then reviews each one against KYC, compliance, legal and financial criteria before deciding whether to invest. That review relied on one person manually researching every applicant and cross-checking Kula's own policy, taking six to seven days per application. We built an AI agentic workflow that pushes each application and its supporting documents through a series of skilled agents, producing a detailed, referenced, drillable review in around 90 minutes.",
+      "The client finds remote companies globally who may struggle to get investment, then reviews each one against KYC, compliance, legal and financial criteria before deciding whether to invest. That review relied on one person manually researching every applicant and cross-checking their own policy, taking six to seven days per application. We built an AI agentic workflow that pushes each application and its supporting documents through a series of skilled agents, producing a detailed, referenced, drillable review in around 90 minutes.",
     results: [
       "Review time cut from 6-7 days to around 90 minutes per application",
       "Every finding fully traceable, with references built in throughout",
@@ -59,39 +60,39 @@ export const caseStudies = [
     ],
 
     challenge: [
-      "Kula is an investor that finds remote companies around the world that may otherwise struggle to secure investment. Once a target company is identified, that company fills out a detailed application covering its business, the investment it needs, and a wide range of supporting documents.",
-      "Reviewing that application properly meant checking it against Kula's own investment policy across several distinct areas, including KYC, compliance, legal and financial due diligence, then researching each applicant company individually to verify what had been submitted.",
-      "All of that sat on one person's shoulders. Every application meant six to seven days of manual research, cross-referencing policy documents by hand, and writing up findings, before Kula could even begin deciding whether to invest.",
-      "That single-person bottleneck capped how many applications Kula could realistically review at once, and repetitive research was being redone from scratch on every application, with no way to draw on what had already been checked before.",
+      "The client is an investor that finds remote companies around the world that may otherwise struggle to secure investment. Once a target company is identified, that company fills out a detailed application covering its business, the investment it needs, and a wide range of supporting documents.",
+      "Reviewing that application properly meant checking it against their own investment policy across several distinct areas, including KYC, compliance, legal and financial due diligence, then researching each applicant company individually to verify what had been submitted.",
+      "All of that sat on one person's shoulders. Every application meant six to seven days of manual research, cross-referencing policy documents by hand, and writing up findings, before they could even begin deciding whether to invest.",
+      "That single-person bottleneck capped how many applications they could realistically review at once, and repetitive research was being redone from scratch on every application, with no way to draw on what had already been checked before.",
     ],
 
     approach: [
       {
         heading: "Mapping the manual review process",
-        body: "We worked through Kula's existing review process end to end, capturing exactly what a KYC, compliance, legal and financial reviewer each checked, which parts of Kula's own policy applied, and how the final decision was reached from that research.",
+        body: "We worked through their existing review process end to end, capturing exactly what a KYC, compliance, legal and financial reviewer each checked, which parts of their own policy applied, and how the final decision was reached from that research.",
       },
       {
         heading: "Designing the agentic workflow",
-        body: "We designed an AI agentic workflow where each application and its supporting documents are pushed through a series of skilled agents, with each agent focused on one review area, KYC, compliance, legal and financial among others, mirroring how Kula's own specialists approached the work.",
+        body: "We designed an AI agentic workflow where each application and its supporting documents are pushed through a series of skilled agents, with each agent focused on one review area, KYC, compliance, legal and financial among others, mirroring how their own specialists approached the work.",
       },
       {
         heading: "Grounding agents in research and policy",
-        body: "Each agent was built to research the internet for information on the applicant company and check the application against Kula's own investment policy, rather than relying on the application form alone, so findings are backed by evidence rather than assumption.",
+        body: "Each agent was built to research the internet for information on the applicant company and check the application against their own investment policy, rather than relying on the application form alone, so findings are backed by evidence rather than assumption.",
       },
       {
         heading: "Building traceable, drillable summaries",
-        body: "Individual agent findings are rolled up into a single, readable summary Kula can drill down from, with references built in throughout so any point raised can be traced straight back to its source, whether that's the applicant's own documents or external research.",
+        body: "Individual agent findings are rolled up into a single, readable summary the client can drill down from, with references built in throughout so any point raised can be traced straight back to its source, whether that's the applicant's own documents or external research.",
       },
       {
         heading: "Connecting the Microsoft 365 and AI stack",
-        body: "We built the workflow across Power Automate, Power Apps, Power BI and Power Pages, connecting Kula's application intake through to the agentic review, and brought in OpenAI, Claude and Relevance.ai to run the agents themselves.",
+        body: "We built the workflow across Power Automate, Power Apps, Power BI and Power Pages, connecting their application intake through to the agentic review, and brought in OpenAI, Claude and Relevance.ai to run the agents themselves.",
       },
     ],
 
     outcome: [
       "What used to take one person six to seven days now takes around 90 minutes, with the AI agents working through KYC, compliance, legal, financial and other checks in parallel rather than one reviewer working through each area in sequence.",
       "Reviews are now more detailed and broader than the manual process allowed, with duplicated research eliminated and every finding fully traceable back to its source, rather than resting on one reviewer's notes.",
-      "Kula no longer has a capacity ceiling on how many applications it can review at once, and the workflow runs at a lower cost than the manual process it replaced, expected to pay for itself within six months.",
+      "The client no longer has a capacity ceiling on how many applications it can review at once, and the workflow runs at a lower cost than the manual process it replaced, expected to pay for itself within six months.",
     ],
 
     services: [
@@ -106,14 +107,15 @@ export const caseStudies = [
     ],
   },
   {
-    slug: "gm-building-consultants-inspection-crm",
+    slug: "building-consultants-inspection-crm",
     client: "GM Building Consultants",
+    author: "Deva",
     industry: "Building and Construction",
     site: "powerplatform",
     title:
       "Turning manual enquiry handling into an automated quote-to-email pipeline",
     summary:
-      "GM Building Consultants were managing building inspection enquiries entirely by hand, from receiving the initial request through to putting together and sending a quote. The manual process was slow and prone to errors that meant rework and lost time. We built an automated system on SharePoint, Power Apps and Power Automate that receives enquiries, manages them through to completion, and generates quotes ready to send by email.",
+      "These Building Consultants were managing building inspection enquiries entirely by hand, from receiving the initial request through to putting together and sending a quote. The manual process was slow and prone to errors that meant rework and lost time. We built an automated system on SharePoint, Power Apps and Power Automate that receives enquiries, manages them through to completion, and generates quotes ready to send by email.",
     results: [
       "Enquiry handling moved from a fully manual process to an automated pipeline",
       "Rework from manual errors eliminated from the quoting process",
@@ -129,7 +131,7 @@ export const caseStudies = [
     ],
 
     challenge: [
-      "GM Building Consultants relied on a manual process to handle building inspection enquiries from start to finish. Every enquiry that came in had to be picked up, logged and managed by hand, with a quote then put together and sent out individually for each one.",
+      "The Building Consultants relied on a manual process to handle building inspection enquiries from start to finish. Every enquiry that came in had to be picked up, logged and managed by hand, with a quote then put together and sent out individually for each one.",
       "That manual approach was time consuming at every step, and prone to the kind of errors that come with repetitive, hands-on work. When something was missed or entered incorrectly, it meant rework, and rework meant time lost that could have gone toward the next enquiry.",
       "With enquiry handling and quoting taking up so much manual effort, the business owners had less capacity to focus on running and growing the business itself, or on the client relationships that mattered most.",
     ],
@@ -137,7 +139,7 @@ export const caseStudies = [
     approach: [
       {
         heading: "Mapping the enquiry and quoting process",
-        body: "We reviewed how GM Building Consultants' enquiries were currently received, logged and managed, and how quotes were put together and sent, to understand exactly where the manual process was costing the most time and introducing the most risk of error.",
+        body: "We reviewed how the Building Consultants' enquiries were currently received, logged and managed, and how quotes were put together and sent, to understand exactly where the manual process was costing the most time and introducing the most risk of error.",
       },
       {
         heading: "Building the automated intake and management flow",
@@ -150,7 +152,7 @@ export const caseStudies = [
     ],
 
     outcome: [
-      "GM Building Consultants can now process and address enquiries far more efficiently than the previous manual approach allowed, with the time previously spent on each individual request significantly reduced.",
+      "The Building Consultants can now process and address enquiries far more efficiently than the previous manual approach allowed, with the time previously spent on each individual request significantly reduced.",
       "The automated process gives the business confidence that each request is being handled correctly and consistently, cutting out the rework that came from manual errors and strengthening the service and relationship clients experience.",
       "With enquiry handling and quoting running automatically, the business owners now have the freedom to concentrate on running the business and working with clients, rather than being tied up in manual processing.",
     ],
@@ -169,6 +171,7 @@ export const caseStudies = [
   {
     slug: "retail-power-bi-partner-reporting-security",
     client: "Retail Insights Provider",
+    author: "Power Platform Team",
     industry: "Retail",
     site: "powerplatform",
     title:
@@ -247,6 +250,7 @@ export const caseStudies = [
   {
     slug: "manufacturing-project-setup-automation",
     client: "Commercial Manufacturing Company",
+    author: "Power Platform Team",
     industry: "Manufacturing",
     site: "powerplatform",
     title:
@@ -317,6 +321,7 @@ export const caseStudies = [
   {
     slug: "community-services-excel-consolidation-rebuild",
     client: "Multi-Site Community Services Provider",
+    author: "Excel Experts Team",
     industry: "Community Services",
     site: "excel",
     title:
@@ -398,6 +403,7 @@ export const caseStudies = [
   {
     slug: "healthcare-patient-form-followup-automation",
     client: "Allied Health Provider",
+    author: "Power Platform Team",
     industry: "Healthcare",
     site: "powerplatform",
     title: "Removing manual form chasing for around 1,000 active patients",
@@ -475,6 +481,7 @@ export const caseStudies = [
   {
     slug: "professional-services-sharepoint-foundation-workshops",
     client: "Professional Services Team",
+    author: "Office Experts Team",
     industry: "Professional Services",
     site: "office",
     title:
@@ -546,6 +553,7 @@ export const caseStudies = [
   {
     slug: "retail-analytics-automated-review-deck-generator",
     client: "Retail Analytics Business",
+    author: "Power Platform Team",
     industry: "Retail",
     site: "powerplatform",
     title:
@@ -611,6 +619,7 @@ export const caseStudies = [
   {
     slug: "private-client-cashflow-forecasting-tool",
     client: "Private Client",
+    author: "Office Experts Team",
     industry: "Finance",
     site: "office",
     title:

@@ -32,6 +32,7 @@ const CaseStudyDetail = ({ study }) => {
     outcome,
     quote,
     services,
+    author,
   } = study;
 
   const brand = siteMeta[site];
@@ -154,7 +155,7 @@ const CaseStudyDetail = ({ study }) => {
               <p className={styles.relatedBrand}>
                 Delivered by{" "}
                 <Link href={brand.domain} className={styles.relatedBrandLink}>
-                  {brand.name}
+                  {author}
                 </Link>
               </p>
             )}
