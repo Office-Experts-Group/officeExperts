@@ -319,6 +319,81 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "government-health-master-template-document-transfer",
+    client: "State Government Health Department",
+    author: "Aleisha",
+    industry: "Government",
+    site: "word",
+    title:
+      "Rebranding a Master Template, then transferring an entire document set into it cleanly",
+    summary:
+      "Undergoing an organisation-wide branding update, this state government health department needed a new Master Template published to their intranet for staff to download, and every existing document brought across into the new format. We built the new Master Template with a Quick Part to simplify a repeating element, then used our in-house transfer process to move the client's entire document set into it without corrupting content along the way.",
+    results: [
+      "New Master Template built to the organisation's updated branding",
+      "Entire existing document set transferred into the new format",
+      "In-house transfer process kept content clean, with manual refinement for full brand alignment",
+    ],
+    image: "/case-studies/government-health-master-template-transferLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 template",
+        label: "New Master Template, published to the intranet",
+      },
+      {
+        value: "Whole set",
+        label: "Existing documents transferred into the new format",
+      },
+      {
+        value: "0 corruption",
+        label: "Content preserved cleanly through the transfer process",
+      },
+    ],
+
+    challenge: [
+      "This state government health department was undergoing an organisation-wide branding update, and needed fully functional templates that matched the new visual identity, not just updated logos dropped into the old layouts.",
+      "A single Master Template needed to be published to the organisation's intranet, where staff across the whole company could download it whenever they needed to create a new document.",
+      "Beyond the new template itself, every piece of existing documentation across the organisation needed to be brought into the updated format and re-uploaded, so the whole document set stayed consistent, on-brand and easy for every team member to use, rather than leaving a mix of old and new templates in circulation.",
+    ],
+
+    approach: [
+      {
+        heading: "Building the new Master Template",
+        body: "We built a new Master Template aligned with the organisation's updated branding, ready for publication to the intranet so staff across the company could download and use it directly.",
+      },
+      {
+        heading: "Adding a Quick Part for a repeating element",
+        body: "We added a small Quick Part to streamline one of the template's repeating elements, making it easier for staff to apply the correct formatting whenever that element was needed, without having to rebuild it manually each time.",
+      },
+      {
+        heading: "Transferring the existing document set",
+        body: "With the Master Template complete, we used our in-house transfer process to move all of the client's existing documents into the new format, rather than requiring the client to rebuild each document from scratch.",
+      },
+      {
+        heading: "Refining and checking each document",
+        body: "Our transfer process ensures content comes across cleanly and without corruption, after which we carry out a small amount of manual refinement on each document, applying the correct styles and checking the layout to confirm it aligns fully with the updated branding.",
+      },
+    ],
+
+    outcome: [
+      "The organisation now has a single, consistent Master Template published to their intranet, reflecting the updated branding and available for any staff member to download whenever they need it.",
+      "The entire existing document set has been transferred into the new format, rather than left as a mix of old and new templates, giving the organisation consistency across everything staff produce.",
+      "Because the transfer process keeps content clean and free of corruption, and is followed by manual style and layout checks, every transferred document aligns properly with the updated branding, making the whole document set easy to use and consistent for every team member.",
+    ],
+
+    services: [
+      {
+        label: "Band Template services",
+        href: "https://www.wordexperts.com.au/brand-template",
+      },
+      {
+        label: "Fillable Forms",
+        href: "https://www.wordexperts.com.au/fill-in-forms",
+      },
+    ],
+  },
+  {
     slug: "community-services-excel-consolidation-rebuild",
     client: "Multi-Site Community Services Provider",
     author: "Excel Experts Team",
@@ -479,6 +554,78 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "government-health-department-editable-pdf-forms",
+    client: "State Government Health Department",
+    author: "Aleisha",
+    industry: "Government",
+    site: "word",
+    title:
+      "Turning brand templates into editable PDF forms staff can fill in and maintain",
+    summary:
+      "Having recently completed a new master template for this state government health department, we were asked to build two internal staff forms on top of it. We built both forms directly into the existing branded template, converted them into editable PDFs using Adobe Acrobat Pro, and trained the client's team to make minor content changes themselves going forward.",
+    results: [
+      "Two internal forms built directly into the client's existing master template",
+      "Editable PDF fields let staff complete forms without breaking the layout",
+      "Client's own team trained to make minor content changes independently",
+    ],
+    image: "/case-studies/government-health-editable-pdf-formsLg.png",
+    featured: false,
+
+    stats: [
+      { value: "2", label: "Internal forms built and converted" },
+      {
+        value: "1 template",
+        label: "Forms built on the client's existing master template",
+      },
+      {
+        value: "Self-serve",
+        label: "Client trained to update form content in-house",
+      },
+    ],
+
+    challenge: [
+      "Having recently had a new master template built for their organisation, this state government health department needed two internal forms created for their staff to complete as part of day-to-day operations.",
+      "The forms needed to sit on the same branded foundation as the rest of the organisation's documents, rather than being built as one-off files that risked drifting from the established template and brand standards.",
+      "Staff needed to be able to fill the forms in easily and reliably, without the layout shifting or breaking, which meant a standard Word document wasn't going to be a robust enough format for how the forms would actually be used.",
+    ],
+
+    approach: [
+      {
+        heading: "Discussing the best approach",
+        body: "We talked through the options with the client and agreed the most reliable approach was to build both forms directly into their existing master template, rather than starting the layouts from scratch.",
+      },
+      {
+        heading: "Building the forms into the master template",
+        body: "We built both forms using the existing template created for the client, keeping the layouts consistent with the organisation's established branding and document standards throughout.",
+      },
+      {
+        heading: "Converting to editable PDF",
+        body: "Once the layouts were finalised, we saved each form as a PDF and converted it into an editable PDF using Adobe Acrobat Pro, so staff could complete the fields directly without disturbing the underlying design.",
+      },
+      {
+        heading: "Training the client's team",
+        body: "We provided training to the client's team on how to make minor content changes to the forms themselves, so small updates down the track don't need to come back to us as a new request.",
+      },
+    ],
+
+    outcome: [
+      "The client now has two internal forms built directly into their existing master template, keeping every document staff use aligned with the same brand standard.",
+      "Staff can complete the forms through editable PDF fields, filling them in easily while the underlying layout and branding stay exactly as designed.",
+      "With training now complete, the client's own team can make minor content changes to the forms independently, without needing to come back to us for small updates.",
+    ],
+
+    services: [
+      {
+        label: "Government department services",
+        href: "https://www.wordexperts.com.au/government-departments",
+      },
+      {
+        label: "Editable PDF form design",
+        href: "https://www.wordexperts.com.au/word-to-pdf-conversion",
+      },
+    ],
+  },
+  {
     slug: "professional-services-sharepoint-foundation-workshops",
     client: "Professional Services Team",
     author: "Office Experts Team",
@@ -551,6 +698,156 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "red-fox-advisory-branding-template-rollout",
+    client: "Red Fox Advisory",
+    author: "Aleisha",
+    industry: "Professional Services",
+    site: "word",
+    title:
+      "Rebuilding a full template suite to lock a new brand in, not just apply it",
+    summary:
+      "The client was updating its branding, but its Word templates kept breaking, with formatting corruption and staff freely overriding brand elements creating constant manual rework. We rebuilt the entire template suite from a single Master Template, added a custom Formatting tab to lock down font controls, and built a set of branded Quick Parts, so the new brand stays consistent without ongoing fixes.",
+    results: [
+      "Eleven sub-templates rebuilt from one consistent Master Template",
+      "Font and font-size controls locked down to enforce brand styles",
+      "Branded Quick Parts let staff insert cover pages and elements instantly",
+    ],
+    image: "/case-studies/red-fox-advisory-brand-templatesLg.png",
+    featured: false,
+
+    stats: [
+      { value: "11", label: "Sub-templates rebuilt in the new branding" },
+      { value: "1", label: "Master Template as the single source of truth" },
+      { value: "0", label: "Manual formatting fixes needed to stay on-brand" },
+    ],
+
+    challenge: [
+      "The client was updating its branding and needed its existing suite of Word templates brought into line with the new design. On paper this was a rebranding job, but in practice the templates themselves were the problem.",
+      "Formatting corruption was a recurring issue, with documents breaking or drifting out of shape as they were used day to day. Staff were also able to freely change branding elements such as fonts and font sizes, so even a correctly built document could quickly end up looking inconsistent with the brand it was supposed to represent.",
+      "Fixing these inconsistencies fell to staff manually, document by document, which ate up a large amount of time that should have gone toward client work rather than reformatting. Red Fox Advisory needed a controlled, reliable solution, one that locked down formatting and enforced the brand standards, rather than a rebrand that would drift out of line again within months.",
+    ],
+
+    approach: [
+      {
+        heading: "Establishing a single Master Template",
+        body: "We built a new Master Template in for the client's updated branding, establishing one consistent foundation that every other template in the suite would be built from, rather than each document being styled independently.",
+      },
+      {
+        heading: "Rebuilding the sub-template suite",
+        body: "From the Master Template, we developed eleven sub-templates, including a CV, letterhead, memo, meeting minutes and capability statement, each reflecting the new brand while remaining practical for staff to use every day.",
+      },
+      {
+        heading: "Locking down formatting with a custom tab",
+        body: "We added our custom Formatting tab to the templates, locking down font and font-size controls so staff rely on the styles we built into the templates rather than applying manual formatting that could drift away from the brand.",
+      },
+      {
+        heading: "Building in everyday functionality",
+        body: "Alongside the locked-down formatting controls, the Formatting tab includes our copy-and-paste code, a landscape page button and a list-formatting tool, giving staff quick access to the functions they use regularly without needing to work around the formatting restrictions.",
+      },
+      {
+        heading: "Adding branded Quick Parts",
+        body: "We built a range of highly designed Quick Parts, including cover pages and template-specific elements, so staff can insert branded components instantly and keep every document consistent without rebuilding elements from scratch.",
+      },
+    ],
+
+    outcome: [
+      "The client now has a full suite of eleven templates built from a single Master Template, giving the organisation one consistent foundation for its new branding rather than a set of documents styled independently.",
+      "With font and font-size controls locked down through the custom Formatting tab, staff can no longer freely override branding elements, and the formatting corruption that previously caused constant rework has been designed out of the templates themselves.",
+      "The branded Quick Parts mean staff can insert cover pages and other template-specific elements instantly, so maintaining brand consistency is now built into everyday document creation rather than a separate manual task.",
+    ],
+
+    services: [
+      {
+        label: "Quick Parts",
+        href: "https://www.wordexperts.com.au/quick-parts",
+      },
+      {
+        label: "Document rebranding services",
+        href: "https://www.wordexperts.com.au/document-rebranding-services",
+      },
+    ],
+  },
+  {
+    slug: "golf-supplier-sales-data-consolidation",
+    client: "On Course Golf",
+    author: "Martin",
+    industry: "Retail",
+    site: "excel",
+    title:
+      "Turning a year of scattered supplier sales files into one automated summary",
+    summary:
+      "The client received dozens of separate Excel files from each supplier throughout the year, detailing sales made to every club and member across each month and quarter. We built a Power Query and Power Pivot solution that pulls all of this raw data in automatically, categorises it, and produces year-on-year comparisons by supplier, member, month and quarter without a single manual copy and paste.",
+    results: [
+      "Dozens of supplier files a year consolidated automatically into one summary",
+      "Sales comparable by supplier, member, month and quarter at a glance",
+      "Quarter-on-quarter, year-on-year comparisons generated without manual rework",
+    ],
+    image: "/case-studies/on-course-golf-sales-summaryLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "2 tools",
+        label: "Built for summary and year-on-year comparison",
+      },
+      {
+        value: "Automatic",
+        label: "Supplier files combined and categorised on refresh",
+      },
+      {
+        value: "4 views",
+        label: "By supplier, member, month and quarter",
+      },
+    ],
+
+    challenge: [
+      "The client received a steady stream of Excel files from each of its suppliers throughout the year, with every file detailing the sales that supplier had made to each golf club or member over the course of a quarter. Across all suppliers and all quarters, this added up to a large number of separate files landing throughout the year.",
+      "None of these files were in a consistent, ready-to-analyse format on their own. To understand how the business was actually performing, someone needed to bring every supplier's figures together and summarise them across the entire financial year, comparing sales by supplier, by club or member, and by month and quarter.",
+      "On top of the annual summary, The client also needed to compare results from one financial year to the next. That meant taking the same quarterly breakdowns, by supplier, by member, or both, and showing the movement between the same quarter in consecutive years, not just the raw totals.",
+      "Doing this by hand meant manually opening, checking and combining a large number of supplier files every year, then repeating a similar manual effort again just to compare two years' worth of already-summarised results.",
+    ],
+
+    approach: [
+      {
+        heading: "Automating the single-year summary",
+        body: "We built an Excel workbook using Power Query to automatically bring in all of the raw supplier sales files for a financial year, rather than requiring each one to be opened and copied in by hand. As new files were added, the workbook picked them up on refresh.",
+      },
+      {
+        heading: "Categorising and structuring the combined data",
+        body: "Once the raw files were pulled in, we used Power Query to clean and categorise the combined data consistently, so every supplier's figures lined up the same way regardless of how the original file had been laid out.",
+      },
+      {
+        heading: "Building the summary views with Power Pivot",
+        body: "We used Power Pivot to build the summarised results the client needed, allowing sales to be compared and viewed by supplier, by club or member, and across every month and quarter of the financial year, all from the one workbook.",
+      },
+      {
+        heading: "Building the year-on-year comparison workbook",
+        body: "We built a second Excel workbook that automatically extracts the results from two consecutive financial year summary files, rather than requiring the figures to be re-entered or copied across manually.",
+      },
+      {
+        heading: "Showing the quarter-on-quarter movement",
+        body: "This second workbook reproduces the same summary breakdowns as the original files, by supplier, by member, or both, while also calculating and displaying the difference for each quarter compared to the same quarter the previous financial year.",
+      },
+    ],
+
+    outcome: [
+      "The clent can now bring in every supplier's raw sales files and get a fully categorised, summarised view of the financial year without manually combining a single file by hand.",
+      "Sales can be compared by supplier, by club or member, and across every month and quarter, giving a clear picture of performance that would previously have taken considerable manual effort to piece together.",
+      "Comparing one financial year against the next is now handled automatically as well, with quarter-on-quarter movement calculated directly from the two summary files rather than reworked from scratch each time a year-on-year comparison was needed.",
+    ],
+
+    services: [
+      {
+        label: "Data manipulation services",
+        href: "https://www.excelexperts.com.au/data-manipulation",
+      },
+      {
+        label: "Custom design and development",
+        href: "https://www.excelexperts.com.au/custom-design-and-development",
+      },
+    ],
+  },
+  {
     slug: "retail-analytics-automated-review-deck-generator",
     client: "Retail Analytics Business",
     author: "Power Platform Team",
@@ -613,6 +910,239 @@ export const caseStudies = [
       {
         label: "Power BI reporting services",
         href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+      },
+    ],
+  },
+  {
+    slug: "water-education-program-word-powerpoint-templates",
+    client: "Water Utility Education Program",
+    industry: "Education",
+    author: "Aleisha",
+    site: "word",
+    title:
+      "Turning an InDesign lesson design into Word and PowerPoint templates educators could actually use",
+    summary:
+      "The client's water education program had a lesson template designed in InDesign by their design partner, but curriculum writers across Western Australia needed to build lessons in Word and PowerPoint, not Adobe software. We translated the InDesign design into fully functional Word and PowerPoint templates, building Quick Parts and a Slide Master system so educators could assemble consistent, branded lessons without wrestling with formatting.",
+    results: [
+      "InDesign lesson design translated into fully working Word and PowerPoint templates",
+      "Quick Parts built so educators can insert required layouts in a click",
+      "Slide Master system with locked-down branding, ready for lesson creation",
+    ],
+    image: "/case-studies/water-education-program-templatesLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "2 formats",
+        label: "Word and PowerPoint, from one InDesign design",
+      },
+      { value: "WA-wide", label: "Consistent lessons across the Program" },
+      { value: "0", label: "Formatting expertise needed by educators" },
+    ],
+
+    challenge: [
+      "This water education program's delivery partner had designed a lesson template in InDesign, built to a high visual standard the way Adobe design work typically is. The intent was for that design to become the standard lesson template curriculum writers across Western Australia would use.",
+      "The problem was the gap between the two worlds. Curriculum writers worked in Word and PowerPoint, not InDesign, and Adobe-designed layouts tend to be rigid in ways that translate awkwardly into Word, where documents need to flex and reflow as educators add and edit content.",
+      "Without a proper translation of the design into native Word and PowerPoint templates, curriculum writers across the Program had no consistent, easy way to produce lessons that matched the intended branding and structure.",
+    ],
+
+    approach: [
+      {
+        heading: "Reviewing the InDesign design",
+        body: "We started from the InDesign file provided by the client's design partner, identifying every layout that needed to exist as a working Word or PowerPoint template rather than a static, designed page.",
+      },
+      {
+        heading: "Rebuilding and testing the Word template",
+        body: "We rebuilt the design in Word and spent considerable time testing it with the client, refining the template repeatedly to reduce the rigidity of the original InDesign layout so it could hold up to real curriculum writers editing real content.",
+      },
+      {
+        heading: "Building Quick Parts for educators",
+        body: "To make the Word template genuinely usable day to day, we built Quick Parts for each layout, so educators could insert the pages and structures they needed with a click rather than trying to recreate formatting by hand.",
+      },
+      {
+        heading: "Engineering the PowerPoint Slide Master system",
+        body: "For the PowerPoint component, we took the required layouts from the InDesign design and rebuilt them as a full Slide Master system, with precise placeholders, consistent spacing and locked-down brand elements engineered into each layout.",
+      },
+      {
+        heading: "Structuring layouts around real lesson needs",
+        body: "We structured the masters exactly around how the client's education team wanted to use them, with a clear title hierarchy, flexible content areas, and purpose-built layouts for activities, diagrams and assessment pages, so every lesson could be assembled quickly.",
+      },
+    ],
+
+    outcome: [
+      "Curriculum writers across the Program now have fully functional Word and PowerPoint templates that carry the InDesign design through faithfully, without the rigidity that would have made the original layout impractical to edit.",
+      "Quick Parts mean educators can insert the required layouts and structures as needed, rather than fighting with formatting every time they build a lesson.",
+      "The Slide Master system, with its locked-down brand elements and purpose-built layouts, lets educators focus on lesson creation rather than formatting, while every lesson produced stays visually consistent across the entire Program.",
+    ],
+
+    services: [
+      {
+        label: "Word template design",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
+      },
+      {
+        label: "Corporate templates",
+        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+      },
+    ],
+  },
+  {
+    slug: "government-department-enterprise-office-template-suite",
+    client: "State Government Transport Department",
+    industry: "Government",
+    author: "Aleisha",
+    site: "word",
+    title:
+      "Building a custom Word ribbon that stops corporate templates breaking under everyday use",
+    summary:
+      "Following a major brand refresh, a state government transport department needed its entire Microsoft Office environment modernised, with staff across large, collaborative documents regularly hitting formatting corruption, inconsistent branding and accessibility gaps. We redesigned 17 enterprise Word templates, built a custom Word Formatting Control Tab to enforce approved styles automatically, and delivered a new PowerPoint master framework with 10 additional precinct-specific themes.",
+    results: [
+      "17 enterprise Word templates redesigned to the new brand",
+      "Custom ribbon lets non-technical staff create on-brand documents without Word expertise",
+      "Copy-and-paste formatting corruption controlled at the source, with a one-click clean-up fallback",
+    ],
+    image: "/case-studies/government-enterprise-office-templatesLg.png",
+    featured: true,
+
+    stats: [
+      { value: "17", label: "Enterprise Word templates redesigned" },
+      { value: "10", label: "Precinct-specific PowerPoint themes added" },
+      {
+        value: "1 ribbon",
+        label: "Controls styles, tables and branding across all documents",
+      },
+    ],
+
+    challenge: [
+      "Following a major brand refresh, the client needed its Microsoft Office environment brought into line across the whole organisation, spanning everything from reports and briefing papers to presentations used across multiple precincts.",
+      "Staff regularly worked across large, collaborative documents, and formatting corruption was an ongoing problem. Content pasted in from other sources would carry its own formatting with it, quietly breaking the corporate styles the templates were built around.",
+      "Branding consistency and accessibility compliance were difficult to maintain at scale without a way to enforce them automatically, and much of this fell to staff who weren't expected to have advanced Word or PowerPoint knowledge, but still needed to produce professional, on-brand documents day to day.",
+      "Without a controlled authoring environment, every new document carried a risk of drifting from the brand, breaking formatting, or falling short of accessibility standards, with no consistent way to catch or fix it.",
+    ],
+
+    approach: [
+      {
+        heading: "Redesigning the enterprise Word template suite",
+        body: "We redesigned the client's full enterprise Word template suite to the new brand, covering reports, briefing papers, project plans, agendas, minutes, factsheets and letterheads, so every document type shared the same visual foundation.",
+      },
+      {
+        heading: "Building a custom Word Formatting Control Tab",
+        body: "We developed a custom ribbon tab that lets staff create professionally branded documents directly from Word, automatically enforcing approved styles, tables and numbering without requiring advanced Word knowledge from the person using it.",
+      },
+      {
+        heading:
+          "Controlling copy-and-paste and adding a formatting clean-up tool",
+        body: "We built controlled copy-and-paste functionality that prevents external formatting from corrupting the corporate templates and styles, and added a Styles Clean Up tool so any formatting that did get corrupted could be restored in a click rather than manually untangled.",
+      },
+      {
+        heading: "Automating table formatting and document assembly",
+        body: "We built automated table formatting and numbering controls, along with a document assembly system offering 17 report cover designs across portrait and landscape, 9 branded back cover designs, and 9 header variations, with covers, headers and section pages inserted automatically.",
+      },
+      {
+        heading: "Rebuilding the PowerPoint framework",
+        body: "We redesigned the client's PowerPoint presentation framework with expanded slide layouts, icon libraries, accessibility guidance and improved data visualisation, then built 10 additional precinct-specific themes so individual precincts could maintain their own identity while staying aligned to the broader organisational brand.",
+      },
+      {
+        heading: "Rolling out with digital signing and deployment support",
+        body: "We implemented digital signing and supported the enterprise deployment of the new templates and tools, so the rollout reached staff across the organisation in a controlled, supported way.",
+      },
+    ],
+
+    outcome: [
+      "The client now has consistent branding across both Word and PowerPoint, with the custom ribbon enforcing approved styles, tables, numbering and branding automatically rather than relying on individual staff getting it right manually.",
+      "Formatting errors caused by copy-and-paste operations have been significantly reduced, and when formatting issues do occur, the Styles Clean Up tool restores them in a click, keeping document creation simple for non-technical users across a consistent experience spanning every document type.",
+      "Accessibility compliance has improved across the template suite, and the organisation now has a scalable, long-term maintainable framework that supports future needs, including the ability for individual precincts to keep their own branding without breaking the broader corporate identity, all while reducing the ongoing support and training burden on the wider team.",
+    ],
+
+    services: [
+      {
+        label: "Custom Word ribbon development",
+        href: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+      },
+      {
+        label: "Enterprise template design and governance",
+        href: "https://www.wordexperts.com.au/corporate-identity",
+      },
+    ],
+  },
+  {
+    slug: "film-crew-booking-system-access-nextjs-rebuild",
+    client: "Freelance Crew Promotions Agency",
+    industry: "Media and Entertainment",
+    author: "Paul",
+    site: "access",
+    title:
+      "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
+    summary:
+      "This client supplies freelance crew and technicians for film and screen productions, longform drama, television commercials and online content, but their entire operation ran on a native Access 2000 database that only worked on a VM. We rebuilt the front end using the OEG Access framework with a cloud back end on Azure SQL Server, then rewrote their WordPress website in Next.js with a direct database connection, giving them a site that loads 10x faster and is built to scale.",
+    results: [
+      "Access 2000 database on a VM replaced with a modern Azure SQL Server back end",
+      "Website rebuilt in Next.js loads 10x faster with a direct database connection",
+      "Crew Diaries, Availability Lists, emails and End of Day processing fully automated",
+    ],
+    image: "/case-studies/film-crew-booking-system-rebuildLg.png",
+    featured: true,
+
+    stats: [
+      { value: "10x", label: "Faster website load times on Next.js" },
+      {
+        value: "180-day",
+        label: "Forward booking outlook in the new Bookings form",
+      },
+      {
+        value: "VM → Cloud",
+        label: "Database moved off a locked VM onto Azure SQL Server",
+      },
+    ],
+
+    challenge: [
+      "This client's entire crew booking operation ran on a native Access 2000 database, technology old enough that it would only run inside a virtual machine, with no way for their public-facing website to connect to it directly.",
+      "The interface itself hadn't kept pace with how the business actually worked. Staff needed an intuitive way to manage bookings, crew availability and day-to-day processing, but the old system offered none of the modern menu-driven usability a growing business needed.",
+      "Because the Access database was isolated on a VM, the client's existing WordPress website couldn't access live booking or crew data at all, meaning information had to be managed separately across the database and the website rather than in one connected system.",
+      "A wide range of tasks that should have been automatic, including generating Crew Diaries, producing Availability Lists, sending emails and running End of Day processing, were still being done manually, adding ongoing admin work on top of an already outdated system.",
+    ],
+
+    approach: [
+      {
+        heading: "Migrating the database to Azure SQL Server",
+        body: "We migrated the client's data off the VM-locked Access 2000 database and onto Azure SQL Server, giving them a modern, cloud-based back end that both the internal system and the public website could connect to.",
+      },
+      {
+        heading: "Rebuilding the front end on the OEG Access framework",
+        body: "We rewrote the front end using the OEG Access framework, replacing the old interface with an intuitive, menu-driven forms system built around how the client's staff actually work day to day.",
+      },
+      {
+        heading: "Building the Excel-style Bookings form",
+        body: "We built the core Bookings form as an Excel-style grid giving staff a 180-day forward booking outlook, alongside improved navigation, sorting and filtering across the system's other entities.",
+      },
+      {
+        heading: "Automating manual crew processes",
+        body: "We automated a range of previously manual tasks, including the creation of Crew Diaries, generation of Availability Lists, email generation and End of Day processing, removing repetitive admin work from the daily workflow.",
+      },
+      {
+        heading: "Rebuilding the website in Next.js",
+        body: "We rewrote the client's existing WordPress website in Next.js with a direct, seamless connection to the Azure SQL Server database, migrating all existing website assets across and building a crew portal so crew members could access relevant information online.",
+      },
+      {
+        heading: "Adding a website management portal to Access",
+        body: "We built a website management portal directly into the Access front end, so staff could manage website content from within the same system they already used for bookings, rather than switching between separate tools.",
+      },
+    ],
+
+    outcome: [
+      "The client's database now runs on Azure SQL Server instead of a VM-locked Access 2000 file, giving them a modern, scalable back end that both their internal system and their website can connect to directly.",
+      "Their website, rebuilt in Next.js with a proper database connection, now loads 10 times faster than the previous WordPress site, and is built on a more scalable foundation that can grow with the business rather than working around the limitations of the old platform.",
+      "Tasks that used to be done manually, including Crew Diaries, Availability Lists, emails and End of Day processing, now run automatically, and the new Excel-style Bookings form gives staff a full 180-day forward view of bookings at a glance, with significantly improved navigation, sorting and filtering throughout the system.",
+    ],
+
+    services: [
+      {
+        label: "Microsoft Access database development",
+        href: "https://www.accessexperts.com.au/sql-server-backend-business-solutions",
+      },
+      {
+        label: "Custom web application development",
+        href: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
       },
     ],
   },
