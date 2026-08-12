@@ -774,7 +774,7 @@ export const caseStudies = [
     ],
   },
   {
-    slug: "red-fox-advisory-branding-template-rollout",
+    slug: "advisory-branding-template-rollout",
     client: "Red Fox Advisory",
     author: "Aleisha",
     industry: "Professional Services",
@@ -1066,7 +1066,7 @@ export const caseStudies = [
     slug: "government-department-enterprise-office-template-suite",
     client: "State Government Transport Department",
     industry: "Government",
-    author: "Aleisha",
+    author: "Damien",
     site: "word",
     title:
       "Building a custom Word ribbon that stops corporate templates breaking under everyday use",
