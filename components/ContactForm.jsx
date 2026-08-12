@@ -17,15 +17,22 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasConversionTracking, setHasConversionTracking] = useState(false);
+  const [pageUrl, setPageUrl] = useState("");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPageUrl(window.location.href);
+    }
+  }, []);
 
   // Check if conversion tracking is available
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Check if the conversion function exists
       setHasConversionTracking(
-        typeof window.gtag_report_conversion === "function"
+        typeof window.gtag_report_conversion === "function",
       );
 
       // Set up a MutationObserver to detect when conversion tracking becomes available
@@ -87,7 +94,7 @@ const ContactForm = () => {
       const res = await fetch("/api/contactForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, pageUrl }),
       });
 
       const data = await res.json();

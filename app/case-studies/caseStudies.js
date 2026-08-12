@@ -697,6 +697,82 @@ export const caseStudies = [
       },
     ],
   },
+  // New case study object — copy this into the caseStudies array in caseStudies.js
+  // Suggested placement: add as a new entry before the closing "];" of the array
+
+  {
+    slug: "windowline-proposals-database",
+    client: "Windowline",
+    author: "Stephen",
+    industry: "Building and Construction",
+    site: "access",
+    title:
+      "Replacing 50-page proposals built by hand with a database-driven document generator",
+    summary:
+      "Windowline installs windows across commercial and residential properties, many of them high-rise apartment blocks, mainly in Sydney. Every proposal, quote and contract was pieced together manually from paper records and Excel, often running to 50 or more pages. We designed an Access database, later migrated to SQL Server, that lets staff select the sections they need and generates the full Word document automatically, complete with project and client details, quote tables, data and images.",
+    results: [
+      "50+ page proposals and contracts generated automatically instead of assembled by hand",
+      "Users select exactly which sections to include, from project details to quote tables and images",
+      "Built-in Excel exports and auto-generated emails with attachments streamlined delivery",
+    ],
+    image: "/case-studies/windowline-proposals-databaseLg.png",
+    featured: false,
+
+    stats: [
+      { value: "50+ pages", label: "Typical proposal or contract generated" },
+      {
+        value: "2 backends",
+        label: "Started on Access, migrated to SQL Server",
+      },
+      { value: "1 database", label: "Driving proposals, quotes and contracts" },
+    ],
+
+    challenge: [
+      "The client installs windows and doors across commercial and residential properties, mainly around Sydney, with a large share of the work in high-rise apartment blocks. Every project starts with a proposal, and often ends with a lengthy quote and contract, each one specific to that job.",
+      "Before this system existed, all of it was managed manually, recorded on paper or scattered across Excel spreadsheets. Building a single proposal meant pulling together project details, client information and quote data by hand, then formatting it all into a document that regularly ran to 50 pages or more.",
+      "With every document assembled from scratch, there was no consistency from one proposal to the next, and no quick way to reuse the sections that stayed the same between jobs. The manual process was slow at exactly the point in the sales cycle where speed mattered most.",
+    ],
+
+    approach: [
+      {
+        heading: "Designing the Access database",
+        body: "We designed an Access database to manage proposals for the client's projects, structured around the sections that make up a typical proposal, quote and contract, including project and client information alongside quote and project detail such as tables, data and images.",
+      },
+      {
+        heading: "Building section-based document generation",
+        body: "We built the system so users can select which sections to insert into a given document, letting staff assemble a proposal, quote or contract from the relevant building blocks rather than starting each one from a blank page.",
+      },
+      {
+        heading: "Generating documents in Word",
+        body: "We built the generation engine to produce the finished document directly in Word, pulling in the selected sections, including tables, data and images, and assembling them into a single, consistently formatted document ready to send.",
+      },
+      {
+        heading: "Adding export and email options",
+        body: "We added options to export data to Excel and to generate emails with attachments directly from the system, so proposals, quotes and contracts could move straight from generation to delivery without extra manual steps.",
+      },
+      {
+        heading: "Migrating from Access to SQL Server",
+        body: "As the database grew, we migrated the backend from Access to SQL Server, keeping the same section-based generation workflow in place while giving the system a backend able to handle a larger, more concurrent workload.",
+      },
+    ],
+
+    outcome: [
+      "Proposals, quotes and contracts that once took considerable manual effort to compile are now generated directly from the database, with staff selecting the sections they need rather than assembling every document by hand.",
+      "Long documents of 50 or more pages, complete with project and client information, quote tables, data and images, are now produced consistently every time, rather than varying with whoever put the document together.",
+      "With export to Excel and automated emails with attachments built in, the process now runs from data entry through to delivery in one connected system, in place of paper records and standalone spreadsheets.",
+    ],
+
+    services: [
+      {
+        label: "Custom Access database development",
+        href: "https://www.accessexperts.com.au/custom-design-and-development",
+      },
+      {
+        label: "Upgrading with Access",
+        href: "https://www.accesexperts.com.au/upgrades-and-migration",
+      },
+    ],
+  },
   {
     slug: "red-fox-advisory-branding-template-rollout",
     client: "Red Fox Advisory",

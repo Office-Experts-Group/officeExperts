@@ -1,3 +1,5 @@
+// app/api/contactForm/route.js
+
 import sgMail from "@sendgrid/mail";
 import { getEmailSignature } from "../../../utils/emailSignature";
 
@@ -6,13 +8,13 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email, phone, message, honeypot } = body;
+    const { name, email, phone, message, honeypot, pageUrl } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
       return Response.json(
         { error: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -20,7 +22,7 @@ export async function POST(req) {
     if (honeypot) {
       return Response.json(
         { error: "Bot submission detected" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -38,6 +40,10 @@ export async function POST(req) {
 
     const currentTimeAEST = timeFormatter.format(new Date());
 
+    // The page the submission came from, sent by ContactForm.jsx via
+    // window.location.href. Falls back if it's ever missing.
+    const sourceUrl = pageUrl || "Not provided";
+
     // Get the email signature
     const { htmlSignature, textSignature } = getEmailSignature();
 
@@ -47,7 +53,7 @@ export async function POST(req) {
       Phone: ${phone || "Not provided"}.
       Message: ${message}
 
-      This form was filled out on the website: https://www.officeexperts.com.au @ ${currentTimeAEST} AEST
+      This form was filled out on the page: ${sourceUrl} @ ${currentTimeAEST} AEST
     `;
 
     const customerTextMessage = `
@@ -67,7 +73,7 @@ export async function POST(req) {
       <p><strong>Message:</strong></p>
       <p>${message}</p>
       
-      <em>This form was filled out on the website: https://www.officeexperts.com.au @ ${currentTimeAEST} AEST</em>
+      <em>This form was filled out on the page: ${sourceUrl} @ ${currentTimeAEST} AEST</em>
     `;
 
     const customerHtmlMessage = `
@@ -99,7 +105,7 @@ export async function POST(req) {
 
       return Response.json(
         { message: "Email sent successfully" },
-        { status: 200 }
+        { status: 200 },
       );
     } catch (emailError) {
       console.error("SendGrid error:", emailError);
