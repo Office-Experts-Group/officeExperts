@@ -107,6 +107,86 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "internal-ai-proposal-assistant-azure-migration",
+    client: "Office Experts Internal",
+    author: "Nick",
+    industry: "Professional Services",
+    site: "powerplatform",
+    title:
+      "Turning call notes and a rate card into a first-pass proposal inside the real Word template",
+    summary:
+      "The client's own proposal-writing process relied on reps manually re-reading transcripts and briefs, then copy-pasting fee figures and consultant details from the last similar proposal. We built a conversational AI assistant that turns a job request, tone guidance and call notes into a first-pass proposal drafted straight into the real Word template, complete with live fee tables, payment milestones and a consultant roster pulled from the current rate card, then migrated the tool fully inside the Microsoft/Azure tenant to meet IT's compliance requirements.",
+    results: [
+      "Manual, multi-round drafting turned into one guided conversation",
+      "Every draft pulls the same live rate card and consultant roster, not copy-pasted figures",
+      "External vendor and hosting setup retired in favour of Azure SQL, App Service and Entra ID",
+    ],
+    image: "/case-studies/internal-ai-proposal-assistant.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 conversation",
+        label: "Replaces a manual, multi-round drafting process",
+      },
+      {
+        value: "Live rate card",
+        label: "Every proposal pulls current fees and consultants",
+      },
+      {
+        value: "0 external vendors",
+        label: "Fully migrated inside the Microsoft/Azure tenant",
+      },
+    ],
+
+    challenge: [
+      "Putting together a client proposal meant a rep manually drafting fee tables, payment milestones and a consultant roster from scratch, or copy-pasting them from whatever similar proposal existed previously. Rate cards and current consultant availability largely lived in people's heads rather than in the document itself.",
+      "Case knowledge needed for a proposal, call notes, briefs and scanned documents, was scattered across files, with a rep typically having to re-read a transcript before every draft rather than working from a single reference brief.",
+      "The tool that solved this had shipped quickly on a pragmatic stack, using an external database provider and a mix of cloud and office-based hosting to get it into reps' hands fast. Once it became part of daily workflow, that setup sat outside the Microsoft tenant's compliance boundary, with an external vendor and a machine outside IT's direct control handling case data.",
+      "The business needed the tool brought fully inside its Microsoft and Azure environment, with proper single sign-on and centralised access control, backup and audit, without losing the drafting quality that came from the underlying AI models.",
+    ],
+
+    approach: [
+      {
+        heading: "Building a conversational drafting assistant",
+        body: "We built a conversational agent reps could talk to like a colleague, taking a client job request, tone and brand guidance, and call-transcript notes, and turning them into a first-pass proposal drafted directly into the client's real Word template rather than a generic summary.",
+      },
+      {
+        heading: "Connecting fee tables and rosters to live data",
+        body: "We connected the assistant to the current rate card and consultant list, so every draft's fee tables, payment milestones and 'Meet Our Experts' roster reflect live figures and availability, rather than whatever was copy-pasted from the last similar proposal.",
+      },
+      {
+        heading: "Synthesising case knowledge automatically",
+        body: "We built the assistant to accept whatever a rep already had on a case, transcripts, briefs, even scanned PDFs and images, and fold them automatically into a single reference brief, so the case's context is always on hand rather than requiring a rep to re-read source material before drafting.",
+      },
+      {
+        heading: "Shipping fast on a pragmatic initial stack",
+        body: "To get the tool into reps' hands quickly, we launched on a pragmatic stack outside the core Microsoft tenant, validating the workflow and drafting quality in daily use before committing to a larger migration.",
+      },
+      {
+        heading: "Migrating fully inside the Microsoft and Azure tenant",
+        body: "With the tool proven and mandated for migration by IT, we moved the system onto Azure SQL and Azure App Service, added Entra ID single sign-on, and replaced direct calls to the AI provider's API with Microsoft Foundry, which hosts the same underlying Claude models natively inside Azure, so drafting quality was preserved while access control, backup and audit moved under the same identity system as every other internal tool.",
+      },
+    ],
+
+    outcome: [
+      "What used to be a manual, multi-round drafting and formatting job is now one guided conversation, with the assistant producing a first-pass proposal in the client's real Word template rather than reps building fee tables and rosters by hand.",
+      "Every draft now pulls from the same live rate card and current consultant list, removing the reliance on rate and roster information living in people's heads or being copy-pasted from older proposals.",
+      "With the migration into Azure SQL, Azure App Service, Entra ID and Microsoft Foundry complete, the external vendor and office-based hosting setup have been retired, bringing access control, backup and audit under the same tenant identity as the rest of the business's systems, without giving up the Claude-powered drafting quality reps had come to rely on.",
+    ],
+
+    services: [
+      {
+        label: "AI-powered workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+      },
+      {
+        label: "Azure Cloud Solutions",
+        href: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+      },
+    ],
+  },
+  {
     slug: "building-consultants-inspection-crm",
     client: "GM Building Consultants",
     author: "Deva",
@@ -924,6 +1004,154 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "life-insurance-real-time-competitive-intelligence",
+    client: "Major Retail Bank, Life Insurance Division",
+    author: "Nick",
+    industry: "Financial Services",
+    site: "powerplatform",
+    title: "Cutting competitor response time from two weeks to twelve minutes",
+    summary:
+      "This major retail bank's life insurance division was consistently late to competitor pricing and product moves, with intel assembled by hand from fragmented sources already stale by the time it reached the product team. We built an AI-driven competitive intelligence system on the client's own Microsoft 365 tenancy that monitors competitors around the clock, detects and scores material changes, routes prioritised alerts into Teams and internal review workflows, and learns from every decision reviewers make.",
+    results: [
+      "Response time cut from 2 weeks to 12 minutes, detection to action",
+      "Signal-to-noise on competitive intel improved by 87%",
+      "200+ escalations handled per month with no manual triage",
+    ],
+    image: "/case-studies/life-insurance-competitive-intelligenceLg.png",
+    featured: true,
+
+    stats: [
+      { value: "12 min", label: "From competitor change detected to action" },
+      { value: "87%", label: "Improvement in signal-to-noise on alerts" },
+      {
+        value: "200+",
+        label: "Escalations handled monthly with no manual triage",
+      },
+    ],
+
+    challenge: [
+      "This bank's life insurance division was consistently late to competitor pricing and product moves. By the time competitive intelligence reached the product team, it had been assembled by hand from fragmented sources and was already stale, so whatever response followed was aimed at a market that had already moved on.",
+      "Tracking competitors was a manual, inconsistent process, stitched together from scattered public sources rather than a live, structured view the team could rely on. Market blind spots were common, with pricing and product changes sometimes only spotted once they'd already affected the division's own position.",
+      "The division wanted live visibility of what competitors were doing, and the ability to act on it in minutes rather than weeks, without building a team of people to watch competitor websites around the clock.",
+    ],
+
+    approach: [
+      {
+        heading: "Mapping competitors and building monitoring agents",
+        body: "We began by mapping the competitors and product categories that mattered most, then built AI monitoring agents that scan competitor sites and public content continuously, orchestrated on a schedule through Power Automate rather than relying on anyone checking manually.",
+      },
+      {
+        heading: "Building the differential detection engine",
+        body: "We built a differential detection engine that tracks what has actually changed between scans and scores each change for relevance, so the team sees material pricing and product moves rather than being buried in noise from routine page updates.",
+      },
+      {
+        heading: "Creating a structured intelligence repository",
+        body: "Every detected change, its source and its assessment is stored as structured content in a SharePoint intelligence repository, giving the division a running, searchable history of competitor activity in place of a scattered series of one-off emails.",
+      },
+      {
+        heading: "Routing alerts and hooking into internal workflows",
+        body: "We built Power Automate flows that push prioritised alerts directly into Microsoft Teams and raise items in the product, legal and compliance review workflows, with escalation rules applied automatically based on severity.",
+      },
+      {
+        heading: "Building the Power Apps review interface",
+        body: "We built a Power Apps interface where product and legal reviewers triage, action and sign off on alerts, with every decision written back to SharePoint Lists rather than tracked separately outside the system.",
+      },
+      {
+        heading: "Personalising tone and building in continuous learning",
+        body: "We matched agent messaging tone and urgency to the division's internal language and procedure, then calibrated detection and expanded coverage over time, with the system learning from every review decision so alerts keep getting more relevant the longer it runs.",
+      },
+    ],
+
+    outcome: [
+      "Response time has dropped from around two weeks to roughly 12 minutes from detection to action, with three major pricing updates made within hours of a competitor move being detected.",
+      "Signal-to-noise on competitive intelligence has improved by 87%, and more than 200 escalations a month are now handled without manual triage, freeing the team from sifting through fragmented sources by hand.",
+      "Legal and product teams now treat the AI system as frontline monitoring rather than a reporting afterthought, trusting alerts written in the firm's own voice enough to act on directly, and relevance keeps improving as the system learns from every internal review decision made.",
+    ],
+
+    services: [
+      {
+        label: "AI-powered workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+      },
+      {
+        label: "Power BI reporting services",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+      },
+    ],
+  },
+  {
+    slug: "corporate-group-multi-entity-master-template-suite",
+    client: "Corporate Resources Group",
+    author: "Nae",
+    industry: "Mining and Resources",
+    site: "word",
+    title:
+      "One shared Global Common template keeping four entities on-brand without four separate rebuilds",
+    summary:
+      "This corporate group needed consistent, professional templates across four related entities, without duplicating the work of building and maintaining branding for each one separately. We built custom Master Templates for each entity from a single shared Global Common template, and added a custom Formatting tab with a copy/paste macro that strips out foreign formatting and applies approved styling automatically.",
+    results: [
+      "Custom Master Templates delivered for four entities from one shared Global Common base",
+      "Copy/paste macro strips foreign formatting and applies approved styling automatically",
+      "Custom Formatting tab gives staff practical, everyday tools without leaving Word",
+    ],
+    image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+    featured: false,
+
+    stats: [
+      { value: "4", label: "Entities templated from one shared foundation" },
+      {
+        value: "1 Global Common",
+        label: "Single base template shared across all entities",
+      },
+      {
+        value: "1 click",
+        label: "To strip foreign formatting and apply approved styling",
+      },
+    ],
+
+    challenge: [
+      "This corporate group operates across four related entities, each needing its own professionally branded document templates. Building and maintaining that branding separately for each entity risked drift between them, inconsistent styling, and considerable duplicated effort every time something needed updating.",
+      "Beyond the templates themselves, staff regularly copied content in from other sources, bringing foreign formatting with it that could quietly break the approved styling the templates were built around, the kind of everyday problem that erodes brand consistency one document at a time.",
+      "The group needed a way to give every entity its own properly branded Master Template, without four independent builds and four separate maintenance burdens going forward.",
+    ],
+
+    approach: [
+      {
+        heading: "Building a shared Global Common template",
+        body: "We built a single Global Common template holding the styles, structures and functionality shared across all four entities, so common elements only ever need to be built and maintained once, rather than four times over.",
+      },
+      {
+        heading: "Building custom Master Templates per entity",
+        body: "From the Global Common base, we built a custom Master Template for each of the four entities, reflecting each one's specific branding while staying built on the same consistent foundation underneath.",
+      },
+      {
+        heading: "Designing the Bravus Formatting tab",
+        body: "We designed a custom Formatting tab packed with practical, everyday tools, including a Custom Page Layouts button, an Insert Table button and a Style Cleanup function, giving staff quick access to the functions they use regularly without leaving Word.",
+      },
+      {
+        heading: "Building the copy/paste macro",
+        body: "The tab's most valuable feature is a copy/paste macro that automatically strips out foreign formatting from pasted content and applies the group's approved styling in its place, so brand consistency is enforced at the point content is added rather than fixed after the fact.",
+      },
+    ],
+
+    outcome: [
+      "All four entities now have their own custom Master Template, built from a single shared Global Common template rather than four independent builds, keeping maintenance centralised even as each entity's branding stays distinct.",
+      "The custom Formatting tab gives staff practical tools they use every day, from custom page layouts to table insertion and style cleanup, without needing to leave Word or work around the templates to get their job done.",
+      "The copy/paste macro means foreign formatting brought in from other sources no longer quietly breaks the approved styling, with Bravus-approved formatting applied automatically the moment content is pasted in, keeping documents consistent across all four entities with far less manual correction.",
+    ],
+
+    services: [
+      {
+        label: "Quick Parts",
+        href: "https://www.wordexperts.com.au/quick-parts",
+      },
+      {
+        label: "Corporate templates",
+        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+      },
+    ],
+  },
+  {
     slug: "retail-analytics-automated-review-deck-generator",
     client: "Retail Analytics Business",
     author: "Power Platform Team",
@@ -1142,6 +1370,77 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "sporting-goods-agentic-ai-customer-service",
+    client: "National Sporting Goods Provider",
+    author: "Nick",
+    industry: "Retail",
+    site: "powerplatform",
+    title:
+      "Resolving customer service tickets end to end in 3 hours instead of 48",
+    summary:
+      "This national sporting goods provider ran its entire customer service function out of Microsoft 365, with agents manually triaging every ticket, updating spreadsheets and writing responses by hand. We built a chained agentic AI system on Power Automate and Power Apps, with specialised Classifier, Resolution, Validation and Escalation agents working in sequence, human-in-the-loop review feeding continuous training back in, and the system now resolving two-thirds of tickets end to end with no human intervention.",
+    results: [
+      "Resolution time cut by 94%, from a 48-hour average down to 3 hours",
+      "67% of tickets resolved end to end with no human intervention",
+      "100% policy compliance across every automated response",
+    ],
+    image: "/case-studies/sporting-goods-agentic-customer-serviceLg.png",
+    featured: true,
+
+    stats: [
+      { value: "94%", label: "Reduction in average resolution time" },
+      { value: "67%", label: "Of tickets resolved with full AI autonomy" },
+      { value: "100%", label: "Automated responses aligned to company policy" },
+    ],
+
+    challenge: [
+      "This national sporting goods provider ran its entire customer service function out of Microsoft 365, with email as the primary case management channel. Every ticket was triaged manually, with agents updating spreadsheet records and writing responses by hand, creating bottlenecks at exactly the point customers were waiting on a reply.",
+      "Customer data sat scattered across multiple databases and sources with almost no automation between them, so agents were navigating several systems per case just to piece together the full picture before they could respond.",
+      "Routine, repetitive cases were eating the team's capacity, leaving little room for the complex escalations that actually needed human judgement. Response quality also varied by agent, with no guarantee that company policy was being applied consistently from one ticket to the next.",
+      "The client wanted agentic AI workflows, self-directed AI systems able to run the full customer service lifecycle from intake to closure, without losing human oversight of the outcomes.",
+    ],
+
+    approach: [
+      {
+        heading: "Establishing the Microsoft foundations",
+        body: "We started by building the SharePoint architecture and standardised Power Apps intake forms the rest of the system would run on, giving every ticket a consistent structure from the moment it entered the system.",
+      },
+      {
+        heading: "Building the AI-driven knowledge base",
+        body: "We restructured the client's company policies, FAQs and historical tickets into a clean, structured corpus in SharePoint that the AI agents could reason over, rather than leaving that knowledge scattered across documents and inboxes.",
+      },
+      {
+        heading: "Deploying the chained agent system",
+        body: "We built a chained system of separate Classifier, Resolution, Validation and Escalation agents working in sequence via Power Automate, with Relevance.ai orchestrating the agentic workflows end to end, and rolled it out with staged automation rather than switching everything on at once.",
+      },
+      {
+        heading: "Building in human-in-the-loop training",
+        body: "Staff reviewed and corrected AI outputs during validation, with those corrections fed back into the system as continuous training, so accuracy and autonomy improved progressively rather than being fixed at launch.",
+      },
+      {
+        heading: "Scaling automation once validated",
+        body: "With the system validated through staged rollout, we scaled automation up to handle the majority of tickets unassisted, reserving human attention for the complex escalations that genuinely needed it.",
+      },
+    ],
+
+    outcome: [
+      "Average resolution time has dropped by 94%, from 48 hours down to 3 hours, with 67% of tickets now resolved end to end with no human intervention at all.",
+      "Every automated response aligns fully with company policy and brand voice, replacing the inconsistency that came from responses varying agent to agent, and agents have seen a 75% efficiency gain on the routine tickets that used to consume most of their time.",
+      "The system now handles thousands of cases concurrently with no additional headcount, and staff have been redeployed from routine ticket handling onto complex cases and strategic work. The client is now extending the same pattern to HR, procurement and IT support, alongside proactive monitoring agents that flag issues before customers report them and autonomous escalation routing based on specialist expertise matching.",
+    ],
+
+    services: [
+      {
+        label: "AI-powered workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+      },
+      {
+        label: "Power Apps and Power Automate solutions",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+      },
+    ],
+  },
+  {
     slug: "film-crew-booking-system-access-nextjs-rebuild",
     client: "Freelance Crew Promotions Agency",
     industry: "Media and Entertainment",
@@ -1223,6 +1522,80 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "financial-services-ai-risk-compliance-automation",
+    client: "FCA-Regulated Financial Services Firm",
+    author: "Nick",
+    industry: "Financial Services",
+    site: "powerplatform",
+    title:
+      "Taking 24 unowned risks to full ownership and monthly reviews from 6 hours to 1",
+    summary:
+      "This FCA-regulated financial services firm had outgrown a compliance workflow built on spreadsheets and scattered policy documents, and needed to modernise without losing its own terminology, tone and procedural logic. We replaced the spreadsheet with a live SharePoint risk register, built AI agents that map risks to mitigations and controls, and added a real-time compliance dashboard and automated regulatory alerting, all personalised to read as the firm's own work.",
+    results: [
+      "Monthly compliance review time cut by 83%, from 6 hours to 1",
+      "Mitigation coverage up from 58% to 94% of identified risks",
+      "100% risk ownership, with all 24 previously unowned risks assigned and tracked",
+    ],
+    image: "/case-studies/financial-services-compliance-automationLg.png",
+    featured: true,
+
+    stats: [
+      { value: "83%", label: "Reduction in monthly compliance review time" },
+      { value: "58% → 94%", label: "Mitigation coverage of identified risks" },
+      { value: "24 → 0", label: "Risks left without a named owner" },
+    ],
+
+    challenge: [
+      "This mid-sized financial services firm operates under Financial Conduct Authority oversight, and growing regulatory pressure alongside expanding operations had outgrown its compliance workflow, which still ran on spreadsheets and policy documents scattered across multiple repositories.",
+      "The risk register was inconsistently updated and needed constant hand-maintenance, creating compliance blind spots and audit vulnerabilities. Twenty-four risks in the register had no named owner at all, sitting untracked rather than actively managed.",
+      "With no central access to policy documentation and no actionable guidance readily available to staff, the compliance team was burning time on repetitive lookups and manual updates rather than higher-value risk analysis. The firm wanted to modernise all of this without losing its own terminology, tone and procedural logic. The system had to sound and behave like them, not like an off-the-shelf compliance tool.",
+    ],
+
+    approach: [
+      {
+        heading: "Extracting and structuring the compliance knowledge base",
+        body: "We ingested the firm's FCA regulatory documentation and internal policy documents into a structured SharePoint Online knowledge base, tagged with metadata and kept current as guidance changes, replacing scattered repositories with one central source.",
+      },
+      {
+        heading: "Replacing the spreadsheet with a live risk register",
+        body: "We rebuilt the risk register as a structured SharePoint list acting as the single system of record, with ownership, review dates and version history captured against every risk rather than relying on manual spreadsheet maintenance.",
+      },
+      {
+        heading: "Building AI risk-mapping agents",
+        body: "We built AI agents, orchestrated through Power Automate, that dynamically map individual risks to the appropriate mitigations and controls, turning a static register into a living compliance framework that updates as risks and controls change.",
+      },
+      {
+        heading: "Deploying the compliance dashboard",
+        body: "We deployed a Power BI and Power Apps compliance dashboard surfacing real-time recommendations and assignments with clear ownership and accountability, made visible to staff directly in Microsoft Teams, and ran departmental training alongside the rollout.",
+      },
+      {
+        heading: "Automating regulatory-change alerting",
+        body: "We built Power Automate flows that push notifications when regulations change, attaching an impact assessment and recommended actions and routing them straight to the named risk owner, rather than compliance staff needing to monitor for changes manually.",
+      },
+      {
+        heading: "Personalising tone and fine-tuning to internal workflows",
+        body: "We tuned the agents to mirror the firm's internal language, tone and procedural logic, so outputs read as the firm's own work, then fine-tuned the whole system against the firm's real workflows before full handover.",
+      },
+    ],
+
+    outcome: [
+      "Monthly compliance review time has dropped by 83%, from around 6 hours down to 1, and weekly manual policy lookups have fallen from 30 to 5, an equivalent 83% reduction, freeing the compliance team from repetitive lookups and updates.",
+      "Mitigation coverage has risen from 58% to 94% of identified risks, and all 24 risks that previously had no named owner are now assigned and actively tracked, giving the firm full risk ownership across the register for the first time.",
+      "The firm now has a complete audit trail across every compliance element, with live FCA alignment that updates automatically as regulations change, and compliance resource that used to go toward routine maintenance has been redirected onto strategic risk work instead.",
+    ],
+
+    services: [
+      {
+        label: "Power Automate workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      },
+      {
+        label: "Power BI reporting services",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+      },
+    ],
+  },
+  {
     slug: "private-client-cashflow-forecasting-tool",
     client: "Private Client",
     author: "Office Experts Team",
@@ -1297,6 +1670,80 @@ export const caseStudies = [
       {
         label: "Reporting and analytics",
         href: "https://www.excelexperts.com.au/custom-design-and-development",
+      },
+    ],
+  },
+  {
+    slug: "biochar-ai-go-to-market-analysis-uk",
+    client: "International Sustainability Company",
+    author: "Nick",
+    industry: "Sustainability and Carbon Removal",
+    site: "powerplatform",
+    title:
+      "Turning 10,000+ documents into a 70-page go-to-market report in 4 weeks, not 3 months",
+    summary:
+      "This international sustainability company needed a go-to-market strategy for entering the UK BioChar market, built fast from research scattered across government databases, competitor material, academic journals and customer sources, with every piece of human judgement along the way properly documented. We built AI research agents that scanned and synthesised sources into a reusable SharePoint knowledge base, auto-populated a standardised Word report template, and captured every analyst refinement through Power Apps for a full audit trail.",
+    results: [
+      "10,000+ documents synthesised into a single 70-page GTM report",
+      "Report delivered in 4 weeks instead of 3 months",
+      "100% of human refinements logged and auditable",
+    ],
+    image: "/case-studies/biochar-gtm-analysisLg.png",
+    featured: false,
+
+    stats: [
+      { value: "10,000+", label: "Documents synthesised into the report" },
+      { value: "4 weeks", label: "Delivery time, down from 3 months" },
+      { value: "100%", label: "Human refinements logged and auditable" },
+    ],
+
+    challenge: [
+      "This international sustainability company needed a go-to-market strategy for entering the UK BioChar market, built quickly from a research base spread across government databases, competitor material, academic journals and customer sources, with no single place to collect or work from any of it.",
+      "Traditional research and report writing for a project of this scope was slow, and tended to produce inconsistent structure between sections depending on which analyst wrote them, making the final document harder to use as a coherent strategy.",
+      "Just as importantly, the human judgement applied throughout the process, the decisions analysts made about what to focus on and how to interpret findings, went undocumented in the traditional approach, kept in inboxes and heads rather than recorded anywhere, so the reasoning behind the eventual strategy couldn't be reproduced or defended later.",
+    ],
+
+    approach: [
+      {
+        heading: "Setting up the research framework",
+        body: "We defined the go-to-market report structure and the AI sourcing approach upfront, establishing which government, competitor, academic and customer sources the research agents would draw from before ingestion began.",
+      },
+      {
+        heading: "Building the research agentic workflows",
+        body: "We built AI agents, orchestrated through Power Automate, that scanned and synthesised government databases, competitor sources and academic journals, writing structured findings straight back into SharePoint rather than leaving research scattered across separate files.",
+      },
+      {
+        heading: "Building a reusable SharePoint knowledge base",
+        body: "Every source, extract and finding was stored as structured content with metadata in a SharePoint knowledge base, so the research becomes reusable for future markets and products rather than a one-off exercise that has to be repeated from scratch.",
+      },
+      {
+        heading: "Capturing human input and refinement",
+        body: "Analysts directed AI focus and refined outputs through a Power Apps interface, with every refinement written to SharePoint Lists, producing a full audit trail of who changed what and why throughout the research and drafting process.",
+      },
+      {
+        heading: "Automating the report framework",
+        body: "We automated the report structure so market, regulatory, competitor and customer sections auto-populated into a standardised Word template, keeping structure consistent across the whole document rather than varying section to section.",
+      },
+      {
+        heading: "Reviewing and signing off through Teams",
+        body: "Microsoft Teams served as the working surface for analyst review and sign-off through each phase, from initial data ingestion through to the final structured, evidence-based report.",
+      },
+    ],
+
+    outcome: [
+      "More than 10,000 documents were synthesised into a single 70-page go-to-market report, delivered in 4 weeks instead of the 3 months the traditional process would have taken, advancing the client's market-entry decision by roughly two months.",
+      "Every human refinement made during research and drafting is logged and auditable, giving a clear record of AI versus human contribution and a defensible trail behind the reasoning in the final strategy.",
+      "The report follows a consistent structure aligned to best-practice go-to-market frameworks rather than varying by author, and the underlying SharePoint knowledge base is reusable, with the same methodology now running for other regions and sustainability products without needing to be rebuilt each time.",
+    ],
+
+    services: [
+      {
+        label: "AI-powered workflows",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+      },
+      {
+        label: "Business process automation",
+        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
       },
     ],
   },
