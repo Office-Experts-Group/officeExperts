@@ -398,6 +398,90 @@ export const caseStudies = [
       },
     ],
   },
+  // New case study object — copy this into the caseStudies array in caseStudies.js
+  // Suggested placement: add as a new entry before the closing "];" of the array
+
+  {
+    slug: "government-workplace-safety-interactive-word-forms",
+    client: "State Workplace Safety Authority",
+    author: "Damien",
+    industry: "Government",
+    site: "word",
+    title:
+      "Rebuilding static assessment and referral forms into guided, tamper-proof Word documents",
+    summary:
+      "This government workplace safety authority relied on a suite of complex Word forms for assessment, referral and reporting workflows, but inconsistent formatting and disjointed layouts made them difficult to complete, and users could easily alter formatting or delete mandatory content. We rebuilt every form from the ground up using structured styles, advanced content controls and document protection, so staff now complete each one by simply tabbing through guided, locked-down fields.",
+    results: [
+      "Entire suite of assessment, referral and reporting forms rebuilt with consistent formatting and branding",
+      "Content controls and document protection prevent accidental changes to layout or mandatory content",
+      "Guided tab-through data entry replaces static, error-prone form completion",
+    ],
+    image: "/case-studies/government-workplace-safety-interactive-formsLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "Full suite",
+        label: "Assessment, referral and reporting forms rebuilt",
+      },
+      {
+        value: "0",
+        label: "Formatting or layout changes possible during completion",
+      },
+      { value: "Tab-through", label: "Guided data entry across every form" },
+    ],
+
+    challenge: [
+      "This government workplace safety authority relied on a suite of complex Word forms to support its assessment, referral and reporting workflows, the everyday paperwork behind how cases were reviewed and processed.",
+      "Over time, the forms had become inconsistent. Formatting and layouts differed from one document to the next, and completing them was neither intuitive nor quick, creating a difficult and time-consuming experience for the staff who used them daily.",
+      "Because the forms were built as ordinary, unprotected Word documents, users could easily alter formatting, delete mandatory content, or otherwise corrupt the layout while filling them in, undermining the consistency and integrity of the data being captured.",
+      "Beyond the day-to-day usability problem, the inconsistent design made the forms difficult to maintain and support, and left the authority with no reliable way to guarantee consistent data capture or document governance across the suite, on top of a static structure that didn't reflect how the information actually needed to be entered.",
+    ],
+
+    approach: [
+      {
+        heading: "Rebuilding the forms from the ground up",
+        body: "We rebuilt every form in the suite from scratch using structured Microsoft Word styles and template design best practices, rather than patching the existing layouts.",
+      },
+      {
+        heading: "Standardising formatting and branding across the suite",
+        body: "We standardised formatting, layout, navigation and branding across the entire document suite, so every form shared the same consistent structure and appearance regardless of which workflow it supported.",
+      },
+      {
+        heading: "Adding advanced content controls",
+        body: "We built dropdown lists, text-only entry fields, checkboxes and image placeholders directly into the forms, replacing free-text areas that were prone to inconsistent or incorrect entries.",
+      },
+      {
+        heading: "Building dynamic tables for real-world data",
+        body: "We added dynamic tables combining expandable and static fields, so the forms could properly support the varying amount of information each case genuinely required, rather than forcing data into a fixed, static layout.",
+      },
+      {
+        heading: "Locking the forms down with document protection",
+        body: "We applied document protection and editing restrictions across every form, preventing accidental changes to layout, formatting or mandatory content, so the structure the authority had designed stayed exactly as built no matter who completed it.",
+      },
+      {
+        heading: "Delivering a guided, tab-through experience",
+        body: "With content controls and protection in place, staff can now complete each form simply by tabbing through the required fields in order, creating an intuitive, guided data-entry experience across the whole suite.",
+      },
+    ],
+
+    outcome: [
+      "The authority now has a full suite of functional, intuitive Word forms that behave consistently no matter who is completing them, replacing documents that had drifted out of shape over time.",
+      "With content controls and document protection built in, the risk of accidental modification or corruption has been virtually eliminated, and document integrity is maintained throughout the completion process.",
+      "Data capture is now more consistent and accurate, administrative effort and support requirements have reduced, and staff have adopted the new forms more readily thanks to the guided, tab-through experience built into every one.",
+    ],
+
+    services: [
+      {
+        label: "Fillable Forms",
+        href: "https://www.wordexperts.com.au/fill-in-forms",
+      },
+      {
+        label: "Government department services",
+        href: "https://www.wordexperts.com.au/government-departments",
+      },
+    ],
+  },
   {
     slug: "government-health-master-template-document-transfer",
     client: "State Government Health Department",
@@ -1370,6 +1454,74 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "/case-studies/environmental-consultancy-word-template-rebuild",
+    client: "the client",
+    author: "Jamie",
+    industry: "Environmental Services",
+    site: "word",
+    title:
+      "Rebuilding a beautifully designed template that Word itself couldn't cope with",
+    summary:
+      "The client had just had a new set of Word templates designed to their brand, and visually they were exactly right. The problem was underneath the surface: the templates hadn't been built the way Word needs to be built, which made them inefficient to use and prone to formatting errors. We rebuilt the entire suite from the ground up, keeping the design faithfully intact while making the templates genuinely fit for daily use.",
+    results: [
+      "Full template suite rebuilt in Word without changing the approved design",
+      "Formatting errors designed out at the structural level, not patched over",
+      "Templates made efficient and reliable for staff to use every day",
+    ],
+    image:
+      "/case-studies/environmental-consultancy-word-template-rebuildLg.png",
+    featured: false,
+
+    stats: [
+      { value: "100%", label: "Approved brand look and feel preserved" },
+      { value: "1 suite", label: "Templates rebuilt properly in Word" },
+      { value: "0", label: "Design compromises made along the way" },
+    ],
+
+    challenge: [
+      "The client had recently invested in a brand refresh, and a designer had produced a new set of Word templates to match. Viewed as static pages, the templates looked exactly as intended, polished, on-brand and ready to represent the business.",
+      "The trouble was what sat underneath that polish. The templates had been laid out the way a design tool lays out a page, rather than the way Word actually needs to be structured to stay stable. Elements had been positioned manually rather than built on proper styles, headings and page structure, which is a common gap between a design that looks right and a template that behaves right.",
+      "In practice, that meant the templates were inefficient for staff to actually use. Simple edits, adding a paragraph, adjusting a heading, inserting a new section, risked pushing the layout out of shape. Formatting errors crept in easily and were awkward to fix, turning what should have been a quick document update into a fiddly repair job.",
+      "The client didn't want a new design. The brand work was right and had already been signed off. What they needed was for that same look and feel to be rebuilt on a foundation that would actually hold up to everyday use in Word.",
+    ],
+
+    approach: [
+      {
+        heading: "Reviewing the designed templates",
+        body: "We reviewed the templates as delivered by the designer, identifying exactly which elements were causing the inefficiency and formatting errors, from manually placed design elements through to missing styles and inconsistent page structure.",
+      },
+      {
+        heading: "Rebuilding on proper Word foundations",
+        body: "We rebuilt each template from the ground up using genuine Word styles, headings and page structure in place of the manual, design-tool-style layout, so the templates would hold their shape as staff actually worked in them.",
+      },
+      {
+        heading: "Preserving the approved look and feel",
+        body: "Throughout the rebuild, we kept the templates visually faithful to the design the client had already approved, so the brand refresh they'd paid for came through unchanged, only now built on a structure that could support it.",
+      },
+      {
+        heading: "Optimising for everyday use",
+        body: "Beyond fixing the underlying structure, we optimised each template to be as user friendly as possible day to day, so staff could edit and add content naturally without fighting the formatting or accidentally breaking the layout.",
+      },
+    ],
+
+    outcome: [
+      "The client now has the exact template design they signed off on, but rebuilt on a proper Word foundation rather than a design layout that happened to be opened in Word.",
+      "The formatting errors that came from manually placed design elements have been designed out at the structural level, rather than left for staff to work around or fix one document at a time.",
+      "Staff can now use the templates efficiently as part of everyday work, editing and building documents without the risk of the layout quietly breaking underneath them.",
+    ],
+
+    services: [
+      {
+        label: "Word template design",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
+      },
+      {
+        label: "Document rebranding services",
+        href: "https://www.wordexperts.com.au/document-rebranding-services",
+      },
+    ],
+  },
+  {
     slug: "sporting-goods-agentic-ai-customer-service",
     client: "National Sporting Goods Provider",
     author: "Nick",
@@ -1596,6 +1748,79 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "committee-report-master-template-pdf-merge",
+    client: "the client",
+    author: "Jamie",
+    industry: "Strata and Committee Management",
+    site: "word",
+    title:
+      "Turning a multi-author committee report into one polished PDF, over a weekend",
+    summary:
+      "The client, representing a local executive committee, needed reports from several authors with limited Word experience collated, formatted consistently, and combined with several supporting PDFs into a single, clean document ready for submission, all against an urgent deadline. We built a properly formatted Master Template, transferred every author's content into it working after hours and over the weekend, then merged the finished document with the supporting PDFs into one submission-ready PDF.",
+    results: [
+      "Reports from several authors with limited Word skills unified into one consistently formatted document",
+      "Master Template built and content transferred after hours and over a weekend to meet an urgent deadline",
+      "Multiple Word documents and PDFs merged into a single, clean PDF ready for submission",
+    ],
+    image: "/case-studies/committee-report-master-template-pdf-mergeLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 template",
+        label: "Master Template built to unify every author's content",
+      },
+      {
+        value: "Weekend turnaround",
+        label: "Work completed after hours to meet the deadline",
+      },
+      { value: "1 PDF", label: "Final merged document ready to submit" },
+    ],
+
+    challenge: [
+      "The client represented a local executive committee that needed to submit a single, properly formatted report, but the content for it was arriving from several different authors, each responsible for their own section and each with very limited Word experience.",
+      "With formatting left to whoever happened to be writing each section, headings, spacing, fonts and numbering were all inconsistent from one contribution to the next, with no shared template holding the document together as a whole.",
+      "On top of the formatting problem, the finished report needed to be combined with several existing PDF documents into one single, clean file the committee could submit, rather than a bundle of separate Word and PDF attachments.",
+      "The job also carried a hard deadline. There was no time for a standard turnaround, the work needed to be completed after hours and over the weekend to get the client's submission in on time.",
+    ],
+
+    approach: [
+      {
+        heading: "Building a single Master Template",
+        body: "We built a properly formatted Master Template from scratch, establishing one consistent structure for headings, spacing, numbering and styles that every author's section would ultimately share.",
+      },
+      {
+        heading: "Transferring each author's content",
+        body: "We worked through each contributor's Word document individually, moving their content into the Master Template and correcting formatting as we went, so the finished report read as one consistent document rather than a patchwork of different authors' styles.",
+      },
+      {
+        heading: "Working after hours and over the weekend",
+        body: "Given the urgency of the submission, we worked outside standard hours and across the weekend to get the full document set formatted and finalised in time for the client's deadline.",
+      },
+      {
+        heading: "Merging Word and PDF into one file",
+        body: "With the Master Template finalised, we used Adobe Acrobat to merge it together with the client's several supporting PDF documents into a single file, checking formatting and pagination throughout so the finished PDF was clean and ready to submit.",
+      },
+    ],
+
+    outcome: [
+      "The client's committee report now reads as one consistent, properly formatted document, rather than a set of sections that each looked different depending on who had written them.",
+      "Because the work was completed after hours and over the weekend, the client met their submission deadline despite the short turnaround and the number of separate documents involved.",
+      "The finished submission is a single, clean PDF combining the Master Template and the client's supporting PDF documents, ready to hand over without any further formatting work on the client's end.",
+    ],
+
+    services: [
+      {
+        label: "Word document template creation",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
+      },
+      {
+        label: "Word template conversions",
+        href: "https://www.wordexperts.com.au/word-template-conversions",
+      },
+    ],
+  },
+  {
     slug: "private-client-cashflow-forecasting-tool",
     client: "Private Client",
     author: "Office Experts Team",
@@ -1744,6 +1969,78 @@ export const caseStudies = [
       {
         label: "Business process automation",
         href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+      },
+    ],
+  },
+  {
+    slug: "legal-firm-template-suite-formatting-tab",
+    client: "the client",
+    author: "Jamie",
+    industry: "Legal",
+    site: "word",
+    title:
+      "Locking a law firm's style guide into templates staff couldn't quietly override",
+    summary:
+      "This legal firm had a style guide on paper, but in practice staff were editing documents to suit their own preferences rather than following it, leaving formatting inconsistent from one file to the next. We built a full suite of documents based on the firm's style guide, then added our custom Formatting tab so staff could access the built-in legal numbering lists easily, without the formatting being easy to change.",
+    results: [
+      "Full document suite rebuilt to match the firm's own style guide",
+      "Custom Formatting tab added for one-click access to legal numbering lists",
+      "Formatting made difficult to override, keeping every document consistent",
+    ],
+    image: "/case-studies/legal-firm-template-formatting-tabLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 suite",
+        label: "Documents rebuilt to the firm's style guide",
+      },
+      {
+        value: "1 tab",
+        label: "Custom Formatting tab for legal numbering lists",
+      },
+      { value: "Locked", label: "Formatting controls, not left open to staff" },
+    ],
+
+    challenge: [
+      "This legal firm had a style guide setting out exactly how its documents should look, but in day-to-day use that guide wasn't being followed. Individual staff members were editing documents to match their own preferences on any given day, rather than sticking to the formatting the firm had already decided on.",
+      "That meant no two documents necessarily looked alike, even when they were meant to be built from the same template. Fonts, spacing and numbering could all drift depending on who had last worked on a file, undermining the consistency the style guide was supposed to guarantee.",
+      "The firm needed a suite of documents that were genuinely easier for staff to work with day to day, while also being as difficult as possible to change the underlying formatting of, so consistency didn't depend on everyone remembering and following the style guide by hand.",
+    ],
+
+    approach: [
+      {
+        heading: "Building the document suite from the style guide",
+        body: "We built a full suite of documents formatted correctly according to the firm's existing style guide, giving every document type a consistent, on-brand foundation to work from rather than leaving formatting to individual interpretation.",
+      },
+      {
+        heading: "Engineering legal numbering lists into the templates",
+        body: "We built the firm's legal numbering lists directly into the templates, so the correct numbering structure was already in place whenever a document was created, rather than something staff had to set up or fix manually.",
+      },
+      {
+        heading: "Adding the custom Formatting tab",
+        body: "The client purchased our custom Formatting tab, giving staff quick, one-click access to the legal numbering lists we'd built into the templates, so using the correct structure was easier than working around it.",
+      },
+      {
+        heading: "Locking down formatting controls",
+        body: "Alongside making the templates easier to use, we locked down the formatting controls available to staff, making it as difficult as possible to override fonts, spacing and other style elements the firm needed kept consistent.",
+      },
+    ],
+
+    outcome: [
+      "The firm now has a full suite of documents that are properly formatted according to its own style guide, rather than depending on individual staff members applying that guide correctly, or at all, each time.",
+      "With the custom Formatting tab in place, staff can access and apply the firm's legal numbering lists in a click, making it easier to work with the templates the right way than to work around them.",
+      "Because the formatting controls themselves are locked down, documents are far less likely to drift away from the style guide over time, giving the firm the day-to-day consistency it was after without needing to police it manually.",
+    ],
+
+    services: [
+      {
+        label: "Custom Word ribbon development",
+        href: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+      },
+      {
+        label: "Word template design",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
       },
     ],
   },
