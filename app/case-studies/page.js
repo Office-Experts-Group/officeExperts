@@ -1,6 +1,6 @@
 // app/case-studies/page.js
 
-import { caseStudies } from "./caseStudies";
+import { caseStudies, siteMeta } from "./caseStudies";
 import CaseStudyRow from "./(components)/CaseStudyRow";
 
 import ServiceHero from "../../components/ServiceHero";
@@ -15,6 +15,14 @@ import {
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
+
+// The ?site= param only ever changes the ORDER case studies render in, never
+// which ones appear — so this stays one page as far as Google's concerned.
+// Canonicalising to the bare URL makes that explicit, rather than leaving
+// Google to guess whether /case-studies?site=excel is a separate page.
+export const metadata = {
+  alternates: { canonical: "/case-studies" },
+};
 
 const schema = {
   "@context": "https://schema.org",
@@ -63,7 +71,21 @@ const schema = {
     },
   ],
 };
-const CaseStudiesPage = () => {
+
+// Next 15's searchParams is async, same as `params` already is on the
+// [slug] route — has to be awaited before you can read `site` off it.
+const CaseStudiesPage = async ({ searchParams }) => {
+  const { site } = await searchParams;
+
+  // Unknown/missing site falls straight back to the original, unordered
+  // list — this only ever reorders, it never filters anything out.
+  const orderedCaseStudies = siteMeta[site]
+    ? [
+        ...caseStudies.filter((study) => study.site === site),
+        ...caseStudies.filter((study) => study.site !== site),
+      ]
+    : caseStudies;
+
   return (
     <>
       <script
@@ -94,7 +116,7 @@ const CaseStudiesPage = () => {
 
       <section className={styles.section}>
         <div className={styles.rows}>
-          {caseStudies.map((study, index) => (
+          {orderedCaseStudies.map((study, index) => (
             <CaseStudyRow
               key={study.slug}
               study={study}
