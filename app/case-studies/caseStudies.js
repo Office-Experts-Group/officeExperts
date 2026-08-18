@@ -187,6 +187,88 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "custom-quoting-tool",
+    client: "A tax depreciation specialist",
+    author: "Dan",
+    industry: "Tax & Accounting",
+    site: "office", // TODO: confirm this matches your site-key convention
+    title:
+      "Replacing manual quote requests with an instant online tax depreciation calculator",
+    summary:
+      "The client helps property investors understand what they can claim in tax depreciation, but had no way for a prospective customer to get an estimate without contacting the office directly. Every enquiry meant a staff member manually looking up the relevant depreciation figures and working through the calculation by hand before emailing a quote back. We built a custom React-based calculator, embedded into their WordPress site as a plugin, that lets a property investor enter their own details and receive an instant, branded estimate by email, with the same result sent straight to the client's team at the same time.",
+    results: [
+      "Property investors get an instant online estimate instead of waiting on a manually prepared quote",
+      "Results are emailed automatically to both the customer and the client's team the moment a form is submitted",
+      "Depreciation figures and calculation logic no longer looked up and applied by hand for every enquiry",
+    ],
+    image: "/case-studies/custom-quoting-tool.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "Instant",
+        label: "Online estimate, down from a manual quote request",
+      },
+      {
+        value: "2",
+        label:
+          "Automatic email recipients per quote — customer and client team",
+      },
+      {
+        value: "Editable",
+        label:
+          "Rates and building price index data, client-managed going forward",
+      },
+    ],
+
+    challenge: [
+      "The client had no online way for a prospective property investor to get an indicative tax depreciation estimate. Anyone interested had to contact the office directly and wait for a quote.",
+      "Producing that quote meant a staff member manually looking up the applicable depreciation figures for the property and working through the calculation themselves, then writing up and emailing the result, one enquiry at a time.",
+      "That manual process was slow for prospective customers wanting a fast, indicative figure, and it took staff time away from paying client work every time a new enquiry came in.",
+      "The client also needed a way to keep the underlying rates and building price index (BPI) data current over time, without relying on a developer to change code every time a figure needed updating.",
+    ],
+
+    approach: [
+      {
+        heading: "Building the calculator engine",
+        body: "We translated the client's existing manual calculation rules into a React application, replicating the depreciation logic and eligibility checks staff had previously been applying by hand.",
+      },
+      {
+        heading: "Embedding it into their WordPress site",
+        body: "The client's site runs on WordPress and Elementor, so we built a custom plugin to embed the React calculator directly into the existing site, giving visitors a self-service tool without sending them anywhere else.",
+      },
+      {
+        heading: "Automating instant results by email",
+        body: "We connected the calculator to the client's SMTP email provider so that as soon as a property investor submits their details, a branded results email is generated and sent automatically to both the customer and the client's own team, replacing the manual quote email entirely.",
+      },
+      {
+        heading: "Giving the client control over the data",
+        body: "We built admin-editable components so the client's own staff can update depreciation rates and add building price index data themselves in future, without needing a developer involved for routine figure changes.",
+      },
+      {
+        heading: "Refining against real feedback",
+        body: "We worked through several rounds of client feedback — matching the email and print branding to their visual identity, correcting eligibility logic, adjusting form fields, and updating the layout — before sign-off.",
+      },
+    ],
+
+    outcome: [
+      "Property investors can now get an indicative tax depreciation estimate instantly online, with no manual involvement from the client's staff to produce the initial quote.",
+      "Every submission automatically emails a branded results summary to both the customer and the client's team, removing the manual quote-writing step from the process.",
+      "The client can update depreciation rates and building price index data themselves as figures change, keeping the tool accurate without ongoing developer involvement for routine updates.",
+    ],
+
+    services: [
+      {
+        label: "App & custom development",
+        href: "https://www.officeexperts.com.au/services/microsoft-office-365/app-and-custom-development",
+      },
+      {
+        label: "Business process automation",
+        href: "https://www.officeexperts.com.au/services/microsoft-office-365/business-process-automation",
+      },
+    ],
+  },
+  {
     slug: "building-consultants-inspection-crm",
     client: "GM Building Consultants",
     author: "Deva",
