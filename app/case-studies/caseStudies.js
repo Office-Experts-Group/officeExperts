@@ -269,6 +269,87 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "food-manufacturer-excel-costing-workbook",
+    client: "the client",
+    author: "Paul M",
+    industry: "Food Manufacturing",
+    site: "excel",
+    title:
+      "Merging an array of clunky Excel workbooks into one automated costing system",
+    summary:
+      "The client manufactures packaged food products for sale in supermarkets and grocery stores, but built and costed every product using an array of disconnected, in-house Excel workbooks. Data didn't flow between them, key costing components were missing, and the whole system was clunky to work with. We rebuilt it as a single Excel Costing Workbook with a forms interface, automatic cost updates, and a restricted Admin view of the core costing data.",
+    results: [
+      "Disconnected workbooks combined into one automatically updating costing system",
+      "Sale prices, gross and net margins now calculated automatically by state",
+      "Admin-only access protects core costing data while forms keep daily use simple",
+    ],
+    image: "/case-studies/food-manufacturer-excel-costing-workbookLg.png",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 workbook",
+        label: "Replacing an array of disconnected Excel files",
+      },
+      {
+        value: "5+ cost inputs",
+        label: "Ingredients, labour, running, packaging and transport",
+      },
+      {
+        value: "By state",
+        label:
+          "Transport costs, sale prices and margins all calculated per state",
+      },
+    ],
+
+    challenge: [
+      "The client manufactures packaged food products for sale in supermarkets and grocery stores, and every product they sold first had to be built and costed. That process ran through an array of in-house developed Excel workbooks, one for each part of the puzzle, rather than a single connected system.",
+      "None of these workbooks talked to each other. Data didn't flow between them, so updating a single ingredient or packaging cost meant finding and manually updating it again in every other workbook that relied on it, an approach that was slow and left plenty of room for error.",
+      "The system was also missing some of the components needed to cost a product properly, and the workbooks themselves were clunky and difficult for staff to work with day to day, especially for anyone who wasn't already familiar with how they'd been built.",
+      "The client wanted a complete rewrite, still in Excel, that brought every costing component together, gave staff a proper forms interface for data entry, updated automatically as costs changed, and gave a restricted Admin view over the core costing data.",
+    ],
+
+    approach: [
+      {
+        heading: "Consolidating every workbook into one",
+        body: "We combined the client's existing array of Excel workbooks into a single system, bringing every costing component, ingredient costs, labour costs, running costs, packaging costs and transport costs by state, together in one place instead of scattered across separate files.",
+      },
+      {
+        heading: "Building the cost hierarchy",
+        body: "We structured the workbook so individual cost components feed up into the products that use them. A change to the cost of a single ingredient or packaging item now flows automatically up the hierarchy, updating the cost of every product and carton that relies on it, by state, without anyone needing to update figures by hand.",
+      },
+      {
+        heading: "Adding sale prices, margins and promotional pricing",
+        body: "We built in the ability to set sale prices for finished products by state, with the workbook automatically calculating gross and net margins by state, along with average costs and margins across the range. The same structure also supports periods of promotional pricing, so temporary price changes flow through the same automatic calculations without disrupting the underlying cost data.",
+      },
+      {
+        heading: "Building a forms interface for everyday use",
+        body: "We built forms that let users easily build components and products without needing to work directly in the underlying data sheets, making day-to-day data entry straightforward for staff who weren't involved in building the system.",
+      },
+      {
+        heading: "Locking down and protecting the data",
+        body: "We locked down the data sheets and formulas to protect them from accidental changes, and added an Admin password that opens hidden sheets where core costing data can be maintained. Data filters and colour coding were layered on top to make the information easier to navigate and interpret at a glance.",
+      },
+    ],
+
+    outcome: [
+      "The client now works from a single Excel Costing Workbook instead of an array of disconnected files, with every costing component, ingredient, labour, running, packaging and transport costs by state, feeding into one connected system.",
+      "Changes to individual component costs now flow automatically up through the data hierarchy, updating product and carton costs by state without manual rework, while sale prices, gross and net margins, and average costs and margins are all calculated automatically alongside support for promotional pricing periods.",
+      "With a forms interface for building components and products, locked-down data sheets, an Admin-only view of the core costing data, and filters and colour coding built in, the workbook is now both easier for staff to use day to day and far more secure than the system it replaced.",
+    ],
+
+    services: [
+      {
+        label: "VBA and macro development",
+        href: "https://www.excelexperts.com.au/vba-macro-development",
+      },
+      {
+        label: "Custom design and development",
+        href: "https://www.excelexperts.com.au/custom-design-and-development",
+      },
+    ],
+  },
+  {
     slug: "building-consultants-inspection-crm",
     client: "GM Building Consultants",
     author: "Deva",
