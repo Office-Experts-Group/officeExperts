@@ -185,6 +185,83 @@ export const caseStudies = [
         href: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
       },
     ],
+  }, // New case study object — copy this into the caseStudies array in caseStudies.js
+  // Suggested placement: add as a new entry before the closing "];" of the array
+
+  {
+    slug: "legal-firm-word-training-workshop",
+    client: "the client",
+    author: "Damien",
+    industry: "Legal",
+    site: "word",
+    title:
+      "Turning a 90-minute Word training session into fewer formatting headaches across the firm",
+    summary:
+      "This legal firm wanted to improve Microsoft Word capability across its team, but the real story behind the request was a set of familiar practice-wide problems: inconsistent formatting, numbering issues in long documents, and copy-and-paste chaos. We delivered a live 90-minute Teams training session for around 29 legal professionals, built entirely around the firm's own documents, covering everything from Styles and multilevel numbering to Track Changes and PDF conversion.",
+    results: [
+      "Live 90-minute Microsoft Teams session delivered to around 29 legal professionals",
+      "Training built around the firm's own real documents, not generic examples",
+      "Opportunities for future document governance and template improvements identified",
+    ],
+    image: "/case-studies/legal-firm-word-training-workshopLg.png",
+    featured: false,
+
+    stats: [
+      { value: "29", label: "Legal professionals trained in one live session" },
+      { value: "90 min", label: "Delivered live over Microsoft Teams" },
+      {
+        value: "14 topics",
+        label: "From Styles and numbering to PDF conversion",
+      },
+    ],
+
+    challenge: [
+      "This legal firm approached us wanting to improve Microsoft Word capability across its team, with a practical training session tailored to the way legal professionals actually work with documents day to day.",
+      "An initial discussion revealed the request went deeper than a simple skills refresher. The firm was experiencing many of the common challenges legal practices run into with Word: inconsistent document formatting, numbering and heading issues in long legal documents, and difficulty maintaining document structure as files were edited and passed around.",
+      "Problems caused by copying and pasting content from external sources were a recurring frustration, and staff Word proficiency varied widely across the team, meaning any session needed to land for basic and intermediate users alike, not just the most confident.",
+      "Beneath the immediate training request sat a broader interest in document governance and template management, and the firm wanted a session that delivered immediate, practical value to every attendee while also surfacing where document quality and consistency could be improved firm-wide.",
+    ],
+
+    approach: [
+      {
+        heading:
+          "Designing around real day-to-day use, not advanced templating",
+        body: "We deliberately designed the session to focus on practical, day-to-day document creation and management rather than advanced template development, keeping the content relevant and accessible to users ranging from basic through to intermediate Word skills.",
+      },
+      {
+        heading: "Building the session from the firm's own documents",
+        body: "Rather than relying on generic examples, we drew on the firm's own documents throughout the session, letting participants see real-world formatting issues and their solutions within document structures they immediately recognised from their own work.",
+      },
+      {
+        heading: "Covering the full document lifecycle",
+        body: "The session worked through the difference between Word templates and documents, using Styles correctly, creating and managing multilevel numbering, and using the Navigation Pane to reorganise large documents, alongside headers, footers, sections and page numbering.",
+      },
+      {
+        heading: "Addressing collaboration, review and output",
+        body: "We covered building and formatting tables efficiently, creating automatic Tables of Contents, working with Quick Parts and reusable content, best practices for Track Changes and Comments, troubleshooting copy-and-paste formatting issues, and PDF conversion best practices, rounded out with productivity tips and keyboard shortcuts for legal drafting.",
+      },
+      {
+        heading: "Demonstrating the impact of small habits",
+        body: "Throughout the live 90-minute Teams session, practical demonstrations showed how seemingly small Word habits can significantly reduce formatting problems and improve efficiency when working with lengthy legal documents.",
+      },
+    ],
+
+    outcome: [
+      "Around 29 legal professionals came away with practical skills they could apply immediately in their day-to-day work, with a clearer understanding of how Word functions behind the scenes and how to avoid the common issues that consume time during drafting and review.",
+      "By focusing on document structure, styles, numbering, formatting consistency and collaboration tools, attendees are better placed to manage headings and numbering correctly and work with more confidence on complex legal documents.",
+      "The session generated strong engagement and discussion around template design, document governance, and ways to improve consistency across the firm's documentation, giving the firm a clear view of where future document and template improvements could add the most value.",
+    ],
+
+    services: [
+      {
+        label: "Microsoft Word training",
+        href: "https://www.wordexperts.com.au/training",
+      },
+      {
+        label: "Word template design",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
+      },
+    ],
   },
   {
     slug: "custom-quoting-tool",
