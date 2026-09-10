@@ -9,7 +9,9 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PPD9KDBZCN";
 const GADS_CONVERSION_ID = "AW-1062762865";
 const GADS_CONVERSION_LABEL = "ZqwXCP_M6MYaEPHy4foD";
 
-const CookieConsent = () => {
+// Receives the per-request nonce from layout.js (read there via
+// next/headers, since this is a client component and can't read it itself).
+const CookieConsent = ({ nonce }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
@@ -64,12 +66,18 @@ const CookieConsent = () => {
     <>
       {showAnalytics && (
         <>
-          {/* Google Analytics script - gtag.js */}
+          {/* Google Analytics script - gtag.js. The nonce attribute is what
+              satisfies CSP's script-src-elem 'nonce-...' directive. */}
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             strategy="afterInteractive"
+            nonce={nonce}
           />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            nonce={nonce}
+          >
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -81,7 +89,7 @@ const CookieConsent = () => {
                   'domains': ['excelexperts.com.au', 'officeexperts.com.au', 'accessexperts.com.au', 'wordexperts.com.au', 'powerplatformexperts.com.au']
                 }
               });
-              
+
               // Single definition of conversion tracking function
               window.gtag_report_conversion = function(url) {
                 try {
@@ -90,7 +98,7 @@ const CookieConsent = () => {
                       window.location = url;
                     }
                   };
-                  
+
                   if (typeof gtag === 'function') {
                     gtag('event', 'conversion', {
                       'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}',
@@ -115,8 +123,12 @@ const CookieConsent = () => {
           </Script>
 
           {/* Enhanced conversion tracking with GA4 events */}
-<Script id="conversion-tracking-auto" strategy="afterInteractive">
-  {`
+          <Script
+            id="conversion-tracking-auto"
+            strategy="afterInteractive"
+            nonce={nonce}
+          >
+            {`
     window.addEventListener('load', function() {
       document.addEventListener('click', function(e) {
         if (e.target.closest('.contact_submitBtn__e1DBC')) {
@@ -125,7 +137,7 @@ const CookieConsent = () => {
               // Google Ads conversion (only counts if from ad click)
               if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
-                
+
                 // Google Analytics event (tracks ALL form submissions)
                 gtag('event', 'form_submit', {
                   'event_category': 'Contact',
@@ -144,7 +156,7 @@ const CookieConsent = () => {
       });
     });
   `}
-</Script>
+          </Script>
         </>
       )}
 

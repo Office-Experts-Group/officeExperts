@@ -473,6 +473,11 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/office-and-office-365-experts-canberra",
+    destination: "/microsoft-consultants-canberra",
+    permanent: true,
+  },
+  {
     source: "/excel-consultants-darwin",
     destination: "/microsoft-support-and-training-darwin",
     permanent: true,
@@ -508,13 +513,28 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/office-excel-access-and-365-experts-perth",
+    destination: "/microsoft-consultants-perth",
+    permanent: true,
+  },
+  {
     source: "/office-excel-access-and-365-consultants-brisbane",
+    destination: "/microsoft-consultants-brisbane",
+    permanent: true,
+  },
+  {
+    source: "/office-excel-access-and-365-experts-brisbane",
     destination: "/microsoft-consultants-brisbane",
     permanent: true,
   },
   {
     source: "/excel-consultants-richmond",
     destination: "/microsoft-support-and-training-richmond",
+    permanent: true,
+  },
+  {
+    source: "/office-and-office-365-experts-richmond",
+    destination: "/excel-and-access-experts-richmond",
     permanent: true,
   },
   {

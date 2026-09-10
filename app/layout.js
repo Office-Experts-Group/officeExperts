@@ -1,12 +1,13 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import { headers } from "next/headers";
 
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
 
 import HeadTop from "../components/HeadTop";
 import Header from "./(components)/Header";
-import AhrefsAnalytics from "../components/AhrefsAnalytics";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 const CookieConsent = dynamic(() => import("../components/CookieConsent"), {
   ssr: false, // Client-side only
@@ -22,7 +23,6 @@ const ScrollBtn = dynamic(() => import("../components/ScrollBtn"), {
 });
 
 import "./global.css";
-import ScrollIndicator from "../components/ScrollIndicator";
 
 const aptos = localFont({
   src: [
@@ -125,19 +125,19 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
       ? "https://www.officeexperts.com.au"
-      : "http://localhost:3000"
+      : "http://localhost:3000",
   ),
 };
 
 export default function RootLayout({ children }) {
+  const nonce = headers().get("x-nonce");
   return (
     <html lang="en-AU">
       <body className={`${aptos.variable} ${garamond.variable}`}>
-        <AhrefsAnalytics />
         <HeadTop />
         <Header />
         {children}
-        <CookieConsent />
+        <CookieConsent nonce={nonce} />
         <Footer />
         <Copyright />
         <ScrollBtn />
