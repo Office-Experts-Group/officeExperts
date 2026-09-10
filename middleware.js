@@ -93,7 +93,7 @@ export function middleware(request) {
       "font-src 'self' fonts.gstatic.com",
       "frame-src 'self' *.vimeo.com player.vimeo.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.doubleclick.net td.doubleclick.net",
       "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.googlevideo.com",
-      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com *.google-analytics.com *.googletagmanager.com *.google.com *.gstatic.com *.officeexperts.com.au *.doubleclick.net *.ahrefs.com analytics.ahrefs.com www.googletagmanager.com www.google.com",
+      "connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com *.google-analytics.com *.googletagmanager.com google.com *.google.com *.gstatic.com *.officeexperts.com.au *.doubleclick.net doubleclick.net *.ahrefs.com analytics.ahrefs.com,",
     ].join("; ");
 
     response.headers.set("Content-Security-Policy", standardCSP);
