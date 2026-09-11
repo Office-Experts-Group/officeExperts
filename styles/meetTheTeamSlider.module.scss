@@ -1,0 +1,218 @@
+// styles/meetTheTeamSlider.module.scss
+// Isolated copy of the marquee styles previously shared with
+// testimonialsSection.module.scss. Split out so MeetTheTeamSlider.jsx
+// no longer imports the testimonials stylesheet, keeping the two
+// components fully decoupled while preserving identical visuals.
+@import "./globals.scss";
+
+.teamSlider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 6rem auto;
+  padding: 2rem 0;
+  overflow: hidden;
+  @include desktop {
+    padding: 2rem;
+  }
+  @include tablet {
+    padding: 2rem;
+  }
+  @include phoneLandscape {
+    padding: 2rem;
+  }
+}
+
+.box {
+  margin: 0 auto 1.5rem auto;
+  border-bottom: 6px solid #b0b0b05b;
+  width: fit-content;
+  h2 {
+    color: $accent;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: -0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-aptos) !important;
+    font-weight: 700;
+  }
+}
+
+.teamHeading {
+  color: $black;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+.sliderWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 2rem;
+  animation: slideTrack 40s cubic-bezier(0.45, 0, 0.15, 1) infinite;
+  will-change: transform;
+  transform: translateZ(0);
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.slide {
+  flex: 0 0 calc((100% - 4rem) / 3);
+  opacity: 1;
+}
+
+@keyframes slideTrack {
+  0% {
+    transform: translateX(0);
+  }
+  3%,
+  10% {
+    transform: translateX(0);
+  }
+  13%,
+  20% {
+    transform: translateX(calc((-1 * (100% - 4rem) / 3) - 2rem));
+  }
+  23%,
+  30% {
+    transform: translateX(calc((-2 * (100% - 4rem) / 3) - 4rem));
+  }
+  33%,
+  40% {
+    transform: translateX(calc((-3 * (100% - 4rem) / 3) - 6rem));
+  }
+  43%,
+  50% {
+    transform: translateX(calc((-4 * (100% - 4rem) / 3) - 8rem));
+  }
+  53%,
+  60% {
+    transform: translateX(calc((-5 * (100% - 4rem) / 3) - 10rem));
+  }
+  63%,
+  70% {
+    transform: translateX(calc((-6 * (100% - 4rem) / 3) - 12rem));
+  }
+  73%,
+  80% {
+    transform: translateX(calc((-7 * (100% - 4rem) / 3) - 14rem));
+  }
+  83%,
+  90% {
+    transform: translateX(calc((-8 * (100% - 4rem) / 3) - 16rem));
+  }
+  93%,
+  100% {
+    transform: translateX(calc((-9 * (100% - 4rem) / 3) - 18rem));
+  }
+}
+
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 calc((100% - 2rem) / 2);
+  }
+
+  @keyframes slideTrack {
+    0% {
+      transform: translateX(0);
+    }
+    3%,
+    10% {
+      transform: translateX(0);
+    }
+    13%,
+    20% {
+      transform: translateX(calc((-1 * (100% - 2rem) / 2) - 2rem));
+    }
+    23%,
+    30% {
+      transform: translateX(calc((-2 * (100% - 2rem) / 2) - 4rem));
+    }
+    33%,
+    40% {
+      transform: translateX(calc((-3 * (100% - 2rem) / 2) - 6rem));
+    }
+    43%,
+    50% {
+      transform: translateX(calc((-4 * (100% - 2rem) / 2) - 8rem));
+    }
+    53%,
+    60% {
+      transform: translateX(calc((-5 * (100% - 2rem) / 2) - 10rem));
+    }
+    63%,
+    70% {
+      transform: translateX(calc((-6 * (100% - 2rem) / 2) - 12rem));
+    }
+    73%,
+    80% {
+      transform: translateX(calc((-7 * (100% - 2rem) / 2) - 14rem));
+    }
+    83%,
+    90% {
+      transform: translateX(calc((-8 * (100% - 2rem) / 2) - 16rem));
+    }
+    93%,
+    100% {
+      transform: translateX(calc((-9 * (100% - 2rem) / 2) - 18rem));
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  @keyframes slideTrack {
+    0% {
+      transform: translateX(0);
+    }
+    3%,
+    10% {
+      transform: translateX(0);
+    }
+    13%,
+    20% {
+      transform: translateX(calc(-100% - 2rem));
+    }
+    23%,
+    30% {
+      transform: translateX(calc(-200% - 4rem));
+    }
+    33%,
+    40% {
+      transform: translateX(calc(-300% - 6rem));
+    }
+    43%,
+    50% {
+      transform: translateX(calc(-400% - 8rem));
+    }
+    53%,
+    60% {
+      transform: translateX(calc(-500% - 10rem));
+    }
+    63%,
+    70% {
+      transform: translateX(calc(-600% - 12rem));
+    }
+    73%,
+    80% {
+      transform: translateX(calc(-700% - 14rem));
+    }
+    83%,
+    90% {
+      transform: translateX(calc(-800% - 16rem));
+    }
+    93%,
+    100% {
+      transform: translateX(calc(-900% - 18rem));
+    }
+  }
+}
