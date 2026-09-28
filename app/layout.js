@@ -1,6 +1,5 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { headers } from "next/headers";
 
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
@@ -130,14 +129,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const nonce = headers().get("x-nonce");
   return (
     <html lang="en-AU">
       <body className={`${aptos.variable} ${garamond.variable}`}>
         <HeadTop />
         <Header />
         {children}
-        <CookieConsent nonce={nonce} />
+        <CookieConsent />
         <Footer />
         <Copyright />
         <ScrollBtn />

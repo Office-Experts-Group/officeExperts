@@ -47,6 +47,8 @@ const schema = {
       description:
         "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, and Power Platform solutions.",
       inLanguage: "en-AU",
+      datePublished: "2026-09-20T00:00:00+00:00",
+      dateModified: "2026-09-28T00:00:00+00:00",
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/case-studies#breadcrumb",
       },
