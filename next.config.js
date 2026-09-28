@@ -709,11 +709,6 @@ const NOINDEX_REDIRECTS = [
     permanent: true,
   },
   {
-    source: "/services/by-business-solution/vba-macro-development",
-    destination: "/services/by-business-solution/vba-macro-development",
-    permanent: true,
-  },
-  {
     source: "/feed",
     has: [
       {
