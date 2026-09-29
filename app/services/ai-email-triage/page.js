@@ -23,9 +23,6 @@ const EmailTriageUseCases = dynamic(
 const EmailTriageSuite = dynamic(
   () => import("./(components)/EmailTriageSuite"),
 );
-const EmailTriageSecurity = dynamic(
-  () => import("./(components)/EmailTriageSecurity"),
-);
 const EmailTriageWhyUs = dynamic(
   () => import("./(components)/EmailTriageWhyUs"),
 );
@@ -186,7 +183,6 @@ const Page = () => {
       <EmailTriageComparison />
       <EmailTriageUseCases />
       <EmailTriageSuite />
-      <EmailTriageSecurity />
       <EmailTriageWhyUs />
       <ExpertsAwait />
       <div style={{ marginTop: "6rem" }}>
