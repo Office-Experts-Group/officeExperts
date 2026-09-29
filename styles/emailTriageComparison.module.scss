@@ -1,0 +1,206 @@
+// styles/emailTriageComparison.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $grayText;
+}
+
+.scrollHint {
+  display: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $white-55;
+  margin-bottom: -1.5rem;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+}
+
+// ── Table ───────────────────────────────────────
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+
+  &:focus-visible {
+    outline: 2px solid $accent-light;
+    outline-offset: 3px;
+  }
+}
+
+.table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  th,
+  td {
+    padding: 1.05rem 1.4rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid $white-08;
+  }
+
+  // Column headers: icon, name, sub-label stacked
+  thead th {
+    padding-top: 1.75rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid $white-12;
+  }
+
+  // Row labels: small caps, muted
+  tbody th {
+    width: 17%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $white-55;
+  }
+
+  td {
+    color: $white-65;
+    font-family: var(--font-aptos);
+  }
+
+  tbody tr:last-child > * {
+    border-bottom: none;
+  }
+
+  td.featured {
+    color: $white-90;
+  }
+}
+
+.corner {
+  vertical-align: bottom;
+}
+
+.colIcon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.9rem;
+  color: $accent-light;
+  background: $white-08;
+  border-radius: 6px;
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.colName {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: $white;
+  line-height: 1.3;
+}
+
+.colSub {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $white-55;
+}
+
+// Custom-coded column: accent wash, with a glowing top edge on the header
+.featured {
+  background: $accent-dim;
+}
+
+thead .featured {
+  box-shadow: inset 0 3px 0 $accent;
+
+  .colIcon {
+    color: $white;
+    background: $accent;
+  }
+}
+
+// ── Effort meter ────────────────────────────────
+.meter {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.pip {
+  width: 1.25rem;
+  height: 0.3rem;
+  border-radius: 2px;
+  background: $white-12;
+}
+
+.pipOn {
+  background: $accent-light;
+}
+
+// ── Footer ──────────────────────────────────────
+.rule {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $white;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  border-left: 2px solid $accent;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 700;
+}

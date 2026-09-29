@@ -1,0 +1,111 @@
+// styles/emailTriageSecurity.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 500px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Safeguard grid ──────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 3rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid $accent;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.featureBody {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}

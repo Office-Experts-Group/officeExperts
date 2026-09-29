@@ -1,0 +1,94 @@
+.section {
+  background: #f7f8f9;
+  padding: 6rem 8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 5rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.cta {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #046999;
+  padding: 0.85rem 1.75rem;
+  border-radius: 3px;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+}
+.cta:hover {
+  opacity: 0.9;
+}
+.cta:focus-visible {
+  outline: 2px solid #046999;
+  outline-offset: 3px;
+}
+
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .visual {
+    max-width: 480px;
+  }
+}
+@media (max-width: 449px) {
+  .visual {
+    display: none;
+  }
+}/*# sourceMappingURL=emailTriageInOut.module.css.map */

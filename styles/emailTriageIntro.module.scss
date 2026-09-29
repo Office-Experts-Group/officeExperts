@@ -1,0 +1,170 @@
+// styles/emailTriageIntro.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// ── Centred definition ──────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.definition {
+  font-size: 1.1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Example cards: email on top, AI's reading below ──
+.examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    max-width: 34rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-top: 3px solid var(--tone);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+// Tone modifiers feed the shared --tone custom property
+.billing {
+  --tone: #{$accent};
+}
+.urgent {
+  --tone: #{$replace-x};
+}
+.later {
+  --tone: #{$text-muted};
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 1.4rem;
+  background: $white;
+  border-bottom: 1px dashed $border-strong;
+}
+
+.from {
+  font-size: 0.72rem;
+  color: $text-muted;
+}
+
+.subject {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.reading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.1rem 1.4rem 1.3rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--tone);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--tone);
+  border-radius: 2rem;
+  width: fit-content;
+}
+
+.action {
+  font-size: 0.88rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+// ── Supporting copy ─────────────────────────────
+.body {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.text {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.rule {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  border-left: 2px solid $accent;
+}

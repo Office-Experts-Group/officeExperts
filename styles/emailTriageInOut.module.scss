@@ -1,0 +1,90 @@
+// styles/emailTriageInOut.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 6rem 8rem;
+  border-top: 1px solid $border;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 2rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.cta {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  padding: 0.85rem 1.75rem;
+  border-radius: 3px;
+  text-decoration: none;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+  }
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 480px;
+  }
+  @include phone {
+    display: none;
+  }
+}

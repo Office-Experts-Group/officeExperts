@@ -1,0 +1,156 @@
+.section {
+  background: #f7f8f9;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  padding: 0.32rem 0.85rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 449px) {
+  .eyebrow {
+    letter-spacing: 1.5px;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  max-width: 38rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary {
+  background: #046999;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.primary:hover {
+  border: 1px solid #046999;
+}
+
+.secondary {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #046999;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.secondary:hover {
+  background: #e8f4fa;
+}
+.secondary:focus-visible {
+  outline: 2px solid #046999;
+  outline-offset: 3px;
+}
+
+.trust {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #777a7e;
+}
+.trust li::before {
+  content: "-";
+  margin-right: 0.75rem;
+}
+
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .visual {
+    max-width: 560px;
+  }
+}
+@media (max-width: 449px) {
+  .visual {
+    display: none;
+  }
+}
+.visual :global(.et-flow) {
+  stroke-dasharray: 4 6;
+  animation: flow 1.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .visual :global(.et-flow) {
+    animation: none;
+  }
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}/*# sourceMappingURL=emailTriageHero.module.css.map */
