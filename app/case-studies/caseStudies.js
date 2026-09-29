@@ -656,7 +656,7 @@ export const caseStudies = [
       "Content controls and document protection prevent accidental changes to layout or mandatory content",
       "Guided tab-through data entry replaces static, error-prone form completion",
     ],
-    image: "/case-studies/government-workplace-safety-interactive-formsLg.png",
+    image: "/case-studies/government-workplace-safety-interactive-formsLg.webp",
     featured: false,
 
     stats: [
@@ -2291,66 +2291,73 @@ export const caseStudies = [
     industry: "Sport",
     site: "word",
     title:
-      "One Word template that switches between every discipline's brand in a click",
+      "One Word Master Template and a colour theme for every discipline's brand",
     summary:
-      "A national sporting organisation runs several disciplines under one parent brand, each with its own colours and visual identity. Staff were applying discipline branding to documents by hand, leading to inconsistent results and templates that were hard to maintain. We built a single Word Master Template with a custom branding system that lets users switch discipline themes, automatically updating covers, styles, numbering, tables and colours throughout the document.",
+      "A national sporting organisation runs several disciplines under one parent brand, each with its own colours and visual identity. Staff were applying discipline branding to documents by hand, leading to inconsistent results and templates that were hard to maintain. We built a single Word Master Template with a suite of discipline colour themes, so the client can create discipline-specific sub-templates where covers, styles, numbering and tables all pick up the right brand colours, and trained the team to manage them going forward.",
     results: [
-      "One Master Template now supports every discipline brand",
-      "Covers, styles, numbering and tables update automatically when a discipline is selected",
+      "One Master Template now underpins every discipline's sub-templates",
+      "Applying a discipline's colour theme updates the colours across covers, styles, numbering and tables",
       "30+ approved brand colours added beyond Word's standard colour theme",
     ],
     image: "/case-studies/theme-swap-sample.webp",
     featured: false,
 
     stats: [
-      { value: "1 template", label: "Supporting every discipline brand" },
+      {
+        value: "1 template",
+        label: "Master Template behind every discipline's sub-templates",
+      },
       { value: "30+", label: "Approved brand colours built into Word" },
       {
-        value: "7",
-        label: "Branded elements updated automatically on switch",
+        value: "Trained",
+        label: "Client team able to manage the templates going forward",
       },
     ],
 
     challenge: [
       "This national sporting organisation oversees a number of individual disciplines, all operating under a single parent brand. Each discipline has its own brand identity, with a distinct colour palette and visual style that needed to be respected in every document it produced.",
       "Staff were applying these discipline brands to documents manually, adjusting colours, covers and styles by hand each time. The results varied from one document to the next, and the organisation's overall identity was hard to keep consistent across the different disciplines.",
-      "Maintaining a separate template for every discipline wasn't a practical answer either. Each brand change would need to be repeated across multiple files, and staff would have to know which template to pick for which piece of work.",
+      "Building an unrelated template for every discipline wasn't a practical answer either. Each brand change would need to be repeated across multiple files, with no shared foundation keeping the structure and design language consistent.",
       "On top of this, Word's standard colour theme only holds a small set of colours, well short of the range the organisation used across all of its disciplines. Staff had no easy way to reach the approved colours for a given brand from within Word itself.",
     ],
 
     approach: [
       {
+        heading: "Agreeing a practical scope",
+        body: "The original scope included a button to swap colour themes, front and back cover logos, headers and footers in one step. We worked with the client to shape a solution that suited their budget and preferences, focusing on a strong template foundation and colour theme suite, with logos added manually by the client's team.",
+      },
+      {
         heading: "Designing a multi-brand framework",
-        body: "We designed a single Word Master Template that holds one consistent document structure and design language for the whole organisation, with each discipline's visual identity layered on top, rather than a separate template built and maintained for each discipline.",
+        body: "We designed a single Word Master Template that holds one consistent document structure and design language for the whole organisation, with each discipline's visual identity layered on top through colour, rather than a separate template designed from scratch for each discipline.",
       },
       {
-        heading: "Building a custom branding system",
-        body: "We built a custom branding system into the template that lets users select a discipline and switch the whole document to that discipline's theme, so staff never have to apply brand colours or styles by hand.",
-      },
-      {
-        heading: "Automating the branded elements",
-        body: "When a discipline is selected, the template automatically updates the key branded elements throughout the document, including cover pages, back covers, heading styles, multilevel numbering, bullet styles, table styles, and the colour theme and document accents.",
+        heading: "Building a suite of colour themes",
+        body: "We built a suite of colour themes, one for each discipline, that the client can use to create discipline-specific sub-templates from the Master Template. Applying a theme updates the colours used across the cover pages, heading styles, numbering, bullet styles and table styles, so staff don't have to recolour each element by hand.",
       },
       {
         heading: "Extending Word's colour theme",
         body: "Word's standard colour theme couldn't hold the full range of colours the organisation used, so we extended it by building more than 30 additional brand colours directly into the template, grouped and organised by discipline so staff can find the approved options quickly.",
       },
+      {
+        heading: "Training the client's team",
+        body: "We provided training so the client's team can manage the templates themselves, including creating discipline sub-templates and adding logos, without needing to come back to us for routine changes.",
+      },
     ],
 
     outcome: [
-      "Staff now have a simple, reliable way to create professional documents in any discipline's brand from one template, with the correct covers, styles, numbering, tables and colours applied automatically when they select a discipline.",
-      "With no need to maintain multiple templates or adjust branding by hand, document consistency has improved across the organisation, the time spent creating and updating branded content has dropped, and the risk of the wrong brand being applied to a document has been significantly reduced.",
-      "Because every discipline brand is managed centrally from one template, maintenance and governance are far simpler, and the organisation has a scalable foundation that keeps both its parent brand and each discipline's identity intact within a single Word environment.",
+      "The organisation now has one consistent foundation for documents across every discipline. Discipline-specific sub-templates are created from the Master Template, and applying a discipline's colour theme carries the right brand colours through covers, styles, numbering and tables.",
+      "Because approved brand colours sit directly inside Word, staff can reach the right options quickly rather than working from a small standard theme or applying colours by hand. Logos are added by the client's team when a sub-template is set up, a simple manual step that kept the solution aligned with their budget.",
+      "With every discipline built from a single Master Template and one set of colour themes, brand colours are managed in one place, and the client's trained team can maintain and extend the templates as their needs change, with room to add further automation later if they choose.",
     ],
 
     services: [
       {
-        label: "Microsoft Word services",
+        label: "Microsoft Word solutions",
         href: "https://www.wordexperts.com.au",
       },
       {
-        label: "Corporate template solutions",
-        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+        label: "Brand template services",
+        href: "https://www.wordexperts.com.au/brand-template",
       },
     ],
   },
