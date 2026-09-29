@@ -39,8 +39,8 @@ const Contact = dynamic(() => import("../../../components/Contact"));
 import faqs from "../../../faqs/ai-email-triage";
 
 // Temporary hero image until the final artwork is ready (used for both sizes)
-import emailTriage from "../../../public/pageheros/emailTriage.webp";
-import emailTriageMob from "../../../public/pageheros/mob/emailTriageMob.webp";
+import emailTriage from "../../../public/pageHeros/emailTriage.webp";
+import emailTriageMob from "../../../public/pageHeros/mob/emailTriageMob.webp";
 
 // Shared schema builders (organisation, professional service, website)
 import {
