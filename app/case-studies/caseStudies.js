@@ -33,6 +33,7 @@
 
 export const caseStudies = [
   {
+    // added to LinkedIn
     slug: "rdao-application-ai-review-workflow",
     client: "Kula",
     author: "Nick",

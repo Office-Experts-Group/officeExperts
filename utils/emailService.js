@@ -1,16 +1,56 @@
 // utils/emailService.js
+// Payment emails sent by app/api/bpoint/create-authkey/route.js after an
+// approved Bpoint transaction:
+//   - sendPaymentConfirmationEmail: receipt to the customer
+//   - sendInternalPaymentNotification: notice to the accounts team
+//
+// SURCHARGE REMOVAL: the invoice amount / surcharge breakdown and the
+// surcharge note have been removed. Emails show a single "Amount Paid".
+
+// Sendgrid mail client (already a project dependency)
+import sgMail from "@sendgrid/mail";
+// Shared HTML and plain-text email signature
 import { getEmailSignature } from "./emailSignature.js";
+// Card scheme code -> friendly name, e.g. "AMEX" -> "American Express"
+import { getCardDisplayName } from "./cardTypeUtils.js";
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const SENDER_EMAIL = "consult@officeexperts.com.au";
+const ACCOUNTS_EMAIL = "accounts@officeexperts.com.au";
+const TIME_ZONE = "Australia/Brisbane";
 
 /**
- * Generate professional payment confirmation email
+ * Converts cents to a "$0.00" string.
+ */
+function formatCents(cents) {
+  return `$${(cents / 100).toFixed(2)}`;
+}
+
+/**
+ * Formats a millisecond timestamp in Brisbane time,
+ * e.g. "30 September 2026 at 10:51 am".
+ */
+function formatPaymentDate(timestamp) {
+  return new Date(parseInt(timestamp) || Date.now()).toLocaleString("en-AU", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+    timeZone: TIME_ZONE,
+  });
+}
+
+/**
+ * Builds the customer receipt email (subject, HTML and plain text).
  */
 export function generatePaymentConfirmationEmail({
   invoiceNumber,
   customerName,
   customerEmail,
   totalAmount,
-  baseAmount,
-  surchargeAmount,
   cardType,
   authCode,
   paymentDate,
@@ -18,32 +58,26 @@ export function generatePaymentConfirmationEmail({
 }) {
   const { htmlSignature, textSignature } = getEmailSignature();
 
-  // Format amounts
-  const formattedTotal = `$${(totalAmount / 100).toFixed(2)}`;
-  const formattedBase = baseAmount
-    ? `$${(baseAmount / 100).toFixed(2)}`
-    : formattedTotal;
-  const formattedSurcharge =
-    surchargeAmount && surchargeAmount > 0
-      ? `$${(surchargeAmount / 100).toFixed(2)}`
-      : null;
-
-  // Format date
-  const formattedDate = new Date(parseInt(paymentDate)).toLocaleString(
-    "en-AU",
-    {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      hour12: true,
-      timeZone: "Australia/Brisbane",
-    }
-  );
-
-  // Format card type
+  const formattedTotal = formatCents(totalAmount);
+  const formattedDate = formatPaymentDate(paymentDate);
   const cardDisplayName = getCardDisplayName(cardType);
+
+  // Optional rows only render when the value exists
+  const authCodeRow = authCode
+    ? `
+                <div class="detail-row">
+                    <span class="detail-label">Authorisation Code:</span>
+                    <span class="detail-value">${authCode}</span>
+                </div>`
+    : "";
+
+  const transactionRow = transactionId
+    ? `
+                <div class="detail-row">
+                    <span class="detail-label">Transaction ID:</span>
+                    <span class="detail-value">${transactionId}</span>
+                </div>`
+    : "";
 
   const htmlEmail = `
 <!DOCTYPE html>
@@ -68,41 +102,8 @@ export function generatePaymentConfirmationEmail({
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        .header {
-            background: linear-gradient(135deg, #046999 0%, #0586c7 100%);
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 400;
-        }
-        .header .subtitle {
-            margin: 10px 0 0 0;
-            font-size: 16px;
-            opacity: 0.9;
-        }
         .content {
             padding: 40px;
-        }
-        .success-badge {
-            display: inline-flex;
-            align-items: center;
-            background-color: #d4edda;
-            color: #155724;
-            padding: 12px 20px;
-            border-radius: 25px;
-            border: 1px solid #c3e6cb;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        .success-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            fill: #28a745;
         }
         .invoice-details {
             background-color: #f8f9fa;
@@ -134,7 +135,7 @@ export function generatePaymentConfirmationEmail({
         }
         .total-row {
             background-color: #e3f2fd;
-            margin: 0 -30px;
+            margin: 20px -30px 0;
             padding: 20px 30px;
             border-radius: 0 0 8px 8px;
             font-size: 18px;
@@ -189,9 +190,6 @@ export function generatePaymentConfirmationEmail({
             text-decoration: none;
             font-weight: 500;
         }
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
         .signature-section {
             border-top: 1px solid #e9ecef;
             padding-top: 30px;
@@ -224,7 +222,7 @@ export function generatePaymentConfirmationEmail({
             body {
                 padding: 10px;
             }
-            .header, .content, .footer {
+            .content, .footer {
                 padding: 20px;
             }
             .contact-details {
@@ -243,13 +241,13 @@ export function generatePaymentConfirmationEmail({
     </style>
 </head>
 <body>
-    <div class="email-container">        
+    <div class="email-container">
         <div class="content">
-            
+
             <p>Dear ${customerName},</p>
-            
+
             <p>We are pleased to confirm that your payment has been successfully processed. Below are the details of your transaction:</p>
-            
+
             <div class="invoice-details">
                 <div class="detail-row">
                     <span class="detail-label">Invoice Number:</span>
@@ -266,75 +264,33 @@ export function generatePaymentConfirmationEmail({
                 <div class="detail-row">
                     <span class="detail-label">Payment Method:</span>
                     <span class="detail-value">${cardDisplayName}</span>
-                </div>
-                ${
-                  authCode
-                    ? `
-                <div class="detail-row">
-                    <span class="detail-label">Authorization Code:</span>
-                    <span class="detail-value">${authCode}</span>
-                </div>
-                `
-                    : ""
-                }
-                ${
-                  transactionId
-                    ? `
-                <div class="detail-row">
-                    <span class="detail-label">Transaction ID:</span>
-                    <span class="detail-value">${transactionId}</span>
-                </div>
-                `
-                    : ""
-                }
-                
-                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #dee2e6;">
-                    <div class="detail-row">
-                        <span class="detail-label">Invoice Amount:</span>
-                        <span class="detail-value">${formattedBase}</span>
-                    </div>
-                    ${
-                      formattedSurcharge
-                        ? `
-                    <div class="detail-row">
-                        <span class="detail-label">Credit Card Surcharge:</span>
-                        <span class="detail-value">${formattedSurcharge}</span>
-                    </div>
-                    `
-                        : ""
-                    }
-                </div>
-                
+                </div>${authCodeRow}${transactionRow}
+
                 <div class="total-row detail-row">
-                    <span class="detail-label">Total Amount Paid:</span>
+                    <span class="detail-label">Amount Paid:</span>
                     <span class="detail-value">${formattedTotal}</span>
                 </div>
             </div>
-            
+
             <div class="important-info">
                 <h3>📋 Important Information</h3>
                 <ul>
                     <li>Please retain this email as your payment receipt</li>
                     <li>Your payment will appear on your statement as "Office Experts Group"</li>
                     <li>Services will commence as per our agreed schedule</li>
-                    ${
-                      formattedSurcharge
-                        ? "<li>The surcharge applied helps cover credit card processing fees</li>"
-                        : ""
-                    }
                     <li>No further action is required from you at this time</li>
                 </ul>
             </div>
-            
+
             <p>Thank you for choosing Office Experts Group. We look forward to delivering exceptional results for your project.</p>
-            
+
             <div class="contact-section">
                 <h3>📞 Need Assistance?</h3>
                 <p>If you have any questions about your payment or project, please don't hesitate to contact us:</p>
                 <div class="contact-details">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:accounts@officeexperts.com.au">accounts@officeexperts.com.au</a>
+                        <a href="mailto:${ACCOUNTS_EMAIL}">${ACCOUNTS_EMAIL}</a>
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
@@ -346,12 +302,12 @@ export function generatePaymentConfirmationEmail({
                     </div>
                 </div>
             </div>
-            
+
             <div class="signature-section">
                 ${htmlSignature}
             </div>
         </div>
-        
+
         <div class="footer">
             <div class="security-badges">
                 <span class="security-badge">🔒 SSL Encrypted</span>
@@ -369,6 +325,19 @@ export function generatePaymentConfirmationEmail({
 </html>
 `;
 
+  // Optional lines are filtered out so no blank gaps are left
+  const detailLines = [
+    `Invoice Number:      ${invoiceNumber}`,
+    `Customer Name:       ${customerName}`,
+    `Payment Date:        ${formattedDate}`,
+    `Payment Method:      ${cardDisplayName}`,
+    authCode && `Authorisation Code:  ${authCode}`,
+    transactionId && `Transaction ID:      ${transactionId}`,
+    `Amount Paid:         ${formattedTotal}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
   const textEmail = `
 PAYMENT CONFIRMATION - INVOICE ${invoiceNumber}
 
@@ -378,36 +347,20 @@ We are pleased to confirm that your payment has been successfully processed.
 
 TRANSACTION DETAILS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Invoice Number:      ${invoiceNumber}
-Customer Name:       ${customerName}
-Payment Date:        ${formattedDate}
-Payment Method:      ${cardDisplayName}
-${authCode ? `Authorization Code:   ${authCode}` : ""}
-${transactionId ? `Transaction ID:      ${transactionId}` : ""}
-
-PAYMENT BREAKDOWN:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Invoice Amount:      ${formattedBase}
-${formattedSurcharge ? `Credit Card Surcharge: ${formattedSurcharge}` : ""}
-Total Amount Paid:   ${formattedTotal}
+${detailLines}
 
 IMPORTANT INFORMATION:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 • Please retain this email as your payment receipt
 • Your payment will appear on your statement as "Office Experts Group"
 • Services will commence as per our agreed schedule
-${
-  formattedSurcharge
-    ? "• The surcharge applied helps cover credit card processing fees"
-    : ""
-}
 • No further action is required from you at this time
 
 Thank you for choosing Office Experts Group for your Microsoft Office consulting needs. We look forward to delivering exceptional results for your project.
 
 NEED ASSISTANCE?
 If you have any questions about your payment or project:
-📧 Email: consult@officeexperts.com.au
+📧 Email: ${ACCOUNTS_EMAIL}
 📞 Phone: 1300 10 28 10
 🌐 Web: www.officeexperts.com.au
 
@@ -424,111 +377,78 @@ This email was sent to ${customerEmail}
     html: htmlEmail,
     text: textEmail,
     to: customerEmail,
-    from: "consult@officeexperts.com.au",
-    replyTo: "consult@officeexperts.com.au",
   };
 }
 
 /**
- * Get card display name for email
- */
-function getCardDisplayName(cardType) {
-  const displayNames = {
-    VISA: "Visa",
-    MASTERCARD: "Mastercard",
-    MASTERCARD_2_SERIES: "Mastercard",
-    AMEX: "American Express",
-    AMERICAN_EXPRESS: "American Express",
-    DINERS: "Diners Club",
-    JCB: "JCB",
-    UNKNOWN: "Credit Card",
-  };
-  return displayNames[cardType] || "Credit Card";
-}
-
-/**
- * Send payment confirmation email using SendGrid
+ * Sends the receipt email to the customer.
+ * Returns { success, messageId } or { success: false, error } — never throws,
+ * as the payment has already been taken by the time this runs.
  */
 export async function sendPaymentConfirmationEmail(paymentDetails) {
   try {
     const emailContent = generatePaymentConfirmationEmail(paymentDetails);
 
-    // Import SendGrid dynamically to avoid issues if not installed
-    const sgMail = await import("@sendgrid/mail").then((m) => m.default);
-
-    // Set API key
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-    // Email configuration
-    const msg = {
+    const response = await sgMail.send({
       to: emailContent.to,
-      from: {
-        email: emailContent.from,
-        name: "Office Experts Group",
-      },
-      replyTo: {
-        email: emailContent.replyTo,
-        name: "Office Experts Group",
-      },
+      from: { email: SENDER_EMAIL, name: "Office Experts Group" },
+      replyTo: { email: SENDER_EMAIL, name: "Office Experts Group" },
       subject: emailContent.subject,
       text: emailContent.text,
       html: emailContent.html,
-      // Add tracking
       trackingSettings: {
-        clickTracking: {
-          enable: false,
-        },
+        clickTracking: { enable: false },
         openTracking: {
           enable: true,
           substitutionTag: "%open_tracking_pixel%",
         },
       },
-      // Add categories for analytics
+      // Sendgrid categories for filtering in the Sendgrid dashboard
       categories: ["payment-confirmation", "bpoint-transaction"],
-    };
+    });
 
-    // Send email
-    const response = await sgMail.send(msg);
+    const messageId = response[0]?.headers?.["x-message-id"];
 
     console.log("Payment confirmation email sent successfully:", {
       invoiceNumber: paymentDetails.invoiceNumber,
       customerEmail: paymentDetails.customerEmail,
-      messageId: response[0].headers["x-message-id"],
+      messageId,
     });
 
-    return {
-      success: true,
-      messageId: response[0].headers["x-message-id"],
-    };
+    return { success: true, messageId };
   } catch (error) {
     console.error("Failed to send payment confirmation email:", error);
-
-    return {
-      success: false,
-      error: error.message,
-      code: error.code,
-    };
+    return { success: false, error: error.message, code: error.code };
   }
 }
 
 /**
- * Send email notification to internal team
+ * Sends a payment notice to the accounts team.
+ *
+ * Sent from our own verified sender address, with reply-to set to the
+ * customer. (Sendgrid rejects mail "from" an unverified address, so using
+ * the customer's email as the sender would fail.)
  */
 export async function sendInternalPaymentNotification(paymentDetails) {
   try {
-    const { invoiceNumber, customerName, totalAmount, customerEmail } =
-      paymentDetails;
-    const formattedAmount = `$${(totalAmount / 100).toFixed(2)}`;
+    const {
+      invoiceNumber,
+      customerName,
+      customerEmail,
+      totalAmount,
+      transactionId,
+      authCode,
+    } = paymentDetails;
 
-    const sgMail = await import("@sendgrid/mail").then((m) => m.default);
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const formattedAmount = formatCents(totalAmount);
+    const formattedTime = formatPaymentDate(paymentDetails.paymentDate);
 
-    const msg = {
-      to: "accounts@officeexperts.com.au",
-      from: {
-        email: customerEmail,
-        name: "Office Experts Payment System",
-      },
+    await sgMail.send({
+      to: ACCOUNTS_EMAIL,
+      from: { email: SENDER_EMAIL, name: "Office Experts Payment System" },
+      replyTo: customerEmail
+        ? { email: customerEmail, name: customerName }
+        : undefined,
       subject: `Payment Received - ${invoiceNumber} - ${formattedAmount}`,
       text: `
 Payment notification:
@@ -536,7 +456,9 @@ Payment notification:
 Invoice: ${invoiceNumber}
 Customer: ${customerName} (${customerEmail})
 Amount: ${formattedAmount}
-Time: ${new Date().toLocaleString("en-AU", { timeZone: "Australia/Brisbane" })}
+Transaction ID: ${transactionId || "Not provided"}
+Authorisation Code: ${authCode || "Not provided"}
+Time: ${formattedTime}
 
 Please update the invoice status in your accounting system.
       `,
@@ -561,19 +483,23 @@ Please update the invoice status in your accounting system.
             <td style="padding: 8px; font-size: 18px; font-weight: bold; color: #046999;">${formattedAmount}</td>
         </tr>
         <tr>
+            <td style="padding: 8px; font-weight: bold;">Transaction ID:</td>
+            <td style="padding: 8px;">${transactionId || "Not provided"}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; font-weight: bold;">Authorisation Code:</td>
+            <td style="padding: 8px;">${authCode || "Not provided"}</td>
+        </tr>
+        <tr>
             <td style="padding: 8px; font-weight: bold;">Time:</td>
-            <td style="padding: 8px;">${new Date().toLocaleString("en-AU", {
-              timeZone: "Australia/Brisbane",
-            })}</td>
+            <td style="padding: 8px;">${formattedTime}</td>
         </tr>
     </table>
     <p style="margin-top: 20px;">Please update the invoice status in your accounting system.</p>
 </div>
       `,
       categories: ["internal-notification", "payment-received"],
-    };
-
-    await sgMail.send(msg);
+    });
 
     return { success: true };
   } catch (error) {

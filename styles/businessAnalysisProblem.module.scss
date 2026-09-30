@@ -1,0 +1,145 @@
+// styles/businessAnalysisProblem.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 5rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-55;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.muted {
+  color: $text-secondary;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $white-88;
+  line-height: 1.8;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 460px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Problem ledger ──────────────────────────────
+.list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $white-12;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid $white-12;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+// Oversized shorthand acts as the row's visual anchor
+.tag {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $white-35;
+  transition: color 0.25s ease;
+
+  .item:hover & {
+    color: $replace-x;
+  }
+}
+
+.itemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $white-90;
+  margin-bottom: 0.35rem;
+}
+
+.itemBody {
+  font-size: 0.93rem;
+  color: $white-65;
+  line-height: 1.7;
+  max-width: 44rem;
+}
+
+.closing {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  color: $white;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  border-left: 2px solid $accent;
+  max-width: 48rem;
+}
+
+.accent {
+  color: $white-65;
+}

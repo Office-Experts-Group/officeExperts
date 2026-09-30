@@ -1,0 +1,147 @@
+.section {
+  background: #111820;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.muted {
+  color: #4a5568;
+}
+
+.lead {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+}
+
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .visual {
+    max-width: 460px;
+  }
+}
+@media (max-width: 449px) {
+  .visual {
+    display: none;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+@media (max-width: 766px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.tag {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.25s ease;
+}
+.item:hover .tag {
+  color: #c0392b;
+}
+
+.itemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.35rem;
+}
+
+.itemBody {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 44rem;
+}
+
+.closing {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  border-left: 2px solid #046999;
+  max-width: 48rem;
+}
+
+.accent {
+  color: rgba(255, 255, 255, 0.65);
+}/*# sourceMappingURL=businessAnalysisProblem.module.css.map */

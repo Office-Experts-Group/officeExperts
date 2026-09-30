@@ -1,22 +1,93 @@
-// app/api/bpoint/create-authkey/route.js - UPDATED WITH EMAIL INTEGRATION
+// app/api/bpoint/create-authkey/route.js
+// Processes a card payment through the Bpoint v3 transaction API and sends
+// the customer and internal confirmation emails.
+//
+// SURCHARGE REMOVAL: the server now only ever charges the invoice amount.
+// Surcharge values are no longer read, calculated or sent to Bpoint.
+
 import { NextResponse } from "next/server";
+// Bpoint credentials and live/test mode, validated from environment variables
 import {
   getPaymentConfig,
   validateBpointConfig,
 } from "../../../../utils/paymentConfig";
+// Sendgrid email helpers for the customer receipt and accounts notification
 import {
   sendPaymentConfirmationEmail,
   sendInternalPaymentNotification,
 } from "../../../../utils/emailService";
 
+const BPOINT_API_URL = "https://www.bpoint.com.au/webapi/v3/txns/";
+
+/**
+ * Works out the amount to charge, in cents.
+ *
+ * Browsers still holding the previous version of the payment page may send
+ * { amount: invoice + surcharge, baseAmount: invoice }. Preferring
+ * baseAmount when present guarantees no surcharge is charged, even from a
+ * stale cached bundle. The current page sends { amount } only.
+ */
+function getChargeAmount(requestBody) {
+  return parseInt(requestBody.baseAmount ?? requestBody.amount);
+}
+
+/**
+ * Sends the customer receipt and internal notification emails.
+ * Failures are recorded rather than thrown — the payment has already
+ * succeeded by this point and must still be reported as successful.
+ */
+async function sendConfirmationEmails(emailData) {
+  const emailStatus = {
+    customerEmail: false,
+    internalEmail: false,
+    customerEmailId: null,
+    errors: [],
+  };
+
+  try {
+    const customerResult = await sendPaymentConfirmationEmail(emailData);
+    if (customerResult.success) {
+      emailStatus.customerEmail = true;
+      emailStatus.customerEmailId = customerResult.messageId;
+    } else {
+      console.error("❌ Failed to send customer email:", customerResult.error);
+      emailStatus.errors.push(`Customer email: ${customerResult.error}`);
+    }
+  } catch (emailError) {
+    console.error("❌ Error sending customer email:", emailError);
+    emailStatus.errors.push(`Customer email exception: ${emailError.message}`);
+  }
+
+  try {
+    const internalResult = await sendInternalPaymentNotification(emailData);
+    if (internalResult.success) {
+      emailStatus.internalEmail = true;
+    } else {
+      console.error("❌ Failed to send internal email:", internalResult.error);
+      emailStatus.errors.push(`Internal email: ${internalResult.error}`);
+    }
+  } catch (emailError) {
+    console.error("❌ Error sending internal email:", emailError);
+    emailStatus.errors.push(`Internal email exception: ${emailError.message}`);
+  }
+
+  console.log("📧 Email Status Summary:", {
+    customerEmailSent: emailStatus.customerEmail,
+    internalEmailSent: emailStatus.internalEmail,
+    errors: emailStatus.errors,
+  });
+
+  return emailStatus;
+}
+
 export async function POST(request) {
   console.log(
     "🚀 Bpoint payment request received at:",
-    new Date().toISOString()
+    new Date().toISOString(),
   );
 
   try {
-    // CRITICAL: Validate configuration first
+    // Fail fast if credentials are missing or malformed
     try {
       validateBpointConfig();
     } catch (configError) {
@@ -28,20 +99,17 @@ export async function POST(request) {
           code: "CONFIG_ERROR",
           timestamp: new Date().toISOString(),
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     const requestBody = await request.json();
     console.log(
       "📥 Processing payment for invoice:",
-      requestBody.invoiceNumber
+      requestBody.invoiceNumber,
     );
 
     const {
-      amount: totalAmount,
-      baseAmount,
-      surchargeAmount,
       invoiceNumber,
       customerName,
       customerEmail,
@@ -52,45 +120,37 @@ export async function POST(request) {
       cardType,
     } = requestBody;
 
-    // Get validated configuration with production mode check
     const { config, isProduction } = getPaymentConfig();
 
-    // Validate request data
     if (!cardNumber || !expiryDate || !cvn) {
-      console.log("❌ Validation failed: Missing card details");
       return NextResponse.json(
         {
           error:
             "Missing card details. Please provide all required information.",
           code: "VALIDATION_ERROR",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    // Process amounts
-    const amount = parseInt(totalAmount);
-    const baseAmt = parseInt(baseAmount) || amount;
-    const surchargeAmt = parseInt(surchargeAmount) || 0;
+    // Invoice amount only — no surcharge
+    const amount = getChargeAmount(requestBody);
 
     if (isNaN(amount) || amount <= 0) {
-      console.log("❌ Invalid amount:", totalAmount);
+      console.log("❌ Invalid amount:", requestBody.amount);
       return NextResponse.json(
-        {
-          error: "Invalid payment amount",
-          code: "INVALID_AMOUNT",
-        },
-        { status: 400 }
+        { error: "Invalid payment amount", code: "INVALID_AMOUNT" },
+        { status: 400 },
       );
     }
 
     const firstName = customerName.split(" ")[0] || customerName;
     const lastName = customerName.split(" ").slice(1).join(" ") || "";
 
-    // USE PRODUCTION MODE FROM CONFIG
     const isTestMode = !isProduction;
 
-    // Prepare transaction request
+    // Bpoint transaction request. Crn fields are free-text references that
+    // appear in the Bpoint back office for reconciliation.
     const requestData = {
       TxnReq: {
         Action: "payment",
@@ -99,7 +159,6 @@ export async function POST(request) {
         MerchantReference: `Inv ${invoiceNumber}`,
         Crn1: invoiceNumber.replace(/[^a-zA-Z0-9]/g, ""),
         Crn2: cardType || "",
-        Crn3: `Surcharge:${surchargeAmt}`,
         EmailAddress: customerEmail,
         TestMode: isTestMode,
         Type: "internet",
@@ -124,31 +183,11 @@ export async function POST(request) {
       },
     };
 
-    // Build authentication
+    // Bpoint Basic auth format: "username|merchantNumber:password"
     const authString = `${config.username}|${config.merchantNumber}:${config.password}`;
     const credentials = Buffer.from(authString).toString("base64");
-    const apiUrl = "https://www.bpoint.com.au/webapi/v3/txns/";
 
-    // // Critical logging for production debugging
-    // if (isTestMode) {
-    //   console.log("🧪 TEST MODE - Using test processing");
-    //   console.log(
-    //     "💡 For success in test mode, use amount ending in 00 (like 10000 = $100.00)"
-    //   );
-    //   console.log(
-    //     "💡 Current amount:",
-    //     amount,
-    //     "Last 2 digits:",
-    //     String(amount).slice(-2)
-    //   );
-    //   console.log("💡 Expected response code:", String(amount).slice(-2));
-    // } else {
-    //   console.log("💰 LIVE MODE - Processing real payment");
-    //   console.log("⚠️  REAL MONEY WILL BE CHARGED");
-    // }
-
-    // Make API call to Bpoint
-    const bpointResponse = await fetch(apiUrl, {
+    const bpointResponse = await fetch(BPOINT_API_URL, {
       method: "POST",
       headers: {
         Authorization: `Basic ${credentials}`,
@@ -159,20 +198,11 @@ export async function POST(request) {
 
     const responseText = await bpointResponse.text();
 
-    // Detailed response logging
-    // console.log("📨 Bpoint response:", {
-    //   status: bpointResponse.status,
-    //   statusText: bpointResponse.statusText,
-    //   ok: bpointResponse.ok,
-    //   contentLength: responseText.length,
-    //   headers: Object.fromEntries(bpointResponse.headers.entries()),
-    // });
-
     if (!bpointResponse.ok) {
       console.error("❌ HTTP Error from Bpoint:", {
         status: bpointResponse.status,
         statusText: bpointResponse.statusText,
-        response: responseText.substring(0, 1000), // Log first 1000 chars
+        response: responseText.substring(0, 1000),
       });
 
       return NextResponse.json(
@@ -183,11 +213,10 @@ export async function POST(request) {
           httpStatus: bpointResponse.status,
           timestamp: new Date().toISOString(),
         },
-        { status: 503 }
+        { status: 503 },
       );
     }
 
-    // Parse and validate response
     let bpointResult;
     try {
       bpointResult = JSON.parse(responseText);
@@ -202,11 +231,12 @@ export async function POST(request) {
           code: "INVALID_RESPONSE",
           timestamp: new Date().toISOString(),
         },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
-    // Check API-level response
+    // APIResponse covers the request itself (auth, format); TxnResp covers
+    // the bank's decision on the card
     if (bpointResult.APIResponse?.ResponseCode !== 0) {
       console.error("❌ Bpoint API Error:", bpointResult.APIResponse);
       return NextResponse.json(
@@ -216,11 +246,10 @@ export async function POST(request) {
           apiResponse: bpointResult.APIResponse,
           timestamp: new Date().toISOString(),
         },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
-    // Extract transaction
     const transaction = bpointResult.TxnResp;
     if (!transaction) {
       console.error("❌ No transaction data in response:", bpointResult);
@@ -231,110 +260,36 @@ export async function POST(request) {
           code: "NO_TRANSACTION_DATA",
           timestamp: new Date().toISOString(),
         },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
-    // Handle successful payment
+    // Approved
     if (transaction.ResponseCode === "0") {
       console.log("✅ PAYMENT SUCCESSFUL!");
 
-
-      // 🔥 NEW: Send confirmation emails
       let emailStatus = {
         customerEmail: false,
         internalEmail: false,
         customerEmailId: null,
-        internalEmailId: null,
         errors: [],
       };
 
-      // Only send emails in production or if explicitly enabled
+      // Emails only go out in production unless explicitly enabled for testing
       const shouldSendEmails =
         isProduction || process.env.SEND_EMAILS_IN_TEST === "true";
 
       if (shouldSendEmails) {
-        console.log("📧 Sending confirmation emails...");
-
-        // Prepare email data
-        const emailData = {
+        emailStatus = await sendConfirmationEmails({
           invoiceNumber,
           customerName,
           customerEmail,
           totalAmount: amount,
-          baseAmount: baseAmt,
-          surchargeAmount: surchargeAmt,
           cardType,
-          authCode: transaction.authoriseId,
+          // Bpoint returns PascalCase keys
+          authCode: transaction.AuthoriseId,
           paymentDate: Date.now().toString(),
           transactionId: transaction.TxnNumber,
-        };
-
-        // Send customer confirmation email
-        try {
-          console.log(
-            "📧 Sending customer confirmation email to:",
-            customerEmail
-          );
-          const customerEmailResult = await sendPaymentConfirmationEmail(
-            emailData
-          );
-
-          if (customerEmailResult.success) {
-            console.log(
-              "✅ Customer email sent successfully:",
-              customerEmailResult.messageId
-            );
-            emailStatus.customerEmail = true;
-            emailStatus.customerEmailId = customerEmailResult.messageId;
-          } else {
-            console.error(
-              "❌ Failed to send customer email:",
-              customerEmailResult.error
-            );
-            emailStatus.errors.push(
-              `Customer email: ${customerEmailResult.error}`
-            );
-          }
-        } catch (emailError) {
-          console.error("❌ Error sending customer email:", emailError);
-          emailStatus.errors.push(
-            `Customer email exception: ${emailError.message}`
-          );
-        }
-
-        // Send internal notification email
-        try {
-          console.log("📧 Sending internal notification email...");
-          const internalEmailResult = await sendInternalPaymentNotification(
-            emailData
-          );
-
-          if (internalEmailResult.success) {
-            console.log("✅ Internal email sent successfully");
-            emailStatus.internalEmail = true;
-          } else {
-            console.error(
-              "❌ Failed to send internal email:",
-              internalEmailResult.error
-            );
-            emailStatus.errors.push(
-              `Internal email: ${internalEmailResult.error}`
-            );
-          }
-        } catch (emailError) {
-          console.error("❌ Error sending internal email:", emailError);
-          emailStatus.errors.push(
-            `Internal email exception: ${emailError.message}`
-          );
-        }
-
-        // Log email status summary
-        console.log("📧 Email Status Summary:", {
-          customerEmailSent: emailStatus.customerEmail,
-          internalEmailSent: emailStatus.internalEmail,
-          errors: emailStatus.errors,
-          totalErrors: emailStatus.errors.length,
         });
       } else {
         console.log("📧 Email sending disabled in test mode");
@@ -347,49 +302,41 @@ export async function POST(request) {
           txnNumber: transaction.TxnNumber,
           amount: transaction.Amount,
           responseCode: transaction.ResponseCode,
-          authoriseId: transaction.authoriseId,
+          authoriseId: transaction.AuthoriseId,
           receiptNumber: transaction.ReceiptNumber,
           processedAmount: transaction.ProcessedAmount,
           merchantReference: transaction.MerchantReference,
           transactionDate: new Date().toISOString(),
           cardType: cardType,
           maskedCardNumber: `****-****-****-${cardNumber.slice(-4)}`,
-          surchargeAmount: surchargeAmt,
-          baseAmount: baseAmt,
-          isTestMode, // Include this for debugging
+          isTestMode,
         },
-        // 🔥 NEW: Include email status in response
-        emailStatus: {
-          customerEmail: emailStatus.customerEmail,
-          internalEmail: emailStatus.internalEmail,
-          customerEmailId: emailStatus.customerEmailId,
-          errors: emailStatus.errors,
-        },
+        emailStatus,
       });
-    } else {
-
-      const declineInfo = getDeclineInfo(
-        transaction.ResponseCode,
-        transaction.ResponseText,
-        isTestMode,
-        transaction
-      );
-
-      return NextResponse.json(
-        {
-          success: false,
-          error: declineInfo.userMessage,
-          responseCode: transaction.ResponseCode,
-          responseText: transaction.ResponseText,
-          txnNumber: transaction.TxnNumber,
-          canRetry: declineInfo.canRetry,
-          suggestedAction: declineInfo.suggestedAction,
-          isTestMode, // Include this for debugging
-          timestamp: new Date().toISOString(),
-        },
-        { status: 400 }
-      );
     }
+
+    // Declined
+    const declineInfo = getDeclineInfo(
+      transaction.ResponseCode,
+      transaction.ResponseText,
+      isTestMode,
+      transaction,
+    );
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: declineInfo.userMessage,
+        responseCode: transaction.ResponseCode,
+        responseText: transaction.ResponseText,
+        txnNumber: transaction.TxnNumber,
+        canRetry: declineInfo.canRetry,
+        suggestedAction: declineInfo.suggestedAction,
+        isTestMode,
+        timestamp: new Date().toISOString(),
+      },
+      { status: 400 },
+    );
   } catch (error) {
     console.error("💥 CRITICAL ERROR in payment processing:", error);
     console.error("Stack trace:", error.stack);
@@ -402,14 +349,17 @@ export async function POST(request) {
         timestamp: new Date().toISOString(),
         errorDetails: error.message,
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
-// Enhanced decline handling with proper code concatenation and test mode awareness
+/**
+ * Maps a Bpoint decline to a customer message.
+ * Bpoint concatenates Response Code + Bank Response Code (e.g. 2 + 05 = "205"),
+ * so the combined code is tried first, then the raw response code.
+ */
 function getDeclineInfo(responseCode, responseText, isTestMode, transaction) {
-  // Handle concatenated response codes (Response Code + Bank Response Code)
   let lookupCode = responseCode;
   if (
     transaction?.BankResponseCode &&
@@ -417,7 +367,7 @@ function getDeclineInfo(responseCode, responseText, isTestMode, transaction) {
   ) {
     lookupCode = responseCode + transaction.BankResponseCode;
     console.log(
-      `🔍 Concatenated response code: ${responseCode} + ${transaction.BankResponseCode} = ${lookupCode}`
+      `🔍 Concatenated response code: ${responseCode} + ${transaction.BankResponseCode} = ${lookupCode}`,
     );
   }
 
@@ -500,7 +450,7 @@ function getDeclineInfo(responseCode, responseText, isTestMode, transaction) {
       suggestedAction: "Retry or contact support",
     },
 
-    // Common single digit codes
+    // Common bank codes
     "05": {
       userMessage:
         "Your card was declined by your bank. Please contact your bank or try a different card.",
@@ -550,20 +500,11 @@ function getDeclineInfo(responseCode, responseText, isTestMode, transaction) {
     },
   };
 
-  // Try concatenated code first, then individual codes
-  let info = declineReasons[lookupCode] || declineReasons[responseCode];
+  const info = declineReasons[lookupCode] || declineReasons[responseCode];
+  if (info) return info;
 
-  if (info) {
-    console.log(
-      `✅ Found decline info for code ${lookupCode || responseCode}:`,
-      info.userMessage
-    );
-    return info;
-  }
-
-  // Use response text if available and meaningful
-  if (responseText && responseText !== "Unknown" && responseText !== "") {
-    console.log(`📝 Using response text: ${responseText}`);
+  // Fall back to Bpoint's own text if it's meaningful
+  if (responseText && responseText !== "Unknown") {
     return {
       userMessage: `${responseText}. Please check your card details and try again.`,
       canRetry: true,
@@ -571,10 +512,6 @@ function getDeclineInfo(responseCode, responseText, isTestMode, transaction) {
     };
   }
 
-  // Final fallback
-  console.log(
-    `❓ Unknown response code ${responseCode}, using default message`
-  );
   return {
     userMessage: `Payment declined (Code: ${responseCode}). Please contact your bank or try a different card.`,
     canRetry: true,

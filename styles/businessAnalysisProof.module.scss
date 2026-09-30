@@ -1,0 +1,184 @@
+// styles/businessAnalysisProof.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  // Keeps the heading clear of the fixed header when jumped to via #proof
+  scroll-margin-top: 5rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-55;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.muted {
+  color: $white-55;
+}
+
+.all {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid $white-18;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $white-08;
+  }
+  &:focus-visible {
+    outline: 2px solid $white;
+    outline-offset: 3px;
+  }
+}
+
+// ── Ledger ──────────────────────────────────────
+.list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $white-18;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 10rem 1.3fr 1.6fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.6rem 1rem;
+  border-bottom: 1px solid $white-12;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $dark-surface;
+  }
+  &:focus-visible {
+    outline: 2px solid $white;
+    outline-offset: -2px;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 10rem 1fr;
+    gap: 0.75rem 2rem;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.area {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white-55;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.before {
+  font-size: 0.95rem;
+  color: $white-35;
+  text-decoration-color: $replace-x;
+}
+
+.after {
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.body {
+  font-size: 0.9rem;
+  color: $white-65;
+  line-height: 1.65;
+}
+
+.cta {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $white-88;
+  white-space: nowrap;
+
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 0.35rem;
+    transition: transform 0.2s ease;
+  }
+  .row:hover &::after {
+    transform: translateX(4px);
+  }
+}
+
+// Tablet: description and link sit in the second column under the metric
+.body,
+.cta {
+  @media (max-width: 1024px) {
+    grid-column: 2;
+  }
+  @media (max-width: 766px) {
+    grid-column: auto;
+  }
+}
+
+// Screen-reader-only text
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

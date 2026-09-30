@@ -85,6 +85,8 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/microsoft-office-365/office-365-migration",
   "/services/microsoft-office-365/support-and-managed-services",
   "/services/microsoft-office-365/exchange-online-setup-and-support",
+  "/test-page",
+  "/case-study-submission",
 ]);
 
 /** @type {import('next-sitemap').IConfig} */

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+.section {
+  background: #f7f8f9;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  max-width: 34rem;
+}
+
+.visual {
+  justify-self: center;
+  width: 100%;
+  max-width: 440px;
+}
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 449px) {
+  .visual {
+    display: none;
+  }
+}
+
+.rows {
+  list-style: none;
+  padding: 0;
+  border-top: 2px solid #0d1b2a;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.1fr;
+  gap: 2.5rem;
+  padding: 1.75rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  transition: background 0.2s ease;
+}
+.row:hover {
+  background: #ffffff;
+}
+@media (max-width: 1024px) {
+  .row {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 1rem 2rem;
+  }
+}
+@media (max-width: 766px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.35;
+}
+
+.body {
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .links {
+    grid-column: 2;
+  }
+}
+@media (max-width: 766px) {
+  .links {
+    grid-column: auto;
+  }
+}
+
+.link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #046999;
+}
+.link::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.3rem;
+  transition: transform 0.2s ease;
+}
+.link:hover::after {
+  transform: translateX(3px);
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link:focus-visible {
+  outline: 2px solid #046999;
+  outline-offset: 2px;
+}/*# sourceMappingURL=businessAnalysisAreas.module.css.map */

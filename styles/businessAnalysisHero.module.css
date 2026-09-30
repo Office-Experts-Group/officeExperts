@@ -1,0 +1,155 @@
+.section {
+  background: #f7f8f9;
+  padding: 7rem 7rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 50%;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+  padding: 0.32rem 0.85rem;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 770px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+@media (max-width: 770px) {
+  .heading {
+    margin-top: 2rem;
+  }
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  max-width: 38rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary {
+  background: #046999;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.primary:hover {
+  border: 1px solid #046999;
+}
+
+.secondary {
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #046999;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  transition: background 0.2s ease;
+}
+.secondary:hover {
+  background: #e8f4fa;
+}
+.secondary:focus-visible {
+  outline: 2px solid #046999;
+  outline-offset: 3px;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #777a7e;
+}
+.facts li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.facts li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #046999;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 770px) {
+  .image {
+    display: none;
+  }
+}
+.image img {
+  width: 900px;
+  height: auto;
+}/*# sourceMappingURL=businessAnalysisHero.module.css.map */

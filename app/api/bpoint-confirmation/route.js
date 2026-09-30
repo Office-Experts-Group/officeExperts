@@ -1,166 +1,143 @@
 // app/api/bpoint-confirmation/route.js
+// Sends the internal (accounts) and customer payment confirmation emails.
+//
+// SURCHARGE REMOVAL: base amount / card surcharge lines have been removed
+// from both emails. The amount shown is the amount paid.
+//
+
+// Sendgrid mail client (the only email package in the stack)
 import sgMail from "@sendgrid/mail";
+// Shared HTML and plain-text signature used on customer-facing emails
 import { getEmailSignature } from "../../../utils/emailSignature";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export async function POST(req) {
-  try {
-    const body = await req.json();
-    const {
-      amount,
-      baseAmount,
-      surchargeAmount,
-      customerName,
-      customerEmail,
-      invoiceNumber,
-      transactionId,
-      authCode,
-      cardType,
-      paymentDate,
-      currency = "AUD",
-    } = body;
+/**
+ * Formats a cents value as e.g. "$123.45 AUD".
+ */
+function formatCurrency(amountInCents, currency) {
+  return `$${(amountInCents / 100).toFixed(2)} ${currency}`;
+}
 
-    // Validate required fields
-    if (!amount || !customerName || !invoiceNumber) {
-      return Response.json(
-        { error: "Missing required payment details" },
-        { status: 400 }
-      );
-    }
+/**
+ * Formats a timestamp in Sydney time (AEST/AEDT) for the emails.
+ */
+function formatSydneyTime(timestamp) {
+  return new Intl.DateTimeFormat("en-AU", {
+    timeZone: "Australia/Sydney",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  }).format(new Date(timestamp || Date.now()));
+}
 
-    // Format current time in AEST
-    const timeFormatter = new Intl.DateTimeFormat("en-AU", {
-      timeZone: "Australia/Sydney",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: true,
-    });
+/**
+ * Builds the internal notification for the accounts team.
+ */
+function buildInternalEmail(details) {
+  const {
+    totalAmount,
+    invoiceNumber,
+    customerName,
+    customerEmail,
+    transactionId,
+    authCode,
+    cardType,
+    paymentTime,
+  } = details;
 
-    const currentTimeAEST = timeFormatter.format(
-      new Date(paymentDate || Date.now())
-    );
-
-    // Format amounts for display
-    const formatCurrency = (amountInCents) => {
-      return `$${(amountInCents / 100).toFixed(2)} ${currency}`;
-    };
-
-    const totalAmount = formatCurrency(amount);
-    const baseAmountFormatted = formatCurrency(baseAmount || amount);
-    const surchargeFormatted = surchargeAmount
-      ? formatCurrency(surchargeAmount)
-      : null;
-
-    // Get the email signature
-    const { htmlSignature, textSignature } = getEmailSignature();
-
-    // Create internal notification email for accounts team
-    const internalTextMessage = `
+  const text = `
 PAYMENT CONFIRMATION - Invoice ${invoiceNumber}
 
 Payment Details:
 - Amount: ${totalAmount}
-${surchargeAmount ? `- Base Amount: ${baseAmountFormatted}` : ""}
-${surchargeAmount ? `- Card Surcharge: ${surchargeFormatted}` : ""}
 - Invoice Number: ${invoiceNumber}
 - Customer: ${customerName}
 - Customer Email: ${customerEmail || "Not provided"}
 - Transaction ID: ${transactionId || "Not provided"}
-- Authorization Code: ${authCode || "Not provided"}
+- Authorisation Code: ${authCode || "Not provided"}
 - Card Type: ${cardType || "Not specified"}
-- Payment Date: ${currentTimeAEST} AEST
+- Payment Date: ${paymentTime} AEST
 
 This payment was processed through Bpoint gateway.
-    `;
+  `;
 
-    const internalHtmlMessage = `
+  const html = `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
   <h2 style="color: #2c5aa0; border-bottom: 2px solid #2c5aa0; padding-bottom: 10px;">
     🎉 Payment Confirmation - Invoice ${invoiceNumber}
   </h2>
-  
+
   <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
     <h3 style="color: #28a745; margin-top: 0;">✅ Payment Successfully Processed</h3>
-    
+
     <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
       <tr style="background-color: #e9ecef;">
-        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Total Amount:</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Amount:</td>
         <td style="padding: 12px; border: 1px solid #dee2e6; font-size: 18px; color: #28a745; font-weight: bold;">${totalAmount}</td>
       </tr>
-      ${
-        surchargeAmount
-          ? `
       <tr>
-        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Base Amount:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${baseAmountFormatted}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Card Surcharge:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${surchargeFormatted}</td>
-      </tr>
-      `
-          : ""
-      }
-      <tr style="background-color: #e9ecef;">
         <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Invoice Number:</td>
         <td style="padding: 12px; border: 1px solid #dee2e6;">${invoiceNumber}</td>
       </tr>
-      <tr>
+      <tr style="background-color: #e9ecef;">
         <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Customer:</td>
         <td style="padding: 12px; border: 1px solid #dee2e6;">${customerName}</td>
       </tr>
-      <tr style="background-color: #e9ecef;">
+      <tr>
         <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Customer Email:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${
-          customerEmail || "Not provided"
-        }</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6;">${customerEmail || "Not provided"}</td>
       </tr>
-      <tr>
+      <tr style="background-color: #e9ecef;">
         <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Transaction ID:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${
-          transactionId || "Not provided"
-        }</td>
-      </tr>
-      <tr style="background-color: #e9ecef;">
-        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Authorization Code:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${
-          authCode || "Not provided"
-        }</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6;">${transactionId || "Not provided"}</td>
       </tr>
       <tr>
-        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Card Type:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${
-          cardType || "Not specified"
-        }</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Authorisation Code:</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6;">${authCode || "Not provided"}</td>
       </tr>
       <tr style="background-color: #e9ecef;">
+        <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Card Type:</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6;">${cardType || "Not specified"}</td>
+      </tr>
+      <tr>
         <td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">Payment Date:</td>
-        <td style="padding: 12px; border: 1px solid #dee2e6;">${currentTimeAEST} AEST</td>
+        <td style="padding: 12px; border: 1px solid #dee2e6;">${paymentTime} AEST</td>
       </tr>
     </table>
   </div>
-  
+
   <div style="background-color: #d1ecf1; border: 1px solid #bee5eb; border-radius: 4px; padding: 15px; margin: 20px 0;">
     <strong>💳 Payment Gateway:</strong> Bpoint (Commonwealth Bank)<br>
     <strong>🌐 Website:</strong> https://www.officeexperts.com.au
   </div>
-  
+
   <p style="color: #6c757d; font-size: 14px; margin-top: 30px;">
     This is an automated notification from the Office Experts payment system.
   </p>
 </div>
-    `;
+  `;
 
-    // Create customer confirmation email (optional - only if customerEmail provided)
-    let customerTextMessage, customerHtmlMessage;
+  return { text, html };
+}
 
-    if (customerEmail) {
-      customerTextMessage = `
+/**
+ * Builds the customer confirmation email.
+ */
+function buildCustomerEmail(details, signature) {
+  const {
+    totalAmount,
+    invoiceNumber,
+    customerName,
+    transactionId,
+    paymentTime,
+  } = details;
+
+  const text = `
 Hi ${customerName},
 
 Thank you for your payment! We have successfully processed your payment for invoice ${invoiceNumber}.
@@ -168,29 +145,29 @@ Thank you for your payment! We have successfully processed your payment for invo
 Payment Details:
 - Amount: ${totalAmount}
 - Invoice Number: ${invoiceNumber}
-- Payment Date: ${currentTimeAEST} AEST
+- Payment Date: ${paymentTime} AEST
 - Transaction ID: ${transactionId || "Processing"}
 
 Your payment has been received and your invoice has been marked as paid. You will receive a receipt via email shortly.
 
 If you have any questions about this payment, please don't hesitate to contact us.
 
-${textSignature}
-      `;
+${signature.textSignature}
+  `;
 
-      customerHtmlMessage = `
+  const html = `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
   <h2 style="color: #2c5aa0; border-bottom: 2px solid #2c5aa0; padding-bottom: 10px;">
     Payment Confirmation
   </h2>
-  
+
   <p>Hi <strong>${customerName}</strong>,</p>
-  
+
   <p>Thank you for your payment! We have successfully processed your payment for invoice <strong>${invoiceNumber}</strong>.</p>
-  
+
   <div style="background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 20px; margin: 20px 0;">
     <h3 style="color: #155724; margin-top: 0;">✅ Payment Confirmed</h3>
-    
+
     <table style="width: 100%; border-collapse: collapse;">
       <tr>
         <td style="padding: 8px 0; font-weight: bold;">Amount Paid:</td>
@@ -202,27 +179,59 @@ ${textSignature}
       </tr>
       <tr>
         <td style="padding: 8px 0; font-weight: bold;">Payment Date:</td>
-        <td style="padding: 8px 0; text-align: right;">${currentTimeAEST} AEST</td>
+        <td style="padding: 8px 0; text-align: right;">${paymentTime} AEST</td>
       </tr>
       <tr>
         <td style="padding: 8px 0; font-weight: bold;">Transaction ID:</td>
-        <td style="padding: 8px 0; text-align: right;">${
-          transactionId || "Processing"
-        }</td>
+        <td style="padding: 8px 0; text-align: right;">${transactionId || "Processing"}</td>
       </tr>
     </table>
   </div>
-  
+
   <p>Your payment has been received and your invoice has been marked as paid. You will receive a receipt via email shortly.</p>
-  
+
   <p>If you have any questions about this payment, please don't hesitate to contact us.</p>
-  
-  ${htmlSignature}
+
+  ${signature.htmlSignature}
 </div>
-      `;
+  `;
+
+  return { text, html };
+}
+
+export async function POST(req) {
+  try {
+    const body = await req.json();
+    const {
+      amount,
+      customerName,
+      customerEmail,
+      invoiceNumber,
+      transactionId,
+      authCode,
+      cardType,
+      paymentDate,
+      currency = "AUD",
+    } = body;
+
+    if (!amount || !customerName || !invoiceNumber) {
+      return Response.json(
+        { error: "Missing required payment details" },
+        { status: 400 },
+      );
     }
 
-    // Track email sending results
+    const details = {
+      totalAmount: formatCurrency(amount, currency),
+      invoiceNumber,
+      customerName,
+      customerEmail,
+      transactionId,
+      authCode,
+      cardType,
+      paymentTime: formatSydneyTime(paymentDate),
+    };
+
     const emailResults = {
       internalEmail: false,
       customerEmail: false,
@@ -231,15 +240,16 @@ ${textSignature}
       errors: [],
     };
 
-    // Send internal notification to accounts team
+    // Internal notification to accounts (cc main contact for visibility)
     try {
+      const internal = buildInternalEmail(details);
       const internalResult = await sgMail.send({
         from: "consult@officeexperts.com.au",
         to: "accounts@officeexperts.com.au",
-        cc: "consult@officeexperts.com.au", // Copy main contact email for visibility
-        subject: `💰 Payment Received - Invoice ${invoiceNumber} - ${totalAmount}`,
-        text: internalTextMessage,
-        html: internalHtmlMessage,
+        cc: "consult@officeexperts.com.au",
+        subject: `💰 Payment Received - Invoice ${invoiceNumber} - ${details.totalAmount}`,
+        text: internal.text,
+        html: internal.html,
       });
 
       emailResults.internalEmail = true;
@@ -250,15 +260,16 @@ ${textSignature}
       emailResults.errors.push(`Internal email failed: ${emailError.message}`);
     }
 
-    // Send customer confirmation email (if email provided)
-    if (customerEmail && customerTextMessage && customerHtmlMessage) {
+    // Customer confirmation, only when an address was supplied
+    if (customerEmail) {
       try {
+        const customer = buildCustomerEmail(details, getEmailSignature());
         const customerResult = await sgMail.send({
           from: "consult@officeexperts.com.au",
           to: customerEmail,
           subject: `Payment Confirmation - Invoice ${invoiceNumber}`,
-          text: customerTextMessage,
-          html: customerHtmlMessage,
+          text: customer.text,
+          html: customer.html,
         });
 
         emailResults.customerEmail = true;
@@ -267,33 +278,28 @@ ${textSignature}
       } catch (emailError) {
         console.error("Failed to send customer email:", emailError);
         emailResults.errors.push(
-          `Customer email failed: ${emailError.message}`
+          `Customer email failed: ${emailError.message}`,
         );
       }
     }
 
-    // Return success response with email status
     return Response.json(
       {
         message: "Payment confirmation processed",
         emailStatus: {
-          internalEmail: emailResults.internalEmail,
-          customerEmail: emailResults.customerEmail,
-          internalEmailId: emailResults.internalEmailId,
-          customerEmailId: emailResults.customerEmailId,
+          ...emailResults,
           totalEmails:
             (emailResults.internalEmail ? 1 : 0) +
             (emailResults.customerEmail ? 1 : 0),
-          errors: emailResults.errors,
         },
         paymentDetails: {
-          amount: totalAmount,
+          amount: details.totalAmount,
           invoiceNumber,
           customerName,
-          processedAt: currentTimeAEST,
+          processedAt: details.paymentTime,
         },
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Payment confirmation error:", error);
@@ -306,7 +312,7 @@ ${textSignature}
           errors: [`Server error: ${error.message}`],
         },
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

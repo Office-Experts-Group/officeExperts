@@ -368,40 +368,28 @@ export const navigationData = {
           },
         ],
       },
-      // {
-      //   label: "Office 365",
-      //   href: `/services/microsoft-office-365`,
-      //   items: [
-      //     {
-      // redirected to /services/microsoft-office-365
-      //       label: "365 Implementation",
-      //       href: `/services/microsoft-office-365/office-365-implementation`,
-      //     },
-      //     {
-      // redirected to /services/microsoft-office-365
-      //       label: "365 Migration",
-      //       href: `/services/microsoft-office-365/office-365-migration`,
-      //     },
-      //     {
-      // redirected to /microsoft-support-and-training-australia
-      //       label: "Exchange Setup & Assistance",
-      //       href: `/services/microsoft-office-365/exchange-online-setup-and-support`,
-      //     },
-      //     {
-      // redirected to /microsoft-support-and-training-australia
-      //       label: "Help & Managed Services",
-      //       href: `/services/microsoft-office-365/support-and-managed-services`,
-      //     },
-      //     {
-      //       label: "Cloud Backup with OneDrive",
-      //       href: `/services/microsoft-office-365/cloud-backup-with-onedrive`,
-      //     },
-      //     {
-      //       label: "App & Custom Development",
-      //       href: `/services/microsoft-office-365/app-and-custom-development`,
-      //     },
-      //   ],
-      // },
+      {
+        label: "Copilot and AI",
+        href: `/services/by-business-solution/copilot-and-ai`,
+        items: [
+          {
+            label: "Copilot in Office 365",
+            href: `/services/microsoft-office-365/copilot`,
+          },
+          {
+            label: "Email Triage with AI",
+            href: `/services/ai-email-triage`,
+          },
+          {
+            label: "Power Platform AI Integrations",
+            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/ai-integrations`,
+          },
+          {
+            label: "AI Templates In Word",
+            href: `${WORD_EXPERTS_URL}/copilot-and-ai-templates`,
+          },
+        ],
+      },
       {
         label: "Other Services",
         href: `/services/by-business-solution`,
