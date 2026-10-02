@@ -789,7 +789,7 @@ export const caseStudies = [
 
     services: [
       {
-        label: "Band Template services",
+        label: "Brand Template services",
         href: "https://www.wordexperts.com.au/brand-template",
       },
       {
@@ -1174,7 +1174,7 @@ export const caseStudies = [
       },
       {
         label: "Upgrading with Access",
-        href: "https://www.accesexperts.com.au/upgrades-and-migration",
+        href: "https://www.accessexperts.com.au/upgrades-and-migration",
       },
     ],
   },
@@ -1312,7 +1312,7 @@ export const caseStudies = [
     ],
 
     outcome: [
-      "The clent can now bring in every supplier's raw sales files and get a fully categorised, summarised view of the financial year without manually combining a single file by hand.",
+      "The client can now bring in every supplier's raw sales files and get a fully categorised, summarised view of the financial year without manually combining a single file by hand.",
       "Sales can be compared by supplier, by club or member, and across every month and quarter, giving a clear picture of performance that would previously have taken considerable manual effort to piece together.",
       "Comparing one financial year against the next is now handled automatically as well, with quarter-on-quarter movement calculated directly from the two summary files rather than reworked from scratch each time a year-on-year comparison was needed.",
     ],
@@ -1450,7 +1450,7 @@ export const caseStudies = [
         body: "From the Global Common base, we built a custom Master Template for each of the four entities, reflecting each one's specific branding while staying built on the same consistent foundation underneath.",
       },
       {
-        heading: "Designing the Bravus Formatting tab",
+        heading: "Designing the Formatting tab",
         body: "We designed a custom Formatting tab packed with practical, everyday tools, including a Custom Page Layouts button, an Insert Table button and a Style Cleanup function, giving staff quick access to the functions they use regularly without leaving Word.",
       },
       {
@@ -1462,7 +1462,7 @@ export const caseStudies = [
     outcome: [
       "All four entities now have their own custom Master Template, built from a single shared Global Common template rather than four independent builds, keeping maintenance centralised even as each entity's branding stays distinct.",
       "The custom Formatting tab gives staff practical tools they use every day, from custom page layouts to table insertion and style cleanup, without needing to leave Word or work around the templates to get their job done.",
-      "The copy/paste macro means foreign formatting brought in from other sources no longer quietly breaks the approved styling, with Bravus-approved formatting applied automatically the moment content is pasted in, keeping documents consistent across all four entities with far less manual correction.",
+      "The copy/paste macro means foreign formatting brought in from other sources no longer quietly breaks the approved styling, with brand-approved formatting applied automatically the moment content is pasted in, keeping documents consistent across all four entities with far less manual correction.",
     ],
 
     services: [

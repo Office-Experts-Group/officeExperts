@@ -1,0 +1,97 @@
+// styles/aiAgentsGovernance.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $dark-surface;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $darkGrayText;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $white-65;
+  line-height: 1.8;
+}
+
+// ── Staggered control stack ─────────────────────
+// column-reverse puts the first layer (Hosting) at the base
+.stack {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+// Each layer steps further right, like a staircase built on the base layer
+.layer {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  margin-left: calc(var(--i) * 2rem);
+  padding: 1.25rem 1.5rem;
+  background: $dark-mid;
+  border-left: 3px solid $accent;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    margin-left: calc(var(--i) * 0.75rem);
+  }
+}
+
+.layerName {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent-light;
+}
+
+.layerBody {
+  font-size: 0.9rem;
+  color: $white-88;
+  line-height: 1.65;
+}

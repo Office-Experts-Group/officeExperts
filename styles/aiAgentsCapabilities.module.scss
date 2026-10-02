@@ -1,0 +1,132 @@
+// styles/aiAgentsCapabilities.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Centred header to frame the symmetrical layout below
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Principles | illustration | principles ──────
+.layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 380px) 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  // Illustration moves to the top, principles stack beneath
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+
+    .visual {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      justify-self: center;
+      width: min(100%, 380px);
+    }
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+}
+
+.marker {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: $accent;
+  border: 1.5px solid $accent;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.itemTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.itemBody {
+  font-size: 0.88rem;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+.link {
+  color: $accent;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}

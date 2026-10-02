@@ -1,0 +1,207 @@
+// styles/aiAgentsComparison.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 70vw;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Table ───────────────────────────────────────
+.tableWrap {
+  overflow-x: auto;
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 4px;
+  }
+}
+
+.table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  // With table-layout: fixed, column widths come from the FIRST row,
+  // so the label column width must be set on the empty header cell
+  thead td {
+    width: 8.5rem;
+  }
+
+  // Header row keeps the default font; body rows use Aptos
+  tbody {
+    font-family: var(--font-aptos);
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $border;
+  }
+
+  // Row labels
+  tbody th {
+    position: relative;
+    padding: 1.1rem 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $text-muted;
+    transition: color 0.3s ease;
+
+    // Gradient sits on a pseudo-element because background gradients
+    // can't transition; fading its opacity gives the smooth reveal
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 100% 100%, $accent, $dark-bg 80%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  tbody td {
+    padding: 1.1rem 1.5rem;
+    font-size: 0.9rem;
+    color: $text-secondary;
+    line-height: 1.65;
+    border-left: 1px solid $border;
+  }
+
+  // Hybrid lane
+  tbody td:nth-child(3) {
+    background: $accent;
+    color: $white-88;
+  }
+
+  // Custom-coded lane
+  tbody td:nth-child(4) {
+    background: $dark-bg;
+    color: $white;
+  }
+
+  tbody tr:hover .rowLabel {
+    transform: scale(1.1);
+  }
+}
+
+// Sits above the gradient pseudo-element; scales from the left edge
+.rowLabel {
+  position: relative;
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+// ── Spectrum header: one line, three stops ──────
+.colHead {
+  position: relative;
+  padding: 2.25rem 1.5rem 1.5rem;
+
+  // Continuous line across all three header cells
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $accent-border;
+  }
+}
+
+.stop {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: $white;
+  border: 2px solid $accent;
+}
+
+// Fill the stops progressively: hollow → half → solid
+th:nth-child(3) .stop {
+  background: linear-gradient(90deg, $accent 50%, $white 50%);
+}
+th:nth-child(4) .stop {
+  background: $accent;
+}
+
+.colName {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.colNote {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: $accent;
+  margin-top: 0.2rem;
+}
+
+// ── Footnote with service links ─────────────────
+.footnote {
+  font-size: 0.92rem;
+  color: $text-secondary;
+  line-height: 1.8;
+  max-width: 54rem;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}

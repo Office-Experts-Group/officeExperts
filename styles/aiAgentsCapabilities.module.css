@@ -1,0 +1,133 @@
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 380px) 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .layout .visual {
+    grid-column: 1/-1;
+    grid-row: 1;
+    justify-self: center;
+    width: min(100%, 380px);
+  }
+}
+@media (max-width: 766px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visual svg {
+  width: 100%;
+  height: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+}
+
+.marker {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #046999;
+  border: 1.5px solid #046999;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.itemTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.itemBody {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.link {
+  color: #046999;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}/*# sourceMappingURL=aiAgentsCapabilities.module.css.map */

@@ -1,0 +1,252 @@
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #046999;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 0 auto;
+}
+.textLink svg {
+  transition: transform 0.2s ease;
+}
+.textLink:hover svg {
+  transform: translateX(3px);
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+@media (max-width: 1024px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.useCase {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.rowTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.rowBody {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.75;
+}
+
+.compare {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.measures {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.measure {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.measureLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9a9da1;
+}
+
+.measureValue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.afterValue {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #046999;
+  letter-spacing: -0.02em;
+}
+
+.barBefore,
+.barAfter {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.barBefore {
+  background: #f2f3f5;
+}
+
+.barAfter {
+  width: max(var(--after), 10px);
+  background: #046999;
+}
+
+.extra {
+  font-size: 0.88rem;
+  color: #0d1b2a;
+  padding-left: 7.5rem;
+}
+@media (max-width: 449px) {
+  .extra {
+    padding-left: 0;
+  }
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.moreHeading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.moreList {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.moreLink {
+  display: grid;
+  grid-template-columns: 18rem 1fr;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: padding 0.2s ease, background 0.2s ease;
+}
+.moreLink:hover {
+  background: #f7f8f9;
+  padding-left: 1rem;
+}
+.moreLink:focus-visible {
+  outline: 2px solid #046999;
+  outline-offset: 2px;
+}
+@media (max-width: 766px) {
+  .moreLink {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+.moreTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+.moreTitle svg {
+  color: #046999;
+}
+
+.moreBody {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.7;
+}/*# sourceMappingURL=aiAgentsUseCases.module.css.map */
