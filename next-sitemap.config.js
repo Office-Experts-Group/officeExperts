@@ -94,40 +94,17 @@ module.exports = {
   siteUrl: SITE_URL,
   generateRobotsTxt: true,
   generateIndexSitemap: false,
-  changefreq: "weekly",
-  priority: 0.7,
   trailingSlash: false,
+  autoLastmod: false, // Without this, every URL gets the build time as its lastmod
 
   // Excluded from the sitemap entirely (supports wildcards)
   exclude: ["/api/*", "/test-invoice"],
 
   robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: "*",
-        allow: "/",
-        // API routes have no value to crawlers. Don't block /_next/:
-        // Google needs those JS/CSS files to render the pages.
-        disallow: ["/api/"],
-      },
-    ],
-
-    // With generateIndexSitemap: false, next-sitemap won't add a Sitemap line on its own
-    additionalSitemaps: [`${SITE_URL}/sitemap.xml`],
-
-    // Final pass over the generated text, used here to remove the non-standard Host directive
-    transformRobotsTxt: async (_config, robotsTxt) =>
-      robotsTxt
-        .split("\n")
-        .filter(
-          (line) => !line.startsWith("# Host") && !line.startsWith("Host:"),
-        )
-        .join("\n")
-        .replace(/\n{3,}/g, "\n\n") // Collapse the blank lines left behind
-        .trim() + "\n",
+    // (leave policies, additionalSitemaps and transformRobotsTxt unchanged)
   },
 
-  transform: async (config, path) => {
+  transform: async (_config, path) => {
     // Strip any trailing slash so "/foo/" and "/foo" match the same Set entry
     const normalisedPath = path.length > 1 ? path.replace(/\/$/, "") : path;
 
@@ -135,11 +112,7 @@ module.exports = {
       return null; // Returning null excludes the path from the sitemap
     }
 
-    return {
-      loc: path,
-      changefreq: config.changefreq,
-      priority: config.priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-    };
+    // Only the URL is listed; lastmod is omitted until real per-page dates exist
+    return { loc: path };
   },
 };

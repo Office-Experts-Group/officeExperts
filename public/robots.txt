@@ -1,7 +1,9 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /api/
+
+# Host
+Host: https://www.officeexperts.com.au
 
 # Sitemaps
 Sitemap: https://www.officeexperts.com.au/sitemap.xml
