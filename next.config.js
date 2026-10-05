@@ -188,7 +188,7 @@ const REDIRECTS = [
   },
   {
     source: "/by-business-solution",
-    destination: "/services/by-business-solution",
+    destination: "/servicesS",
     permanent: true,
   },
   {
