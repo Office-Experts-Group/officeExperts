@@ -6,13 +6,13 @@ export const metadata = {
   // Basic metadata
   title: "Case Studies | Office Experts Group",
   description:
-    "Real case studies from Australian businesses we've helped with Microsoft Excel, Access, Power Platform and custom Office solutions. See the results for yourself.",
+    "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
 
   // OpenGraph
   openGraph: {
     title: "Case Studies | Office Experts Group",
     description:
-      "Real case studies from Australian businesses we've helped with Microsoft Excel, Access, Power Platform and custom Office solutions. See the results for yourself.",
+      "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
     url: "https://www.officeexperts.com.au/case-studies",
     siteName: "Office Experts Group",
     images: [
@@ -36,12 +36,8 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Case Studies | Office Experts Group",
     description:
-      "Real case studies from Australian businesses we've helped with Microsoft Excel, Access, Power Platform and custom Office solutions.",
+      "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
     images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical: "/case-studies",
   },
 };
 

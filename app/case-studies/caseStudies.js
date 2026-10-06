@@ -1826,7 +1826,7 @@ export const caseStudies = [
     ],
   },
   {
-    slug: "/case-studies/environmental-consultancy-word-template-rebuild",
+    slug: "environmental-consultancy-word-template-rebuild",
     client: "the client",
     author: "Jamie",
     datePublished: "2026-09-26T00:00:00+00:00",

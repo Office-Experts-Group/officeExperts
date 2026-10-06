@@ -144,11 +144,16 @@ https://www.officeexperts.com.au/case-studies/%2Fcase-studies%2Fenvironmental-co
 
 > Rebuilt an environmental consultancy's beautifully designed but structurally fragile Word templates on proper foundations without changing the approved design.
 
+https://www.officeexperts.com.au/case-studies/insurance-word-quoting-report-popup-form
+https://www.officeexperts.com.au/case-studies/financial-planning-word-document-builder
+https://www.officeexperts.com.au/case-studies/research-organisation-access-kanban-planner
+
 ## Services
 
 https://www.officeexperts.com.au/services
 https://www.officeexperts.com.au/services/activex-vbscript-migration
 https://www.officeexperts.com.au/services/ai-email-triage
+https://www.officeexperts.com.au/services/ai-agent-development
 https://www.officeexperts.com.au/services/microsoft-dot-net
 https://www.officeexperts.com.au/services/microsoft-office
 https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration

@@ -31,7 +31,7 @@ const schema = {
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
-      "Australia-wide Microsoft Office, Excel, Access and Power Platform consulting experts",
+      "Australia-wide Microsoft Office, Excel, Access, Word and Power Platform consulting experts",
     ),
     {
       "@type": "WebPage",
@@ -45,7 +45,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#organization",
       },
       description:
-        "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, and Power Platform solutions.",
+        "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
       inLanguage: "en-AU",
       datePublished: "2026-09-03T00:00:00+00:00",
       dateModified: getLatestDateModified(),
