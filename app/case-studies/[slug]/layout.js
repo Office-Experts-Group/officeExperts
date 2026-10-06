@@ -1,7 +1,11 @@
 // app/case-studies/[slug]/layout.js
 import React from "react";
 
-import { getCaseStudyBySlug, siteMeta } from "../caseStudies";
+import {
+  getCaseStudyBySlug,
+  siteMeta,
+  getCaseStudyMetaTitle,
+} from "../caseStudies";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 
@@ -21,7 +25,7 @@ export async function generateMetadata({ params }) {
 
   const brand = siteMeta[study.site];
   const url = `${SITE_URL}/case-studies/${study.slug}`;
-  const title = `${study.title} | Case Study | Office Experts Group`;
+  const title = getCaseStudyMetaTitle(study);
 
   return {
     title,

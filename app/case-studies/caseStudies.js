@@ -1975,8 +1975,6 @@ export const caseStudies = [
     author: "Paul M",
     datePublished: "2026-09-29T00:00:00+00:00",
     dateModified: "2026-09-29T00:00:00+00:00",
-    datePublished: "2026-09-28T00:00:00+00:00",
-    dateModified: "2026-09-28T00:00:00+00:00",
     site: "access",
     title:
       "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
@@ -2731,3 +2729,17 @@ export const getLatestDateModified = () =>
         : latest,
     "",
   );
+
+const META_TITLE_MAX = 60;
+
+export const getCaseStudyMetaTitle = (study) => {
+  // Optional per-study override: add metaTitle: "..." to any object
+  const title = study.metaTitle || study.title;
+
+  if (title.length <= META_TITLE_MAX) return title;
+
+  const cut = title.slice(0, META_TITLE_MAX - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  const base = lastSpace > 0 ? cut.slice(0, lastSpace) : cut;
+  return base.replace(/[\s,:;–-]+$/, "") + "…";
+};

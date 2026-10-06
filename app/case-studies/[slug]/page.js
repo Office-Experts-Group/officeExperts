@@ -4,7 +4,12 @@ import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 
 import CaseStudyDetail from "./(components)/CaseStudyDetail";
-import { caseStudies, getCaseStudyBySlug, siteMeta } from "../caseStudies";
+import {
+  caseStudies,
+  getCaseStudyBySlug,
+  siteMeta,
+  getCaseStudyMetaTitle,
+} from "../caseStudies";
 
 const Contact = dynamic(() => import("../../../components/Contact"));
 
@@ -38,7 +43,7 @@ const buildSchema = (study) => {
         "@type": "WebPage",
         "@id": url,
         url,
-        name: `${study.title} | Case Study | Office Experts Group`,
+        name: getCaseStudyMetaTitle(study),
         isPartOf: { "@id": `${SITE_URL}#website` },
         about: { "@id": `${SITE_URL}#organization` },
         description: study.summary,
@@ -65,7 +70,7 @@ const buildSchema = (study) => {
       {
         "@type": "Article",
         "@id": `${url}#article`,
-        headline: study.title,
+        headline: getCaseStudyMetaTitle(study),
         description: study.summary,
         about: study.industry,
         publisher: brand
