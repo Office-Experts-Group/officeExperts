@@ -3,6 +3,19 @@ import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// Matches the limits in CaseStudyForm.jsx. Checked again here as a backstop,
+// since client-side validation can be bypassed.
+const MAX_ATTACHMENTS = 3;
+const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024; // 10MB per file
+const MAX_TOTAL_ATTACHMENT_BYTES = 20 * 1024 * 1024; // 20MB across all files
+const ACCEPTED_FILE_TYPES = [
+  "image/png",
+  "image/jpeg",
+  "image/webp",
+  "application/pdf",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
+];
+
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -13,7 +26,7 @@ export async function POST(req) {
       problemsSolved,
       technologiesUsed,
       author,
-      attachment, // optional: { filename, type, content } — content is base64
+      attachments, // optional: array of { filename, type, content } — content is base64
     } = body;
 
     if (
@@ -36,6 +49,46 @@ export async function POST(req) {
       );
     }
 
+    // Attachments are optional. Anything that isn't an array is treated
+    // as "no attachments" rather than an error.
+    const files = Array.isArray(attachments)
+      ? attachments.filter((file) => file && file.content)
+      : [];
+
+    if (files.length > MAX_ATTACHMENTS) {
+      return Response.json(
+        { error: `A maximum of ${MAX_ATTACHMENTS} attachments is allowed` },
+        { status: 400 },
+      );
+    }
+
+    let totalBytes = 0;
+    for (const file of files) {
+      if (!file.filename || !ACCEPTED_FILE_TYPES.includes(file.type)) {
+        return Response.json(
+          { error: "Unsupported attachment type" },
+          { status: 400 },
+        );
+      }
+
+      const sizeInBytes = file.content.length * 0.75; // base64 → bytes
+      if (sizeInBytes > MAX_ATTACHMENT_BYTES) {
+        return Response.json(
+          { error: "Attachment is too large" },
+          { status: 400 },
+        );
+      }
+
+      totalBytes += sizeInBytes;
+    }
+
+    if (totalBytes > MAX_TOTAL_ATTACHMENT_BYTES) {
+      return Response.json(
+        { error: "Attachments are too large combined" },
+        { status: 400 },
+      );
+    }
+
     const caseStudyTextMessage = `
      New case study submission from ${author}.
 
@@ -51,6 +104,8 @@ Client Name: ${clientName}
 
      Technologies Used: ${technologiesUsed}
 
+     Attachments: ${files.length}
+
      *This is an automated message from officeexperts.com.au
    `;
 
@@ -61,28 +116,14 @@ Client Name: ${clientName}
       text: caseStudyTextMessage,
     };
 
-    // Attachment is optional — only add it if one was sent through.
-    // Size is checked again here as a backstop, since client-side
-    // validation can be bypassed.
-    if (attachment && attachment.content) {
-      const sizeInBytes = attachment.content.length * 0.75; // base64 → bytes
-      const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024; // 10MB
-
-      if (sizeInBytes > MAX_ATTACHMENT_BYTES) {
-        return Response.json(
-          { error: "Attachment is too large" },
-          { status: 400 },
-        );
-      }
-
-      message.attachments = [
-        {
-          content: attachment.content,
-          filename: attachment.filename,
-          type: attachment.type,
-          disposition: "attachment",
-        },
-      ];
+    // Only add attachments if any were sent through.
+    if (files.length > 0) {
+      message.attachments = files.map((file) => ({
+        content: file.content,
+        filename: file.filename,
+        type: file.type,
+        disposition: "attachment",
+      }));
     }
 
     await sgMail.send(message);

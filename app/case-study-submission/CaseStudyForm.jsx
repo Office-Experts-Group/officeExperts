@@ -15,9 +15,15 @@ const initialFormState = {
   author: "",
 };
 
-// Kept well under SendGrid's 30MB total message limit, since base64
-// encoding inflates file size by roughly a third.
-const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
+// Up to three images per submission: the hero `image` plus room for a
+// `secondaryImage` and one more, matching how the case study pages use them.
+const MAX_FILES = 3;
+
+// Limits are kept well under SendGrid's 30MB total message limit, since
+// base64 encoding inflates file size by roughly a third. 20MB of files
+// becomes about 27MB once encoded, which still fits.
+const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB per file
+const MAX_TOTAL_SIZE_BYTES = 20 * 1024 * 1024; // 20MB across all files
 const ACCEPTED_FILE_TYPES = [
   "image/png",
   "image/jpeg",
@@ -26,7 +32,7 @@ const ACCEPTED_FILE_TYPES = [
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
 ];
 
-// Reads the selected file as a base64 string so it can travel in the
+// Reads a selected file as a base64 string so it can travel in the
 // same JSON payload as the rest of the form, avoiding a second
 // multipart-parsing dependency on the server.
 const fileToBase64 = (file) =>
@@ -39,7 +45,8 @@ const fileToBase64 = (file) =>
 
 const CaseStudyForm = () => {
   const [formData, setFormData] = useState(initialFormState);
-  const [file, setFile] = useState(null);
+  // Array of File objects, in the order they were added
+  const [files, setFiles] = useState([]);
   const [fileError, setFileError] = useState("");
   // status drives which UI state is shown: idle | submitting | success | error
   const [status, setStatus] = useState("idle");
@@ -49,34 +56,61 @@ const CaseStudyForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // The input accepts several files at once and can be used again to add
+  // more, until the limit of three is reached. Each pick is validated
+  // against what is already attached.
   const handleFileChange = (e) => {
-    const selected = e.target.files[0];
+    const picked = Array.from(e.target.files || []);
+    // Clear the input so the same file can be picked again after removing it
+    e.target.value = "";
     setFileError("");
 
-    if (!selected) {
-      setFile(null);
-      return;
+    if (picked.length === 0) return;
+
+    const next = [...files];
+    let totalSize = next.reduce((sum, f) => sum + f.size, 0);
+
+    for (const file of picked) {
+      if (next.length >= MAX_FILES) {
+        setFileError(`You can attach up to ${MAX_FILES} files.`);
+        break;
+      }
+
+      if (!ACCEPTED_FILE_TYPES.includes(file.type)) {
+        setFileError(
+          `${file.name} was skipped. Please attach images, PDFs, or Word documents.`,
+        );
+        continue;
+      }
+
+      if (file.size > MAX_FILE_SIZE_BYTES) {
+        setFileError(
+          `${file.name} was skipped. Each file needs to be under 10MB.`,
+        );
+        continue;
+      }
+
+      if (totalSize + file.size > MAX_TOTAL_SIZE_BYTES) {
+        setFileError(
+          `${file.name} was skipped. Total attachments need to stay under 20MB.`,
+        );
+        continue;
+      }
+
+      const isDuplicate = next.some(
+        (f) => f.name === file.name && f.size === file.size,
+      );
+      if (isDuplicate) continue;
+
+      next.push(file);
+      totalSize += file.size;
     }
 
-    if (!ACCEPTED_FILE_TYPES.includes(selected.type)) {
-      setFileError("Please attach an image, PDF, or Word document.");
-      e.target.value = "";
-      setFile(null);
-      return;
-    }
-
-    if (selected.size > MAX_FILE_SIZE_BYTES) {
-      setFileError("File is too large — please keep it under 10MB.");
-      e.target.value = "";
-      setFile(null);
-      return;
-    }
-
-    setFile(selected);
+    setFiles(next);
   };
 
-  const removeFile = () => {
-    setFile(null);
+  const removeFile = (indexToRemove) => {
+    setFiles((prev) => prev.filter((_, i) => i !== indexToRemove));
     setFileError("");
   };
 
@@ -85,26 +119,27 @@ const CaseStudyForm = () => {
     setStatus("submitting");
 
     try {
-      // Attachment is optional, so only encode and include it if present.
-      const attachment = file
-        ? {
-            filename: file.name,
-            type: file.type,
-            content: await fileToBase64(file),
-          }
-        : null;
+      // Attachments are optional, so this is an empty array when none
+      // were chosen. Each file is encoded before being sent.
+      const attachments = await Promise.all(
+        files.map(async (file) => ({
+          filename: file.name,
+          type: file.type,
+          content: await fileToBase64(file),
+        })),
+      );
 
       const response = await fetch("/api/case-study-submission", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, attachment }),
+        body: JSON.stringify({ ...formData, attachments }),
       });
 
       if (!response.ok) throw new Error("Submission failed");
 
       setStatus("success");
       setFormData(initialFormState);
-      setFile(null);
+      setFiles([]);
     } catch (err) {
       setStatus("error");
     }
@@ -229,34 +264,47 @@ const CaseStudyForm = () => {
 
       <div className={styles.field}>
         <label htmlFor="attachment" className={styles.label}>
-          Attachment{" "}
+          Images{" "}
           <span className={styles.optional}>
-            (optional — screenshot, logo, PDF etc.)
+            (optional — up to {MAX_FILES}: screenshots, logo, PDF etc.)
           </span>
         </label>
 
-        {file ? (
-          <div className={styles.fileChip}>
-            <span className={styles.fileName}>{file.name}</span>
-            <button
-              type="button"
-              className={styles.fileRemoveBtn}
-              onClick={removeFile}
-              aria-label="Remove attached file"
-            >
-              Remove
-            </button>
-          </div>
-        ) : (
+        {files.length > 0 && (
+          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+            {files.map((file, index) => (
+              <li key={`${file.name}-${file.size}`} className={styles.fileChip}>
+                <span className={styles.fileName}>{file.name}</span>
+                <button
+                  type="button"
+                  className={styles.fileRemoveBtn}
+                  onClick={() => removeFile(index)}
+                  aria-label={`Remove ${file.name}`}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* The picker stays available until three files are attached.
+            "multiple" lets people choose several files in one go. */}
+        {files.length < MAX_FILES && (
           <input
             id="attachment"
             name="attachment"
             type="file"
+            multiple
             accept="image/png,image/jpeg,image/webp,application/pdf,.docx"
             onChange={handleFileChange}
             className={styles.fileInput}
           />
         )}
+
+        <p className={styles.optional}>
+          {files.length} of {MAX_FILES} attached
+        </p>
 
         {fileError && <p className={styles.errorMessage}>{fileError}</p>}
       </div>

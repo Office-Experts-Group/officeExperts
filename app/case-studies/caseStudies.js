@@ -1329,6 +1329,91 @@ export const caseStudies = [
     ],
   },
   {
+    slug: "insurance-word-quoting-report-popup-form",
+    client: "Insurance Provider",
+    author: "Martin",
+    industry: "Insurance",
+    site: "word",
+    title:
+      "Turning slow, error-prone quoting reports into one guided pop-up form in Word",
+    summary:
+      "The client's staff created quoting reports in Word from a set of existing templates, but each report meant hunting through the whole document to find and complete a large number of fields, with no way to tell afterwards whether any had been missed. Updating a drop-down list was just as slow for the Administrator, who had to change it by hand in every relevant field of every template. We built a pop-up form that gathers every field in one place, checks that mandatory fields are complete, and populates the report automatically, with a single background list the Administrator maintains for all templates.",
+    results: [
+      "One pop-up form shows every field to complete, instead of searching the document",
+      "Staff are notified of any missed mandatory fields and can go back and complete them",
+      "Drop-down lists maintained in one background copy, then rolled out to every template",
+    ],
+    image: "/case-studies/insurance-word-quoting-report-popup-form.webp",
+    secondaryImage:
+      "/case-studies/insurance-word-quoting-report-popup-form2.webp",
+    featured: false,
+
+    stats: [
+      {
+        value: "1 form",
+        label: "Pop-up showing every field to complete in a report",
+      },
+      {
+        value: "1 list",
+        label: "Background copy the Administrator updates for every template",
+      },
+      {
+        value: "All templates",
+        label: "Updated from the one list, rather than field by field",
+      },
+    ],
+
+    challenge: [
+      "The client created quoting reports in Word from any of its existing templates. Each report had a large number of fields to update. Some needed a direct entry, such as a date or a free text value, and others needed the user to choose from a drop-down list.",
+      "Completing a report was very time consuming. Users had to look through the entire document to find each field they were meant to fill out, and once they had finished there was no way to tell whether any had been missed.",
+      "Maintaining the drop-down lists was a problem for the Administrator as well. Every time the list behind a field needed to change, the list in every single relevant field of every template had to be updated manually, which took a lot of work.",
+    ],
+
+    approach: [
+      {
+        heading: "Building a pop-up form for every field",
+        body: "Each time a user creates a new report from a template, a pop-up form appears showing all of the fields that need to be completed. Users work through one form rather than searching the document for each field.",
+      },
+      {
+        heading: "Populating the report automatically",
+        body: "Once the form is complete, the entries are placed automatically into the required locations in the document, provided the user has completed all of the mandatory fields.",
+      },
+      {
+        heading: "Flagging any missed fields",
+        body: "If any mandatory fields have been missed, the user is notified and given the opportunity to go back and complete them, so an incomplete report is picked up before it is finished rather than after.",
+      },
+      {
+        heading: "Letting users review and change their selections",
+        body: "Users can re-open the pop-up form at any time to see all of their current selections in each field, and change their mind and update any of them.",
+      },
+      {
+        heading: "Centralising the drop-down lists",
+        body: "The lists behind every drop-down field are kept in a single background document that only the Administrator can access. The Administrator can add, edit and remove items on any of these lists in that one place.",
+      },
+      {
+        heading: "Rolling updates out to every template",
+        body: "Once a list has been changed, the update is rolled out to the background of all the templates used by all staff members, replacing the manual job of editing each field in each template.",
+      },
+    ],
+
+    outcome: [
+      "Staff now complete a quoting report through one pop-up form instead of searching the whole document for fields, with the answers placed into the report automatically once the mandatory fields are done.",
+      "Missed fields no longer go unnoticed. Users are told what is outstanding and can go back to complete it, and they can re-open the form to review and change their selections whenever they need to.",
+      "The Administrator now updates a drop-down list by changing the one background copy only, then rolls the change out to the templates used by all staff, instead of editing every relevant field in every template by hand.",
+    ],
+
+    services: [
+      {
+        label: "Pop-up forms for Word",
+        href: "https://www.wordexperts.com.au/popup-forms",
+      },
+      {
+        label: "Fillable Forms",
+        href: "https://www.wordexperts.com.au/fill-in-forms",
+      },
+    ],
+  },
+  {
     slug: "life-insurance-real-time-competitive-intelligence",
     client: "Major Retail Bank, Life Insurance Division",
     author: "Nick",
