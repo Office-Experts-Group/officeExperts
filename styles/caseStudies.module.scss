@@ -112,19 +112,35 @@
   }
 }
 
-// Flips the image to the second grid column so rows alternate down the page
+// styles/caseStudies.module.scss
+
+// Flips the image to the second grid column so rows alternate down the page.
+// Uses grid-column rather than order, so the DOM order (image first) is kept
+// untouched on mobile where the grid collapses to a single column.
 .rowReverse {
   .rowImageWrap {
-    @include phoneLandscape {
-      order: unset;
-    }
-    @include phone {
-      order: unset;
-    }
-    order: 2;
+    grid-column: 2;
+    grid-row: 1;
   }
   .rowBody {
-    order: 1;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  // Single column on phones: clear the explicit placement so the image sits on top
+  @include phoneLandscape {
+    .rowImageWrap,
+    .rowBody {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  @include phone {
+    .rowImageWrap,
+    .rowBody {
+      grid-column: auto;
+      grid-row: auto;
+    }
   }
 }
 

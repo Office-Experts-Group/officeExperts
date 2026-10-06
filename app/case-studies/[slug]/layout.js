@@ -42,6 +42,8 @@ export async function generateMetadata({ params }) {
       ],
       locale: "en-AU",
       type: "article",
+      publishedTime: study.datePublished,
+      modifiedTime: study.dateModified,
     },
 
     keywords: [study.industry, brand?.name, "case study"].filter(Boolean),

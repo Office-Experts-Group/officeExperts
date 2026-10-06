@@ -45,6 +45,8 @@ const buildSchema = (study) => {
         breadcrumb: { "@id": `${url}#breadcrumb` },
         inLanguage: "en-AU",
         potentialAction: [{ "@type": "ReadAction", target: [url] }],
+        datePublished: study.datePublished,
+        dateModified: study.dateModified,
       },
       {
         "@type": "BreadcrumbList",
@@ -70,6 +72,8 @@ const buildSchema = (study) => {
           ? { "@type": "Organization", name: brand.name, url: brand.domain }
           : undefined,
         mainEntityOfPage: { "@id": url },
+        datePublished: study.datePublished,
+        dateModified: study.dateModified,
       },
     ],
   };

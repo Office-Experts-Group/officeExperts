@@ -37,6 +37,8 @@ export const caseStudies = [
     slug: "rdao-application-ai-review-workflow",
     client: "Kula",
     author: "Nick",
+    datePublished: "2026-09-03T00:00:00+00:00",
+    dateModified: "2026-09-03T00:00:00+00:00",
     industry: "Investment",
     site: "powerplatform",
     title:
@@ -111,6 +113,8 @@ export const caseStudies = [
     slug: "internal-ai-proposal-assistant-azure-migration",
     client: "Office Experts Internal",
     author: "Nick",
+    datePublished: "2026-09-04T00:00:00+00:00",
+    dateModified: "2026-09-04T00:00:00+00:00",
     industry: "Professional Services",
     site: "powerplatform",
     title:
@@ -193,6 +197,8 @@ export const caseStudies = [
     slug: "legal-firm-word-training-workshop",
     client: "the client",
     author: "Damien",
+    datePublished: "2026-09-05T00:00:00+00:00",
+    dateModified: "2026-09-05T00:00:00+00:00",
     industry: "Legal",
     site: "word",
     title:
@@ -268,6 +274,8 @@ export const caseStudies = [
     slug: "custom-quoting-tool",
     client: "A tax depreciation specialist",
     author: "Dan",
+    datePublished: "2026-09-06T00:00:00+00:00",
+    dateModified: "2026-09-06T00:00:00+00:00",
     industry: "Tax & Accounting",
     site: "office", // TODO: confirm this matches your site-key convention
     title:
@@ -350,6 +358,8 @@ export const caseStudies = [
     slug: "food-manufacturer-excel-costing-workbook",
     client: "the client",
     author: "Paul M",
+    datePublished: "2026-09-07T00:00:00+00:00",
+    dateModified: "2026-09-07T00:00:00+00:00",
     industry: "Food Manufacturing",
     site: "excel",
     title:
@@ -431,6 +441,8 @@ export const caseStudies = [
     slug: "building-consultants-inspection-crm",
     client: "GM Building Consultants",
     author: "Deva",
+    datePublished: "2026-09-08T00:00:00+00:00",
+    dateModified: "2026-09-08T00:00:00+00:00",
     industry: "Building and Construction",
     site: "powerplatform",
     title:
@@ -493,6 +505,8 @@ export const caseStudies = [
     slug: "retail-power-bi-partner-reporting-security",
     client: "Retail Insights Provider",
     author: "Power Platform Team",
+    datePublished: "2026-09-09T00:00:00+00:00",
+    dateModified: "2026-09-09T00:00:00+00:00",
     industry: "Retail",
     site: "powerplatform",
     title:
@@ -572,6 +586,8 @@ export const caseStudies = [
     slug: "manufacturing-project-setup-automation",
     client: "Commercial Manufacturing Company",
     author: "Power Platform Team",
+    datePublished: "2026-09-10T00:00:00+00:00",
+    dateModified: "2026-09-10T00:00:00+00:00",
     industry: "Manufacturing",
     site: "powerplatform",
     title:
@@ -646,6 +662,8 @@ export const caseStudies = [
     slug: "government-workplace-safety-interactive-word-forms",
     client: "State Workplace Safety Authority",
     author: "Damien",
+    datePublished: "2026-09-11T00:00:00+00:00",
+    dateModified: "2026-09-11T00:00:00+00:00",
     industry: "Government",
     site: "word",
     title:
@@ -727,6 +745,8 @@ export const caseStudies = [
     slug: "government-health-master-template-document-transfer",
     client: "State Government Health Department",
     author: "Aleisha",
+    datePublished: "2026-09-12T00:00:00+00:00",
+    dateModified: "2026-09-12T00:00:00+00:00",
     industry: "Government",
     site: "word",
     title:
@@ -802,6 +822,8 @@ export const caseStudies = [
     slug: "community-services-excel-consolidation-rebuild",
     client: "Multi-Site Community Services Provider",
     author: "Excel Experts Team",
+    datePublished: "2026-09-13T00:00:00+00:00",
+    dateModified: "2026-09-13T00:00:00+00:00",
     industry: "Community Services",
     site: "excel",
     title:
@@ -884,6 +906,8 @@ export const caseStudies = [
     slug: "healthcare-patient-form-followup-automation",
     client: "Allied Health Provider",
     author: "Power Platform Team",
+    datePublished: "2026-09-14T00:00:00+00:00",
+    dateModified: "2026-09-14T00:00:00+00:00",
     industry: "Healthcare",
     site: "powerplatform",
     title: "Removing manual form chasing for around 1,000 active patients",
@@ -962,6 +986,8 @@ export const caseStudies = [
     slug: "government-health-department-editable-pdf-forms",
     client: "State Government Health Department",
     author: "Aleisha",
+    datePublished: "2026-09-15T00:00:00+00:00",
+    dateModified: "2026-09-15T00:00:00+00:00",
     industry: "Government",
     site: "word",
     title:
@@ -1034,6 +1060,8 @@ export const caseStudies = [
     slug: "professional-services-sharepoint-foundation-workshops",
     client: "Professional Services Team",
     author: "Office Experts Team",
+    datePublished: "2026-09-16T00:00:00+00:00",
+    dateModified: "2026-09-16T00:00:00+00:00",
     industry: "Professional Services",
     site: "office",
     title:
@@ -1109,6 +1137,8 @@ export const caseStudies = [
     slug: "windowline-proposals-database",
     client: "Windowline",
     author: "Stephen",
+    datePublished: "2026-09-17T00:00:00+00:00",
+    dateModified: "2026-09-17T00:00:00+00:00",
     industry: "Building and Construction",
     site: "access",
     title:
@@ -1182,6 +1212,8 @@ export const caseStudies = [
     slug: "advisory-branding-template-rollout",
     client: "Red Fox Advisory",
     author: "Aleisha",
+    datePublished: "2026-09-18T00:00:00+00:00",
+    dateModified: "2026-09-18T00:00:00+00:00",
     industry: "Professional Services",
     site: "word",
     title:
@@ -1252,6 +1284,8 @@ export const caseStudies = [
     slug: "golf-supplier-sales-data-consolidation",
     client: "On Course Golf",
     author: "Martin",
+    datePublished: "2026-09-19T00:00:00+00:00",
+    dateModified: "2026-09-19T00:00:00+00:00",
     industry: "Retail",
     site: "excel",
     title:
@@ -1330,8 +1364,10 @@ export const caseStudies = [
   },
   {
     slug: "insurance-word-quoting-report-popup-form",
-    client: "Insurance Provider",
+    client: "CIA Insurance",
     author: "Martin",
+    datePublished: "2026-09-20T00:00:00+00:00",
+    dateModified: "2026-09-20T00:00:00+00:00",
     industry: "Insurance",
     site: "word",
     title:
@@ -1417,6 +1453,8 @@ export const caseStudies = [
     slug: "life-insurance-real-time-competitive-intelligence",
     client: "Major Retail Bank, Life Insurance Division",
     author: "Nick",
+    datePublished: "2026-09-21T00:00:00+00:00",
+    dateModified: "2026-09-21T00:00:00+00:00",
     industry: "Financial Services",
     site: "powerplatform",
     title: "Cutting competitor response time from two weeks to twelve minutes",
@@ -1493,6 +1531,8 @@ export const caseStudies = [
     slug: "corporate-group-multi-entity-master-template-suite",
     client: "Corporate Resources Group",
     author: "Nae",
+    datePublished: "2026-09-22T00:00:00+00:00",
+    dateModified: "2026-09-22T00:00:00+00:00",
     industry: "Mining and Resources",
     site: "word",
     title:
@@ -1565,6 +1605,8 @@ export const caseStudies = [
     slug: "retail-analytics-automated-review-deck-generator",
     client: "Retail Analytics Business",
     author: "Power Platform Team",
+    datePublished: "2026-09-23T00:00:00+00:00",
+    dateModified: "2026-09-23T00:00:00+00:00",
     industry: "Retail",
     site: "powerplatform",
     title:
@@ -1632,6 +1674,8 @@ export const caseStudies = [
     client: "Water Utility Education Program",
     industry: "Education",
     author: "Aleisha",
+    datePublished: "2026-09-24T00:00:00+00:00",
+    dateModified: "2026-09-24T00:00:00+00:00",
     site: "word",
     title:
       "Turning an InDesign lesson design into Word and PowerPoint templates educators could actually use",
@@ -1705,6 +1749,8 @@ export const caseStudies = [
     client: "State Government Transport Department",
     industry: "Government",
     author: "Damien",
+    datePublished: "2026-09-25T00:00:00+00:00",
+    dateModified: "2026-09-25T00:00:00+00:00",
     site: "word",
     title:
       "Building a custom Word ribbon that stops corporate templates breaking under everyday use",
@@ -1783,6 +1829,8 @@ export const caseStudies = [
     slug: "/case-studies/environmental-consultancy-word-template-rebuild",
     client: "the client",
     author: "Jamie",
+    datePublished: "2026-09-26T00:00:00+00:00",
+    dateModified: "2026-09-26T00:00:00+00:00",
     industry: "Environmental Services",
     site: "word",
     title:
@@ -1851,6 +1899,8 @@ export const caseStudies = [
     slug: "sporting-goods-agentic-ai-customer-service",
     client: "National Sporting Goods Provider",
     author: "Nick",
+    datePublished: "2026-09-27T00:00:00+00:00",
+    dateModified: "2026-09-27T00:00:00+00:00",
     industry: "Retail",
     site: "powerplatform",
     title:
@@ -1922,7 +1972,11 @@ export const caseStudies = [
     slug: "film-crew-booking-system-access-nextjs-rebuild",
     client: "Freelance Crew Promotions Agency",
     industry: "Media and Entertainment",
-    author: "Paul",
+    author: "Paul M",
+    datePublished: "2026-09-29T00:00:00+00:00",
+    dateModified: "2026-09-29T00:00:00+00:00",
+    datePublished: "2026-09-28T00:00:00+00:00",
+    dateModified: "2026-09-28T00:00:00+00:00",
     site: "access",
     title:
       "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
@@ -2003,6 +2057,8 @@ export const caseStudies = [
     slug: "financial-services-ai-risk-compliance-automation",
     client: "FCA-Regulated Financial Services Firm",
     author: "Nick",
+    datePublished: "2026-09-30T00:00:00+00:00",
+    dateModified: "2026-09-30T00:00:00+00:00",
     industry: "Financial Services",
     site: "powerplatform",
     title:
@@ -2077,6 +2133,8 @@ export const caseStudies = [
     slug: "committee-report-master-template-pdf-merge",
     client: "the client",
     author: "Jamie",
+    datePublished: "2026-10-01T00:00:00+00:00",
+    dateModified: "2026-10-01T00:00:00+00:00",
     industry: "Strata and Committee Management",
     site: "word",
     title:
@@ -2150,6 +2208,8 @@ export const caseStudies = [
     slug: "private-client-cashflow-forecasting-tool",
     client: "Private Client",
     author: "Office Experts Team",
+    datePublished: "2026-10-02T00:00:00+00:00",
+    dateModified: "2026-10-02T00:00:00+00:00",
     industry: "Finance",
     site: "office",
     title:
@@ -2228,6 +2288,8 @@ export const caseStudies = [
     slug: "biochar-ai-go-to-market-analysis-uk",
     client: "International Sustainability Company",
     author: "Nick",
+    datePublished: "2026-10-03T00:00:00+00:00",
+    dateModified: "2026-10-03T00:00:00+00:00",
     industry: "Sustainability and Carbon Removal",
     site: "powerplatform",
     title:
@@ -2302,6 +2364,8 @@ export const caseStudies = [
     slug: "legal-firm-template-suite-formatting-tab",
     client: "the client",
     author: "Jamie",
+    datePublished: "2026-10-04T00:00:00+00:00",
+    dateModified: "2026-10-04T00:00:00+00:00",
     industry: "Legal",
     site: "word",
     title:
@@ -2374,6 +2438,8 @@ export const caseStudies = [
     slug: "sporting-organisation-multi-brand-word-template",
     client: "National Sporting Organisation",
     author: "Damien",
+    datePublished: "2026-10-05T00:00:00+00:00",
+    dateModified: "2026-10-05T00:00:00+00:00",
     industry: "Sport",
     site: "word",
     title:
@@ -2451,6 +2517,8 @@ export const caseStudies = [
     slug: "research-organisation-access-kanban-planner",
     client: "National Research Organisation",
     author: "James",
+    datePublished: "2026-10-06T00:00:00+00:00",
+    dateModified: "2026-10-06T00:00:00+00:00",
     industry: "Science and Research",
     site: "access",
     title:
@@ -2463,7 +2531,6 @@ export const caseStudies = [
       "Drag and drop sorting, right-click options and due date highlighting built in",
     ],
     image: "/case-studies/research-kanban-planner-boardLg.webp",
-    secondaryImage: "/case-studies/research-kanban-planner-detailsLg.webp",
     featured: false,
 
     stats: [
@@ -2521,6 +2588,99 @@ export const caseStudies = [
       },
     ],
   },
+  {
+    slug: "financial-planning-word-document-builder",
+    client: "Taverner",
+    author: "Martin",
+    datePublished: "2026-10-06T00:00:00+00:00",
+    dateModified: "2026-10-06T00:00:00+00:00",
+    industry: "Financial Planning",
+    site: "word",
+    title:
+      "Building each financial planning report from a pop-up form and a library of ready-made headings",
+    summary:
+      "The client's reports combined free text with a large library of pre-existing headings and content, arranged in three tiers from Heading 1 to Heading 3. Staff needed to start each report with only the summary blocks relevant to that client, then add their own custom headings where required, with the right format applied automatically. We built a Word document builder with a pop-up form for choosing items, automatic parent headings, custom Heading 3 items, and a background library the Administrator maintains and rolls out to every staff template.",
+    results: [
+      "Each report starts from a pop-up form where staff pick only the headings they need",
+      "Custom Heading 3 items can be added anywhere and format themselves automatically",
+      "Administrator adds, edits and removes library items, then rolls updates out to staff",
+    ],
+    image:
+      "/case-studies/financial-planning-word-document-builder-libraryLg.webp",
+    secondaryImage:
+      "/case-studies/financial-planning-word-document-builder-libraryLg2.webp",
+    featured: false,
+
+    stats: [
+      {
+        value: "3 tiers",
+        label: "Heading 1, 2 and 3 items, each with its own format",
+      },
+      {
+        value: "1 library",
+        label: "Background library of headings and content for every report",
+      },
+      {
+        value: "1 template",
+        label: "Updates rolled out to all the staff who need it",
+      },
+    ],
+
+    challenge: [
+      "The client worked in financial planning and created reports in Word by combining free text with pre-existing headings and content. There was a large number of these ready-made data blocks to choose from, arranged in three tiers: Heading 1, Heading 2 and Heading 3 items.",
+      "Listing every single heading and content item in the starting document was not practical. The client needed to begin a new report by picking only the summary blocks relevant to that report, and then add their own customised headings and content at the bottom level where required.",
+      "Formatting added to the challenge. Each of the three heading tiers needed its own unique format, and every time a user added a custom heading, its format needed to update automatically.",
+      "The library of headings and content was also going to change over time. The client needed the Administrator to be able to access it and add, edit and remove items as required, without having to rebuild the documents staff worked from.",
+    ],
+
+    approach: [
+      {
+        heading: "Building a pop-up form to start each report",
+        body: "Each time a staff member creates a new report, a pop-up form appears showing all of the main heading items. The user picks only the ones they need, and only those are brought into the document.",
+      },
+      {
+        heading: "Keeping the headings in a background library",
+        body: "The headings and content items that users can choose from are held in a background library, rather than being listed in full in every document.",
+      },
+      {
+        heading: "Adding parent headings automatically",
+        body: "When a user selects an item from a lower tier, such as Heading 2 or Heading 3, the parent summary items above it in the hierarchy are added to the document automatically as well.",
+      },
+      {
+        heading: "Adding custom Heading 3 items anywhere",
+        body: "Once the initial document has been created, users can add their own new Heading 3 item anywhere in the document, and the heading format updates automatically so it matches the rest of the report.",
+      },
+      {
+        heading: "Re-showing the pop-up form to add more",
+        body: "Users can bring the pop-up form back at any point to see the entire list of Heading 1 and Heading 2 items, and add any of them in the location they choose in the document.",
+      },
+      {
+        heading: "Giving the Administrator control of the library",
+        body: "A background document gives the Administrator access to the library, so they can add, edit and remove Heading 1, 2 or 3 level items as required.",
+      },
+      {
+        heading: "Rolling updates out to staff",
+        body: "Once changes have been made to the library, they are rolled out to the template used by all of the staff members who need it.",
+      },
+    ],
+
+    outcome: [
+      "Staff now build each report by picking only the summary blocks they need from a pop-up form, rather than working from a document that lists every heading and content item.",
+      "Selecting a lower-tier item brings in its parent items automatically, and users can add custom Heading 3 items or further Heading 1 and Heading 2 items anywhere in the document, with each tier keeping its own format.",
+      "The Administrator can add, edit and remove Heading 1, 2 and 3 level items in the background library as the content changes over time, and roll the changes out to the template used by all required staff.",
+    ],
+
+    services: [
+      {
+        label: "Pop-up forms for Word",
+        href: "https://www.wordexperts.com.au/popup-forms",
+      },
+      {
+        label: "Word template design",
+        href: "https://www.wordexperts.com.au/word-document-template-creation",
+      },
+    ],
+  },
 ];
 
 // ─────────────────────────────────────────────
@@ -2562,3 +2722,12 @@ export const getFeaturedCaseStudies = () =>
 // ─────────────────────────────────────────────
 export const getCaseStudyBySlug = (slug) =>
   caseStudies.find((study) => study.slug === slug);
+
+export const getLatestDateModified = () =>
+  caseStudies.reduce(
+    (latest, study) =>
+      study.dateModified && study.dateModified > latest
+        ? study.dateModified
+        : latest,
+    "",
+  );

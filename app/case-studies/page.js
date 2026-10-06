@@ -1,6 +1,6 @@
 // app/case-studies/page.js
 
-import { caseStudies, siteMeta } from "./caseStudies";
+import { caseStudies, getLatestDateModified, siteMeta } from "./caseStudies";
 import CaseStudyRow from "./(components)/CaseStudyRow";
 
 import ServiceHero from "../../components/ServiceHero";
@@ -47,8 +47,8 @@ const schema = {
       description:
         "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, and Power Platform solutions.",
       inLanguage: "en-AU",
-      datePublished: "2026-09-20T00:00:00+00:00",
-      dateModified: "2026-09-28T00:00:00+00:00",
+      datePublished: "2026-09-03T00:00:00+00:00",
+      dateModified: getLatestDateModified(),
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/case-studies#breadcrumb",
       },
@@ -127,6 +127,7 @@ const CaseStudiesPage = async ({ searchParams }) => {
           ))}
         </div>
       </section>
+      <Contact />
     </>
   );
 };
