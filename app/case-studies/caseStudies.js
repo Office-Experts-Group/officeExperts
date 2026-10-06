@@ -2362,6 +2362,80 @@ export const caseStudies = [
       },
     ],
   },
+  {
+    slug: "research-organisation-access-kanban-planner",
+    client: "National Research Organisation",
+    author: "James",
+    industry: "Science and Research",
+    site: "access",
+    title:
+      "Bringing a Kanban task planner inside the Access database the client already used",
+    summary:
+      "A national research organisation was using Microsoft Planner for its tasks and asked whether something similar could be built inside its existing Access database, in a Kanban format. We built a Kanban planner form in Access with four status columns, drag and drop task management, due date highlighting and a details form for each task, so the planner no longer sits outside the database.",
+    results: [
+      "Second, outside planner replaced by a Kanban planner inside the existing Access database",
+      "Tasks added, scheduled, edited and deleted from a four column Kanban board",
+      "Drag and drop sorting, right-click options and due date highlighting built in",
+    ],
+    image: "/case-studies/research-kanban-planner-boardLg.webp",
+    secondaryImage: "/case-studies/research-kanban-planner-detailsLg.webp",
+    featured: false,
+
+    stats: [
+      { value: "4", label: "Status columns on the Kanban board" },
+      { value: "2 forms", label: "Kanban board and task details form" },
+      {
+        value: "In house",
+        label: "Planning kept inside the existing Access database",
+      },
+    ],
+
+    challenge: [
+      "The client was using Microsoft Planner to manage its tasks. That meant running a second planner outside its existing Access database.",
+      "The client asked whether we could build something similar inside the Access database, using a Kanban format, so tasks could be organised in columns by status.",
+      "Keeping the planner in house also opened up the possibility of linking tasks to data held in the database.",
+    ],
+
+    approach: [
+      {
+        heading: "Building the Kanban board",
+        body: "We built a main form in Access with four status columns, where tasks can be added, scheduled, edited and deleted.",
+      },
+      {
+        heading: "Adding a task details form",
+        body: "A separate details form lets users edit a task's details, notes, due dates and more. Double clicking a task on the board opens it to view or edit.",
+      },
+      {
+        heading: "Drag and drop task management",
+        body: "Tasks can be dragged to a new sort position, or dragged into a different status column.",
+      },
+      {
+        heading: "Adding a right-click menu",
+        body: "A right-click menu lets users delete a task, or change its status, position or colour.",
+      },
+      {
+        heading: "Highlighting due dates",
+        body: "Due dates are highlighted on the board.",
+      },
+    ],
+
+    outcome: [
+      "The client now has a Kanban planner inside its existing Access database, which resolves the issue of having a second, outside planner.",
+      "Users can add, schedule, edit and delete tasks from the main board, move tasks between status columns by drag and drop, and see due dates highlighted.",
+      "This is the first iteration. Possible next steps include assigning tasks to particular projects or users, and alerts on start up for pending tasks. Because the planner now lives in Access, it could also potentially be linked to data held in the database.",
+    ],
+
+    services: [
+      {
+        label: "Database development and solutions",
+        href: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
+      },
+      {
+        label: "Microsoft Access services",
+        href: "https://www.accessexperts.com.au/services",
+      },
+    ],
+  },
 ];
 
 // ─────────────────────────────────────────────

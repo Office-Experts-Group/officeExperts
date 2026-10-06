@@ -26,6 +26,7 @@ const CaseStudyDetail = ({ study }) => {
     summary,
     results,
     image,
+    secondaryImage,
     stats,
     challenge,
     approach,
@@ -128,6 +129,23 @@ const CaseStudyDetail = ({ study }) => {
                   {para}
                 </p>
               ))}
+            </div>
+          </AnimateOnScroll>
+        )}
+
+        {/* Secondary image — only rendered when a case study supplies
+            secondaryImage (a path to a 700 x 450 image). Sits inside the
+            grey body section, centred, after the outcome. */}
+        {secondaryImage && (
+          <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.2}>
+            <div className={styles.bodyImageWrap}>
+              <Image
+                src={secondaryImage}
+                alt={`${client} case study, additional image`}
+                width={700}
+                height={450}
+                className={styles.bodyImage}
+              />
             </div>
           </AnimateOnScroll>
         )}

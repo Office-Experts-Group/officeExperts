@@ -257,6 +257,90 @@
   margin-bottom: 0;
 }
 
+.bodyImageWrap {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.bodyImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.secondarySection {
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 5rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .secondarySection {
+    padding: 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .secondarySection {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .secondarySection {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+.secondaryInner {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .secondaryInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .secondaryInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .secondaryInner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.secondaryImageWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.secondaryImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.secondaryText {
+  max-width: 480px;
+}
+
 .approachList {
   list-style: none;
   padding-left: 0;
