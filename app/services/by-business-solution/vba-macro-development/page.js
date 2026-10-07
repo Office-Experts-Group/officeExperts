@@ -10,6 +10,7 @@ import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
 import ExpertsAwait from "../../../../components/ExpertsAwait";
 import Contents from "./(components)/Contents";
+import RelatedLinks from "../../../../components/RelatedLinks";
 
 import longDesk from "../../../../public/pageHeros/longDesk.webp";
 import codingMob from "../../../../public/pageHeros/mob/codingMob.webp";
@@ -106,6 +107,36 @@ const Page = () => {
       <PageSegment4 />
       <PageSegment5 />
       <ExpertsAwait />
+      <RelatedLinks
+        theme="light"
+        eyebrow="Case Studies"
+        heading="Word automation and macro projects we've delivered"
+        links={[
+          {
+            href: "/case-studies/insurance-word-quoting-report-popup-form",
+            linkText: "See the pop-up form",
+            title:
+              "Turning slow, error-prone quoting reports into one guided pop-up form in Word",
+            description:
+              "The client's staff created quoting reports in Word from existing templates, hunting through each document to find and complete a large number of fields, with no way to tell afterwards whether any had been missed. We built a pop-up form that gathers every field in one place, checks that mandatory fields are complete and populates the report automatically. The drop-down lists behind it sit in a single background document that the Administrator maintains and rolls out to every template.",
+            image:
+              "/case-studies/insurance-word-quoting-report-popup-form.webp",
+            imageAlt:
+              "Pop-up form for completing quoting reports in Word for an insurance business",
+          },
+          {
+            href: "/case-studies/corporate-group-multi-entity-master-template-suite",
+            linkText: "See the copy/paste macro",
+            title:
+              "One shared Global Common template keeping four entities on-brand without four separate rebuilds",
+            description:
+              "A corporate group needed consistent, professional templates across four related entities. We built a custom Master Template for each entity from a single shared Global Common template, then added a custom Formatting tab with a copy/paste macro that strips foreign formatting out of pasted content and applies the approved styling automatically.",
+            image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+            imageAlt:
+              "Custom Word Master Templates for four entities of a corporate group",
+          },
+        ]}
+      />
       <Contact />
     </>
   );

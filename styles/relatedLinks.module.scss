@@ -1,0 +1,172 @@
+// styles/relatedLinks.module.scss
+@import "./globals.scss";
+
+// ── Themes ──────────────────────────────────────
+// Each theme only sets custom properties; all layout below reads from them.
+// Interpolation (#{}) is needed to pass SCSS variables into custom properties.
+.dark {
+  --bg: #{$dark-bg};
+  --eyebrow: #{$white-55};
+  --heading: #{$white};
+  --text: #{$white-65};
+  --card-bg: #{$dark-surface};
+  --card-border: #{$white-12};
+  --card-hover-bg: #{$dark-mid};
+  --card-hover-border: #{$accent-border};
+  --title: #{$white};
+}
+
+.light {
+  --bg: #{$light-bg};
+  --eyebrow: #{$accent};
+  --heading: #{$text-primary};
+  --text: #{$text-secondary};
+  --card-bg: #{$white};
+  --card-border: #{$border};
+  --card-hover-bg: #{$white};
+  --card-hover-border: #{$border};
+  --title: #{$text-primary};
+}
+
+// ── Layout ──────────────────────────────────────
+.section {
+  background: var(--bg);
+  padding: 5rem 8rem;
+
+  @include tablet {
+    padding: 4rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 2rem;
+  }
+  @include phone {
+    padding: 3.5rem 1.25rem;
+  }
+  a {
+    &:hover {
+      border: 1px solid $accent;
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+
+.heading {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--heading);
+}
+
+.text {
+  line-height: 1.8;
+  color: var(--text);
+}
+
+// ── Cards ───────────────────────────────────────
+// auto-fit lets the grid reflow without breakpoints; min() stops the
+// 24rem minimum overflowing on narrow phones
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+// position: relative anchors the overlay link below.
+// One gap value spaces the title, image, description and button evenly.
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    background: var(--card-hover-bg);
+    border-color: var(--card-hover-border);
+  }
+}
+
+// Positioned, so it paints above the title, image and description and catches
+// their clicks. The .btn button has position: relative and z-index: 1, so it
+// sits above this overlay and keeps its own hover effect.
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--title);
+}
+
+// Half the size of the 700 x 450 source, centred. The fixed ratio plus
+// object-fit keeps every image the same height, so the space under the title
+// is identical in each card even if the source images differ in shape.
+.thumb {
+  align-self: center;
+  width: min(100%, 22rem);
+  aspect-ratio: 700 / 450;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: center;
+}
+
+// The global .btn class supplies the button's look; this only handles placement.
+// Nested under .card so it wins over .btn regardless of stylesheet order.
+// .btn is white-space: nowrap, so long link text is allowed to wrap on narrow cards.
+.card .cardLink {
+  align-self: flex-end;
+  margin-top: auto;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.3;
+}

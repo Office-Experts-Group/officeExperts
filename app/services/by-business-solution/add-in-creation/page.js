@@ -13,6 +13,7 @@ import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../../../utils/schemaGenerators";
 
 const schema = {
@@ -20,6 +21,11 @@ const schema = {
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts",
+      "Australia-wide Microsoft Office Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id":

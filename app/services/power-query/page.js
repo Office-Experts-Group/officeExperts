@@ -10,6 +10,7 @@ import QuerySegmentMain from "./(components)/QuerySegmentMain";
 const QueryServices = dynamic(() => import("./(components)/QueryServices"));
 const QueryComparison = dynamic(() => import("./(components)/QueryComparison"));
 const QueryProcess = dynamic(() => import("./(components)/QueryProcess"));
+const RelatedLinks = dynamic(() => import("../../../components/RelatedLinks"));
 const Contact = dynamic(() => import("../../../components/Contact"));
 
 import query from "../../../public/pageHeros/query.webp";
@@ -104,6 +105,36 @@ const Page = () => {
       <QueryServices />
       <QueryComparison />
       <QueryProcess />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="Power Query projects we've delivered"
+        links={[
+          {
+            href: "/case-studies/community-services-excel-consolidation-rebuild",
+            linkText: "See how consolidation became one refresh",
+            title:
+              "Replacing a sprawling linked spreadsheet with a one-click Power Query refresh",
+            description:
+              "The client, a four-location community services provider, had each site keying records into its own workbook, with a central file pulling them together through direct workbook links that had grown thousands of columns wide. We rebuilt it as a row-based entry template consolidated with Power Query, migrated all existing data into it, and showed the team how to build new reporting breakdowns with pivot tables. The four location workbooks now consolidate with a single refresh.",
+            image: "/case-studies/community-services-excelLg.png",
+            imageAlt:
+              "Power Query consolidation of four location workbooks for a community services provider",
+          },
+          {
+            href: "/case-studies/golf-supplier-sales-data-consolidation",
+            linkText: "Explore the supplier sales summary",
+            title:
+              "Turning a year of scattered supplier sales files into one automated summary",
+            description:
+              "The client received a steady stream of Excel files from its suppliers throughout the year, detailing the sales made to each club or member. We built a Power Query and Power Pivot solution that brings the raw files in automatically, categorises the data, and summarises sales by supplier, member, month and quarter, plus a second workbook that compares consecutive financial years quarter by quarter.",
+            image: "/case-studies/on-course-golf-sales-summaryLg.png",
+            imageAlt:
+              "Automated supplier sales summary built with Power Query and Power Pivot",
+          },
+        ]}
+      />
+
       <Contact />
     </>
   );

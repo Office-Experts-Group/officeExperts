@@ -68,8 +68,8 @@ const apps = [
       "Besides emails, Teams is the next app we find ourselves spending hours of each day communicating with. Copilot transforms Teams meetings into searchable, actionable records of work. It can capture decisions, generate summaries, track follow-up tasks, and help staff catch up on missed discussions without replaying entire meetings or relying on scattered notes.",
     highlight:
       "Our Microsoft 365 consultants help businesses integrate Copilot into Teams so that the information discussed can be summarised, centralised and available for quick reference. Teams is not going anywhere soon, and Copilot can help make it a central hub of information, rather then a glorified digital boardroom.",
-    href: "/services/microsoft-office-365",
-    linkText: "Microsoft 365 services",
+    href: "/services/ai-email-triage",
+    linkText: "Ai in Teams with Teams & Email Triage",
   },
 ];
 

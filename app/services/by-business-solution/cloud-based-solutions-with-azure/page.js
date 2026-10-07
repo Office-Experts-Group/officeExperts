@@ -10,6 +10,7 @@ import ExpertsAwait from "../../../../components/ExpertsAwait";
 import PageSegment7 from "./(components)/PageSegment7";
 import Contact from "../../../../components/Contact";
 import Promo from "../../../../components/Promo";
+import RelatedLinks from "../../../../components/RelatedLinks";
 
 import graphic from "../../../../public/pageHeros/graphic.webp";
 import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
@@ -17,6 +18,7 @@ import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../../../utils/schemaGenerators";
 
 const schema = {
@@ -24,6 +26,11 @@ const schema = {
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts",
+      "Australia-wide Microsoft Office Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id":
@@ -105,6 +112,35 @@ const Page = () => {
       <ExpertsAwait />
       <PageSegment4 />
       <PageSegment7 />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="Azure cloud projects we've delivered"
+        links={[
+          {
+            href: "/case-studies/film-crew-booking-system-access-nextjs-rebuild",
+            linkText: "See the Azure SQL migration",
+            title:
+              "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
+            description:
+              "The client's entire crew booking operation ran on a native Access 2000 database that would only work inside a virtual machine, with no way for its website to connect to it. We moved the data onto Azure SQL Server, rebuilt the Access front end on the OEG Access framework, and rewrote the WordPress website in Next.js with a direct connection to the cloud database. The new site loads 10x faster.",
+            image: "/case-studies/film-crew-booking-system-rebuildLg.png",
+            imageAlt:
+              "Access booking system and Next.js website on Azure SQL Server for a freelance film and screen crew agency",
+          },
+          {
+            href: "/case-studies/internal-ai-proposal-assistant-azure-migration",
+            linkText: "Explore the tenant migration",
+            title:
+              "Turning call notes and a rate card into a first-pass proposal inside the real Word template",
+            description:
+              "The client's proposal-writing process relied on reps re-reading transcripts and briefs, then copy-pasting fee figures and consultant details from the last similar proposal. We built a conversational AI assistant that drafts a first-pass proposal straight into the real Word template, with fee tables and a consultant roster pulled from the current rate card. The tool was then migrated fully inside the client's Microsoft and Azure tenant, using Azure SQL, Azure App Service, Entra ID single sign-on and Microsoft Foundry.",
+            image: "/case-studies/internal-ai-proposal-assistant.png",
+            imageAlt:
+              "AI proposal assistant drafting into a Word template, migrated into an Azure tenant",
+          },
+        ]}
+      />
       <Promo
         h2="Take Your Business to the Cloud with Microsoft Azure"
         p="Leverage the power of Azure for cost-effective, secure, and scalable cloud solutions. From Access front ends to fully integrated mobile, web, and database applications, our experts will help transform your workflows and enhance accessibility."

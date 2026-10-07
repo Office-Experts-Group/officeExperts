@@ -21,6 +21,7 @@ const CTAFull = dynamic(() => import("../../(components)/CTAFull"));
 const PageSegmentFinal = dynamic(
   () => import("./(components)/Pagesegmentfinal"),
 );
+const RelatedLinks = dynamic(() => import("../../../components/RelatedLinks"));
 const Contact = dynamic(() => import("../../../components/Contact"));
 
 import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
@@ -52,7 +53,7 @@ const schema = {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-05-14T00:00:00+00:00",
+      dateModified: "2026-10-04T00:00:00+00:00",
       description:
         "Professional Office 365 consulting services including implementation, migration, business automation, and managed services across Australia.",
       breadcrumb: {
@@ -120,6 +121,36 @@ const Page = () => {
         <SolutionsCarouselReverse />
         <CTAFull />
         <PageSegmentFinal />
+        <RelatedLinks
+          theme="dark"
+          eyebrow="Case Studies"
+          heading="Office 365 solutions we have delivered"
+          links={[
+            {
+              href: "/case-studies/professional-services-sharepoint-foundation-workshops",
+              linkText: "See how the SharePoint foundation was built",
+              title:
+                "Moving a team off shared logins onto a proper SharePoint foundation",
+              description:
+                "The client's team ran its email, files and calendar through one shared login, with a second shared login for its bookings system, so nobody could see who had changed a file or remove someone cleanly when they left. We ran live SharePoint Foundation Workshops that produced a site structure built around how the team works, an Owners, Members and Visitors access model based on security groups, and a staged plan to retire both shared logins.",
+              image:
+                "/case-studies/professional-services-sharepoint-foundationLg.png",
+              imageAlt:
+                "SharePoint foundation workshops for a professional services team",
+            },
+            {
+              href: "/case-studies/manufacturing-project-setup-automation",
+              linkText: "Read how job folders are built automatically",
+              title:
+                "Cutting project setup from roughly 30 minutes to under a minute",
+              description:
+                "Every time the client won a new project, staff manually built the job folder across three SharePoint sites, renamed everything to match the naming convention and copied in templates. We built a Power Automate flow that reads the project details from the notification email and does the whole setup automatically, with error handling that notifies an admin if a step fails. Setup time fell from roughly 30 minutes to under 1 minute.",
+              image: "/case-studies/manufacturing-project-setupLg.webp",
+              imageAlt:
+                "Automated SharePoint project folder setup for a manufacturing company",
+            },
+          ]}
+        />
         <Contact />
       </main>
     </>

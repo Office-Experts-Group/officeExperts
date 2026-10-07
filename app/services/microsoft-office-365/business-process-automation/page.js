@@ -14,10 +14,14 @@ const BPAProcess = dynamic(() => import("./(components)/BPAProcess"));
 const Promo = dynamic(() => import("../../../../components/Promo"));
 const BPAFaq = dynamic(() => import("./(components)/BPAFaq"));
 const Contact = dynamic(() => import("../../../../components/Contact"));
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../../../utils/schemaGenerators";
 
 import party from "../../../../public/pageHeros/3rdParty.webp";
@@ -31,6 +35,11 @@ const schema = {
   "@graph": [
     generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Australia-wide Microsoft Office Programming, Development and Consulting Experts",
+    ),
 
     // ── WebPage ──────────────────────────────
     {
@@ -165,6 +174,44 @@ const Page = () => {
       <BPADocProcessing />
       <BPAApprovals />
       <BPAEmailTriage />
+      <RelatedLinks
+        theme="light"
+        eyebrow="Case Studies"
+        heading="Business process automation projects we've delivered"
+        links={[
+          {
+            href: "/case-studies/manufacturing-project-setup-automation",
+            linkText: "See the project setup flow",
+            title:
+              "Turning a new project email into a fully built job folder in seconds",
+            description:
+              "Every time the client won a new project, someone had to create folders across three SharePoint sites by hand, rename them to the company's naming convention and copy in standard templates. We built a Power Automate flow that starts from the project notification email, reads the project details and builds the whole structure automatically. Setup time fell from roughly 30 minutes to under a minute, and built-in error handling notifies an admin if any step fails.",
+            image: "/case-studies/manufacturing-project-setupLg.webp",
+            imageAlt:
+              "Power Automate flow building SharePoint job folders for a manufacturing company",
+          },
+          {
+            href: "/case-studies/building-consultants-inspection-crm",
+            linkText: "See how automation works",
+            title: "Fully automated quote-to-email pipeline in Microsoft 365",
+            description:
+              "The client, a building consultancy, handled building inspection enquiries entirely by hand, from the first request through to putting together and sending a quote. We built an automated system on SharePoint, Power Apps and Power Automate that receives enquiries, manages them through to completion and generates quotes ready to send by email, removing the rework that came from manual errors.",
+            image: "/case-studies/gm-building-consultants-inspection-crmLg.png",
+            imageAlt:
+              "Automated enquiry and quoting system for a building consultancy",
+          },
+          {
+            href: "/case-studies/healthcare-patient-form-followup-automation",
+            linkText: "See the follow-up flows",
+            title: "Removing manual form chasing for a provider's patients",
+            description:
+              "The client, an allied health provider, tracked intake and milestone form responses by hand, which pulled clinical staff away from patient care to send reminders and escalations. We built two scheduled Power Automate flows against its Microsoft Fabric data warehouse that send reminders, escalate overdue cases and close off completed forms automatically. Follow-up timing and escalation rules are set through configuration rather than code.",
+            image: "/case-studies/healthcare-form-followupLg.webp",
+            imageAlt:
+              "Scheduled Power Automate flows chasing patient forms for an allied health provider",
+          },
+        ]}
+      />
       <BPAReplaces />
       <BPAProcess />
       <Promo

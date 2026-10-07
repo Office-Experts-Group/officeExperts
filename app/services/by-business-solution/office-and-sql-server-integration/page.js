@@ -12,6 +12,7 @@ import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../../../utils/schemaGenerators";
 
 const schema = {
@@ -19,6 +20,11 @@ const schema = {
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts",
+      "Australia-wide Microsoft Office Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
       "@id":

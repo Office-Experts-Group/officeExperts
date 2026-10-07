@@ -5,6 +5,7 @@ import ExpertsAwait from "../../../../components/ExpertsAwait";
 import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
+import RelatedLinks from "../../../../components/RelatedLinks";
 
 import pen from "../../../../public/pageHeros/pen.webp";
 import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
@@ -95,6 +96,35 @@ const Page = () => {
         altMob={"graph table on a desk"}
       />
       <PageSegmentMain />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="PowerPoint template projects we've delivered"
+        links={[
+          {
+            href: "/case-studies/government-department-enterprise-office-template-suite",
+            linkText: "See the precinct themes",
+            title:
+              "A PowerPoint framework with 10 precinct-specific themes for a state department",
+            description:
+              "After a major brand refresh, the client needed its Office environment brought into line. We rebuilt its PowerPoint presentation framework with expanded slide layouts, icon libraries, accessibility guidance and improved data visualisation, then built 10 additional precinct-specific themes so each precinct keeps its own identity within the corporate brand. The same project redesigned 17 enterprise Word templates.",
+            image: "/case-studies/government-enterprise-office-templatesLg.png",
+            imageAlt:
+              "PowerPoint framework and precinct themes for a state government department",
+          },
+          {
+            href: "/case-studies/water-education-program-word-powerpoint-templates",
+            linkText: "Explore the Slide Master system",
+            title:
+              "Turning an InDesign lesson design into Word and PowerPoint templates educators can use",
+            description:
+              "The client's water education program had a lesson design built in InDesign, but curriculum writers across Western Australia needed to build lessons in Word and PowerPoint. We translated the design into working Word and PowerPoint templates, including a PowerPoint Slide Master system with precise placeholders, locked-down brand elements and purpose-built layouts for activities, diagrams and assessment pages.",
+            image: "/case-studies/water-education-program-templatesLg.png",
+            imageAlt:
+              "Word and PowerPoint lesson templates for a water education program",
+          },
+        ]}
+      />
       <Segment4Repeat />
       <ExpertsAwait />
       <Contact />

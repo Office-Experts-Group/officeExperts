@@ -14,6 +14,9 @@ const CopilotLicensing = dynamic(
   () => import("./(components)/CopilotLicensing"),
 );
 const CopilotCta = dynamic(() => import("./(components)/CopilotCta"));
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
 const Contact = dynamic(() => import("../../../../components/Contact"));
 
 // Schema generators shared across all pages
@@ -176,6 +179,37 @@ const Page = () => {
         <CopilotValue />
         <CopilotDelivery />
         <CopilotLicensing />
+        <RelatedLinks
+          theme="light"
+          eyebrow="Case Studies"
+          heading="Real world examples of AI projects we've built"
+          links={[
+            {
+              href: "https://www.officeexperts.com.au/case-studies/biochar-ai-go-to-market-analysis-uk",
+              linkText: "See how the research was automated",
+              title:
+                "Turning 10,000+ documents into a 70-page go-to-market report in 4 weeks, not 3 months",
+              description:
+                "The client needed a go-to-market strategy for entering the UK BioChar market, built from research scattered across government databases, competitor material, academic journals and customer sources. We built AI research agents that fed a reusable SharePoint knowledge base, auto-populated a standardised Word report template, and logged every analyst refinement through Power Apps. More than 10,000 documents became a 70-page report in 4 weeks instead of 3 months.",
+              image:
+                "https://www.officeexperts.com.au/case-studies/biochar-gtm-analysisLg.png",
+              imageAlt:
+                "AI research agents producing a go-to-market report for a sustainability company",
+            },
+            {
+              href: "https://www.officeexperts.com.au/case-studies/life-insurance-real-time-competitive-intelligence",
+              linkText: "Explore the competitor monitoring system",
+              title:
+                "Cutting competitor response time from two weeks to twelve minutes",
+              description:
+                "The client's life insurance division was consistently late to competitor pricing and product moves, with intelligence assembled by hand from fragmented sources. We built an AI-driven competitive intelligence system on the client's own Microsoft 365 tenancy that monitors competitors around the clock, scores material changes, and routes prioritised alerts into Teams and internal review workflows. Response time fell from around two weeks to roughly 12 minutes from detection to action.",
+              image:
+                "https://www.officeexperts.com.au/case-studies/life-insurance-competitive-intelligenceLg.png",
+              imageAlt:
+                "AI competitive intelligence system for a life insurance division",
+            },
+          ]}
+        />
         <CopilotCta />
         <Contact />
       </main>
