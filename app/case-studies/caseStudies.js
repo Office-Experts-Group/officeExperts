@@ -999,7 +999,7 @@ export const caseStudies = [
       "Editable PDF fields let staff complete forms without breaking the layout",
       "Client's own team trained to make minor content changes independently",
     ],
-    image: "/case-studies/government-health-editable-pdf-formsLg.png",
+    image: "/case-studies/government-health-editable-pdf-formsLg.webp",
     featured: false,
 
     stats: [
@@ -1134,7 +1134,7 @@ export const caseStudies = [
   // Suggested placement: add as a new entry before the closing "];" of the array
 
   {
-    slug: "windowline-proposals-database",
+    slug: "automated-proposal-generation-in-microsoft",
     client: "Windowline",
     author: "Stephen",
     datePublished: "2026-09-17T00:00:00+00:00",
