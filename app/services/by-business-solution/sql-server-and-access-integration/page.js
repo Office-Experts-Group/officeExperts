@@ -185,7 +185,7 @@ const Page = () => {
         heading="Access and SQL Server projects we've delivered"
         links={[
           {
-            href: "/case-studies/windowline-proposals-database",
+            href: "/case-studies/automated-proposal-generation-in-microsoft",
             linkText: "See the SQL Server migration",
             title:
               "Replacing 50-page proposals built by hand with a database-driven document generator",

@@ -136,7 +136,7 @@ https://www.officeexperts.com.au/case-studies/water-education-program-word-power
 
 > Translated an InDesign lesson design into working Word and PowerPoint templates with Quick Parts and a Slide Master system for educators.
 
-https://www.officeexperts.com.au/case-studies/windowline-proposals-database
+https://www.officeexperts.com.au/case-studies/automated-proposal-generation-in-microsoft
 
 > Replaced hand-built 50-page proposals with an Access (later SQL Server) database that generates the full Word document from selected sections.
 
