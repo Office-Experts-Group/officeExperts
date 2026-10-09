@@ -1,0 +1,97 @@
+// styles/caseStudyCarousel.module.scss
+//
+// Turns the RelatedLinks card grid into a right-to-left carousel without
+// editing RelatedLinks. Its class names are hashed by its own CSS module, so
+// this file reaches its markup by structure instead:
+//   .carousel > section > div > ul > li
+//   wrapper     section    inner  grid  card
+
+// The inner box is the size reference for the cards and the slide distance.
+.carousel > section > div {
+  container-type: inline-size;
+}
+
+// Base layout: a swipeable row that snaps card by card. Touch devices and
+// anyone who prefers reduced motion get this version.
+.carousel > section > div > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel > section > div > ul > li {
+  flex: 0 0 min(24rem, 85cqw);
+  scroll-snap-align: start;
+}
+
+// Safety net: if a card ever gets a long description, cap it so the cards
+// stay a uniform height. The full text is still in the HTML.
+.carousel > section > div > ul > li p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+}
+
+// Auto-slide: only for devices with a mouse and no reduced-motion setting.
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .carousel > section > div {
+    overflow: hidden;
+  }
+
+  .carousel > section > div > ul {
+    width: max-content;
+    align-self: flex-start;
+    overflow: visible;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+    animation: carouselSlide var(--carousel-duration, 170s) linear infinite;
+  }
+
+  // Hovering the row pauses it so a card can be read and clicked
+  .carousel > section > div > ul:hover {
+    animation-play-state: paused;
+  }
+
+  // Keyboard focus stops the slide and lets the browser scroll the focused
+  // card into view
+  .carousel:focus-within > section > div {
+    overflow-x: auto;
+  }
+
+  .carousel:focus-within > section > div > ul {
+    animation: none;
+  }
+}
+
+// One pass from right to left: a short hold on the first card, a slide to the
+// last card, then a fade out, reset and fade in. It never slides back the
+// other way. Each card exists once in the HTML, so crawlers see no duplicate
+// links. 100% is the row's own width and 100cqw is the visible width.
+@keyframes carouselSlide {
+  0%,
+  3% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  92% {
+    transform: translateX(min(0px, calc(100cqw - 100%)));
+    opacity: 1;
+  }
+  96% {
+    transform: translateX(min(0px, calc(100cqw - 100%)));
+    opacity: 0;
+  }
+  96.01% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

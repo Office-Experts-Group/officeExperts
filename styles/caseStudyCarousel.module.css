@@ -1,0 +1,71 @@
+.carousel > section > div {
+  container-type: inline-size;
+}
+
+.carousel > section > div > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel > section > div > ul > li {
+  flex: 0 0 min(24rem, 85cqw);
+  scroll-snap-align: start;
+}
+
+.carousel > section > div > ul > li p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .carousel > section > div {
+    overflow: hidden;
+  }
+  .carousel > section > div > ul {
+    width: -moz-max-content;
+    width: max-content;
+    align-self: flex-start;
+    overflow: visible;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+    animation: carouselSlide var(--carousel-duration, 170s) linear infinite;
+  }
+  .carousel > section > div > ul:hover {
+    animation-play-state: paused;
+  }
+  .carousel:focus-within > section > div {
+    overflow-x: auto;
+  }
+  .carousel:focus-within > section > div > ul {
+    animation: none;
+  }
+}
+@keyframes carouselSlide {
+  0%, 3% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  92% {
+    transform: translateX(min(0px, 100cqw - 100%));
+    opacity: 1;
+  }
+  96% {
+    transform: translateX(min(0px, 100cqw - 100%));
+    opacity: 0;
+  }
+  96.01% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=caseStudyCarousel.module.css.map */

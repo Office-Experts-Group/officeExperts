@@ -15,6 +15,9 @@ const CTAFull = dynamic(() => import("./(components)/CTAFull"));
 const Testimonials = dynamic(() => import("./(components)/Testimonials"));
 const Brands = dynamic(() => import("../components/Brands"));
 const Promo = dynamic(() => import("../components/Promo"));
+// const CaseStudyCarousel = dynamic(
+//   () => import("../components/CaseStudyCarousel"),
+// );
 const Contact = dynamic(() => import("../components/Contact"));
 
 import { getHomePageSchema } from "../utils/testimonialSchemaGenerator";
@@ -107,6 +110,12 @@ const Page = () => {
         h2="Automate & Innovate"
         p="Reduce costs and boost productivity with custom Microsoft Office solutions. Our experts deliver tailored automation, reporting, and integration services across Australia."
       />
+      {/* <CaseStudyCarousel
+        site="office"
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="Have a look at some of our previous work"
+      /> */}
       <Contact />
     </>
   );
