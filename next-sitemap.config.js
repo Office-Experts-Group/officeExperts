@@ -92,7 +92,8 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/microsoft-office-365/exchange-online-setup-and-support",
   "/test-page",
   "/case-study-submission",
-  "/services",
+  "/services/by-business-solution",
+  "/services/by-office-product",
   "/services/microsoft-vbscript",
 ]);
 

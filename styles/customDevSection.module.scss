@@ -1,0 +1,160 @@
+// styles/customDevSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.icon {
+  width: 3rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Technology chips ─────────────────────────
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.chip {
+  padding: 0.35rem 0.8rem;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: $accent;
+}
+
+// ── Terminal panel ───────────────────────────
+.terminal {
+  background: $dark-bg;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+// Title bar with three window dots drawn from one pseudo element and box shadows
+.bar {
+  position: relative;
+  height: 2.5rem;
+  background: $dark-surface;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #ff5f57;
+    box-shadow:
+      1.1rem 0 #febc2e,
+      2.2rem 0 #28c840;
+    translate: 0 -50%;
+  }
+}
+
+.lines {
+  display: grid;
+  gap: 0.15rem;
+  list-style: none;
+  padding: 1.5rem;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 20rem) 1fr;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  font-family: monospace;
+
+  &::before {
+    content: "›";
+    color: #5ba4c4;
+  }
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1.25rem 1fr;
+  }
+}
+
+.lineTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lineLink {
+  color: $white-90;
+  text-decoration: none;
+
+  &:hover {
+    color: #5ba4c4;
+  }
+}
+
+.lineText {
+  font-size: 0.85rem;
+  color: $white-55;
+
+  @media (max-width: 766px) {
+    grid-column: 2;
+  }
+}

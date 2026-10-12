@@ -1,0 +1,205 @@
+.section {
+  background: #f7f8f9;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.watermark {
+  flex-shrink: 0;
+  width: 8rem;
+  color: rgba(4, 105, 153, 0.3);
+}
+.watermark svg {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .watermark {
+    display: none;
+  }
+}
+@media (max-width: 766px) {
+  .watermark {
+    display: none;
+  }
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 766px) {
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #046999;
+  border-radius: 4px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.tile:hover {
+  box-shadow: 0 12px 40px rgba(4, 105, 153, 0.1);
+  transform: translateY(-3px);
+}
+
+.tileIcon {
+  width: 3rem;
+  color: #046999;
+}
+.tileIcon svg {
+  width: 100%;
+  height: auto;
+}
+
+.tileTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.tileLink {
+  color: #0d1b2a;
+  text-decoration: none;
+}
+.tileLink:hover {
+  color: #046999;
+}
+
+.tileText {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.support {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #046999;
+}
+
+.moreTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9a9da1;
+}
+
+.more {
+  -moz-columns: 3;
+       columns: 3;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .more {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+@media (max-width: 766px) {
+  .more {
+    -moz-columns: 1;
+         columns: 1;
+  }
+}
+
+.moreItem {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.moreLink {
+  font-weight: 600;
+  color: #0d1b2a;
+  text-decoration: none;
+}
+.moreLink:hover {
+  color: #046999;
+}
+
+.tag {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: #e8f4fa;
+  color: #046999;
+  font-size: 0.7rem;
+  border-radius: 999px;
+}/*# sourceMappingURL=powerPlatformSection.module.css.map */

@@ -41,7 +41,12 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "/services/by-business-solution",
+    canonical: "/services",
+    alternate: [
+      {
+        href: "/services/by-business-solution",
+      },
+    ],
   },
 };
 

@@ -1,83 +1,115 @@
+// /app/services/page.js
+// Server component: composes the /services hub from its section components.
+// All content comes from ./servicesData.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-export const revalidate = false;
-
-// Keep ServiceHero static since it's above fold
+// ---- Existing site components ----
 import ServiceHero from "../../components/ServiceHero";
+import GroupIntro from "./(components)/GroupIntro";
 
-// Dynamically import components that use images
-const ExpertsAwait = dynamic(() => import("../../components/ExpertsAwait"), {
-  ssr: true,
-});
-const Contact = dynamic(() => import("../../components/Contact"), {
-  ssr: true,
-});
-const PageSegmentMain = dynamic(
-  () => import("./(components)/PageSegmentMain"),
-  {
-    ssr: true,
-  }
+// Below-the-fold components loaded dynamically (still server rendered)
+const AiAutomationSection = dynamic(
+  () => import("./(components)/AiAutomationSection"),
 );
-const SolutionsCarousel = dynamic(
-  () => import("./(components)/SolutionsCarousel"),
-  {
-    ssr: true,
-  }
+const PowerPlatformSection = dynamic(
+  () => import("./(components)/PowerPlatformSection"),
 );
+const ExcelSection = dynamic(() => import("./(components)/ExcelSection"));
+const WordSection = dynamic(() => import("./(components)/WordSection"));
+const AccessSection = dynamic(() => import("./(components)/AccessSection"));
+const PowerPointSection = dynamic(
+  () => import("./(components)/PowerPointSection"),
+);
+const CustomDevSection = dynamic(
+  () => import("./(components)/CustomDevSection"),
+);
+const Microsoft365Section = dynamic(
+  () => import("./(components)/Microsoft365Section"),
+);
+const CaseStudyCallout = dynamic(
+  () => import("./(components)/CaseStudyCallout"),
+);
+const ServicesFaq = dynamic(() => import("./(components)/ServicesFaq"));
+const Contact = dynamic(() => import("../../components/Contact"));
 
-import handShake from "../../public/pageHeros/handShake.webp";
-import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
+// Hero images. Add these two files to /public/pageHeros (see README)
+import servicesHero from "../../public/pageHeros/services.webp";
+import servicesHeroMob from "../../public/pageHeros/mob/servicesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
+import {
+  pageMeta,
+  groupIntro,
+  navItems,
+  ai,
+  powerPlatformSection,
+  excelSection,
+  wordSection,
+  accessSection,
+  powerPointSection,
+  customDevSection,
+  microsoft365Section,
+  caseStudyCallout,
+  specialistSites,
+  audiences,
+  faqs,
+} from "./servicesData";
+import { toListItems } from "./servicesHelpers";
+
+const PAGE_URL = `${pageMeta.siteUrl}${pageMeta.path}`;
+
+// ── Structured data ────────────────────────────────────────
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      pageMeta.siteUrl,
+      "Office Experts",
+      "Australia-wide Microsoft Office, Power Platform and AI Experts",
+    ),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services",
-      url: "https://www.officeexperts.com.au/services",
-      name: "Microsoft Development Services | Office Experts Solutions Australia",
-      isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
-      },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2024-10-26T00:00:00+00:00",
-      description:
-        "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
-      breadcrumb: {
-        "@id": "https://www.officeexperts.com.au/services#breadcrumb",
-      },
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: pageMeta.title,
+      isPartOf: { "@id": `${pageMeta.siteUrl}#website` },
+      description: pageMeta.description,
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
       inLanguage: "en-AU",
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/services"],
-        },
-      ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/services#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: pageMeta.siteUrl,
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-        },
+        { "@type": "ListItem", position: 2, name: "Services", item: PAGE_URL },
       ],
+    },
+    {
+      // The eight service areas, each pointing at its section on this page
+      "@type": "ItemList",
+      "@id": `${PAGE_URL}#service-areas`,
+      name: "Office Experts service areas",
+      itemListElement: toListItems(
+        navItems.map((item) => ({
+          name: item.label,
+          href: `${pageMeta.path}#${item.id}`,
+        })),
+        pageMeta.siteUrl,
+      ),
     },
   ],
 };
@@ -89,16 +121,28 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+
       <ServiceHero
-        title="Microsoft Development Services"
-        desktopImage={handShake}
-        mobileImage={handShakeMob}
-        altDesk={"handshake"}
-        altMob={"handshake"}
+        title="Microsoft Consulting and Development Services"
+        desktopImage={servicesHero}
+        mobileImage={servicesHeroMob}
+        altDesk="Microsoft Office, Power Platform and AI services"
+        altMob="Microsoft Office, Power Platform and AI services"
+        darker={true}
       />
-      <PageSegmentMain />
-      <SolutionsCarousel />
-      <ExpertsAwait />
+
+      {/* <ServicesNav items={navItems} /> */}
+      <GroupIntro data={groupIntro} />
+      <AiAutomationSection data={ai} />
+      <PowerPlatformSection data={powerPlatformSection} />
+      <ExcelSection data={excelSection} />
+      <WordSection data={wordSection} />
+      <AccessSection data={accessSection} />
+      <PowerPointSection data={powerPointSection} />
+      <CustomDevSection data={customDevSection} />
+      <Microsoft365Section data={microsoft365Section} />
+      <CaseStudyCallout data={caseStudyCallout} />
+      <ServicesFaq data={faqs} />
       <Contact />
     </>
   );

@@ -188,7 +188,22 @@ const REDIRECTS = [
   },
   {
     source: "/by-business-solution",
-    destination: "/servicesS",
+    destination: "/services",
+    permanent: true,
+  },
+  {
+    source: "/services/by-business-solution",
+    destination: "/services",
+    permanent: true,
+  },
+  {
+    source: "/services/by-office-product",
+    destination: "/services",
+    permanent: true,
+  },
+  {
+    source: "/services/by-business-solution",
+    destination: "/services",
     permanent: true,
   },
   {
@@ -199,11 +214,6 @@ const REDIRECTS = [
   {
     source: "/electrical-estimating-solutions/attachment/lend-lease/",
     destination: "/client-testimonials",
-    permanent: true,
-  },
-  {
-    source: "/services",
-    destination: "/",
     permanent: true,
   },
   // ACCESS

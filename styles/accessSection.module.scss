@@ -1,0 +1,176 @@
+// styles/accessSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    max-width: 46rem;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 4rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 766px) {
+    display: none;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Table ────────────────────────────────────
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 1.1rem 1.5rem;
+    text-align: left;
+  }
+
+  thead th {
+    background: $dark-bg;
+    color: $white-90;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $border-strong;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $light-bg;
+    }
+  }
+
+  // Below tablet each row stacks, and the header row is hidden visually but kept for screen readers
+  @media (max-width: 766px) {
+    thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+
+    th,
+    td {
+      padding: 0.25rem 1rem;
+    }
+
+    tr {
+      padding: 0.75rem 0;
+    }
+  }
+}
+
+.name {
+  width: 40%;
+  font-weight: 700;
+
+  @media (max-width: 766px) {
+    width: auto;
+  }
+}
+
+.link {
+  color: $text-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.helps {
+  font-size: 0.92rem;
+  color: $text-secondary;
+}
+
+.tag {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: $accent-light;
+  color: $accent;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.siteLink {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background: $accent;
+  color: $white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}

@@ -150,7 +150,6 @@ https://www.officeexperts.com.au/case-studies/research-organisation-access-kanba
 
 ## Services
 
-https://www.officeexperts.com.au/services
 https://www.officeexperts.com.au/services/activex-vbscript-migration
 https://www.officeexperts.com.au/services/ai-email-triage
 https://www.officeexperts.com.au/services/ai-agent-development

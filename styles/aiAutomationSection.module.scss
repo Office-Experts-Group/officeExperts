@@ -1,0 +1,177 @@
+// styles/aiAutomationSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $white-90;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-65;
+  line-height: 1.8;
+}
+
+// ── Bento grid ───────────────────────────────
+// Featured tile takes the left two columns, two tiles stack beside it,
+// and the remaining three sit across the bottom row.
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: $accent;
+  border-radius: 12px;
+
+  @include tablet {
+    grid-row: auto;
+  }
+  @media (max-width: 766px) {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 2rem;
+  }
+}
+
+.icon {
+  width: 3.5rem;
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.featuredTitle {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.2;
+}
+
+.featuredText {
+  max-width: 34rem;
+  font-size: 1rem;
+  color: $white-88;
+  line-height: 1.75;
+}
+
+.featuredLink {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  background: $white;
+  color: $accent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.75rem;
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  border-radius: 12px;
+}
+
+.tileTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.tileLink {
+  color: $white-90;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tileText {
+  font-size: 0.92rem;
+  color: $white-65;
+  line-height: 1.7;
+}
+
+.also {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: $white-55;
+}
+
+.alsoLink {
+  color: $accent;
+  font-weight: 700;
+}
+
+.tag {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: $white-12;
+  color: $white-65;
+  font-size: 0.7rem;
+  border-radius: 999px;
+}

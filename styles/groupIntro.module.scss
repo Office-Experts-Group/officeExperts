@@ -1,0 +1,220 @@
+// styles/groupIntro.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── What we offer ────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── The main ways we help ────────────────────
+.listWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.listTitle,
+.overviewTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+}
+
+.service {
+  border-bottom: 1px solid $border-strong;
+}
+
+.serviceLink {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0.5rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    .serviceTitle,
+    .serviceArrow {
+      color: $accent;
+    }
+
+    .serviceDot {
+      background: $accent;
+    }
+
+    .serviceArrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// Number sits above the dot
+.serviceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.serviceNum {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: $text-muted;
+}
+
+.serviceDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $text-muted;
+  transition: background 0.2s ease;
+}
+
+.serviceTitle {
+  font-size: 1.15rem;
+  color: $text-primary;
+  transition: color 0.2s ease;
+}
+
+.serviceArrow {
+  display: flex;
+  color: $text-muted;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+// ── Service overview ─────────────────────────
+.overviewWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  padding-top: 1.25rem;
+  border-top: 3px solid $border-strong;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: $accent;
+
+    .itemTitle {
+      color: $accent;
+    }
+  }
+}
+
+.itemIcon {
+  width: 2.25rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.itemTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $text-primary;
+  transition: color 0.2s ease;
+}
+
+.itemText {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.65;
+}

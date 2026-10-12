@@ -1,0 +1,200 @@
+// styles/powerPlatformSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    max-width: 46rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// Large faint icon, hidden once the layout stacks
+.watermark {
+  flex-shrink: 0;
+  width: 8rem;
+  color: $accent-border;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include tablet {
+    display: none;
+  }
+  @media (max-width: 766px) {
+    display: none;
+  }
+}
+
+// ── Product tiles ────────────────────────────
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $white;
+  border: 1px solid $border;
+  border-top: 3px solid $accent;
+  border-radius: 4px;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(4, 105, 153, 0.1);
+    transform: translateY(-3px);
+  }
+}
+
+.tileIcon {
+  width: 3rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.tileTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.tileLink {
+  color: $text-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.tileText {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+.support {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $accent;
+}
+
+// ── Supporting services ──────────────────────
+.moreTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.more {
+  columns: 3;
+  column-gap: 3rem;
+  list-style: none;
+  padding: 0;
+
+  @include tablet {
+    columns: 2;
+  }
+  @media (max-width: 766px) {
+    columns: 1;
+  }
+}
+
+.moreItem {
+  break-inside: avoid;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid $border-strong;
+}
+
+.moreLink {
+  font-weight: 600;
+  color: $text-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.tag {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: $accent-light;
+  color: $accent;
+  font-size: 0.7rem;
+  border-radius: 999px;
+}

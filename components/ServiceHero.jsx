@@ -10,10 +10,14 @@ const ServiceHero = ({
   altMob,
   altDesk,
   isMeetTeam,
+  darker,
 }) => {
   return (
     <section className={styles.serviceHero}>
-      <div className={styles.imageContainer}>
+      <div
+        className={styles.imageContainer}
+        style={darker ? { filter: "brightness(0.6)" } : undefined}
+      >
         {/* Desktop/Tablet Image */}
         <Image
           src={desktopImage}

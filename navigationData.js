@@ -370,7 +370,7 @@ export const navigationData = {
       },
       {
         label: "Copilot and AI",
-        href: `/services/microsoft-office-365/copilot-and-ai`,
+        href: `/services/microsoft-office-365/copilot`,
         items: [
           {
             label: "Copilot in Office 365",
@@ -396,7 +396,7 @@ export const navigationData = {
       },
       {
         label: "Other Services",
-        href: `/services/by-business-solution`,
+        href: `/services`,
         items: [
           {
             label: "Office 365",

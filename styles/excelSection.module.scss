@@ -1,0 +1,193 @@
+// styles/excelSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// Left column stays in view while the rows scroll on wide screens
+.intro {
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  @include tablet {
+    position: static;
+  }
+  @media (max-width: 766px) {
+    position: static;
+  }
+}
+
+.icon {
+  width: 3rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.text {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.siteLink {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background: $accent;
+  color: $white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+// ── Service rows ─────────────────────────────
+// The numbers come from a CSS counter and the dot is a pseudo element, so both are purely decorative.
+.rows {
+  list-style: none;
+  padding: 0;
+  counter-reset: row;
+}
+
+.row {
+  border-bottom: 1px solid $border-strong;
+  counter-increment: row;
+}
+
+.rowLink {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: 1rem;
+  padding: 1.25rem 0.5rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    .rowTitle,
+    .rowArrow {
+      color: $accent;
+    }
+
+    .rowMeta::after {
+      background: $accent;
+    }
+
+    .rowArrow {
+      transform: translateX(4px);
+    }
+
+    .rowDesc {
+      max-height: 8rem;
+    }
+  }
+}
+
+// Number sits above the dot
+.rowMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.2rem;
+
+  &::before {
+    content: counter(row, decimal-leading-zero);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: $text-muted;
+  }
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $text-muted;
+    transition: background 0.2s ease;
+  }
+}
+
+.rowTitle {
+  font-size: 1.15rem;
+  color: $text-primary;
+  transition: color 0.2s ease;
+}
+
+// Description is collapsed until the row is hovered or focused
+.rowDesc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  // Touch screens have no hover, so the description is always shown there
+  @media (hover: none) {
+    max-height: none;
+  }
+}
+
+.rowText {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.rowArrow {
+  display: flex;
+  color: $text-muted;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}

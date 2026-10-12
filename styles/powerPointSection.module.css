@@ -1,0 +1,121 @@
+.section {
+  background: #f7f8f9;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.icon {
+  width: 3rem;
+  color: #046999;
+}
+.icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  aspect-ratio: 16/9;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(4, 105, 153, 0.08);
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  width: 3rem;
+  height: 0.3rem;
+  background: #046999;
+  border-radius: 2px;
+}
+
+.slideTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.slideLink {
+  color: #0d1b2a;
+  text-decoration: none;
+}
+.slideLink:hover {
+  color: #046999;
+}
+
+.slideText {
+  font-size: 0.85rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.extra {
+  background: transparent;
+  border: 2px dashed rgba(4, 105, 153, 0.3);
+  box-shadow: none;
+}/*# sourceMappingURL=powerPointSection.module.css.map */

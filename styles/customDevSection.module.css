@@ -1,0 +1,156 @@
+@charset "UTF-8";
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.icon {
+  width: 3rem;
+  color: #046999;
+}
+.icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.chip {
+  padding: 0.35rem 0.8rem;
+  background: #e8f4fa;
+  border: 1px solid rgba(4, 105, 153, 0.3);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #046999;
+}
+
+.terminal {
+  background: #111820;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  position: relative;
+  height: 2.5rem;
+  background: #18232e;
+}
+.bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 1.1rem 0 #febc2e, 2.2rem 0 #28c840;
+  translate: 0 -50%;
+}
+
+.lines {
+  display: grid;
+  gap: 0.15rem;
+  list-style: none;
+  padding: 1.5rem;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 20rem) 1fr;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  font-family: monospace;
+}
+.line::before {
+  content: "›";
+  color: #5ba4c4;
+}
+@media (max-width: 766px) {
+  .line {
+    grid-template-columns: 1.25rem 1fr;
+  }
+}
+
+.lineTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lineLink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+.lineLink:hover {
+  color: #5ba4c4;
+}
+
+.lineText {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+@media (max-width: 766px) {
+  .lineText {
+    grid-column: 2;
+  }
+}/*# sourceMappingURL=customDevSection.module.css.map */

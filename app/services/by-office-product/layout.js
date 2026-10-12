@@ -12,7 +12,12 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "/services/by-office-product",
+    canonical: "/services",
+    alternate: [
+      {
+        href: "/services/by-business-solution",
+      },
+    ],
   },
 
   // OpenGraph

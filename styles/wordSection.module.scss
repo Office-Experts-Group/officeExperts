@@ -1,0 +1,189 @@
+// styles/wordSection.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $accent;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.icon {
+  width: 3rem;
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: black;
+  margin-bottom: -0.8rem;
+  font-weight: 700;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-88;
+  line-height: 1.8;
+}
+
+// ── Paper sheets ─────────────────────────────
+// Grid items stretch by default, so the sheets stay level with each other
+.sheets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2.5rem;
+}
+
+// Folded top right corner, drawn with a gradient so no extra markup is needed.
+// The first colour matches the section background so the cut corner looks empty.
+.sheet {
+  position: relative;
+  padding: 2.75rem 2rem 2rem;
+  background: $white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(225deg, $accent 50%, $accent-light 50%);
+  }
+}
+
+.sheetTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.sheetList {
+  list-style: none;
+  padding: 0;
+}
+
+// Dashed rules between items, like ruled paper
+.sheetItem {
+  border-bottom: 1px dashed $border-strong;
+}
+
+.sheetLink {
+  display: block;
+  padding: 0.8rem 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    .sheetName,
+    .sheetArrow {
+      color: $accent;
+    }
+
+    .sheetArrow {
+      transform: translateX(4px);
+    }
+
+    .sheetDesc {
+      max-height: 6rem;
+    }
+  }
+}
+
+.sheetHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sheetName {
+  font-size: 0.92rem;
+  color: $text-secondary;
+  transition: color 0.2s ease;
+}
+
+.sheetArrow {
+  display: flex;
+  color: $text-muted;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+// Description is collapsed until the item is hovered or focused
+.sheetDesc {
+  // max-height: 0;
+  // overflow: hidden;
+  // transition: max-height 0.3s ease;
+
+  // // Touch screens have no hover, so the description is always shown there
+  // @media (hover: none) {
+  max-height: none;
+  // }
+}
+
+.sheetText {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: $text-muted;
+  line-height: 1.55;
+}
+
+// White button so it stands out on the blue background
+.siteLink {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background: $white;
+  color: $accent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}

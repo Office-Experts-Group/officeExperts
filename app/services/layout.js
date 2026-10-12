@@ -1,48 +1,39 @@
-import React from "react";
+// /app/services/layout.js
+// Route metadata for /services, in the same shape as the other page layouts.
+// The title and description live in servicesData.js so the page schema uses the same wording.
+import { pageMeta } from "./servicesData";
 
 export const metadata = {
-  title: "Microsoft Development Services | Office Experts Group",
-  description:
-    "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
-
+  title: pageMeta.title,
+  description: pageMeta.description,
+  keywords: ["microsoft office consultants australia"],
   openGraph: {
-    title: "Microsoft Development Services | Office Experts Group",
-    description:
-      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
-    url: "https://www.officeexperts.com.au/services",
-    siteName: "Office Experts Group",
+    title: pageMeta.title,
+    description: pageMeta.description,
+    url: `${pageMeta.siteUrl}${pageMeta.path}`,
+    siteName: "Office Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Office Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  keywords: [
-    // Core services
-    "microsoft office development services australia",
-  ],
-
-  alternates: {
-    canonical: "https://www.officeexperts.com.au/services",
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft Development Services | Office Experts Group",
-    description:
-      "Our Office Experts team specialises in services across all Microsoft Office products. Call us 1300 102 810 or Email us consult@officeexperts.com.au",
+    title: pageMeta.title,
+    description: pageMeta.description,
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: pageMeta.path,
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }
