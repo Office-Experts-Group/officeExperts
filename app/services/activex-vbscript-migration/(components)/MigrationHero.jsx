@@ -19,23 +19,22 @@ const MigrationHero = () => {
         <div className={styles.content}>
           <p className={styles.eyebrow}>ActiveX &amp; VBScript Migration</p>
 
-          <h1 className={styles.heading}>
+          <h2 className={styles.heading}>
             Your old macros are about to hit a{" "}
             <span className={styles.accent}>wall.</span>
-          </h1>
+          </h2>
 
           <p className={styles.lead}>
             Microsoft has disabled ActiveX controls by default across Word,
             Excel, PowerPoint and Visio, and VBScript is being retired from
-            Windows entirely. If your business runs on older
-            controls or scripts, this affects you.
+            Windows entirely. If your business runs on older controls or
+            scripts, this affects you.
           </p>
 
           <p className={styles.body}>
-            We audit what you have, work out exactly what will break and
-            when, and rebuild it properly using supported, modern
-            technology, without losing the functionality your team relies
-            on every day.
+            We audit what you have, work out exactly what will break and when,
+            and rebuild it properly using supported, modern technology, without
+            losing the functionality your team relies on every day.
           </p>
 
           <div className={styles.ctas}>

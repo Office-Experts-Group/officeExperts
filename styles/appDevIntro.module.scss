@@ -1,0 +1,219 @@
+// styles/appDevIntro.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: start;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Problems: hairline-separated rows, no boxes ──
+.problems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-strong;
+}
+
+.problemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.problemBody {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+.link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $accent;
+
+  &::after {
+    content: " \2192";
+  }
+}
+
+// ── Tiles: bento grid that stays in view while the copy scrolls ──
+.tileContainer {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (min-width: 1025px) {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.75rem;
+  background: $light-bg;
+  border: 1px solid $border-strong;
+  border-radius: 6px;
+
+  @include phone {
+    padding: 1.4rem;
+  }
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.dark {
+  background: $dark-bg;
+  border-color: $dark-mid;
+}
+
+.accentTile {
+  background-color: $accent;
+}
+
+// Small caption above each figure
+.label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $darkGrayText;
+
+  .accentTile & {
+    color: $white-65;
+  }
+  .dark & {
+    color: $white-65;
+  }
+}
+
+.value {
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+
+  .dark & {
+    color: $white;
+  }
+  .accentTile & {
+    color: $white;
+  }
+}
+
+.tileText {
+  font-size: 0.88rem;
+  color: $text-secondary;
+  line-height: 1.6;
+
+  .dark,
+  .accentTile & {
+    color: $white-65;
+  }
+}
+
+// ── Language chips ──
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.chip {
+  padding: 0.35rem 0.8rem;
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #04f904;
+  border: 2px solid #04f904;
+  border-radius: 4px;
+}
+
+.more {
+  color: $white-88;
+  border: 2px dashed $white-88;
+  font-size: 0.72rem;
+  letter-spacing: -0.5px;
+}

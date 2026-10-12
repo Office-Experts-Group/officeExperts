@@ -36,10 +36,10 @@ const Introduction = () => (
               Microsoft 365 · Remote Data Collection
             </span>
 
-            <h1 className={styles.headline}>
+            <h2 className={styles.headline}>
               Collect data from anywhere.{" "}
               <span className={styles.accent}>Act on it immediately.</span>
-            </h1>
+            </h2>
 
             <p className={styles.lead}>
               Paper forms, emailed spreadsheets, and manual data entry are no

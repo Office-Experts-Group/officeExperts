@@ -14,9 +14,9 @@ const Testimonials = dynamic(() => import("../../(components)/Testimonials"));
 const SolutionsCarousel = dynamic(
   () => import("./(components)/SolutionsCarousel"),
 );
-const SolutionsCarouselReverse = dynamic(
-  () => import("./(components)/SolutionsCarouselReverse"),
-);
+// const SolutionsCarouselReverse = dynamic(
+//   () => import("./(components)/SolutionsCarouselReverse"),
+// );
 const CTAFull = dynamic(() => import("../../(components)/CTAFull"));
 const PageSegmentFinal = dynamic(
   () => import("./(components)/Pagesegmentfinal"),
@@ -118,7 +118,7 @@ const Page = () => {
         <ExpertsAwait />
         <Testimonials testimonials={testimonials} />
         <SolutionsCarousel />
-        <SolutionsCarouselReverse />
+        {/* <SolutionsCarouselReverse /> */}
         <CTAFull />
         <PageSegmentFinal />
         <RelatedLinks

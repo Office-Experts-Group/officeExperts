@@ -10,6 +10,7 @@ import {
   siteMeta,
   getCaseStudyMetaTitle,
 } from "../caseStudies";
+import { cardCopy } from "../caseStudyCardCopy";
 
 const Contact = dynamic(() => import("../../../components/Contact"));
 
@@ -29,6 +30,12 @@ const buildSchema = (study) => {
   const url = `${SITE_URL}/case-studies/${study.slug}`;
   const brand = siteMeta[study.site];
 
+  // Prefer the study's own short description, then the card copy, then the
+  // full summary. Must live inside this function as it depends on `study`.
+  const copy = cardCopy[study.slug];
+  const shortDescription =
+    study.truncatedDescription ?? copy?.truncatedDescription ?? study.summary;
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -46,7 +53,7 @@ const buildSchema = (study) => {
         name: getCaseStudyMetaTitle(study),
         isPartOf: { "@id": `${SITE_URL}#website` },
         about: { "@id": `${SITE_URL}#organization` },
-        description: study.summary,
+        description: shortDescription,
         breadcrumb: { "@id": `${url}#breadcrumb` },
         inLanguage: "en-AU",
         potentialAction: [{ "@type": "ReadAction", target: [url] }],
@@ -71,7 +78,7 @@ const buildSchema = (study) => {
         "@type": "Article",
         "@id": `${url}#article`,
         headline: getCaseStudyMetaTitle(study),
-        description: study.summary,
+        description: shortDescription,
         about: study.industry,
         publisher: brand
           ? { "@type": "Organization", name: brand.name, url: brand.domain }
@@ -101,9 +108,7 @@ const Page = async ({ params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-
       <CaseStudyDetail study={study} />
-
       <Contact />
     </>
   );

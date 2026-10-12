@@ -23,11 +23,11 @@ const MigrationHero = () => {
         <div className={styles.content}>
           <p className={styles.eyebrow}>Upgrades &amp; Migration</p>
 
-          <h1 className={styles.heading}>
+          <h2 className={styles.heading}>
             Modernise Your <span className={styles.accent}>Microsoft</span>
             <br />
             Ecosystem
-          </h1>
+          </h2>
 
           <p className={styles.lead}>
             We help organisations move on from legacy Office files, ageing

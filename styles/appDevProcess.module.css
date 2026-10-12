@@ -1,0 +1,131 @@
+@charset "UTF-8";
+.section {
+  background: #f7f8f9;
+  padding: 7rem 8rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-self: start;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.lead {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 1.4rem;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  width: 2px;
+  background: rgba(4, 105, 153, 0.3);
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.8rem 1fr;
+  gap: 1.5rem;
+}
+
+.stepNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: #046999;
+  border-radius: 50%;
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.35rem;
+}
+
+.stepTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.stepBody {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.75;
+}
+
+.link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #046999;
+}
+.link::after {
+  content: " →";
+}/*# sourceMappingURL=appDevProcess.module.css.map */

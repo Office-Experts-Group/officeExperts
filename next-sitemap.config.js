@@ -56,16 +56,21 @@ const pathsWithDifferentCanonicals = new Set([
   // locations
   "/office-and-office-365-experts-gold-coast",
   "/office-excel-access-and-365-consultants-brisbane",
+  "office-excel-access-and-365-experts-brisbane",
   "/excel-and-access-experts-melbourne",
   "/office-and-office-365-experts-melbourne",
   "/office-excel-access-and-365-experts-melbourne",
+  "word-and-powerpoint-experts-melbourne",
   "/word-and-powerpoint-experts-sydney",
   "/office-and-office-365-experts-sydney",
   "/word-and-powerpoint-experts-perth",
   "/office-excel-access-and-365-consultants-perth",
+  "office-excel-access-and-365-experts-perth",
   "/word-and-powerpoint-experts-canberra",
+  "office-and-office-365-experts-canberra",
   "/excel-and-access-experts-sydney",
   "/word-and-powerpoint-experts-richmond",
+  "office-and-office-365-experts-richmond",
   // blogs
   "/blog/20-advanced-excel-shortcuts",
   "/blog/convert-canva-to-word",
@@ -87,6 +92,8 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/microsoft-office-365/exchange-online-setup-and-support",
   "/test-page",
   "/case-study-submission",
+  "/services",
+  "/services/microsoft-vbscript",
 ]);
 
 /** @type {import('next-sitemap').IConfig} */
@@ -103,6 +110,9 @@ module.exports = {
   robotsTxtOptions: {
     // (leave policies, additionalSitemaps and transformRobotsTxt unchanged)
   },
+  additionalPaths: async (config) => [
+    await config.transform(config, "/case-studies"),
+  ],
 
   transform: async (_config, path) => {
     // Strip any trailing slash so "/foo/" and "/foo" match the same Set entry

@@ -3,32 +3,32 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import deskGroup from "../../../../public/cards/deskGroup350x200.webp";
-import penGraph from "../../../../public/cards/penGraph350x200.webp";
+// import deskGroup from "../../../../public/cards/deskGroup350x200.webp";
+// import penGraph from "../../../../public/cards/penGraph350x200.webp";
 import graphHands from "../../../../public/cards/graphHands350x200.webp";
 import jigsaw from "../../../../public/cards/jigsaw350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
-    {
-      title: "Exchange Setup and Help",
-      link: "/services/microsoft-office-365/exchange-online-setup-and-support",
-      image: deskGroup,
-      description: [
-        "Does your organisation need Exchange setup and configured?",
-        "Do you need Outlook setup for your staff?",
-      ],
-    },
-    {
-      title: "Help and Managed Services",
-      link: "/services/microsoft-office-365/support-and-managed-services",
-      image: penGraph,
-      description: [
-        "Need support for your Office 365 subscription?",
-        "Is your OneDrive not syncing?",
-        "Need tips on using and configuring Office 365 and its features?",
-      ],
-    },
+    // {
+    //   title: "Exchange Setup and Help",
+    //   link: "/services/microsoft-office-365/exchange-online-setup-and-support",
+    //   image: deskGroup,
+    //   description: [
+    //     "Does your organisation need Exchange setup and configured?",
+    //     "Do you need Outlook setup for your staff?",
+    //   ],
+    // },
+    // {
+    //   title: "Help and Managed Services",
+    //   link: "/services/microsoft-office-365/support-and-managed-services",
+    //   image: penGraph,
+    //   description: [
+    //     "Need support for your Office 365 subscription?",
+    //     "Is your OneDrive not syncing?",
+    //     "Need tips on using and configuring Office 365 and its features?",
+    //   ],
+    // },
     {
       title: "Cloud Backup with OneDrive",
       link: "/services/microsoft-office-365/cloud-backup-with-onedrive",

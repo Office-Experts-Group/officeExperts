@@ -190,9 +190,7 @@ export const caseStudies = [
         href: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
       },
     ],
-  }, // New case study object — copy this into the caseStudies array in caseStudies.js
-  // Suggested placement: add as a new entry before the closing "];" of the array
-
+  },
   {
     slug: "legal-firm-word-training-workshop",
     client: "the client",

@@ -100,7 +100,7 @@ const Page = () => {
               "https://www.accessexperts.com.au/access-consultants-sydney",
             powerplatform:
               "https://www.powerplatformexperts.com.au/power-platform-consultants-sydney",
-            office: "/office-and-office-365-experts-sydney",
+            office: "/microsoft-consultants-sydney",
           },
           supportLink: "/microsoft-support-and-training-sydney",
         },

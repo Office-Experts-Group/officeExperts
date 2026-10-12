@@ -25,6 +25,7 @@ const Contact = dynamic(() => import("../../../components/Contact"));
 
 // FAQ content (also used to build the FAQPage schema below)
 import faqs from "../../../faqs/ai-agent-development";
+import faqSchema from "../../../faqs/aiAgentDevelopmentSchema";
 
 // Placeholder hero images so the page compiles. Swap for the real artwork.
 import heroImage from "../../../public/placeholder.webp";
@@ -99,17 +100,6 @@ const schema = {
       ],
     },
   ],
-};
-
-// FAQPage built from the same array the FAQ section renders
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map(({ question, answer }) => ({
-    "@type": "Question",
-    name: question,
-    acceptedAnswer: { "@type": "Answer", text: answer },
-  })),
 };
 
 // ── Page component ─────────────────────────────────────────

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
           url: study.image || "/logo.png",
           width: 700,
           height: 450,
-          alt: `${study.client} case study`,
+          alt: `${study.title} case study`,
         },
       ],
       locale: "en-AU",

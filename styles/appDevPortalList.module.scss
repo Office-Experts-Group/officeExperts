@@ -1,0 +1,136 @@
+// styles/appDevPortalList.module.scss
+@import "./globals.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $border-strong;
+}
+
+// ── Item: accent bar grows down the left edge while active ──
+.item {
+  position: relative;
+  border-bottom: 1px solid $border-strong;
+  transition: background 0.25s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: $accent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+}
+
+.active {
+  background: $light-bg;
+
+  &::before {
+    transform: scaleY(1);
+  }
+}
+
+// ── Headline row ──
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+
+  @include phone {
+    padding: 1.1rem 1rem;
+  }
+}
+
+.title {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $darkGrayText;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.arrow {
+  color: $grayText;
+  transition:
+    transform 0.25s,
+    color 0.25s;
+
+  .active & {
+    color: $accent;
+    transform: translateX(4px);
+  }
+}
+
+// Covers the whole row so every part of it is clickable
+.toggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// ── Description: height animates from zero without measuring ──
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+
+  .active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.panelInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.panelBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0 3.5rem 1.5rem 1.5rem;
+
+  @include phone {
+    padding: 0 1rem 1.25rem;
+  }
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+.link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $accent;
+
+  &::after {
+    content: " \2192";
+  }
+}

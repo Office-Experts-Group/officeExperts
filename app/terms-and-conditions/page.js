@@ -7,15 +7,11 @@ import ServiceHero from "../../components/ServiceHero";
 import handShake from "../../public/pageHeros/handShake.webp";
 import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "../../utils/schemaGenerators";
+import { generateOrganizationSchema } from "../../utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
     {
       "@type": "WebPage",

@@ -1,26 +1,14 @@
-import React from "react";
+// app/services/microsoft-office-365/app-and-custom-development/layout.js
 
 export const metadata = {
-  // Basic metadata
-  title: "Custom 365 Solutions | Office Experts Group",
+  title: "Custom App and Software Development | Office Experts Group",
   description:
-    "Professional Microsoft 365 app development and custom solutions. Specialists in SharePoint integration, corporate intranet development and business automation.",
-
-  // Additional metadata
-  keywords: [
-    // Core service keywords
-    "Office 365 app development",
-  ],
-
-  alternates: {
-    canonical: "/services/microsoft-office-365/app-and-custom-development",
-  },
-
-  // OpenGraph
+    "Custom Next.js and React apps, WordPress and CRM portals, Power Platform, Power Pages and AI integrations from Australian developers since 2000.",
+  keywords: ["custom app development australia"],
   openGraph: {
-    title: "Custom 365 Solutions | Office Experts Group",
+    title: "Custom App and Software Development | Office Experts Group",
     description:
-      "Professional Microsoft 365 app development and custom solutions. Specialists in SharePoint integration, corporate intranet development and business automation.",
+      "Custom Next.js and React apps, WordPress and CRM portals, Power Platform, Power Pages and AI integrations from Australian developers since 2000.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365/app-and-custom-development",
     siteName: "Office Experts Group",
     images: [
@@ -34,18 +22,19 @@ export const metadata = {
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Custom 365 Solutions | Office Experts Group",
+    title: "Custom App and Software Development | Office Experts Group",
     description:
-      "Professional Microsoft 365 app development and custom solutions. Specialists in SharePoint integration, corporate intranet development and business automation.",
+      "Custom Next.js and React apps, WordPress and CRM portals, Power Platform, Power Pages and AI integrations from Australian developers since 2000.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/services/microsoft-office-365/app-and-custom-development",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

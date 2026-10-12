@@ -3,31 +3,53 @@ import Link from "next/link";
 
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import calcGraph from "../../../../public/cards/calcGraph350x200.webp";
-import data from "../../../../public/cards/data350x200.webp";
+// import calcGraph from "../../../../public/cards/calcGraph350x200.webp";
+// import data from "../../../../public/cards/data350x200.webp";
 import desk from "../../../../public/cards/desk350x200.webp";
 import deskGraph from "../../../../public/cards/deskGraph300x250.webp";
+
+import graphHands from "../../../../public/cards/graphHands350x200.webp";
+import jigsaw from "../../../../public/cards/jigsaw350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
-      title: "Office 365 Implementation",
-      link: "/services/microsoft-office-365/office-365-implementation",
-      image: calcGraph,
+      title: "Cloud Backup with OneDrive",
+      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+      image: graphHands,
       description: [
-        "Need help setting up Office 365 in your organisation?",
-        "Our experts can assist you in planning and utilising Office 365 features to maximize your ROI.",
+        "Have important documents needing off site backup?",
+        "Want to share files with colleagues and customers?",
+        "Need files in remote places on multiple devices?",
       ],
     },
     {
-      title: "Office 365 Migration",
-      link: "https://www.accessexperts.com.au",
-      image: data,
+      title: "App & Custom Development",
+      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+      image: jigsaw,
       description: [
-        "Need to migrate emails and/or files to Office 365?",
-        "Our consultants can help move your organisation's email and files to the cloud using Office 365.",
+        "Need custom applications to integrate with SharePoint lists and libraries?",
+        "Need custom branding for your corporate intranet site?",
       ],
     },
+    // {
+    //   title: "Office 365",
+    //   link: "/services/microsoft-office-365",
+    //   image: calcGraph,
+    //   description: [
+    //     "Need help setting up Office 365 in your organisation?",
+    //     "Our experts can assist you in planning and utilising Office 365 features to maximize your ROI.",
+    //   ],
+    // },
+    // {
+    //   title: "Office 365 Migration",
+    //   link: "/services/microsoft-office-365",
+    //   image: data,
+    //   description: [
+    //     "Need to migrate emails and/or files to Office 365?",
+    //     "Our consultants can help move your organisation's email and files to the cloud using Office 365.",
+    //   ],
+    // },
     {
       title: "Business Process Automation",
       link: "/services/microsoft-office-365/business-process-automation",
