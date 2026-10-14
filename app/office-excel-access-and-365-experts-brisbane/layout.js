@@ -43,9 +43,6 @@ export const metadata = {
 
   alternates: {
     canonical: "/microsoft-consultants-brisbane",
-    alternate: {
-      "/office-excel-access-and-365-experts-brisbane",
-    },
   },
 };
 
