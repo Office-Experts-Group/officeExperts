@@ -43,8 +43,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/office-and-office-365-experts-sydney",
-    alternate: "/office-and-office-365-experts-sydney",
+    canonical: "/microsoft-consultants-sydney",
   },
 };
 

@@ -42,7 +42,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/word-and-powerpoint-experts-melbourne",
+    canonical: "/mirosoft-consultants-melbourne",
   },
 };
 

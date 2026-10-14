@@ -1,5 +1,4 @@
 // app/services/microsoft-office-365/page.js
-import React from "react";
 import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../components/ServiceHero";
@@ -14,10 +13,6 @@ const Testimonials = dynamic(() => import("../../(components)/Testimonials"));
 const SolutionsCarousel = dynamic(
   () => import("./(components)/SolutionsCarousel"),
 );
-// const SolutionsCarouselReverse = dynamic(
-//   () => import("./(components)/SolutionsCarouselReverse"),
-// );
-const CTAFull = dynamic(() => import("../../(components)/CTAFull"));
 const PageSegmentFinal = dynamic(
   () => import("./(components)/Pagesegmentfinal"),
 );
@@ -118,8 +113,6 @@ const Page = () => {
         <ExpertsAwait />
         <Testimonials testimonials={testimonials} />
         <SolutionsCarousel />
-        {/* <SolutionsCarouselReverse /> */}
-        <CTAFull />
         <PageSegmentFinal />
         <RelatedLinks
           theme="dark"

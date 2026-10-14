@@ -29,7 +29,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "/word-and-powerpoint-experts-sydney",
+    canonical: "/microsoft-consultants-sydney",
   },
 
   // Twitter Card

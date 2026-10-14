@@ -43,7 +43,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/office-and-office-365-experts-canberra",
+    canonical: "/microsoft-consultants-canberra",
   },
 };
 

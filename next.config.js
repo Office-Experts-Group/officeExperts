@@ -493,11 +493,6 @@ const REDIRECTS = [
     permanent: true,
   },
   {
-    source: "/office-excel-access-and-365-experts-darwin",
-    destination: "/microsoft-support-and-training-darwin",
-    permanent: true,
-  },
-  {
     source: "/excel-consultants-gold-coast",
     destination: "/microsoft-support-and-training-gold-coast",
     permanent: true,

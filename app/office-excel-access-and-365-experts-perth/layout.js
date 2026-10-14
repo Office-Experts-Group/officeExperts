@@ -37,7 +37,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "/office-excel-access-and-365-experts-perth",
+    canonical: "/microsoft-consultants-perth",
   },
 };
 

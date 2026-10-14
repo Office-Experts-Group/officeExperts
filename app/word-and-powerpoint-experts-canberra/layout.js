@@ -42,7 +42,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/word-and-powerpoint-experts-canberra",
+    canonical: "/microsoft-consultants-canberra",
   },
 };
 

@@ -42,7 +42,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/office-and-office-365-experts-melbourne",
+    canonical: "/microsoft-consultants-melbourne",
   },
 };
 

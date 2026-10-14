@@ -1,110 +1,156 @@
-import React from "react";
-import Link from "next/link";
+// app/services/microsoft-powerpoint/(components)/SolutionsCarousel.jsx
 
+import Link from "next/link";
+// Client-side wrapper that fades each tile in as it enters the viewport
+import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+
+// Compiled CSS from styles/solutionsCarousel.module.scss (shared with the other carousels)
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-import project1 from "../../../../public/cards/deskGraph300x250.webp";
-import project2 from "../../../../public/cards/deskGroup350x200.webp";
-import project3 from "../../../../public/cards/penGraph350x200.webp";
-import project4 from "../../../../public/cards/twoComputers350x200.webp";
+// Inline SVG icon components — each renders a stroke icon using currentColor
+import { SlideTemplateIcon } from "../(svgs)/SlideTemplateIcon";
+import { SlideRedesignIcon } from "../(svgs)/SlideRedesignIcon";
+import { SlideAutomationIcon } from "../(svgs)/SlideAutomationIcon";
+import { MortarboardIcon } from "../(svgs)/MortarboardIcon";
+import { BrandingIcon } from "../(svgs)/BrandingIcon";
+import { PresentationIcon } from "../(svgs)/PresentationIcon";
 
-const SolutionsCarousel = () => {
-  const solutionsData = [
-    {
-      title: "Custom Templates & Presentations",
-      link: "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
-      image: project1,
-      description: [
-        "Create professional PowerPoint Templates with Master Slides.",
-        "Meet your brand guidelines.",
-        "Ensure consistency across your corporate presentations.",
-      ],
-    },
-    {
-      title: "Existing Presentation Redesign",
-      link: "/services/microsoft-powerpoint/existing-presentation-redesign",
-      image: project2,
-      description: [
-        "Transform existing presentations into professional templates that meet brand guidelines.",
-        "Create Master Slides for easy presentation creation.",
-      ],
-    },
-    {
-      title: "Automate Presentations With VBA",
-      link: "/services/microsoft-powerpoint/automate-presentations-with-vba",
-      image: project3,
-      description: [
-        "Our PowerPoint experts can link your data directly to your PowerPoint Presentation, saving users precious time and ensuring accuracy.",
-      ],
-    },
-    {
-      title: "User Training and Assistance",
-      link: "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
-      image: project4,
-      description: [
-        "Our PowerPoint experts can instruct users on the best ways to create presentations giving guidance and helpful hints.",
-      ],
-    },
-  ];
+// ─────────────────────────────────────────────
+// Solutions data — title, link and icon make up the tile face;
+// "description" is shown in the hover/focus tooltip. It stays an
+// array so an entry can take a second paragraph later.
+// The first four are the PowerPoint service pages; the last two are
+// case studies that show the work in practice.
+// ─────────────────────────────────────────────
+const solutionsData = [
+  {
+    title: "Custom Templates & Presentations",
+    link: "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
+    Icon: SlideTemplateIcon,
+    description: [
+      "Professional PowerPoint templates with master slides that meet your brand guidelines and keep every corporate presentation consistent.",
+    ],
+  },
+  {
+    title: "Existing Presentation Redesign",
+    link: "/services/microsoft-powerpoint/existing-presentation-redesign",
+    Icon: SlideRedesignIcon,
+    description: [
+      "We transform your existing presentations into professional, on-brand templates, with master slides that make new presentations quick and easy to create.",
+    ],
+  },
+  {
+    title: "Automate Presentations With VBA",
+    link: "/services/microsoft-powerpoint/automate-presentations-with-vba",
+    Icon: SlideAutomationIcon,
+    description: [
+      "Link your data directly to your PowerPoint presentations with VBA, saving users valuable time and keeping every figure accurate.",
+    ],
+  },
+  {
+    title: "User Training & Assistance",
+    link: "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    Icon: MortarboardIcon,
+    description: [
+      "Our PowerPoint experts show your users the best ways to build presentations, with practical guidance and helpful hints for everyday work.",
+    ],
+  },
+  {
+    title: "Branding Template Rollout",
+    link: "/case-studies/advisory-branding-template-rollout",
+    Icon: BrandingIcon,
+    description: [
+      "A case study in rolling out on-brand templates across an organisation, so every presentation and document stays consistent.",
+    ],
+  },
+  {
+    title: "Automated Review Decks",
+    link: "/case-studies/retail-analytics-automated-review-deck-generator",
+    Icon: PresentationIcon,
+    description: [
+      "A case study in generating review decks automatically from retail analytics data, removing hours of manual slide building.",
+    ],
+  },
+];
 
-  // Duplicate first few items to create seamless loop
-  const extendedSolutions = [...solutionsData, ...solutionsData.slice(0, 3)];
-
-  return (
-    <div className={styles.solutions}>
-      <div className={styles.title}>
-        <h2>Experts In...</h2>
-      </div>
-
-      <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack} aria-label="Solutions carousel">
-          {extendedSolutions.map((solution, index) => (
-            <div
-              key={`solution-${index}`}
-              className={styles.cardWrapper}
-              aria-label={`Solution ${(index % solutionsData.length) + 1}`}
-            >
-              <div className={styles.description}>
-                {solution.description.map((item, i) => (
-                  <p key={i}>{item}</p>
-                ))}
-              </div>
-              <Link href={solution.link}>
-                <div
-                  className={`${styles.card} ${
-                    styles[`card${(index % solutionsData.length) + 1}`]
-                  }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <div className={styles.popIn}>
-                    <h3>
-                      <span>Excel</span>
-                      <br />
-                      {solution.title}
-                    </h3>
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 1024 1024"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+const SolutionsCarousel = () => (
+  <section className={styles.section}>
+    {/* ── Opening header ── */}
+    <div className={styles.header}>
+      <p className={styles.eyebrow}>PowerPoint specialists</p>
+      <h2 className={styles.heading}>
+        Experts in <span className={styles.headingMuted}>PowerPoint.</span>
+      </h2>
+      <p className={styles.intro}>
+        From brand-compliant templates and professional redesigns to
+        presentations that build themselves from your data, we help your team
+        create better presentations in less time. We also train your staff, so
+        everyone gets the most out of PowerPoint.
+      </p>
+      <p className={styles.intro}>
+        Unsure of what you need?{" "}
+        <Link href="/contact-us">Speak with one of our consultants today.</Link>
+      </p>
     </div>
-  );
-};
+
+    {/* ── Solution tiles ── */}
+    <ul className={styles.grid}>
+      {solutionsData.map((solution, i) => {
+        const { Icon } = solution;
+        // Stable id so the link can reference its tooltip for screen readers
+        const tooltipId = `solution-tooltip-${i}`;
+
+        return (
+          // The <li> is the positioning container for the tooltip and is
+          // lifted above neighbouring tiles while hovered or focused
+          <li key={solution.link} className={styles.cell}>
+            <AnimateOnScroll
+              animation="fade-up"
+              duration={0.55}
+              delay={i * 0.05}
+            >
+              <Link
+                href={solution.link}
+                className={styles.tile}
+                aria-describedby={tooltipId}
+              >
+                <span className={styles.tileIcon} aria-hidden="true">
+                  <Icon />
+                </span>
+                <h3 className={styles.tileTitle}>{solution.title}</h3>
+              </Link>
+            </AnimateOnScroll>
+
+            {/* Sits outside the link so it isn't scaled with the tile.
+                Always in the server-rendered HTML, so crawlers still index it. */}
+            <div id={tooltipId} role="tooltip" className={styles.tooltip}>
+              {solution.description.map((paragraph, j) => (
+                <p key={j}>{paragraph}</p>
+              ))}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+
+    {/* ── CTA ── */}
+    <div className={styles.linkWrapper}>
+      <Link href="/services" className={styles.cta}>
+        View all our services
+        <span className={styles.ctaArrow} aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
+      </Link>
+    </div>
+  </section>
+);
 
 export default SolutionsCarousel;

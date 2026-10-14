@@ -28,7 +28,7 @@ export const metadata = {
     "Microsoft Word designers Perth",
   ],
   alternates: {
-    canonical: "/word-and-powerpoint-experts-perth",
+    canonical: "/microsoft-consultants-perth",
   },
 
   // Twitter Card

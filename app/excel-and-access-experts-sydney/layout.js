@@ -35,7 +35,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "/excel-and-access-experts-sydney",
+    canonical: "/microsoft-consultants-sydney",
   },
 };
 

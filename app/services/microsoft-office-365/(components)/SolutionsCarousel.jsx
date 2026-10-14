@@ -1,134 +1,211 @@
-import React from "react";
-import Link from "next/link";
+// app/services/microsoft-office-365/(components)/SolutionsCarousel.jsx
 
+import Link from "next/link";
+// Client-side wrapper that fades each tile in as it enters the viewport
+import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+
+// Compiled CSS from styles/solutionsCarousel.module.scss (shared with the homepage carousel)
 import styles from "../../../../styles/solutionsCarousel.module.css";
 
-// import calcGraph from "../../../../public/cards/calcGraph350x200.webp";
-// import data from "../../../../public/cards/data350x200.webp";
-import desk from "../../../../public/cards/desk350x200.webp";
-import deskGraph from "../../../../public/cards/deskGraph300x250.webp";
+// Inline SVG icon components — each renders a stroke icon using currentColor
+import { CloudBackupIcon } from "../(svgs)/CloudBackupIcon";
+import { CopilotIcon } from "../(svgs)/CopilotIcon";
+import { AutomationIcon } from "../(svgs)/AutomationIcon";
+import { RemoteDataIcon } from "../(svgs)/RemoteDataIcon";
+import { PuzzleIcon } from "../(svgs)/PuzzleIcon";
+import { ApiIntegrationIcon } from "../(svgs)/ApiIntegrationIcon";
+import { CloudNetworkIcon } from "../(svgs)/CloudNetworkIcon";
+import { GlobeIcon } from "../(svgs)/GlobeIcon";
+import { AiAgentIcon } from "../(svgs)/AiAgentIcon";
+import { EmailTriageIcon } from "../(svgs)/EmailTriageIcon";
+import { DashboardIcon } from "../(svgs)/DashboardIcon";
+import { MigrationIcon } from "../(svgs)/MigrationIcon";
 
-import graphHands from "../../../../public/cards/graphHands350x200.webp";
-import jigsaw from "../../../../public/cards/jigsaw350x200.webp";
+// ─────────────────────────────────────────────
+// Solutions data — title, link and icon make up the tile face;
+// "description" is shown in the hover/focus tooltip. It stays an
+// array so an entry can take a second paragraph later.
+// Order: core Microsoft 365 services first, then the wider
+// development, AI and migration services that build on them.
+// ─────────────────────────────────────────────
+const solutionsData = [
+  {
+    title: "Cloud Backup with OneDrive",
+    link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+    Icon: CloudBackupIcon,
+    description: [
+      "Need important documents backed up off site, shared with colleagues and customers, or available on every device? We set up OneDrive so your files are protected and reachable wherever your team works.",
+    ],
+  },
+  {
+    title: "Microsoft Copilot",
+    link: "/services/microsoft-office-365/copilot",
+    Icon: CopilotIcon,
+    description: [
+      "Get real value from Copilot with the right setup, data governance, training and custom solutions for the way your team works.",
+    ],
+  },
+  {
+    title: "Business Process Automation",
+    link: "/services/microsoft-office-365/business-process-automation",
+    Icon: AutomationIcon,
+    description: [
+      "Are paper forms delaying your processes, or internal requests getting lost? We replace them with digital forms and automated workflows that keep every request visible and moving.",
+    ],
+  },
+  {
+    title: "Remote Data Gathering",
+    link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    Icon: RemoteDataIcon,
+    description: [
+      "Let staff complete forms while offsite and collect information from your clients on any device, with the data going straight into your Microsoft 365 systems.",
+    ],
+  },
+  {
+    title: "App & Custom Development",
+    link: "/services/microsoft-office-365/app-and-custom-development",
+    Icon: PuzzleIcon,
+    description: [
+      "Custom applications that integrate with SharePoint lists and libraries, and custom branding for your corporate intranet site.",
+    ],
+  },
+  {
+    title: "Microsoft 365 API Integration",
+    link: "/microsoft-365-api-integration",
+    Icon: ApiIntegrationIcon,
+    description: [
+      "Connect Microsoft 365 to your line-of-business systems through the Graph API and other integrations, so data flows between your tools without re-keying.",
+    ],
+  },
+  {
+    title: "Azure Cloud Solutions",
+    link: "/services/by-business-solution/cloud-based-solutions-with-azure",
+    Icon: CloudNetworkIcon,
+    description: [
+      "Cloud and web enable your documents, workbooks and databases with Azure, with secure hosting, authentication and scaling built in.",
+    ],
+  },
+  {
+    title: "Online Solutions",
+    link: "/services/by-business-solution/online-solutions",
+    Icon: GlobeIcon,
+    description: [
+      "Need your Office files connected to a database or available online? We integrate Word, Excel and Access with Microsoft 365, SharePoint and other online systems.",
+    ],
+  },
+  {
+    title: "AI Agent Development",
+    link: "/services/ai-agent-development",
+    Icon: AiAgentIcon,
+    description: [
+      "Custom AI agents that read, draft, check and route your business information, built securely around the Microsoft 365 tools your team already uses.",
+    ],
+  },
+  {
+    title: "AI Email Triage",
+    link: "/services/ai-email-triage",
+    Icon: EmailTriageIcon,
+    description: [
+      "Sort, prioritise and respond to high-volume inboxes automatically. AI classifies each email, extracts the key details and sends it to the right person or system.",
+    ],
+  },
+  {
+    title: "Dashboards & Reporting",
+    link: "/services/by-business-solution/dashboards",
+    Icon: DashboardIcon,
+    description: [
+      "Turn scattered spreadsheets and data sources into clear, live dashboards, so decisions are based on current information.",
+    ],
+  },
+  {
+    title: "Upgrades & Migration",
+    link: "/services/microsoft-office/upgrades-and-migration",
+    Icon: MigrationIcon,
+    description: [
+      "Moving to Microsoft 365 or a new Office version? We resolve compatibility issues with macros, templates and databases so everything keeps working after the move.",
+    ],
+  },
+];
 
-const SolutionsCarousel = () => {
-  const solutionsData = [
-    {
-      title: "Cloud Backup with OneDrive",
-      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
-      image: graphHands,
-      description: [
-        "Have important documents needing off site backup?",
-        "Want to share files with colleagues and customers?",
-        "Need files in remote places on multiple devices?",
-      ],
-    },
-    {
-      title: "App & Custom Development",
-      link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
-      image: jigsaw,
-      description: [
-        "Need custom applications to integrate with SharePoint lists and libraries?",
-        "Need custom branding for your corporate intranet site?",
-      ],
-    },
-    // {
-    //   title: "Office 365",
-    //   link: "/services/microsoft-office-365",
-    //   image: calcGraph,
-    //   description: [
-    //     "Need help setting up Office 365 in your organisation?",
-    //     "Our experts can assist you in planning and utilising Office 365 features to maximize your ROI.",
-    //   ],
-    // },
-    // {
-    //   title: "Office 365 Migration",
-    //   link: "/services/microsoft-office-365",
-    //   image: data,
-    //   description: [
-    //     "Need to migrate emails and/or files to Office 365?",
-    //     "Our consultants can help move your organisation's email and files to the cloud using Office 365.",
-    //   ],
-    // },
-    {
-      title: "Business Process Automation",
-      link: "/services/microsoft-office-365/business-process-automation",
-      image: desk,
-      description: [
-        "Are paper forms delaying your business processes?",
-        "Losing track of your internal forms?",
-        "THave a budget for new forms to streamline your business?",
-      ],
-    },
-    {
-      title: "Remote Data Gathering",
-      link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
-      image: deskGraph,
-      description: [
-        "Need your staff to remotely fill out forms while offsite?",
-        "Do you need to gather information from your clients from any device?",
-      ],
-    },
-  ];
-
-  // Duplicate first few items to create seamless loop
-  const extendedSolutions = [...solutionsData, ...solutionsData.slice(0, 3)];
-
-  return (
-    <div className={styles.solutions}>
-      <div className={styles.title}>
-        <h2>Dive Deeper into Our Services...</h2>
-      </div>
-
-      <div className={styles.carouselContainer}>
-        <div className={styles.carouselTrack} aria-label="Solutions carousel">
-          {extendedSolutions.map((solution, index) => (
-            <div
-              key={`solution-${index}`}
-              className={styles.cardWrapper}
-              aria-label={`Solution ${(index % solutionsData.length) + 1}`}
-            >
-              <div className={styles.description}>
-                {solution.description.map((item, i) => (
-                  <p key={i}>{item}</p>
-                ))}
-              </div>
-              <Link href={solution.link}>
-                <div
-                  className={`${styles.card} ${
-                    styles[`card${(index % solutionsData.length) + 1}`]
-                  }`}
-                  style={{
-                    background: `url(${solution.image.src}) no-repeat center center`,
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <div className={styles.popIn}>
-                    <h3>
-                      <span>Microsoft</span>
-                      <br />
-                      {solution.title}
-                    </h3>
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 1024 1024"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+const SolutionsCarousel = () => (
+  <section className={styles.section}>
+    {/* ── Opening header ── */}
+    <div className={styles.header}>
+      <p className={styles.eyebrow}>Microsoft 365 services</p>
+      <h2 className={styles.heading}>
+        Dive deeper into{" "}
+        <span className={styles.headingMuted}>our services.</span>
+      </h2>
+      <p className={styles.intro}>
+        Microsoft 365 is far more than email and the Office apps. We help you
+        back up and share files securely, automate forms and approvals, gather
+        data from any device, build custom apps on SharePoint and put Copilot
+        and AI to work, all as part of one integrated solution.
+      </p>
+      <p className={styles.intro}>
+        Unsure of what you need?{" "}
+        <Link href="/contact-us">Speak with one of our consultants today.</Link>
+      </p>
     </div>
-  );
-};
+
+    {/* ── Solution tiles ── */}
+    <ul className={styles.grid}>
+      {solutionsData.map((solution, i) => {
+        const { Icon } = solution;
+        // Stable id so the link can reference its tooltip for screen readers
+        const tooltipId = `solution-tooltip-${i}`;
+
+        return (
+          // The <li> is the positioning container for the tooltip and is
+          // lifted above neighbouring tiles while hovered or focused
+          <li key={solution.link} className={styles.cell}>
+            <AnimateOnScroll
+              animation="fade-up"
+              duration={0.55}
+              delay={i * 0.05}
+            >
+              <Link
+                href={solution.link}
+                className={styles.tile}
+                aria-describedby={tooltipId}
+              >
+                <span className={styles.tileIcon} aria-hidden="true">
+                  <Icon />
+                </span>
+                <h3 className={styles.tileTitle}>{solution.title}</h3>
+              </Link>
+            </AnimateOnScroll>
+
+            {/* Sits outside the link so it isn't scaled with the tile.
+                Always in the server-rendered HTML, so crawlers still index it. */}
+            <div id={tooltipId} role="tooltip" className={styles.tooltip}>
+              {solution.description.map((paragraph, j) => (
+                <p key={j}>{paragraph}</p>
+              ))}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+
+    {/* ── CTA ── */}
+    <div className={styles.linkWrapper}>
+      <Link href="/services" className={styles.cta}>
+        View all our services
+        <span className={styles.ctaArrow} aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
+      </Link>
+    </div>
+  </section>
+);
 
 export default SolutionsCarousel;
