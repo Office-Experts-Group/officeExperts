@@ -1,16 +1,29 @@
+// app/services/by-business-solution/sql-server-and-access-integration/layout.js
+
 import React from "react";
+
+// Merged metadata for the combined page. Covers both former topics:
+// Access to SQL Server migration, and Office (Excel, Word, PowerPoint) to SQL Server.
+const title = "SQL Server Integration for Access and Office | Office Experts";
+const description =
+  "Upgrade Access to a SQL Server backend, or connect Excel, Word, PowerPoint and Visual Studio to your SQL Server data. Australia-wide experts since 2000.";
 
 export const metadata = {
   // Basic metadata
-  title: "SQL Server and Microsoft Access Integration | Office Experts Group",
-  description:
-    "Upgrade your Access database with an SQL Server backend. Improve security, performance, scalability and reliability while keeping your existing forms and reports. Expert SQL Server migration services across Australia.",
+  title,
+  description,
+
+  keywords: [
+    "SQL Server Access integration",
+    "Office and SQL Server integration",
+    "Access to SQL Server migration",
+    "SQL Server integration Australia",
+  ],
 
   // OpenGraph metadata for social sharing
   openGraph: {
-    title: "SQL Server and Access Integration Benefits | Office Experts",
-    description:
-      "Transform your Access database with an SQL Server backend. Handle more users, improve security, eliminate corruption and scale effortlessly. Professional migration services.",
+    title,
+    description,
     url: "https://www.officeexperts.com.au/services/by-business-solution/sql-server-and-access-integration",
     siteName: "Office Experts Group",
     images: [
@@ -22,18 +35,15 @@ export const metadata = {
       },
     ],
     locale: "en-AU",
-    type: "article",
+    type: "website",
   },
-
-  // Additional metadata
-  keywords: ["SQL Server Access integration"],
 
   // Twitter Card metadata
   twitter: {
     card: "summary_large_image",
-    title: "SQL Server and Microsoft Access Integration",
-    description:
-      "Professional SQL Server migration for Access databases. Improve performance, security and reliability across Australia.",
+    site: "@OfficeExpertsG1",
+    title,
+    description,
     images: ["/logo.png"],
   },
 

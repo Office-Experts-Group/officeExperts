@@ -171,6 +171,12 @@ const REDIRECTS = [
     permanent: true,
   },
   {
+    source: "/services/by-business-solution/office-and-sql-server-integration",
+    destination:
+      "/services/by-business-solution/sql-server-and-access-integration",
+    permanent: true,
+  },
+  {
     source: "/services/microsoft-power-bi",
     destination:
       "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",

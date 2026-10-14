@@ -1,0 +1,207 @@
+// styles/sqlComparison.module.scss
+@import "./globals.scss";
+
+// The brand accent is too dark to read on the dark panel, so a lighter tint
+// is used here. It isn't in globals.scss, so it is hardcoded locally.
+$accent-bright: #4fb3e0;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.lead,
+.body {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 520px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Versus table ────────────────────────────────
+// No outer box. The "before" side is muted and open; the SQL Server column is
+// a single dark panel that reads as the upgrade.
+.tableWrap {
+  overflow-x: auto;
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+  }
+}
+
+.table {
+  width: 100%;
+  min-width: 680px;
+  // separate (not collapse) so the dark panel can have rounded corners
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  th,
+  td {
+    padding: 1.25rem 1.75rem;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  thead th {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    padding-top: 1.75rem;
+  }
+
+  // Row labels: small, spaced capitals
+  tbody th {
+    width: 20%;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $accent;
+    border-bottom: 1px solid $border;
+  }
+
+  tbody tr:last-child > * {
+    border-bottom: none;
+  }
+}
+
+// Left side: muted, so the eye goes to the upgrade
+.before {
+  color: $darkGrayText;
+  border-bottom: 1px solid $border;
+}
+
+thead .before {
+  color: $darkGrayText;
+}
+
+// Right side: the dark panel
+.after {
+  background: $dark-bg;
+  color: $white-88;
+  border-bottom: 1px solid $white-12;
+}
+
+thead .after {
+  color: $white;
+  border-radius: 14px 14px 0 0;
+}
+
+tbody tr:last-child .after {
+  border-radius: 0 0 14px 14px;
+}
+
+// Cross and tick icons, drawn in CSS so no extra markup or files are needed
+.value {
+  display: flex;
+  gap: 0.85rem;
+  align-items: baseline;
+
+  &::before {
+    flex-shrink: 0;
+    font-weight: 800;
+  }
+}
+
+.before .value::before {
+  content: "\00D7";
+  color: $replace-x;
+}
+
+.after .value::before {
+  content: "\2713";
+  color: $accent-bright;
+}
+
+// ── Summary ─────────────────────────────────────
+.summary {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.rule {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  border-left: 2px solid $accent;
+
+  a {
+    color: $accent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}

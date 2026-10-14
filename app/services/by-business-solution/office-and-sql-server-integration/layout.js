@@ -13,7 +13,7 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "/services/by-business-solution/office-and-sql-server-integration",
+      "/services/by-business-solution/sql-server-and-access-integration",
   },
 
   // OpenGraph

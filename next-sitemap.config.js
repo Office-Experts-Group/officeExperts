@@ -95,6 +95,7 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/by-business-solution",
   "/services/by-office-product",
   "/services/microsoft-vbscript",
+  "/services/by-business-solution/office-and-sql-server-integration",
 ]);
 
 /** @type {import('next-sitemap').IConfig} */
