@@ -1,0 +1,135 @@
+// styles/thirdPartyAiIntegration.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: $text-primary;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    letter-spacing: 1.5px;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.75rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 12px;
+
+  h3 {
+    font-size: 1.15rem;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: 0.92rem;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.note {
+  padding: 1.25rem 1.75rem;
+  background: $accent-light;
+  border-left: 4px solid $accent;
+  color: $text-secondary;
+  line-height: 1.7;
+}

@@ -122,7 +122,7 @@ export const navigationData = {
             href: `/services/by-business-solution/database-development-and-solutions`,
           },
           {
-            label: "3rd Party App or Office Integration",
+            label: "3rd Party App Integration",
             href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
           },
           {
@@ -153,6 +153,10 @@ export const navigationData = {
           {
             label: "VBScript and ActiveX",
             href: `/services/activex-vbscript-migration`,
+          },
+          {
+            label: "Apps and Custom Development",
+            href: `/services/microsoft-office-365/app-and-custom-development`,
           },
           {
             label: "Support & Training",

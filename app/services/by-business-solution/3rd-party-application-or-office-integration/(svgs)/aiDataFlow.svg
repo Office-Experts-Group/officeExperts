@@ -1,0 +1,53 @@
+<!-- app/services/by-business-solution/3rd-party-application-or-office-integration/(svgs)/aiDataFlow.svg -->
+<!-- Shows an AI agent reading business app data, then a person approving before results land in Office. -->
+<!-- Colours are set once in the :root block below. Swap these hex values for the globals.scss palette. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360" role="img">
+  <style>
+    :root { --primary: #0b5cab; --accent: #e8590c; --surface: #f1f5fa; --line: #b8c7d9; --text: #1c2733; }
+    .card { fill: var(--surface); stroke: var(--line); }
+    .agent { fill: var(--primary); }
+    .check { fill: #fff; stroke: var(--accent); stroke-width: 2; }
+    .arrow { stroke: var(--accent); stroke-width: 2.5; fill: none; marker-end: url(#head); }
+    text { font-family: system-ui, sans-serif; font-size: 14px; fill: var(--text); }
+    .title { font-weight: 700; font-size: 15px; }
+    .small { font-size: 12px; }
+    .onDark { fill: #fff; }
+  </style>
+  <defs>
+    <marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e8590c" />
+    </marker>
+  </defs>
+
+  <!-- Source apps -->
+  <rect class="card" x="10" y="40" width="130" height="150" rx="14" />
+  <text class="title" x="25" y="68">Your apps</text>
+  <text x="25" y="100">Salesforce</text>
+  <text x="25" y="128">Xero</text>
+  <text x="25" y="156">MYOB</text>
+  <text class="small" x="25" y="178">Live data</text>
+
+  <!-- AI agent -->
+  <rect class="agent" x="195" y="40" width="130" height="150" rx="14" />
+  <text class="title onDark" x="210" y="68">AI agent</text>
+  <text class="small onDark" x="210" y="100">Reads</text>
+  <text class="small onDark" x="210" y="124">Checks</text>
+  <text class="small onDark" x="210" y="148">Drafts</text>
+  <text class="small onDark" x="210" y="172">Cites sources</text>
+
+  <!-- Human review -->
+  <rect class="check" x="380" y="40" width="130" height="150" rx="14" />
+  <text class="title" x="395" y="68">Your team</text>
+  <text class="small" x="395" y="100">Reviews</text>
+  <text class="small" x="395" y="124">Approves</text>
+  <text class="small" x="395" y="148">Corrects</text>
+
+  <path class="arrow" d="M142 115 H192" />
+  <path class="arrow" d="M327 115 H377" />
+
+  <!-- Output row -->
+  <path class="arrow" d="M445 192 V250" />
+  <rect class="card" x="190" y="255" width="320" height="70" rx="14" />
+  <text class="title" x="210" y="283">Delivered where you work</text>
+  <text class="small" x="210" y="307">Word  ·  Excel  ·  Teams  ·  Outlook</text>
+</svg>

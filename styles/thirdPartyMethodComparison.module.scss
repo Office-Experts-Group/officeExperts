@@ -1,0 +1,120 @@
+// styles/thirdPartyMethodComparison.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: $text-primary;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+// Scrolls sideways on narrow screens rather than squashing the columns
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid $border;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  text-align: left;
+
+  caption {
+    caption-side: bottom;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    color: $text-muted;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 1.1rem 1.25rem;
+    vertical-align: top;
+    border-bottom: 1px solid $border;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: $text-secondary;
+  }
+
+  thead th {
+    background: $light-bg;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $text-primary;
+  }
+
+  td {
+    font-family: var(--font-aptos);
+  }
+
+  tbody th {
+    width: 16%;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  tbody tr:last-child > * {
+    border-bottom: none;
+  }
+}
+
+.note {
+  margin-top: 1.5rem;
+  color: $text-secondary;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}

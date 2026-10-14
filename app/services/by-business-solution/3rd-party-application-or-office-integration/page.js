@@ -1,13 +1,45 @@
-import React from "react";
+// app/services/by-business-solution/3rd-party-application-or-office-integration/page.js
+import dynamic from "next/dynamic";
 
+// Shared components (unchanged)
 import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegment7 from "./(components)/PageSegment7";
-import PageSegment8 from "./(components)/PageSegment8";
-import RelatedLinks from "../../../../components/RelatedLinks";
+import ThirdPartyIntro from "./(components)/ThirdPartyIntro";
+
+const ExpertsAwait = dynamic(
+  () => import("../../../../components/ExpertsAwait"),
+);
+const Contact = dynamic(() => import("../../../../components/Contact"));
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
+const ThirdPartyPlatforms = dynamic(
+  () => import("./(components)/ThirdPartyPlatforms"),
+);
+const ThirdPartyMethods = dynamic(
+  () => import("./(components)/ThirdPartyMethods"),
+);
+const ThirdPartyMethodComparison = dynamic(
+  () => import("./(components)/ThirdPartyMethodComparison"),
+);
+const ThirdPartyWorkedExample = dynamic(
+  () => import("./(components)/ThirdPartyWorkedExample"),
+);
+const ThirdPartyCaseStudies = dynamic(
+  () => import("./(components)/ThirdPartyCaseStudies"),
+);
+const ThirdPartyAiIntegration = dynamic(
+  () => import("./(components)/ThirdPartyAiIntegration"),
+);
+const ThirdPartySecurity = dynamic(
+  () => import("./(components)/ThirdPartySecurity"),
+);
+const ThirdPartyProcess = dynamic(
+  () => import("./(components)/ThirdPartyProcess"),
+);
+const ThirdPartyFaq = dynamic(() => import("./(components)/ThirdPartyFaq"));
+
+// FAQ data is also used below to generate FAQPage schema
+import { thirdPartyFaqs } from "../../../../faqs/thirdPartyFaqs";
 
 import thirdParty from "../../../../public/pageHeros/thirdParty.webp";
 import thirdPartyMob from "../../../../public/pageHeros/mob/thirdPartyMob.webp";
@@ -17,6 +49,12 @@ import {
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../../../utils/schemaGenerators";
+
+const pageUrl =
+  "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration";
+
+const description =
+  "Connect 3rd party apps like Xero, MYOB, Salesforce and others to your Microsoft suite. 25+ Software consultants working since 2000.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,35 +68,22 @@ const schema = {
     ),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
-      url: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
-      name: "3rd Party Application | Office Integration | Office Experts",
+      "@id": pageUrl,
+      url: pageUrl,
+      name: "3rd Party App Integration | Microsoft Solutions",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-09-04T00:00:00+00:00",
-      description:
-        "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem.",
-      breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration#breadcrumb",
-      },
+      dateModified: "2026-10-14T00:00:00+00:00",
+      description,
+      breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
       inLanguage: "en-AU",
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
-          ],
-        },
-      ],
+      potentialAction: [{ "@type": "ReadAction", target: [pageUrl] }],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration#breadcrumb",
+      "@id": `${pageUrl}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -81,9 +106,18 @@ const schema = {
         {
           "@type": "ListItem",
           position: 4,
-          name: "3rd Party Application or Office Integration",
+          name: "3rd Party App Integration",
         },
       ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: thirdPartyFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
     },
   ],
 };
@@ -96,45 +130,22 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title="Third Party Application or Office Integration"
+        title="3rd Party App Integration"
         desktopImage={thirdParty}
         mobileImage={thirdPartyMob}
         altDesk={"Microsoft Integrations design"}
         altMob={"Microsoft Integrations design"}
       />
-      <PageSegmentMain />
-      <PageSegment4 />
-      <PageSegment8 />
-      <PageSegment7 />
-      <RelatedLinks
-        theme="light"
-        eyebrow="Case Studies"
-        heading="Integration projects we've delivered"
-        links={[
-          {
-            href: "/case-studies/custom-quoting-tool",
-            linkText: "See the WordPress integration",
-            title:
-              "Replacing manual quote requests with an instant online tax depreciation calculator",
-            description:
-              "The client needed a way for prospective customers to get a tax depreciation estimate without waiting on a manually prepared quote. We built a React calculator and embedded it into the client's existing WordPress and Elementor site through a custom plugin, then connected it to the client's SMTP email provider so a branded results email goes to both the customer and the client's team the moment a form is submitted.",
-            image: "/case-studies/custom-quoting-tool.png",
-            imageAlt:
-              "Online calculator embedded in a WordPress website and connected to email delivery",
-          },
-          {
-            href: "/case-studies/internal-ai-proposal-assistant-azure-migration",
-            linkText: "See the Word template integration",
-            title:
-              "Turning call notes and a rate card into a first-pass proposal inside the real Word template",
-            description:
-              "The client's proposals depended on fee figures and consultant details copied from older documents. We built a conversational AI assistant that drafts directly into the client's real Word template and connected it to the current rate card and consultant list, so fee tables, payment milestones and the consultant roster reflect live figures. The tool was later moved inside the client's Microsoft and Azure tenant with Entra ID single sign-on, and direct calls to the AI provider's API were replaced with Microsoft Foundry.",
-            image: "/case-studies/internal-ai-proposal-assistant.png",
-            imageAlt:
-              "AI proposal assistant connected to a Word template and a live rate card",
-          },
-        ]}
-      />
+      <ThirdPartyIntro />
+      <ThirdPartyPlatforms />
+      <ThirdPartyMethods />
+      <ThirdPartyMethodComparison />
+      <ThirdPartyWorkedExample />
+      <ThirdPartyCaseStudies />
+      <ThirdPartyAiIntegration />
+      <ThirdPartySecurity />
+      <ThirdPartyProcess />
+      <ThirdPartyFaq />
       <ExpertsAwait />
       <Contact />
     </>

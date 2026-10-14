@@ -1,15 +1,16 @@
-import React from "react";
+// app/services/by-business-solution/3rd-party-application-or-office-integration/layout.js
+
+const title = "3rd Party App Integration | Microsoft Solutions";
+const description =
+  "Connect 3rd party apps like Xero, MYOB, Salesforce and others to your Microsoft suite. 25+ Software consultants working since 2000.";
+const url =
+  "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration";
 
 export const metadata = {
   // Basic metadata
-  title: "3rd Party Application | Office Experts Group",
-  description:
-    "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem.",
-
-  keywords: [
-    // Core integration services
-    "office 3rd party integration services",
-  ],
+  title,
+  description,
+  keywords: ["3rd party app integration"],
   alternates: {
     canonical:
       "/services/by-business-solution/3rd-party-application-or-office-integration",
@@ -17,10 +18,9 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "3rd Party Application | Office Experts Group",
-    description:
-      "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem.",
-    url: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
+    title,
+    description,
+    url,
     siteName: "Office Experts Group",
     images: [
       {
@@ -38,9 +38,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "3rd Party Application | Office Experts Group",
-    description:
-      "Custom Office add-ins for Word, PowerPoint, Outlook and more. Our developers create seamless solutions that work across your entire Microsoft Office ecosystem.",
+    title,
+    description,
     images: ["/logo.png"],
   },
 };

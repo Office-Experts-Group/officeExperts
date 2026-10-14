@@ -1,0 +1,94 @@
+// styles/thirdPartyProcess.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: $text-primary;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.accent {
+  color: $accent;
+}
+
+// The counter draws the step numbers, so the markup stays a plain ordered list
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  counter-reset: step;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-strong;
+  counter-increment: step;
+
+  &::before {
+    content: counter(step, decimal-leading-zero);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: $accent-border;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-secondary;
+    line-height: 1.65;
+  }
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,168 @@
+// styles/thirdPartyMethods.module.scss
+@import "./globals.scss";
+
+// Local tokens: the site's $accent is too dark to read on #111820,
+// so this section uses a lighter tint of the same blue.
+$tpm-bg: #111820;
+$tpm-text: #eef2f6;
+$tpm-muted: #9aa9b8;
+$tpm-line: rgba(255, 255, 255, 0.1);
+$tpm-accent: #4fb3e8;
+$tpm-hover: rgba(79, 179, 232, 0.06);
+
+.section {
+  background: $tpm-bg;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Headline on the left, supporting copy on the right
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem 4rem;
+  align-items: end;
+
+  h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: $tpm-text;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    color: $tpm-muted;
+    line-height: 1.8;
+    max-width: 34rem;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+// An index of alternatives: one row per method, the whole row is the link.
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $tpm-line;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 15rem;
+  gap: 1rem 3rem;
+  align-items: start;
+  padding: 2.25rem 1.75rem;
+  border-bottom: 1px solid $tpm-line;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus-within {
+    background: $tpm-hover;
+
+    &::before {
+      transform: scaleY(1);
+    }
+
+    .link {
+      text-decoration-thickness: 2px;
+    }
+
+    h3 {
+      color: $tpm-accent;
+    }
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: $tpm-text;
+    transition: color 0.2s ease;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $tpm-muted;
+    line-height: 1.7;
+    max-width: 38rem;
+  }
+
+  @include tablet {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+
+    .link {
+      grid-column: 2;
+    }
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    padding: 1.75rem 1rem;
+
+    .link {
+      grid-column: 1;
+    }
+  }
+}
+
+.link {
+  justify-self: start;
+  color: $tpm-accent;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition: text-decoration-thickness 0.15s ease;
+
+  // Stretches the link's click area over the whole row
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      outline: 2px solid $tpm-accent;
+      outline-offset: -2px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .item::before,
+  .item h3,
+  .link {
+    transition: none;
+  }
+}

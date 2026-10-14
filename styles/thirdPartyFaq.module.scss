@@ -1,0 +1,77 @@
+// styles/thirdPartyFaq.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 56rem;
+  margin: 0 auto 2.5rem;
+
+  h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: $text-primary;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.accent {
+  color: $accent;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.item {
+  padding: 1.25rem 1.75rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 12px;
+
+  summary {
+    font-weight: 700;
+    color: $text-primary;
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: $text-secondary;
+    line-height: 1.7;
+  }
+
+  &[open] summary {
+    color: $accent;
+  }
+}

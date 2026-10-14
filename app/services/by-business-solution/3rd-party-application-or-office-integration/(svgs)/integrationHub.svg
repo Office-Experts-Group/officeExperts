@@ -1,0 +1,55 @@
+<!-- app/services/by-business-solution/3rd-party-application-or-office-integration/(svgs)/integrationHub.svg -->
+<!-- Office apps on the left, the integration layer in the centre, 3rd party apps on the right. -->
+<!-- Colours are set once in the :root block below. Swap these hex values for the globals.scss palette. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="420" viewBox="0 0 520 420" role="img">
+  <style>
+    :root { --primary: #0b5cab; --accent: #e8590c; --surface: #f1f5fa; --line: #b8c7d9; --text: #1c2733; }
+    .pill { fill: var(--surface); stroke: var(--line); }
+    .hub { fill: var(--primary); }
+    .link { stroke: var(--line); stroke-width: 2; fill: none; }
+    .live { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 4 6; fill: none; }
+    text { font-family: system-ui, sans-serif; font-size: 15px; fill: var(--text); text-anchor: middle; }
+    .label { font-size: 12px; fill: var(--primary); font-weight: 700; letter-spacing: 1px; }
+    .hubText { fill: #fff; font-weight: 700; }
+    .hubSub { fill: #fff; font-size: 12px; }
+  </style>
+
+  <text class="label" x="75" y="28">OFFICE</text>
+  <text class="label" x="445" y="28">YOUR BUSINESS APPS</text>
+
+  <!-- Connection lines, drawn first so the pills sit on top -->
+  <path class="link" d="M130 70 C190 70 190 210 215 210" />
+  <path class="link" d="M130 150 C180 150 190 210 215 210" />
+  <path class="link" d="M130 270 C180 270 190 210 215 210" />
+  <path class="link" d="M130 350 C190 350 190 210 215 210" />
+  <path class="live" d="M305 210 C330 210 330 70 390 70" />
+  <path class="live" d="M305 210 C330 210 330 150 390 150" />
+  <path class="live" d="M305 210 C330 210 330 270 390 270" />
+  <path class="live" d="M305 210 C330 210 330 350 390 350" />
+
+  <!-- Office apps -->
+  <rect class="pill" x="20" y="50" width="110" height="40" rx="20" />
+  <text x="75" y="76">Excel</text>
+  <rect class="pill" x="20" y="130" width="110" height="40" rx="20" />
+  <text x="75" y="156">Word</text>
+  <rect class="pill" x="20" y="250" width="110" height="40" rx="20" />
+  <text x="75" y="276">Access</text>
+  <rect class="pill" x="20" y="330" width="110" height="40" rx="20" />
+  <text x="75" y="356">PowerPoint</text>
+
+  <!-- Integration layer -->
+  <rect class="hub" x="215" y="150" width="90" height="120" rx="16" />
+  <text class="hubText" x="260" y="205">API</text>
+  <text class="hubSub" x="260" y="226">ODBC</text>
+  <text class="hubSub" x="260" y="246">Graph</text>
+
+  <!-- 3rd party apps -->
+  <rect class="pill" x="390" y="50" width="110" height="40" rx="20" />
+  <text x="445" y="76">Salesforce</text>
+  <rect class="pill" x="390" y="130" width="110" height="40" rx="20" />
+  <text x="445" y="156">Xero</text>
+  <rect class="pill" x="390" y="250" width="110" height="40" rx="20" />
+  <text x="445" y="276">MYOB</text>
+  <rect class="pill" x="390" y="330" width="110" height="40" rx="20" />
+  <text x="445" y="356">SQL Server</text>
+</svg>
