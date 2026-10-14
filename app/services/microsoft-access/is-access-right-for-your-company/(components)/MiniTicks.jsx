@@ -12,7 +12,7 @@ const MiniTicks = () => {
   const benefits = [
     {
       text: "SQL Server",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration",
+      link: "https://www.officeexperts.com.au/services/by-business-solution/sql-server-and-access-integration",
     },
     {
       text: "Visual Studio (C#, VB, ASP)",

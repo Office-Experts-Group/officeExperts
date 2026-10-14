@@ -49,7 +49,7 @@ const pillars = [
       "Secure, centralised data environments with controlled access",
     ],
     link: {
-      href: "/services/by-business-solution/office-and-sql-server-integration",
+      href: "/services/by-business-solution/sql-server-and-access-integration",
       label: "SQL Server integration",
     },
   },

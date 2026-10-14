@@ -67,7 +67,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "with SQL Server",
-      link: "/services/by-business-solution/office-and-sql-server-integration",
+      link: "/services/by-business-solution/sql-server-and-access-integration",
       image: coder,
       alt: "coder",
       description: [

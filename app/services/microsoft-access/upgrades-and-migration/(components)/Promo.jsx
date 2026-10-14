@@ -38,7 +38,7 @@ const Promo = ({ h2, p }) => {
               <Link href="https://www.officeexperts.com.au/services/microsoft-dot-net">
                 .NET,{" "}
               </Link>
-              <Link href="https://www.officeexperts.com.au/services/by-business-solution/office-and-sql-server-integration">
+              <Link href="https://www.officeexperts.com.au/services/by-business-solution/sql-server-and-access-integration">
                 SQL Server{" "}
               </Link>
               and{" "}

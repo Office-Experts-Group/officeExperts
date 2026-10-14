@@ -13,7 +13,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Office and SQL Server",
-      link: "/services/by-business-solution/office-and-sql-server-integration",
+      link: "/services/by-business-solution/sql-server-and-access-integration",
       image: project1,
       description: [
         "Want an existing or new SQL Server setup to access from your Office products?",

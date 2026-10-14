@@ -19,7 +19,7 @@ const methods = [
   {
     title: "ODBC and direct database links",
     text: "A dependable option for SQL Server, MySQL, Oracle and older desktop products that expose their data through a driver.",
-    href: "/services/by-business-solution/office-and-sql-server-integration",
+    href: "/services/by-business-solution/sql-server-and-access-integration",
     linkText: "Office and SQL Server integration",
   },
   {

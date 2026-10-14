@@ -23,7 +23,7 @@ const groups = [
       {
         name: "MYOB integration",
         text: "Connect MYOB to Excel, Word or Access through its API or ODBC, depending on your MYOB product. Automate job costing, supplier reports and month-end packs.",
-        href: "/services/by-business-solution/office-and-sql-server-integration",
+        href: "/services/by-business-solution/sql-server-and-access-integration",
         linkText: "How we use ODBC and SQL",
       },
       {
