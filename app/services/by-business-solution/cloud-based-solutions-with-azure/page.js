@@ -1,16 +1,23 @@
-import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
 import PageSegmentMain2 from "./(components)/PageSegmentMain2";
-import PageSegment3 from "./(components)/PageSegment3";
-import PageSegment4New from "./(components)/PageSegment4New";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegment5 from "./(components)/PageSegment5";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import PageSegment7 from "./(components)/PageSegment7";
-import Contact from "../../../../components/Contact";
-import Promo from "../../../../components/Promo";
-import RelatedLinks from "../../../../components/RelatedLinks";
+
+// Below-the-fold components are split into separate chunks with next/dynamic.
+// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
+const PageSegment3 = dynamic(() => import("./(components)/PageSegment3"));
+const PageSegment4New = dynamic(() => import("./(components)/PageSegment4New"));
+const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
+const PageSegment5 = dynamic(() => import("./(components)/PageSegment5"));
+const PageSegment7 = dynamic(() => import("./(components)/PageSegment7"));
+const ExpertsAwait = dynamic(
+  () => import("../../../../components/ExpertsAwait"),
+);
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
+const Promo = dynamic(() => import("../../../../components/Promo"));
+const Contact = dynamic(() => import("../../../../components/Contact"));
 
 import graphic from "../../../../public/pageHeros/graphic.webp";
 import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
@@ -59,6 +66,7 @@ const schema = {
       ],
     },
     {
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id":
         "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure#breadcrumb",
@@ -78,13 +86,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Microsoft Cloud Based Solutions",
+          item: "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
         },
       ],
     },

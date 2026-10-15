@@ -1,0 +1,130 @@
+.section {
+  background: #ffffff;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 766px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 449px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+.header p {
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #046999;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: #046999;
+}
+
+.link {
+  color: #046999;
+  font-weight: 700;
+}
+
+.scroller {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.table th,
+.table td {
+  padding: 1.1rem 1.25rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.table thead th {
+  padding-bottom: 1.4rem;
+  font-size: 1rem;
+  line-height: 1.35;
+  text-align: center;
+}
+.table tbody td:nth-child(odd) {
+  background: #f7f8f9;
+}
+.table tbody tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.table tbody th {
+  width: 9.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9a9da1;
+}
+.table td {
+  color: #4a5568;
+  font-family: var(--font-aptos);
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+}
+.dots i {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: rgba(0, 0, 0, 0.11);
+  border-radius: 50%;
+}
+.dots .filled {
+  background: #046999;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}/*# sourceMappingURL=databaseChooser.module.css.map */

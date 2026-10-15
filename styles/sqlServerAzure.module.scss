@@ -1,0 +1,169 @@
+// styles/sqlServerAzure.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// ── Console ───────────────────────────────────
+.console {
+  background: $dark-bg;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.consoleBar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.9rem 1.5rem;
+  background: $dark-surface;
+
+  span {
+    width: 0.6rem;
+    height: 0.6rem;
+    background: $white-18;
+    border-radius: 50%;
+  }
+
+  p {
+    margin-left: 0.75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: $white-55;
+  }
+}
+
+.signals {
+  list-style: none;
+  padding: 0.5rem 1.5rem;
+}
+
+.signal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid $white-08;
+  font-size: 0.92rem;
+  color: $white-88;
+  line-height: 1.5;
+}
+
+.meter {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+
+  i {
+    width: 0.9rem;
+    height: 0.4rem;
+    background: $white-12;
+    border-radius: 2px;
+  }
+
+  .on {
+    background: $accent;
+  }
+}
+
+.consoleNote {
+  padding: 1.25rem 1.5rem 1.5rem;
+  font-size: 0.82rem;
+  color: $white-55;
+}
+
+// ── What changes ──────────────────────────────
+.changes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.change {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+}

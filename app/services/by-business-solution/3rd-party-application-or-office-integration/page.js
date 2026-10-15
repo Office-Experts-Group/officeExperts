@@ -82,6 +82,7 @@ const schema = {
       potentialAction: [{ "@type": "ReadAction", target: [pageUrl] }],
     },
     {
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id": `${pageUrl}#breadcrumb`,
       itemListElement: [
@@ -100,13 +101,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "3rd Party App Integration",
+          item: pageUrl,
         },
       ],
     },

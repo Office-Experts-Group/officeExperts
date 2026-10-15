@@ -67,6 +67,7 @@ const schema = {
       url: PAGE_URL,
       name: PAGE_TITLE,
       description: PAGE_DESCRIPTION,
+      mainEntity: { "@id": `${PAGE_URL}/#service` },
       isPartOf: { "@id": `${SITE_URL}/#website` },
       dateModified: "2026-10-14T00:00:00+00:00",
       breadcrumb: { "@id": `${PAGE_URL}/#breadcrumb` },
@@ -105,6 +106,8 @@ const schema = {
         url: SITE_URL,
         logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
       },
+      name: "SQL Server Integration for Access and Office",
+      url: PAGE_URL,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "SQL Server Integration Services",
@@ -150,8 +153,6 @@ const schema = {
   ],
 };
 
-// Case studies shown near the bottom of the page.
-// The first href follows the slug in sitemaps.md (windowline-proposals-database).
 const caseStudyLinks = [
   {
     href: "/case-studies/windowline-proposals-database",

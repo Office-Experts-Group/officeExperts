@@ -1,0 +1,139 @@
+// styles/databaseChooser.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── Matrix ────────────────────────────────────
+.scroller {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: 1.1rem 1.25rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  thead th {
+    padding-bottom: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  // Alternate column shading makes each platform easy to follow down the page
+  tbody td:nth-child(odd) {
+    background: $light-bg;
+  }
+
+  tbody tr {
+    border-top: 1px solid $border;
+  }
+
+  tbody th {
+    width: 9.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $text-muted;
+  }
+
+  td {
+    color: $text-secondary;
+    font-family: var(--font-aptos);
+  }
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+
+  i {
+    width: 0.7rem;
+    height: 0.7rem;
+    background: $border-strong;
+    border-radius: 50%;
+  }
+
+  .filled {
+    background: $accent;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

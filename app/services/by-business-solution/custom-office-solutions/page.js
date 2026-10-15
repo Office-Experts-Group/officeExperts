@@ -1,12 +1,19 @@
 // app/services/by-business-solution/custom-office-solutions/page.js
-import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import PageSegment8 from "./(components)/PageSegment8";
-import RelatedLinks from "../../../../components/RelatedLinks";
+
+// Below-the-fold components are split into separate chunks with next/dynamic.
+// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
+const PageSegment8 = dynamic(() => import("./(components)/PageSegment8"));
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
+const ExpertsAwait = dynamic(
+  () => import("../../../../components/ExpertsAwait"),
+);
+const Contact = dynamic(() => import("../../../../components/Contact"));
 
 import marker from "../../../../public/pageHeros/marker.webp";
 import meetingMob from "../../../../public/pageHeros/mob/meetingMob.webp";
@@ -55,6 +62,7 @@ const schema = {
       ],
     },
     {
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id":
         "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions#breadcrumb",
@@ -74,13 +82,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Custom Office Solutions",
+          item: "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions",
         },
       ],
     },

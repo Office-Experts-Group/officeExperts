@@ -1,13 +1,26 @@
+// app/services/by-business-solution/database-development-and-solutions/layout.js
 import React from "react";
+
+const TITLE = "Database Development | Access, SQL Server & Web Databases";
+const DESCRIPTION =
+  "Custom database development since 2000. We build, upgrade and migrate Access, SQL Server, Azure and web databases, and connect AI to your business data.";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Database Development and Solutions",
-  description:
-    "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
+  title: TITLE,
+  description: DESCRIPTION,
 
   // Additional metadata
-  keywords: ["Access database developers"],
+  keywords: [
+    "database development",
+    "Access database developers",
+    "Access database upgrade and migration",
+    "SQL Server database development",
+    "Azure SQL database",
+    "web database development",
+    "connect AI to SQL database",
+    "AI knowledge base for business",
+  ],
 
   alternates: {
     canonical:
@@ -16,9 +29,8 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Database Development and Solutions",
-    description:
-      "Custom Microsoft database solutions built by certified experts. We design, develop and support Access databases, SQL Server solutions, and cloud database systems tailored to your business needs.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
     siteName: "Office Experts Group",
     images: [
@@ -37,9 +49,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Database Development and Solutions",
-    description:
-      "Microsoft Database Solutions We create and support a wide variety of database solutions including the following Access is an efficient, reliable",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/logo.png"],
   },
 };

@@ -1,11 +1,17 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegment7 from "./(components)/PageSegment7";
+
+// Below-the-fold components are split into separate chunks with next/dynamic.
+// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
+const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
+const PageSegment7 = dynamic(() => import("./(components)/PageSegment7"));
+const ExpertsAwait = dynamic(
+  () => import("../../../../components/ExpertsAwait"),
+);
+const Contact = dynamic(() => import("../../../../components/Contact"));
 
 import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
 import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
@@ -39,8 +45,6 @@ const schema = {
       },
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2025-07-29T00:00:00+00:00",
-      description:
-        "Why Use Add-Ins? Add-ins extend the functionality of Office products and can make new functionality available to all of your staff, documents. Call 1300102810",
       breadcrumb: {
         "@id":
           "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation#breadcrumb",
@@ -56,6 +60,7 @@ const schema = {
       ],
     },
     {
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id":
         "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation#breadcrumb",
@@ -75,13 +80,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Add-in Creation",
+          item: "https://www.officeexperts.com.au/services/by-business-solution/add-in-creation",
         },
       ],
     },

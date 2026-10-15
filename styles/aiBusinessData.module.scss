@@ -1,0 +1,131 @@
+// styles/aiBusinessData.module.scss
+@import "./globals.scss";
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 48rem;
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// ── Dark diagram panel ────────────────────────
+// Soft radial glow behind the diagram gives the panel depth without extra markup
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem 2rem;
+  background: radial-gradient(circle at 50% 30%, $dark-mid, $dark-bg 70%);
+  border-radius: 16px;
+
+  svg {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    font-size: 0.82rem;
+    color: $white-55;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+// ── Capabilities ──────────────────────────────
+.capabilities {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid $border-strong;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-secondary;
+    line-height: 1.75;
+  }
+}

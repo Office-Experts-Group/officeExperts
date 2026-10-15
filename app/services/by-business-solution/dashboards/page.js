@@ -106,7 +106,7 @@ const schema = {
       ],
     },
     {
-      // "By business solution" is being redirected to /services, so it's left out of the trail
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
@@ -120,12 +120,6 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "By business solution",
-          item: `${SITE_URL}/services/by-business-solution`,
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Dashboards",
           item: PAGE_URL,
         },

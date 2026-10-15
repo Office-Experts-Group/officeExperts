@@ -1,12 +1,20 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
 import ServiceHero from "../../../../components/ServiceHero";
 import PageSegmentIntro from "./(components)/PageSegmentIntro";
-import MicrosoftSolutions from "./(components)/MicrosoftSolutions";
-import WebCapabilities from "./(components)/Webcapabilities";
-import HowWeWork from "./(components)/Howwework";
-import Contact from "../../../../components/Contact";
-import RelatedLinks from "../../../../components/RelatedLinks";
+
+// Below-the-fold components are split into separate chunks with next/dynamic.
+// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
+const MicrosoftSolutions = dynamic(
+  () => import("./(components)/MicrosoftSolutions"),
+);
+const WebCapabilities = dynamic(() => import("./(components)/Webcapabilities"));
+const HowWeWork = dynamic(() => import("./(components)/Howwework"));
+const RelatedLinks = dynamic(
+  () => import("../../../../components/RelatedLinks"),
+);
+const Contact = dynamic(() => import("../../../../components/Contact"));
 
 import onlineSolutions from "../../../../public/pageHeros/onlineSolutions.webp";
 import onlineSolutionsMob from "../../../../public/pageHeros/mob/onlineSolutionsMob.webp";
@@ -55,6 +63,7 @@ const schema = {
       ],
     },
     {
+      // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
       "@id":
         "https://www.officeexperts.com.au/services/by-business-solution/online-solutions#breadcrumb",
@@ -74,13 +83,8 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Services By Business Solution",
-          item: "https://www.officeexperts.com.au/services/by-business-solution",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Online Solutions",
+          item: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
         },
       ],
     },
