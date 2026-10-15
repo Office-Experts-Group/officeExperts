@@ -12,13 +12,13 @@ https://www.officeexperts.com.au/locations
 https://www.officeexperts.com.au/looking-for-a-job
 https://www.officeexperts.com.au/contact-us
 https://www.officeexperts.com.au/contact-us/request-a-quote
-https://www.officeexperts.com.au/case-study-submission
 https://www.officeexperts.com.au/privacy-policy
 https://www.officeexperts.com.au/refund-policy
 https://www.officeexperts.com.au/terms-and-conditions
-https://www.officeexperts.com.au/test-page
 
 ## Case studies
+
+https://www.officeexperts.com.au/case-studies
 
 https://www.officeexperts.com.au/case-studies/advisory-branding-template-rollout
 
@@ -140,7 +140,7 @@ https://www.officeexperts.com.au/case-studies/automated-proposal-generation-in-m
 
 > Replaced hand-built 50-page proposals with an Access (later SQL Server) database that generates the full Word document from selected sections.
 
-https://www.officeexperts.com.au/case-studies/%2Fcase-studies%2Fenvironmental-consultancy-word-template-rebuild
+https://www.officeexperts.com.au/case-studies/environmental-consultancy-word-template-rebuild
 
 > Rebuilt an environmental consultancy's beautifully designed but structurally fragile Word templates on proper foundations without changing the approved design.
 
@@ -150,9 +150,11 @@ https://www.officeexperts.com.au/case-studies/research-organisation-access-kanba
 
 ## Services
 
+https://www.officeexperts.com.au/services
 https://www.officeexperts.com.au/services/activex-vbscript-migration
 https://www.officeexperts.com.au/services/ai-email-triage
 https://www.officeexperts.com.au/services/ai-agent-development
+https://www.officeexperts.com.au/services/business-analysis
 https://www.officeexperts.com.au/services/microsoft-dot-net
 https://www.officeexperts.com.au/services/microsoft-office
 https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration
@@ -168,12 +170,9 @@ https://www.officeexperts.com.au/services/microsoft-powerpoint/custom-powerpoint
 https://www.officeexperts.com.au/services/microsoft-powerpoint/existing-presentation-redesign
 https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance
 https://www.officeexperts.com.au/services/microsoft-publisher
-https://www.officeexperts.com.au/services/microsoft-vbscript
 https://www.officeexperts.com.au/services/power-pivot
 https://www.officeexperts.com.au/services/power-query
 https://www.officeexperts.com.au/microsoft-365-api-integration
-https://www.officeexperts.com.au/services/by-office-product
-https://www.officeexperts.com.au/services/by-business-solution
 https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration
 https://www.officeexperts.com.au/services/by-business-solution/add-in-creation
 https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure
@@ -233,6 +232,7 @@ https://www.powerplatformexperts.com.au/locations
 https://www.powerplatformexperts.com.au/contact-us
 https://www.powerplatformexperts.com.au/contact-us/request-a-quote
 https://www.powerplatformexperts.com.au/test-page
+https://www.powerplatformexperts.com.au/video-sitemap.xml
 
 ## Services
 
@@ -457,7 +457,7 @@ https://www.wordexperts.com.au/locations
 https://www.wordexperts.com.au/video-portal
 https://www.wordexperts.com.au/contact-us
 https://www.wordexperts.com.au/contact-us/request-a-quote
-https://www.wordexperts.com.au/test-page
+https://www.wordexperts.com.au/video-sitemap.xml
 
 ## Services and solution pages
 

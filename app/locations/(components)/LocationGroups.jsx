@@ -24,9 +24,9 @@ const ServiceLink = ({ href, label }) => {
   );
 };
 
-const LocationGroups = ({ sectionTitle, locations }) => {
+const LocationGroups = ({ id, sectionTitle, locations }) => {
   return (
-    <section className={styles.locationSection}>
+    <section id={id} className={styles.locationSection}>
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
 

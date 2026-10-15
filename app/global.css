@@ -126,7 +126,8 @@ button {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  border: 1px solid transparent;
 
   &::before {
     content: "";
@@ -142,6 +143,7 @@ button {
 
   &:hover {
     color: #046999;
+    border: 1px solid #046999;
 
     &::before {
       left: 0;

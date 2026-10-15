@@ -2,6 +2,7 @@ import React from "react";
 
 import ServiceHero from "../../components/ServiceHero";
 import LocationGroups from "./(components)/LocationGroups";
+import LocationsIntro from "./(components)/LocationsIntro";
 import Promo from "../../components/Promo";
 import Contact from "../../components/Contact";
 
@@ -28,7 +29,7 @@ import richmond from "../../public/pageHeros/mob/richmondMob.webp";
 import darwin from "../../public/pageHeros/mob/darwinMob.webp";
 import centralCoast from "../../public/pageHeros/mob/centralCoastMob.webp";
 import goldCoast from "../../public/pageHeros/mob/goldCoastMob.webp";
-import cairns from "../../public/pageHeros/mob/cairnsMob.webp";
+import cairns from "../../public/pageHeros/mob/cairnsColourMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
@@ -44,12 +45,12 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/locations",
       url: "https://www.officeexperts.com.au/locations",
-      name: "Microsoft Experts Locations | Australia-Wide Service",
+      name: "Office Experts Locations | Australia-Wide Service",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
       datePublished: "2025-03-26T00:00:00+00:00",
-      dateModified: "2025-09-02T00:00:00+00:00",
+      dateModified: "2026-10-15T00:00:00+00:00",
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/locations#breadcrumb",
       },
@@ -345,6 +346,16 @@ const Page = () => {
     },
   ];
 
+  const locationCount = locationData.reduce(
+    (total, section) => total + section.locations.length,
+    0,
+  );
+
+  const sections = locationData.map(({ id, sectionTitle }) => ({
+    id,
+    sectionTitle,
+  }));
+
   return (
     <>
       <script
@@ -358,10 +369,11 @@ const Page = () => {
         altDesk="Australia map"
         altMob="man holding Australia flag"
       />
-
+      <LocationsIntro locationCount={locationCount} sections={sections} />
       {locationData.map((section) => (
         <LocationGroups
           key={section.id}
+          id={section.id}
           sectionTitle={section.sectionTitle}
           locations={section.locations}
         />

@@ -8,6 +8,7 @@
 .locationSection {
   padding: 4rem 0;
   background-color: #f6f6f6;
+  scroll-margin-top: 6rem;
 }
 .locationSection:nth-child(odd) {
   background-color: #f8f8f8;

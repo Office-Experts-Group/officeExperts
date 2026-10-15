@@ -360,5 +360,5 @@ export const goneUrls = [
   "/fusion_tb_category/header/",
   "/element_category/columns/",
   "/testimonials/electrical-estimating-solutions/attachment/lend-lease/",
-  "/by-business-solution",
+  "/testimonials/mad-clarity/attachment/mad-clarity/",
 ].map((url) => url.toLowerCase());

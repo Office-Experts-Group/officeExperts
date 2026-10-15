@@ -1,10 +1,15 @@
+// app/services/by-business-solution/dashboards/layout.js
+// Title is unchanged because the page is performing well in search; only the description is refreshed.
 import React from "react";
+
+const TITLE = "Dashboard Experts | Office Experts Group";
+const DESCRIPTION =
+  "Power BI, Excel and web dashboards that bring all your data into one view, with AI that flags changes and answers questions in plain English.";
 
 export const metadata = {
   // Basic metadata
-  title: "Dashboard Experts | Office Experts Group",
-  description:
-    "We are experts in Data! VBA, dashboards, import/export, parsing and processing, formatting and automation.",
+  title: TITLE,
+  description: DESCRIPTION,
 
   keywords: ["excel dashboard consultants"],
 
@@ -14,9 +19,8 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Dashboard Experts | Office Experts Group",
-    description:
-      "We are experts in Data! VBA, dashboards, import/export, parsing and processing, formatting and automation.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
     siteName: "Office Experts Group",
     images: [
@@ -35,9 +39,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Dashboard Experts | Office Experts Group",
-    description:
-      "We are experts in Data! VBA, dashboards, import/export, parsing and processing, formatting and automation.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/logo.png"],
   },
 };

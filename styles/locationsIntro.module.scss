@@ -1,0 +1,133 @@
+// styles/locationsIntro.module.scss
+@import "./globals.scss";
+
+.intro {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  display: grid;
+  gap: 3rem;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+}
+
+.heading {
+  color: $text-primary;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  max-width: 70ch;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.body {
+  max-width: 70ch;
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+// Eyebrow label, matches the "What we do" style used across the site
+.jumpTitle {
+  color: #888;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.jumpList {
+  margin: 1.5rem 0 2.5rem;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.jumpLink {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  color: $text-primary;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.jumpIndex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 1.5rem;
+}
+
+.jumpNumber {
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.jumpDot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #888;
+}
+
+.jumpName {
+  flex: 1;
+  font-family: var(--font-garamond), serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.jumpArrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #888;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statValue {
+  color: $accent;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

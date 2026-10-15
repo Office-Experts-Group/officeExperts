@@ -167,7 +167,7 @@ const REDIRECTS = [
   {
     source: "/services/office-and-sql-server-integration",
     destination:
-      "/services/by-business-solution/office-and-sql-server-integration",
+      "/services/by-business-solution/sql-server-and-access-integration",
     permanent: true,
   },
   {

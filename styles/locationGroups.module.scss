@@ -10,6 +10,7 @@
 .locationSection {
   padding: 4rem 0;
   background-color: $background;
+  scroll-margin-top: 6rem;
 
   &:nth-child(odd) {
     background-color: $offWhite;
