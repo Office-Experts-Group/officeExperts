@@ -1,0 +1,109 @@
+// styles/proposalAssistantDemo.module.scss
+
+@import "./globals.scss";
+
+.section {
+  background: $grayBGC;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: $text-primary;
+
+  @include phone {
+    font-size: 1.7rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 1.25rem 0 2rem;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+.highlights {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+
+  li {
+    padding-top: 1.25rem;
+    border-top: 1px solid $border-strong;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    color: $text-primary;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+
+  &::after {
+    content: " →";
+  }
+}
+
+.media {
+  margin: 0;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: $dark-bg;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.12);
+}
+
+.caption {
+  margin-top: 0.75rem;
+  color: $darkGrayText;
+  font-size: 0.85rem;
+  text-align: center;
+}

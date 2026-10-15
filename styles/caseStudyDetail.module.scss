@@ -508,3 +508,41 @@
     color: $accent;
   }
 }
+
+/* ── Video demonstration ── */
+
+.videoBlock {
+  margin-top: 3rem;
+}
+
+// Fluid size: scales down smoothly on mobile, so no breakpoint is needed
+.videoHeading {
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.videoIntro {
+  color: $darkGrayText;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.videoWrap {
+  overflow: hidden;
+}
+
+// aspect-ratio reserves the 16:9 space before metadata loads, avoiding layout shift (CLS).
+// object-fit: contain keeps the whole frame visible, so nothing is cropped on narrow screens
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+@media (max-width: 449px) {
+  .videoBlock {
+    margin-top: 2rem;
+  }
+}

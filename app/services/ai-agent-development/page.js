@@ -22,14 +22,17 @@ const AiAgentsGovernance = dynamic(
 const AiAgentsProcess = dynamic(() => import("./(components)/AiAgentsProcess"));
 const FAQSection = dynamic(() => import("../../../components/FAQSection"));
 const Contact = dynamic(() => import("../../../components/Contact"));
+const ProposalAssistantDemo = dynamic(
+  () => import("./(components)/ProposalAssistantDemo"),
+);
 
 // FAQ content (also used to build the FAQPage schema below)
 import faqs from "../../../faqs/ai-agent-development";
 import faqSchema from "../../../faqs/aiAgentDevelopmentSchema";
 
 // Placeholder hero images so the page compiles. Swap for the real artwork.
-import heroImage from "../../../public/placeholder.webp";
-import heroImageMob from "../../../public/placeholder.webp";
+import agents from "../../../public/pageHeros/agents.webp";
+import agentsMob from "../../../public/pageHeros/mob/agentsMob.webp";
 
 import {
   generateProfessionalServiceSchema,
@@ -118,13 +121,14 @@ const Page = () => {
       {/* ServiceHero owns the page <h1> */}
       <ServiceHero
         title="AI Agent Development"
-        desktopImage={heroImage}
-        mobileImage={heroImageMob}
+        desktopImage={agents}
+        mobileImage={agentsMob}
         altDesk="Custom AI agents working across Microsoft 365"
         altMob="Custom AI agents working across Microsoft 365"
       />
       <AiAgentsHero />
       <AiAgentsProblem />
+      <ProposalAssistantDemo />
       <AiAgentsUseCases />
       <AiAgentsComparison />
       <AiAgentsCapabilities />

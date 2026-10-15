@@ -127,6 +127,7 @@ export const caseStudies = [
       "External vendor and hosting setup retired in favour of Azure SQL, App Service and Entra ID",
     ],
     image: "/case-studies/internal-ai-proposal-assistant.png",
+    video: "/videos/OE-Props-Demo.mp4",
     featured: false,
 
     stats: [
@@ -1142,7 +1143,7 @@ export const caseStudies = [
     title:
       "Replacing 50-page proposals built by hand with a database-driven document generator",
     summary:
-      "Windowline installs windows across commercial and residential properties, many of them high-rise apartment blocks, mainly in Sydney. Every proposal, quote and contract was pieced together manually from paper records and Excel, often running to 50 or more pages. We designed an Access database, later migrated to SQL Server, that lets staff select the sections they need and generates the full Word document automatically, complete with project and client details, quote tables, data and images.",
+      "The client installs windows across commercial and residential properties, many of them high-rise apartment blocks, mainly in Sydney. Every proposal, quote and contract was pieced together manually from paper records and Excel, often running to 50 or more pages. We designed an Access database, later migrated to SQL Server, that lets staff select the sections they need and generates the full Word document automatically, complete with project and client details, quote tables, data and images.",
     results: [
       "50+ page proposals and contracts generated automatically instead of assembled by hand",
       "Users select exactly which sections to include, from project details to quote tables and images",

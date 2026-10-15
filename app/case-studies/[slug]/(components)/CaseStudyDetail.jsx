@@ -34,6 +34,7 @@ const CaseStudyDetail = ({ study }) => {
     quote,
     services,
     author,
+    video,
   } = study;
 
   const brand = siteMeta[site];
@@ -133,19 +134,42 @@ const CaseStudyDetail = ({ study }) => {
           </AnimateOnScroll>
         )}
 
-        {/* Secondary image — only rendered when a case study supplies
-            secondaryImage (a path to a 700 x 450 image). Sits inside the
-            grey body section, centred, after the outcome. */}
         {secondaryImage && (
           <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.2}>
             <div className={styles.bodyImageWrap}>
               <Image
                 src={secondaryImage}
-                alt={`${client} case study, additional image`}
+                alt={`${title}`}
                 width={700}
                 height={450}
                 className={styles.bodyImage}
               />
+            </div>
+          </AnimateOnScroll>
+        )}
+
+        {video && (
+          <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.2}>
+            <div className={styles.videoBlock}>
+              <h3 className={styles.videoHeading}>Video Demonstration</h3>
+              <p className={styles.videoIntro}>
+                Watch as our expert {author} demonstrates the solution that was
+                delivered.
+              </p>
+
+              <div className={styles.videoWrap}>
+                <video
+                  className={styles.video}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={image}
+                  aria-label={`${client} case study video`}
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+              </div>
             </div>
           </AnimateOnScroll>
         )}

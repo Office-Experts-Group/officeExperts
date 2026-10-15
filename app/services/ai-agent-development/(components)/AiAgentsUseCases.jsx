@@ -4,11 +4,6 @@ import Link from "next/link";
 // Compiled CSS module (source: styles/aiAgentsUseCases.module.scss)
 import styles from "../../../../styles/aiAgentsUseCases.module.css";
 
-// ── Featured results ──────────────────────────────────────────────────────────
-// Figures match caseStudies.js. If that file's export shape allows it, these
-// can later be pulled from it by slug so the numbers stay in one place.
-// `afterPct` is the "after" time as a percentage of "before", used only to
-// size the comparison bar. CSS enforces a minimum width so tiny values show.
 const featured = [
   {
     useCase: "Document and application review",
@@ -73,7 +68,13 @@ const more = [
 
 // Arrow used on every text link in this section
 const Arrow = () => (
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 16 16"
+    fill="none"
+    aria-hidden="true"
+  >
     <path
       d="M3 8h10M9 4l4 4-4 4"
       stroke="currentColor"
