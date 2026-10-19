@@ -44,3 +44,6 @@ internal-linking.md
 auditContent.mjs
 content-audit.csv
 aiContentAdditions.md
+auditUsage.mjs
+mapStructure.mjs
+shared.mjs

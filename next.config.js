@@ -18,7 +18,7 @@ const REDIRECTS = [
   {
     source: "/word-document-template-creation",
     destination:
-      "https://www.wordexperts.com.au//word-document-template-creation",
+      "https://www.wordexperts.com.au/word-document-template-creation",
     permanent: true,
   },
   {
@@ -246,8 +246,8 @@ const REDIRECTS = [
     permanent: true,
   },
   {
-    source: "/services/microsoft-access/accesss-support",
-    destination: "https://www.accessexperts.com.au/accesss-support",
+    source: "/services/microsoft-access/access-support",
+    destination: "https://www.accessexperts.com.au/access-support",
     permanent: true,
   },
   {
@@ -269,11 +269,6 @@ const REDIRECTS = [
   },
   {
     source: "/services/microsoft-excel/add-in-development",
-    destination: "https://www.excelexperts.com.au/add-in-development",
-    permanent: true,
-  },
-  {
-    source: "/add-in-development",
     destination: "https://www.excelexperts.com.au/add-in-development",
     permanent: true,
   },
@@ -570,11 +565,6 @@ const REDIRECTS = [
     permanent: true,
   },
   {
-    source: "/blog/convert-canva-to-word",
-    destination: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
-    permanent: true,
-  },
-  {
     source: "/blog/20-advanced-excel-shortcuts",
     destination:
       "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
@@ -711,7 +701,7 @@ const NOINDEX_REDIRECTS = [
   {
     source:
       "/services/microsoft-office-365/cloud-backup-with-onedrive/attachment/cloud-database/feed",
-    destination: "/services/microsoft-office/microsoft-office-365",
+    destination: "/services/microsoft-office-365",
     permanent: true,
   },
   {
