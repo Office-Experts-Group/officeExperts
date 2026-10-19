@@ -50,7 +50,7 @@ const STANDARD_CSP = [
   `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
-export function middleware(request) {
+export function proxy(request) {
   const path = request.nextUrl.pathname;
   const normalisedPath = path.toLowerCase();
 

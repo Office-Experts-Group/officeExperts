@@ -2,6 +2,7 @@
 
 // Route metadata. Title and description come straight from the SEO brief;
 // the Open Graph title uses the longer, click-focused variant.
+
 const TITLE = "AI Email Triage for Microsoft 365 | Office Experts Group";
 const OG_TITLE =
   "AI Email Triage – Let AI Sort Your Inbox, Inside Microsoft 365";

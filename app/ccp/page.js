@@ -40,7 +40,8 @@ function getEmailStatus(searchParams) {
   };
 }
 
-export default function CCPPage({ searchParams }) {
+export default async function CCPPage(props) {
+  const searchParams = await props.searchParams;
   // Successful payment: BpointPaymentForm redirects back here with the result
   if (searchParams?.paymentStatus === "APPROVED" && searchParams?.reference) {
     return (

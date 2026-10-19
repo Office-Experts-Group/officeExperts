@@ -1,4 +1,3 @@
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const REDIRECTS = [
   {
     source: "/services/by-product-and-technology/microsoft-dot-net",
@@ -658,18 +657,6 @@ const NOINDEX_REDIRECTS = [
     permanent: true,
   },
   {
-    source: "/:path*",
-    has: [
-      {
-        type: "query",
-        key: "s",
-        value: "%7Bsearch_term_string%7D",
-      },
-    ],
-    destination: "/410",
-    permanent: true,
-  },
-  {
     source:
       "/testimonials/electrical-estimating-solutions/attachment/uniting-care-australia/feed",
     destination: "/client-testimonials",
@@ -745,9 +732,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  optimizeFonts: true,
   productionBrowserSourceMaps: false,
-  swcMinify: true,
 
   images: {
     formats: ["image/webp"],
@@ -774,7 +759,6 @@ const nextConfig = {
       {
         // Match all routes including static files and images
         source: "/:all*(svg|jpg|png|webp|css|js|woff|woff2|ttf|eot)",
-        locale: false,
         headers: [
           {
             key: "X-Robots-Tag",
@@ -834,13 +818,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization.minimizer.push(new CssMinimizerPlugin());
-    }
-    return config;
   },
 };
 

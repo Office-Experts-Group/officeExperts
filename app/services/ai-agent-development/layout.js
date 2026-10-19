@@ -1,6 +1,7 @@
 // app/services/ai-agent-development/layout.js
 
-const PAGE_URL = "https://www.officeexperts.com.au/services/ai-agent-development";
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/ai-agent-development";
 
 const TITLE = "Custom AI Agent Development Australia | Office Experts";
 

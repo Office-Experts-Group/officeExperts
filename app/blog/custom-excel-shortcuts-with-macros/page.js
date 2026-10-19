@@ -344,7 +344,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "v"],
-                "Ctrl + Shift + V"
+                "Ctrl + Shift + V",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -366,7 +366,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "t"],
-                "Ctrl + Shift + T"
+                "Ctrl + Shift + T",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -387,7 +387,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "q"],
-                "Ctrl + Shift + Q"
+                "Ctrl + Shift + Q",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -409,7 +409,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "u"],
-                "Ctrl + Shift + U"
+                "Ctrl + Shift + U",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -439,7 +439,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "f"],
-                "Ctrl + Shift + F"
+                "Ctrl + Shift + F",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -461,7 +461,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "a"],
-                "Ctrl + Shift + A"
+                "Ctrl + Shift + A",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -482,7 +482,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "j"],
-                "Ctrl + Shift + J"
+                "Ctrl + Shift + J",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
@@ -503,7 +503,7 @@ End Sub`;
             <div className={styles.flex}>
               {renderShortcutKeys(
                 ["command", "shift", "s"],
-                "Ctrl + Shift + S"
+                "Ctrl + Shift + S",
               )}
               <div className={styles.shortcutDescription}>
                 <p>
