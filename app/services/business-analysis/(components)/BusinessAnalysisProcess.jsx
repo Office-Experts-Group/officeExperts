@@ -1,8 +1,7 @@
 // app/services/business-analysis/(components)/BusinessAnalysisProcess.jsx
 
 // Compiled CSS module (source: styles/businessAnalysisProcess.module.scss)
-import styles from "../../../../styles/businessAnalysisProcess.module.css";
-
+import styles from "../../../../styles/businessAnalysisProcess.module.scss";
 // Genuinely sequential, so this is the one numbered list on the page
 const steps = [
   {

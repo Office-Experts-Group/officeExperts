@@ -1,5 +1,6 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/migrationScenarios.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Section shell ──────────────────────────────────────────
 .section {
@@ -347,8 +348,8 @@
     transform 0.15s ease;
 
   &:hover {
-    background: darken(#046999, 6%);
     transform: translateY(-1px);
+    background: color.adjust($accent, $lightness: 6%);
   }
 }
 

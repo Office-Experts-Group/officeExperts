@@ -1,14 +1,13 @@
 import React from "react";
 
-import styles from "../../../../styles/testimonialsSection.module.css";
-
+import styles from "../../../../styles/testimonialsSection.module.scss";
 import TestimonialCard from "../../../../components/TestimonialCard";
 
 const Testimonials = ({ testimonials }) => {
   const getRandomTestimonials = (count = 10) => {
     // Filter out testimonials without images or content first
     const validTestimonials = testimonials.filter(
-      (testimonial) => testimonial.image && testimonial.content.trim()
+      (testimonial) => testimonial.image && testimonial.content.trim(),
     );
 
     // Create a shuffled copy of the filtered testimonials

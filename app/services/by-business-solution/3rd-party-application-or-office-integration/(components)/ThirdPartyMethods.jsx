@@ -6,8 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyMethods.module.scss
-import styles from "../../../../../styles/thirdPartyMethods.module.css";
-
+import styles from "../../../../../styles/thirdPartyMethods.module.scss";
 // These are alternatives, not a sequence, so they are shown as an unnumbered index.
 const methods = [
   {

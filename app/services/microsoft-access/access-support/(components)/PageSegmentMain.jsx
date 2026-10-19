@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../../../../../styles/pageSegment.module.css";
-
+import styles from "../../../../../styles/pageSegment.module.scss";
 import askExpert from "../../../../../public/askExpert540x480.webp";
 
 const PageSegmentMain = () => {

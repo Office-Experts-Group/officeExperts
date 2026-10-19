@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .expertsAwait {
   scroll-margin-top: 125px;

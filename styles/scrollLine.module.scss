@@ -1,5 +1,5 @@
 // styles/scrollLine.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // Full-height positioning context, sits behind the row content.
 .wrapper {

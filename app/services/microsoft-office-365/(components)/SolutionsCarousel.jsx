@@ -5,8 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss (shared with the homepage carousel)
-import styles from "../../../../styles/solutionsCarousel.module.css";
-
+import styles from "../../../../styles/solutionsCarousel.module.scss";
 // Inline SVG icon components — each renders a stroke icon using currentColor
 import { CloudBackupIcon } from "../(svgs)/CloudBackupIcon";
 import { CopilotIcon } from "../(svgs)/CopilotIcon";

@@ -1,6 +1,6 @@
 // /app/services/(components)/AiAutomationSection.jsx
 // AI and automation: dark section with a "bento" layout, one large featured tile and smaller tiles beside it.
-import styles from "../../../styles/aiAutomationSection.module.css";
+import styles from "../../../styles/aiAutomationSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { AiAgentsIcon } from "../(svgs)/AiAgentsIcon";
 

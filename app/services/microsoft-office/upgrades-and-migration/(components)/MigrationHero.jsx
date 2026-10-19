@@ -1,8 +1,7 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/MigrationHero.jsx
 
 import Link from "next/link";
-import styles from "../../../../../styles/migrationHero.module.css";
-
+import styles from "../../../../../styles/migrationHero.module.scss";
 const tools = [
   { label: "Microsoft 365", tier: "primary" },
   { label: "Power Apps", tier: "secondary" },

@@ -5,8 +5,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/databaseIntro.module.scss)
-import styles from "../../../../../styles/databaseIntro.module.css";
-
+import styles from "../../../../../styles/databaseIntro.module.scss";
 import { DatabaseLayersSvg } from "../(svgs)/DatabaseLayersSvg";
 
 // Anchors match the id on each section further down the page

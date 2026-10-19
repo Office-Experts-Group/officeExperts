@@ -4,8 +4,7 @@ import React, { useEffect, useState } from "react";
 import ContactForm from "./ContactForm";
 import QuoteForm from "./QuoteForm";
 
-import styles from "../styles/contact.module.css";
-
+import styles from "../styles/contact.module.scss";
 const Contact = ({ isQuote }) => {
   const [activeForm, setActiveForm] = useState("contact");
 

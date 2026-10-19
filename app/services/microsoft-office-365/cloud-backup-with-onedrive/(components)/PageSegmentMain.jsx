@@ -3,8 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment.module.css";
-
+import styles from "../../../../../styles/pageSegment.module.scss";
 import migrate from "../../../../../public/migrate600x400.webp";
 
 const PageSegmentMain = () => {
@@ -28,12 +27,12 @@ const PageSegmentMain = () => {
             <p>Microsoft Office 365</p>
             <h2>OneDrive Online Storage</h2>
             <p>
-              Online storage has been a growing trend over the past decade,
-              and one of the best options available on the market is OneDrive
-              from Microsoft. It's a powerful tool that provides users of all
-              levels with a number of benefits. OneDrive is available for
-              iPhones, Android phones, Windows Phones, iPads, Android tablets,
-              Windows tablets, Windows PCs and Macs.
+              Online storage has been a growing trend over the past decade, and
+              one of the best options available on the market is OneDrive from
+              Microsoft. It's a powerful tool that provides users of all levels
+              with a number of benefits. OneDrive is available for iPhones,
+              Android phones, Windows Phones, iPads, Android tablets, Windows
+              tablets, Windows PCs and Macs.
             </p>
           </div>
         </AnimateOnScroll>

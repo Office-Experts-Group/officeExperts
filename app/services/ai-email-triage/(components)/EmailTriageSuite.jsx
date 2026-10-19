@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/emailTriageSuite.module.scss)
-import styles from "../../../../styles/emailTriageSuite.module.css";
-
+import styles from "../../../../styles/emailTriageSuite.module.scss";
 // Triaged email at the centre, feeding the Microsoft 365 apps listed below
 import { SuiteHubSvg } from "../(svgs)/SuiteHubSvg";
 

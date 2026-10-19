@@ -5,8 +5,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 import { siteMeta } from "../../caseStudies";
-import styles from "../../../../styles/caseStudyDetail.module.css";
-
+import styles from "../../../../styles/caseStudyDetail.module.scss";
 const ResultsList = ({ results }) => (
   <ul className={styles.resultsList}>
     {results.map((result) => (

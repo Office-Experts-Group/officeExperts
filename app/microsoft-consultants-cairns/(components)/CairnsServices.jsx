@@ -5,8 +5,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/cairnsServices.module.css";
-
+import styles from "../../../styles/cairnsServices.module.scss";
 const services = [
   {
     id: "excel",

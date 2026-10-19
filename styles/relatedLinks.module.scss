@@ -1,5 +1,5 @@
 // styles/relatedLinks.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Themes ──────────────────────────────────────
 // Each theme only sets custom properties; all layout below reads from them.

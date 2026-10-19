@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment3.module.css";
-
+import styles from "../../../../../styles/pageSegment3.module.scss";
 import dashboard from "../../../../../public/dashboard400x240.webp";
 
 const PageSegment7 = () => {
@@ -28,8 +27,10 @@ const PageSegment7 = () => {
           <p>
             Our developers can work in all areas of add-in development. If you
             need help with design or with determining what is best for your
-            organisation, then <Link href={"/meet-the-team"}>our experienced programmers</Link> can help analyse and
-            develop a solution that suits your business requirements.
+            organisation, then{" "}
+            <Link href={"/meet-the-team"}>our experienced programmers</Link> can
+            help analyse and develop a solution that suits your business
+            requirements.
           </p>
         </AnimateOnScroll>
       </div>

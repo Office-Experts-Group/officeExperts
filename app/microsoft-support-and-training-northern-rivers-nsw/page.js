@@ -8,8 +8,7 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/supportPage.module.css";
-
+import styles from "../../styles/supportPage.module.scss";
 import northernRivers from "../../public/pageHeros/northernRivers.webp";
 import northernRiversMob from "../../public/pageHeros/mob/northernRiversMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

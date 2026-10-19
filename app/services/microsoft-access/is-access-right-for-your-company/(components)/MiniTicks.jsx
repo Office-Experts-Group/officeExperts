@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegmentCenter.module.css";
-
+import styles from "../../../../../styles/pageSegmentCenter.module.scss";
 import success from "../../../../../public/success600x400.webp";
 
 const MiniTicks = () => {

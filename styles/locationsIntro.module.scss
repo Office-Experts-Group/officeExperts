@@ -1,5 +1,5 @@
 // styles/locationsIntro.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .intro {
   max-width: 1400px;

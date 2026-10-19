@@ -1,8 +1,7 @@
 // app/services/by-business-solution/dashboards/(components)/DashboardsPlatforms.jsx
 import Link from "next/link";
 
-import styles from "../../../../../styles/dashboardsPlatforms.module.css";
-
+import styles from "../../../../../styles/dashboardsPlatforms.module.scss";
 // Column definitions: one per platform, with the page each links to
 const platforms = [
   {

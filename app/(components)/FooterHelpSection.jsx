@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import styles from "../../styles/footerHelp.module.css";
-
+import styles from "../../styles/footerHelp.module.scss";
 const FooterHelpSection = () => {
   return (
     <div className={styles.helpSection}>

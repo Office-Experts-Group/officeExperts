@@ -3,8 +3,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/ctaMain.module.css";
-
+import styles from "../../styles/ctaMain.module.scss";
 const CTAMainProps = ({ location }) => {
   return (
     <AnimateOnScroll animation="fade-up" delay={0.1} duration={1.5}>

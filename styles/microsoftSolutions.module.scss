@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 $ms-theme: #046999;
 $ms-theme-light: #e8f4fa;

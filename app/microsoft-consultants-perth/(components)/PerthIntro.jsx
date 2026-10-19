@@ -6,8 +6,7 @@ import AnimateOnScroll from "../../../components/AnimateOnScroll";
 import PerthMap from "../(svgs)/PerthMap";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/perthIntro.module.css";
-
+import styles from "../../../styles/perthIntro.module.scss";
 const PerthIntro = () => (
   <section className={styles.section}>
     <div className={styles.split}>

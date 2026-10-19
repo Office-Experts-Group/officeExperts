@@ -1,5 +1,6 @@
 // styles/queryProcess.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Process section ───────────────────────────────────────
 .section {
@@ -382,7 +383,7 @@
   }
 
   &:hover {
-    background: darken(#046999, 6%);
+    background: color.adjust($accent, $lightness: -6%);
     transform: translateY(-1px);
 
     svg {

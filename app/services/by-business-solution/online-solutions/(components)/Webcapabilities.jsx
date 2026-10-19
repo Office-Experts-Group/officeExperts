@@ -9,8 +9,7 @@ import { PowerVisual } from "../(svgs)/PowerVisual";
 import { WebVisual } from "../(svgs)/WebVisual";
 import { DataVisual } from "../(svgs)/DataVisual";
 
-import styles from "../../../../../styles/webCapabilities.module.css";
-
+import styles from "../../../../../styles/webCapabilities.module.scss";
 const capabilities = [
   {
     id: "power-platform",

@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/emailTriageWhyUs.module.scss)
-import styles from "../../../../styles/emailTriageWhyUs.module.css";
-
+import styles from "../../../../styles/emailTriageWhyUs.module.scss";
 const reasons = [
   {
     title: "Microsoft specialists since 2000",

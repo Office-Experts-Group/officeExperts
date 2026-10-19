@@ -1,5 +1,5 @@
 // styles/emailTriageSuite.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .section {
   background: $dark-bg;

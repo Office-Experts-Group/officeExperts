@@ -8,8 +8,7 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/supportPage.module.css";
-
+import styles from "../../styles/supportPage.module.scss";
 import wollongong from "../../public/pageHeros/wollongong.webp";
 import wollongongMob from "../../public/pageHeros/mob/wollongongMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

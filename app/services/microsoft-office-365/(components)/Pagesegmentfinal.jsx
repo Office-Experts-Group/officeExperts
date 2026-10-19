@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/pageSegmentFinal.module.css";
-
+import styles from "../../../../styles/pageSegmentFinal.module.scss";
 const stats = [
   { value: "1B+", label: "Microsoft 365 users worldwide" },
   { value: "25+", label: "Expert consultants across Australia" },

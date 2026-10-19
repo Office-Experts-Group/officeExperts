@@ -1,5 +1,6 @@
 // components/ScrollIndicator.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 .scrollIndicator {
   z-index: 500;
@@ -29,7 +30,7 @@
   }
 
   &:hover {
-    background-color: darken($accent, 10%);
+    background-color: color.adjust($accent, $lightness: -10%);
   }
 
   svg {

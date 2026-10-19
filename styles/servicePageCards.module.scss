@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .servicePageCards {
   padding: 6rem 10vw 4rem 10vw;
@@ -109,7 +109,9 @@
   height: 100%;
   filter: grayscale(100%);
   transform: scale(1);
-  transition: filter 0.3s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.8s ease-in-out;
 }
 
 // Hover effects

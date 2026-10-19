@@ -1,5 +1,6 @@
 // styles/caseStudySubmission.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 .page {
   background: $dark-bg;
@@ -110,7 +111,7 @@
   transition: background 0.2s ease;
 
   &:hover {
-    background: darken(#046999, 6%);
+    background: color.adjust($accent, $lightness: 6%);
   }
 
   &:disabled {

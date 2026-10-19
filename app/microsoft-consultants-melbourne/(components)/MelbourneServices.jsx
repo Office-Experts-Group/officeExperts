@@ -5,8 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module
-import styles from "../../../styles/melbourneServices.module.css";
-
+import styles from "../../../styles/melbourneServices.module.scss";
 const services = [
   {
     id: "excel",

@@ -1,5 +1,5 @@
 // styles/sqlSecurityProof.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // The brand accent is too dark to read on the dark background, so a lighter tint
 // is used here. It isn't in globals.scss, so it is hardcoded locally.

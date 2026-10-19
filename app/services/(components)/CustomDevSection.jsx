@@ -1,14 +1,18 @@
 // /app/services/(components)/CustomDevSection.jsx
 // Custom development: a row of technology chips above a terminal style panel listing the services.
-import styles from '../../../styles/customDevSection.module.css';
-import ServiceLink from './ServiceLink';
-import { CustomDevIcon } from '../(svgs)/CustomDevIcon';
+import styles from "../../../styles/customDevSection.module.scss";
+import ServiceLink from "./ServiceLink";
+import { CustomDevIcon } from "../(svgs)/CustomDevIcon";
 
 const CustomDevSection = ({ data }) => {
   const { eyebrow, title, intro, stack, lines } = data;
 
   return (
-    <section id="custom-development" className={styles.section} aria-labelledby="custom-dev-heading">
+    <section
+      id="custom-development"
+      className={styles.section}
+      aria-labelledby="custom-dev-heading"
+    >
       <div className={styles.inner}>
         <header className={styles.header}>
           <span className={styles.icon}>

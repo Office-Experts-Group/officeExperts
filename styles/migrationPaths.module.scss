@@ -1,5 +1,6 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/migrationPaths.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // Intensity palette -- low to high change
 $intensity-low-bar: #5ba4c4;
@@ -387,8 +388,8 @@ $intensity-high-text: $white-88;
     transform 0.15s ease;
 
   &:hover {
-    background: darken(#046999, 6%);
     transform: translateY(-1px);
+    background: color.adjust($accent, $lightness: 6%);
   }
 
   @media screen and (max-width: 770px) {

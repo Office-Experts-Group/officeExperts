@@ -1,5 +1,5 @@
 // bpaReplaces.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Breakpoints ──────────────────────────────
 $bp-tablet-min: 767px;

@@ -3,8 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../../../../styles/ms365.module.css";
-
+import styles from "../../../../styles/ms365.module.scss";
 import diagram from "../../../../public/ms365-diagram.webp";
 
 const apps = [

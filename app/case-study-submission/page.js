@@ -3,8 +3,7 @@ import React from "react";
 
 import CaseStudyForm from "./CaseStudyForm";
 
-import styles from "../../styles/caseStudySubmission.module.css";
-
+import styles from "../../styles/caseStudySubmission.module.scss";
 // This page itself has no client-side logic, so it stays a server
 // component. Only the form below needs "use client" for state and
 // submit handling.

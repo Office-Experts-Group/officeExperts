@@ -100,8 +100,8 @@
   transition: background 0.2s ease, transform 0.15s ease;
 }
 .cta:hover {
-  background: rgb(3.2203821656, 84.5350318471, 123.1796178344);
   transform: translateY(-1px);
+  background: rgb(4.7796178344, 125.4649681529, 182.8203821656);
 }
 
 .diffGrid {

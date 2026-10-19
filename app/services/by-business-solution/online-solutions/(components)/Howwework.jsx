@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import ProcessSteps from "./Processsteps";
-import styles from "../../../../../styles/howWeWork.module.css";
-
+import styles from "../../../../../styles/howWeWork.module.scss";
 const reasons = [
   {
     heading: "One team. The entire Microsoft ecosystem.",

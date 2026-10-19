@@ -1,5 +1,5 @@
 // styles/sqlProcess.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .section {
   background: $light-bg;

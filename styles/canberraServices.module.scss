@@ -1,5 +1,5 @@
 // styles/canberraServices.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section — dark background, contrasts with light intro above ──
 .section {

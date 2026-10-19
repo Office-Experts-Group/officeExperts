@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "../../../styles/whyChoose.module.css";
-
+import styles from "../../../styles/whyChoose.module.scss";
 import faqs from "../../../faqs/about-us";
 
 import semi from "../../../public/shapes/semi600x600.webp";

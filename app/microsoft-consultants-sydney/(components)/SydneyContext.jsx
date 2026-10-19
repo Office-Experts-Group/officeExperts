@@ -4,8 +4,7 @@ import React from "react";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/sydneyContext.module.css";
-
+import styles from "../../../styles/sydneyContext.module.scss";
 // Sydney's key industry verticals — each panel highlights a sector and how
 // Microsoft tools serve it, giving Google genuinely unique local content
 const industries = [

@@ -1,14 +1,13 @@
 import React from "react";
 
-import styles from "../../../../styles/testimonialsSection.module.css";
-
+import styles from "../../../../styles/testimonialsSection.module.scss";
 import TestimonialCard from "../../../../components/TestimonialCard";
 
 const Testimonials = ({ testimonials }) => {
   // Move the random selection function outside the component
   const getRandomTestimonials = (count = 10) => {
     const validTestimonials = testimonials.filter(
-      (testimonial) => testimonial.image && testimonial.content.trim()
+      (testimonial) => testimonial.image && testimonial.content.trim(),
     );
 
     // Use a seeded random to make it deterministic during build

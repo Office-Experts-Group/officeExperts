@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/appDevStack.module.scss)
-import styles from "../../../../../styles/appDevStack.module.css";
-
+import styles from "../../../../../styles/appDevStack.module.scss";
 // React interface, Next.js server rendering, then data and services
 import { AppStackSvg } from "../(svgs)/AppStackSvg";
 

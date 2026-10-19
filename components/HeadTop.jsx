@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import PhoneLink from "./PhoneLink";
 
-import styles from "../styles/header.module.css";
-
+import styles from "../styles/header.module.scss";
 import maps from "../public/icons/mapsBlue.webp";
 import msg from "../public/icons/msgBlue.webp";
 import emailSlide from "../public/icons/emailSlideBlue.webp";
@@ -49,7 +48,7 @@ const HeadTop = () => {
         </div>
 
         <div>
-          <PhoneLink 
+          <PhoneLink
             phoneNumber="+61-1300-102-810"
             displayText="1300 102 810"
             icon={msg}

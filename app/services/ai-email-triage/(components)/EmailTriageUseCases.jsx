@@ -1,8 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageUseCases.jsx
 
 // Compiled CSS module (source: styles/emailTriageUseCases.module.scss)
-import styles from "../../../../styles/emailTriageUseCases.module.css";
-
+import styles from "../../../../styles/emailTriageUseCases.module.scss";
 // Not a sequence, so rendered as unordered cards rather than numbered steps
 const useCases = [
   {

@@ -7,8 +7,7 @@ import FooterLocationsSection from "../../components/FooterLocationsSection";
 import FooterLogoSection from "../../components/FooterLogoSection";
 import FooterHelpSection from "./FooterHelpSection";
 
-import styles from "../../styles/footer.module.css";
-
+import styles from "../../styles/footer.module.scss";
 import footerImg from "../../public/footerImg800x600.webp";
 import semi from "../../public/shapes/semi600x600.webp";
 

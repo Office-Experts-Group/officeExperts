@@ -1,5 +1,5 @@
 // styles/migrationChallenges.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 @keyframes bodyReveal {
   from {

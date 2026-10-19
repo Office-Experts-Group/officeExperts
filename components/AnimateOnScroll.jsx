@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../styles/animate.module.css";
-
+import styles from "../styles/animate.module.scss";
 const AnimateOnScroll = ({
   children,
   animation = "fade-up",
@@ -23,7 +22,7 @@ const AnimateOnScroll = ({
       {
         threshold: 0.1, // Trigger when even 10% is visible
         rootMargin: "50px", // Start animation slightly before element comes into view
-      }
+      },
     );
 
     if (elementRef.current) {

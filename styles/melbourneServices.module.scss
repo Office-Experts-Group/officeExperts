@@ -1,5 +1,5 @@
 // styles/melbourneServices.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section ──────────────────────────────────
 .section {

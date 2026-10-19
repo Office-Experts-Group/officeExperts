@@ -1,5 +1,5 @@
 // styles/cairnsWhy.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section — white background ────────────────
 .section {

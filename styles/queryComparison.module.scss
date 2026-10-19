@@ -1,5 +1,5 @@
 // styles/queryComparison.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section shell ─────────────────────────────────────────
 .section {

@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../styles/faqSection.module.css";
-
+import styles from "../styles/faqSection.module.scss";
 const FAQ = ({ title = "Frequently Asked Questions", faqs = [] }) => {
   if (!Array.isArray(faqs) || !faqs.length) {
     console.error("FAQs must be a non-empty array of objects");

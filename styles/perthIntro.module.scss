@@ -1,5 +1,6 @@
 // styles/perthIntro.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 .section {
   background: $white;
@@ -134,7 +135,7 @@
     transform 0.15s ease;
 
   &:hover {
-    background: darken($accent, 8%);
+    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
 

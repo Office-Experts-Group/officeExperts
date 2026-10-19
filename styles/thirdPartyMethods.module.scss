@@ -1,5 +1,5 @@
 // styles/thirdPartyMethods.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // Local tokens: the site's $accent is too dark to read on #111820,
 // so this section uses a lighter tint of the same blue.

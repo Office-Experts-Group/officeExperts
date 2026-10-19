@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment3.module.css";
-
+import styles from "../../../../../styles/pageSegment3.module.scss";
 import cloud from "../../../../../public/Cloud400x267.webp";
 
 const PageSegment3 = () => {
@@ -31,12 +30,18 @@ const PageSegment3 = () => {
           </div>
           <p>
             VSTO is a set of development tools available with Microsoft Visual
-            Studio that supports the <Link style={{ color: "#046999", fontWeight: "700"}} href={"/services/microsoft-dot-net"}>Microsoft .NET Framework.</Link> It is used by
-            developers to write code connecting Microsoft Office applications.
-            Developers using VSTO can use .NET languages, instead of using VBA.
-            VSTO add-ins are installed on a PC and are compiled applications.
-            From a security point of view, VSTO created add-ins are perfect for
-            distributing code that you want to protect.
+            Studio that supports the{" "}
+            <Link
+              style={{ color: "#046999", fontWeight: "700" }}
+              href={"/services/microsoft-dot-net"}
+            >
+              Microsoft .NET Framework.
+            </Link>{" "}
+            It is used by developers to write code connecting Microsoft Office
+            applications. Developers using VSTO can use .NET languages, instead
+            of using VBA. VSTO add-ins are installed on a PC and are compiled
+            applications. From a security point of view, VSTO created add-ins
+            are perfect for distributing code that you want to protect.
           </p>
         </AnimateOnScroll>
       </div>

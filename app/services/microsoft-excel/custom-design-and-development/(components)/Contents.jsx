@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import styles from "../../../../../styles/contentsComponent.module.css";
-
+import styles from "../../../../../styles/contentsComponent.module.scss";
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);
 
@@ -51,9 +50,7 @@ const Contents = () => {
             <div className={styles.contentLink}>
               <p>Integration with Office products</p>
             </div>
-            <div>
-              
-            </div>
+            <div></div>
           </Link>
           <Link
             href="https://www.excelexperts.com.au/vba-macro-development"

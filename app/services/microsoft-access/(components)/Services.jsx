@@ -4,8 +4,7 @@ import Image from "next/image";
 import ServicesCard from "../../../../components/ServicesCard";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/services.module.css";
-
+import styles from "../../../../styles/services.module.scss";
 import dataSol from "../../../../public/microsoft/dataSolNoBG.webp";
 import azure from "../../../../public/microsoft/azureNoBG.webp";
 import integrate from "../../../../public/microsoft/integrateNoBG.webp";

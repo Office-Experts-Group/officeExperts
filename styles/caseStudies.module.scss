@@ -1,5 +1,5 @@
 // styles/caseStudies.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Hero ──────────────────────────────────────
 .hero {

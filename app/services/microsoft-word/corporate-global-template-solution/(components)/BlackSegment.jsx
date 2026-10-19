@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/expertsAwait.module.css";
-
+import styles from "../../../../../styles/expertsAwait.module.scss";
 import bg from "../../../../../public/service-bg.webp";
 import stuckIcon from "../../../../../public/icons/computerBlue.webp";
 import issuesIcon from "../../../../../public/icons/supportBlue.webp";

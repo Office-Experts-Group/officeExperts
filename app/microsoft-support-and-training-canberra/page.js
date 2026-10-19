@@ -7,8 +7,7 @@ import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 
-import styles from "../../styles/supportPage.module.css";
-
+import styles from "../../styles/supportPage.module.scss";
 import canberra from "../../public/pageHeros/canberra.webp";
 import canberraMob from "../../public/pageHeros/mob/canberraMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

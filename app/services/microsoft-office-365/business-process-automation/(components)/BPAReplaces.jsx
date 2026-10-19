@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/bpaReplaces.module.css";
-
+import styles from "../../../../../styles/bpaReplaces.module.scss";
 const LINKS = {
   powerAutomate:
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",

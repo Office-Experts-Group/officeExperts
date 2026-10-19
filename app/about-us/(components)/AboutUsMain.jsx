@@ -2,8 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../../styles/aboutUs.module.css";
-
+import styles from "../../../styles/aboutUs.module.scss";
 import about from "../../../public/about-img-6.webp";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 

@@ -3,8 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../../../styles/locationGroups.module.css";
-
+import styles from "../../../styles/locationGroups.module.scss";
 // Helper — only renders a <Link> when href is a non-empty string.
 
 const ServiceLink = ({ href, label }) => {

@@ -2,7 +2,7 @@
 // Excel: split layout with a sticky intro on the left and a list of expanding service rows on the right.
 // Each row is one link. The description opens on hover or keyboard focus (pure CSS, so it stays server rendered).
 // The row numbers and dots are drawn in CSS, so they are decorative and not read by screen readers.
-import styles from "../../../styles/excelSection.module.css";
+import styles from "../../../styles/excelSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { ExcelIcon } from "../(svgs)/ExcelIcon";
 import { ArrowIcon } from "../(svgs)/ArrowIcon";

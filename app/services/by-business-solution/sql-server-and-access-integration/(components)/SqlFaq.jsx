@@ -1,8 +1,7 @@
 // app/services/by-business-solution/sql-server-and-access-integration/(components)/SqlFaq.jsx
 
 // Compiled CSS module (source: styles/sqlFaq.module.scss)
-import styles from "../../../../../styles/sqlFaq.module.css";
-
+import styles from "../../../../../styles/sqlFaq.module.scss";
 // Shared with page.js, which uses the same list for FAQPage schema
 import { sqlFaqs } from "../(data)/sqlFaqData";
 

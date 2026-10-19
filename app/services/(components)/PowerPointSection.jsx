@@ -1,14 +1,18 @@
 // /app/services/(components)/PowerPointSection.jsx
 // PowerPoint and Publisher: each service is a 16:9 "slide", with Publisher as a dashed extra slide.
-import styles from '../../../styles/powerPointSection.module.css';
-import ServiceLink from './ServiceLink';
-import { PowerPointIcon } from '../(svgs)/PowerPointIcon';
+import styles from "../../../styles/powerPointSection.module.scss";
+import ServiceLink from "./ServiceLink";
+import { PowerPointIcon } from "../(svgs)/PowerPointIcon";
 
 const PowerPointSection = ({ data }) => {
   const { eyebrow, title, intro, slides, extra } = data;
 
   return (
-    <section id="powerpoint" className={styles.section} aria-labelledby="powerpoint-heading">
+    <section
+      id="powerpoint"
+      className={styles.section}
+      aria-labelledby="powerpoint-heading"
+    >
       <div className={styles.inner}>
         <header className={styles.header}>
           <span className={styles.icon}>

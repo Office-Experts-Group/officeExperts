@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .contact {
   display: flex;
@@ -610,40 +610,4 @@
       border-color: transparent;
     }
   }
-}
-
-.surveyHeading {
-  text-align: center;
-  margin: 2rem 0 1rem 0;
-  font-size: 1.25rem !important;
-  font-weight: 700;
-  color: $accent;
-  font-family: var(--font-garamond);
-}
-
-.surveyOptions {
-  display: grid;
-  grid-template-columns: 1fr 50%;
-  grid-row-gap: 0.5rem;
-  width: fit-content;
-  margin: 0 auto;
-  @include phone {
-    display: flex;
-    flex-direction: column;
-  }
-  @include phoneLandscape {
-    display: flex;
-    flex-direction: column;
-  }
-  .radioOption {
-    min-width: 200px;
-  }
-}
-
-#otherReferralDetails {
-  width: 90%;
-}
-
-.surveyBtn {
-  margin-top: 2rem;
 }

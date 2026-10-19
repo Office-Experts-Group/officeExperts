@@ -5,8 +5,7 @@ import { useState } from "react";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 import { ChevronIcon } from "../(svgs)/ChevronIcon";
-import styles from "../../../../styles/activexFaq.module.css";
-
+import styles from "../../../../styles/activexFaq.module.scss";
 const faqs = [
   {
     id: "macros-removed",
@@ -14,10 +13,10 @@ const faqs = [
     a: (
       <>
         No. VBA macros remain fully supported. What&rsquo;s changed is that
-        macros from files marked as downloaded from the internet are now
-        blocked by default, and ActiveX controls and VBScript are being
-        phased out separately. Your existing VBA code is not affected by
-        this change on its own.
+        macros from files marked as downloaded from the internet are now blocked
+        by default, and ActiveX controls and VBScript are being phased out
+        separately. Your existing VBA code is not affected by this change on its
+        own.
       </>
     ),
     plainText:
@@ -28,11 +27,11 @@ const faqs = [
     q: "When exactly is ActiveX being disabled?",
     a: (
       <>
-        ActiveX controls were disabled by default in Office 2024 from
-        October 2024, and in Microsoft 365 apps from April 2025. It can
-        still be re-enabled manually through Trust Center settings or Group
-        Policy, but Microsoft actively discourages this for security
-        reasons and it is not a long-term fix.
+        ActiveX controls were disabled by default in Office 2024 from October
+        2024, and in Microsoft 365 apps from April 2025. It can still be
+        re-enabled manually through Trust Center settings or Group Policy, but
+        Microsoft actively discourages this for security reasons and it is not a
+        long-term fix.
       </>
     ),
     plainText:
@@ -45,10 +44,10 @@ const faqs = [
       <>
         If ActiveX has been manually re-enabled in your environment, it will
         keep working for now. But that setting weakens a genuine security
-        control, and it&rsquo;s only a matter of time before a Windows or
-        Office update, a new staff laptop, or a policy change breaks it
-        without warning. Fixing it on your schedule is far cheaper than
-        fixing it in a panic.
+        control, and it&rsquo;s only a matter of time before a Windows or Office
+        update, a new staff laptop, or a policy change breaks it without
+        warning. Fixing it on your schedule is far cheaper than fixing it in a
+        panic.
       </>
     ),
     plainText:
@@ -59,11 +58,11 @@ const faqs = [
     q: "What actually replaces an ActiveX control in a Word or Excel file?",
     a: (
       <>
-        In most cases, native Content Controls (for Word) or standard Excel
-        form controls and VBA UserForms give you the same interactivity,
-        buttons, dropdowns, date pickers, without relying on a deprecated
-        technology. For more complex cases, we sometimes recommend moving
-        the functionality into a Power Apps or web-based solution instead.
+        In most cases, native Content Controls (for Word) or standard Excel form
+        controls and VBA UserForms give you the same interactivity, buttons,
+        dropdowns, date pickers, without relying on a deprecated technology. For
+        more complex cases, we sometimes recommend moving the functionality into
+        a Power Apps or web-based solution instead.
       </>
     ),
     plainText:
@@ -76,9 +75,9 @@ const faqs = [
       <>
         PowerShell is the direct, supported replacement for most VBScript
         automation, file processing, and Windows task scheduling. Where the
-        automation touches Office data specifically, Power Automate is
-        often a better long-term fit, giving you monitoring and error
-        handling that a standalone script never had.
+        automation touches Office data specifically, Power Automate is often a
+        better long-term fit, giving you monitoring and error handling that a
+        standalone script never had.
       </>
     ),
     plainText:
@@ -89,10 +88,10 @@ const faqs = [
     q: "Do you need to see our systems before quoting?",
     a: (
       <>
-        Yes, and this protects you as much as us. We start with a
-        compatibility check to identify exactly which files, forms or
-        scripts rely on ActiveX or VBScript, then quote based on what we
-        actually find rather than a guess.
+        Yes, and this protects you as much as us. We start with a compatibility
+        check to identify exactly which files, forms or scripts rely on ActiveX
+        or VBScript, then quote based on what we actually find rather than a
+        guess.
       </>
     ),
     plainText:
@@ -173,7 +172,8 @@ const MigrationFaq = () => {
           <div className={styles.header}>
             <span className={styles.eyebrow}>Common Questions</span>
             <h2 className={styles.title}>
-              Straight answers, <span className={styles.accentText}>no jargon.</span>
+              Straight answers,{" "}
+              <span className={styles.accentText}>no jargon.</span>
             </h2>
             <p className={styles.intro}>
               What&rsquo;s actually changing, why it matters, and what to do

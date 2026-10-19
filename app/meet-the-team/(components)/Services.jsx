@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/services.module.css";
-
+import styles from "../../../styles/services.module.scss";
 import scott from "../../../public/scott.webp";
 import signature from "../../../public/signature.webp";
 import handsIn from "../../../public/handsIn600x400.webp";

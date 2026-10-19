@@ -4,8 +4,7 @@ import Link from "next/link";
 import IntroDropdowns from "./IntroDropdowns";
 import Counter from "./Counter";
 
-import styles from "../../../../../styles/bpaIntro.module.css";
-
+import styles from "../../../../../styles/bpaIntro.module.scss";
 const BPAIntro = () => {
   return (
     <section className={styles.section}>

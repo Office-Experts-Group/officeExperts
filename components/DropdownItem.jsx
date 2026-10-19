@@ -2,8 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-import styles from "../styles/header.module.css";
-
+import styles from "../styles/header.module.scss";
 export default function DropdownItem({ item, handleLinkClick }) {
   const dropdownRef = useRef(null);
   const [needsScroll, setNeedsScroll] = useState(false);
@@ -16,29 +15,29 @@ export default function DropdownItem({ item, handleLinkClick }) {
       if (!dropdown) return;
 
       // Reset any previously applied styles first
-      dropdown.style.bottom = 'auto';
-      dropdown.style.top = '-1rem';
-      dropdown.style.maxHeight = '';
-      dropdown.style.overflowY = '';
+      dropdown.style.bottom = "auto";
+      dropdown.style.top = "-1rem";
+      dropdown.style.maxHeight = "";
+      dropdown.style.overflowY = "";
 
       // Get measurements after resetting styles
       const dropdownRect = dropdown.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       const dropdownHeight = dropdown.scrollHeight;
       const spaceBelow = viewportHeight - dropdownRect.top;
-      
+
       // Add buffer space (adjust as needed)
       const buffer = 40;
-      
+
       // Check if dropdown extends beyond viewport
       if (dropdownHeight > spaceBelow - buffer) {
         // Set a maximum height based on available space
         const maxHeight = spaceBelow - buffer;
-        
+
         // Enable scrolling if the dropdown is too tall
         if (maxHeight < dropdownHeight) {
           dropdown.style.maxHeight = `${maxHeight}px`;
-          dropdown.style.overflowY = 'auto';
+          dropdown.style.overflowY = "auto";
           setNeedsScroll(true);
         } else {
           setNeedsScroll(false);
@@ -50,7 +49,7 @@ export default function DropdownItem({ item, handleLinkClick }) {
 
     // Add event listeners
     const parentElement = dropdownRef.current.parentElement;
-    
+
     if (parentElement) {
       parentElement.addEventListener("mouseenter", checkDropdownPosition);
       window.addEventListener("resize", checkDropdownPosition);
@@ -67,8 +66,8 @@ export default function DropdownItem({ item, handleLinkClick }) {
   if (!item.items) {
     return (
       <li>
-        <Link 
-          href={item.href} 
+        <Link
+          href={item.href}
           onClick={() => handleLinkClick && handleLinkClick(item.label)}
         >
           <span>{item.label}</span>
@@ -79,14 +78,14 @@ export default function DropdownItem({ item, handleLinkClick }) {
 
   return (
     <li className={styles.nestedDropdown}>
-      <Link 
-        href={item.href} 
+      <Link
+        href={item.href}
         onClick={() => handleLinkClick && handleLinkClick(item.label)}
       >
         <span>{item.label}</span>
       </Link>
-      <ul 
-        className={`${styles.nestedItems} ${needsScroll ? styles.scrollable : ''}`} 
+      <ul
+        className={`${styles.nestedItems} ${needsScroll ? styles.scrollable : ""}`}
         ref={dropdownRef}
       >
         {item.items.map((subItem, index) => (

@@ -5,8 +5,7 @@ import { useState, useId } from "react";
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/appDevPortalList.module.scss)
-import styles from "../../../../../styles/appDevPortalList.module.css";
-
+import styles from "../../../../../styles/appDevPortalList.module.scss";
 // Power Platform pages live on powerplatformexperts.com.au, so those links are absolute
 const PLATFORM_URL =
   "https://www.powerplatformexperts.com.au/services/microsoft-power-platform";

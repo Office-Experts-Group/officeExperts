@@ -4,8 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlBenefits.module.scss)
-import styles from "../../../../../styles/sqlBenefits.module.css";
-
+import styles from "../../../../../styles/sqlBenefits.module.scss";
 // One line icon per benefit
 import {
   SecurityIcon,

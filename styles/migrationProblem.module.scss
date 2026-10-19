@@ -1,5 +1,5 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/migrationProblem.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 @keyframes fadeUp {
   from {

@@ -5,8 +5,7 @@ import Link from "next/link";
 import MelbourneMap from "./MelbourneMap";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/melbourneIntro.module.css";
-
+import styles from "../../../styles/melbourneIntro.module.scss";
 const MelbourneIntro = () => (
   <section className={styles.section}>
     <div className={styles.grid}>

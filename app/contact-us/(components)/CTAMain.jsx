@@ -2,8 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../../styles/ctaMain.module.css";
-
+import styles from "../../../styles/ctaMain.module.scss";
 const CTAMain = () => {
   return (
     <div className={styles.contactAlternate}>

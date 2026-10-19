@@ -5,8 +5,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/dashboardsAi.module.scss)
-import styles from "../../../../../styles/dashboardsAi.module.css";
-
+import styles from "../../../../../styles/dashboardsAi.module.scss";
 // Decorative illustration and icon stored with the route
 import { AiChatSvg } from "../(svgs)/AiChatSvg";
 import { ShieldIcon } from "../(svgs)/ShieldIcon";

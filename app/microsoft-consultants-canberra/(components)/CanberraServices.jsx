@@ -7,8 +7,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 // Import compiled CSS module
-import styles from "../../../styles/canberraServices.module.css";
-
+import styles from "../../../styles/canberraServices.module.scss";
 // Services with Canberra-specific descriptions referencing government and ACT context
 const services = [
   {

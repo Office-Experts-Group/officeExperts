@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsUseCases.module.scss)
-import styles from "../../../../styles/aiAgentsUseCases.module.css";
-
+import styles from "../../../../styles/aiAgentsUseCases.module.scss";
 const featured = [
   {
     useCase: "Document and application review",

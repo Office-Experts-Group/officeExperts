@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/ctaFull.module.css";
-
+import styles from "../../styles/ctaFull.module.scss";
 import cta from "../../public/ctaFull.webp";
 
 const CTAFull = () => {

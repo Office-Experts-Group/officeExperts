@@ -1,5 +1,6 @@
 // bpaDocProcessing.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Breakpoints ──────────────────────────────
 $bp-desktop-xl: 1400px;
@@ -154,7 +155,7 @@ $bp-tablet-max: 1024px;
     color: $white-88;
   }
   .visual {
-    background: darken($dark-surface, 2%);
+    background: color.adjust($dark-surface, $lightness: 2%);
     border-left: 1px solid $white-08;
   }
   .statValue {
@@ -198,7 +199,7 @@ $bp-tablet-max: 1024px;
     color: $white-90;
   }
   .visual {
-    background: darken($dark-mid, 3%);
+    background: color.adjust($dark-mid, $lightness: -3%);
     border-left: 1px solid $white-08;
   }
   .statValue {
@@ -242,7 +243,7 @@ $bp-tablet-max: 1024px;
     color: #ffffff;
   }
   .visual {
-    background: darken($accent, 8%);
+    background: color.adjust($accent, $lightness: -8%);
     border-left: 1px solid rgba(255, 255, 255, 0.12);
   }
   .statValue {

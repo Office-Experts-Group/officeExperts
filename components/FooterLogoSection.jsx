@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import SocialLinks from "./SocialLinks";
 
-import styles from "../styles/footerLogo.module.css";
-
+import styles from "../styles/footerLogo.module.scss";
 import logo from "../public/logo200x86.webp";
 import msg from "../public/icons/msgBlue.webp";
 import emailSlide from "../public/icons/emailSlideBlue.webp";

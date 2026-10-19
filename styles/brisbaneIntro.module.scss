@@ -1,5 +1,6 @@
 // styles/brisbaneIntro.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -142,7 +143,7 @@
     transform 0.15s ease;
 
   &:hover {
-    background: darken($accent, 8%);
+    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
 

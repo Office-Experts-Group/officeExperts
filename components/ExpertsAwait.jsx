@@ -4,8 +4,7 @@ import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
 import ExpertsCardWrapper from "./ExpertsCardWrapper";
 
-import styles from "../styles/expertsAwait.module.css";
-
+import styles from "../styles/expertsAwait.module.scss";
 import bg from "../public/service-bg.webp";
 import computer from "../public/icons/computerBlue.webp";
 import training from "../public/icons/ideaBlue.webp";

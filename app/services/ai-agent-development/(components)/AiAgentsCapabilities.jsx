@@ -1,8 +1,7 @@
 // app/services/ai-agent-development/(components)/AiAgentsCapabilities.jsx
 
 // Compiled CSS module (source: styles/aiAgentsCapabilities.module.scss)
-import styles from "../../../../styles/aiAgentsCapabilities.module.css";
-
+import styles from "../../../../styles/aiAgentsCapabilities.module.scss";
 // Annotated mock of a single agent finding. Its lettered markers (A–F) match
 // the `key` on each principle below.
 import { AgentFindingSvg } from "../(svgs)/AgentFindingSvg";

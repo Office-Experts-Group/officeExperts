@@ -1,5 +1,5 @@
 // styles/copilotApps.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section — dark background for contrast ──
 .section {

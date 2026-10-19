@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .mobContents {
   @media screen and (min-width: 1200px) {

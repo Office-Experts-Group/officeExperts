@@ -1,6 +1,6 @@
 // /app/services/(components)/Microsoft365Section.jsx
 // Microsoft 365, support and training: three open pillars with a coloured top rule and a large icon.
-import styles from "../../../styles/microsoft365Section.module.css";
+import styles from "../../../styles/microsoft365Section.module.scss";
 import ServiceLink from "./ServiceLink";
 import { Microsoft365Icon } from "../(svgs)/Microsoft365Icon";
 import { SupportIcon } from "../(svgs)/SupportIcon";

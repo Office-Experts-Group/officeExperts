@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../../styles/header.module.css";
-
+import styles from "../../styles/header.module.scss";
 import { navigationData } from "../../navigationData";
 import ServicesDropdown from "../../components/ServicesDropdown";
 // import SocialLinks from "../../components/SocialLinks";

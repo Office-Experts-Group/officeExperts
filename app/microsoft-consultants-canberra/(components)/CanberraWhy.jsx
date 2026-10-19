@@ -5,8 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module
-import styles from "../../../styles/canberraWhy.module.css";
-
+import styles from "../../../styles/canberraWhy.module.scss";
 // Reasons laid out as horizontal bordered rows — distinct from the
 // 2×2 stat card grid used on the Melbourne page
 const reasons = [

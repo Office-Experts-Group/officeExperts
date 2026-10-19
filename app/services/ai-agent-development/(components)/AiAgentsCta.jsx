@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsCta.module.scss)
-import styles from "../../../../styles/aiAgentsCta.module.css";
-
+import styles from "../../../../styles/aiAgentsCta.module.scss";
 // ── Component ─────────────────────────────────────────────────────────────────
 // Full-width accent band. The heading is split so the second clause carries
 // the weight.
@@ -12,8 +11,8 @@ const AiAgentsCta = () => {
     <section className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>
-          <span className={styles.muted}>Tell us the task.</span> We'll tell
-          you if an agent can do it.
+          <span className={styles.muted}>Tell us the task.</span> We'll tell you
+          if an agent can do it.
         </h2>
 
         <div className={styles.actions}>

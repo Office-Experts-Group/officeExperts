@@ -1,5 +1,5 @@
 // styles/appDevPortalList.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .list {
   display: flex;

@@ -1,5 +1,5 @@
 // styles/goodToKnow.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Pulse keyframe for map SVG rings ─────────────────────
 :global {

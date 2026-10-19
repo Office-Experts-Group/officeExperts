@@ -1,5 +1,5 @@
 // styles/canberraContext.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section — off-white, distinct from white services above and dark Why below ──
 .section {

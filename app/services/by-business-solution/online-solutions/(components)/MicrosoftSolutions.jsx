@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
-import styles from "../../../../../styles/microsoftSolutions.module.css";
-
+import styles from "../../../../../styles/microsoftSolutions.module.scss";
 const solutions = [
   {
     id: "01",

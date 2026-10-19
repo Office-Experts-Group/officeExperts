@@ -2,8 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-import styles from "../../../../../styles/bpaIntro.module.css";
-
+import styles from "../../../../../styles/bpaIntro.module.scss";
 const capabilities = [
   {
     id: "01",

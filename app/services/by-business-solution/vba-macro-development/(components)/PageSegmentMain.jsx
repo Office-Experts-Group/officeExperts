@@ -3,8 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment.module.css";
-
+import styles from "../../../../../styles/pageSegment.module.scss";
 import migrate from "../../../../../public/migrate600x400.webp";
 
 const PageSegmentMain = () => {
@@ -28,7 +27,12 @@ const PageSegmentMain = () => {
             <p>Transform Your Business</p>
             <h2>Professional VBA Consultants</h2>
             <p>
-            At Office Experts Group, we leverage the power of Visual Basic for Applications (VBA) to transform how your business interacts with Microsoft Office. Our team of certified VBA developers brings over 20 years of experience creating bespoke solutions that automate workflows, enhance functionality, and drive productivity across your organisation.
+              At Office Experts Group, we leverage the power of Visual Basic for
+              Applications (VBA) to transform how your business interacts with
+              Microsoft Office. Our team of certified VBA developers brings over
+              20 years of experience creating bespoke solutions that automate
+              workflows, enhance functionality, and drive productivity across
+              your organisation.
             </p>
           </div>
         </AnimateOnScroll>

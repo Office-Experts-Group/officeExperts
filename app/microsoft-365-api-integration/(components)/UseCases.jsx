@@ -3,8 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment3.module.css";
-
+import styles from "../../../styles/pageSegment3.module.scss";
 import construction from "../../../public/construction.webp";
 import salesperson from "../../../public/salesperson.webp";
 import doctor from "../../../public/doctor.webp";

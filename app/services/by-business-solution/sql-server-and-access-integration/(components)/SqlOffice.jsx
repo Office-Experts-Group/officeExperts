@@ -4,8 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlOffice.module.scss)
-import styles from "../../../../../styles/sqlOffice.module.css";
-
+import styles from "../../../../../styles/sqlOffice.module.scss";
 // Content folded in from the old Office and SQL Server Integration page.
 // Each card carries descriptive, varied anchor text for its internal links.
 const solutions = [
@@ -103,8 +102,7 @@ const SqlOffice = () => {
           </h2>
           <p className={styles.lead}>
             We set up custom solutions in Access, Excel, Word and Visual Studio
-            that modify and extract data from SQL Server databases. For
-            example:
+            that modify and extract data from SQL Server databases. For example:
           </p>
         </header>
 

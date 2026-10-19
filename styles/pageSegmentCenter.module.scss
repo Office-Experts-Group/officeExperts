@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .pageSegment {
   padding: 2rem 10vw;

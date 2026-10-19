@@ -108,7 +108,7 @@
   transition: background 0.2s ease;
 }
 .submitBtn:hover {
-  background: rgb(3.2203821656, 84.5350318471, 123.1796178344);
+  background: rgb(4.7796178344, 125.4649681529, 182.8203821656);
 }
 .submitBtn:disabled {
   background: #9a9da1;

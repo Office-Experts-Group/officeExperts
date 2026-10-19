@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsComparison.module.scss)
-import styles from "../../../../styles/aiAgentsComparison.module.css";
-
+import styles from "../../../../styles/aiAgentsComparison.module.scss";
 // Ordered as a spectrum (native → hybrid → custom) so the header can be drawn
 // as one continuous line with three stops. Kept as a real <table> because
 // answer engines lift comparison tables well.

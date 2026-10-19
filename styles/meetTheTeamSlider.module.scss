@@ -3,7 +3,7 @@
 // testimonialsSection.module.scss. Split out so MeetTheTeamSlider.jsx
 // no longer imports the testimonials stylesheet, keeping the two
 // components fully decoupled while preserving identical visuals.
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .teamSlider {
   width: 100%;

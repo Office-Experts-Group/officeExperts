@@ -2,8 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/appDevProcess.module.scss)
-import styles from "../../../../../styles/appDevProcess.module.css";
-
+import styles from "../../../../../styles/appDevProcess.module.scss";
 // Genuinely sequential, so numbers are appropriate here
 const steps = [
   {

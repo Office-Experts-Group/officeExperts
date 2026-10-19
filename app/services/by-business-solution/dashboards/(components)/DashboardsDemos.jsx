@@ -1,8 +1,7 @@
 // app/services/by-business-solution/dashboards/(components)/DashboardsDemos.jsx
 
 // Compiled CSS module (source: styles/dashboardsDemos.module.scss)
-import styles from "../../../../../styles/dashboardsDemos.module.css";
-
+import styles from "../../../../../styles/dashboardsDemos.module.scss";
 // Vimeo videos carried over from the previous page
 const demos = [
   {

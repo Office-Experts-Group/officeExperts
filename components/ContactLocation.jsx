@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 
-import styles from "../styles/contact.module.css";
-
+import styles from "../styles/contact.module.scss";
 const ContactLocation = ({ location }) => {
   const [formData, setFormData] = useState({
     location: location,
@@ -29,7 +28,7 @@ const ContactLocation = ({ location }) => {
     if (typeof window !== "undefined") {
       // Check if the conversion function exists
       setHasConversionTracking(
-        typeof window.gtag_report_conversion === "function"
+        typeof window.gtag_report_conversion === "function",
       );
 
       // Set up a MutationObserver to detect when conversion tracking becomes available

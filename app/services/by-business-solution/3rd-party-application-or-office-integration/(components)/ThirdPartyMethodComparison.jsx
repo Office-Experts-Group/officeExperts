@@ -6,8 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyMethodComparison.module.scss
-import styles from "../../../../../styles/thirdPartyMethodComparison.module.css";
-
+import styles from "../../../../../styles/thirdPartyMethodComparison.module.scss";
 // Row data kept separate from the markup. Method names match the cards in
 // ThirdPartyMethods so visitors can connect the two sections.
 const rows = [

@@ -4,8 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/dashboardsDataSources.module.scss)
-import styles from "../../../../../styles/dashboardsDataSources.module.css";
-
+import styles from "../../../../../styles/dashboardsDataSources.module.scss";
 // Decorative flow diagram stored with the route
 import { DataFlowSvg } from "../(svgs)/DataFlowSvg";
 
@@ -61,7 +60,8 @@ const DashboardsDataSources = () => {
           <header className={styles.header}>
             <span className={styles.eyebrow}>Data sources</span>
             <h2 id="sources-heading" className={styles.heading}>
-              One dashboard, <span className={styles.accent}>every system behind it.</span>
+              One dashboard,{" "}
+              <span className={styles.accent}>every system behind it.</span>
             </h2>
             <p className={styles.intro}>
               Collecting data is rarely the problem. Getting it out of separate
@@ -95,7 +95,8 @@ const DashboardsDataSources = () => {
           <p className={styles.footer}>
             For one client we{" "}
             <Link href="/case-studies/golf-supplier-sales-data-consolidation">
-              consolidated dozens of supplier sales files into one automated summary
+              consolidated dozens of supplier sales files into one automated
+              summary
             </Link>{" "}
             with year-on-year comparisons. Running an Access database? See{" "}
             <Link href="https://www.accessexperts.com.au/integrate-access-with-power-bi">

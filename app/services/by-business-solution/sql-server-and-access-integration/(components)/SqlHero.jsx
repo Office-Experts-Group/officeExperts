@@ -1,8 +1,7 @@
 // app/services/by-business-solution/sql-server-and-access-integration/(components)/SqlHero.jsx
 
 // Compiled CSS module (source: styles/sqlHero.module.scss)
-import styles from "../../../../../styles/sqlHero.module.css";
-
+import styles from "../../../../../styles/sqlHero.module.scss";
 // Illustration of Office front ends sharing one SQL Server database
 import { SqlFrontBackSvg } from "../(svgs)/SqlFrontBackSvg";
 
@@ -27,9 +26,9 @@ const SqlHero = () => {
           <p className={styles.lead}>
             Moving your Access data to a Microsoft SQL Server backend lets you
             keep your existing forms, reports and interface intact. You retain
-            the simplicity and flexibility of Access on the front end, while
-            SQL Server provides the power, speed and security of an
-            enterprise-grade database engine.
+            the simplicity and flexibility of Access on the front end, while SQL
+            Server provides the power, speed and security of an enterprise-grade
+            database engine.
           </p>
           <p className={styles.lead}>
             We also connect Excel, Word, PowerPoint and Visual Studio to your

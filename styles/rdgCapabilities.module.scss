@@ -1,5 +1,6 @@
 // styles/rdgCapabilities.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Section shell ────────────────────────────
 .section {
@@ -135,7 +136,7 @@
     color: $white-88;
   }
   .visual {
-    background: darken(#18232e, 3%);
+    background: color.adjust(#18232e, $lightness: -3%);
     border-left: 1px solid $white-08;
   }
   .statValue {

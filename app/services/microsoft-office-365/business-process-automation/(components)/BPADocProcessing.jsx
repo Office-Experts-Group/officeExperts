@@ -7,8 +7,7 @@ import { InvoiceMatchVisual } from "../(svgs)/InvoiceMatchVisual";
 import { ClassificationVisual } from "../(svgs)/ClassificationVisual";
 import { ChevronIcon } from "../(svgs)/ChevronIcon";
 
-import styles from "../../../../../styles/bpaDocProcessing.module.css";
-
+import styles from "../../../../../styles/bpaDocProcessing.module.scss";
 // ─────────────────────────────────────────────
 // Card data
 // ─────────────────────────────────────────────

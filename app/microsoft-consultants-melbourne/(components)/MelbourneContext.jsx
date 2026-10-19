@@ -4,8 +4,7 @@ import React from "react";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module
-import styles from "../../../styles/melbourneContext.module.css";
-
+import styles from "../../../styles/melbourneContext.module.scss";
 // Melbourne suburb/region tags for the coverage panel
 const regions = [
   "Melbourne CBD",

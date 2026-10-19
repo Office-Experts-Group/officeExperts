@@ -4,8 +4,7 @@ import ServicesCard from "../../components/ServicesCard";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 import CardIntersectionWrapper from "../../components/CardIntersectionWrapper";
 
-import styles from "../../styles/services.module.css";
-
+import styles from "../../styles/services.module.scss";
 import excel from "../../public/microsoft/excelNoBG.webp";
 import word from "../../public/microsoft/wordNoBG.webp";
 import access from "../../public/microsoft/accessNoBG.webp";

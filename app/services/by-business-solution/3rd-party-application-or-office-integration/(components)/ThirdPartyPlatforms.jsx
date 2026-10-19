@@ -6,8 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyPlatforms.module.scss
-import styles from "../../../../../styles/thirdPartyPlatforms.module.css";
-
+import styles from "../../../../../styles/thirdPartyPlatforms.module.scss";
 // Content lives in data so the markup below stays simple.
 // Product names are written out in full as people search for them by name.
 const groups = [

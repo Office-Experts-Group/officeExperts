@@ -1,8 +1,7 @@
 // components/ProposalAssistantDemo.jsx
 import Link from "next/link";
 
-import styles from "../../../../styles/proposalAssistantDemo.module.css";
-
+import styles from "../../../../styles/proposalAssistantDemo.module.scss";
 const SITE_URL = "https://www.officeexperts.com.au";
 
 const VIDEO = {

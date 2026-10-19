@@ -1,7 +1,6 @@
 // app/services/business-analysis/(components)/BusinessAnalysisProblem.jsx
 
-import styles from "../../../../styles/businessAnalysisProblem.module.css";
-
+import styles from "../../../../styles/businessAnalysisProblem.module.scss";
 import { BrokenCodeSvg } from "../(svgs)/BrokenCodeSvg";
 
 // Not sequential, so an unordered list. "tag" is a short visual shorthand

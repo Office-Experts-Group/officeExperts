@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/promo.module.css";
-
+import styles from "../../../../../styles/promo.module.scss";
 import computer from "../../../../../public/icons/computer.webp";
 import promo from "../../../../../public/promo.webp";
 

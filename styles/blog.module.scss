@@ -1,4 +1,5 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
+@use "sass:color";
 
 .headFiller {
   background-color: #1e1e1e;
@@ -250,7 +251,7 @@
   color: $darkGrayText;
 
   &:hover {
-    background-color: darken($darkGrayText, 5%);
+    background-color: color.adjust(darkGrayText, $lightness: -5%);
   }
 
   &.active {

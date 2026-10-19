@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment4.module.css";
-
+import styles from "../../../../../styles/pageSegment4.module.scss";
 import success from "../../../../../public/success400x267.webp";
 
 const Segment4Repeat = () => {

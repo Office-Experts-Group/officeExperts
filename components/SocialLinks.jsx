@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import styles from "../styles/socialLinks.module.css";
-
+import styles from "../styles/socialLinks.module.scss";
 const SocialLinks = ({ inNav }) => {
   return (
     <div className={styles.socials}>

@@ -5,8 +5,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlServerAzure.module.scss)
-import styles from "../../../../../styles/sqlServerAzure.module.css";
-
+import styles from "../../../../../styles/sqlServerAzure.module.scss";
 const ACCESS_SITE = "https://www.accessexperts.com.au";
 
 // `level` sets the meter fill (1 to 4), purely visual

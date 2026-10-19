@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import styles from "../../../../../styles/bpaIntro.module.css";
-
+import styles from "../../../../../styles/bpaIntro.module.scss";
 const Counter = ({ target, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);

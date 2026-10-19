@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 
-import styles from "../../styles/mobileNav.module.css";
-
+import styles from "../../styles/mobileNav.module.scss";
 const MobileNavButton = ({ isOpen, onClick }) => (
   <button
     onClick={onClick}

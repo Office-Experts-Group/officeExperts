@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../../../../styles/howWeWork.module.css";
-
+import styles from "../../../../../styles/howWeWork.module.scss";
 const steps = [
   {
     num: "01",

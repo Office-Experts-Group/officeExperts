@@ -6,8 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyIntro.module.scss
-import styles from "../../../../../styles/thirdPartyIntro.module.css";
-
+import styles from "../../../../../styles/thirdPartyIntro.module.scss";
 // Standalone SVG: Office apps <-> integration layer <-> 3rd party apps
 import integrationHub from "../(svgs)/integrationHub.svg";
 
@@ -41,8 +40,8 @@ const ThirdPartyIntro = () => {
               <Link href="https://www.accessexperts.com.au/3rd-party-product-integration">
                 Access
               </Link>
-              ,{" "}
-              <Link href="/services/microsoft-powerpoint">PowerPoint</Link> and{" "}
+              , <Link href="/services/microsoft-powerpoint">PowerPoint</Link>{" "}
+              and{" "}
               <Link href="/microsoft-365-api-integration">Microsoft 365</Link>{" "}
               to the products you already pay for, so the right data is in the
               right place without anyone handling it twice.

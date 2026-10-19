@@ -3,8 +3,7 @@
 
 import { useEffect, useRef } from "react";
 
-import styles from "../../../../styles/scrollLine.module.css";
-
+import styles from "../../../../styles/scrollLine.module.scss";
 // Isolated as its own client component so the rest of MigrationReplaces can
 // stay a server component. This only listens to scroll position within the
 // section and fades the line from white to the accent colour as the user

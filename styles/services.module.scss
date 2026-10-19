@@ -1,4 +1,4 @@
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .services {
   background: url("../public/service-bg.webp") no-repeat center center;

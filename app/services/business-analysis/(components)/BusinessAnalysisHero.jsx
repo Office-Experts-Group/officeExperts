@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/businessAnalysisHero.module.scss)
-import styles from "../../../../styles/businessAnalysisHero.module.css";
-
+import styles from "../../../../styles/businessAnalysisHero.module.scss";
 // Illustration
 import solutions from "../../../../public/solutions.webp";
 

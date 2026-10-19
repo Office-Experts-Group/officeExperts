@@ -1,5 +1,5 @@
 // bpaIntro.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ─────────────────────────────────────────────
 // Entrance animations

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/sydneyWhy.module.css";
+import styles from "../../../styles/sydneyWhy.module.scss";
 import SydneyMap from "../(svgs)/SydneyMap";
 
 const reasons = [

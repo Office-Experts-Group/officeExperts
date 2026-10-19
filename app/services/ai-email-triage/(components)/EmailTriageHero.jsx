@@ -1,8 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageHero.jsx
 
 // Compiled CSS module (source: styles/emailTriageHero.module.scss)
-import styles from "../../../../styles/emailTriageHero.module.css";
-
+import styles from "../../../../styles/emailTriageHero.module.scss";
 // Standalone illustration: shared inbox → AI → sorted action lanes
 import { InboxTriageSvg } from "../(svgs)/InboxTriageSvg";
 

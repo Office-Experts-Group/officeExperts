@@ -2,8 +2,7 @@
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 
-import styles from "../styles/contact.module.css";
-
+import styles from "../styles/contact.module.scss";
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
   "application/pdf",
@@ -45,7 +44,7 @@ const QuoteLocation = ({ location }) => {
     if (typeof window !== "undefined") {
       // Check if the conversion function exists
       setHasConversionTracking(
-        typeof window.gtag_report_conversion === "function"
+        typeof window.gtag_report_conversion === "function",
       );
 
       // Set up a MutationObserver to detect when conversion tracking becomes available

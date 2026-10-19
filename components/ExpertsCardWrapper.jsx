@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "../styles/expertsAwait.module.css";
-
+import styles from "../styles/expertsAwait.module.scss";
 export default function ExpertsCardWrapper({ children }) {
   const wrapperRef = useRef(null);
 
@@ -26,7 +25,7 @@ export default function ExpertsCardWrapper({ children }) {
         {
           threshold: [0.5],
           rootMargin: "-33.3% 0px",
-        }
+        },
       );
 
       const cards = wrapperRef.current?.querySelectorAll("[data-card]");

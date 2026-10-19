@@ -1,8 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageInOut.jsx
 
 // Compiled CSS module (source: styles/emailTriageInOut.module.scss)
-import styles from "../../../../styles/emailTriageInOut.module.css";
-
+import styles from "../../../../styles/emailTriageInOut.module.scss";
 // Mail in → triage | mail merge → letters out
 import { InboundOutboundSvg } from "../(svgs)/InboundOutboundSvg";
 
@@ -15,7 +14,9 @@ const EmailTriageInOut = () => {
         <div className={styles.content}>
           <h2 className={styles.heading}>
             Triage the emails coming in.{" "}
-            <span className={styles.accent}>Automate the emails going out.</span>
+            <span className={styles.accent}>
+              Automate the emails going out.
+            </span>
           </h2>
           <p className={styles.lead}>
             AI email triage handles the inbound side of email. Many of our

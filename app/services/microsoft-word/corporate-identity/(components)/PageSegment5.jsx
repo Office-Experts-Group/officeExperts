@@ -4,8 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegment3.module.css";
-
+import styles from "../../../../../styles/pageSegment3.module.scss";
 import template from "../../../../../public/template600x400.webp";
 
 const PageSegment3 = () => {
@@ -26,11 +25,18 @@ const PageSegment3 = () => {
             Secure and Customisable Document Solutions
           </h2>
           <p>
-              We can create professional, <Link href={"/services/microsoft-word/corporate-global-template-solution"}>easy to use templates</Link> that will keep
-              to your company's branding, thus creating a consistent look and a
-              professional feel. One of our designers would be happy to help you
-              with your requirements.
-            </p>
+            We can create professional,{" "}
+            <Link
+              href={
+                "/services/microsoft-word/corporate-global-template-solution"
+              }
+            >
+              easy to use templates
+            </Link>{" "}
+            that will keep to your company's branding, thus creating a
+            consistent look and a professional feel. One of our designers would
+            be happy to help you with your requirements.
+          </p>
           <p>
             If you need a Word template created properly, contact one of our
             designers to discuss your requirements further.

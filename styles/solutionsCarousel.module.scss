@@ -1,5 +1,5 @@
 // styles/solutionsCarousel.module.scss
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 // ── Section — dark background ──────────────────────────────
 .section {

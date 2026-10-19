@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../styles/boringStuff.module.css";
-
+import styles from "../../styles/boringStuff.module.scss";
 import { generateOrganizationSchema } from "../../utils/schemaGenerators";
 
 const schema = {
