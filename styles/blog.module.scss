@@ -251,7 +251,7 @@
   color: $darkGrayText;
 
   &:hover {
-    background-color: color.adjust(darkGrayText, $lightness: -5%);
+    background-color: color.adjust($darkGrayText, $lightness: -5%);
   }
 
   &.active {

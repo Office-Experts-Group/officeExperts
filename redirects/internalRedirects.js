@@ -1,0 +1,71 @@
+// redirects/internalRedirects.js
+// Office Experts pages that moved or merged within officeexperts.com.au.
+// Every rule is permanent (308) and points straight at the final URL, never at another redirect.
+// Sources never end in "/": Next.js strips trailing slashes before matching.
+
+const permanent = (source, destination) => ({
+  source,
+  destination,
+  permanent: true,
+});
+
+module.exports = [
+  // ── Old "by-product-and-technology" URLs ──
+  permanent(
+    "/services/by-product-and-technology/microsoft-dot-net",
+    "/services/microsoft-dot-net",
+  ),
+  permanent(
+    "/services/by-product-and-technology/microsoft-publisher",
+    "/services/microsoft-publisher",
+  ),
+  permanent(
+    "/services/microsoft-access/microsoft-dot-net",
+    "/services/microsoft-dot-net",
+  ),
+
+  // ── Services hub restructure ──
+  // TODO Phase 5.1: when by-business-solution is flattened, change these three
+  // destinations to /services/database-development-and-solutions and
+  // /services/sql-server-and-access-integration, and add the NEW rows from Appendix A1.
+  permanent(
+    "/services/microsoft-office/services/by-business-solution/database-development-and-solutions",
+    "/services/by-business-solution/database-development-and-solutions",
+  ),
+  permanent(
+    "/services/office-and-sql-server-integration",
+    "/services/by-business-solution/sql-server-and-access-integration",
+  ),
+  permanent(
+    "/services/by-business-solution/office-and-sql-server-integration",
+    "/services/by-business-solution/sql-server-and-access-integration",
+  ),
+  permanent("/by-business-solution", "/services"),
+  permanent("/services/by-business-solution", "/services"),
+  permanent("/services/by-office-product", "/services"),
+  permanent("/services/microsoft-office", "/services"),
+
+  // ── Office 365 ──
+  permanent(
+    "/services/microsoft-office-365/office-365-implementation",
+    "/services/microsoft-office-365",
+  ),
+  permanent(
+    "/services/microsoft-office-365/office-365-migration",
+    "/services/microsoft-office-365",
+  ),
+  permanent(
+    "/services/microsoft-office-365/exchange-online-setup-and-support",
+    "/microsoft-support-and-training-australia",
+  ),
+  permanent(
+    "/services/microsoft-office-365/support-and-managed-services",
+    "/microsoft-support-and-training-australia",
+  ),
+
+  // ── Retired services ──
+  permanent(
+    "/services/microsoft-vbscript",
+    "/services/activex-vbscript-migration",
+  ),
+];
