@@ -140,7 +140,7 @@
     color 0.18s ease;
 
   &:hover {
-    color: lighten(#046999, 12%);
+    color: color.adjust($accent, $lightness: 12%);
     border-bottom-color: currentColor;
   }
 }

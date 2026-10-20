@@ -1,4 +1,5 @@
 @use "./globals.scss" as *;
+@use "sass:color";
 
 // ─── Tokens (extend the site palette) ───────────────────────────────────────
 $accent: #046999;
@@ -241,7 +242,7 @@ $border: rgba(0, 0, 0, 0.08);
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: lighten($grayText, 15%);
+  color: color.adjust($grayText, $lightness: 15%);
   margin-bottom: 1rem;
   padding-left: 2rem; // align with list content
 }
@@ -308,7 +309,7 @@ $border: rgba(0, 0, 0, 0.08);
 .serviceNum {
   font-size: 0.65rem;
   font-weight: 700;
-  color: lighten($grayText, 20%);
+  color: color.adjust($grayText, $lightness: 20%);
   letter-spacing: 1px;
   transition: color 0.2s;
 
@@ -321,7 +322,7 @@ $border: rgba(0, 0, 0, 0.08);
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: lighten($grayText, 25%);
+  background: color.adjust($grayText, $lightness: 25%);
   transition:
     background 0.2s,
     transform 0.2s;
@@ -431,7 +432,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 // arrow on the right
 .serviceArrow {
-  color: lighten($grayText, 20%);
+  color: color.adjust($grayText, $lightness: 20%);
   padding-top: 2px;
   flex-shrink: 0;
   transition:

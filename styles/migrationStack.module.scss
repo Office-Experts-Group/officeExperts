@@ -1,5 +1,6 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/migrationStack.module.scss
 @use "./globals.scss" as *;
+@use "sass:map";
 
 // Per-pillar top accent colours -- varied but on-brand
 $pillar-colors: (
@@ -109,16 +110,16 @@ $pillar-colors: (
   }
 
   &:nth-child(1)::before {
-    background: map-get($pillar-colors, 1);
+    background: map.get($pillar-colors, 1);
   }
   &:nth-child(2)::before {
-    background: map-get($pillar-colors, 2);
+    background: map.get($pillar-colors, 2);
   }
   &:nth-child(3)::before {
-    background: map-get($pillar-colors, 3);
+    background: map.get($pillar-colors, 3);
   }
   &:nth-child(4)::before {
-    background: map-get($pillar-colors, 4);
+    background: map.get($pillar-colors, 4);
   }
 
   &:hover {

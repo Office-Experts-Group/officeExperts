@@ -1,4 +1,5 @@
 @use "./globals.scss" as *;
+@use "sass:color";
 
 .contact {
   display: flex;
@@ -404,7 +405,7 @@
     }
 
     &:hover:not(:checked) {
-      border-color: darken($accent, 10%);
+      border-color: color.adjust($accent, $lightness: -6%);
     }
   }
 
@@ -504,7 +505,7 @@
       }
 
       &:hover:not(:checked) {
-        border-color: darken($accent, 10%);
+        border-color: color.adjust($accent, $lightness: -10%);
       }
     }
 

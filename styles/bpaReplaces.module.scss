@@ -1,5 +1,6 @@
 // bpaReplaces.module.scss
 @use "./globals.scss" as *;
+@use "sass:color";
 
 // ── Breakpoints ──────────────────────────────
 $bp-tablet-min: 767px;
@@ -155,7 +156,7 @@ $bp-phone: 449px;
   box-shadow: 0 2px 10px rgba(4, 105, 153, 0.25);
 
   &:hover {
-    background: darken($accent, 6%);
+    background: color.adjust($accent, $lightness: -6%);
     color: #ffffff;
   }
 }
@@ -241,10 +242,10 @@ $bp-phone: 449px;
     position: relative;
 
     .cellBefore {
-      background: darken($before-bg, 1.5%);
+      background: color.adjust($accent, $lightness: -1.5%);
     }
     .cellAfter {
-      background: darken($white, 0.5%);
+      background: color.adjust($accent, $lightness: 0.5%);
     }
   }
 
@@ -372,7 +373,7 @@ $bp-phone: 449px;
 
   &:hover {
     border-bottom-color: $accent;
-    color: darken($accent, 8%);
+    color: color.adjust($accent, $lightness: -8%);
   }
 }
 

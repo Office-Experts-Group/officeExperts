@@ -612,7 +612,8 @@ $cycle-duration: 33s;
 .microLogo {
   filter: brightness(80%);
   scale: 1;
-  // margin: 0 0 0 auto;
+  margin-left: auto;
+  margin-right: 1rem;
   transition: all 0.5s ease;
   @media screen and (min-width: 1200px) and (max-width: 1400px) {
     margin-right: 1rem;
@@ -626,8 +627,6 @@ $cycle-duration: 33s;
   @include phone {
     scale: 0.5;
   }
-  margin-left: auto;
-  margin-right: 1rem;
 }
 
 .microLogoScrolled {

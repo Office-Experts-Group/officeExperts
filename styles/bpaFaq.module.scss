@@ -1,4 +1,5 @@
 // bpaFaq.module.scss
+@use "sass:color";
 
 // ── Tokens ───────────────────────────────────
 $light-bg: #f7f8f9;
@@ -155,7 +156,7 @@ $bp-phone: 449px;
   border-color: $accent;
 
   &:hover {
-    background: darken($accent, 5%);
+    background: color.adjust($accent, $lightness: -5%);
     color: #ffffff;
   }
 }

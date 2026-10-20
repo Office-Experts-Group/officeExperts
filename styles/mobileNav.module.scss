@@ -2,6 +2,7 @@
 
 .mobileNavContainer {
   position: relative;
+  margin-left: auto;
 
   @include deskL {
     display: none;
@@ -18,7 +19,6 @@
   @include phoneLandscape {
     display: flex;
   }
-  margin-left: auto;
 }
 
 .menuButton {
