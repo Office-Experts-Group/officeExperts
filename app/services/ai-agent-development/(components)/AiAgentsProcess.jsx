@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsProcess.module.scss)
-import styles from "../../../../styles/aiAgentsProcess.module.scss";
+import styles from "@/styles/aiAgentsProcess.module.scss";
 // Genuinely sequential, so this is the one numbered list on the page.
 // `body` is a function so steps with inline links can return JSX.
 const steps = [

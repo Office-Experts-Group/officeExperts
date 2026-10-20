@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "../../../styles/payment.module.scss";
+import styles from "@/styles/payment.module.scss";
 
 import { getPaymentConfig } from "../../../utils/paymentSelector";
 
@@ -37,8 +37,8 @@ const SimplifyPaymentForm = ({ params }) => {
     typeof window !== "undefined"
       ? window.location.origin
       : isProduction
-      ? "https://www.officeexperts.com.au"
-      : "http://localhost:3000";
+        ? "https://www.officeexperts.com.au"
+        : "http://localhost:3000";
 
   const redirectUrl = `${baseUrl}/ccp`;
 
@@ -55,7 +55,7 @@ const SimplifyPaymentForm = ({ params }) => {
     const timeout = setTimeout(() => {
       if (isLoading) {
         setFormError(
-          "Payment form could not be loaded. Please refresh the page or try again later."
+          "Payment form could not be loaded. Please refresh the page or try again later.",
         );
         clearInterval(checkScriptLoaded);
       }
@@ -80,7 +80,7 @@ const SimplifyPaymentForm = ({ params }) => {
               errorData.message.includes("unauthorized")
             ) {
               setFormError(
-                "There was an issue with the payment gateway. Please contact support at consult@officeexperts.com.au."
+                "There was an issue with the payment gateway. Please contact support at consult@officeexperts.com.au.",
               );
             }
           } catch (e) {

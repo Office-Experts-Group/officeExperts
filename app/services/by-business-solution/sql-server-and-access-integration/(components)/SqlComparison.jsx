@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlComparison.module.scss)
-import styles from "../../../../../styles/sqlComparison.module.scss";
+import styles from "@/styles/sqlComparison.module.scss";
 // Explainer: whole tables over the network vs queries run on the server
 import { AccessVsSqlSvg } from "../(svgs)/AccessVsSqlSvg";
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Contact from "../../../components/Contact";
 
-import styles from "../../../styles/blogPost.module.scss";
+import styles from "@/styles/blogPost.module.scss";
 
 import why from "../../../public/why600x400.webp";
 import mistake from "../../../public/blog/mistake.webp";

@@ -1,7 +1,7 @@
 // app/services/ai-agent-development/(components)/AiAgentsHero.jsx
 
 // Compiled CSS module (source: styles/aiAgentsHero.module.scss)
-import styles from "../../../../styles/aiAgentsHero.module.scss";
+import styles from "@/styles/aiAgentsHero.module.scss";
 // ── Component ─────────────────────────────────────────────────────────────────
 
 const AiAgentsHero = () => {

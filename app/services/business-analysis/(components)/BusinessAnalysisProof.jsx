@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/businessAnalysisProof.module.scss)
-import styles from "../../../../styles/businessAnalysisProof.module.scss";
+import styles from "@/styles/businessAnalysisProof.module.scss";
 // Every figure comes from a published case study (no invented stats)
 const results = [
   {

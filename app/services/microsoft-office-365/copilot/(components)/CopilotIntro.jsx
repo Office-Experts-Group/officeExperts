@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../../../styles/copilotIntro.module.scss";
+import styles from "@/styles/copilotIntro.module.scss";
 // The five Office apps Copilot integrates with —
 // displayed as anchor links to the detailed app section further down the page
 const apps = [

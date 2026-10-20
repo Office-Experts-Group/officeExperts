@@ -3,7 +3,7 @@ import React from "react";
 
 import integration from "../../../public/integration.webp";
 
-import styles from "../../../styles/intro.module.scss";
+import styles from "@/styles/intro.module.scss";
 const DeskImage = () => {
   return (
     <section className={styles.deskImage} style={{ paddingTop: "3rem" }}>

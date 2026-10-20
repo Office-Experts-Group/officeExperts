@@ -1,7 +1,7 @@
 // app/services/by-business-solution/sql-server-and-access-integration/(components)/SqlSecurityProof.jsx
 
 // Compiled CSS module (source: styles/sqlSecurityProof.module.scss)
-import styles from "../../../../../styles/sqlSecurityProof.module.scss";
+import styles from "@/styles/sqlSecurityProof.module.scss";
 // Dark band: a practical example on the left, a sourced statistic on the right
 const SqlSecurityProof = () => {
   return (

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment.module.scss";
+import styles from "@/styles/pageSegment.module.scss";
 import javascript from "../../../public/javascript.webp";
 
 const PageSegmentMain = () => {

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "../styles/servicesCard.module.scss";
+import styles from "@/styles/servicesCard.module.scss";
 
 export default function CardIntersectionWrapper({ children }) {
   const wrapperRef = useRef(null);
@@ -15,22 +15,22 @@ export default function CardIntersectionWrapper({ children }) {
 
             // Find child elements using the CSS module classes
             const cardImage = entry.target.querySelector(
-              `.${styles.cardImage}`
+              `.${styles.cardImage}`,
             );
             const cardContent = entry.target.querySelector(
-              `.${styles.cardContent}`
+              `.${styles.cardContent}`,
             );
 
             if (cardImage) {
               cardImage.classList.toggle(
                 styles.inViewImage,
-                entry.isIntersecting
+                entry.isIntersecting,
               );
             }
             if (cardContent) {
               cardContent.classList.toggle(
                 styles.inViewContent,
-                entry.isIntersecting
+                entry.isIntersecting,
               );
             }
           }
@@ -39,11 +39,11 @@ export default function CardIntersectionWrapper({ children }) {
       {
         threshold: [0.5],
         rootMargin: "-33.3% 0px",
-      }
+      },
     );
 
     const cards = wrapperRef.current?.querySelectorAll(
-      `[class*="${styles.card}"]`
+      `[class*="${styles.card}"]`,
     );
     cards?.forEach((card) => observer.observe(card));
 

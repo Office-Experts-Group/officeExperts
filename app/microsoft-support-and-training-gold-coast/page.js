@@ -7,7 +7,7 @@ import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 
-import styles from "../../styles/supportPage.module.scss";
+import styles from "@/styles/supportPage.module.scss";
 import goldCoast from "../../public/pageHeros/goldCoast.webp";
 import goldCoastMob from "../../public/pageHeros/mob/goldCoastMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

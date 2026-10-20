@@ -7,7 +7,7 @@ import MobileNavContent from "./MobileNavContent";
 import MobileContact from "./MobileContact";
 import SocialLinks from "../SocialLinks";
 
-import styles from "../../styles/mobileNav.module.scss";
+import styles from "@/styles/mobileNav.module.scss";
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentView, setCurrentView] = useState("main");

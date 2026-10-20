@@ -1,7 +1,7 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/MigrationScenarios.jsx
 
 import Link from "next/link";
-import styles from "../../../../../styles/migrationScenarios.module.scss";
+import styles from "@/styles/migrationScenarios.module.scss";
 const scenarios = [
   {
     num: "01",

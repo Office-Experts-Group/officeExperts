@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/pageSegment.module.scss";
+import styles from "@/styles/pageSegment.module.scss";
 import query from "../../../../public/query600x400.webp";
 
 const PageSegmentMain = () => {

@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/perthServices.module.scss";
+import styles from "@/styles/perthServices.module.scss";
 const services = [
   {
     id: "excel",

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../../../styles/solutionsCarousel.module.scss";
+import styles from "@/styles/solutionsCarousel.module.scss";
 import project1 from "../../../../public/cards/graphHands350x200.webp";
 import project2 from "../../../../public/cards/data350x200.webp";
 import project3 from "../../../../public/350x260/graph.webp";

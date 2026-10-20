@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-import styles from "../styles/header.module.scss";
+import styles from "@/styles/header.module.scss";
 export default function DropdownItem({ item, handleLinkClick }) {
   const dropdownRef = useRef(null);
   const [needsScroll, setNeedsScroll] = useState(false);

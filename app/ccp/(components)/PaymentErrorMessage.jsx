@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import styles from "../../../styles/payment.module.scss";
+import styles from "@/styles/payment.module.scss";
 
 const PaymentErrorMessage = ({
   error,
@@ -53,7 +53,7 @@ Thank you,
 ${customerName}`;
 
     window.location.href = `mailto:accounts@officeexperts.com.au?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
   };
 

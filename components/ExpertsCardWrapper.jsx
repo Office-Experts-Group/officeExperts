@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from "../styles/expertsAwait.module.scss";
+import styles from "@/styles/expertsAwait.module.scss";
 export default function ExpertsCardWrapper({ children }) {
   const wrapperRef = useRef(null);
 

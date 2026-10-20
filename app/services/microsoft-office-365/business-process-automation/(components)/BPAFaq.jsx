@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import { ChevronIcon } from "../(svgs)/ChevronIcon";
 
-import styles from "../../../../../styles/bpaFaq.module.scss";
+import styles from "@/styles/bpaFaq.module.scss";
 const faqs = [
   // ── AI Builder ────────────────────────────
   {

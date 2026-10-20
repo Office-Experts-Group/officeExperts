@@ -1,7 +1,7 @@
 // components/ScrollIndicator.jsx
 "use client";
 import { useState, useEffect } from "react";
-import styles from "../styles/scrollIndicator.module.scss";
+import styles from "@/styles/scrollIndicator.module.scss";
 
 export default function ScrollIndicator() {
   const [isVisible, setIsVisible] = useState(true);

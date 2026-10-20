@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import styles from "../../../../../styles/migrationChallenges.module.scss";
+import styles from "@/styles/migrationChallenges.module.scss";
 const ChevronIcon = () => (
   <svg
     width="16"

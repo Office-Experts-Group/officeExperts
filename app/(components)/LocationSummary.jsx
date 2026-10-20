@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../styles/locationSummary.module.scss";
+import styles from "@/styles/locationSummary.module.scss";
 
 const LocationSummary = ({ location, service }) => {
   return (

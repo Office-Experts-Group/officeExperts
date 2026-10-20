@@ -1,7 +1,7 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/MigrationChallenges.jsx
 "use client";
 import Link from "next/link";
-import styles from "../../../styles/migrationChallenges.module.scss";
+import styles from "@/styles/migrationChallenges.module.scss";
 const challenges = [
   {
     num: "01",

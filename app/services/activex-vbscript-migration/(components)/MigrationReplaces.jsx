@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 import ScrollLine from "./ScrollLine";
-import styles from "../../../../styles/activexReplaces.module.scss";
+import styles from "@/styles/activexReplaces.module.scss";
 // Cross-site links, kept in one place so URLs are easy to maintain.
 const LINKS = {
   excelVba: "https://www.excelexperts.com.au",

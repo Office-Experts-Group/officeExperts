@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
-import styles from "../../../../styles/activexAffectedCheck.module.scss";
+import styles from "@/styles/activexAffectedCheck.module.scss";
 import activeX from "../../../../public/activex.webp";
 import vbScript from "../../../../public/vbScript.webp";
 

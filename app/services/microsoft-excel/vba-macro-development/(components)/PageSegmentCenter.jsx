@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegmentCenter.module.scss";
+import styles from "@/styles/pageSegmentCenter.module.scss";
 import pointing from "../../../../../public/pointing600x400.webp";
 
 const PageSegmentCenter = () => {

@@ -1,7 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageProcess.jsx
 
 // Compiled CSS module (source: styles/emailTriageProcess.module.scss)
-import styles from "../../../../styles/emailTriageProcess.module.scss";
+import styles from "@/styles/emailTriageProcess.module.scss";
 // Genuinely sequential, so this is the one numbered list on the page
 const steps = [
   {

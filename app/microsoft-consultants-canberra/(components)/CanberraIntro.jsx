@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/canberraIntro.module.scss";
+import styles from "@/styles/canberraIntro.module.scss";
 const milestones = [
   { value: "25+", label: "Years established" },
   //   { value: "ACT", label: "Local consultants" },

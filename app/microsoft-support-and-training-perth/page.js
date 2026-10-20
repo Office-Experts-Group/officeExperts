@@ -8,7 +8,7 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/supportPage.module.scss";
+import styles from "@/styles/supportPage.module.scss";
 import perth from "../../public/pageHeros/perth.webp";
 import perthMob from "../../public/pageHeros/mob/perthMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

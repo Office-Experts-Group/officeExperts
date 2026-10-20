@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/copyright.module.scss";
+import styles from "@/styles/copyright.module.scss";
 const Copyright = () => {
   return (
     <div className={styles.copyright}>

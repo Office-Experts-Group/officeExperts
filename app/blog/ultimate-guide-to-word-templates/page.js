@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "../../../styles/wordTemplatesBlog.module.scss";
+import styles from "@/styles/wordTemplatesBlog.module.scss";
 import ServiceHero from "../../../components/ServiceHero";
 
 import word from "../../../public/blog/word-template.webp";

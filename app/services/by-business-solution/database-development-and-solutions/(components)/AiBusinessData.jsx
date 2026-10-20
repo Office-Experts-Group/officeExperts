@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiBusinessData.module.scss)
-import styles from "../../../../../styles/aiBusinessData.module.scss";
+import styles from "@/styles/aiBusinessData.module.scss";
 import { AiDataFlowSvg } from "../(svgs)/AiDataFlowSvg";
 
 const capabilities = [

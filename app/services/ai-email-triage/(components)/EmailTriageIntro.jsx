@@ -1,5 +1,5 @@
 // app/services/ai-email-triage/(components)/EmailTriageIntro.jsx
-import styles from "../../../../styles/emailTriageIntro.module.scss";
+import styles from "@/styles/emailTriageIntro.module.scss";
 // The three examples from the brief, shown as "email in → how AI reads it".
 // `tone` maps to a colour modifier class in the SCSS module.
 const examples = [

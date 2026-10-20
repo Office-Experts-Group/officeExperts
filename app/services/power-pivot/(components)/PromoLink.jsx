@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/promo.module.scss";
+import styles from "@/styles/promo.module.scss";
 
 import computer from "../../../../public/icons/computer.webp";
 
@@ -24,7 +24,11 @@ const Promo = () => {
             </div>
             <div className={`${styles.text} ${styles.textML}`}>
               <h2>Power Pivot and Power Query: A Powerful Pair</h2>
-              <p>Power Pivot works best when combined with Power Query. Power Query handles the cleaning and shaping of your raw data, while Power Pivot enables powerful modeling and analysis.</p>
+              <p>
+                Power Pivot works best when combined with Power Query. Power
+                Query handles the cleaning and shaping of your raw data, while
+                Power Pivot enables powerful modeling and analysis.
+              </p>
             </div>
           </div>
         </AnimateOnScroll>

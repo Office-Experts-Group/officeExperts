@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Contact from "../../../components/Contact";
 
-import styles from "../../../styles/blogPost.module.scss";
+import styles from "@/styles/blogPost.module.scss";
 
 import dan from "../../../public/blog/dan.webp";
 import fields from "../../../public/blog/fields.webp";

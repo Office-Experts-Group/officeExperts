@@ -2,7 +2,7 @@ import React from "react";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegmentSmall.module.scss";
+import styles from "@/styles/pageSegmentSmall.module.scss";
 const PageSegmentSmall = () => {
   return (
     <section className={styles.pageSegmentSmall}>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/testimonialsCard.module.scss";
+import styles from "@/styles/testimonialsCard.module.scss";
 const TestimonialCard = ({ content, name, contact, image, index }) => {
   const isAboveFold = index < 3;
 

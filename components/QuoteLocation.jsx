@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 
-import styles from "../styles/contact.module.scss";
+import styles from "@/styles/contact.module.scss";
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const VALID_FILE_TYPES = [
   "application/pdf",

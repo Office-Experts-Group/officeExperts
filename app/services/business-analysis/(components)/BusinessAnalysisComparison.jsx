@@ -1,7 +1,7 @@
 // app/services/business-analysis/(components)/BusinessAnalysisComparison.jsx
 
 // Compiled CSS module (source: styles/businessAnalysisComparison.module.scss)
-import styles from "../../../../styles/businessAnalysisComparison.module.scss";
+import styles from "@/styles/businessAnalysisComparison.module.scss";
 // Column order matches the <thead>. The last column is ours, so it gets the
 // .ours treatment. Kept as a real <table> because answer engines lift
 // comparison tables well.

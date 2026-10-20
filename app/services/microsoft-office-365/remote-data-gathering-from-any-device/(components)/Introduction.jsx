@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import ConnectionDiagram from "../(svgs)/ConnectionDiagram";
 
-import styles from "../../../../../styles/rdgIntroduction.module.scss";
+import styles from "@/styles/rdgIntroduction.module.scss";
 const stats = [
   { value: "900+", label: "Microsoft 365 connectors available" },
   { value: "Real-time", label: "data sync across all devices" },

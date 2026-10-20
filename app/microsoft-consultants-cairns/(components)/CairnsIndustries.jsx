@@ -8,7 +8,7 @@ import React from "react";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/cairnsIndustries.module.scss";
+import styles from "@/styles/cairnsIndustries.module.scss";
 const industries = [
   {
     id: "tourism",

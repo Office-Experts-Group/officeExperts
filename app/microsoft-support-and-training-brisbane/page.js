@@ -7,7 +7,7 @@ import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 
-import styles from "../../styles/supportPage.module.scss";
+import styles from "@/styles/supportPage.module.scss";
 import brisbane from "../../public/pageHeros/brisbane.webp";
 import brisbaneMob from "../../public/pageHeros/mob/brisbaneMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

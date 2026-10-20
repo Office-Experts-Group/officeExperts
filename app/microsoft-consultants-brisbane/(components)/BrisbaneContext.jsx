@@ -4,7 +4,7 @@ import React from "react";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/brisbaneContext.module.scss";
+import styles from "@/styles/brisbaneContext.module.scss";
 // Brisbane's key industry verticals — genuinely local content for SEO
 const industries = [
   {

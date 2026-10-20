@@ -4,7 +4,7 @@ import Image from "next/image";
 import ServicesCard from "../../../../components/ServicesCard";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/services.module.scss";
+import styles from "@/styles/services.module.scss";
 import vba from "../../../../public/microsoft/vbaNoBG.webp";
 import custom from "../../../../public/microsoft/excelCustomNoBG.webp";
 import formula from "../../../../public/microsoft/formulaNoBG.webp";

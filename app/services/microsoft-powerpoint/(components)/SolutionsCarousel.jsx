@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss (shared with the other carousels)
-import styles from "../../../../styles/solutionsCarousel.module.scss";
+import styles from "@/styles/solutionsCarousel.module.scss";
 // Inline SVG icon components — each renders a stroke icon using currentColor
 import { SlideTemplateIcon } from "../(svgs)/SlideTemplateIcon";
 import { SlideRedesignIcon } from "../(svgs)/SlideRedesignIcon";

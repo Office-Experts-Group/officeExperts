@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import styles from "../../../../styles/querySegmentMain.module.scss";
+import styles from "@/styles/querySegmentMain.module.scss";
 import WhatWeDo from "../(svgs)/WhatWeDo";
 
 const QuerySegmentMain = () => {

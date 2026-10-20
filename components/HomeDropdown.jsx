@@ -4,7 +4,7 @@ import { navigationData } from "../navigationData";
 
 import DropdownItem from "./DropdownItem";
 
-import styles from "../styles/header.module.scss";
+import styles from "@/styles/header.module.scss";
 export default function HomeDropdown() {
   // Directly use the home items from navigationData
   const homeItems = navigationData.home.items;

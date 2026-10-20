@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import PhoneLink from "./PhoneLink";
 
-import styles from "../styles/header.module.scss";
+import styles from "@/styles/header.module.scss";
 import maps from "../public/icons/mapsBlue.webp";
 import msg from "../public/icons/msgBlue.webp";
 import emailSlide from "../public/icons/emailSlideBlue.webp";

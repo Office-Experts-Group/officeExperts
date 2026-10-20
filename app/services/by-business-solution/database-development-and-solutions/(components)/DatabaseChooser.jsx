@@ -5,7 +5,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/databaseChooser.module.scss)
-import styles from "../../../../../styles/databaseChooser.module.scss";
+import styles from "@/styles/databaseChooser.module.scss";
 // Column headings, each linking to the page that covers that platform in depth
 const platforms = [
   { name: "Microsoft Access", href: "https://www.accessexperts.com.au" },

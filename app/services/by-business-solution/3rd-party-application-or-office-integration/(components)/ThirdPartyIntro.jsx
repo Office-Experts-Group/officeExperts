@@ -6,7 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyIntro.module.scss
-import styles from "../../../../../styles/thirdPartyIntro.module.scss";
+import styles from "@/styles/thirdPartyIntro.module.scss";
 // Standalone SVG: Office apps <-> integration layer <-> 3rd party apps
 import integrationHub from "../(svgs)/integrationHub.svg";
 

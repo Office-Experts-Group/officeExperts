@@ -14,7 +14,7 @@ import Link from "next/link";
 // Turns a card code (e.g. "VISA") into a friendly label
 import { getCardDisplayName } from "../../../utils/cardTypeUtils";
 
-import styles from "../../../styles/payment.module.scss";
+import styles from "@/styles/payment.module.scss";
 
 /**
  * Converts a cents value (string or number) to a "$0.00" string.

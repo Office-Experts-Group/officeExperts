@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/dashboardsDataSources.module.scss)
-import styles from "../../../../../styles/dashboardsDataSources.module.scss";
+import styles from "@/styles/dashboardsDataSources.module.scss";
 // Decorative flow diagram stored with the route
 import { DataFlowSvg } from "../(svgs)/DataFlowSvg";
 

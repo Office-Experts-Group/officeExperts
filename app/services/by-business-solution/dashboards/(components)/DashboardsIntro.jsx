@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module from the shared styles directory (source: styles/dashboardsIntro.module.scss)
-import styles from "../../../../../styles/dashboardsIntro.module.scss";
+import styles from "@/styles/dashboardsIntro.module.scss";
 // Decorative illustration stored with the route
 import { DashboardSvg } from "../(svgs)/DashboardSvg";
 

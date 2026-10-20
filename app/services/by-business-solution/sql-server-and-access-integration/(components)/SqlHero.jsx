@@ -1,7 +1,7 @@
 // app/services/by-business-solution/sql-server-and-access-integration/(components)/SqlHero.jsx
 
 // Compiled CSS module (source: styles/sqlHero.module.scss)
-import styles from "../../../../../styles/sqlHero.module.scss";
+import styles from "@/styles/sqlHero.module.scss";
 // Illustration of Office front ends sharing one SQL Server database
 import { SqlFrontBackSvg } from "../(svgs)/SqlFrontBackSvg";
 

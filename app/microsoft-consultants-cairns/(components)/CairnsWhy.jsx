@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/cairnsWhy.module.scss";
+import styles from "@/styles/cairnsWhy.module.scss";
 // Service area tags for Far North Queensland coverage
 const regions = [
   "Cairns CBD",

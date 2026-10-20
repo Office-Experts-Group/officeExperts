@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment3.module.scss";
+import styles from "@/styles/pageSegment3.module.scss";
 const WebMobileIntegrationSolution = () => {
   const checkItems = [
     {

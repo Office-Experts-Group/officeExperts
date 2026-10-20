@@ -4,7 +4,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import { EmailTriageSvg } from "../(svgs)/EmailTriageSvg";
 
-import styles from "../../../../../styles/bpaEmailTriage.module.scss";
+import styles from "@/styles/bpaEmailTriage.module.scss";
 
 // ─────────────────────────────────────────────
 // Inbox type chips

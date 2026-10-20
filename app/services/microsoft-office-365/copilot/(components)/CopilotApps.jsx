@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/copilotApps.module.scss";
+import styles from "@/styles/copilotApps.module.scss";
 // ─────────────────────────────────────────────
 // App data — each entry maps to a card with anchor id
 // matching the links in CopilotIntro's app panel

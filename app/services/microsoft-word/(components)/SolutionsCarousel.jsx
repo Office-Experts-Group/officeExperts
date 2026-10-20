@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "../../../../styles/solutionsCarousel.module.scss";
+import styles from "@/styles/solutionsCarousel.module.scss";
 import keyboard from "../../../../public/350x260/keyboard.webp";
 import coder from "../../../../public/350x260/coder.webp";
 import dashboard from "../../../../public/350x260/dashboard.webp";

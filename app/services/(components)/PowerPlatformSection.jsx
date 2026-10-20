@@ -1,6 +1,6 @@
 // /app/services/(components)/PowerPlatformSection.jsx
 // Power Platform: four large product tiles, then a ruled multi-column list for the supporting services.
-import styles from "../../../styles/powerPlatformSection.module.scss";
+import styles from "@/styles/powerPlatformSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { PowerPlatformIcon } from "../(svgs)/PowerPlatformIcon";
 import { PowerAppsIcon } from "../(svgs)/PowerAppsIcon";

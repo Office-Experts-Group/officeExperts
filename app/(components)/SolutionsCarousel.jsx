@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss
-import styles from "../../styles/solutionsCarousel.module.scss";
+import styles from "@/styles/solutionsCarousel.module.scss";
 // Inline SVG icon components — each renders a stroke icon using currentColor
 import { BusinessAnalysisIcon } from "../(svgs)/BusinessAnalysisIcon";
 import { AiAgentIcon } from "../(svgs)/AiAgentIcon";

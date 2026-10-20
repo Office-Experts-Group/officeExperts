@@ -1,6 +1,6 @@
 // /app/services/(components)/PowerPointSection.jsx
 // PowerPoint and Publisher: each service is a 16:9 "slide", with Publisher as a dashed extra slide.
-import styles from "../../../styles/powerPointSection.module.scss";
+import styles from "@/styles/powerPointSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { PowerPointIcon } from "../(svgs)/PowerPointIcon";
 

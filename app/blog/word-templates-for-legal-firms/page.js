@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Contact from "../../../components/Contact";
 
-import styles from "../../../styles/blogPost.module.scss";
+import styles from "@/styles/blogPost.module.scss";
 
 import dan from "../../../public/blog/dan.webp";
 import legal from "../../../public/blog/legal.webp";

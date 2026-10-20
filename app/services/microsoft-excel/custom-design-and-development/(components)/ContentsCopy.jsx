@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../../../../styles/contentsComponent.module.scss";
+import styles from "@/styles/contentsComponent.module.scss";
 import Link from "next/link";
 
 const ContentsCopy = () => {

@@ -2,7 +2,7 @@
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 import { AustralasiaMapSvg } from "../(svgs)/AustralasiaMapSvg";
-import styles from "../../../styles/goodToKnow.module.scss";
+import styles from "@/styles/goodToKnow.module.scss";
 const GoodToKnow = () => {
   return (
     <section className={styles.section}>

@@ -3,7 +3,7 @@ import React from "react";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/canberraContext.module.scss";
+import styles from "@/styles/canberraContext.module.scss";
 const sectors = [
   {
     id: "government",

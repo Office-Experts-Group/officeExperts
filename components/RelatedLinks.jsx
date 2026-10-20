@@ -6,7 +6,7 @@ import Link from "next/link";
 // Image resizes the 700 x 450 case study images down to the displayed size
 import Image from "next/image";
 // Compiled CSS module, built from styles/relatedLinks.module.scss
-import styles from "../styles/relatedLinks.module.scss";
+import styles from "@/styles/relatedLinks.module.scss";
 // Intrinsic size of the source case study images. Next.js uses these for the
 // aspect ratio only; the displayed size is set in the stylesheet.
 const IMAGE_WIDTH = 350;

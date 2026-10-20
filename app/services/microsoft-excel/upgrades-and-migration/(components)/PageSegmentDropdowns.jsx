@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/pageSegmentDropdowns.module.scss";
+import styles from "@/styles/pageSegmentDropdowns.module.scss";
 import hand from "../../../../../public/hand600x400.webp";
 import promo from "../../../../../public/promo.webp";
 

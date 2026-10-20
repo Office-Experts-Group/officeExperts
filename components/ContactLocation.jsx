@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 
-import styles from "../styles/contact.module.scss";
+import styles from "@/styles/contact.module.scss";
 const ContactLocation = ({ location }) => {
   const [formData, setFormData] = useState({
     location: location,

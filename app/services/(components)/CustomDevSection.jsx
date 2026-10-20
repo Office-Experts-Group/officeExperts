@@ -1,6 +1,6 @@
 // /app/services/(components)/CustomDevSection.jsx
 // Custom development: a row of technology chips above a terminal style panel listing the services.
-import styles from "../../../styles/customDevSection.module.scss";
+import styles from "@/styles/customDevSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { CustomDevIcon } from "../(svgs)/CustomDevIcon";
 

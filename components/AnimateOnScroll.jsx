@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../styles/animate.module.scss";
+import styles from "@/styles/animate.module.scss";
 const AnimateOnScroll = ({
   children,
   animation = "fade-up",

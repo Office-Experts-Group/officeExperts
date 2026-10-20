@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/businessAnalysisAreas.module.scss)
-import styles from "../../../../styles/businessAnalysisAreas.module.scss";
+import styles from "@/styles/businessAnalysisAreas.module.scss";
 // Six business areas around one hub ("one joined-up picture")
 import { WorkflowHubSvg } from "../(svgs)/WorkflowHubSvg";
 

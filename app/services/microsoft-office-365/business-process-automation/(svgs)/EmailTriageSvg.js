@@ -1,4 +1,4 @@
-import styles from "../../../../../styles/bpaEmailTriage.module.scss";
+import styles from "@/styles/bpaEmailTriage.module.scss";
 
 // ─────────────────────────────────────────────
 // Email Triage SVG

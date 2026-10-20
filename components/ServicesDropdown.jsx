@@ -1,7 +1,7 @@
 import React from "react";
 import { navigationData } from "../navigationData";
 import DropdownItem from "./DropdownItem";
-import styles from "../styles/header.module.scss";
+import styles from "@/styles/header.module.scss";
 export default function ServicesDropdown({ handleLinkClick }) {
   const serviceItems = navigationData.services.items;
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 import BrisbaneMap from "../(svgs)/BrisbaneMap";
 
-import styles from "../../../styles/brisbaneIntro.module.scss";
+import styles from "@/styles/brisbaneIntro.module.scss";
 const BrisbaneIntro = () => (
   <section className={styles.section}>
     <div className={styles.split}>

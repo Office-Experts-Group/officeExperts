@@ -1,7 +1,7 @@
 // /app/services/(components)/WordSection.jsx
 // Word: each group of services is styled as a sheet of paper with a folded corner.
 // Each item is one link. Its short description opens on hover or keyboard focus (pure CSS, so it stays server rendered).
-import styles from "../../../styles/wordSection.module.scss";
+import styles from "@/styles/wordSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { WordIcon } from "../(svgs)/WordIcon";
 import { ArrowIcon } from "../(svgs)/ArrowIcon";

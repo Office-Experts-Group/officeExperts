@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlOffice.module.scss)
-import styles from "../../../../../styles/sqlOffice.module.scss";
+import styles from "@/styles/sqlOffice.module.scss";
 // Content folded in from the old Office and SQL Server Integration page.
 // Each card carries descriptive, varied anchor text for its internal links.
 const solutions = [

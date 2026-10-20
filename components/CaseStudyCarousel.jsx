@@ -5,7 +5,7 @@ import RelatedLinks from "./RelatedLinks";
 import { caseStudies } from "../app/case-studies/caseStudies";
 import { cardCopy } from "../app/case-studies/caseStudyCardCopy";
 
-import styles from "../styles/caseStudyCarousel.module.scss";
+import styles from "@/styles/caseStudyCarousel.module.scss";
 // Case study pages and images live on this domain, so every other Office
 // Experts Group site links to it. On officeexperts.com.au itself pass
 // baseUrl="" to keep links and images on the same domain.

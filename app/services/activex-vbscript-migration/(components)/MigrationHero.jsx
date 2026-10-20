@@ -1,7 +1,7 @@
 // app/services/activex-vbscript-migration/(components)/MigrationHero.jsx
 
 import Link from "next/link";
-import styles from "../../../../styles/activexHero.module.scss";
+import styles from "@/styles/activexHero.module.scss";
 // Rollout milestones shown in the status strip. Kept as data so the
 // dates are easy to update if Microsoft revises the timeline again.
 const milestones = [

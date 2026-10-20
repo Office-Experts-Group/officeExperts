@@ -6,7 +6,7 @@ import { useState } from "react";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/perthContext.module.scss";
+import styles from "@/styles/perthContext.module.scss";
 // WA industry verticals — genuinely local content for SEO differentiation
 const industries = [
   {

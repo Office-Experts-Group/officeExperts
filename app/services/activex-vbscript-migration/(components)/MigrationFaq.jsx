@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 import { ChevronIcon } from "../(svgs)/ChevronIcon";
-import styles from "../../../../styles/activexFaq.module.scss";
+import styles from "@/styles/activexFaq.module.scss";
 const faqs = [
   {
     id: "macros-removed",

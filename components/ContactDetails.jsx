@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import styles from "../styles/servicesCard.module.scss";
+import styles from "@/styles/servicesCard.module.scss";
 const ContactDetails = () => {
   return (
     <div className={styles.contactCardWrapper}>

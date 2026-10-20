@@ -1,7 +1,7 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/MigrationPaths.jsx
 
 import Link from "next/link";
-import styles from "../../../styles/migrationPaths.module.scss";
+import styles from "@/styles/migrationPaths.module.scss";
 const paths = [
   {
     id: "upgrade",

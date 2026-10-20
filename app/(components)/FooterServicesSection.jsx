@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "../../styles/footerServices.module.scss";
+import styles from "@/styles/footerServices.module.scss";
 
 const FooterServicesSection = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);

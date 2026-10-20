@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../styles/serviceHero.module.scss";
+import styles from "@/styles/serviceHero.module.scss";
 const ServiceHero = ({
   title,
   desktopImage,

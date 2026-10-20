@@ -1,7 +1,7 @@
 // app/services/microsoft-office/upgrades-and-migration/(components)/MigrationProblem.jsx
 
 import Link from "next/link";
-import styles from "../../../styles/migrationProblem.module.scss";
+import styles from "@/styles/migrationProblem.module.scss";
 const signs = [
   {
     title: "Spreadsheets doing the job of a database",

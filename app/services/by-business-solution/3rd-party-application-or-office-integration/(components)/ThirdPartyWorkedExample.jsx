@@ -10,7 +10,7 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import { getCaseStudyBySlug } from "../../../../case-studies/caseStudies";
 
 // Compiled CSS from styles/thirdPartyWorkedExample.module.scss
-import styles from "../../../../../styles/thirdPartyWorkedExample.module.scss";
+import styles from "@/styles/thirdPartyWorkedExample.module.scss";
 import Image from "next/image";
 
 // Change this slug to feature a different case study. When a Xero, MYOB or

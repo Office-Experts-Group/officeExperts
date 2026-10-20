@@ -1,7 +1,7 @@
 // app/services/ai-agent-development/(components)/AiAgentsGovernance.jsx
 
 // Compiled CSS module (source: styles/aiAgentsGovernance.module.scss)
-import styles from "../../../../styles/aiAgentsGovernance.module.scss";
+import styles from "@/styles/aiAgentsGovernance.module.scss";
 // TODO before go-live: confirm with the dev team which hosting and residency
 // statements can be made. Copy below only claims what the case studies support
 // (tenant hosting, Entra ID sign-in, audit trails, approval steps) and makes no

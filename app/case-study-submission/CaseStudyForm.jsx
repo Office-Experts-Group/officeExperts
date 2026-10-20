@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 
-import styles from "../../styles/caseStudySubmission.module.scss";
+import styles from "@/styles/caseStudySubmission.module.scss";
 // Fields kept in one state object rather than separate useState calls,
 // since they're all plain text inputs submitted together as one payload.
 const initialFormState = {

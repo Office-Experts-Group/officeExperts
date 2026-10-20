@@ -7,7 +7,7 @@ import { Capture } from "../(svgs)/Capture";
 import { Connect } from "../(svgs)/Connect";
 import { Act } from "../(svgs)/Act";
 
-import styles from "../../../../../styles/rdgHowItWorks.module.scss";
+import styles from "@/styles/rdgHowItWorks.module.scss";
 const steps = [
   {
     number: "01",

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../../../styles/copilotValue.module.scss";
+import styles from "@/styles/copilotValue.module.scss";
 // ─────────────────────────────────────────────
 // Audience segments — each describes a team type
 // and the value they get from Copilot

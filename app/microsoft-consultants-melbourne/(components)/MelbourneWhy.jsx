@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/melbourneWhy.module.scss";
+import styles from "@/styles/melbourneWhy.module.scss";
 const reasons = [
   {
     id: "established",

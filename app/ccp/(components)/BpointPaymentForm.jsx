@@ -8,7 +8,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "../../../styles/payment.module.scss";
+import styles from "@/styles/payment.module.scss";
 // detectCardType: works out Visa/Mastercard/Amex etc. from the card's BIN
 // getCardDisplayName: turns that code into a friendly label for the badge
 import {

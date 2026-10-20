@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment4.module.scss";
+import styles from "@/styles/pageSegment4.module.scss";
 import eyes from "../../../public/eyes600x394.webp";
 
 const Segment4Repeat = () => {

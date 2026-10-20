@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/appDevIntro.module.scss)
-import styles from "../../../../../styles/appDevIntro.module.scss";
+import styles from "@/styles/appDevIntro.module.scss";
 // Each item is a problem people arrive with, so the copy matches what they search for
 const problems = [
   {

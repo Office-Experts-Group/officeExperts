@@ -1,6 +1,6 @@
 // /app/services/(components)/ServicesFaq.jsx
 // FAQ built on native <details> elements, so it works without client JavaScript.
-import styles from "../../../styles/servicesFaq.module.scss";
+import styles from "@/styles/servicesFaq.module.scss";
 
 const ServicesFaq = ({ data }) => {
   const { eyebrow, title, items } = data;

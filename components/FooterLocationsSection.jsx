@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-import styles from "../styles/footerLocations.module.scss";
+import styles from "@/styles/footerLocations.module.scss";
 
 const locationsByState = {
   "New South Wales": {

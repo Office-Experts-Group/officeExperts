@@ -7,7 +7,7 @@ import Image from "next/image";
 import Contact from "../../components/Contact";
 import CTAMain from "../(components)/CTAMain";
 
-import styles from "../../styles/blog.module.scss";
+import styles from "@/styles/blog.module.scss";
 
 import { blogPosts } from "./blogPosts";
 

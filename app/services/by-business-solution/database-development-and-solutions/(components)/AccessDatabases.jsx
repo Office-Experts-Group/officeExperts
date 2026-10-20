@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/accessDatabases.module.scss)
-import styles from "../../../../../styles/accessDatabases.module.scss";
+import styles from "@/styles/accessDatabases.module.scss";
 import { ExcelToAccessSvg } from "../(svgs)/ExcelToAccessSvg";
 
 const ACCESS_SITE = "https://www.accessexperts.com.au";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
-import styles from "../styles/scrollBtn.module.scss";
+import styles from "@/styles/scrollBtn.module.scss";
 const ScrollBtn = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);

@@ -1,7 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageComparison.jsx
 
 // Compiled CSS module (source: styles/emailTriageComparison.module.scss)
-import styles from "../../../../styles/emailTriageComparison.module.scss";
+import styles from "@/styles/emailTriageComparison.module.scss";
 // Same icons as the approach cards, so each column is instantly recognisable
 import { CopilotInboxSvg } from "../(svgs)/CopilotInboxSvg";
 import { FlowTriageSvg } from "../(svgs)/FlowTriageSvg";

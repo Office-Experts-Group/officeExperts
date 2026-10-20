@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/sydneyServices.module.scss";
+import styles from "@/styles/sydneyServices.module.scss";
 import WordSVG from "../(svgs)/WordSVG";
 
 const services = [

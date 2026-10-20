@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import styles from "../../styles/boringStuff.module.scss";
+import styles from "@/styles/boringStuff.module.scss";
 import ServiceHero from "../../components/ServiceHero";
 
 import handShake from "../../public/pageHeros/handShake.webp";

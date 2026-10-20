@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsCta.module.scss)
-import styles from "../../../../styles/aiAgentsCta.module.scss";
+import styles from "@/styles/aiAgentsCta.module.scss";
 // ── Component ─────────────────────────────────────────────────────────────────
 // Full-width accent band. The heading is split so the second clause carries
 // the weight.

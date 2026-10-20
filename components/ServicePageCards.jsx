@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../styles/servicePageCards.module.scss";
+import styles from "@/styles/servicePageCards.module.scss";
 // Import icons
 import stuckIcon from "../public/icons/computerBlue.webp";
 import issuesIcon from "../public/icons/supportBlue.webp";

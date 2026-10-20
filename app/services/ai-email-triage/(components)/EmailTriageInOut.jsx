@@ -1,7 +1,7 @@
 // app/services/ai-email-triage/(components)/EmailTriageInOut.jsx
 
 // Compiled CSS module (source: styles/emailTriageInOut.module.scss)
-import styles from "../../../../styles/emailTriageInOut.module.scss";
+import styles from "@/styles/emailTriageInOut.module.scss";
 // Mail in → triage | mail merge → letters out
 import { InboundOutboundSvg } from "../(svgs)/InboundOutboundSvg";
 

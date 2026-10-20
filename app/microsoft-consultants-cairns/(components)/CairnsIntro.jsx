@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/cairnsIntro.module.scss";
+import styles from "@/styles/cairnsIntro.module.scss";
 // Key stats displayed in the strip below the headline
 const stats = [
   { value: "25+", label: "Years in business" },

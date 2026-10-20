@@ -9,7 +9,7 @@ import { PowerAppsVisual } from "../(svgs)/PowerAppsVisual";
 import { LogicAppsVisual } from "../(svgs)/LogicAppsVisual";
 import { ApiVisual } from "../(svgs)/ApiVisual";
 
-import styles from "../../../../../styles/rdgCapabilities.module.scss";
+import styles from "@/styles/rdgCapabilities.module.scss";
 const cards = [
   {
     id: "power-apps",

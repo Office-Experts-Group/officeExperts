@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/queryProcess.module.scss";
+import styles from "@/styles/queryProcess.module.scss";
 
 // ── Process steps ─────────────────────────────────────────
 const steps = [

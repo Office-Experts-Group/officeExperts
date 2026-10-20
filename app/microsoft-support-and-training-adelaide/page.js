@@ -7,7 +7,7 @@ import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 
-import styles from "../../styles/supportPage.module.scss";
+import styles from "@/styles/supportPage.module.scss";
 import adelaide from "../../public/pageHeros/adelaide.webp";
 import adelaideMob from "../../public/pageHeros/mob/adelaideMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

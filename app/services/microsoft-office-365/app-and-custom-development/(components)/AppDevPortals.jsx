@@ -1,7 +1,7 @@
 // app/services/microsoft-office-365/app-and-custom-development/(components)/AppDevPortals.jsx
 
 // Compiled CSS module (source: styles/appDevPortals.module.scss)
-import styles from "../../../../../styles/appDevPortals.module.scss";
+import styles from "@/styles/appDevPortals.module.scss";
 // A portal joined to a CMS, a CRM and shared data
 import { PortalSvg } from "../(svgs)/PortalSvg";
 

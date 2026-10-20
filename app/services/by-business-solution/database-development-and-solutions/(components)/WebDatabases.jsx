@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/webDatabases.module.scss)
-import styles from "../../../../../styles/webDatabases.module.scss";
+import styles from "@/styles/webDatabases.module.scss";
 import { WebStackSvg } from "../(svgs)/WebStackSvg";
 
 const engines = [

@@ -7,7 +7,7 @@ import Promo from "../../components/Promo";
 import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 
-import styles from "../../styles/supportTrainingHub.module.scss";
+import styles from "@/styles/supportTrainingHub.module.scss";
 import australia from "../../public/pageHeros/australia.webp";
 import australiaMob from "../../public/pageHeros/mob/australiaMob.webp";
 

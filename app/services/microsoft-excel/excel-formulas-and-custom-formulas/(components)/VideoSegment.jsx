@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../../../../styles/videoSegment.module.scss";
+import styles from "@/styles/videoSegment.module.scss";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 const VideoSegment = () => {

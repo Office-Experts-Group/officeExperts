@@ -1,7 +1,7 @@
 // app/services/by-business-solution/sql-server-and-access-integration/(components)/SqlProcess.jsx
 
 // Compiled CSS module (source: styles/sqlProcess.module.scss)
-import styles from "../../../../../styles/sqlProcess.module.scss";
+import styles from "@/styles/sqlProcess.module.scss";
 // Genuinely sequential, so this is the one numbered list on the page
 const steps = [
   {

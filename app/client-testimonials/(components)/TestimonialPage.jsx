@@ -5,7 +5,7 @@ import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 import { filterAndSortTestimonials } from "../../../utils/filterTestimonials";
 
-import styles from "../../../styles/testimonialPage.module.scss";
+import styles from "@/styles/testimonialPage.module.scss";
 
 const TestimonialPage = ({ testimonials }) => {
   const validTestimonials = filterAndSortTestimonials(testimonials, "office");

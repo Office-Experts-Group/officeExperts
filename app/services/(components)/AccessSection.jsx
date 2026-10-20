@@ -1,7 +1,7 @@
 // /app/services/(components)/AccessSection.jsx
 // Access and databases: a real data table, with a dark header row like a database view.
 // On small screens the table collapses to stacked rows (handled in the stylesheet).
-import styles from "../../../styles/accessSection.module.scss";
+import styles from "@/styles/accessSection.module.scss";
 import ServiceLink from "./ServiceLink";
 import { AccessIcon } from "../(svgs)/AccessIcon";
 

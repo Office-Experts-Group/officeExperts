@@ -2,7 +2,7 @@
 import React from "react";
 
 // Compiled CSS module (built from styles/locationsIntro.module.scss)
-import styles from "../../../styles/locationsIntro.module.scss";
+import styles from "@/styles/locationsIntro.module.scss";
 // Single figure in the stats row
 const Stat = ({ value, label }) => (
   <li className={styles.stat}>

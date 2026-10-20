@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Script from "next/script";
-import styles from "../styles/cookieConsent.module.scss";
+import styles from "@/styles/cookieConsent.module.scss";
 // Google Analytics ID for Office Experts
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PPD9KDBZCN";
 // Google Ads Conversion ID and Label (same across all sites)

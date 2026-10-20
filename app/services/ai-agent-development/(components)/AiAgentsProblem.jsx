@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/aiAgentsProblem.module.scss)
-import styles from "../../../../styles/aiAgentsProblem.module.scss";
+import styles from "@/styles/aiAgentsProblem.module.scss";
 // Symptoms drawn from the agent case studies. Unordered, so no numbering.
 const symptoms = [
   {

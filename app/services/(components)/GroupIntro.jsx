@@ -3,7 +3,7 @@
 // then gives a one line overview of each service area.
 // The overview tiles are anchor links that jump to the matching section further down the page.
 import Link from "next/link";
-import styles from "../../../styles/groupIntro.module.scss";
+import styles from "@/styles/groupIntro.module.scss";
 import ServiceLink from "./ServiceLink";
 import { ArrowIcon } from "../(svgs)/ArrowIcon";
 import { AiAgentsIcon } from "../(svgs)/AiAgentsIcon";

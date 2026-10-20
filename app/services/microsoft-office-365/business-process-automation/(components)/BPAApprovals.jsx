@@ -4,7 +4,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import { ApprovalFlowSvg } from "../(svgs)/ApprovalFlowSvg";
 
-import styles from "../../../../../styles/bpaApprovals.module.scss";
+import styles from "@/styles/bpaApprovals.module.scss";
 const steps = [
   {
     index: "01",

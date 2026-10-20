@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/promo.module.scss";
+import styles from "@/styles/promo.module.scss";
 import computer from "../../../../../public/icons/computer.webp";
 
 const Promo = ({ h2, p }) => {

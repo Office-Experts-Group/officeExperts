@@ -8,7 +8,7 @@ import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
-import styles from "../../styles/supportPage.module.scss";
+import styles from "@/styles/supportPage.module.scss";
 import richmond from "../../public/pageHeros/richmond.webp";
 import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";

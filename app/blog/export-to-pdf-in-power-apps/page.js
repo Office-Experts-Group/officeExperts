@@ -5,7 +5,7 @@ import Image from "next/image";
 import CodeBlock from "../../../components/CodeBlock";
 import Contact from "../../../components/Contact";
 
-import styles from "../../../styles/blogPost.module.scss";
+import styles from "@/styles/blogPost.module.scss";
 
 import marcello from "../../../public/team/marcello.webp";
 

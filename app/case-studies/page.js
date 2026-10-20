@@ -6,7 +6,7 @@ import CaseStudyRow from "./(components)/CaseStudyRow";
 import ServiceHero from "../../components/ServiceHero";
 import Contact from "../../components/Contact";
 
-import styles from "../../styles/caseStudies.module.scss";
+import styles from "@/styles/caseStudies.module.scss";
 import caseStudiesPic from "../../public/pageHeros/caseStudies.webp";
 import caseStudiesPicMob from "../../public/pageHeros/mob/caseStudiesMob.webp";
 

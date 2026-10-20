@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/sydneyIntro.module.scss";
+import styles from "@/styles/sydneyIntro.module.scss";
 const stats = [
   { value: "25+", label: "Years in business" },
   { value: "100%", label: "Australian owned" },

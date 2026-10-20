@@ -1,7 +1,7 @@
 // app/services/business-analysis/(components)/BusinessAnalysisValue.jsx
 import Link from "next/link";
 
-import styles from "../../../../styles/businessAnalysisValue.module.scss";
+import styles from "@/styles/businessAnalysisValue.module.scss";
 const teams = [
   { label: "Word", href: "https://www.wordexperts.com.au" },
   { label: "Excel", href: "https://www.excelexperts.com.au" },

@@ -4,7 +4,7 @@ import Image from "next/image";
 import ServicesCard from "../../../../components/ServicesCard";
 import AnimateOnScroll from "../../../../components/AnimateOnScroll";
 
-import styles from "../../../../styles/services.module.scss";
+import styles from "@/styles/services.module.scss";
 import corporate from "../../../../public/microsoft/corporateNoBG.webp";
 import word from "../../../../public/microsoft/wordNoBG.webp";
 import accessibility from "../../../../public/microsoft/accessibilityNoBG.webp";

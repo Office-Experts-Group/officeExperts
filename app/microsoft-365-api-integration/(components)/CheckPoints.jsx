@@ -2,7 +2,7 @@ import React from "react";
 
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment4.module.scss";
+import styles from "@/styles/pageSegment4.module.scss";
 const PageSegment4 = () => {
   const checkItems = [
     "Limited Mobile Access to Microsoft 365 - Out-of-the-box tools don't offer the flexibility needed for mobile teams. Accessing SharePoint, Teams, or Outlook data on the go is often clunky or unreliable.",

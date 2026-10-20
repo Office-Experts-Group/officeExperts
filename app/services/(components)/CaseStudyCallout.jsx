@@ -1,7 +1,7 @@
 // /app/services/(components)/CaseStudyCallout.jsx
 // Proof strip: headline results from published case studies. Links to the /case-studies hub only.
 import Image from "next/image";
-import styles from "../../../styles/caseStudyCallout.module.scss";
+import styles from "@/styles/caseStudyCallout.module.scss";
 import ServiceLink from "./ServiceLink";
 
 const CaseStudyCallout = ({ data }) => {

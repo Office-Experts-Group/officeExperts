@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../../../../../styles/pageSegment.module.scss";
+import styles from "@/styles/pageSegment.module.scss";
 import twoComputers from "../../../../../public/540x480/twoComputers.webp";
 
 const PageSegmentMain = () => {

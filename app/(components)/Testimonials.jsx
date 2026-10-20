@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../styles/testimonialsSection.module.scss";
+import styles from "@/styles/testimonialsSection.module.scss";
 import TestimonialCard from "../../components/TestimonialCard";
 
 import { filterAndSortTestimonials } from "../../utils/filterTestimonials";

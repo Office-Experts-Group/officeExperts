@@ -7,7 +7,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyAiIntegration.module.scss
-import styles from "../../../../../styles/thirdPartyAiIntegration.module.scss";
+import styles from "@/styles/thirdPartyAiIntegration.module.scss";
 // Standalone SVG: business apps -> AI agent -> human review -> Office
 import aiDataFlow from "../(svgs)/aiDataFlow.svg";
 

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-import styles from "../../../../../styles/introduction.module.scss";
+import styles from "@/styles/introduction.module.scss";
 const services = [
   {
     id: "01",

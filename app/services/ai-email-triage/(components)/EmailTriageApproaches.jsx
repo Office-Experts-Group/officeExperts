@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/emailTriageApproaches.module.scss)
-import styles from "../../../../styles/emailTriageApproaches.module.scss";
+import styles from "@/styles/emailTriageApproaches.module.scss";
 // One standalone icon per approach
 import { CopilotInboxSvg } from "../(svgs)/CopilotInboxSvg";
 import { FlowTriageSvg } from "../(svgs)/FlowTriageSvg";

@@ -6,7 +6,7 @@ import { useState } from "react";
 import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
-import styles from "../../../styles/cairnsApproach.module.scss";
+import styles from "@/styles/cairnsApproach.module.scss";
 const steps = [
   {
     id: "discovery",

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../../styles/caseStudies.module.scss";
+import styles from "@/styles/caseStudies.module.scss";
 // Server component — no interactivity required, so no "use client" needed.
 // Renders a single case study as a full-width magazine-style row: image on
 // one side, the story on the other. The `reverse` prop flips which side the

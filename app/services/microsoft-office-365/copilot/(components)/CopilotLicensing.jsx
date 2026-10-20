@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
-import styles from "../../../../../styles/copilotLicensing.module.scss";
+import styles from "@/styles/copilotLicensing.module.scss";
 const ComparisonTable = ({ rows }) => (
   <table className={styles.table}>
     <thead>

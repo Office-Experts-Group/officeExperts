@@ -6,7 +6,7 @@ import React from "react";
 import { thirdPartyFaqs } from "../../../../../faqs/thirdPartyFaqs";
 
 // Compiled CSS from styles/thirdPartyFaq.module.scss
-import styles from "../../../../../styles/thirdPartyFaq.module.scss";
+import styles from "@/styles/thirdPartyFaq.module.scss";
 // Native <details> keeps this server rendered and works without JavaScript.
 // Answers stay in the HTML, so search engines and AI crawlers can read them.
 const ThirdPartyFaq = () => {

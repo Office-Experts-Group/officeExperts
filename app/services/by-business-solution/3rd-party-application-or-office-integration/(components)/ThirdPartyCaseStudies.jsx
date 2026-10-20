@@ -10,7 +10,7 @@ import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 import { getCaseStudyBySlug } from "../../../../case-studies/caseStudies";
 
 // Compiled CSS from styles/thirdPartyCaseStudies.module.scss
-import styles from "../../../../../styles/thirdPartyCaseStudies.module.scss";
+import styles from "@/styles/thirdPartyCaseStudies.module.scss";
 import Image from "next/image";
 
 // Each entry names the case study, how its data was connected, and which two

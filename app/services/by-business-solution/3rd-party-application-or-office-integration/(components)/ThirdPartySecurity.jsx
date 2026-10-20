@@ -6,7 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartySecurity.module.scss
-import styles from "../../../../../styles/thirdPartySecurity.module.scss";
+import styles from "@/styles/thirdPartySecurity.module.scss";
 // Where a point is backed by a real project, it links to that case study.
 // Points without a link describe how we approach the work in general.
 const points = [

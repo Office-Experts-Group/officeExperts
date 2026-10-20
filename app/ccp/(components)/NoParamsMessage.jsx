@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import styles from "../../../styles/payment.module.scss";
+import styles from "@/styles/payment.module.scss";
 
 const NoParamsMessage = () => {
   return (

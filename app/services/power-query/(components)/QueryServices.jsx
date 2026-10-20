@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import styles from "../../../../styles/queryServices.module.scss";
+import styles from "@/styles/queryServices.module.scss";
 
 // ── Service definitions ───────────────────────────────────
 const services = [

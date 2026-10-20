@@ -6,7 +6,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
 
 // Compiled CSS from styles/thirdPartyProcess.module.scss
-import styles from "../../../../../styles/thirdPartyProcess.module.scss";
+import styles from "@/styles/thirdPartyProcess.module.scss";
 // A genuine sequence, so this is the one section that uses numbered steps.
 const steps = [
   {

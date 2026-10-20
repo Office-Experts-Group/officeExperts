@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../../../styles/teamCard.module.scss";
+import styles from "@/styles/teamCard.module.scss";
 const TeamCard = ({ image, name, skills, role }) => {
   return (
     <div className={styles.card}>
