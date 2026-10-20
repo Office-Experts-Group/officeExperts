@@ -11,7 +11,7 @@ const PerthWhy = dynamic(() => import("./(components)/PerthWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
@@ -25,43 +25,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Perth",
+      regionCode: "WA",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness ────────────────────────────────────────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Perth",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Perth",
-        addressRegion: "WA",
-        addressCountry: "AU",
-      },
-      areaServed: {
-        "@type": "State",
-        name: "Western Australia",
-      },
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────────────────────────────────
     {
@@ -71,6 +45,7 @@ const schemaData = {
       name: "Microsoft Consultants Perth | Office Experts Group Australia",
       description:
         "Australia's leading Microsoft consultants with a local Perth team. For over 25 years we have provided software solutions across the entire Microsoft suite. Contact us for a free consultation.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

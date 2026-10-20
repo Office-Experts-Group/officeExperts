@@ -13,7 +13,7 @@ const BrisbaneWhy = dynamic(() => import("./(components)/BrisbaneWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
@@ -28,43 +28,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Brisbane",
+      regionCode: "QLD",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness ────────────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Brisbane",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Brisbane",
-        addressRegion: "QLD",
-        addressCountry: "AU",
-      },
-      areaServed: {
-        "@type": "State",
-        name: "Queensland",
-      },
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────
     {
@@ -74,6 +48,7 @@ const schemaData = {
       name: "Microsoft Consultants Brisbane | Office Experts Group Australia",
       description:
         "Nation-wide Microsoft consulting organisation with a local Brisbane team. Over 25yrs of experience helping Australian businesses with software solutions. Contact us for a free assessment today.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

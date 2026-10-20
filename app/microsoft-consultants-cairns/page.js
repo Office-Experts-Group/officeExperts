@@ -14,7 +14,7 @@ const CairnsWhy = dynamic(() => import("./(components)/CairnsWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
@@ -29,49 +29,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Cairns",
+      regionCode: "QLD",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness ────────────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Cairns",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Cairns",
-        addressRegion: "QLD",
-        addressCountry: "AU",
-      },
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Cairns",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Far North Queensland",
-        },
-      ],
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────
     {
@@ -80,7 +48,8 @@ const schemaData = {
       url: PAGE_URL,
       name: "Microsoft Consultants Cairns | Office Experts Group Australia",
       description:
-        "Cairns-based Microsoft consultants backed by a national team of 25+ specialists. Over 25 years helping Far North Queensland businesses streamline operations with Excel, Word, Access, Power Platform and Microsoft 365.",
+        "Microsoft consultants backed by a national team of 25+ specialists. 25+ years helping FNQ businesses streamline operations with sturdy software solutions.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

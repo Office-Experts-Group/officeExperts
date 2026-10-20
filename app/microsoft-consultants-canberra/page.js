@@ -13,7 +13,7 @@ const CanberraWhy = dynamic(() => import("./(components)/CanberraWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
@@ -28,50 +28,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Canberra",
+      regionCode: "ACT",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness — ACT ───────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Canberra",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Canberra",
-        addressRegion: "ACT",
-        addressCountry: "AU",
-      },
-      areaServed: [
-        {
-          "@type": "State",
-          name: "Australian Capital Territory",
-        },
-        {
-          "@type": "City",
-          name: "Canberra",
-        },
-      ],
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Government Microsoft Consulting",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────
     {
@@ -81,6 +48,7 @@ const schemaData = {
       name: "Microsoft Consultants Canberra | Office Experts Group",
       description:
         "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

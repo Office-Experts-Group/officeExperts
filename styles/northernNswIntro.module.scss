@@ -1,0 +1,118 @@
+// styles/northernNswIntro.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.headline {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.text {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// Internal links inside body copy
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── How we work ──────────────────────────────
+.ways {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.25rem;
+  background: $light-bg;
+  border-radius: 4px;
+}
+
+.waysTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.way {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid $border-strong;
+}
+
+.wayTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.wayText {
+  font-size: 0.92rem;
+  color: $text-secondary;
+  line-height: 1.65;
+}

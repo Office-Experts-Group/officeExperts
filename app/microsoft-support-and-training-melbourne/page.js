@@ -6,26 +6,35 @@ import Promo from "../../components/Promo";
 import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
+import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 import styles from "@/styles/supportPage.module.scss";
+
 import melbourne from "../../public/pageHeros/melbourne.webp";
 import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
 import askExpert from "../../public/askExpert540x480.webp";
 import support from "../../public/support.webp";
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+const PAGE_URL = `${SITE_URL}/microsoft-support-and-training-melbourne`;
 
 // Schema data for the page
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Melbourne",
+      regionCode: "VIC",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

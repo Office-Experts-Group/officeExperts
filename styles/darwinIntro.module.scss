@@ -1,0 +1,204 @@
+// styles/darwinIntro.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local palette: late-afternoon Top End sky
+$cream: #fbf6ef;
+$sun: #f6c177;
+$ember: #e8743b;
+$earth: #2a1810;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $cream;
+  padding: 7rem 8rem 8rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem 6rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem 5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem 4.5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2.5rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+// ── Vertical label ───────────────────────────
+.side {
+  border-right: 1px solid rgba($earth, 0.18);
+  display: flex;
+  justify-content: center;
+
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.sideText {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba($earth, 0.55);
+  padding: 0.5rem 0;
+}
+
+// ── Content ──────────────────────────────────
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-width: 0;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $ember;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: $earth;
+  max-width: 18ch;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.prose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 62rem;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: rgba($earth, 0.78);
+  }
+
+  @include tablet {
+    gap: 2rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+// ── Season callout ───────────────────────────
+.season {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  background: linear-gradient(120deg, $sun 0%, $ember 100%);
+  max-width: 62rem;
+
+  @include tablet {
+    padding: 2.25rem;
+    gap: 2rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.75rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.seasonText {
+  min-width: 0;
+}
+
+.seasonTitle {
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $earth;
+  margin-bottom: 0.75rem;
+}
+
+.seasonBody {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba($earth, 0.88);
+}
+
+.btn {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $earth;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: color.adjust($earth, $lightness: 8%);
+    transform: translateY(-1px);
+  }
+
+  @include phoneLandscape {
+    justify-self: start;
+  }
+  @include phone {
+    justify-self: start;
+  }
+}

@@ -57,6 +57,8 @@ const pathsWithDifferentCanonicals = new Set([
   "/office-and-office-365-experts-gold-coast",
   "/office-excel-access-and-365-consultants-brisbane",
   "/office-excel-access-and-365-experts-brisbane",
+  "/excel-and-access-experts-central-coast-nsw",
+  "/office-and-office-365-experts-central-coast-nsw",
   "/excel-and-access-experts-melbourne",
   "/office-and-office-365-experts-melbourne",
   "/office-excel-access-and-365-experts-melbourne",
@@ -71,6 +73,7 @@ const pathsWithDifferentCanonicals = new Set([
   "/excel-and-access-experts-sydney",
   "/word-and-powerpoint-experts-richmond",
   "/office-and-office-365-experts-richmond",
+  "/office-excel-access-and-365-experts-northern-rivers-nsw",
   // blogs
   "/blog/20-advanced-excel-shortcuts",
   "/blog/convert-canva-to-word",

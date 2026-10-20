@@ -1,0 +1,117 @@
+// styles/northernNswStory.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $white-90;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+// Accent colour is too dark on this background, so the second half is dimmed instead
+.headingAccent {
+  color: $white-55;
+}
+
+.text {
+  font-size: 1rem;
+  color: $white-65;
+  line-height: 1.8;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  color: $white-90;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+// ── Then and now ─────────────────────────────
+.figures {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.figure {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid $white-12;
+
+  @include phone {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
+  }
+}
+
+.value {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.label {
+  font-size: 0.95rem;
+  color: $white-65;
+  line-height: 1.6;
+}

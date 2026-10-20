@@ -16,7 +16,7 @@ const MelbourneWhy = dynamic(() => import("./(components)/MelbourneWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
@@ -31,43 +31,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Melbourne",
+      regionCode: "VIC",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness ────────────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Melbourne",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Melbourne",
-        addressRegion: "VIC",
-        addressCountry: "AU",
-      },
-      areaServed: {
-        "@type": "State",
-        name: "Victoria",
-      },
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────
     {
@@ -77,6 +51,7 @@ const schemaData = {
       name: "Microsoft Consultants Melbourne | Office Experts Group Australia",
       description:
         "Office Experts Group is an Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

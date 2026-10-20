@@ -1,0 +1,107 @@
+// styles/northernNswFaq.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Questions ────────────────────────────────
+.list {
+  border-top: 1px solid $border-strong;
+}
+
+.item {
+  border-bottom: 1px solid $border-strong;
+}
+
+.question {
+  padding: 1.4rem 2rem 1.4rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  line-height: 1.4;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+
+  // Plus and minus marker, drawn in CSS so no icon file is needed
+  &::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    color: $accent;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.item[open] .question::after {
+  content: "\2212";
+}
+
+.answer {
+  padding-bottom: 1.5rem;
+  max-width: 40rem;
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}

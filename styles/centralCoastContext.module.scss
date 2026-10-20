@@ -1,0 +1,290 @@
+// styles/centralCoastContext.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local palette: a warm sand that reads as "beach" next to the cool blues
+$sand: #f7f3ea;
+$sand-line: #000;
+
+// ── Section ──────────────────────────────────
+.section {
+  background-color: #fff;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+}
+
+// ── Left column ──────────────────────────────
+.intro {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+
+  @include tablet {
+    position: static;
+  }
+  @include phoneLandscape {
+    position: static;
+  }
+  @include phone {
+    position: static;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.lead {
+  margin-top: 1.75rem;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.tagsLabel {
+  margin: 2.5rem 0 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $text-secondary;
+  background: $white;
+  border: 1px solid $sand-line;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+
+  &:hover {
+    background: $accent-light;
+    color: $accent;
+    border-color: $accent-border;
+  }
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.ctaText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-secondary;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: color.adjust($accent, $lightness: -8%);
+    transform: translateY(-1px);
+  }
+}
+
+// ── Right column: the route ──────────────────
+.route {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  // Vertical line running through the markers
+  &::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 105, 153, 0) 0%,
+      rgba(4, 105, 153, 0.4) 8%,
+      rgba(4, 105, 153, 0.4) 92%,
+      rgba(4, 105, 153, 0) 100%
+    );
+
+    @include phone {
+      left: 15px;
+    }
+  }
+}
+
+.item {
+  list-style: none;
+
+  &:last-child .stop {
+    padding-bottom: 0;
+  }
+}
+
+.stop {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1.75rem;
+  padding-bottom: 1.75rem;
+
+  @include phone {
+    grid-template-columns: 32px 1fr;
+    gap: 1.1rem;
+  }
+}
+
+.marker {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: $accent;
+  background: $white;
+  border: 2px solid $accent;
+  box-shadow: 0 0 0 5px #82818110;
+
+  @include phone {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+}
+
+.card {
+  background: $white;
+  border-bottom: 1px solid #aeadad;
+  padding: 1.75rem 2rem;
+
+  @include phone {
+    padding: 1.4rem 1.25rem;
+  }
+}
+
+.place {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.6rem;
+}
+
+.sector {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: $text-primary;
+  margin-bottom: 0.7rem;
+}
+
+.body {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.uses {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.use {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $accent;
+  background: rgba(4, 105, 153, 0.08);
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+}

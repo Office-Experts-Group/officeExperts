@@ -1,0 +1,329 @@
+// styles/centralCoastServices.module.scss
+@use "./globals.scss" as *;
+
+// Local palette (matches the Intro's lower wave so the sections flow into each other)
+$sea-deep: #033a55;
+$sea-mist: #eef6fa;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $sea-mist;
+  padding: 4rem 8rem 8rem;
+
+  @include tablet {
+    padding: 3rem 4rem 6rem;
+  }
+  @include phoneLandscape {
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  @include phone {
+    padding: 2rem 1.25rem 4.5rem;
+  }
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 3.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.headerNote {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+  max-width: 46ch;
+  padding-bottom: 0.4rem;
+}
+
+// ── Bento grid ───────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  grid-template-areas:
+    "excel excel excel excel excel excel excel power power power power power"
+    "ai ai ai ai ai ai ai power power power power power"
+    "word word word word access access access access ppt ppt ppt ppt"
+    "m365 m365 m365 m365 m365 custom custom custom custom custom custom custom";
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "excel excel"
+      "power power"
+      "ai ai"
+      "word access"
+      "ppt m365"
+      "custom custom";
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "excel"
+      "power"
+      "ai"
+      "word"
+      "access"
+      "ppt"
+      "m365"
+      "custom";
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "excel"
+      "power"
+      "ai"
+      "word"
+      "access"
+      "ppt"
+      "m365"
+      "custom";
+  }
+}
+
+// Grid placement
+.excel {
+  grid-area: excel;
+}
+.power {
+  grid-area: power;
+}
+.ai {
+  grid-area: ai;
+}
+.word {
+  grid-area: word;
+}
+.access {
+  grid-area: access;
+}
+.ppt {
+  grid-area: ppt;
+}
+.m365 {
+  grid-area: m365;
+}
+.custom {
+  grid-area: custom;
+}
+
+// ── Base tile ────────────────────────────────
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  overflow: hidden;
+  background: $white;
+  border: 1px solid rgba(4, 105, 153, 0.12);
+  border-radius: 16px;
+  padding: 2.25rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 44px rgba(3, 58, 85, 0.1);
+    border-color: $accent-border;
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.tileTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tileIndex {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: $accent;
+  opacity: 0.7;
+}
+
+.tileTag {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+  text-align: right;
+}
+
+.tileTitle {
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.tileDesc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.tileFoot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $accent;
+  background: rgba(4, 105, 153, 0.08);
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.tileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: flex-start;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: none;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+  }
+}
+
+// ── Tile variants ────────────────────────────
+
+// Power Platform: tall tile, softly tinted
+.power {
+  background: linear-gradient(180deg, $white 0%, #e1f0f8 100%);
+}
+
+// AI & agents: solid brand fill so it reads as the feature
+.ai {
+  background: linear-gradient(135deg, $accent 0%, $sea-deep 100%);
+  border-color: transparent;
+
+  // Soft highlight in the corner
+  &::after {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0 18px 44px rgba(3, 58, 85, 0.28);
+  }
+
+  .tileIndex {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .tileTag {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .tileTitle {
+    color: $white;
+  }
+
+  .tileDesc {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .chip {
+    color: $white;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .tileLink {
+    color: $white;
+  }
+}

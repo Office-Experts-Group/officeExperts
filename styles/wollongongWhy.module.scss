@@ -1,0 +1,186 @@
+// styles/wollongongWhy.module.scss
+@use "./globals" as *;
+
+// Everything below the desktop breakpoint
+@mixin belowDesktop {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Left: reasons ────────────────────────────
+.aside {
+  // Stays in view while the FAQ scrolls (wide screens only)
+  @include deskL {
+    position: sticky;
+    top: 7rem;
+  }
+}
+
+.eyebrow {
+  margin-bottom: 1.25rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.reason {
+  padding: 1.25rem 0;
+  border-top: 1px solid $border-strong;
+}
+
+.term {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.detail {
+  margin-top: 0.35rem;
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}
+
+.asideLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+// Internal links: accent colour, bold, as on the rest of the site
+.link {
+  align-self: flex-start;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+// ── Right: FAQ ───────────────────────────────
+.faq {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 14px;
+}
+
+.item {
+  padding: 0 2.25rem;
+  border-top: 1px solid $border-strong;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  @include phone {
+    padding: 0 1.4rem;
+  }
+
+  // Swaps the plus for a minus when the answer is open
+  &[open] .question::after {
+    content: "\2212";
+  }
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: $text-primary;
+  list-style: none;
+  cursor: pointer;
+
+  // Hides the default marker in Safari
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: "+";
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $accent;
+  }
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2.5rem 1.75rem 0;
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: $text-secondary;
+
+  @include phone {
+    padding-right: 0;
+  }
+}

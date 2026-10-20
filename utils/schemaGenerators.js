@@ -299,16 +299,71 @@ export const generateWebSiteSchema = (domain, name, description) => ({
     // References the Organization node in the same @graph — no need to repeat org data
     "@id": `${domain}#organization`,
   },
-  potentialAction: [
-    {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${domain}?s={search_term_string}`,
-      },
-      // Must be a plain string — object format (PropertyValueSpecification) causes validation errors
-      "query-input": "required name=search_term_string",
-    },
-  ],
   inLanguage: "en-AU",
 });
+
+const REGION_NAMES = {
+  NSW: "New South Wales",
+  VIC: "Victoria",
+  QLD: "Queensland",
+  WA: "Western Australia",
+  SA: "South Australia",
+  TAS: "Tasmania",
+  ACT: "Australian Capital Territory",
+  NT: "Northern Territory",
+};
+
+// City-scoped ProfessionalService + LocalBusiness for location pages.
+// Replaces generateProfessionalServiceSchema() on those pages.
+export const generateLocalBusinessSchema = ({
+  pageUrl,
+  city,
+  regionCode,
+  nearbyAreas = [],
+}) => {
+  const regionName = REGION_NAMES[regionCode];
+  if (!regionName) {
+    throw new Error(
+      `generateLocalBusinessSchema: unknown regionCode "${regionCode}"`,
+    );
+  }
+
+  return {
+    "@type": ["ProfessionalService", "LocalBusiness"],
+    "@id": `${pageUrl}#localbusiness`,
+    name: `Office Experts Group ${city}`,
+    url: pageUrl,
+    description: `Microsoft Office consulting and development services for ${city} businesses`,
+    telephone: "1300 102 810",
+    email: "consult@officeexperts.com.au",
+    image: "https://www.officeexperts.com.au/logo.png",
+    priceRange: "$$",
+    // Service-area business: locality only, no street address
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: city,
+      addressRegion: regionCode,
+      addressCountry: "AU",
+    },
+    areaServed: [
+      { "@type": "City", name: city },
+      ...nearbyAreas.map((name) => ({ "@type": "Place", name })),
+      { "@type": "State", name: regionName },
+    ],
+    parentOrganization: {
+      "@id": "https://www.officeexperts.com.au#organization",
+    },
+    knowsAbout: [
+      "Microsoft Excel",
+      "Microsoft Word",
+      "Microsoft PowerPoint",
+      "Microsoft Access",
+      "Power Platform",
+      "Microsoft 365",
+      "SharePoint",
+      "AI Agents",
+      "VBA Development",
+      "Custom Office Solutions",
+    ],
+  };
+};

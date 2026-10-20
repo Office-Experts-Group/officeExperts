@@ -1,0 +1,303 @@
+// styles/adelaideWhy.module.scss
+@use "./globals.scss" as *;
+
+$line: #e3e8ec;
+$ink: #0b2433;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  max-width: 900px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Ledger ───────────────────────────────────
+$cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
+
+.ledger {
+  border: 1px solid $line;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ledgerHead {
+  display: grid;
+  grid-template-columns: $cols;
+  padding: 1rem 2.25rem;
+  background: $ink;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+
+  span:last-child {
+    color: $white;
+  }
+
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: $cols;
+  align-items: center;
+  border-top: 1px solid $line;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.before {
+  padding: 1.75rem 1.5rem 1.75rem 2.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $text-muted;
+  text-decoration: line-through;
+  text-decoration-color: rgba(11, 36, 51, 0.25);
+  text-decoration-thickness: 1px;
+
+  @include phoneLandscape {
+    padding: 1.4rem 1.5rem 0.4rem;
+  }
+  @include phone {
+    padding: 1.4rem 1.25rem 0.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  color: $accent;
+
+  @include phoneLandscape {
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+    transform: rotate(90deg) translateX(0.35rem);
+    width: 22px;
+  }
+  @include phone {
+    justify-content: flex-start;
+    padding: 0 1.25rem;
+    transform: rotate(90deg) translateX(0.35rem);
+    width: 22px;
+  }
+}
+
+.afterWrap {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1.75rem 2.25rem 1.75rem 2rem;
+  background: $accent-light;
+
+  @include phoneLandscape {
+    padding: 1.25rem 1.5rem 1.6rem;
+  }
+  @include phone {
+    padding: 1.1rem 1.25rem 1.5rem;
+  }
+}
+
+.after {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $text-primary;
+}
+
+.via {
+  align-self: flex-start;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+// ── Proof strip ──────────────────────────────
+.proof {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 2.75rem 3rem;
+  border-radius: 14px;
+  background: linear-gradient(155deg, $ink 0%, #0e3a52 100%);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.25rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 2rem 1.75rem;
+  }
+  @include phone {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.proofList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.proofItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include phone {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.proofValue {
+  font-size: clamp(2.4rem, 4vw, 3.3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $white;
+
+  @include phone {
+    flex: 0 0 5rem;
+  }
+}
+
+.proofLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.proofCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.proofText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.proofLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $white;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}

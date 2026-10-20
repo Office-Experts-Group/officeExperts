@@ -1,0 +1,242 @@
+// styles/adelaideServices.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+$card-line: #e3e8ec;
+$ink: #0b2433;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem 8rem 9rem;
+
+  @include tablet {
+    padding: 6rem 4rem 7rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem 6rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem 5rem;
+  }
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  max-width: 820px;
+  margin-bottom: 4.5rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.headerNote {
+  margin-top: 1.5rem;
+  max-width: 52ch;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Sticky card stack ────────────────────────
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  // Each card parks slightly lower than the last, so the earlier ones peek out above
+  position: sticky;
+  top: calc(110px + var(--i) * 16px);
+
+  display: grid;
+  grid-template-columns: 5rem 1fr minmax(15rem, 20rem);
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2.5rem 2.75rem;
+  background: $white;
+  border: 1px solid $card-line;
+  border-top: 3px solid $accent;
+  border-radius: 12px;
+  box-shadow: 0 -10px 30px rgba(11, 36, 51, 0.06);
+
+  @include tablet {
+    position: static;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem 2rem;
+    padding: 2rem;
+  }
+  @include phoneLandscape {
+    position: static;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.75rem;
+  }
+  @include phone {
+    position: static;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding: 1.6rem 1.35rem;
+  }
+}
+
+// The AI card is the one we want people to notice
+.feature {
+  background: linear-gradient(150deg, $ink 0%, #0e3a52 100%);
+  border-color: $ink;
+  border-top-color: $accent;
+
+  .icon {
+    color: #6fc3e8;
+  }
+  .tag {
+    color: #6fc3e8;
+  }
+  .title {
+    color: $white;
+  }
+  .desc {
+    color: rgba(255, 255, 255, 0.78);
+  }
+  .chip {
+    color: $white;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .link {
+    color: $white;
+    border-bottom-color: rgba(255, 255, 255, 0.45);
+
+    &:hover {
+      border-bottom-color: $white;
+    }
+  }
+}
+
+// Line icon in the accent colour, sized like the numerals it replaced
+.icon {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: $accent;
+
+  @include phoneLandscape {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  @include phone {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.title {
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.desc {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: $text-secondary;
+  max-width: 62ch;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  @include tablet {
+    grid-column: 2;
+  }
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: $accent;
+  background: rgba(4, 105, 153, 0.08);
+  border-radius: 2rem;
+  padding: 0.32rem 0.85rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(4, 105, 153, 0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}

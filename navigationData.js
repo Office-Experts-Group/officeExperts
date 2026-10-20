@@ -16,19 +16,19 @@ export const navigationData = {
         items: [
           {
             label: "Sydney",
-            href: "/word-and-powerpoint-experts-sydney/",
+            href: "/microsoft-consultants-sydney/",
           },
           {
             label: "Wollongong",
-            href: "/office-excel-access-and-365-experts-wollongong/",
+            href: "/microsoft-consultants-wollongong/",
           },
           {
             label: "Central Coast",
-            href: "/excel-and-access-experts-central-coast-nsw/",
+            href: "/microsoft-consultants-central-coast-nsw/",
           },
           {
             label: "Northern Rivers",
-            href: "/office-excel-access-and-365-experts-northern-rivers-nsw/",
+            href: "/microsoft-consultants-northern-rivers-nsw/",
           },
         ],
       },
@@ -42,7 +42,7 @@ export const navigationData = {
           },
           {
             label: "Richmond",
-            href: "/office-and-office-365-experts-richmond",
+            href: "/microsoft-consultants-richmond",
           },
         ],
       },
@@ -56,7 +56,7 @@ export const navigationData = {
           },
           {
             label: "Gold Coast",
-            href: "/word-and-powerpoint-experts-gold-coast",
+            href: "/microsoft-consultants-gold-coast",
           },
           {
             label: "Cairns",
@@ -90,7 +90,7 @@ export const navigationData = {
         items: [
           {
             label: "Darwin",
-            href: "/office-excel-access-and-365-experts-darwin",
+            href: "/microsoft-consultants-darwin",
           },
         ],
       },
@@ -100,7 +100,7 @@ export const navigationData = {
         items: [
           {
             label: "Adelaide",
-            href: "/office-excel-access-and-365-experts-adelaide",
+            href: "/microsoft-consultants-adelaide",
           },
         ],
       },

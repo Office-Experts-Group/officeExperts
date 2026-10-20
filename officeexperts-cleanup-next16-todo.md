@@ -371,18 +371,14 @@ Commits:
 - `chore: replace @import with @use`
 - `chore: remove compiled css`
 
-Notes: ..............................................................................................................
-
----
+Notes: All complete, jsconfig working, css and css.map files deleted, imports changed to @use, deprecated sass functions changed.
 
 ## Phase 3: Project conventions
 
 - [ ] Update the claude.ai project instructions. Replace "import the compiled css not the scss file" with "import the `.module.scss` file directly via `@/styles/…`", and add that every module starts with `@use "./globals" as *;`. Future components then follow the new pattern.
 - [ ] Keep `(components)` and `(svgs)` as they are. Next 16 still only creates a route for `page` and `route` files, so these folders work unchanged. (`_components` is the documented convention, but it isn't required.)
 
-Notes: ..............................................................................................................
-
----
+Notes: importing scss only with @ now
 
 ## Phase 4: Redirects folder
 

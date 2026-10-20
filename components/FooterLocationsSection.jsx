@@ -7,18 +7,17 @@ import styles from "@/styles/footerLocations.module.scss";
 const locationsByState = {
   "New South Wales": {
     Sydney: "/microsoft-consultants-sydney",
-    Wollongong: "/office-excel-access-and-365-experts-wollongong",
-    "Central Coast": "/excel-and-access-experts-central-coast-nsw",
-    "Northern Rivers":
-      "/office-excel-access-and-365-experts-northern-rivers-nsw",
+    Wollongong: "/microsoft-consultants-wollongong",
+    "Central Coast": "/microsoft-consultants-central-coast-nsw",
+    "Northern Rivers": "/microsoft-consultants-northern-rivers-nsw",
   },
   Victoria: {
     Melbourne: "/microsoft-consultants-melbourne",
-    Richmond: "/office-and-office-365-experts-richmond",
+    Richmond: "/microsoft-consultants-richmond",
   },
   Queensland: {
     Brisbane: "/microsoft-consultants-brisbane",
-    "Gold Coast": "/word-and-powerpoint-experts-gold-coast",
+    "Gold Coast": "/microsoft-consultants-gold-coast",
   },
   "Western Australia": {
     Perth: "/microsoft-consultants-perth",
@@ -27,10 +26,10 @@ const locationsByState = {
     Canberra: "/microsoft-consultants-canberra",
   },
   "Northern Territory": {
-    Darwin: "/office-excel-access-and-365-experts-darwin",
+    Darwin: "/microsoft-consultants-darwin",
   },
   "South Australia": {
-    Adelaide: "/office-excel-access-and-365-experts-adelaide",
+    Adelaide: "/microsoft-consultants-adelaide",
   },
 };
 

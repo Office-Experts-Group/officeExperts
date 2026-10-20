@@ -1,0 +1,271 @@
+// styles/darwinServices.module.scss
+@use "./globals.scss" as *;
+
+$earth: #2a1810;
+$ember: #e8743b;
+$line: #eadfd2;
+$count: 8;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.header {
+  margin-bottom: 3.5rem;
+
+  @include phone {
+    margin-bottom: 2.25rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $ember;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $earth;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Tabs ─────────────────────────────────────
+.tabs {
+  position: relative;
+}
+
+// Visually hidden but still focusable and screen-reader visible
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  border: 1px solid $line;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 28rem;
+
+  @include tablet {
+    grid-template-columns: 13rem 1fr;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+}
+
+.tabList {
+  display: flex;
+  flex-direction: column;
+  background: #faf5ee;
+  border-right: 1px solid $line;
+
+  @include phoneLandscape {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid $line;
+  }
+  @include phone {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid $line;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 1.15rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba($earth, 0.65);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+
+  &:hover {
+    background: rgba($ember, 0.08);
+    color: $earth;
+  }
+
+  @include phoneLandscape {
+    flex: 0 0 auto;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    padding: 1rem 1.15rem;
+  }
+  @include phone {
+    flex: 0 0 auto;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    padding: 1rem 1.15rem;
+  }
+}
+
+.tabNum {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: $ember;
+}
+
+// ── Panels ───────────────────────────────────
+.panels {
+  min-width: 0;
+}
+
+.panel {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 3rem 3.5rem;
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+  @include phoneLandscape {
+    padding: 2rem 1.5rem;
+  }
+  @include phone {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $ember;
+}
+
+.title {
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: $earth;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba($earth, 0.78);
+  max-width: 60ch;
+}
+
+.points {
+  list-style: none;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.point {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: $accent;
+  background: rgba(4, 105, 153, 0.08);
+  border-radius: 2rem;
+  padding: 0.35rem 0.9rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(4, 105, 153, 0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $accent;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ── :checked wiring (generated for each tab) ─
+@for $i from 1 through $count {
+  .radio:nth-of-type(#{$i}):checked ~ .layout .panel:nth-of-type(#{$i}) {
+    display: flex;
+  }
+
+  .radio:nth-of-type(#{$i}):checked ~ .layout .tab:nth-of-type(#{$i}) {
+    background: $white;
+    color: $earth;
+    border-left-color: $ember;
+
+    @include phoneLandscape {
+      border-left-color: transparent;
+      border-bottom-color: $ember;
+    }
+    @include phone {
+      border-left-color: transparent;
+      border-bottom-color: $ember;
+    }
+  }
+
+  .radio:nth-of-type(#{$i}):focus-visible ~ .layout .tab:nth-of-type(#{$i}) {
+    outline: 2px solid $accent;
+    outline-offset: -2px;
+  }
+}

@@ -50,7 +50,7 @@ export const caseStudies = [
       "Every finding fully traceable, with references built in throughout",
       "Reviews now broader and more detailed than the manual process allowed",
     ],
-    image: "/case-studies/kula.png",
+    image: "/case-studies/review-platform.webp",
     featured: true,
 
     stats: [

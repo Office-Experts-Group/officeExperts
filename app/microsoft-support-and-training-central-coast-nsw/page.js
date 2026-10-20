@@ -6,6 +6,7 @@ import Promo from "../../components/Promo";
 import Contact from "../../components/Contact";
 import ExpertsAwait from "../../components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
+import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 import styles from "@/styles/supportPage.module.scss";
 import centralCoast from "../../public/pageHeros/centralCoast.webp";
@@ -14,18 +15,25 @@ import askExpert from "../../public/askExpert540x480.webp";
 import support from "../../public/support.webp";
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/microsoft-support-and-training-central-coast-nsw";
 
 // Schema data for the page
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Central Coast",
+      regionCode: "NSW",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

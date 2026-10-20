@@ -1,0 +1,178 @@
+// styles/wollongongIntro.module.scss
+@use "./globals" as *;
+
+// Everything below the desktop breakpoint
+@mixin belowDesktop {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+// ── Copy ─────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2.3rem, 4.6vw, 3.9rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: $text-primary;
+}
+
+.body {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.link {
+  font-weight: 700;
+  color: $accent;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.1rem 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.ctaNote {
+  font-size: 0.85rem;
+  color: $text-secondary;
+}
+
+// ── Coast strip ──────────────────────────────
+.coast {
+  padding: 2.5rem 2.25rem;
+  background: $light-bg;
+  border-radius: 14px;
+
+  @include phone {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.coastTitle {
+  margin-bottom: 1.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.stops {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  // The coastline itself, running behind the markers
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.28rem;
+    width: 2px;
+    background: $border-strong;
+  }
+}
+
+.stop {
+  position: relative;
+  padding-left: 2rem;
+
+  // Marker
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background: $accent;
+  }
+}
+
+.stopName {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: $text-primary;
+}
+
+.stopNote {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: $text-secondary;
+}

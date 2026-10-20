@@ -1,0 +1,192 @@
+// styles/goldCoastContext.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local tones derived from the global accent so the page stays in the site theme
+$ink: color.adjust($accent, $lightness: -20%);
+$mist: #f4f6f8;
+$line: #e1e5ea;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $mist;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 820px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $ink;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.lead {
+  margin-top: 1.5rem;
+  max-width: 54ch;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.76);
+}
+
+// ── Grid ─────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  // The AnimateOnScroll wrappers are the grid items; make tiles fill them
+  > * {
+    display: flex;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
+.tile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 2.25rem 2rem 2rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 16px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba($ink, 0.12);
+  }
+
+  @include phone {
+    padding: 1.9rem 1.5rem 1.75rem;
+  }
+}
+
+.name {
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $ink;
+}
+
+.sector {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: $accent;
+}
+
+.body {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.76);
+}
+
+.uses {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 0.75rem 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.use {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $ink;
+  background: $mist;
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+}
+
+// ── Areas ────────────────────────────────────
+.areas {
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $line;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: 1.5rem;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+.areasLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba($ink, 0.6);
+  padding-top: 0.2rem;
+}
+
+.areasText {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: $ink;
+}

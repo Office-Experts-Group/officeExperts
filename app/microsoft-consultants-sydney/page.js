@@ -12,14 +12,12 @@ const SydneyContext = dynamic(() => import("./(components)/SydneyContext"));
 const SydneyWhy = dynamic(() => import("./(components)/SydneyWhy"));
 const Contact = dynamic(() => import("../../components/Contact"));
 
-// Schema utility functions shared across all pages
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
 
-// Hero images — Sydney-specific assets
 import sydney from "../../public/pageHeros/sydney.webp";
 import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
 
@@ -30,43 +28,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Sydney",
+      regionCode: "NSW",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // ── LocalBusiness ────────────────────────
-    {
-      "@type": "LocalBusiness",
-      "@id": `${PAGE_URL}#localbusiness`,
-      name: "Office Experts Group Sydney",
-      url: PAGE_URL,
-      telephone: "1300102810",
-      email: "consult@officeexperts.com.au",
-      image: "https://www.officeexperts.com.au/logo.webp",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sydney",
-        addressRegion: "NSW",
-        addressCountry: "AU",
-      },
-      areaServed: {
-        "@type": "State",
-        name: "New South Wales",
-      },
-      knowsAbout: [
-        "Microsoft Excel",
-        "Microsoft Word",
-        "Microsoft Access",
-        "Power Platform",
-        "Microsoft 365",
-        "VBA Development",
-        "Custom Office Solutions",
-      ],
-    },
 
     // ── WebPage ──────────────────────────────
     {
@@ -76,6 +48,7 @@ const schemaData = {
       name: "Microsoft Consultants Sydney | Office Experts Group Australia",
       description:
         "Microsoft Office specialists operating nationally since 2000. Office Experts Group has local consultants in Sydney delivering expert solutions across the entire Microsoft suite.",
+      about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

@@ -15,17 +15,25 @@ import askExpert from "../../public/askExpert540x480.webp";
 import support from "../../public/support.webp";
 
 import {
-  generateProfessionalServiceSchema,
+  generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "../../utils/schemaGenerators";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/microsoft-support-and-training-perth";
 
 // Schema data for the page
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+    generateLocalBusinessSchema({
+      pageUrl: PAGE_URL,
+      city: "Perth",
+      regionCode: "WA",
+      nearbyAreas: [], // optional
+    }),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

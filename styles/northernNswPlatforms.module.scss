@@ -1,0 +1,143 @@
+// styles/northernNswPlatforms.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Platform rows ────────────────────────────
+.rows {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $border-strong;
+}
+
+.row {
+  border-bottom: 1px solid $border-strong;
+}
+
+.rowInner {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 1.5rem 2.5rem;
+  padding: 2rem 0;
+
+  @include tablet {
+    grid-template-columns: 3rem 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.num {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: $text-muted;
+  letter-spacing: 0.05em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.name {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.nameLink {
+  color: $text-primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.text {
+  max-width: 38rem;
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+
+  @include tablet {
+    grid-column: 2;
+  }
+}
+
+.link {
+  color: $accent;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

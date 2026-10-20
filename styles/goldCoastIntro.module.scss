@@ -1,0 +1,233 @@
+// styles/goldCoastIntro.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local tones derived from the global accent so the page stays in the site theme
+$ink: color.adjust($accent, $lightness: -20%);
+$mist: #f4f6f8;
+
+// ── Section ──────────────────────────────────
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $mist;
+  padding: 7rem 8rem 11rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem 9rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem 8rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem 7rem;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ─────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white;
+  background: $accent;
+  padding: 0.35rem 0.95rem;
+  border-radius: 2rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: $ink;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: rgba($ink, 0.9);
+  max-width: 54ch;
+}
+
+.body {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.72);
+  max-width: 56ch;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.1rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: color.adjust($accent, $lightness: -8%);
+    transform: translateY(-1px);
+  }
+}
+
+.ctaNote {
+  font-size: 0.85rem;
+  color: rgba($ink, 0.62);
+}
+
+// ── Tilted note cards ────────────────────────
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+
+  @include phoneLandscape {
+    padding-left: 0;
+    gap: 1rem;
+  }
+  @include phone {
+    padding-left: 0;
+    gap: 1rem;
+  }
+}
+
+.note {
+  position: relative;
+  padding: 1.75rem 2rem;
+  background: $white;
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba($ink, 0.12);
+  transition: transform 0.25s ease;
+
+  & + & {
+    margin-top: -0.75rem;
+  }
+
+  &:nth-child(1) {
+    transform: rotate(-2deg);
+  }
+  &:nth-child(2) {
+    transform: rotate(1.5deg) translateX(1.5rem);
+  }
+  &:nth-child(3) {
+    transform: rotate(-1deg);
+  }
+
+  &:hover {
+    transform: rotate(0deg) translateY(-3px);
+    z-index: 2;
+  }
+
+  @include tablet {
+    &:nth-child(2) {
+      transform: rotate(1.5deg) translateX(0.75rem);
+    }
+  }
+  @include phoneLandscape {
+    & + & {
+      margin-top: 0;
+    }
+    &:nth-child(n) {
+      transform: none;
+    }
+  }
+  @include phone {
+    padding: 1.5rem 1.4rem;
+
+    & + & {
+      margin-top: 0;
+    }
+    &:nth-child(n) {
+      transform: none;
+    }
+  }
+}
+
+.kicker {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.6rem;
+}
+
+.noteBody {
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: rgba($ink, 0.82);
+}
+
+// ── Wave ─────────────────────────────────────
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+  z-index: 0;
+
+  @include phone {
+    height: 50px;
+  }
+}

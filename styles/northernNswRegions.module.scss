@@ -1,0 +1,165 @@
+// styles/northernNswRegions.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Region cards ─────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  display: flex;
+
+  // AnimateOnScroll wraps the card, so let the wrapper fill the list item
+  > * {
+    flex: 1;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  height: 100%;
+  padding: 2.25rem;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: $shadow-row;
+
+  @include phone {
+    padding: 1.75rem;
+  }
+}
+
+.name {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.2;
+}
+
+.places {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $text-muted;
+  line-height: 1.6;
+}
+
+.body {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.uses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  list-style: none;
+}
+
+.use {
+  padding: 0.3rem 0.75rem;
+  background: $grayBGC;
+  color: $text-secondary;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+// ── Nearby ───────────────────────────────────
+.nearby {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border-strong;
+}
+
+.nearbyLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.nearbyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  list-style: none;
+  padding: 0;
+}

@@ -48,7 +48,9 @@ span,
 button,
 input,
 label,
-textarea {
+textarea,
+dd,
+td {
   font-family: var(--font-aptos), sans-serif;
 }
 

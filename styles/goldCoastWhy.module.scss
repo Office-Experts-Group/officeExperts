@@ -1,0 +1,275 @@
+// styles/goldCoastWhy.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local tones derived from the global accent so the page stays in the site theme
+$ink: color.adjust($accent, $lightness: -20%);
+$line: #e1e5ea;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 820px;
+  margin-bottom: 4.5rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $ink;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+.lead {
+  margin-top: 1.5rem;
+  max-width: 56ch;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.76);
+}
+
+// ── Three modes ──────────────────────────────
+.modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+
+  > * {
+    display: flex;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
+.mode {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem 2.25rem;
+  border: 1px solid $line;
+  border-radius: 18px;
+  background: $white;
+
+  @include phone {
+    padding: 2rem 1.5rem;
+  }
+}
+
+// The middle card is raised on desktop so the eye lands on "build it"
+.featured {
+  background: $accent;
+  border-color: $accent;
+  transform: translateY(-1.25rem);
+  box-shadow: 0 24px 48px rgba($accent, 0.25);
+
+  .label {
+    color: rgba($white, 0.75);
+  }
+  .title {
+    color: $white;
+  }
+  .body {
+    color: rgba($white, 0.85);
+  }
+  .examples {
+    border-top-color: rgba($white, 0.2);
+  }
+  .example {
+    color: rgba($white, 0.92);
+
+    &::before {
+      background: $white;
+    }
+  }
+
+  @include tablet {
+    transform: none;
+  }
+  @include phoneLandscape {
+    transform: none;
+  }
+  @include phone {
+    transform: none;
+  }
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.title {
+  font-size: 1.55rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: $ink;
+}
+
+.body {
+  font-size: 0.96rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.76);
+}
+
+.examples {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid $line;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.example {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: $ink;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $accent;
+  }
+}
+
+// ── Proof strip ──────────────────────────────
+.proof {
+  margin-top: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+  padding: 2.25rem 0 0;
+  border-top: 2px solid $ink;
+
+  @include phone {
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.proofList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3.5rem;
+
+  @include phone {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.proofItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
+.proofValue {
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $ink;
+}
+
+.proofLabel {
+  max-width: 9rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba($ink, 0.62);
+}
+
+// Underline rather than a coloured border, per the site style
+.proofLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+  }
+}

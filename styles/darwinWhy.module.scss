@@ -1,0 +1,202 @@
+// styles/darwinWhy.module.scss
+@use "./globals.scss" as *;
+
+$cream: #fbf6ef;
+$cream-line: #eadfd2;
+$earth: #2a1810;
+$ember: #e8743b;
+$sun: #f6c177;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $cream;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  max-width: 880px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $ember;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $earth;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Staggered cards ──────────────────────────
+.masonry {
+  column-count: 2;
+  column-gap: 1.75rem;
+
+  @include phoneLandscape {
+    column-count: 1;
+  }
+  @include phone {
+    column-count: 1;
+  }
+}
+
+.card {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 1.75rem;
+  padding: 2.5rem 2.25rem 2.25rem;
+  background: $white;
+  border: 1px solid $cream-line;
+  border-radius: 14px;
+
+  @include phone {
+    padding: 2.1rem 1.5rem 1.75rem;
+  }
+}
+
+.mark {
+  position: absolute;
+  top: 0.35rem;
+  left: 1.5rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba($ember, 0.4);
+  pointer-events: none;
+}
+
+.q {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: $earth;
+  margin-bottom: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.a {
+  font-size: 0.96rem;
+  line-height: 1.85;
+  color: rgba($earth, 0.75);
+}
+
+// ── Proof card ───────────────────────────────
+.proofCard {
+  background: $earth;
+  border-color: $earth;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.proofList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}
+
+.proofItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include phone {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.proofValue {
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $sun;
+
+  @include phone {
+    flex: 0 0 5rem;
+  }
+}
+
+.proofLabel {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba(255, 244, 230, 0.72);
+}
+
+.proofLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $white;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}

@@ -1,15 +1,16 @@
 // app/microsoft-consultants-cairns/layout.js
 import React from "react";
 
+const DESCRIPTION =
+  "Microsoft consultants backed by a national team of 25+ specialists. 25+ years helping FNQ businesses streamline operations with sturdy software solutions.";
+
 export const metadata = {
   title: "Microsoft Consultants Cairns | Office Experts Group",
-  description:
-    "Cairns-based Microsoft consultants backed by a national team of 25+ specialists. Excel, Word, Access, Power Platform and Microsoft 365 solutions for Far North Queensland businesses. Free consultation.",
+  description: DESCRIPTION,
 
   openGraph: {
     title: "Microsoft Consultants Cairns | Office Experts Group",
-    description:
-      "Cairns-based Microsoft consultants backed by a national team of 25+ specialists. Excel, Word, Access, Power Platform and Microsoft 365 solutions for Far North Queensland businesses. Free consultation.",
+    description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/microsoft-consultants-cairns",
     siteName: "Office Experts Group",
     images: [
@@ -30,8 +31,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Microsoft Consultants Cairns | Office Experts Group",
-    description:
-      "Cairns-based Microsoft consultants backed by a national team of 25+ specialists. Excel, Word, Access, Power Platform and Microsoft 365 solutions for Far North Queensland businesses.",
+    description: DESCRIPTION,
     images: ["/logo.png"],
   },
 

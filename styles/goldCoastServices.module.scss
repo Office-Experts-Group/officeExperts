@@ -1,0 +1,206 @@
+// styles/goldCoastServices.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// Local tones derived from the global accent so the page stays in the site theme
+$ink: color.adjust($accent, $lightness: -20%);
+$mist: #f4f6f8;
+$line: #e1e5ea;
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $white;
+  padding: 4rem 8rem 8rem;
+
+  @include tablet {
+    padding: 3rem 4rem 6rem;
+  }
+  @include phoneLandscape {
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  @include phone {
+    padding: 2rem 1.25rem 4.5rem;
+  }
+}
+
+.header {
+  max-width: 900px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $ink;
+}
+
+.headingAccent {
+  color: $accent;
+}
+
+// ── Two groups ───────────────────────────────
+.groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.group {
+  border: 1px solid $line;
+  border-radius: 18px;
+  overflow: hidden;
+  background: $white;
+}
+
+.groupHead {
+  padding: 2.25rem 2.5rem;
+  background: $ink;
+  color: $white;
+
+  @include phone {
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+// The second column gets the brand blue head so the two read as a pair
+.platform .groupHead {
+  background: $accent;
+}
+
+.groupTitle {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.groupNote {
+  margin-top: 0.6rem;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: rgba($white, 0.8);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 2rem 2.5rem;
+  border-top: 1px solid $line;
+  transition: background 0.2s ease;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover {
+    background: $mist;
+  }
+
+  @include phone {
+    padding: 1.6rem 1.4rem;
+  }
+}
+
+// Featured item is picked out by a slightly deeper grey, not a coloured border
+.feature {
+  background: color.adjust($mist, $lightness: -3%);
+
+  &:hover {
+    background: color.adjust($mist, $lightness: -5%);
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: $ink;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba($ink, 0.76);
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $ink;
+  background: $mist;
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+}
+
+// Underline rather than a coloured border, per the site style
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+  }
+}

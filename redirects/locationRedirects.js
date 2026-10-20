@@ -1,9 +1,11 @@
 // redirects/locationRedirects.js
-// Old city-page URL patterns. The preferred destination is /microsoft-consultants-{city}.
+// Old city-page URL patterns. Every city below has a live /microsoft-consultants-{city} page,
+// so all of its old URLs redirect straight to it.
 //
-// To switch a city to its new hub: build /microsoft-consultants-{city}, then add the city
-// to HUBS_BUILT below. Until then its old URLs keep going to the live
-// /microsoft-support-and-training-{city} page, so visitors never land on a 404.
+// Not listed here on purpose:
+//   - /microsoft-support-and-training-{city}: separate pages, left alone.
+//   - /microsoft-consultants-cairns: new page, no legacy URLs.
+//   - Richmond: no hub planned, handled separately below.
 //
 // EXCEL WAVE: remove /excel-consultants-{melbourne,perth,adelaide} (the plan keeps them as product-city pages).
 
@@ -13,19 +15,7 @@ const permanent = (source, destination) => ({
   permanent: true,
 });
 
-// Cities whose /microsoft-consultants-{city} page exists
-const HUBS_BUILT = new Set([
-  "sydney",
-  "melbourne",
-  "canberra",
-  "perth",
-  "brisbane",
-]);
-
-const destinationFor = (city) =>
-  HUBS_BUILT.has(city)
-    ? `/microsoft-consultants-${city}`
-    : `/microsoft-support-and-training-${city}`;
+const destinationFor = (city) => `/microsoft-consultants-${city}`;
 
 // city -> old URLs that belong to it
 const OLD_URLS_BY_CITY = {
@@ -56,21 +46,36 @@ const OLD_URLS_BY_CITY = {
     "/office-excel-access-and-365-consultants-brisbane",
     "/office-excel-access-and-365-experts-brisbane",
   ],
-  // ── Hubs still to build ──
-  adelaide: ["/excel-consultants-adelaide"],
-  darwin: ["/excel-consultants-darwin"],
+  adelaide: [
+    "/excel-consultants-adelaide",
+    "/office-excel-access-and-365-experts-adelaide",
+  ],
+  darwin: [
+    "/excel-consultants-darwin",
+    "/office-excel-access-and-365-experts-darwin",
+  ],
   "gold-coast": [
     "/excel-consultants-gold-coast",
     "/office-and-office-365-experts-gold-coast",
+    "/word-and-powerpoint-experts-gold-coast",
   ],
-  wollongong: ["/excel-consultants-wollongong"],
-  "northern-rivers-nsw": ["/excel-consultants-northern-rivers-nsw"],
+  wollongong: [
+    "/excel-consultants-wollongong",
+    "/office-excel-access-and-365-experts-wollongong",
+  ],
+  "northern-rivers-nsw": [
+    "/excel-consultants-northern-rivers-nsw",
+    "/office-excel-access-and-365-experts-northern-rivers-nsw",
+  ],
   "central-coast-nsw": [
     "/excel-consultants-central-coast-nsw",
     "/office-consultants-central-coast-nsw",
+    "/excel-and-access-experts-central-coast-nsw",
+    "/office-and-office-365-experts-central-coast-nsw",
   ],
 };
 
+// Turn the city -> sources map into redirect objects
 const cityRedirects = Object.entries(OLD_URLS_BY_CITY).flatMap(
   ([city, sources]) =>
     sources.map((source) => permanent(source, destinationFor(city))),

@@ -1,0 +1,236 @@
+// styles/adelaideIntro.module.scss
+@use "./globals.scss" as *;
+@use "sass:color";
+
+// ── Section: dark "blueprint" paper ──────────
+.section {
+  position: relative;
+  background-color: $dark-bg;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+    background-size: 36px 36px;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Headline ─────────────────────────────────
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4.5rem;
+
+  @include phone {
+    margin-bottom: 2.75rem;
+  }
+}
+
+.eyebrow {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.95);
+  padding: 0.32rem 0.9rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.headline {
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  font-weight: 900;
+  line-height: 1.07;
+  letter-spacing: -0.035em;
+  color: $white-88;
+  max-width: 20ch;
+}
+
+.accentText {
+  color: $accent;
+}
+
+// ── Lead + map ────────────────────────
+.split {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: $white-88;
+}
+
+.body {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: $white-55;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.1rem 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $white;
+  background: $accent;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: color.adjust($accent, $lightness: -8%);
+    transform: translateY(-1px);
+  }
+}
+
+.ctaNote {
+  font-size: 0.85rem;
+  color: $white-55;
+}
+
+// Map sits on a light card so the brand-blue map reads against the dark blueprint
+.mapCard {
+  width: 100%;
+  max-width: 440px;
+  margin-top: -12rem;
+
+  @include tablet {
+    justify-self: center;
+  }
+  @include phoneLandscape {
+    justify-self: center;
+    max-width: 380px;
+  }
+  @include phone {
+    justify-self: center;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+// ── Process ──────────────────────────────────
+.process {
+  margin-top: 6rem;
+
+  @include phone {
+    margin-top: 4rem;
+  }
+}
+
+.processTitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-55;
+  margin-bottom: 1.75rem;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid $accent;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  padding: 1.75rem 2rem 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  @include tablet {
+    padding-right: 1.5rem;
+  }
+  @include phone {
+    padding-right: 0;
+    border-bottom: 1px solid $white-12;
+  }
+}
+
+.stepNum {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $white-88;
+}
+
+.stepBody {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: $white-55;
+}
