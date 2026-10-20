@@ -3,6 +3,8 @@ import React from "react";
 import Contact from "../../components/Contact";
 import ServiceHero from "../../components/ServiceHero";
 import CTAMain from "./(components)/CTAMain";
+import ContactNextSteps from "./(components)/ContactNextSteps";
+
 import contactUs from "../../public/pageHeros/contactUs.webp";
 import contactUsMob from "../../public/pageHeros/mob/contactUsMob.webp";
 
@@ -78,6 +80,7 @@ const Page = () => {
         altMob={"contact method icons on wooden blocks"}
       />
       <CTAMain />
+      <ContactNextSteps />
       <Contact />
     </>
   );

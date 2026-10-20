@@ -1,0 +1,139 @@
+// src/styles/contactNextSteps.module.scss
+// Brings in the shared theme variables (e.g. $accent) from globals.scss
+@use "globals" as *;
+
+.section {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 4rem 1.5rem;
+}
+
+// Intro on the left, stats stacked in a column on the right (stacks on mobile)
+.top {
+  display: grid;
+  gap: 3rem;
+
+  @media (min-width: 48rem) {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.intro {
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  p:last-child {
+    line-height: 1.75;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+
+  strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: $accent;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+  }
+
+  span {
+    line-height: 1.5;
+  }
+}
+
+.stepsHeading {
+  margin-block: 4rem 2.5rem;
+}
+
+// Mobile first: vertical timeline with the bar running down the left
+.steps {
+  display: grid;
+  gap: 2.5rem;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 48rem) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.step {
+  position: relative;
+  padding-left: 4rem;
+
+  h4 {
+    margin-bottom: 0.75rem;
+    padding-top: 0.4rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  // Bar linking this circle to the next one (1.25rem = half the circle)
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    left: calc(1.25rem - 1px);
+    width: 2px;
+    height: calc(100% + 2.5rem);
+    background: $accent;
+  }
+
+  @media (min-width: 48rem) {
+    padding-left: 0;
+    padding-top: 4rem;
+
+    h4 {
+      padding-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    // Switches the bar to run horizontally to the next column's circle
+    &:not(:last-child)::after {
+      top: calc(1.25rem - 1px);
+      left: 1.25rem;
+      width: calc(100% + 2rem);
+      height: 2px;
+    }
+  }
+}
+
+// Sits above the bar so the line appears to run circle to circle
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: $accent;
+  color: #fff;
+  font-weight: 700;
+}

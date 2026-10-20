@@ -6,7 +6,6 @@ import Link from "next/link";
 import styles from "@/styles/header.module.scss";
 import { navigationData } from "../../navigationData";
 import ServicesDropdown from "../../components/ServicesDropdown";
-// import SocialLinks from "../../components/SocialLinks";
 import MobileNav from "../../components/MobileNavigation/MobileNav";
 
 import logo from "../../public/logo300x130.webp";

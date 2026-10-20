@@ -1,10 +1,10 @@
-// middleware.js
+// proxy.js
 // Static CSP (no nonce) so pages can be prerendered; also handles 410 Gone URLs
 // and cache headers for static build assets.
 
 import { NextResponse } from "next/server";
 // List of retired URLs that should return 410 Gone rather than 404
-import { goneUrls } from "./utils/goneUrls";
+import { goneUrls } from "./redirects/goneUrls";
 
 // Next's dev server uses eval() for fast refresh; never allow it in production
 const isDev = process.env.NODE_ENV !== "production";
