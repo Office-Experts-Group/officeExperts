@@ -86,7 +86,7 @@ const services = [
     id: "custom",
     title: "Custom Development",
     category: "Integration & Build",
-    href: "/services/by-business-solution/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom solutions",
     description:
       "When standard Microsoft tools need to connect with the rest of your environment, we build the integration. Third-party connectors, custom add-ins and AI-assisted workflows designed to work within — not around — the Microsoft stack.",

@@ -1,7 +1,7 @@
 // app/microsoft-consultants-central-coast-nsw/layout.js
 import React from "react";
 
-const TITLE = "Microsoft Consultants Central Coast NSW | Office Experts Group";
+const TITLE = "Microsoft Consultants Central Coast NSW";
 const DESCRIPTION =
   "Microsoft consultants for the NSW Central Coast, helping businesses improve reporting, streamline manual processes and connect systems with custom Microsoft solutions.";
 

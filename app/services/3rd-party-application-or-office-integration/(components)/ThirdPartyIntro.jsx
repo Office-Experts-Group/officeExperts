@@ -42,7 +42,9 @@ const ThirdPartyIntro = () => {
               </Link>
               , <Link href="/services/microsoft-powerpoint">PowerPoint</Link>{" "}
               and{" "}
-              <Link href="/microsoft-365-api-integration">Microsoft 365</Link>{" "}
+              <Link href="/services/microsoft-365-api-integration">
+                Microsoft 365
+              </Link>{" "}
               to the products you already pay for, so the right data is in the
               right place without anyone handling it twice.
             </p>

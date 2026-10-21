@@ -522,7 +522,7 @@ const QuoteForm = () => {
             <span className={styles.checkboxText}>
               I accept the{" "}
               <Link
-                href="https://www.officeexperts.com.au/privacy-policy"
+                href="/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}
@@ -531,7 +531,7 @@ const QuoteForm = () => {
               </Link>{" "}
               and{" "}
               <Link
-                href="https://www.officeexperts.com.au/terms-and-conditions"
+                href="/terms-and-conditions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}

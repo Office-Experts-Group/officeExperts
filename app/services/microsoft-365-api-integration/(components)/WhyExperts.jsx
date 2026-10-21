@@ -3,7 +3,7 @@ import React from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import logo from "../../logo.webp";
+import logo from "../../../logo.webp";
 import Image from "next/image";
 
 const WhyExperts = () => {

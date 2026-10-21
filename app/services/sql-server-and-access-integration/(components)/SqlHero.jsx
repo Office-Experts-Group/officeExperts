@@ -18,10 +18,10 @@ const SqlHero = () => {
             Reliable, scalable data infrastructure
           </span>
 
-          <h1 className={styles.heading}>
+          <h2 className={styles.heading}>
             SQL Server integration for{" "}
             <span className={styles.accent}>Access and Microsoft Office</span>
-          </h1>
+          </h2>
 
           <p className={styles.lead}>
             Moving your Access data to a Microsoft SQL Server backend lets you

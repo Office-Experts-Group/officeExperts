@@ -101,7 +101,7 @@ export const caseStudies = [
     services: [
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
       {
         label: "AI-powered workflows",
@@ -650,7 +650,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
     ],
   },
@@ -977,7 +977,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
     ],
   },
@@ -1121,11 +1121,11 @@ export const caseStudies = [
     services: [
       {
         label: "Office 365",
-        href: "https://www.officeexperts.com.au/services/microsoft-office-365",
+        href: "/services/microsoft-office-365",
       },
       {
         label: "Microsoft 365 API Integrations",
-        href: "https://www.officeexperts.com.au/microsoft-365-api-integration",
+        href: "/services/microsoft-365-api-integration",
       },
     ],
   },
@@ -1199,7 +1199,7 @@ export const caseStudies = [
     services: [
       {
         label: "Custom Access database development",
-        href: "https://www.accessexperts.com.au/custom-design-and-development",
+        href: "/database-design-and-development",
       },
       {
         label: "Upgrading with Access",
@@ -2353,7 +2353,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
     ],
   },

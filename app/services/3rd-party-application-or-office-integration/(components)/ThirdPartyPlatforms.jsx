@@ -45,7 +45,7 @@ const groups = [
       {
         name: "Microsoft Dynamics 365",
         text: "Link Dynamics data to Office and Microsoft 365 so sales, service and finance teams work from the same figures.",
-        href: "/microsoft-365-api-integration",
+        href: "/services/microsoft-365-api-integration",
         linkText: "Microsoft 365 API integration",
       },
       {

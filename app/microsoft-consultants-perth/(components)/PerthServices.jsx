@@ -64,7 +64,7 @@ const services = [
     category: "Integration & Build",
     description:
       "Some operational challenges don&rsquo;t fit a standard product. We build custom solutions that connect your Microsoft environment with your other business systems — from ERP integrations to bespoke web portals and niche industry applications. Our team works across a broad range of languages and frameworks to find the right fit for your requirements.",
-    href: "/services/by-business-solution/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom Solutions",
   },
 ];

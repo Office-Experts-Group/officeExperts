@@ -30,7 +30,7 @@ const services = [
     label: "API Integrations",
     desc: "Tired of entering the same data twice? Our developers can connect all your platforms, Microsoft 365, Dynamics, accounting tools, CRMs, etc. Now information flows where it needs to, automatically.",
     tag: "Integration",
-    href: "/microsoft-365-api-integration",
+    href: "/services/microsoft-365-api-integration",
   },
   {
     id: "05",

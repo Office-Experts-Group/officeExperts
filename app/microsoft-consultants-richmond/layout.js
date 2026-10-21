@@ -3,7 +3,7 @@ import React from "react";
 
 const TITLE = "Microsoft Consultants Richmond | Office Experts Group Australia";
 const DESCRIPTION =
-  "Microsoft consulting for Richmond businesses: Excel, Word, Access, Power Platform, Microsoft 365, AI agents and custom builds. 25+ years. Free assessment.";
+  "Bringing Richmond businesses tailored Excel and Access development, Power Platform apps and AI solutions for over 25 years.";
 
 export const metadata = {
   // Basic metadata

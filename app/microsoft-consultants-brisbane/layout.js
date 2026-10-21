@@ -1,15 +1,16 @@
 // app/microsoft-consultants-brisbane/layout.js
 import React from "react";
 
+const TITLE = "Microsoft Consultants Brisbane";
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultants Brisbane | Office Experts Group Australia",
+  title: TITLE,
   description:
     "Nation-wide Microsoft consulting organisation with a local Brisbane team. Over 25yrs of experience helping Australian businesses with software solutions. Contact us for a free assessment today.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Consultants Brisbane | Office Experts Group Australia",
+    title: TITLE,
     description:
       "Nation-wide Microsoft consulting organisation with a local Brisbane team. Over 25yrs of experience helping Australian businesses with software solutions. Contact us for a free assessment today.",
     url: "https://www.officeexperts.com.au/microsoft-consultants-brisbane",
@@ -33,7 +34,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Consultants Brisbane | Office Experts Group Australia",
+    title: TITLE,
     description:
       "Nation-wide Microsoft consulting organisation with a local Brisbane team. Over 25yrs of experience helping Australian businesses with software solutions. Contact us for a free assessment today.",
     images: ["/logo.png"],

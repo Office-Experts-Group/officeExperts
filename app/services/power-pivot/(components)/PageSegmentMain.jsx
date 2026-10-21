@@ -39,7 +39,7 @@ const PageSegmentMain = () => {
               <Link href={"https://www.excelexperts.com.au/"}>Excel</Link>,{" "}
               <Link
                 href={
-                  "https://www.powerplatformexperts.com.au/services/microsoft-power-bi"
+                  "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi"
                 }
               >
                 Power BI

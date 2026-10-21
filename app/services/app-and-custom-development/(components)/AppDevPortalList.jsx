@@ -23,14 +23,14 @@ const items = [
     title: "CRM development and integration",
     tag: "Customer records",
     desc: "Customisation of Microsoft Dynamics 365 and other CRM platforms, plus integrations so sales, service and operations all work from the same records.",
-    href: "/services/by-business-solutions/online-solutions",
+    href: "/services/online-solutions",
     linkText: "More on our online solutions",
   },
   {
     title: "Secure sign-in",
     tag: "Access",
     desc: "Single sign-on so people use the account they already have. We connect Microsoft Entra ID tenants, Google sign-in or Auth.js (NextAuth) to your application, with role-based access so each person sees only what they should.",
-    href: "/microsoft-365-api-integration",
+    href: "/services/microsoft-365-api-integration",
     linkText: "Microsoft 365 API integration",
   },
   {

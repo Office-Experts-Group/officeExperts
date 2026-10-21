@@ -18,7 +18,7 @@ const items = [
   {
     title: "Microsoft 365 and API integration",
     body: "Live connections to SharePoint, Outlook, Dataverse, SQL Server and third-party systems through Microsoft Graph and REST APIs.",
-    href: "/microsoft-365-api-integration",
+    href: "/services/microsoft-365-api-integration",
     linkText: "Explore Microsoft 365 API integration",
   },
   {

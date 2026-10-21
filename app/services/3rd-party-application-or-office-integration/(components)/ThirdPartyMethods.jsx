@@ -24,7 +24,7 @@ const methods = [
   {
     title: "Microsoft Graph API",
     text: "One connection to Teams, SharePoint, OneDrive and Outlook, so business data can sync with Microsoft 365 in real time.",
-    href: "/microsoft-365-api-integration",
+    href: "/services/microsoft-365-api-integration",
     linkText: "Microsoft 365 API integration",
   },
   {

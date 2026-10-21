@@ -70,7 +70,7 @@ const solutionsData = [
   },
   {
     title: "Microsoft 365 API Integration",
-    link: "/microsoft-365-api-integration",
+    link: "/services/microsoft-365-api-integration",
     Icon: ApiIntegrationIcon,
     description: [
       "Connect Microsoft 365 to your line-of-business systems through the Graph API and other integrations, so data flows between your tools without re-keying.",

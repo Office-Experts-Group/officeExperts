@@ -19,7 +19,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Custom Office Solutions",
-      link: "/services/by-business-solution/custom-office-solutions",
+      link: "/services/custom-office-solutions",
       image: project2,
       description: [
         "Need our experts with over 15 years experience to help you with Excel, Access, Word, Outlook or PowerPoint?",

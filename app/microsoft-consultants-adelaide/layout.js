@@ -1,7 +1,7 @@
 // app/microsoft-consultants-adelaide/layout.js
 import React from "react";
 
-const TITLE = "Microsoft Consultants Adelaide | Office Experts Group Australia";
+const TITLE = "Microsoft Consultants Adelaide";
 const DESCRIPTION =
   "Microsoft consultants supporting Adelaide businesses with custom Excel tools, Access databases, Power Platform development and practical AI automation.";
 

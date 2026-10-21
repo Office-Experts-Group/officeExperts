@@ -104,7 +104,7 @@ const areas = [
     links: [
       {
         label: "Microsoft 365 API integration",
-        href: "/microsoft-365-api-integration",
+        href: "/services/microsoft-365-api-integration",
       },
       {
         label: "Azure cloud solutions",

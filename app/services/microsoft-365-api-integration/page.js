@@ -34,8 +34,9 @@ const schema = {
     ),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/microsoft-365-api-integration",
-      url: "https://www.officeexperts.com.au/microsoft-365-api-integration",
+      "@id":
+        "https://www.officeexperts.com.au/services/microsoft-365-api-integration",
+      url: "https://www.officeexperts.com.au/services/microsoft-365-api-integration",
       name: "Microsoft 365 API Integration",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
@@ -46,14 +47,14 @@ const schema = {
         "Office Experts build custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs—secure, mobile-ready, and tailored to your workflows",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/microsoft-365-api-integration#breadcrumb",
+          "https://www.officeexperts.com.au/services/microsoft-365-api-integration#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/microsoft-365-api-integration",
+            "https://www.officeexperts.com.au/services/microsoft-365-api-integration",
           ],
         },
       ],
@@ -61,7 +62,7 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/microsoft-365-api-integration#breadcrumb",
+        "https://www.officeexperts.com.au/services/microsoft-365-api-integration#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",

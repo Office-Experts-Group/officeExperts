@@ -16,7 +16,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Custom Solutions",
-      link: "/services/by-business-solution/custom-office-solutions",
+      link: "/services/custom-office-solutions",
       image: graph,
       alt: "graph",
       description: [

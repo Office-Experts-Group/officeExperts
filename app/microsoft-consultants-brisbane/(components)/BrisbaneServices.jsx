@@ -63,7 +63,7 @@ const services = [
     category: "Integration & Build",
     description:
       "Not every operational challenge fits an existing platform. In this case, we create custom solutions that connect your existing systems, this could be anything from web portals to niche industry applications. Our team works with a huge array of programming languages and frameworks to find the best fit for your needs.",
-    href: "/services/by-business-solution/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom Solutions",
   },
 ];

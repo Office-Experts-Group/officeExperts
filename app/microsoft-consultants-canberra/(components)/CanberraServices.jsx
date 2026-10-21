@@ -67,7 +67,7 @@ const services = [
     category: "Integration & Build",
     description:
       "When standard Microsoft tools need to connect to industry specific applications we make it happen. Add-ins, COM objects, API connectors and bespoke applications built within the Microsoft stack. Everything is documented and designed to be supportable by your own team going forward.",
-    href: "/services/by-business-solution/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom Office Solutions",
   },
 ];

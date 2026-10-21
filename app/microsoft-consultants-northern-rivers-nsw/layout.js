@@ -1,6 +1,6 @@
 // app/microsoft-consultants-northern-rivers-nsw/layout.js
 // Metadata only. The route renders its children untouched.
-const TITLE = "Microsoft Consultants Northern NSW | Office Experts Group";
+const TITLE = "Microsoft Consultants Northern NSW";
 const DESCRIPTION =
   "Home to our head office. We’ve helped Northern Rivers businesses and clients nationwide get more from Microsoft for over 25 years.";
 export const metadata = {

@@ -191,7 +191,7 @@ export const ai = {
     },
     {
       name: "Microsoft 365 API integration",
-      href: "/microsoft-365-api-integration",
+      href: "/services/microsoft-365-api-integration",
       description:
         "Connect Microsoft 365 data and documents to your other systems.",
       also: {
@@ -550,22 +550,22 @@ export const powerPointSection = {
   slides: [
     {
       name: "Custom templates and presentations",
-      href: "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
+      href: "/services/microsoft-powerpoint",
       description: "On-brand from the first slide.",
     },
     {
       name: "Presentation redesign",
-      href: "/services/microsoft-powerpoint/existing-presentation-redesign",
+      href: "/services/microsoft-powerpoint",
       description: "Give an existing deck a clean, consistent look.",
     },
     {
       name: "Automate with VBA",
-      href: "/services/microsoft-powerpoint/automate-presentations-with-vba",
+      href: "/services/microsoft-powerpoint",
       description: "Generate decks from your data.",
     },
     {
       name: "Training and assistance",
-      href: "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+      href: "/microsoft-support-and-training-australia",
       description: "Confident users, better presentations.",
     },
     {
@@ -610,7 +610,7 @@ export const customDevSection = {
     },
     {
       name: "Custom Office solutions",
-      href: "/services/by-business-solution/custom-office-solutions",
+      href: "/services/custom-office-solutions",
       description: "Tailored tools inside the Office apps you use.",
     },
     {
@@ -640,7 +640,7 @@ export const customDevSection = {
     },
     {
       name: "VBScript",
-      href: "/services/microsoft-vbscript",
+      href: "/services/activex-vbscript-migration",
       description: "Scripting and maintenance of existing code.",
     },
     {

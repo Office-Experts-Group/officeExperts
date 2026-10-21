@@ -154,7 +154,10 @@ const faqs = [
         Power Automate has certified connectors for Dynamics 365, Business
         Central, SAP, Salesforce, Xero, and MYOB. Systems without a native
         connector can be reached through{" "}
-        <Link href="/microsoft-365-api-integration" className={styles.link}>
+        <Link
+          href="/services/services/microsoft-365-api-integration"
+          className={styles.link}
+        >
           REST API calls
         </Link>{" "}
         or the on-premises data gateway for locally hosted legacy systems.
@@ -165,7 +168,7 @@ const faqs = [
     related: [
       {
         label: "API integrations",
-        href: "/microsoft-365-api-integration",
+        href: "/services/microsoft-365-api-integration",
       },
     ],
   },

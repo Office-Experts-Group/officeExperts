@@ -351,7 +351,8 @@ const SpreadsheetErrorBlogPost = () => {
               <strong>Automate and document recurring tasks:</strong> If you run
               the same report every week or reconcile data monthly? Automate the
               workflow with Power Query,{" "}
-              <Link href="/services/microsoft-vbscript ">VBA</Link>, or scripts.
+              <Link href="/services/activex-vbscript-migration ">VBA</Link>, or
+              scripts.
             </li>
             <li>
               <strong>Schedule regular spreadsheet audits:</strong> Just like

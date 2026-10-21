@@ -432,7 +432,7 @@ export const navigationData = {
           },
           {
             label: "Outlook",
-            href: `/services/by-business-solution/custom-office-solutions`,
+            href: `/services/custom-office-solutions`,
           },
           {
             label: "Publisher",

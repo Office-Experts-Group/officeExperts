@@ -1,15 +1,16 @@
 // app/microsoft-consultants-canberra/layout.js
 import React from "react";
 
+const DESCRIPTION =
+  "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.";
+
 export const metadata = {
-  title: "Microsoft Consultants Canberra | Office Experts Group",
-  description:
-    "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.",
+  title: "Microsoft Consultants Canberra",
+  description: DESCRIPTION,
 
   openGraph: {
-    title: "Microsoft Consultants Canberra | Office Experts Group",
-    description:
-      "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.",
+    title: "Microsoft Consultants Canberra",
+    description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/microsoft-consultants-canberra",
     siteName: "Office Experts Group",
     images: [
@@ -29,9 +30,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Consultants Canberra | Office Experts Group",
-    description:
-      "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.",
+    title: "Microsoft Consultants Canberra",
+    description: DESCRIPTION,
     images: ["/logo.png"],
   },
 

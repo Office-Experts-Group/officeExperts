@@ -61,7 +61,7 @@ const services = [
     tag: "Integration & Build",
     description:
       "When your Microsoft environment needs to connect with third-party systems, or a standard tool does not quite fit the requirement, we build the bridge. Custom add-ins, API integrations, AI-powered automations and bespoke applications built on or even inside the Microsoft stack.",
-    href: "https://www.officeexperts.com.au/services/by-business-solution/custom-office-solutions",
+    href: "https://www.officeexperts.com.au/services/custom-office-solutions",
     linkText: "Custom Solutions",
   },
 ];

@@ -21,7 +21,7 @@ const useCases = [
     industry: "Retail & Warehousing",
     heading: "Remote stock counts",
     body: "Warehouse staff scan barcodes or enter quantities via a Power Apps form. Counts write immediately to Dynamics 365 or your ERP and flag variances for review before the count session closes.",
-    href: "https://www.powerplatformexperts.com.au/services/power-apps",
+    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/power-apps",
   },
   {
     id: "timesheets",
@@ -35,7 +35,7 @@ const useCases = [
     industry: "Logistics",
     heading: "Subcontractor delivery dockets",
     body: "Drivers capture proof of delivery, recipient signature, and condition notes on a mobile form. Records are timestamped, geotagged, and available to your operations team in real time without any phone calls.",
-    href: "https://www.powerplatformexperts.com.au/services/power-automate",
+    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/power-automate",
   },
   {
     id: "signoff",
@@ -49,7 +49,7 @@ const useCases = [
     industry: "Facilities Management",
     heading: "Asset condition monitoring",
     body: "Maintenance staff log asset readings, fault codes, and service notes against a live asset register. Condition alerts trigger automatically when thresholds are breached, routing work orders through Power Automate.",
-    href: "https://www.powerplatformexperts.com.au/services/power-apps",
+    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/power-apps",
   },
 ];
 

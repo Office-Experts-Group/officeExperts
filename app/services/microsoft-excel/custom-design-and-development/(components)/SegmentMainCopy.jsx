@@ -47,7 +47,7 @@ const SegmentMainCopy = () => {
             <p>Power BI</p>
           </div>
         </Link>
-        <Link href="/services/by-business-solution/custom-office-solutions">
+        <Link href="/services/custom-office-solutions">
           <div className={styles.contentLink}>
             <p>Microsoft Outlook</p>
           </div>

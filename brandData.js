@@ -43,7 +43,7 @@ export const brandData = [
     alt: "Queensland Rail logo",
     width: 150,
     height: 23,
-    href: "http://www.queenslandrail.com.au/",
+    href: "https://www.queenslandrail.com.au/",
   },
   {
     src: southGippslandWater,

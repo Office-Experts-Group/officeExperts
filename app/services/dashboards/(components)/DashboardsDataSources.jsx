@@ -42,7 +42,7 @@ const sourceGroups = [
     items: ["Teams", "SharePoint", "Outlook", "OneDrive"],
     note: "Add document activity, meeting load and collaboration data through Microsoft Graph, giving context your line-of-business systems can't.",
     link: {
-      href: "/microsoft-365-api-integration",
+      href: "/services/microsoft-365-api-integration",
       text: "Microsoft Graph API integration",
     },
   },

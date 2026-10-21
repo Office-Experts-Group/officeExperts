@@ -84,7 +84,7 @@ const ContentsCopy = () => {
             </div>
           </Link>
           <Link
-            href="/services/by-business-solution/custom-office-solutions"
+            href="/services/custom-office-solutions"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>

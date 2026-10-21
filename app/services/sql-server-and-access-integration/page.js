@@ -154,7 +154,7 @@ const schema = {
 
 const caseStudyLinks = [
   {
-    href: "/case-studies/windowline-proposals-database",
+    href: "/case-studies/automated-proposal-generation-in-microsoft",
     linkText: "See the SQL Server migration",
     title:
       "Replacing 50-page proposals built by hand with a database-driven document generator",

@@ -158,7 +158,10 @@ const AiAgentsComparison = () => {
             custom app development
           </Link>
           ,{" "}
-          <Link href="/microsoft-365-api-integration" className={styles.link}>
+          <Link
+            href="/services/microsoft-365-api-integration"
+            className={styles.link}
+          >
             Microsoft 365 API integration
           </Link>{" "}
           and{" "}

@@ -18,7 +18,7 @@ const LINKS = {
   dynamics: "/services/business-process-automation#document-processing",
   powerBI:
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
-  apiIntegrations: "/microsoft-365-api-integration",
+  apiIntegrations: "/services/microsoft-365-api-integration",
   onboarding: "/microsoft-support-and-training-australia",
   emailTriage: "/services/business-process-automation#email-triage",
   approvals: "/services/business-process-automation#approvals",

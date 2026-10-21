@@ -40,6 +40,10 @@ module.exports = [
     "/services/by-business-solution/office-and-sql-server-integration",
     "/services/sql-server-and-access-integration",
   ),
+  permanent(
+    "/services/office-and-sql-server-integration",
+    "/services/sql-server-and-access-integration",
+  ),
   permanent("/by-business-solution", "/services"),
   permanent("/services/by-business-solution", "/services"),
   permanent("/services/by-office-product", "/services"),
@@ -138,5 +142,11 @@ module.exports = [
   permanent(
     "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
     "/services/microsoft-powerpoint",
+  ),
+
+  // -- other --
+  permanent(
+    "/microsoft-365-api-integration",
+    "/services/microsoft-365-api-integration",
   ),
 ];

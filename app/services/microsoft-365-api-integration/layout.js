@@ -9,7 +9,7 @@ export const metadata = {
     title: "Microsoft 365 API Integration Services | Office Experts Group",
     description:
       "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
-    url: "https://www.officeexperts.com.au/microsoft-365-api-integration",
+    url: "https://www.officeexperts.com.au/services/microsoft-365-api-integration",
     siteName: "Office Experts Group",
     images: [
       {
@@ -29,7 +29,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "/microsoft-365-api-integration",
+    canonical: "/services/microsoft-365-api-integration",
   },
 
   // Twitter Card
