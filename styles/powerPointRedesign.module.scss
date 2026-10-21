@@ -1,0 +1,182 @@
+// styles/powerPointRedesign.module.scss
+@use "./globals" as *;
+
+// Before / arrow / after
+$cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
+
+.section {
+  background: $light-bg;
+  padding: 8rem;
+  scroll-margin-top: 5rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin-bottom: 3.5rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Ledger ───────────────────────────────────
+.ledger {
+  background: $white;
+  border: 1px solid $border-strong;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: $cols;
+  padding: 1rem 2.25rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+
+  span:last-child {
+    color: $accent;
+  }
+
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.rows {
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: $cols;
+  border-top: 1px solid $border;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.before {
+  align-self: center;
+  padding: 1.6rem 1.5rem 1.6rem 2.25rem;
+  line-height: 1.7;
+  color: $text-muted;
+  text-decoration: line-through;
+  text-decoration-color: $border-strong;
+
+  @include phoneLandscape {
+    padding: 1.4rem 1.5rem;
+  }
+  @include phone {
+    padding: 1.4rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent;
+
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// The "after" column sits on the accent colour so the result stands out
+.after {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.6rem 2.25rem 1.6rem 2rem;
+  background: $accent;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $white;
+
+  @include phoneLandscape {
+    padding: 1.4rem 1.5rem;
+  }
+  @include phone {
+    padding: 1.25rem;
+  }
+}
+
+.via {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.note {
+  margin-top: 2rem;
+  max-width: 52rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}

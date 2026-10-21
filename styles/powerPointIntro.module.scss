@@ -1,0 +1,164 @@
+// styles/powerPointIntro.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+// ── Copy ─────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: $text-primary;
+}
+
+.body {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+// ── Jump links ───────────────────────────────
+.navTitle {
+  margin-bottom: 1.25rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.nav {
+  list-style: none;
+  border-top: 1px solid $border-strong;
+}
+
+.navLink {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.4rem 0.25rem;
+  border-bottom: 1px solid $border;
+  text-decoration: none;
+
+  &:hover {
+    .navHeading {
+      color: $accent;
+    }
+
+    .navArrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.navIcon {
+  width: 2.75rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.navHeading,
+.navText {
+  display: block;
+}
+
+.navHeading {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: $text-primary;
+  transition: color 0.2s ease;
+}
+
+.navText {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+.navArrow {
+  color: $accent;
+  transition: transform 0.2s ease;
+}

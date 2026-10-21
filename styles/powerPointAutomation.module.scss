@@ -1,0 +1,143 @@
+// styles/powerPointAutomation.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $accent;
+  padding: 7rem 8rem;
+  scroll-margin-top: 5rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-88;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $white;
+}
+
+.muted {
+  color: $white-65;
+}
+
+.body {
+  max-width: 56ch;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: $white-88;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-top: 0.75rem;
+}
+
+.button {
+  padding: 0.8rem 1.75rem;
+  background: $white;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $accent;
+  text-decoration: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-bottom: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  border-bottom: 1px solid $white-35;
+  transition: border-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    border-bottom-color: $white;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ── Stats ────────────────────────────────────
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $white-35;
+}
+
+.figure {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $white;
+}
+
+.caption {
+  max-width: 30ch;
+  line-height: 1.6;
+  color: $white-88;
+}

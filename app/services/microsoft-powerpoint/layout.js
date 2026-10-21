@@ -1,14 +1,20 @@
-import React from "react";
+// app/services/microsoft-powerpoint/layout.js
 
+// Metadata for the single consolidated PowerPoint page. The four child pages
+// (templates, redesign, VBA, training) now redirect here.
 export const metadata = {
-  // Basic metadata
-  title: "PowerPoint Consulting Services",
+  title: "PowerPoint Consultants Australia | Templates, Design & Training",
   description:
-    "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
+    "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
 
   keywords: [
-    // Core PowerPoint services
     "Microsoft PowerPoint consultation",
+    "PowerPoint consultants Australia",
+    "PowerPoint template design",
+    "PowerPoint master slides",
+    "PowerPoint redesign",
+    "PowerPoint VBA automation",
+    "PowerPoint training",
   ],
 
   alternates: {
@@ -17,9 +23,9 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "PowerPoint Consulting Services",
+    title: "PowerPoint Consultants Australia | Templates, Design & Training",
     description:
-      "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
+      "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint",
     siteName: "Office Experts Group",
     images: [
@@ -38,13 +44,13 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "PowerPoint Consulting Services",
+    title: "PowerPoint Consultants Australia | Templates, Design & Training",
     description:
-      "Expert Microsoft PowerPoint consulting services in Australia. Specialising in custom templates, presentation design, automation and training.",
+      "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
     images: ["/logo.png"],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function PowerPointLayout({ children }) {
   return <>{children}</>;
 }

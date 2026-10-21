@@ -105,4 +105,22 @@ module.exports = [
     "/services/by-business-solution/vba-macro-development",
     "/services/vba-macro-development",
   ),
+
+  // ── Powerpoint redirects ──
+  permanent(
+    "/services/microsoft-powerpoint/automate-presentations-with-vba",
+    "/services/microsoft-powerpoint",
+  ),
+  permanent(
+    "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",
+    "/services/microsoft-powerpoint",
+  ),
+  permanent(
+    "/services/microsoft-powerpoint/existing-powerpoint-redesign",
+    "/services/microsoft-powerpoint",
+  ),
+  permanent(
+    "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+    "/services/microsoft-powerpoint",
+  ),
 ];

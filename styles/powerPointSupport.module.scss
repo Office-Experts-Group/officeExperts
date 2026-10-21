@@ -1,0 +1,145 @@
+// styles/powerPointSupport.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 8rem;
+  scroll-margin-top: 5rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin-bottom: 3.5rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.cta {
+  margin-top: 0.5rem;
+}
+
+// ── Panels ───────────────────────────────────
+.panels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  height: 100%;
+  padding: 2.5rem;
+  background: $light-bg;
+  border-radius: 12px;
+
+  @include phone {
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.icon {
+  display: block;
+  width: 3rem;
+  color: $accent;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.panelHeading {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.panelText {
+  margin-top: 0.75rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-strong;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.95rem;
+    color: $text-secondary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+}
