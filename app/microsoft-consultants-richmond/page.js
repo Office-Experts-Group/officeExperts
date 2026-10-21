@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import RichmondIntro from "./(components)/RichmondIntro";
 
 const RichmondServices = dynamic(
@@ -10,17 +10,17 @@ const RichmondServices = dynamic(
 );
 const RichmondContext = dynamic(() => import("./(components)/RichmondContext"));
 const RichmondWhy = dynamic(() => import("./(components)/RichmondWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // TODO: add these two images (see hand-off notes)
-import richmond from "../../public/pageHeros/richmond.webp";
-import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
+import richmond from "@/public/pageHeros/richmond.webp";
+import richmondMob from "@/public/pageHeros/mob/richmondMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-richmond";

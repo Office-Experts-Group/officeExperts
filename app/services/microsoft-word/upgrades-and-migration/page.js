@@ -1,8 +1,8 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import ServicePageCards from "./(components)/ServicePageCards";
-import Contact from "../../../../components/Contact";
+import Contact from "@/components/Contact";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
@@ -11,13 +11,13 @@ import Segment4Repeat from "./(components)/Segment4Repeat";
 import ExpertsAwait from "./(components)/ExpertsAwait";
 import Contents from "./(components)/Contents";
 
-import twoComputers from "../../../../public/pageHeros/twoComputers.webp";
-import seatMob from "../../../../public/pageHeros/mob/seatMob.webp";
+import twoComputers from "@/public/pageHeros/twoComputers.webp";
+import seatMob from "@/public/pageHeros/mob/seatMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

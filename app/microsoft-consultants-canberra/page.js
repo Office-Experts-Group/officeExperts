@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import CanberraIntro from "./(components)/CanberraIntro";
 
 const CanberraServices = dynamic(
@@ -10,16 +10,16 @@ const CanberraServices = dynamic(
 );
 const CanberraContext = dynamic(() => import("./(components)/CanberraContext"));
 const CanberraWhy = dynamic(() => import("./(components)/CanberraWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import canberra from "../../public/pageHeros/canberra.webp";
-import canberraMob from "../../public/pageHeros/mob/canberraMob.webp";
+import canberra from "@/public/pageHeros/canberra.webp";
+import canberraMob from "@/public/pageHeros/mob/canberraMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-canberra";

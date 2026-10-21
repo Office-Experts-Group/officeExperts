@@ -1,17 +1,17 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
-import support from "../../../../public/pageHeros/support.webp";
-import teamMob from "../../../../public/pageHeros/mob/teamMob.webp";
+import support from "@/public/pageHeros/support.webp";
+import teamMob from "@/public/pageHeros/mob/teamMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

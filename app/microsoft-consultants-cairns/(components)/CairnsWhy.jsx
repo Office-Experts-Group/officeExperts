@@ -4,7 +4,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/cairnsWhy.module.scss";
 // Service area tags for Far North Queensland coverage

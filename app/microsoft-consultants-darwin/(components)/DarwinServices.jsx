@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/darwinServices.module.scss";
 
@@ -39,7 +39,12 @@ const services = [
     tag: "AI & Automation",
     description:
       "Agents built inside Microsoft 365 and Copilot Studio that do one job well: sort and route the shared inbox, answer staff questions from your own policies and procedures, draft routine reports, or pre-fill forms from incoming enquiries. Scoped carefully, with clear boundaries around your data.",
-    points: ["Copilot Studio", "Inbox triage", "Document Q&A", "Process agents"],
+    points: [
+      "Copilot Studio",
+      "Inbox triage",
+      "Document Q&A",
+      "Process agents",
+    ],
     href: "/services/ai-agent-development",
     linkText: "AI Agent Development",
   },

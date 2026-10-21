@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Contact from "../../components/Contact";
+import Contact from "@/components/Contact";
 import CTAMain from "../(components)/CTAMain";
 
 import styles from "@/styles/blog.module.scss";
@@ -15,7 +15,7 @@ import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

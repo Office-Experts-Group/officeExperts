@@ -140,15 +140,13 @@ const FooterServicesSection = () => {
         <div className={styles.dropdownContainer}>
           <div className={styles.dropdownBackground}></div>
           <div className={styles.dropdownContent}>
-            <Link href="/services/by-business-solution/cloud-based-solutions-with-azure">
+            <Link href="/services/cloud-based-solutions-with-azure">
               Microsoft Azure
             </Link>
-            <Link href="/services/by-business-solution/sql-server-and-access-integration">
+            <Link href="/services/sql-server-and-access-integration">
               Microsoft SQL Server
             </Link>
-            <Link href="/services/by-business-solution/online-solutions">
-              Microsoft SharePoint
-            </Link>
+            <Link href="/services/online-solutions">Microsoft SharePoint</Link>
             <Link href="/services/microsoft-dot-net">Microsoft .NET</Link>
             <Link href="/services/by-business-solution/custom-office-solutions">
               Microsoft Outlook

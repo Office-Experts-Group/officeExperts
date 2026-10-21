@@ -1,7 +1,7 @@
 // app/microsoft-consultants-central-coast-nsw/(components)/CentralCoastContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/centralCoastContext.module.scss";
 

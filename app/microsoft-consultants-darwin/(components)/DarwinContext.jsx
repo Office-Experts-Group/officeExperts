@@ -1,7 +1,7 @@
 // app/microsoft-consultants-darwin/(components)/DarwinContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/darwinContext.module.scss";
 
@@ -76,8 +76,8 @@ const DarwinContext = () => (
           </h2>
           <p className={styles.lead}>
             Different industries, similar frustrations: a system that grew one
-            fix at a time and a team keying the same details in twice. These
-            are the places we are most often asked to help.
+            fix at a time and a team keying the same details in twice. These are
+            the places we are most often asked to help.
           </p>
         </div>
       </AnimateOnScroll>

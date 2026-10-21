@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@/styles/pageSegmentCenter.module.scss";
-import support from "../../../../../public/support.webp";
-import document from "../../../../../public/document600x400.webp";
+import support from "@/public/support.webp";
+import document from "@/public/document600x400.webp";
 
 const PageSegmentCenter = () => {
   const services = [

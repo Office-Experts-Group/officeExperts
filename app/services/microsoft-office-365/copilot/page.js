@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Static imports — above the fold
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import CopilotIntro from "./(components)/CopilotIntro";
 
 // Dynamically imported — below the fold
@@ -14,21 +14,19 @@ const CopilotLicensing = dynamic(
   () => import("./(components)/CopilotLicensing"),
 );
 const CopilotCta = dynamic(() => import("./(components)/CopilotCta"));
-const RelatedLinks = dynamic(
-  () => import("../../../../components/RelatedLinks"),
-);
-const Contact = dynamic(() => import("../../../../components/Contact"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 // Schema generators shared across all pages
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // Hero images
-import copilotDesk from "../../../../public/pageHeros/copilot.webp";
-import copilotMob from "../../../../public/pageHeros/mob/copilotMob.webp";
+import copilotDesk from "@/public/pageHeros/copilot.webp";
+import copilotMob from "@/public/pageHeros/mob/copilotMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-office-365/copilot";

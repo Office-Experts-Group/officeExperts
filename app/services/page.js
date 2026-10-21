@@ -5,7 +5,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // ---- Existing site components ----
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import GroupIntro from "./(components)/GroupIntro";
 
 // Below-the-fold components loaded dynamically (still server rendered)
@@ -31,17 +31,17 @@ const CaseStudyCallout = dynamic(
   () => import("./(components)/CaseStudyCallout"),
 );
 const ServicesFaq = dynamic(() => import("./(components)/ServicesFaq"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 // Hero images. Add these two files to /public/pageHeros (see README)
-import servicesHero from "../../public/pageHeros/services.webp";
-import servicesHeroMob from "../../public/pageHeros/mob/servicesMob.webp";
+import servicesHero from "@/public/pageHeros/services.webp";
+import servicesHeroMob from "@/public/pageHeros/mob/servicesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 import {
   pageMeta,

@@ -1,25 +1,25 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import ServicePageCards from "./(components)/ServicePageCards";
-import Contact from "../../../../components/Contact";
+import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
 import PageSegment8 from "./(components)/PageSegment8";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
-import FAQSection from "../../../../components/FAQSection";
+import FAQSection from "@/components/FAQSection";
 import Contents from "./(components)/Contents";
 
-import faqs from "../../../../faqs/corporate-solutions";
+import faqs from "@/faqs/corporate-solutions";
 
-import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
-import graph from "../../../../public/pageHeros/mob/graph.webp";
+import deskGraph from "@/public/pageHeros/deskGraph.webp";
+import graph from "@/public/pageHeros/mob/graph.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

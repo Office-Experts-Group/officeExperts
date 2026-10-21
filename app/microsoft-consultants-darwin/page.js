@@ -2,23 +2,23 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import DarwinIntro from "./(components)/DarwinIntro";
 
 const DarwinServices = dynamic(() => import("./(components)/DarwinServices"));
 const DarwinContext = dynamic(() => import("./(components)/DarwinContext"));
 const DarwinWhy = dynamic(() => import("./(components)/DarwinWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // TODO: add these two images (see hand-off notes)
-import darwin from "../../public/pageHeros/darwin.webp";
-import darwinMob from "../../public/pageHeros/mob/darwinMob.webp";
+import darwin from "@/public/pageHeros/darwin.webp";
+import darwinMob from "@/public/pageHeros/mob/darwinMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-darwin";

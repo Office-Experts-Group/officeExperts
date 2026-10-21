@@ -1,5 +1,5 @@
 import sgMail from "@sendgrid/mail";
-import { getEmailSignature } from "../../../utils/emailSignature";
+import { getEmailSignature } from "@/utils/emailSignature";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -21,7 +21,7 @@ export async function POST(req) {
     if (!name || !email || !message) {
       return Response.json(
         { error: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -29,7 +29,7 @@ export async function POST(req) {
     if (honeypot) {
       return Response.json(
         { error: "Bot submission detected" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -52,8 +52,8 @@ export async function POST(req) {
     // Updated messages to include location and service information
     const clientTextMessage = `
       You have received a new message from ${name} (${email}) from ${
-      location || "Unknown location"
-    }.
+        location || "Unknown location"
+      }.
       Phone: ${phone || "Not provided"}
       Service Requested: ${service || "Not specified"}
       Operating System: ${operatingSystem || "Not specified"}
@@ -74,8 +74,8 @@ export async function POST(req) {
 
     const clientHtmlMessage = `
       <p>You have received a new message from <strong>${name}</strong> (${email}) from ${
-      location || "Unknown location"
-    }.</p>
+        location || "Unknown location"
+      }.</p>
       <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
       <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
       <p><strong>Operating System:</strong> ${
@@ -116,7 +116,7 @@ export async function POST(req) {
 
       return Response.json(
         { message: "Email sent successfully" },
-        { status: 200 }
+        { status: 200 },
       );
     } catch (emailError) {
       console.error("SendGrid error:", emailError);

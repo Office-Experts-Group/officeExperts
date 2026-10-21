@@ -314,7 +314,7 @@ Later: proxy and CSP cleanup, including the goneUrls patterns.
 
 **2.1 Import alias**
 
-Moving folders in Phase 5 changes their depth, which breaks `../../../` imports. Fix that first.
+Moving folders in Phase 5 changes their depth, which breaks `@/` imports. Fix that first.
 
 - [ ] Open `jsconfig.json`. If it doesn't exist or has no `paths`, create or extend it:
   ```json
@@ -334,7 +334,7 @@ In VS Code: **Ctrl+Shift+H**, regex on (**Alt+R**), files to include `*.js, *.js
 
 - [ ] **Find:** `(["'])(?:\.{1,2}/)+styles/([\w.-]+?)\.module\.css\1`
       **Replace:** `$1@/styles/$2.module.scss$1`
-      For example, `'../../../styles/servicesNav.module.css'` becomes `'@/styles/servicesNav.module.scss'`.
+      For example, `'@/styles/servicesNav.module.css'` becomes `'@/styles/servicesNav.module.scss'`.
 - [ ] Search `\.module\.css` again. It should return 0 results. Fix any leftovers, such as files in nested style folders, by hand.
 - [ ] Search `\.css["']` to find global stylesheet imports (for example in `app/layout.js`). Where a `.scss` source exists, point the import at it.
 - [ ] Search `Compiled CSS module` and update those comments. Components no longer import compiled CSS.

@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import dashboard from "../../../../../public/dashboard400x240.webp";
+import dashboard from "@/public/dashboard400x240.webp";
 
 const Segment3copy = () => {
   return (
@@ -41,7 +41,7 @@ const Segment3copy = () => {
             Office applications beyond Excel, you may want to explore our{" "}
             <Link
               style={{ color: "#046999", fontWeight: "700" }}
-              href={"/services/by-business-solution/add-in-creation"}
+              href={"/services/add-in-creation"}
             >
               Office add-in creation services
             </Link>

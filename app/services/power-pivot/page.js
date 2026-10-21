@@ -1,24 +1,24 @@
 import React from "react";
 
-import ServiceHero from "../../../components/ServiceHero";
-import Contact from "../../../components/Contact";
-import FAQSection from "../../../components/FAQSection";
+import ServiceHero from "@/components/ServiceHero";
+import Contact from "@/components/Contact";
+import FAQSection from "@/components/FAQSection";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import PromoLink from "./(components)/PromoLink";
 import BlackSegment from "./(components)/BlackSegment";
-import RelatedLinks from "../../../components/RelatedLinks";
+import RelatedLinks from "@/components/RelatedLinks";
 
-import graphMeeting from "../../../public/pageHeros/graphMeeting.webp";
-import meetingMob from "../../../public/pageHeros/mob/meetingMob.webp";
+import graphMeeting from "@/public/pageHeros/graphMeeting.webp";
+import meetingMob from "@/public/pageHeros/mob/meetingMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
-import faqs from "../../../faqs/pivot";
-import faqSchema from "../../../faqs/pivotSchema";
+} from "@/utils/schemaGenerators";
+import faqs from "@/faqs/pivot";
+import faqSchema from "@/faqs/pivotSchema";
 
 const schema = {
   "@context": "https://schema.org",

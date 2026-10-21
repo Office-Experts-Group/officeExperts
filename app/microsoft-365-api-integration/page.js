@@ -1,18 +1,18 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
-import Contact from "../../components/Contact";
-import Promo from "../../components/Promo";
-import ExpertsAwait from "../../components/ExpertsAwait";
+import ServiceHero from "@/components/ServiceHero";
+import Contact from "@/components/Contact";
+import Promo from "@/components/Promo";
+import ExpertsAwait from "@/components/ExpertsAwait";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import aboutUs from "../../public/pageHeros/aboutUs.webp";
-import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
+import aboutUs from "@/public/pageHeros/aboutUs.webp";
+import aboutUsMob from "@/public/pageHeros/mob/aboutUsMob.webp";
 import Intro from "./(components)/Intro";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";

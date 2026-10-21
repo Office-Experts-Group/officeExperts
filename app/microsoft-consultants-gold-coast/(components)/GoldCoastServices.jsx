@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/goldCoastServices.module.scss";
 
@@ -73,7 +73,12 @@ const groups = [
         feature: true,
         description:
           "Agents built inside Microsoft 365 and Copilot Studio that triage a shared inbox, answer customer and staff questions from your own documents, draft routine reports and pass enquiries to the right person. Scoped to one job first, with clear limits on data access.",
-        chips: ["Copilot Studio", "Inbox triage", "Document Q&A", "Process agents"],
+        chips: [
+          "Copilot Studio",
+          "Inbox triage",
+          "Document Q&A",
+          "Process agents",
+        ],
         href: "/services/ai-agent-development",
         linkText: "AI Agent Development",
       },
@@ -125,7 +130,9 @@ const GoldCoastServices = () => (
         <p className={styles.eyebrow}>Services</p>
         <h2 className={styles.heading}>
           Every Microsoft platform,{" "}
-          <span className={styles.headingAccent}>plus the AI that ties them together.</span>
+          <span className={styles.headingAccent}>
+            plus the AI that ties them together.
+          </span>
         </h2>
       </div>
     </AnimateOnScroll>
@@ -138,7 +145,9 @@ const GoldCoastServices = () => (
           duration={0.6}
           delay={gi * 0.08}
         >
-          <div className={`${styles.group} ${g.id === "platform" ? styles.platform : ""}`}>
+          <div
+            className={`${styles.group} ${g.id === "platform" ? styles.platform : ""}`}
+          >
             <div className={styles.groupHead}>
               <h3 className={styles.groupTitle}>{g.label}</h3>
               <p className={styles.groupNote}>{g.note}</p>

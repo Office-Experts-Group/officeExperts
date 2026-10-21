@@ -35,16 +35,13 @@ const Contents = () => {
             <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"></path>
           </svg>
           <h3>Quick Links</h3>
-          <Link
-            href="/services/by-business-solution/dashboards"
-            onClick={handleLinkClick}
-          >
+          <Link href="/services/dashboards" onClick={handleLinkClick}>
             <div className={styles.contentLink}>
               <p>Reporting Solutions</p>
             </div>
           </Link>
           <Link
-            href="/services/by-business-solution/3rd-party-application-or-office-integration"
+            href="/services/3rd-party-application-or-office-integration"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>
@@ -61,7 +58,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="/services/by-business-solution/3rd-party-application-or-office-integration"
+            href="/services/3rd-party-application-or-office-integration"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>

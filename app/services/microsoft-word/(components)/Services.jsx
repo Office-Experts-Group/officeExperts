@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
-import ServicesCard from "../../../../components/ServicesCard";
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import ServicesCard from "@/components/ServicesCard";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/services.module.scss";
-import corporate from "../../../../public/microsoft/corporateNoBG.webp";
-import word from "../../../../public/microsoft/wordNoBG.webp";
-import accessibility from "../../../../public/microsoft/accessibilityNoBG.webp";
-import quickParts from "../../../../public/microsoft/quickPartsNoBG.webp";
-import scott from "../../../../public/scott.webp";
-import signature from "../../../../public/signature.webp";
-import CardIntersectionWrapper from "../../../../components/CardIntersectionWrapper";
+import corporate from "@/public/microsoft/corporateNoBG.webp";
+import word from "@/public/microsoft/wordNoBG.webp";
+import accessibility from "@/public/microsoft/accessibilityNoBG.webp";
+import quickParts from "@/public/microsoft/quickPartsNoBG.webp";
+import scott from "@/public/scott.webp";
+import signature from "@/public/signature.webp";
+import CardIntersectionWrapper from "@/components/CardIntersectionWrapper";
 
 const Services = () => {
   return (

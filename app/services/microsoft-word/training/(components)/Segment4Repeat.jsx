@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment4.module.scss";
-import success from "../../../../../public/success400x267.webp";
+import success from "@/public/success400x267.webp";
 
 const Segment4Repeat = () => {
   const benefits = [
@@ -27,7 +27,7 @@ const Segment4Repeat = () => {
     },
     {
       text: "Custom coding",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/vba-macro-development",
+      link: "https://www.officeexperts.com.au/services/vba-macro-development",
     },
     {
       text: "Flexible pricing",
@@ -39,7 +39,7 @@ const Segment4Repeat = () => {
     },
     {
       text: "Online documents",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+      link: "https://www.officeexperts.com.au/services/online-solutions",
     },
     {
       text: "Offsite or onsite",

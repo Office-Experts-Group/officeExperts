@@ -1,7 +1,7 @@
 // app/microsoft-consultants-gold-coast/(components)/GoldCoastIntro.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/goldCoastIntro.module.scss";
 
@@ -32,7 +32,9 @@ const GoldCoastIntro = () => (
           <p className={styles.eyebrow}>Serving the Gold Coast</p>
           <h2 className={styles.headline}>
             Microsoft expertise for the Gold Coast,{" "}
-            <span className={styles.accentText}>minus the traffic on the M1.</span>
+            <span className={styles.accentText}>
+              minus the traffic on the M1.
+            </span>
           </h2>
           <p className={styles.lead}>
             From Coolangatta to Coomera, Gold Coast businesses run on a mix of
@@ -50,7 +52,9 @@ const GoldCoastIntro = () => (
             <a href="#contact" className={styles.btn}>
               Book a free assessment
             </a>
-            <span className={styles.ctaNote}>No obligation. Plain-English advice.</span>
+            <span className={styles.ctaNote}>
+              No obligation. Plain-English advice.
+            </span>
           </div>
         </div>
       </AnimateOnScroll>

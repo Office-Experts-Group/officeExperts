@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/promo.module.scss";
-import computer from "../../../../../public/icons/computer.webp";
-import promo from "../../../../../public/promo.webp";
+import computer from "@/public/icons/computer.webp";
+import promo from "@/public/promo.webp";
 
 const Promo = ({ h2, p }) => {
   return (
@@ -25,7 +25,7 @@ const Promo = ({ h2, p }) => {
                 Microsoft Azure
               </Link>
               . Then your data will be{" "}
-              <Link href="https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure">
+              <Link href="https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure">
                 hosted in the cloud
               </Link>{" "}
               with Microsoft and you can access your data from anywhere.
@@ -37,11 +37,11 @@ const Promo = ({ h2, p }) => {
               <Link href="https://www.officeexperts.com.au/services/microsoft-dot-net">
                 .NET,{" "}
               </Link>
-              <Link href="https://www.officeexperts.com.au/services/by-business-solution/sql-server-and-access-integration">
+              <Link href="https://www.officeexperts.com.au/services/sql-server-and-access-integration">
                 SQL Server{" "}
               </Link>
               and{" "}
-              <Link href="https://www.officeexperts.com.au/services/by-business-solution/online-solutions">
+              <Link href="https://www.officeexperts.com.au/services/online-solutions">
                 SharePoint.
               </Link>
             </p>

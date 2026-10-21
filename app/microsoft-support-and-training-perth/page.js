@@ -1,24 +1,24 @@
 import React from "react";
 import Image from "next/image";
 
-import ServiceHero from "../../components/ServiceHero";
-import Promo from "../../components/Promo";
-import Contact from "../../components/Contact";
-import ExpertsAwait from "../../components/ExpertsAwait";
+import ServiceHero from "@/components/ServiceHero";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/supportPage.module.scss";
-import perth from "../../public/pageHeros/perth.webp";
-import perthMob from "../../public/pageHeros/mob/perthMob.webp";
-import askExpert from "../../public/askExpert540x480.webp";
-import support from "../../public/support.webp";
+import perth from "@/public/pageHeros/perth.webp";
+import perthMob from "@/public/pageHeros/mob/perthMob.webp";
+import askExpert from "@/public/askExpert540x480.webp";
+import support from "@/public/support.webp";
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-support-and-training-perth";

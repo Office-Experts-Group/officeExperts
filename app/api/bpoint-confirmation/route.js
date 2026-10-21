@@ -8,7 +8,7 @@
 // Sendgrid mail client (the only email package in the stack)
 import sgMail from "@sendgrid/mail";
 // Shared HTML and plain-text signature used on customer-facing emails
-import { getEmailSignature } from "../../../utils/emailSignature";
+import { getEmailSignature } from "@/utils/emailSignature";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 

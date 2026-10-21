@@ -1,21 +1,21 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import LocationPages from "../(components)/LocationPages";
 import CTAMainProps from "../(components)/CTAMainProps";
-import ContactLocationSegment from "../../components/ContactLocationSegment";
+import ContactLocationSegment from "@/components/ContactLocationSegment";
 import ServicesLocation from "../(components)/ServicesLocation";
-import Promo from "../../components/Promo";
+import Promo from "@/components/Promo";
 import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
-import centralCoast from "../../public/pageHeros/centralCoast.webp";
-import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
+import centralCoast from "@/public/pageHeros/centralCoast.webp";
+import centralCoastMob from "@/public/pageHeros/mob/centralCoastMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import CodeBlock from "../../../components/CodeBlock";
-import Contact from "../../../components/Contact";
+import CodeBlock from "@/components/CodeBlock";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import marcello from "../../../public/team/marcello.webp";
+import marcello from "@/public/team/marcello.webp";
 
 const ExportToPDFBlogPost = () => {
   // HTML structure for PDF

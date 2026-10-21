@@ -1,35 +1,35 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import LocationGroups from "./(components)/LocationGroups";
 import LocationsIntro from "./(components)/LocationsIntro";
-import Promo from "../../components/Promo";
-import Contact from "../../components/Contact";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
 
-import australia from "../../public/pageHeros/australia.webp";
-import australiaMob from "../../public/pageHeros/mob/australiaMob.webp";
+import australia from "@/public/pageHeros/australia.webp";
+import australiaMob from "@/public/pageHeros/mob/australiaMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // Import location images
 
-import sydney from "../../public/pageHeros/sydney.webp";
-import melbourne from "../../public/pageHeros/mob/melbourneMob.webp";
-import brisbane from "../../public/pageHeros/mob/brisbaneMob.webp";
-import perth from "../../public/pageHeros/mob/perthMob.webp";
-import adelaide from "../../public/pageHeros/mob/adelaideMob.webp";
-import canberra from "../../public/pageHeros/mob/canberraMob.webp";
-import northernRivers from "../../public/pageHeros/mob/northernRiversMob.webp";
-import wollongong from "../../public/pageHeros/mob/wollongongMob.webp";
-import richmond from "../../public/pageHeros/mob/richmondMob.webp";
-import darwin from "../../public/pageHeros/mob/darwinMob.webp";
-import centralCoast from "../../public/pageHeros/mob/centralCoastMob.webp";
-import goldCoast from "../../public/pageHeros/mob/goldCoastMob.webp";
-import cairns from "../../public/pageHeros/mob/cairnsColourMob.webp";
+import sydney from "@/public/pageHeros/sydney.webp";
+import melbourne from "@/public/pageHeros/mob/melbourneMob.webp";
+import brisbane from "@/public/pageHeros/mob/brisbaneMob.webp";
+import perth from "@/public/pageHeros/mob/perthMob.webp";
+import adelaide from "@/public/pageHeros/mob/adelaideMob.webp";
+import canberra from "@/public/pageHeros/mob/canberraMob.webp";
+import northernRivers from "@/public/pageHeros/mob/northernRiversMob.webp";
+import wollongong from "@/public/pageHeros/mob/wollongongMob.webp";
+import richmond from "@/public/pageHeros/mob/richmondMob.webp";
+import darwin from "@/public/pageHeros/mob/darwinMob.webp";
+import centralCoast from "@/public/pageHeros/mob/centralCoastMob.webp";
+import goldCoast from "@/public/pageHeros/mob/goldCoastMob.webp";
+import cairns from "@/public/pageHeros/mob/cairnsColourMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

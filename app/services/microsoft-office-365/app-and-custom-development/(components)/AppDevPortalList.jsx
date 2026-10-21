@@ -51,7 +51,7 @@ const items = [
     title: "Data you can trust",
     tag: "Integration",
     desc: "Two-way synchronisation with SharePoint, SQL Server and Dataverse, so a change in one system appears in the others.",
-    href: "/services/by-business-solution/database-development-and-solutions",
+    href: "/services/database-development-and-solutions",
     linkText: "Database development and solutions",
   },
 ];

@@ -48,7 +48,7 @@ const pillars = [
       "Secure, centralised data environments with controlled access",
     ],
     link: {
-      href: "/services/by-business-solution/sql-server-and-access-integration",
+      href: "/services/sql-server-and-access-integration",
       label: "SQL Server integration",
     },
   },
@@ -64,7 +64,7 @@ const pillars = [
       "Intelligent automation that catches errors before they cause problems",
     ],
     link: {
-      href: "/services/by-business-solution/online-solutions",
+      href: "/services/online-solutions",
       label: "Custom built solutions",
     },
   },

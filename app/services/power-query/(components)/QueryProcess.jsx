@@ -5,7 +5,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/queryProcess.module.scss";
 

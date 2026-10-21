@@ -1,7 +1,7 @@
 // app/microsoft-consultants-gold-coast/(components)/GoldCoastContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/goldCoastContext.module.scss";
 

@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/wordTemplatesBlog.module.scss";
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 
-import word from "../../../public/blog/word-template.webp";
-import wordMob from "../../../public/blog/mob/word-template.webp";
-import meme from "../../../public/blog/automate-meme.webp";
-import math from "../../../public/blog/math-meme.webp";
-import template from "../../../public/template.webp";
+import word from "@/public/blog/word-template.webp";
+import wordMob from "@/public/blog/mob/word-template.webp";
+import meme from "@/public/blog/automate-meme.webp";
+import math from "@/public/blog/math-meme.webp";
+import template from "@/public/template.webp";
 
 export default function WordTemplatesBlogPost() {
   return (
@@ -549,9 +549,7 @@ export default function WordTemplatesBlogPost() {
               Need expert assistance developing custom Word templates for your
               organisation? Our team specialises in creating professional,
               automated templates that save time and ensure consistency.{" "}
-              <Link href="../../contact-us">
-                Contact our Word Template Experts
-              </Link>{" "}
+              <Link href="@/contact-us">Contact our Word Template Experts</Link>{" "}
               to discuss your specific needs.
             </p>
           </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment.module.scss";
-import programmer from "../../../../public/programmer600x400.webp";
+import programmer from "@/public/programmer600x400.webp";
 
 const PageSegmentMain = () => {
   const checkItems = [

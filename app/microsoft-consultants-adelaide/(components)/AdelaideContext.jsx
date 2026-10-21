@@ -1,7 +1,7 @@
 // app/microsoft-consultants-adelaide/(components)/AdelaideContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/adelaideContext.module.scss";
 
@@ -76,8 +76,8 @@ const AdelaideContext = () => (
         </div>
         <p className={styles.lead}>
           South Australia leans on defence, health, education, food and wine,
-          and resources more than most states. Here is where the problems we
-          fix tend to show up in each.
+          and resources more than most states. Here is where the problems we fix
+          tend to show up in each.
         </p>
       </div>
     </AnimateOnScroll>

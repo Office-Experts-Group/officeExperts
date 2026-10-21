@@ -68,4 +68,41 @@ module.exports = [
     "/services/microsoft-vbscript",
     "/services/activex-vbscript-migration",
   ),
+  // -- by business solution flattening --
+  permanent(
+    "/services/by-business-solution/3rd-party-application-or-office-integration",
+    "/services/3rd-party-application-or-office-integration",
+  ),
+  permanent(
+    "/services/by-business-solution/add-in-creation",
+    "/services/add-in-creation",
+  ),
+  permanent(
+    "/services/by-business-solution/cloud-based-solutions-with-azure",
+    "/services/cloud-based-solutions-with-azure",
+  ),
+  permanent(
+    "/services/by-business-solution/custom-office-solutions",
+    "/services/custom-office-solutions",
+  ),
+  permanent(
+    "/services/by-business-solution/dashboards",
+    "/services/dashboards",
+  ),
+  permanent(
+    "/services/by-business-solution/database-development-and-solutions",
+    "/services/database-development-and-solutions",
+  ),
+  permanent(
+    "/services/by-business-solution/online-solutions",
+    "/services/online-solutions",
+  ),
+  permanent(
+    "/services/by-business-solution/sql-server-and-access-integration",
+    "/services/sql-server-and-access-integration",
+  ),
+  permanent(
+    "/services/by-business-solution/vba-macro-development",
+    "/services/vba-macro-development",
+  ),
 ];

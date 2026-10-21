@@ -1,7 +1,7 @@
 // app/microsoft-consultants-darwin/(components)/DarwinIntro.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/darwinIntro.module.scss";
 
@@ -19,7 +19,9 @@ const DarwinIntro = () => (
           <p className={styles.eyebrow}>Darwin &amp; the Northern Territory</p>
           <h2 className={styles.headline}>
             Microsoft expertise for the Top End,{" "}
-            <span className={styles.accentText}>wherever you&rsquo;re working from.</span>
+            <span className={styles.accentText}>
+              wherever you&rsquo;re working from.
+            </span>
           </h2>
         </AnimateOnScroll>
 
@@ -37,8 +39,8 @@ const DarwinIntro = () => (
               solutions since 2000, and our consultants are spread across
               Australia. Darwin and Top End clients are matched to the right
               specialist for the job and work with them by screen-share and
-              shared files, so the quality of the help does not depend on
-              how close anyone is.
+              shared files, so the quality of the help does not depend on how
+              close anyone is.
             </p>
           </div>
         </AnimateOnScroll>
@@ -46,7 +48,9 @@ const DarwinIntro = () => (
         <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.1}>
           <aside className={styles.season}>
             <div className={styles.seasonText}>
-              <p className={styles.seasonTitle}>Built for the build-up and the wet</p>
+              <p className={styles.seasonTitle}>
+                Built for the build-up and the wet
+              </p>
               <p className={styles.seasonBody}>
                 Cyclone season, power outages and site closures happen. We set
                 up Microsoft 365 and cloud-based files so the business keeps

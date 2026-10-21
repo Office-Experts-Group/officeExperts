@@ -4,17 +4,17 @@ import dynamic from "next/dynamic";
 export const revalidate = false;
 
 // Keep ServiceHero static since it's above fold
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 // Dynamically import components that use images
-const ExpertsAwait = dynamic(() => import("../../../components/ExpertsAwait"), {
+const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"), {
   ssr: true,
 });
-const Contact = dynamic(() => import("../../../components/Contact"), {
+const Contact = dynamic(() => import("@/components/Contact"), {
   ssr: true,
 });
-const RelatedLinks = dynamic(() => import("../../../components/RelatedLinks"), {
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"), {
   ssr: true,
 });
 
@@ -25,14 +25,14 @@ const SolutionsCarousel = dynamic(
   },
 );
 
-import handShake from "../../../public/pageHeros/handShake.webp";
-import handShakeMob from "../../../public/pageHeros/mob/handShakeMob.webp";
+import handShake from "@/public/pageHeros/handShake.webp";
+import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

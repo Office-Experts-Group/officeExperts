@@ -2046,7 +2046,7 @@ export const caseStudies = [
       },
       {
         label: "Custom web application development",
-        href: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+        href: "https://www.officeexperts.com.au/services/online-solutions",
       },
     ],
   },
@@ -2273,7 +2273,7 @@ export const caseStudies = [
     services: [
       {
         label: "Custom web application development",
-        href: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+        href: "https://www.officeexperts.com.au/services/online-solutions",
       },
       {
         label: "Reporting and analytics",
@@ -2577,7 +2577,7 @@ export const caseStudies = [
     services: [
       {
         label: "Database development and solutions",
-        href: "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions",
+        href: "https://www.officeexperts.com.au/services/database-development-and-solutions",
       },
       {
         label: "Microsoft Access services",

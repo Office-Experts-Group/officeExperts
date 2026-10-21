@@ -1,21 +1,21 @@
 import React from "react";
 
-import Contact from "../../components/Contact";
-import ServiceHero from "../../components/ServiceHero";
+import Contact from "@/components/Contact";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment7 from "./(components)/PageSegment7";
-import Promo from "../../components/Promo";
+import Promo from "@/components/Promo";
 import BlackSegment from "./(components)/BlackSegment";
 
-import resume from "../../public/pageHeros/resume.webp";
-import resumeMob from "../../public/pageHeros/mob/resumeMob.webp";
+import resume from "@/public/pageHeros/resume.webp";
+import resumeMob from "@/public/pageHeros/mob/resumeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

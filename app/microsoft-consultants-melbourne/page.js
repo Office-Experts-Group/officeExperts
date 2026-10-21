@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import MelbourneIntro from "./(components)/MelbourneIntro";
 
 // Dynamically imported below the fold
@@ -13,16 +13,16 @@ const MelbourneContext = dynamic(
   () => import("./(components)/MelbourneContext"),
 );
 const MelbourneWhy = dynamic(() => import("./(components)/MelbourneWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import melbourne from "../../public/pageHeros/melbourne.webp";
-import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
+import melbourne from "@/public/pageHeros/melbourne.webp";
+import melbourneMob from "@/public/pageHeros/mob/melbourneMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-melbourne";

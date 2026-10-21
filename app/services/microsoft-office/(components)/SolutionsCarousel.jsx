@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import code from "../../../../public/350x260/code.webp";
-import coder from "../../../../public/350x260/coder.webp";
-import dashboard from "../../../../public/350x260/dashboard.webp";
-import desk from "../../../../public/350x260/desk.webp";
-import graph from "../../../../public/350x260/graph.webp";
-import hands from "../../../../public/350x260/hands.webp";
-import keyboard from "../../../../public/350x260/keyboard.webp";
-import magnify from "../../../../public/350x260/magnify.webp";
+import code from "@/public/350x260/code.webp";
+import coder from "@/public/350x260/coder.webp";
+import dashboard from "@/public/350x260/dashboard.webp";
+import desk from "@/public/350x260/desk.webp";
+import graph from "@/public/350x260/graph.webp";
+import hands from "@/public/350x260/hands.webp";
+import keyboard from "@/public/350x260/keyboard.webp";
+import magnify from "@/public/350x260/magnify.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
@@ -28,7 +28,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "VBA/Macro Development",
-      link: "/services/by-business-solution/vba-macro-development",
+      link: "/services/vba-macro-development",
       image: code,
       alt: "code",
       description: [
@@ -37,7 +37,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Azure Cloud Based Solutions",
-      link: "/services/by-business-solution/cloud-based-solutions-with-azure",
+      link: "/services/cloud-based-solutions-with-azure",
       image: desk,
       alt: "desk",
       description: [
@@ -46,7 +46,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Integration",
-      link: "/services/by-business-solution/3rd-party-application-or-office-integration",
+      link: "/services/3rd-party-application-or-office-integration",
       image: keyboard,
       alt: "keyboard",
       description: [
@@ -56,7 +56,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Online Solutions",
-      link: "/services/by-business-solution/online-solutions",
+      link: "/services/online-solutions",
       image: hands,
       alt: "hands",
       description: [
@@ -66,7 +66,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "with SQL Server",
-      link: "/services/by-business-solution/sql-server-and-access-integration",
+      link: "/services/sql-server-and-access-integration",
       image: coder,
       alt: "coder",
       description: [
@@ -76,7 +76,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Custom Add-in Creation",
-      link: "/services/by-business-solution/add-in-creation",
+      link: "/services/add-in-creation",
       image: magnify,
       alt: "magnify",
       description: [

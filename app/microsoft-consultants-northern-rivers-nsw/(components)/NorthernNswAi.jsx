@@ -1,8 +1,8 @@
 // app/microsoft-consultants-northern-nsw/(components)/NorthernNswAi.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import ServiceLink from "../../services/(components)/ServiceLink";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import ServiceLink from "./ServiceLink";
 
 import { aiItems } from "../northernNswData";
 
@@ -26,7 +26,9 @@ const NorthernNswAi = () => (
           <p className={styles.eyebrow}>AI &amp; custom agents</p>
           <h2 className={styles.heading}>
             Smaller teams, bigger workload.{" "}
-            <span className={styles.headingAccent}>Let an agent take the repeat jobs.</span>
+            <span className={styles.headingAccent}>
+              Let an agent take the repeat jobs.
+            </span>
           </h2>
           <p className={styles.text}>
             Our programmers build fully custom AI agents in Python and

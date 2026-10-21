@@ -6,7 +6,7 @@
 // and the description on the right. A continuous accent line ties all rows together.
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/cairnsIndustries.module.scss";
 const industries = [

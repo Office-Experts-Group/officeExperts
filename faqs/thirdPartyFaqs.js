@@ -1,4 +1,4 @@
-// app/services/by-business-solution/3rd-party-application-or-office-integration/(data)/thirdPartyFaqs.js
+// app/services/3rd-party-application-or-office-integration/(data)/thirdPartyFaqs.js
 
 export const thirdPartyFaqs = [
   {

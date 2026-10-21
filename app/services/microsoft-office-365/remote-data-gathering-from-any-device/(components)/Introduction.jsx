@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import ConnectionDiagram from "../(svgs)/ConnectionDiagram";
 
 import styles from "@/styles/rdgIntroduction.module.scss";

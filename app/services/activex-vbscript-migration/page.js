@@ -3,25 +3,25 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import MigrationHero from "./(components)/MigrationHero";
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 
 const AffectedCheck = dynamic(() => import("./(components)/AffectedCheck"));
 const MigrationReplaces = dynamic(
   () => import("./(components)/MigrationReplaces"),
 );
 const MigrationFaq = dynamic(() => import("./(components)/MigrationFaq"));
-const ExpertsAwait = dynamic(() => import("../../../components/ExpertsAwait"));
-const Promo = dynamic(() => import("../../../components/Promo"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
+const Promo = dynamic(() => import("@/components/Promo"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import migrate from "../../../public/pageHeros/migrate.webp";
-import migrateMob from "../../../public/pageHeros/mob/migrateMob.webp";
+import migrate from "@/public/pageHeros/migrate.webp";
+import migrateMob from "@/public/pageHeros/mob/migrateMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/activex-vbscript-migration";

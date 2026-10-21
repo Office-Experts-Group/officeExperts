@@ -1,5 +1,5 @@
 // faqs/database-development-and-solutions.js
-// FAQ content for /services/by-business-solution/database-development-and-solutions.
+// FAQ content for /services/database-development-and-solutions.
 // Used by FAQSection on the page and by databaseDevelopmentSchema.js, so the visible answers
 // and the FAQPage structured data always match. Answers are plain strings for that reason.
 
@@ -35,7 +35,8 @@ const faqs = [
       "Yes. Once the data is in SQL Server, Azure SQL or a web database such as PostgreSQL or Supabase, we can build a secure web portal in Next.js and React or a mobile app in React Native, while staff continue to use desktop forms if they prefer.",
   },
   {
-    question: "Do you work with non-Microsoft databases such as PostgreSQL, Supabase, Firebase or MongoDB?",
+    question:
+      "Do you work with non-Microsoft databases such as PostgreSQL, Supabase, Firebase or MongoDB?",
     answer:
       "Yes. Alongside Access, SQL Server and Azure SQL, we build on PostgreSQL, Supabase, MySQL, Firebase and MongoDB. We choose the platform based on the job, such as relational reporting, real-time mobile data or flexible document storage, rather than defaulting to one vendor.",
   },

@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 import styles from "@/styles/pageSegment.module.scss";
-import dreadLady from "../../../../../public/dreadLady.webp";
-import semi from "../../../../../public/shapes/semi600x600.webp";
+import dreadLady from "@/public/dreadLady.webp";
+import semi from "@/public/shapes/semi600x600.webp";
 
 const PageSegmentMain = () => {
   return (

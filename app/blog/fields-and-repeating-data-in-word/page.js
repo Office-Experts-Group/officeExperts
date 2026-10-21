@@ -2,18 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Contact from "../../../components/Contact";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import dan from "../../../public/blog/dan.webp";
-import fields from "../../../public/blog/fields.webp";
-import copy from "../../../public/blog/copy.webp";
-import dataSwirl from "../../../public/blog/dataSwirl.webp";
-import paste from "../../../public/blog/paste.webp";
-import director from "../../../public/blog/director.webp";
-import pitfall from "../../../public/blog/pitfall.webp";
-import waste from "../../../public/blog/waste.webp";
+import dan from "@/public/blog/dan.webp";
+import fields from "@/public/blog/fields.webp";
+import copy from "@/public/blog/copy.webp";
+import dataSwirl from "@/public/blog/dataSwirl.webp";
+import paste from "@/public/blog/paste.webp";
+import director from "@/public/blog/director.webp";
+import pitfall from "@/public/blog/pitfall.webp";
+import waste from "@/public/blog/waste.webp";
 
 const FieldsRepeatingDataBlogPost = () => {
   const articleSchema = {

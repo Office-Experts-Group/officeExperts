@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 
 import styles from "@/styles/boringStuff.module.scss";
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 
-import handShake from "../../public/pageHeros/handShake.webp";
-import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
+import handShake from "@/public/pageHeros/handShake.webp";
+import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
-import { generateOrganizationSchema } from "../../utils/schemaGenerators";
+import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

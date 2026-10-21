@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/payment.module.scss";
 
-import { getPaymentConfig } from "../../../utils/paymentSelector";
+import { getPaymentConfig } from "@/utils/paymentSelector";
 
 const SimplifyPaymentForm = ({ params }) => {
   const [isLoading, setIsLoading] = useState(true);

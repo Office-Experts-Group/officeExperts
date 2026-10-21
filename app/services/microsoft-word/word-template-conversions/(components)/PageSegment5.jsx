@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import eyes from "../../../../../public/eyes400x263.webp";
+import eyes from "@/public/eyes400x263.webp";
 
 const PageSegment3 = () => {
   return (

@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import GoldCoastIntro from "./(components)/GoldCoastIntro";
 
 const GoldCoastServices = dynamic(
@@ -12,16 +12,16 @@ const GoldCoastContext = dynamic(
   () => import("./(components)/GoldCoastContext"),
 );
 const GoldCoastWhy = dynamic(() => import("./(components)/GoldCoastWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import goldCoast from "../../public/pageHeros/goldCoast.webp";
-import goldCoastMob from "../../public/pageHeros/mob/goldCoastMob.webp";
+import goldCoast from "@/public/pageHeros/goldCoast.webp";
+import goldCoastMob from "@/public/pageHeros/mob/goldCoastMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-gold-coast";

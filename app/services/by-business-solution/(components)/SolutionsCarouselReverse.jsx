@@ -2,17 +2,17 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import project1 from "../../../../public/cards/graphHands350x200.webp";
-import project2 from "../../../../public/cards/data350x200.webp";
-import project3 from "../../../../public/350x260/graph.webp";
-import project4 from "../../../../public/350x260/magnify.webp";
-import project5 from "../../../../public/350x260/keyboard.webp";
+import project1 from "@/public/cards/graphHands350x200.webp";
+import project2 from "@/public/cards/data350x200.webp";
+import project3 from "@/public/350x260/graph.webp";
+import project4 from "@/public/350x260/magnify.webp";
+import project5 from "@/public/350x260/keyboard.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Office and SQL Server",
-      link: "/services/by-business-solution/sql-server-and-access-integration",
+      link: "/services/sql-server-and-access-integration",
       image: project1,
       description: [
         "Want an existing or new SQL Server setup to access from your Office products?",
@@ -30,7 +30,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Cloud Based Solutions With Azure",
-      link: "/services/by-business-solution/cloud-based-solutions-with-azure",
+      link: "/services/cloud-based-solutions-with-azure",
       image: project3,
       description: [
         "Do you want your documents, workbooks and databases to be stored in the cloud and shared on the web?",
@@ -46,7 +46,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Custom Add-in Creation",
-      link: "/services/by-business-solution/add-in-creation",
+      link: "/services/add-in-creation",
       image: project5,
       description: [
         "Need a new Office add-in?",

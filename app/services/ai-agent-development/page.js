@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 
 // Above the fold: import directly
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import AiAgentsHero from "./(components)/AiAgentsHero";
 
 // Below the fold: code-split with next/dynamic (still server-rendered)
@@ -20,25 +20,25 @@ const AiAgentsGovernance = dynamic(
   () => import("./(components)/AiAgentsGovernance"),
 );
 const AiAgentsProcess = dynamic(() => import("./(components)/AiAgentsProcess"));
-const FAQSection = dynamic(() => import("../../../components/FAQSection"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Contact = dynamic(() => import("@/components/Contact"));
 const ProposalAssistantDemo = dynamic(
   () => import("./(components)/ProposalAssistantDemo"),
 );
 
 // FAQ content (also used to build the FAQPage schema below)
-import faqs from "../../../faqs/ai-agent-development";
-import faqSchema from "../../../faqs/aiAgentDevelopmentSchema";
+import faqs from "@/faqs/ai-agent-development";
+import faqSchema from "@/faqs/aiAgentDevelopmentSchema";
 
 // Placeholder hero images so the page compiles. Swap for the real artwork.
-import agents from "../../../public/pageHeros/agents.webp";
-import agentsMob from "../../../public/pageHeros/mob/agentsMob.webp";
+import agents from "@/public/pageHeros/agents.webp";
+import agentsMob from "@/public/pageHeros/mob/agentsMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-agent-development`;

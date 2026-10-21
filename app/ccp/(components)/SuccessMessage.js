@@ -12,7 +12,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 // Turns a card code (e.g. "VISA") into a friendly label
-import { getCardDisplayName } from "../../../utils/cardTypeUtils";
+import { getCardDisplayName } from "@/utils/cardTypeUtils";
 
 import styles from "@/styles/payment.module.scss";
 

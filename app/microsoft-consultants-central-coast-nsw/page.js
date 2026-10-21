@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import CentralCoastIntro from "./(components)/CentralCoastIntro";
 
 const CentralCoastServices = dynamic(
@@ -12,16 +12,16 @@ const CentralCoastContext = dynamic(
   () => import("./(components)/CentralCoastContext"),
 );
 const CentralCoastFaq = dynamic(() => import("./(components)/CentralCoastFaq"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import centralCoast from "../../public/pageHeros/centralCoast.webp";
-import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
+import centralCoast from "@/public/pageHeros/centralCoast.webp";
+import centralCoastMob from "@/public/pageHeros/mob/centralCoastMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-central-coast-nsw";

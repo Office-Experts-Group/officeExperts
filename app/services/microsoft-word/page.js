@@ -7,17 +7,17 @@ import IsRight from "./(components)/IsRight";
 import CTAFull from "./(components)/CTAFull";
 import Testimonials from "./(components)/Testimonials";
 import SolutionsCarousel from "./(components)/SolutionsCarousel";
-import Brands from "../../../components/Brands";
-import Promo from "../../../components/Promo";
-import Contact from "../../../components/Contact";
+import Brands from "@/components/Brands";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
 
-import { getHomePageSchema } from "../../../utils/testimonialSchemaGenerator";
-import { testimonials } from "../../../testimonials";
+import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
+import { testimonials } from "@/testimonials";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

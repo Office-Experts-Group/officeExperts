@@ -58,15 +58,12 @@ const ContentsCopy = () => {
               <p>Office 365</p>
             </Link>
             <p>/</p>
-            <Link
-              href="/services/by-business-solution/online-solutions"
-              onClick={handleLinkClick}
-            >
+            <Link href="/services/online-solutions" onClick={handleLinkClick}>
               <p>SharePoint</p>
             </Link>
           </div>
           <Link
-            href="/services/by-business-solution/cloud-based-solutions-with-azure"
+            href="/services/cloud-based-solutions-with-azure"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>

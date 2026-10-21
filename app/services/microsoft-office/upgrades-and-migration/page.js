@@ -3,17 +3,17 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import MigrationHero from "./(components)/MigrationHero";
-import Contact from "../../../../components/Contact";
+import Contact from "@/components/Contact";
 
-import upgrades from "../../../../public/pageHeros/upgrades.webp";
-import upgradesMob from "../../../../public/pageHeros/mob/upgradesMob.webp";
+import upgrades from "@/public/pageHeros/upgrades.webp";
+import upgradesMob from "@/public/pageHeros/mob/upgradesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // ── Below-the-fold dynamic imports ───────────────────────
 const MigrationProblem = dynamic(

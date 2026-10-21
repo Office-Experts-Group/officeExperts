@@ -1,7 +1,7 @@
 // app/microsoft-consultants-adelaide/(components)/AdelaideIntro.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import AdelaideMap from "../(svgs)/AdelaideMap";
 
 import styles from "@/styles/adelaideIntro.module.scss";

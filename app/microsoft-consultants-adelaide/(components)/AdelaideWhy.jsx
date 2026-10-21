@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/adelaideWhy.module.scss";
 
@@ -24,7 +24,8 @@ const ledger = [
   },
   {
     id: "inbox",
-    before: "A shared inbox where every enquiry gets read and forwarded by hand.",
+    before:
+      "A shared inbox where every enquiry gets read and forwarded by hand.",
     after:
       "An AI agent that sorts, drafts a first response and routes it to the right person.",
     via: "AI agents",
@@ -113,8 +114,8 @@ const AdelaideWhy = () => (
           <div className={styles.proofCopy}>
             <p className={styles.proofText}>
               Because our consultants work across Australia, you are matched to
-              the specialist that suits the job, and your project is not
-              limited to who happens to live in Adelaide.
+              the specialist that suits the job, and your project is not limited
+              to who happens to live in Adelaide.
             </p>
             <Link href="/client-testimonials" className={styles.proofLink}>
               Read client testimonials

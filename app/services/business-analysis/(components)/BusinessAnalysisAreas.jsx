@@ -53,7 +53,7 @@ const areas = [
     links: [
       {
         label: "Database development",
-        href: "/services/by-business-solution/database-development-and-solutions",
+        href: "/services/database-development-and-solutions",
       },
       {
         label: "SQL Server back ends",
@@ -94,7 +94,7 @@ const areas = [
       },
       {
         label: "Online solutions",
-        href: "/services/by-business-solution/online-solutions",
+        href: "/services/online-solutions",
       },
     ],
   },
@@ -108,7 +108,7 @@ const areas = [
       },
       {
         label: "Azure cloud solutions",
-        href: "/services/by-business-solution/cloud-based-solutions-with-azure",
+        href: "/services/cloud-based-solutions-with-azure",
       },
       {
         label: "Access upgrades and migration",

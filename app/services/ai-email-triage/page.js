@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 // ServiceHero (carries the page's <h1>) and the first section are above the
 // fold, so they're imported directly
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import EmailTriageHero from "./(components)/EmailTriageHero";
 
 // Below-the-fold components loaded dynamically. All are server components,
@@ -28,23 +28,23 @@ const EmailTriageWhyUs = dynamic(
 );
 
 // Shared site-wide components
-const ExpertsAwait = dynamic(() => import("../../../components/ExpertsAwait"));
-const FAQSection = dynamic(() => import("../../../components/FAQSection"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 // FAQ content: rendered by FAQSection and mapped into FAQPage schema below
-import faqs from "../../../faqs/ai-email-triage";
+import faqs from "@/faqs/ai-email-triage";
 
 // Temporary hero image until the final artwork is ready (used for both sizes)
-import emailTriage from "../../../public/pageHeros/emailTriage.webp";
-import emailTriageMob from "../../../public/pageHeros/mob/emailTriageMob.webp";
+import emailTriage from "@/public/pageHeros/emailTriage.webp";
+import emailTriageMob from "@/public/pageHeros/mob/emailTriageMob.webp";
 
 // Shared schema builders (organisation, professional service, website)
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;

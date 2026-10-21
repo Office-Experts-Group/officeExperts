@@ -2,16 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/expertsAwait.module.scss";
-import bg from "../../../../public/service-bg.webp";
+import bg from "@/public/service-bg.webp";
 
-import stuckIcon from "../../../../public/icons/computerBlue.webp";
-import issuesIcon from "../../../../public/icons/supportBlue.webp";
-import migrateIcon from "../../../../public/icons/ideaBlue.webp";
-import chartBlue from "../../../../public/icons/chartBlue.webp";
-import handShakeBlue from "../../../../public/icons/handShakeBlue.webp";
+import stuckIcon from "@/public/icons/computerBlue.webp";
+import issuesIcon from "@/public/icons/supportBlue.webp";
+import migrateIcon from "@/public/icons/ideaBlue.webp";
+import chartBlue from "@/public/icons/chartBlue.webp";
+import handShakeBlue from "@/public/icons/handShakeBlue.webp";
 
 const BlackSegment = () => {
   return (

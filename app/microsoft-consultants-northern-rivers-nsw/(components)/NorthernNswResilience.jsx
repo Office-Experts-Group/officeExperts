@@ -1,8 +1,8 @@
 // app/microsoft-consultants-northern-nsw/(components)/NorthernNswResilience.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import ServiceLink from "../../services/(components)/ServiceLink";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import ServiceLink from "./ServiceLink";
 
 import { resilience } from "../northernNswData";
 

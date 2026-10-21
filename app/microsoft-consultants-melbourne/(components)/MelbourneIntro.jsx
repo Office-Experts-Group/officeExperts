@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 import MelbourneMap from "./MelbourneMap";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/melbourneIntro.module.scss";
 const MelbourneIntro = () => (

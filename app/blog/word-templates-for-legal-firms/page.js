@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-import Contact from "../../../components/Contact";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import dan from "../../../public/blog/dan.webp";
-import legal from "../../../public/blog/legal.webp";
-import scales from "../../../public/blog/scales.webp";
-import blocks from "../../../public/blog/blocks.webp";
-import mind from "../../../public/blog/mind.webp";
-import gold from "../../../public/blog/gold.webp";
-import teplate from "../../../public/blog/teplate.webp";
-import computer from "../../../public/blog/computer.webp";
-import books from "../../../public/blog/books.webp";
+import dan from "@/public/blog/dan.webp";
+import legal from "@/public/blog/legal.webp";
+import scales from "@/public/blog/scales.webp";
+import blocks from "@/public/blog/blocks.webp";
+import mind from "@/public/blog/mind.webp";
+import gold from "@/public/blog/gold.webp";
+import teplate from "@/public/blog/teplate.webp";
+import computer from "@/public/blog/computer.webp";
+import books from "@/public/blog/books.webp";
 import Link from "next/link";
 
 const LegalTemplatesBlogPost = () => {

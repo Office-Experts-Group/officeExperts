@@ -16,7 +16,7 @@ const problems = [
   {
     title: "Databases that talk to each other",
     body: "We connect SQL Server, SharePoint, your CRM and any 3rd party applications through REST API's, so information is entered once and appears everywhere.",
-    href: "/services/by-business-solution/database-development-and-solutions",
+    href: "/services/database-development-and-solutions",
     linkText: "Database development and integration",
   },
   {

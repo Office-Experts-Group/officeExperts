@@ -285,7 +285,7 @@ export const powerPlatformSection = {
     },
     { name: "Power Query", href: "/services/power-query" },
     { name: "Power Pivot", href: "/services/power-pivot" },
-    { name: "Dashboards", href: "/services/by-business-solution/dashboards" },
+    { name: "Dashboards", href: "/services/dashboards" },
   ],
 };
 
@@ -529,7 +529,7 @@ export const accessSection = {
     },
     {
       name: "Database development",
-      href: "/services/by-business-solution/database-development-and-solutions",
+      href: "/services/database-development-and-solutions",
       helps: "Building a new database on the right platform.",
     },
     {
@@ -620,22 +620,22 @@ export const customDevSection = {
     },
     {
       name: "Online solutions",
-      href: "/services/by-business-solution/online-solutions",
+      href: "/services/online-solutions",
       description: "Bring your process to the web.",
     },
     {
       name: "Add-in creation",
-      href: "/services/by-business-solution/add-in-creation",
+      href: "/services/add-in-creation",
       description: "Extend Office with your own tools.",
     },
     {
       name: "3rd party and Office integration",
-      href: "/services/by-business-solution/3rd-party-application-or-office-integration",
+      href: "/services/3rd-party-application-or-office-integration",
       description: "Make your systems talk to each other.",
     },
     {
       name: "VBA and macro development",
-      href: "/services/by-business-solution/vba-macro-development",
+      href: "/services/vba-macro-development",
       description: "Automation inside Office.",
     },
     {
@@ -650,7 +650,7 @@ export const customDevSection = {
     },
     {
       name: "Cloud solutions with Azure",
-      href: "/services/by-business-solution/cloud-based-solutions-with-azure",
+      href: "/services/cloud-based-solutions-with-azure",
       description: "Hosting and data in the cloud.",
     },
     {

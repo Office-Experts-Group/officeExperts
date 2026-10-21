@@ -2,22 +2,22 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PerthIntro from "./(components)/PerthIntro";
 
 const PerthServices = dynamic(() => import("./(components)/PerthServices"));
 const PerthContext = dynamic(() => import("./(components)/PerthContext"));
 const PerthWhy = dynamic(() => import("./(components)/PerthWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import perth from "../../public/pageHeros/perth.webp";
-import perthMob from "../../public/pageHeros/mob/perthMob.webp";
+import perth from "@/public/pageHeros/perth.webp";
+import perthMob from "@/public/pageHeros/mob/perthMob.webp";
 
 const PAGE_URL = "https://www.officeexperts.com.au/microsoft-consultants-perth";
 

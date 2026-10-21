@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 // Client-side wrapper that fades each tile in as it enters the viewport
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss (shared with the other carousels)
 import styles from "@/styles/solutionsCarousel.module.scss";

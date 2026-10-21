@@ -1,18 +1,18 @@
 import React from "react";
 
-import ServiceHero from "../../../components/ServiceHero";
-import ExpertsAwait from "../../../components/ExpertsAwait";
-import Contact from "../../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 
-import calculator from "../../../public/pageHeros/calculator.webp";
-import calcMob from "../../../public/pageHeros/mob/calcMob.webp";
+import calculator from "@/public/pageHeros/calculator.webp";
+import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

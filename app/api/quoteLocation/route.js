@@ -1,46 +1,86 @@
 import sgMail from "@sendgrid/mail";
-import { getEmailSignature } from "../../../utils/emailSignature";
+import { getEmailSignature } from "@/utils/emailSignature";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
 // Dangerous file extensions to block
 const BLOCKED_EXTENSIONS = [
   // Executables
-  'exe', 'com', 'bat', 'cmd', 'scr', 'pif', 'msi', 'app',
-  
+  "exe",
+  "com",
+  "bat",
+  "cmd",
+  "scr",
+  "pif",
+  "msi",
+  "app",
+
   // Scripts
-  'vbs', 'js', 'jse', 'ws', 'wsf', 'wsh', 'ps1', 'sh', 'csh',
-  
+  "vbs",
+  "js",
+  "jse",
+  "ws",
+  "wsf",
+  "wsh",
+  "ps1",
+  "sh",
+  "csh",
+
   // System files
-  'dll', 'sys', 'drv',
-  
+  "dll",
+  "sys",
+  "drv",
+
   // Shortcuts
-  'lnk', 'scf',
-  
+  "lnk",
+  "scf",
+
   // Java
-  'jar', 'class',
-  
+  "jar",
+  "class",
+
   // Web files (HIGH RISK for phishing)
-  'html', 'htm', 'xhtml', 'hta', 'mht', 'mhtml',
-  
+  "html",
+  "htm",
+  "xhtml",
+  "hta",
+  "mht",
+  "mhtml",
+
   // Modern web/app development files
-  'jsx', 'tsx', 'ts',
-  
+  "jsx",
+  "tsx",
+  "ts",
+
   // Other programming language source files
-  'py', 'rb', 'php', 'asp', 'aspx', 'jsp',
-  'c', 'cpp', 'h', 'swift', 'go', 'rs',
-  
+  "py",
+  "rb",
+  "php",
+  "asp",
+  "aspx",
+  "jsp",
+  "c",
+  "cpp",
+  "h",
+  "swift",
+  "go",
+  "rs",
+
   // Configuration/build files that could contain malicious code
-  'json', 'yaml', 'yml', 'toml', 'xml',
+  "json",
+  "yaml",
+  "yml",
+  "toml",
+  "xml",
 ];
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Helper function to get file extension
 const getFileExtension = (filename) => {
-  if (!filename || typeof filename !== 'string') return '';
-  const parts = filename.split('.');
-  return parts.length > 1 ? parts.pop().toLowerCase() : '';
+  if (!filename || typeof filename !== "string") return "";
+  const parts = filename.split(".");
+  return parts.length > 1 ? parts.pop().toLowerCase() : "";
 };
 
 export async function POST(req) {
@@ -65,14 +105,14 @@ export async function POST(req) {
     if (!name || !email) {
       return Response.json(
         { error: "Name and email are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (honeypot) {
       return Response.json(
         { error: "Bot submission detected" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -95,11 +135,11 @@ export async function POST(req) {
     if (file) {
       // Check file extension against blocklist
       const extension = getFileExtension(file.name);
-      
+
       if (BLOCKED_EXTENSIONS.includes(extension)) {
         return Response.json(
           { error: "This file type is not allowed for security reasons" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -107,7 +147,7 @@ export async function POST(req) {
       if (Buffer.byteLength(file.content, "base64") > MAX_FILE_SIZE) {
         return Response.json(
           { error: "File size exceeds limit" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -124,8 +164,8 @@ export async function POST(req) {
 
     const clientTextMessage = `
       You have received a new quote request from ${name} (${email}) from ${
-      location || "Unknown location"
-    }.
+        location || "Unknown location"
+      }.
       Phone: ${phone || "Not provided"}
       Company: ${company || "Not provided"}
       Service Requested: ${service || "Not specified"}
@@ -149,8 +189,8 @@ export async function POST(req) {
 
     const clientHtmlMessage = `
       <p>You have received a new quote request from <strong>${name}</strong> (${email}) from ${
-      location || "Unknown location"
-    }.</p>
+        location || "Unknown location"
+      }.</p>
       <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
       <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
       <p><strong>Company:</strong> ${company || "Not provided"}</p>
@@ -196,12 +236,12 @@ export async function POST(req) {
 
       return Response.json(
         { message: "Quote request submitted successfully" },
-        { status: 200 }
+        { status: 200 },
       );
     } catch (emailError) {
       console.error(
         "SendGrid error:",
-        emailError?.response?.body || emailError
+        emailError?.response?.body || emailError,
       );
       return Response.json({ error: "Failed to send email" }, { status: 500 });
     }

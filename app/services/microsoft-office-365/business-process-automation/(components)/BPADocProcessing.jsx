@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { FormProcessingVisual } from "../(svgs)/FormProcessingVisual";
 import { InvoiceMatchVisual } from "../(svgs)/InvoiceMatchVisual";
 import { ClassificationVisual } from "../(svgs)/ClassificationVisual";

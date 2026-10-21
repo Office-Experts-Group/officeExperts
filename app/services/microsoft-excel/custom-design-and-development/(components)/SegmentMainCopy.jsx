@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@/styles/pageSegment2.module.scss";
-import lady from "../../../../../public/service-img-1.webp";
+import lady from "@/public/service-img-1.webp";
 
 const SegmentMainCopy = () => {
   return (
@@ -28,11 +28,11 @@ const SegmentMainCopy = () => {
             <p>Office 365</p>
           </Link>
           <p>/</p>
-          <Link href="/services/by-business-solution/online-solutions">
+          <Link href="/services/online-solutions">
             <p>SharePoint</p>
           </Link>
         </div>
-        <Link href="/services/by-business-solution/cloud-based-solutions-with-azure">
+        <Link href="/services/cloud-based-solutions-with-azure">
           <div className={styles.contentLink}>
             <p>Microsoft Azure</p>
           </div>

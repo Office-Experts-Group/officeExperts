@@ -3,17 +3,17 @@
 import { caseStudies, getLatestDateModified, siteMeta } from "./caseStudies";
 import CaseStudyRow from "./(components)/CaseStudyRow";
 
-import ServiceHero from "../../components/ServiceHero";
-import Contact from "../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/caseStudies.module.scss";
-import caseStudiesPic from "../../public/pageHeros/caseStudies.webp";
-import caseStudiesPicMob from "../../public/pageHeros/mob/caseStudiesMob.webp";
+import caseStudiesPic from "@/public/pageHeros/caseStudies.webp";
+import caseStudiesPicMob from "@/public/pageHeros/mob/caseStudiesMob.webp";
 
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 // The ?site= param only ever changes the ORDER case studies render in, never
 // which ones appear — so this stays one page as far as Google's concerned.

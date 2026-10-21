@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import project1 from "../../../../public/cards/deskGraph300x250.webp";
-import project2 from "../../../../public/cards/deskGroup350x200.webp";
-import project3 from "../../../../public/cards/penGraph350x200.webp";
-import project4 from "../../../../public/cards/twoComputers350x200.webp";
+import project1 from "@/public/cards/deskGraph300x250.webp";
+import project2 from "@/public/cards/deskGroup350x200.webp";
+import project3 from "@/public/cards/penGraph350x200.webp";
+import project4 from "@/public/cards/twoComputers350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [

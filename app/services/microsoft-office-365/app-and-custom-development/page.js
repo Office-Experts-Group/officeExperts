@@ -2,30 +2,28 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import AppDevIntro from "./(components)/AppDevIntro";
 
 // Below-the-fold components loaded dynamically
 const AppDevStack = dynamic(() => import("./(components)/AppDevStack"));
 const AppDevPortals = dynamic(() => import("./(components)/AppDevPortals"));
 const AppDevProcess = dynamic(() => import("./(components)/AppDevProcess"));
-const RelatedLinks = dynamic(
-  () => import("../../../../components/RelatedLinks"),
-);
-const FAQSection = dynamic(() => import("../../../../components/FAQSection"));
-const Contact = dynamic(() => import("../../../../components/Contact"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import faqs from "../../../../faqs/app-and-custom-development";
-import faqSchema from "../../../../faqs/appAndCustomDevelopmentSchema";
+import faqs from "@/faqs/app-and-custom-development";
+import faqSchema from "@/faqs/appAndCustomDevelopmentSchema";
 
-import customDev from "../../../../public/pageHeros/custom-development.webp";
-import customDevMob from "../../../../public/pageHeros/mob/custom-development.webp";
+import customDev from "@/public/pageHeros/custom-development.webp";
+import customDevMob from "@/public/pageHeros/mob/custom-development.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-office-365/app-and-custom-development`;

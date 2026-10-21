@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment4.module.scss";
-import template from "../../../../../public/template450x300.webp";
+import template from "@/public/template450x300.webp";
 
 const Segment4Repeat = () => {
   return (

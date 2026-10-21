@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegmentCenter.module.scss";
 
-import codeReview from "../../../../../public/codeReview450x300.webp";
+import codeReview from "@/public/codeReview450x300.webp";
 
 const PageSegmentCenter = () => {
   const benefitsList = [

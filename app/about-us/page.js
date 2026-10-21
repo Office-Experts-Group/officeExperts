@@ -1,25 +1,25 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import AboutUsMain from "./(components)/AboutUsMain";
 import Testimonials from "../(components)/Testimonials";
 import WhyChooseUs from "./(components)/WhyChooseUs";
 import GoodToKnow from "./(components)/GoodToKnow";
 import MeetTheTeamSlider from "./(components)/MeetTheTeamSlider";
-import Contact from "../../components/Contact";
-import Promo from "../../components/Promo";
-import ExpertsAwait from "../../components/ExpertsAwait";
+import Contact from "@/components/Contact";
+import Promo from "@/components/Promo";
+import ExpertsAwait from "@/components/ExpertsAwait";
 
-import { getAboutPageSchema } from "../../utils/testimonialSchemaGenerator";
-import { testimonials } from "../../testimonials";
+import { getAboutPageSchema } from "@/utils/testimonialSchemaGenerator";
+import { testimonials } from "@/testimonials";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import aboutUs from "../../public/pageHeros/aboutUs.webp";
-import aboutUsMob from "../../public/pageHeros/mob/aboutUsMob.webp";
+import aboutUs from "@/public/pageHeros/aboutUs.webp";
+import aboutUsMob from "@/public/pageHeros/mob/aboutUsMob.webp";
 
 const schema = {
   "@context": "https://schema.org",

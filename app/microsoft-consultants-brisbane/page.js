@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import BrisbaneIntro from "./(components)/BrisbaneIntro";
 
 const BrisbaneServices = dynamic(
@@ -10,16 +10,16 @@ const BrisbaneServices = dynamic(
 );
 const BrisbaneContext = dynamic(() => import("./(components)/BrisbaneContext"));
 const BrisbaneWhy = dynamic(() => import("./(components)/BrisbaneWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import brisbane from "../../public/pageHeros/brisbane.webp";
-import brisbaneMob from "../../public/pageHeros/mob/brisbaneMob.webp";
+import brisbane from "@/public/pageHeros/brisbane.webp";
+import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-brisbane";

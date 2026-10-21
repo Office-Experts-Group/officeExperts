@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment4.module.scss";
-import hand from "../../../../../public/hand600x400.webp";
+import hand from "@/public/hand600x400.webp";
 
 const PageSegment4 = () => {
   return (

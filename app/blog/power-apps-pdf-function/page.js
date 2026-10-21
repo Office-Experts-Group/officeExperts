@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import CodeBlock from "../../../components/CodeBlock";
-import Contact from "../../../components/Contact";
+import CodeBlock from "@/components/CodeBlock";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import marcello from "../../../public/team/marcello.webp";
+import marcello from "@/public/team/marcello.webp";
 
 const PowerAppsPDFBlogPost = () => {
   // Button OnSelect code sample

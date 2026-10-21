@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/refundPolicy.module.scss";
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 
-import calculator from "../../public/pageHeros/calculator.webp";
-import calcMob from "../../public/pageHeros/mob/calcMob.webp";
+import calculator from "@/public/pageHeros/calculator.webp";
+import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
-import { generateOrganizationSchema } from "../../utils/schemaGenerators";
+import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

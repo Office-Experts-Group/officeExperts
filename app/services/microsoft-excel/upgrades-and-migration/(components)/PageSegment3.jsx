@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import cloud from "../../../../../public/Cloud400x267.webp";
+import cloud from "@/public/Cloud400x267.webp";
 
 const PageSegment3 = () => {
   const checkItems = [

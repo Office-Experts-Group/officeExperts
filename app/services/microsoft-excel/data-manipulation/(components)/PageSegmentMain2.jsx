@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import styles from "@/styles/pageSegment2.module.scss";
-import lady from "../../../../../public/service-img-1.webp";
+import lady from "@/public/service-img-1.webp";
 import Link from "next/link";
 
 const PageSegmentMain2 = () => {

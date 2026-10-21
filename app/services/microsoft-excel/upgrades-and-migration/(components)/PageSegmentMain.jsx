@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import styles from "@/styles/pageSegment.module.scss";
 
-import upgrade from "../../../../../public/upgrade600x400.webp";
-import semi from "../../../../../public/shapes/semi600x600.webp";
+import upgrade from "@/public/upgrade600x400.webp";
+import semi from "@/public/shapes/semi600x600.webp";
 
 const PageSegmentMain = () => {
   return (

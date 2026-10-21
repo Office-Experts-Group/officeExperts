@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/boringStuff.module.scss";
-import { generateOrganizationSchema } from "../../utils/schemaGenerators";
+import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

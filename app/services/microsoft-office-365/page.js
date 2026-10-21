@@ -1,14 +1,14 @@
 // app/services/microsoft-office-365/page.js
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 // Dynamically imported below the fold
 const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
 const Quote = dynamic(() => import("./(components)/Quote"));
 const Ms365 = dynamic(() => import("./(components)/Ms365"));
-const ExpertsAwait = dynamic(() => import("../../../components/ExpertsAwait"));
+const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const Testimonials = dynamic(() => import("../../(components)/Testimonials"));
 const SolutionsCarousel = dynamic(
   () => import("./(components)/SolutionsCarousel"),
@@ -16,19 +16,19 @@ const SolutionsCarousel = dynamic(
 const PageSegmentFinal = dynamic(
   () => import("./(components)/Pagesegmentfinal"),
 );
-const RelatedLinks = dynamic(() => import("../../../components/RelatedLinks"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
-import { testimonials } from "../../../testimonials";
+import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
+import { testimonials } from "@/testimonials";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import longDesk from "../../../public/pageHeros/longDesk.webp";
-import graphTableMob from "../../../public/pageHeros/mob/graphTableMob.webp";
+import longDesk from "@/public/pageHeros/longDesk.webp";
+import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-office-365";

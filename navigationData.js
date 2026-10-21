@@ -115,15 +115,15 @@ export const navigationData = {
         items: [
           {
             label: "VBA & Macro Development",
-            href: `/services/by-business-solution/vba-macro-development`,
+            href: `/services/vba-macro-development`,
           },
           {
             label: "Database Development Solutions",
-            href: `/services/by-business-solution/database-development-and-solutions`,
+            href: `/services/database-development-and-solutions`,
           },
           {
             label: "3rd Party App Integration",
-            href: `/services/by-business-solution/3rd-party-application-or-office-integration`,
+            href: `/services/3rd-party-application-or-office-integration`,
           },
           {
             label: "Remote Data Access",
@@ -131,7 +131,7 @@ export const navigationData = {
           },
           {
             label: "Online Solutions",
-            href: `/services/by-business-solution/online-solutions`,
+            href: `/services/online-solutions`,
           },
           {
             label: "Upgrades and Migration",
@@ -140,7 +140,7 @@ export const navigationData = {
 
           {
             label: "Add-in Creation",
-            href: `/services/by-business-solution/add-in-creation`,
+            href: `/services/add-in-creation`,
           },
           {
             label: "Power Query",
@@ -272,7 +272,7 @@ export const navigationData = {
           },
           {
             label: "Dashboards",
-            href: `/services/by-business-solution/dashboards`,
+            href: `/services/dashboards`,
           },
           {
             label: "Charting & Pivot Tables",
@@ -416,11 +416,11 @@ export const navigationData = {
           },
           {
             label: "Azure Cloud Solutions",
-            href: `/services/by-business-solution/cloud-based-solutions-with-azure`,
+            href: `/services/cloud-based-solutions-with-azure`,
           },
           {
             label: "SQL Server",
-            href: `/services/by-business-solution/sql-server-and-access-integration`,
+            href: `/services/sql-server-and-access-integration`,
           },
           {
             label: "PowerPoint",

@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import BusinessAnalysisHero from "./(components)/BusinessAnalysisHero";
 
 // Below-the-fold page sections
@@ -26,22 +26,22 @@ const BusinessAnalysisProof = dynamic(
 );
 
 // Shared site components
-const FAQSection = dynamic(() => import("../../../components/FAQSection"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 // FAQ content and matching FAQPage schema (schema is generated from the content)
-import faqs from "../../../faqs/business-analysis";
-import faqSchema from "../../../faqs/businessAnalysisSchema";
+import faqs from "@/faqs/business-analysis";
+import faqSchema from "@/faqs/businessAnalysisSchema";
 
-import ba from "../../../public/pageHeros/business-analysis.webp";
-import baMob from "../../../public/pageHeros/mob/business-analysisMob.webp";
+import ba from "@/public/pageHeros/business-analysis.webp";
+import baMob from "@/public/pageHeros/mob/business-analysisMob.webp";
 
 // Shared schema builders used across the group's sites
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/business-analysis`;

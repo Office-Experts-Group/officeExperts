@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import keyboard from "../../../../public/350x260/keyboard.webp";
-import coder from "../../../../public/350x260/coder.webp";
-import dashboard from "../../../../public/350x260/dashboard.webp";
-import graph from "../../../../public/350x260/graph.webp";
-import desk from "../../../../public/350x260/desk.webp";
-import magnify from "../../../../public/350x260/magnify.webp";
-import code from "../../../../public/350x260/code.webp";
-import hands from "../../../../public/350x260/hands.webp";
+import keyboard from "@/public/350x260/keyboard.webp";
+import coder from "@/public/350x260/coder.webp";
+import dashboard from "@/public/350x260/dashboard.webp";
+import graph from "@/public/350x260/graph.webp";
+import desk from "@/public/350x260/desk.webp";
+import magnify from "@/public/350x260/magnify.webp";
+import code from "@/public/350x260/code.webp";
+import hands from "@/public/350x260/hands.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
@@ -40,7 +40,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Dashboards",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/dashboards",
+      link: "https://www.officeexperts.com.au/services/dashboards",
       image: dashboard,
       alt: "dashboard",
       description: [
@@ -51,7 +51,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Online Solutions",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+      link: "https://www.officeexperts.com.au/services/online-solutions",
       image: graph,
       alt: "graph",
       description: [
@@ -62,7 +62,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Office Integrations",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
+      link: "https://www.officeexperts.com.au/services/3rd-party-application-or-office-integration",
       image: desk,
       alt: "desk",
       description: [
@@ -94,7 +94,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Office / Excel Integration",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/3rd-party-application-or-office-integration",
+      link: "https://www.officeexperts.com.au/services/3rd-party-application-or-office-integration",
       image: hands,
       alt: "hands",
       description: [

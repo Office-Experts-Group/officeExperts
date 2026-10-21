@@ -1,10 +1,10 @@
 // app/microsoft-consultants-northern-nsw/(components)/NorthernNswPlatforms.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 // Shared link wrapper from the services hub: next/link for Office Experts paths,
 // a normal anchor for the specialist sister domains
-import ServiceLink from "../../services/(components)/ServiceLink";
+import ServiceLink from "./ServiceLink";
 
 import { platforms } from "../northernNswData";
 

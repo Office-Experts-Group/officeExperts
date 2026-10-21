@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import integration from "../../../public/integration.webp";
+import integration from "@/public/integration.webp";
 
 import styles from "@/styles/intro.module.scss";
 const DeskImage = () => {

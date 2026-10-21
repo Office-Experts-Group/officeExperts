@@ -4,7 +4,7 @@ import React from "react";
 
 import styles from "@/styles/pageSegment2.module.scss";
 
-import lady from "../../../../../public/service-img-1.webp";
+import lady from "@/public/service-img-1.webp";
 
 const PageSegmentMain2 = () => {
   return (
@@ -18,12 +18,12 @@ const PageSegmentMain2 = () => {
 
       <div className={styles.contents}>
         <h3>Quick Links</h3>
-        <Link href="/services/by-business-solution/dashboards">
+        <Link href="/services/dashboards">
           <div className={styles.contentLink}>
             <p>Reporting Solutions</p>
           </div>
         </Link>
-        <Link href="/services/by-business-solution/3rd-party-application-or-office-integration">
+        <Link href="/services/3rd-party-application-or-office-integration">
           <div className={styles.contentLink}>
             <p>Integration with Office products</p>
           </div>
@@ -33,7 +33,7 @@ const PageSegmentMain2 = () => {
             <p>VBA Macro Development</p>
           </div>
         </Link>
-        <Link href="/services/by-business-solution/3rd-party-application-or-office-integration">
+        <Link href="/services/3rd-party-application-or-office-integration">
           <div className={styles.contentLink}>
             <p>Integration with 3rd Party Apps</p>
           </div>

@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/pageSegment2.module.scss";
-import jigsaw from "../../../../../public/jigsaw770x430.webp";
+import jigsaw from "@/public/jigsaw770x430.webp";
 
 const PageSegmentMain2 = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/styles/contents.module.scss";
-import semi from "../../../../../public/shapes/semiCircle.webp";
+import semi from "@/public/shapes/semiCircle.webp";
 import Link from "next/link";
 
 const ContentsSection = () => {

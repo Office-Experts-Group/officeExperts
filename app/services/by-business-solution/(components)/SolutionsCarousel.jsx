@@ -2,16 +2,16 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import project1 from "../../../../public/cards/calcGraph350x200.webp";
-import project2 from "../../../../public/cards/deskGroup350x200.webp";
-import project3 from "../../../../public/cards/penGraph350x200.webp";
-import project4 from "../../../../public/cards/twoComputers350x200.webp";
+import project1 from "@/public/cards/calcGraph350x200.webp";
+import project2 from "@/public/cards/deskGroup350x200.webp";
+import project3 from "@/public/cards/penGraph350x200.webp";
+import project4 from "@/public/cards/twoComputers350x200.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "VBA & Macro Development",
-      link: "/services/by-business-solution/vba-macro-development",
+      link: "/services/vba-macro-development",
       image: project1,
       description: [
         "Need a VBA programmer to automate tasks or extend Office functionality?",
@@ -27,7 +27,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Database Solutions",
-      link: "/services/by-business-solution/database-development-and-solutions",
+      link: "/services/database-development-and-solutions",
       image: project3,
       description: [
         "Our experts can build reliable and cost effective database solutions in most Microsoft technologies.",
@@ -35,7 +35,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "3rd Party App Office Integration",
-      link: "/services/by-business-solution/3rd-party-application-or-office-integration",
+      link: "/services/3rd-party-application-or-office-integration",
       image: project4,
       description: [
         "Want to link an Office app, CRM, accounting package, data files or 3rd party product to Office?",

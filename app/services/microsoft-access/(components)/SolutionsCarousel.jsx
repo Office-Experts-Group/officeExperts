@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import magnify from "../../../../public/350x260/magnify.webp";
-import handShake from "../../../../public/350x260/handShake.webp";
-import graph from "../../../../public/350x260/graph.webp";
-import desk from "../../../../public/350x260/desk.webp";
+import magnify from "@/public/350x260/magnify.webp";
+import handShake from "@/public/350x260/handShake.webp";
+import graph from "@/public/350x260/graph.webp";
+import desk from "@/public/350x260/desk.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [

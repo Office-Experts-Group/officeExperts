@@ -163,7 +163,7 @@ const AiAgentsComparison = () => {
           </Link>{" "}
           and{" "}
           <Link
-            href="/services/by-business-solution/cloud-based-solutions-with-azure"
+            href="/services/cloud-based-solutions-with-azure"
             className={styles.link}
           >
             Azure hosting

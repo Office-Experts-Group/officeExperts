@@ -1,10 +1,10 @@
 // app/services/activex-vbscript-migration/(components)/AffectedCheck.jsx
 
 import Image from "next/image";
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import styles from "@/styles/activexAffectedCheck.module.scss";
-import activeX from "../../../../public/activex.webp";
-import vbScript from "../../../../public/vbScript.webp";
+import activeX from "@/public/activex.webp";
+import vbScript from "@/public/vbScript.webp";
 
 const IconActiveX = () => (
   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">

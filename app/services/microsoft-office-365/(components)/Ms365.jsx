@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@/styles/ms365.module.scss";
-import diagram from "../../../../public/ms365-diagram.webp";
+import diagram from "@/public/ms365-diagram.webp";
 
 const apps = [
   {
@@ -49,7 +49,7 @@ const apps = [
     color: "#0078D4",
     description:
       "Azure provides the enterprise cloud infrastructure underpinning your entire Microsoft environment. Database management, pipelines, identity management and scalable hosting. Azure is the beating heart of many businesses worldwide. It allows organisations to securely scale applications, manage workloads and build modern cloud architectures that integrate seamlessly with Microsoft 365, while supporting everything from simple hosting through to advanced AI and data engineering solutions.",
-    link: "/services/by-business-solution/cloud-based-solutions-with-azure",
+    link: "/services/cloud-based-solutions-with-azure",
     linkLabel: "Explore Azure Solutions",
   },
   {

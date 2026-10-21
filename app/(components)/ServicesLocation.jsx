@@ -1,14 +1,14 @@
 import React from "react";
 
-import ServicesCard from "../../components/ServicesCard";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
-import CardIntersectionWrapper from "../../components/CardIntersectionWrapper";
+import ServicesCard from "@/components/ServicesCard";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import CardIntersectionWrapper from "@/components/CardIntersectionWrapper";
 
 import styles from "@/styles/services.module.scss";
-import excel from "../../public/microsoft/excelNoBG.webp";
-import word from "../../public/microsoft/wordNoBG.webp";
-import access from "../../public/microsoft/accessNoBG.webp";
-import powerPlatform from "../../public/microsoft/powerPlatformNoBG.webp";
+import excel from "@/public/microsoft/excelNoBG.webp";
+import word from "@/public/microsoft/wordNoBG.webp";
+import access from "@/public/microsoft/accessNoBG.webp";
+import powerPlatform from "@/public/microsoft/powerPlatformNoBG.webp";
 
 const Services = ({ location }) => {
   return (

@@ -1,21 +1,21 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import FAQSection from "../../../../components/FAQSection";
-import Contact from "../../../../components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import FAQSection from "@/components/FAQSection";
+import Contact from "@/components/Contact";
 
-import faqs from "../../../../faqs/accesibility";
+import faqs from "@/faqs/accesibility";
 
-import deskGraph from "../../../../public/pageHeros/deskGraph.webp";
-import calcMob from "../../../../public/pageHeros/mob/calcMob.webp";
+import deskGraph from "@/public/pageHeros/deskGraph.webp";
+import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

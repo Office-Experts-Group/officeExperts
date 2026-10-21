@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegmentCenter.module.scss";
-import graphs from "../../../../../public/graphs400x300.webp";
+import graphs from "@/public/graphs400x300.webp";
 
 const MiniTicks = () => {
   const benefits = [

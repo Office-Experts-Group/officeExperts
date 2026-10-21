@@ -1,25 +1,25 @@
 import React from "react";
 import Image from "next/image";
 
-import ServiceHero from "../../components/ServiceHero";
-import Promo from "../../components/Promo";
-import Contact from "../../components/Contact";
-import ExpertsAwait from "../../components/ExpertsAwait";
+import ServiceHero from "@/components/ServiceHero";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
 import CTASupport from "../(components)/CTASupport";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/supportPage.module.scss";
 
-import melbourne from "../../public/pageHeros/melbourne.webp";
-import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
-import askExpert from "../../public/askExpert540x480.webp";
-import support from "../../public/support.webp";
+import melbourne from "@/public/pageHeros/melbourne.webp";
+import melbourneMob from "@/public/pageHeros/mob/melbourneMob.webp";
+import askExpert from "@/public/askExpert540x480.webp";
+import support from "@/public/support.webp";
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/microsoft-support-and-training-melbourne`;

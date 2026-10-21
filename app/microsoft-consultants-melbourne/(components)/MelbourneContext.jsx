@@ -1,7 +1,7 @@
 // microsoft-consultants-melbourne/(components)/MelbourneContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Import compiled CSS module
 import styles from "@/styles/melbourneContext.module.scss";

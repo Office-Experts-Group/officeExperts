@@ -1,9 +1,9 @@
 import React from "react";
 
-import TestimonialCard from "../../../components/TestimonialCard";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import TestimonialCard from "@/components/TestimonialCard";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import { filterAndSortTestimonials } from "../../../utils/filterTestimonials";
+import { filterAndSortTestimonials } from "@/utils/filterTestimonials";
 
 import styles from "@/styles/testimonialPage.module.scss";
 

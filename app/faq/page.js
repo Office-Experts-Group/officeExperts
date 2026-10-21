@@ -1,20 +1,20 @@
 import React from "react";
 
-import FAQSection from "../../components/FAQSection";
+import FAQSection from "@/components/FAQSection";
 
-import faqs from "../../faqs/general";
-import ServiceHero from "../../components/ServiceHero";
-import ExpertsAwait from "../../components/ExpertsAwait";
-import Contact from "../../components/Contact";
+import faqs from "@/faqs/general";
+import ServiceHero from "@/components/ServiceHero";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Contact from "@/components/Contact";
 
-import faq from "../../public/pageHeros/faq.webp";
-import faqMob from "../../public/pageHeros/mob/faqMob.webp";
+import faq from "@/public/pageHeros/faq.webp";
+import faqMob from "@/public/pageHeros/mob/faqMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

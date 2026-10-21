@@ -1,7 +1,7 @@
 // /about-us/components/MeetTheTeamSlider.jsx
 
 import styles from "@/styles/meetTheTeamSlider.module.scss";
-import { teamMembers } from "../../../meetTheTeam";
+import { teamMembers } from "@/meetTheTeam";
 import TeamCard from "./TeamCard";
 
 const MeetTheTeamSlider = () => {

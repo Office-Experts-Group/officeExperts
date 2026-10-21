@@ -1,22 +1,22 @@
 import React from "react";
 
-import ServiceHero from "../../../components/ServiceHero";
-import ExpertsAwait from "../../../components/ExpertsAwait";
-import Contact from "../../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Contact from "@/components/Contact";
 import Testimonials from "../../(components)/Testimonials";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import SolutionsCarousel from "./(components)/SolutionsCarousel";
 
-import { getTestimonialsPageSchema } from "../../../utils/testimonialSchemaGenerator";
-import { testimonials } from "../../../testimonials";
+import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
+import { testimonials } from "@/testimonials";
 
-import penPoint from "../../../public/pageHeros/penPoint.webp";
-import glassesMob from "../../../public/pageHeros/mob/glassesMob.webp";
+import penPoint from "@/public/pageHeros/penPoint.webp";
+import glassesMob from "@/public/pageHeros/mob/glassesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

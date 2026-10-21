@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/expertsAwait.module.scss";
-import bg from "../../../public/service-bg.webp";
+import bg from "@/public/service-bg.webp";
 
 const BlackSegment = () => {
   return (

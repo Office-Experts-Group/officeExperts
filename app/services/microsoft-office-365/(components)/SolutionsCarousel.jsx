@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 // Client-side wrapper that fades each tile in as it enters the viewport
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss (shared with the homepage carousel)
 import styles from "@/styles/solutionsCarousel.module.scss";
@@ -78,7 +78,7 @@ const solutionsData = [
   },
   {
     title: "Azure Cloud Solutions",
-    link: "/services/by-business-solution/cloud-based-solutions-with-azure",
+    link: "/services/cloud-based-solutions-with-azure",
     Icon: CloudNetworkIcon,
     description: [
       "Cloud and web enable your documents, workbooks and databases with Azure, with secure hosting, authentication and scaling built in.",
@@ -86,7 +86,7 @@ const solutionsData = [
   },
   {
     title: "Online Solutions",
-    link: "/services/by-business-solution/online-solutions",
+    link: "/services/online-solutions",
     Icon: GlobeIcon,
     description: [
       "Need your Office files connected to a database or available online? We integrate Word, Excel and Access with Microsoft 365, SharePoint and other online systems.",
@@ -110,7 +110,7 @@ const solutionsData = [
   },
   {
     title: "Dashboards & Reporting",
-    link: "/services/by-business-solution/dashboards",
+    link: "/services/dashboards",
     Icon: DashboardIcon,
     description: [
       "Turn scattered spreadsheets and data sources into clear, live dashboards, so decisions are based on current information.",

@@ -1,5 +1,5 @@
 import sgMail from "@sendgrid/mail";
-import { getEmailSignature } from "../../../utils/emailSignature";
+import { getEmailSignature } from "@/utils/emailSignature";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
@@ -105,14 +105,14 @@ export async function POST(req) {
     if (!name || !email) {
       return Response.json(
         { error: "Name and email are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (honeypot) {
       return Response.json(
         { error: "Bot submission detected" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -139,7 +139,7 @@ export async function POST(req) {
       if (BLOCKED_EXTENSIONS.includes(extension)) {
         return Response.json(
           { error: "This file type is not allowed for security reasons" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -150,7 +150,7 @@ export async function POST(req) {
       ) {
         return Response.json(
           { error: "File size exceeds limit" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -232,12 +232,12 @@ export async function POST(req) {
 
       return Response.json(
         { message: "Quote request submitted successfully" },
-        { status: 200 }
+        { status: 200 },
       );
     } catch (emailError) {
       console.error(
         "SendGrid error:",
-        emailError?.response?.body || emailError
+        emailError?.response?.body || emailError,
       );
       return Response.json({ error: "Failed to send email" }, { status: 500 });
     }

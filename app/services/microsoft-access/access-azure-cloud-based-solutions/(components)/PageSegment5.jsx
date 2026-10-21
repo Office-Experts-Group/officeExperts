@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import eyes from "../../../../../public/eyes400x263.webp";
+import eyes from "@/public/eyes400x263.webp";
 
 const PageSegment3 = () => {
   return (
@@ -27,7 +27,7 @@ const PageSegment3 = () => {
           <p>
             While we can also create database solutions without using Azure, the
             fact that yoauur database in Azure is an{" "}
-            <Link href="/services/by-business-solution/sql-server-and-access-integration">
+            <Link href="/services/sql-server-and-access-integration">
               SQL Server database
             </Link>{" "}
             that is cloud based means that some of the previous limitations on

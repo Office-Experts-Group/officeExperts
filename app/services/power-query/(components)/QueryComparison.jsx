@@ -3,11 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/queryComparison.module.scss";
 
-import bg from "../../../../public/service-bg.webp";
+import bg from "@/public/service-bg.webp";
 
 // ── Comparison rows ───────────────────────────────────────
 const rows = [

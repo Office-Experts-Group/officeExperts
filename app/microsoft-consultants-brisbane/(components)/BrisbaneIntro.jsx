@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import BrisbaneMap from "../(svgs)/BrisbaneMap";
 
 import styles from "@/styles/brisbaneIntro.module.scss";

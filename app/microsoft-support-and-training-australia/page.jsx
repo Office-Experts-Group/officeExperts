@@ -2,35 +2,35 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import ServiceHero from "../../components/ServiceHero";
-import Promo from "../../components/Promo";
-import Contact from "../../components/Contact";
-import ExpertsAwait from "../../components/ExpertsAwait";
+import ServiceHero from "@/components/ServiceHero";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
 
 import styles from "@/styles/supportTrainingHub.module.scss";
-import australia from "../../public/pageHeros/australia.webp";
-import australiaMob from "../../public/pageHeros/mob/australiaMob.webp";
+import australia from "@/public/pageHeros/australia.webp";
+import australiaMob from "@/public/pageHeros/mob/australiaMob.webp";
 
 // Import location mobile images
-import brisbaneMob from "../../public/pageHeros/mob/brisbaneMob.webp";
-import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
-import melbourneMob from "../../public/pageHeros/mob/melbourneMob.webp";
-import perthMob from "../../public/pageHeros/mob/perthMob.webp";
-import adelaideMob from "../../public/pageHeros/mob/adelaideMob.webp";
-import canberraMob from "../../public/pageHeros/mob/canberraMob.webp";
-import goldCoastMob from "../../public/pageHeros/mob/goldCoastMob.webp";
-import darwinMob from "../../public/pageHeros/mob/darwinMob.webp";
-import northernRiversMob from "../../public/pageHeros/mob/northernRiversMob.webp";
-import wollongongMob from "../../public/pageHeros/mob/wollongongMob.webp";
-import richmondMob from "../../public/pageHeros/mob/richmondMob.webp";
-import centralCoastMob from "../../public/pageHeros/mob/centralCoastMob.webp";
+import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
+import sydneyMob from "@/public/pageHeros/mob/sydneyMob.webp";
+import melbourneMob from "@/public/pageHeros/mob/melbourneMob.webp";
+import perthMob from "@/public/pageHeros/mob/perthMob.webp";
+import adelaideMob from "@/public/pageHeros/mob/adelaideMob.webp";
+import canberraMob from "@/public/pageHeros/mob/canberraMob.webp";
+import goldCoastMob from "@/public/pageHeros/mob/goldCoastMob.webp";
+import darwinMob from "@/public/pageHeros/mob/darwinMob.webp";
+import northernRiversMob from "@/public/pageHeros/mob/northernRiversMob.webp";
+import wollongongMob from "@/public/pageHeros/mob/wollongongMob.webp";
+import richmondMob from "@/public/pageHeros/mob/richmondMob.webp";
+import centralCoastMob from "@/public/pageHeros/mob/centralCoastMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+} from "@/utils/schemaGenerators";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Schema data for the page
 const schemaData = {

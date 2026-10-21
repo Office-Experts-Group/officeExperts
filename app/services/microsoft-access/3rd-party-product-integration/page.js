@@ -2,21 +2,21 @@ import React from "react";
 
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import PageSegment4 from "./(components)/PageSegment4";
-import ServiceHero from "../../../../components/ServiceHero";
-import Promo from "../../../../components/Promo";
-import Contact from "../../../../components/Contact";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import FAQSection from "../../../../components/FAQSection";
+import ServiceHero from "@/components/ServiceHero";
+import Promo from "@/components/Promo";
+import Contact from "@/components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import FAQSection from "@/components/FAQSection";
 
-import faqs from "../../../../faqs/3rd-party-product-integration.js";
+import faqs from "@/faqs/3rd-party-product-integration.js";
 
-import support from "../../../../public/pageHeros/support.webp";
-import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+import support from "@/public/pageHeros/support.webp";
+import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

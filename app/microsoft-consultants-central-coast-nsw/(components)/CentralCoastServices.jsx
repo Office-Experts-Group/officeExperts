@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/centralCoastServices.module.scss";
 
@@ -136,7 +136,9 @@ const CentralCoastServices = () => (
           <p className={styles.eyebrow}>Services</p>
           <h2 className={styles.heading}>
             Start with the thing{" "}
-            <span className={styles.headingAccent}>that&rsquo;s slowing you down.</span>
+            <span className={styles.headingAccent}>
+              that&rsquo;s slowing you down.
+            </span>
           </h2>
         </div>
         <p className={styles.headerNote}>

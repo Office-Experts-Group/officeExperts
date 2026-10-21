@@ -1,20 +1,20 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Contact from "../../../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
-import RelatedLinks from "../../../../components/RelatedLinks";
+import RelatedLinks from "@/components/RelatedLinks";
 
-import whiteBoard from "../../../../public/pageHeros/whiteBoard.webp";
-import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+import whiteBoard from "@/public/pageHeros/whiteBoard.webp";
+import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

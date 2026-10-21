@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment.module.scss";
-import AiLady from "../../../../../public/AiLady600x400.webp";
+import AiLady from "@/public/AiLady600x400.webp";
 
 const PageSegmentMain = () => {
   return (

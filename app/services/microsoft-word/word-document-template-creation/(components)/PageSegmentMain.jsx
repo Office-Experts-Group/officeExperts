@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment.module.scss";
-import migrate from "../../../../../public/migrate600x400.webp";
+import migrate from "@/public/migrate600x400.webp";
 
 const PageSegmentMain = () => {
   return (

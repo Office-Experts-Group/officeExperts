@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/whyChoose.module.scss";
-import faqs from "../../../faqs/about-us";
+import faqs from "@/faqs/about-us";
 
-import semi from "../../../public/shapes/semi600x600.webp";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import semi from "@/public/shapes/semi600x600.webp";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const WhyChooseUs = () => {
   return (
@@ -29,9 +29,7 @@ const WhyChooseUs = () => {
             <Link href={"/services/microsoft-office"}>Microsoft Office</Link>,
             Microsoft{" "}
             <Link
-              href={
-                "/services/by-business-solution/3rd-party-application-or-office-integration"
-              }
+              href={"/services/3rd-party-application-or-office-integration"}
             >
               technologies and integration
             </Link>{" "}

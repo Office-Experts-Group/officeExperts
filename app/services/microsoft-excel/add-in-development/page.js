@@ -1,26 +1,26 @@
 import React from "react";
 
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import ServiceHero from "../../../../components/ServiceHero";
-import Contact from "../../../../components/Contact";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
+import ServiceHero from "@/components/ServiceHero";
+import Contact from "@/components/Contact";
+import ExpertsAwait from "@/components/ExpertsAwait";
 import ServicePageCards from "./(components)/ServicePageCards";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment3 from "./(components)/PageSegment3";
 import Segment3copy from "./(components)/Segment3copy";
 import Segment4Copy from "./(components)/Segment4Copy";
-import FAQ from "../../../../components/FAQSection";
+import FAQ from "@/components/FAQSection";
 
-import faqs from "../../../../faqs/add-in-development";
+import faqs from "@/faqs/add-in-development";
 import Contents from "./(components)/Contents";
 
-import party from "../../../../public/pageHeros/3rdParty.webp";
-import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+import party from "@/public/pageHeros/3rdParty.webp";
+import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

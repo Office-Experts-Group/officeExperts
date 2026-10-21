@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import BPAIntro from "./(components)/BPAIntro";
 
 const BPADocProcessing = dynamic(
@@ -11,21 +11,19 @@ const BPAApprovals = dynamic(() => import("./(components)/BPAApprovals"));
 const BPAEmailTriage = dynamic(() => import("./(components)/BPAEmailTriage"));
 const BPAReplaces = dynamic(() => import("./(components)/BPAReplaces"));
 const BPAProcess = dynamic(() => import("./(components)/BPAProcess"));
-const Promo = dynamic(() => import("../../../../components/Promo"));
+const Promo = dynamic(() => import("@/components/Promo"));
 const BPAFaq = dynamic(() => import("./(components)/BPAFaq"));
-const Contact = dynamic(() => import("../../../../components/Contact"));
-const RelatedLinks = dynamic(
-  () => import("../../../../components/RelatedLinks"),
-);
+const Contact = dynamic(() => import("@/components/Contact"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import party from "../../../../public/pageHeros/3rdParty.webp";
-import coffeeMob from "../../../../public/pageHeros/mob/coffeeMob.webp";
+import party from "@/public/pageHeros/3rdParty.webp";
+import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-office-365/business-process-automation";

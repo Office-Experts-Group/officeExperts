@@ -12,13 +12,13 @@ import {
 } from "../caseStudies";
 import { cardCopy } from "../caseStudyCardCopy";
 
-const Contact = dynamic(() => import("../../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 

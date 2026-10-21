@@ -1,23 +1,23 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import LocationPages from "../(components)/LocationPages";
 import CTAMainProps from "../(components)/CTAMainProps";
-import ContactLocationSegment from "../../components/ContactLocationSegment";
+import ContactLocationSegment from "@/components/ContactLocationSegment";
 import ServicesLocation from "../(components)/ServicesLocation";
-import Promo from "../../components/Promo";
+import Promo from "@/components/Promo";
 import GoodToKnow from "../about-us/(components)/GoodToKnow";
 
-import sydney from "../../public/pageHeros/sydney.webp";
-import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
+import sydney from "@/public/pageHeros/sydney.webp";
+import sydneyMob from "@/public/pageHeros/mob/sydneyMob.webp";
 
-import { getHomePageSchema } from "../../utils/testimonialSchemaGenerator";
+import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
-import { testimonials } from "../../testimonials";
+} from "@/utils/schemaGenerators";
+import { testimonials } from "@/testimonials";
 
 import LocationSummary from "../(components)/LocationSummary";
 import Testimonials from "../(components)/Testimonials";

@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "@/styles/testimonialsSection.module.scss";
-import TestimonialCard from "../../../../components/TestimonialCard";
+import TestimonialCard from "@/components/TestimonialCard";
 
 const Testimonials = ({ testimonials }) => {
   const getRandomTestimonials = (count = 10) => {

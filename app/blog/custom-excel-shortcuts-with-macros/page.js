@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import CodeBlock from "../../../components/CodeBlock";
-import Contact from "../../../components/Contact";
+import CodeBlock from "@/components/CodeBlock";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import dan from "../../../public/blog/dan.webp";
+import dan from "@/public/blog/dan.webp";
 
 const CustomExcelShortcutsBlogPost = () => {
   const renderKeyImage = (keyName) => {

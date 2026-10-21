@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@/styles/header.module.scss";
-import { navigationData } from "../../navigationData";
-import ServicesDropdown from "../../components/ServicesDropdown";
-import MobileNav from "../../components/MobileNavigation/MobileNav";
+import { navigationData } from "@/navigationData";
+import ServicesDropdown from "@/components/ServicesDropdown";
+import MobileNav from "@/components/MobileNavigation/MobileNav";
 
-import logo from "../../public/logo300x130.webp";
-import certified from "../../public/microsoft/partnerLogo.webp";
-import ideaBlue from "../../public/icons/ideaBlue.webp";
-import LocationsDropdown from "../../components/LocationsDropdown";
+import logo from "@/public/logo300x130.webp";
+import certified from "@/public/microsoft/partnerLogo.webp";
+import ideaBlue from "@/public/icons/ideaBlue.webp";
+import LocationsDropdown from "@/components/LocationsDropdown";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);

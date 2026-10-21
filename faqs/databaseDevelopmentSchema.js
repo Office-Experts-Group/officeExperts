@@ -4,7 +4,7 @@
 import faqs from "./database-development-and-solutions";
 
 const PAGE_URL =
-  "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions";
+  "https://www.officeexperts.com.au/services/database-development-and-solutions";
 
 const faqSchema = {
   "@context": "https://schema.org",

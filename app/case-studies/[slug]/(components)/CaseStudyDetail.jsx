@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { siteMeta } from "../../caseStudies";
 import styles from "@/styles/caseStudyDetail.module.scss";
 const ResultsList = ({ results }) => (

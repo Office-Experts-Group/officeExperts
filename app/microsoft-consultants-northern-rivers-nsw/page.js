@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // ServiceHero and the first component are above the fold, so import them directly
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import NorthernNswIntro from "./(components)/NorthernNswIntro";
 
 // Below-the-fold components are loaded dynamically (still server rendered)
@@ -20,17 +20,17 @@ const NorthernNswAi = dynamic(() => import("./(components)/NorthernNswAi"));
 const NorthernNswResilience = dynamic(
   () => import("./(components)/NorthernNswResilience"),
 );
-const RelatedLinks = dynamic(() => import("../../components/RelatedLinks"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const NorthernNswFaq = dynamic(() => import("./(components)/NorthernNswFaq"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 // Page copy for the case study strip, and the structured data for the page
 import { caseStudies } from "./northernNswData";
 import schema from "./northernNswSchema";
 
 // TODO: add this hero image pair, or swap for an existing one from public/pageHeros
-import northernNsw from "../../public/pageHeros/northernRivers.webp";
-import northernNswMob from "../../public/pageHeros/mob/northernRiversMob.webp";
+import northernNsw from "@/public/pageHeros/northernRivers.webp";
+import northernNswMob from "@/public/pageHeros/mob/northernRiversMob.webp";
 
 const Page = () => {
   return (

@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment3.module.scss";
-import construction from "../../../public/construction.webp";
-import salesperson from "../../../public/salesperson.webp";
-import doctor from "../../../public/doctor.webp";
-import businessman from "../../../public/businessman.webp";
-import corporate from "../../../public/corporate.webp";
+import construction from "@/public/construction.webp";
+import salesperson from "@/public/salesperson.webp";
+import doctor from "@/public/doctor.webp";
+import businessman from "@/public/businessman.webp";
+import corporate from "@/public/corporate.webp";
 
 const UseCases = () => {
   return (

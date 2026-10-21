@@ -1,6 +1,6 @@
 import React from "react";
 
-import { navigationData } from "../../navigationData";
+import { navigationData } from "@/navigationData";
 
 import MobileNavList from "./MobileNavList";
 

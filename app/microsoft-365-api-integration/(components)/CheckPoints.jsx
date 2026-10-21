@@ -1,6 +1,6 @@
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment4.module.scss";
 const PageSegment4 = () => {

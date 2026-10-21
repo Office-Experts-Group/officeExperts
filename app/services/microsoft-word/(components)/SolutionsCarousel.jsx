@@ -3,18 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/solutionsCarousel.module.scss";
-import keyboard from "../../../../public/350x260/keyboard.webp";
-import coder from "../../../../public/350x260/coder.webp";
-import dashboard from "../../../../public/350x260/dashboard.webp";
-import graph from "../../../../public/350x260/graph.webp";
-import desk from "../../../../public/350x260/desk.webp";
-import magnify from "../../../../public/350x260/magnify.webp";
-import code from "../../../../public/350x260/code.webp";
-import hands from "../../../../public/350x260/hands.webp";
-import scrabble from "../../../../public/350x260/scrabble.webp";
-import laptop from "../../../../public/350x260/laptop.webp";
-import graph2 from "../../../../public/350x260/graph2.webp";
-import automation from "../../../../public/350x260/automation.webp";
+import keyboard from "@/public/350x260/keyboard.webp";
+import coder from "@/public/350x260/coder.webp";
+import dashboard from "@/public/350x260/dashboard.webp";
+import graph from "@/public/350x260/graph.webp";
+import desk from "@/public/350x260/desk.webp";
+import magnify from "@/public/350x260/magnify.webp";
+import code from "@/public/350x260/code.webp";
+import hands from "@/public/350x260/hands.webp";
+import scrabble from "@/public/350x260/scrabble.webp";
+import laptop from "@/public/350x260/laptop.webp";
+import graph2 from "@/public/350x260/graph2.webp";
+import automation from "@/public/350x260/automation.webp";
 
 const SolutionsCarousel = () => {
   const solutionsData = [
@@ -110,7 +110,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Online Solutions",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+      link: "https://www.officeexperts.com.au/services/online-solutions",
       image: scrabble,
       alt: "scrabble pieces",
       description: [

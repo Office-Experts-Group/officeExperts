@@ -1,5 +1,5 @@
 // faqs/dashboards.js
-// FAQ content for /services/by-business-solution/dashboards.
+// FAQ content for /services/dashboards.
 // Shared by the FAQSection component and the FAQPage schema (faqs/dashboardsSchema.js),
 // so the visible answers and the structured data can never drift apart.
 

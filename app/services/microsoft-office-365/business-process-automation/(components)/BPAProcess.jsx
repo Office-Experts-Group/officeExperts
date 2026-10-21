@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/bpaProcess.module.scss";
 const steps = [
@@ -61,7 +61,7 @@ You sign off on the architecture before we write a single line of Power Automate
       },
       {
         label: "SharePoint audit logging",
-        href: "/services/by-business-solution/online-solutions",
+        href: "/services/online-solutions",
       },
     ],
   },

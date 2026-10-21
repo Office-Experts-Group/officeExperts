@@ -11,10 +11,7 @@ import { useRouter } from "next/navigation";
 import styles from "@/styles/payment.module.scss";
 // detectCardType: works out Visa/Mastercard/Amex etc. from the card's BIN
 // getCardDisplayName: turns that code into a friendly label for the badge
-import {
-  detectCardType,
-  getCardDisplayName,
-} from "../../../utils/cardTypeUtils";
+import { detectCardType, getCardDisplayName } from "@/utils/cardTypeUtils";
 
 // Customer-facing messages for Bpoint response codes.
 // Bpoint concatenates Response Code + Bank Response Code, e.g. 2 + 05 = "205".

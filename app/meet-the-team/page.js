@@ -1,17 +1,17 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
-import MeetTheTeam from "../../components/MeetTheTeam";
-import Contact from "../../components/Contact";
+import ServiceHero from "@/components/ServiceHero";
+import MeetTheTeam from "@/components/MeetTheTeam";
+import Contact from "@/components/Contact";
 
-import handShake from "../../public/pageHeros/handShake.webp";
-import handShakeMob from "../../public/pageHeros/mob/handShakeMob.webp";
+import handShake from "@/public/pageHeros/handShake.webp";
+import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

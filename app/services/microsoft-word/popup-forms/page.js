@@ -1,23 +1,23 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
-import Contact from "../../../../components/Contact";
+import Contact from "@/components/Contact";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 import PageSegment5 from "./(components)/PageSegment5";
-import ExpertsAwait from "../../../../components/ExpertsAwait";
-import Promo from "../../../../components/Promo";
-import FAQSection from "../../../../components/FAQSection";
+import ExpertsAwait from "@/components/ExpertsAwait";
+import Promo from "@/components/Promo";
+import FAQSection from "@/components/FAQSection";
 
-import faqs from "../../../../faqs/popup-forms";
+import faqs from "@/faqs/popup-forms";
 
-import notes from "../../../../public/pageHeros/notes.webp";
-import graphTableMob from "../../../../public/pageHeros/mob/graphTableMob.webp";
+import notes from "@/public/pageHeros/notes.webp";
+import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

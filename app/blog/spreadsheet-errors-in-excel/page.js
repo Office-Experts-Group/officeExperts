@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import Contact from "../../../components/Contact";
+import Contact from "@/components/Contact";
 
 import styles from "@/styles/blogPost.module.scss";
 
-import why from "../../../public/why600x400.webp";
-import mistake from "../../../public/blog/mistake.webp";
-import dan from "../../../public/blog/dan.webp";
-import warning from "../../../public/blog/warning.webp";
+import why from "@/public/why600x400.webp";
+import mistake from "@/public/blog/mistake.webp";
+import dan from "@/public/blog/dan.webp";
+import warning from "@/public/blog/warning.webp";
 import Link from "next/link";
 
 const SpreadsheetErrorBlogPost = () => {
@@ -239,13 +239,10 @@ const SpreadsheetErrorBlogPost = () => {
               pivot tables
             </Link>
             , and
-            <Link href={"/services/by-business-solution/dashboards"}>
-              {" "}
-              dashboards
-            </Link>
-            . But without proper training, most people rely on guesswork, trial
-            and error, or copying formulas from other spreadsheets without fully
-            understanding them.
+            <Link href={"/services/dashboards"}> dashboards</Link>. But without
+            proper training, most people rely on guesswork, trial and error, or
+            copying formulas from other spreadsheets without fully understanding
+            them.
           </p>
           <p>
             Over time, as the spreadsheets evolve, what started as a simple

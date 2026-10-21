@@ -1,16 +1,16 @@
 import React from "react";
 
-import Contact from "../../../components/Contact";
-import ServiceHero from "../../../components/ServiceHero";
+import Contact from "@/components/Contact";
+import ServiceHero from "@/components/ServiceHero";
 import CTAMain from "../(components)/CTAMain";
 
-import calculator from "../../../public/pageHeros/calculator.webp";
-import calcMob from "../../../public/pageHeros/mob/calcMob.webp";
+import calculator from "@/public/pageHeros/calculator.webp";
+import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

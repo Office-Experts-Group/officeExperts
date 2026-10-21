@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
-import ServicesCard from "../../../../components/ServicesCard";
-import AnimateOnScroll from "../../../../components/AnimateOnScroll";
+import ServicesCard from "@/components/ServicesCard";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/services.module.scss";
-import dataSol from "../../../../public/microsoft/dataSolNoBG.webp";
-import azure from "../../../../public/microsoft/azureNoBG.webp";
-import integrate from "../../../../public/microsoft/integrateNoBG.webp";
-import upgrades from "../../../../public/microsoft/upgradesNoBG.webp";
-import scott from "../../../../public/scott.webp";
-import signature from "../../../../public/signature.webp";
-import CardIntersectionWrapper from "../../../../components/CardIntersectionWrapper";
+import dataSol from "@/public/microsoft/dataSolNoBG.webp";
+import azure from "@/public/microsoft/azureNoBG.webp";
+import integrate from "@/public/microsoft/integrateNoBG.webp";
+import upgrades from "@/public/microsoft/upgradesNoBG.webp";
+import scott from "@/public/scott.webp";
+import signature from "@/public/signature.webp";
+import CardIntersectionWrapper from "@/components/CardIntersectionWrapper";
 
 const Services = () => {
   return (
@@ -58,7 +58,7 @@ const Services = () => {
                 "We build cost effective database solutions in most Microsoft technologies.",
               ]}
               link={
-                "https://www.officeexperts.com.au/services/by-business-solution/database-development-and-solutions"
+                "https://www.officeexperts.com.au/services/database-development-and-solutions"
               }
             />
           </CardIntersectionWrapper>

@@ -1,7 +1,7 @@
 // app/api/contactForm/route.js
 
 import sgMail from "@sendgrid/mail";
-import { getEmailSignature } from "../../../utils/emailSignature";
+import { getEmailSignature } from "@/utils/emailSignature";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 

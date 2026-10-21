@@ -3,25 +3,25 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import QuerySegmentMain from "./(components)/QuerySegmentMain";
 
 // Dynamic imports for components below the fold
 const QueryServices = dynamic(() => import("./(components)/QueryServices"));
 const QueryComparison = dynamic(() => import("./(components)/QueryComparison"));
 const QueryProcess = dynamic(() => import("./(components)/QueryProcess"));
-const RelatedLinks = dynamic(() => import("../../../components/RelatedLinks"));
-const Contact = dynamic(() => import("../../../components/Contact"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import query from "../../../public/pageHeros/query.webp";
-import queryMob from "../../../public/pageHeros/mob/queryMob.webp";
+import query from "@/public/pageHeros/query.webp";
+import queryMob from "@/public/pageHeros/mob/queryMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../../utils/schemaGenerators";
-import faqs from "../../../faqs/query";
+} from "@/utils/schemaGenerators";
+import faqs from "@/faqs/query";
 
 const schema = {
   "@context": "https://schema.org",

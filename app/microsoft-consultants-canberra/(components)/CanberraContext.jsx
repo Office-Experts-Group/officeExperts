@@ -1,7 +1,7 @@
 // app/microsoft-consultants-canberra/(components)/CanberraContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/canberraContext.module.scss";
 const sectors = [

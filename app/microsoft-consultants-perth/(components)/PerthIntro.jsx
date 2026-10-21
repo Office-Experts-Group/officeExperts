@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import PerthMap from "../(svgs)/PerthMap";
 
 // Import compiled CSS module (not the .scss source)

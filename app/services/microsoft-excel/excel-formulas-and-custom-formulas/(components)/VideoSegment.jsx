@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "@/styles/videoSegment.module.scss";
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const VideoSegment = () => {
   const [isLoading, setIsLoading] = useState(true);

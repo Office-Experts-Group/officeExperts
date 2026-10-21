@@ -2,16 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegmentCenter.module.scss";
-import success from "../../../../../public/success600x400.webp";
+import success from "@/public/success600x400.webp";
 
 const MiniTicks = () => {
   const benefits = [
     {
       text: "SQL Server",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/sql-server-and-access-integration",
+      link: "https://www.officeexperts.com.au/services/sql-server-and-access-integration",
     },
     {
       text: "Visual Studio (C#, VB, ASP)",
@@ -27,11 +27,11 @@ const MiniTicks = () => {
     },
     {
       text: "SharePoint",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/online-solutions",
+      link: "https://www.officeexperts.com.au/services/online-solutions",
     },
     {
       text: "Azure",
-      link: "https://www.officeexperts.com.au/services/by-business-solution/cloud-based-solutions-with-azure",
+      link: "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
     },
   ];
 

@@ -1,17 +1,17 @@
 import React from "react";
 
-import Contact from "../../components/Contact";
-import ServiceHero from "../../components/ServiceHero";
+import Contact from "@/components/Contact";
+import ServiceHero from "@/components/ServiceHero";
 import CTAMain from "./(components)/CTAMain";
 import ContactNextSteps from "./(components)/ContactNextSteps";
 
-import contactUs from "../../public/pageHeros/contactUs.webp";
-import contactUsMob from "../../public/pageHeros/mob/contactUsMob.webp";
+import contactUs from "@/public/pageHeros/contactUs.webp";
+import contactUsMob from "@/public/pageHeros/mob/contactUsMob.webp";
 
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

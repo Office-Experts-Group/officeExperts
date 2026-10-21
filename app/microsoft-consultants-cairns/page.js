@@ -2,7 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import CairnsIntro from "./(components)/CairnsIntro";
 
 const CairnsIndustries = dynamic(
@@ -11,16 +11,16 @@ const CairnsIndustries = dynamic(
 const CairnsServices = dynamic(() => import("./(components)/CairnsServices"));
 const CairnsApproach = dynamic(() => import("./(components)/CairnsApproach"));
 const CairnsWhy = dynamic(() => import("./(components)/CairnsWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import cairns from "../../public/pageHeros/cairns.webp";
-import cairnsMob from "../../public/pageHeros/mob/cairnsMob.webp";
+import cairns from "@/public/pageHeros/cairns.webp";
+import cairnsMob from "@/public/pageHeros/mob/cairnsMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-cairns";

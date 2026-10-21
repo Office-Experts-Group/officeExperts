@@ -2,16 +2,16 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/servicePageCards.module.scss";
 // Import icons
-import stuckIcon from "../../../../../public/icons/computerBlue.webp";
-import issuesIcon from "../../../../../public/icons/supportBlue.webp";
-import expertsIcon from "../../../../../public/icons/handShakeBlue.webp";
-import migrateIcon from "../../../../../public/icons/ideaBlue.webp";
+import stuckIcon from "@/public/icons/computerBlue.webp";
+import issuesIcon from "@/public/icons/supportBlue.webp";
+import expertsIcon from "@/public/icons/handShakeBlue.webp";
+import migrateIcon from "@/public/icons/ideaBlue.webp";
 
 // Import main images
-import created from "../../../../../public/hand300x200.webp";
-import vsto from "../../../../../public/programmer300x200.webp";
-import whichIsBest from "../../../../../public/dashboard300x180.webp";
-import build from "../../../../../public/training300x200.webp";
+import created from "@/public/hand300x200.webp";
+import vsto from "@/public/programmer300x200.webp";
+import whichIsBest from "@/public/dashboard300x180.webp";
+import build from "@/public/training300x200.webp";
 
 const ServicePageCards = () => {
   return (

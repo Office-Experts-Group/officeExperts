@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 // Client-side wrapper that fades each tile in as it enters the viewport
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Compiled CSS from styles/solutionsCarousel.module.scss
 import styles from "@/styles/solutionsCarousel.module.scss";
@@ -70,7 +70,7 @@ const solutionsData = [
   },
   {
     title: "VBA & Macro Development",
-    link: "/services/by-business-solution/vba-macro-development",
+    link: "/services/vba-macro-development",
     Icon: MacroIcon,
     description: [
       "Automate importing, exporting, formatting and processing across Word, Excel, Access, PowerPoint and Outlook. We also fix, document and modernise macros you already rely on.",
@@ -78,7 +78,7 @@ const solutionsData = [
   },
   {
     title: "Dashboards & Reporting",
-    link: "/services/by-business-solution/dashboards",
+    link: "/services/dashboards",
     Icon: DashboardIcon,
     description: [
       "Turn scattered spreadsheets and databases into clear, live dashboards using Excel, Power Query, Power Pivot and Power BI, so decisions are based on current data.",
@@ -86,7 +86,7 @@ const solutionsData = [
   },
   {
     title: "Database & SQL Server",
-    link: "/services/by-business-solution/database-development-and-solutions",
+    link: "/services/database-development-and-solutions",
     Icon: DatabaseIcon,
     description: [
       "Design, build and integrate databases in Access and SQL Server, with user-friendly interfaces and secure connections to Office, Azure and your other systems.",

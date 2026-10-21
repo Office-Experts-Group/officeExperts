@@ -7,15 +7,12 @@
 
 import { NextResponse } from "next/server";
 // Bpoint credentials and live/test mode, validated from environment variables
-import {
-  getPaymentConfig,
-  validateBpointConfig,
-} from "../../../../utils/paymentConfig";
+import { getPaymentConfig, validateBpointConfig } from "@/utils/paymentConfig";
 // Sendgrid email helpers for the customer receipt and accounts notification
 import {
   sendPaymentConfirmationEmail,
   sendInternalPaymentNotification,
-} from "../../../../utils/emailService";
+} from "@/utils/emailService";
 
 const BPOINT_API_URL = "https://www.bpoint.com.au/webapi/v3/txns/";
 

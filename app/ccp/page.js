@@ -9,7 +9,7 @@
 
 import React from "react";
 // Decodes the base64 "q" invoice parameter into { A, I, C, E, ... }
-import { decodeUrlParams } from "../../utils/paymentUtils";
+import { decodeUrlParams } from "@/utils/paymentUtils";
 import PaymentForm from "./(components)/PaymentForm";
 import NoParamsMessage from "./(components)/NoParamsMessage";
 import SuccessMessage from "./(components)/SuccessMessage";

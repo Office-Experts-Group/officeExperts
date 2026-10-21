@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Import compiled CSS module (not the .scss source)
 import styles from "@/styles/perthContext.module.scss";

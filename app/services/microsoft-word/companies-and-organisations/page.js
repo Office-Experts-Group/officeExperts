@@ -1,25 +1,25 @@
 import React from "react";
 
-import ServiceHero from "../../../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import ServicePageCards from "./(components)/ServicePageCards";
-import Contact from "../../../../components/Contact";
+import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import BlackSegment from "./(components)/BlackSegment";
 import PageSegment8 from "./(components)/PageSegment8";
 import PageSegment4 from "./(components)/PageSegment4";
 import PageSegment5 from "./(components)/PageSegment5";
-import FAQSection from "../../../../components/FAQSection";
+import FAQSection from "@/components/FAQSection";
 import Contents from "./(components)/Contents";
 
-import faqs from "../../../../faqs/companies-and-organisations";
+import faqs from "@/faqs/companies-and-organisations";
 
-import report from "../../../../public/pageHeros/report.webp";
-import glassesMob from "../../../../public/pageHeros/mob/glassesMob.webp";
+import report from "@/public/pageHeros/report.webp";
+import glassesMob from "@/public/pageHeros/mob/glassesMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "../../../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",

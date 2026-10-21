@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/bpaReplaces.module.scss";
 const LINKS = {
@@ -10,7 +10,7 @@ const LINKS = {
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
   powerApps:
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
-  sharePoint: "/services/by-business-solution/online-solutions",
+  sharePoint: "/services/online-solutions",
   aiBuilder:
     "/services/microsoft-office-365/business-process-automation#document-processing",
 

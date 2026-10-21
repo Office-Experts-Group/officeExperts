@@ -1,7 +1,7 @@
 // app/microsoft-consultants-richmond/(components)/RichmondContext.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/richmondContext.module.scss";
 
@@ -56,7 +56,9 @@ const RichmondContext = () => (
           <p className={styles.eyebrow}>Who We Work With</p>
           <h2 className={styles.heading}>
             We understand the businesses{" "}
-            <span className={styles.headingAccent}>that keep Richmond moving.</span>
+            <span className={styles.headingAccent}>
+              that keep Richmond moving.
+            </span>
           </h2>
         </div>
       </AnimateOnScroll>
@@ -105,11 +107,10 @@ const RichmondContext = () => (
               day.
             </p>
             <p className={styles.coverageLead}>
-              Our consultants work as one national team, so the right
-              specialist is matched to your job wherever they happen to be
-              based. When a workshop, training session or handover is better
-              done in person, we can arrange it for Richmond and the
-              surrounding suburbs.
+              Our consultants work as one national team, so the right specialist
+              is matched to your job wherever they happen to be based. When a
+              workshop, training session or handover is better done in person,
+              we can arrange it for Richmond and the surrounding suburbs.
             </p>
           </div>
 

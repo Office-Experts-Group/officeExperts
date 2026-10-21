@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import { PowerAppsVisual } from "../(svgs)/PowerAppsVisual";
 import { LogicAppsVisual } from "../(svgs)/LogicAppsVisual";
@@ -61,7 +61,7 @@ const cards = [
     },
     Visual: ApiVisual,
     link: {
-      href: "/services/by-business-solution/3rd-party-application-or-office-integration",
+      href: "/services/3rd-party-application-or-office-integration",
       text: "API integration and automation",
     },
   },

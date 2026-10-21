@@ -1,25 +1,25 @@
 import React from "react";
 
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import LocationPages from "../(components)/LocationPages";
 import CTAMainProps from "../(components)/CTAMainProps";
-import ContactLocationSegment from "../../components/ContactLocationSegment";
+import ContactLocationSegment from "@/components/ContactLocationSegment";
 import ServicesLocation from "../(components)/ServicesLocation";
-import Promo from "../../components/Promo";
+import Promo from "@/components/Promo";
 import GoodToKnow from "../about-us/(components)/GoodToKnow";
 import LocationSummary from "../(components)/LocationSummary";
 import Testimonials from "../(components)/Testimonials";
 
-import centralCoast from "../../public/pageHeros/melbourne.webp";
-import centralCoastMob from "../../public/pageHeros/mob/melbourneMob.webp";
+import centralCoast from "@/public/pageHeros/melbourne.webp";
+import centralCoastMob from "@/public/pageHeros/mob/melbourneMob.webp";
 
-import { getHomePageSchema } from "../../utils/testimonialSchemaGenerator";
+import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
-import { testimonials } from "../../testimonials";
+} from "@/utils/schemaGenerators";
+import { testimonials } from "@/testimonials";
 
 const schema = {
   "@context": "https://schema.org",

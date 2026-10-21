@@ -3,23 +3,23 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above-the-fold components loaded eagerly
-import ServiceHero from "../../components/ServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import SydneyIntro from "./(components)/SydneyIntro";
 
 // Below-the-fold components loaded dynamically for performance
 const SydneyServices = dynamic(() => import("./(components)/SydneyServices"));
 const SydneyContext = dynamic(() => import("./(components)/SydneyContext"));
 const SydneyWhy = dynamic(() => import("./(components)/SydneyWhy"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 import {
   generateLocalBusinessSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import sydney from "../../public/pageHeros/sydney.webp";
-import sydneyMob from "../../public/pageHeros/mob/sydneyMob.webp";
+import sydney from "@/public/pageHeros/sydney.webp";
+import sydneyMob from "@/public/pageHeros/mob/sydneyMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-sydney";
