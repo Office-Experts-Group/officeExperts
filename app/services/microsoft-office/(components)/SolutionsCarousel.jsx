@@ -86,7 +86,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrades and Migration",
-      link: "/services/microsoft-office/upgrades-and-migration",
+      link: "/services/upgrades-and-migration",
       image: dashboard,
       alt: "dashboard",
       description: [

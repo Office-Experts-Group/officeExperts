@@ -12,7 +12,7 @@ const methods = [
   {
     title: "REST APIs and webhooks",
     text: "The modern standard for Xero, Salesforce, MYOB and most cloud products. Changes in one system can trigger updates in another as they happen.",
-    href: "/services/microsoft-office-365/app-and-custom-development",
+    href: "/services/app-and-custom-development",
     linkText: "Custom app development",
   },
   {

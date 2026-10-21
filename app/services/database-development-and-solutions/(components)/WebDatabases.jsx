@@ -66,7 +66,7 @@ const WebDatabases = () => {
               We build these front ends in Next.js and React, with React Native
               for mobile, through our{" "}
               <Link
-                href="/services/microsoft-office-365/app-and-custom-development"
+                href="/services/app-and-custom-development"
                 className={styles.link}
               >
                 app and custom development

@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/layout.js
+// app/services/upgrades-and-migration/layout.js
 
 import React from "react";
 
@@ -13,7 +13,7 @@ export const metadata = {
 
   // ── Canonical ────────────────────────────
   alternates: {
-    canonical: "/services/microsoft-office/upgrades-and-migration",
+    canonical: "/services/upgrades-and-migration",
   },
 
   // ── OpenGraph ────────────────────────────
@@ -22,7 +22,7 @@ export const metadata = {
       "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
     description:
       "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-    url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+    url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
     siteName: "Office Experts Group",
     images: [
       {

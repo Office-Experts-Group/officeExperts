@@ -71,7 +71,7 @@ const areas = [
     links: [
       {
         label: "Business process automation",
-        href: "/services/microsoft-office-365/business-process-automation",
+        href: "/services/business-process-automation",
       },
       {
         label: "Power Automate",

@@ -220,7 +220,7 @@ export const platforms = [
       },
       {
         label: "Cloud backup with OneDrive",
-        href: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+        href: "/services/cloud-backup-with-onedrive",
       },
       {
         label: "Business process automation",
@@ -240,7 +240,7 @@ export const platforms = [
       },
       {
         label: "App and custom development",
-        href: "/services/microsoft-office-365/app-and-custom-development",
+        href: "/services/app-and-custom-development",
       },
       {
         label: "Database development",
@@ -267,7 +267,7 @@ export const aiItems = [
   {
     id: "copilot",
     name: "Microsoft 365 Copilot",
-    href: "/services/microsoft-office-365/copilot",
+    href: "/services/copilot",
     text: "Rollout, data readiness and training, with honest advice on where Copilot is enough and where a custom agent is the better tool.",
   },
   {
@@ -286,7 +286,7 @@ export const resilience = [
     text: "Documents, workbooks and databases held in SharePoint and OneDrive, with backups that do not depend on one machine in the shop, the shed or the spare room.",
     link: {
       label: "Cloud backup with OneDrive",
-      href: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+      href: "/services/cloud-backup-with-onedrive",
     },
   },
   {
@@ -295,7 +295,7 @@ export const resilience = [
     text: "Power Apps that keep recording inspections, stock and job details when the signal drops, and catch up once you are back in range.",
     link: {
       label: "Remote data gathering from any device",
-      href: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+      href: "/services/remote-data-gathering-from-any-device",
     },
   },
   {

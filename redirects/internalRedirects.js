@@ -38,13 +38,21 @@ module.exports = [
   ),
   permanent(
     "/services/by-business-solution/office-and-sql-server-integration",
-    "/services/by-business-solution/sql-server-and-access-integration",
+    "/services/sql-server-and-access-integration",
   ),
   permanent("/by-business-solution", "/services"),
   permanent("/services/by-business-solution", "/services"),
   permanent("/services/by-office-product", "/services"),
   permanent("/services/microsoft-office", "/services"),
-
+  permanent(
+    "/services/microsoft-office/upgrades-and-migration",
+    "/services/upgrades-and-migration",
+  ),
+  permanent("/services/microsoft-office-365/copilot", "/services/copilot"),
+  permanent(
+    "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    "/services/remote-data-gathering-from-any-device",
+  ),
   // ── Office 365 ──
   permanent(
     "/services/microsoft-office-365/office-365-implementation",
@@ -61,6 +69,14 @@ module.exports = [
   permanent(
     "/services/microsoft-office-365/support-and-managed-services",
     "/microsoft-support-and-training-australia",
+  ),
+  permanent(
+    "/services/microsoft-office-365/app-and-custom-development",
+    "/services/app-and-custom-development",
+  ),
+  permanent(
+    "/services/microsoft-office-365/business-process-automation",
+    "/services/business-process-automation",
   ),
 
   // ── Retired services ──

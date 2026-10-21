@@ -30,7 +30,7 @@ import { MigrationIcon } from "../(svgs)/MigrationIcon";
 const solutionsData = [
   {
     title: "Cloud Backup with OneDrive",
-    link: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+    link: "/services/cloud-backup-with-onedrive",
     Icon: CloudBackupIcon,
     description: [
       "Need important documents backed up off site, shared with colleagues and customers, or available on every device? We set up OneDrive so your files are protected and reachable wherever your team works.",
@@ -38,7 +38,7 @@ const solutionsData = [
   },
   {
     title: "Microsoft Copilot",
-    link: "/services/microsoft-office-365/copilot",
+    link: "/services/copilot",
     Icon: CopilotIcon,
     description: [
       "Get real value from Copilot with the right setup, data governance, training and custom solutions for the way your team works.",
@@ -46,7 +46,7 @@ const solutionsData = [
   },
   {
     title: "Business Process Automation",
-    link: "/services/microsoft-office-365/business-process-automation",
+    link: "/services/business-process-automation",
     Icon: AutomationIcon,
     description: [
       "Are paper forms delaying your processes, or internal requests getting lost? We replace them with digital forms and automated workflows that keep every request visible and moving.",
@@ -54,7 +54,7 @@ const solutionsData = [
   },
   {
     title: "Remote Data Gathering",
-    link: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    link: "/services/remote-data-gathering-from-any-device",
     Icon: RemoteDataIcon,
     description: [
       "Let staff complete forms while offsite and collect information from your clients on any device, with the data going straight into your Microsoft 365 systems.",
@@ -62,7 +62,7 @@ const solutionsData = [
   },
   {
     title: "App & Custom Development",
-    link: "/services/microsoft-office-365/app-and-custom-development",
+    link: "/services/app-and-custom-development",
     Icon: PuzzleIcon,
     description: [
       "Custom applications that integrate with SharePoint lists and libraries, and custom branding for your corporate intranet site.",
@@ -118,7 +118,7 @@ const solutionsData = [
   },
   {
     title: "Upgrades & Migration",
-    link: "/services/microsoft-office/upgrades-and-migration",
+    link: "/services/upgrades-and-migration",
     Icon: MigrationIcon,
     description: [
       "Moving to Microsoft 365 or a new Office version? We resolve compatibility issues with macros, templates and databases so everything keeps working after the move.",

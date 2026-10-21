@@ -1,5 +1,5 @@
 "use client";
-// app/services/microsoft-office/upgrades-and-migration/(components)/ChallengesAccordion.jsx
+// app/services/upgrades-and-migration/(components)/ChallengesAccordion.jsx
 
 import { useState } from "react";
 import Link from "next/link";

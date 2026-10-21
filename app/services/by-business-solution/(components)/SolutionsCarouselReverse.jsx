@@ -38,7 +38,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrades and Migration",
-      link: "/services/microsoft-office/upgrades-and-migration",
+      link: "/services/upgrades-and-migration",
       image: project4,
       description: [
         "Are your workbooks, documents or databases not functioning correctly under your version of Office?",

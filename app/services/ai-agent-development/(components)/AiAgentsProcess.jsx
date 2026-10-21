@@ -27,7 +27,7 @@ const steps = [
         the agent takes and which stay with people. It's the same mapping behind
         our{" "}
         <Link
-          href="/services/microsoft-office-365/business-process-automation"
+          href="/services/business-process-automation"
           className={styles.link}
         >
           business process automation

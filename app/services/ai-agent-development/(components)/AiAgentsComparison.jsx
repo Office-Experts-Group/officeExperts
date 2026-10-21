@@ -152,7 +152,7 @@ const AiAgentsComparison = () => {
           .<br></br>
           Custom and hybrid agents draw on our{" "}
           <Link
-            href="/services/microsoft-office-365/app-and-custom-development"
+            href="/services/app-and-custom-development"
             className={styles.link}
           >
             custom app development

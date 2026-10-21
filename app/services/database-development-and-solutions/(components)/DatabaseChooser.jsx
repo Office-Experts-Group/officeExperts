@@ -19,7 +19,7 @@ const platforms = [
   },
   {
     name: "Web database + custom app",
-    href: "/services/microsoft-office-365/app-and-custom-development",
+    href: "/services/app-and-custom-development",
   },
 ];
 

@@ -86,7 +86,7 @@ const services = [
         text: "Microsoft 365 Solutions",
       },
       {
-        href: "/services/microsoft-office-365/copilot",
+        href: "/services/copilot",
         text: "Microsoft 365 Copilot",
       },
     ],
@@ -100,7 +100,7 @@ const services = [
     links: [
       { href: "/services/custom-office-solutions", text: "Custom Solutions" },
       {
-        href: "/services/microsoft-office-365/app-and-custom-development",
+        href: "/services/app-and-custom-development",
         text: "App Development",
       },
     ],

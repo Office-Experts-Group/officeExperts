@@ -52,15 +52,15 @@ export const groupIntro = {
   list: [
     {
       name: "Custom Development & Integrations",
-      href: "/services/microsoft-office-365/app-and-custom-development",
+      href: "/services/app-and-custom-development",
     },
     {
       name: "Process Automation",
-      href: "/services/microsoft-office-365/business-process-automation",
+      href: "/services/business-process-automation",
     },
     {
       name: "Upgrades & Migrations",
-      href: "/services/microsoft-office/upgrades-and-migration",
+      href: "/services/upgrades-and-migration",
     },
     {
       name: "Business Analysis",
@@ -164,7 +164,7 @@ export const ai = {
     },
     {
       name: "Microsoft Copilot",
-      href: "/services/microsoft-office-365/copilot",
+      href: "/services/copilot",
       description:
         "Set up Copilot properly and make it genuinely useful across Word, Excel, Outlook and Teams.",
       also: {
@@ -179,7 +179,7 @@ export const ai = {
     },
     {
       name: "Business process automation",
-      href: "/services/microsoft-office-365/business-process-automation",
+      href: "/services/business-process-automation",
       description:
         "Replace repetitive manual steps with workflows that run on their own.",
       also: {
@@ -605,7 +605,7 @@ export const customDevSection = {
     },
     {
       name: "App and custom development",
-      href: "/services/microsoft-office-365/app-and-custom-development",
+      href: "/services/app-and-custom-development",
       description: "Web apps, portals and mobile apps.",
     },
     {
@@ -655,7 +655,7 @@ export const customDevSection = {
     },
     {
       name: "Remote data gathering",
-      href: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+      href: "/services/remote-data-gathering-from-any-device",
       description: "Collect data from any device.",
     },
   ],
@@ -679,12 +679,12 @@ export const microsoft365Section = {
         },
         {
           name: "Office upgrades and migration",
-          href: "/services/microsoft-office/upgrades-and-migration",
+          href: "/services/upgrades-and-migration",
         },
         { name: "Microsoft 365", href: "/services/microsoft-office-365" },
         {
           name: "Cloud backup with OneDrive",
-          href: "/services/microsoft-office-365/cloud-backup-with-onedrive",
+          href: "/services/cloud-backup-with-onedrive",
         },
       ],
     },

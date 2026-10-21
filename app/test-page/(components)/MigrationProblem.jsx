@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/(components)/MigrationProblem.jsx
+// app/services/upgrades-and-migration/(components)/MigrationProblem.jsx
 
 import Link from "next/link";
 import styles from "@/styles/migrationProblem.module.scss";

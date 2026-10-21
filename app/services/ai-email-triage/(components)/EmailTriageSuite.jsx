@@ -81,7 +81,7 @@ const EmailTriageSuite = () => {
               Power Platform services
             </a>
             <Link
-              href="/services/microsoft-office-365/business-process-automation"
+              href="/services/business-process-automation"
               className={styles.link}
             >
               Business process automation

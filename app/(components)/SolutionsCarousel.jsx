@@ -54,7 +54,7 @@ const solutionsData = [
   },
   {
     title: "Microsoft 365 & Copilot",
-    link: "/services/microsoft-office-365/copilot",
+    link: "/services/copilot",
     Icon: CopilotIcon,
     description: [
       "Get real value from Microsoft 365 and Copilot. We handle setup, migration, custom development, governance and training, so your team uses the tools with confidence.",
@@ -62,7 +62,7 @@ const solutionsData = [
   },
   {
     title: "Business Process Automation",
-    link: "/services/microsoft-office-365/business-process-automation",
+    link: "/services/business-process-automation",
     Icon: AutomationIcon,
     description: [
       "Replace manual, repetitive work with automated workflows across Word, Excel, Outlook, SharePoint and Power Platform. Fewer errors, faster turnaround.",
@@ -94,7 +94,7 @@ const solutionsData = [
   },
   {
     title: "Web Apps & Custom Software",
-    link: "/services/microsoft-office-365/app-and-custom-development",
+    link: "/services/app-and-custom-development",
     Icon: WebAppIcon,
     description: [
       "Custom web applications and integrated software built with Next.js, .NET and Azure. We can move desktop databases and spreadsheets online with proper security and user access.",
@@ -102,7 +102,7 @@ const solutionsData = [
   },
   {
     title: "Upgrades & Migration",
-    link: "/services/microsoft-office/upgrades-and-migration",
+    link: "/services/upgrades-and-migration",
     Icon: MigrationIcon,
     description: [
       "Moving to a new version of Office or Microsoft 365? We resolve compatibility issues with macros, templates and databases so everything keeps working after the move.",

@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/(components)/MigrationHero.jsx
+// app/services/upgrades-and-migration/(components)/MigrationHero.jsx
 
 import Link from "next/link";
 import styles from "@/styles/migrationHero.module.scss";

@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/(components)/MigrationStack.jsx
+// app/services/upgrades-and-migration/(components)/MigrationStack.jsx
 
 import Link from "next/link";
 import styles from "@/styles/migrationStack.module.scss";

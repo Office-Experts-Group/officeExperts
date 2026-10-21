@@ -33,7 +33,7 @@ export const faqs = [
     answer:
       "Often you already own most of what you need. Many Microsoft 365 plans include basic Power Apps, Power Automate and SharePoint capability, so we check what your licences cover before recommending anything new. If Copilot is on your list, we also look at your file permissions first, so it only surfaces what each person should see.",
     link: {
-      href: "/services/microsoft-office-365/copilot",
+      href: "/services/copilot",
       text: "Microsoft 365 Copilot consulting",
     },
   },

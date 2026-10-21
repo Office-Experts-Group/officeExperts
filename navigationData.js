@@ -127,7 +127,7 @@ export const navigationData = {
           },
           {
             label: "Remote Data Access",
-            href: `/services/microsoft-office-365/remote-data-gathering-from-any-device`,
+            href: `/services/remote-data-gathering-from-any-device`,
           },
           {
             label: "Online Solutions",
@@ -135,7 +135,7 @@ export const navigationData = {
           },
           {
             label: "Upgrades and Migration",
-            href: `/services/microsoft-office/upgrades-and-migration`,
+            href: `/services/upgrades-and-migration`,
           },
 
           {
@@ -156,7 +156,7 @@ export const navigationData = {
           },
           {
             label: "Apps and Custom Development",
-            href: `/services/microsoft-office-365/app-and-custom-development`,
+            href: `/services/app-and-custom-development`,
           },
           {
             label: "Support & Training",
@@ -374,11 +374,11 @@ export const navigationData = {
       },
       {
         label: "Copilot and AI",
-        href: `/services/microsoft-office-365/copilot`,
+        href: `/services/copilot`,
         items: [
           {
             label: "Copilot in Office 365",
-            href: `/services/microsoft-office-365/copilot`,
+            href: `/services/copilot`,
           },
           {
             label: "AI Agent Development",
@@ -412,7 +412,7 @@ export const navigationData = {
           },
           {
             label: "Business Process Automation",
-            href: `/services/microsoft-office-365/business-process-automation`,
+            href: `/services/business-process-automation`,
           },
           {
             label: "Azure Cloud Solutions",

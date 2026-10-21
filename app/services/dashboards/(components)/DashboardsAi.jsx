@@ -52,11 +52,9 @@ const capabilities = [
       <>
         Ask "why did margin drop in Queensland last month?" and get an answer
         with the figures and a chart, drawn from your own data model.{" "}
-        <Link href="/services/microsoft-office-365/copilot">
-          Copilot in Power BI
-        </Link>{" "}
-        handles this for many reports. For SQL Server, Access or
-        line-of-business data, we build{" "}
+        <Link href="/services/copilot">Copilot in Power BI</Link> handles this
+        for many reports. For SQL Server, Access or line-of-business data, we
+        build{" "}
         <Link href="/services/ai-agent-development">custom AI agents</Link> that
         turn questions into checked queries.
       </>

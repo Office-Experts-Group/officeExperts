@@ -44,10 +44,7 @@ const AiAgentsProblem = () => {
             </p>
             <p className={styles.body}>
               ChatGPT and{" "}
-              <Link
-                href="/services/microsoft-office-365/copilot"
-                className={styles.link}
-              >
+              <Link href="/services/copilot" className={styles.link}>
                 Copilot in Microsoft 365
               </Link>{" "}
               are excellent assistants, but they wait to be asked, and the

@@ -60,9 +60,7 @@ const ThirdPartyAiIntegration = () => {
                   AI agent development
                 </Link>{" "}
                 service, or how{" "}
-                <Link href="/services/microsoft-office-365/copilot">
-                  Copilot for Microsoft 365
-                </Link>{" "}
+                <Link href="/services/copilot">Copilot for Microsoft 365</Link>{" "}
                 fits alongside them.
               </p>
             </div>

@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/(components)/MigrationChallenges.jsx
+// app/services/upgrades-and-migration/(components)/MigrationChallenges.jsx
 "use client";
 import Link from "next/link";
 import styles from "@/styles/migrationChallenges.module.scss";

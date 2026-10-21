@@ -1,4 +1,4 @@
-// app/services/microsoft-office/upgrades-and-migration/page.js
+// app/services/upgrades-and-migration/page.js
 
 import React from "react";
 import dynamic from "next/dynamic";
@@ -36,9 +36,8 @@ const schema = {
     generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
-      url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+      "@id": "https://www.officeexperts.com.au/services/upgrades-and-migration",
+      url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
       name: "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
@@ -49,14 +48,14 @@ const schema = {
         "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration#breadcrumb",
+          "https://www.officeexperts.com.au/services/upgrades-and-migration#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
           target: [
-            "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+            "https://www.officeexperts.com.au/services/upgrades-and-migration",
           ],
         },
       ],
@@ -64,7 +63,7 @@ const schema = {
     {
       "@type": "BreadcrumbList",
       "@id":
-        "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration#breadcrumb",
+        "https://www.officeexperts.com.au/services/upgrades-and-migration#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -106,7 +105,7 @@ export const metadata = {
       "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
     description:
       "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments -- connecting your tools into a system that actually works together.",
-    url: "https://www.officeexperts.com.au/services/microsoft-office/upgrades-and-migration",
+    url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
     siteName: "Office Experts Group",
     images: [
       {
@@ -133,7 +132,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/services/microsoft-office/upgrades-and-migration",
+    canonical: "/services/upgrades-and-migration",
   },
 };
 

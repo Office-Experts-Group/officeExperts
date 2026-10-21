@@ -237,7 +237,7 @@ export const goneUrls = [
   "/faq-items/do-you-come-onsite-or-work-remotely/attachment/skype-button",
   "/testimonials/familycare",
   "/testimonials/mortgage-choice",
-  "/services/microsoft-office-365/cloud-backup-with-onedrive/attachment/cloud-database",
+  "/attachment/cloud-database",
   "/tag/avada-theme",
   "/blog/at-your-service",
   "/office-excel-access-and-word-experts-wollongong",

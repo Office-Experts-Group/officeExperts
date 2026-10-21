@@ -103,8 +103,7 @@ const BusinessAnalysisValue = () => {
             <p className={styles.body}>
               We design where AI belongs in your workflow, and where it
               doesn&apos;t. That might be{" "}
-              <Link href="/services/microsoft-office-365/copilot">Copilot</Link>
-              , an agent built in{" "}
+              <Link href="/services/copilot">Copilot</Link>, an agent built in{" "}
               <a href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations">
                 Power Platform
               </a>

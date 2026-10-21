@@ -101,7 +101,7 @@ export const caseStudies = [
     services: [
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
       },
       {
         label: "AI-powered workflows",
@@ -345,11 +345,11 @@ export const caseStudies = [
     services: [
       {
         label: "App & custom development",
-        href: "https://www.officeexperts.com.au/services/microsoft-office-365/app-and-custom-development",
+        href: "https://www.officeexperts.com.au/services/app-and-custom-development",
       },
       {
         label: "Business process automation",
-        href: "https://www.officeexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.officeexperts.com.au/services/business-process-automation",
       },
     ],
   },
@@ -496,7 +496,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.officeexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.officeexperts.com.au/services/business-process-automation",
       },
     ],
   },
@@ -650,7 +650,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
       },
     ],
   },
@@ -977,7 +977,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
       },
     ],
   },
@@ -2353,7 +2353,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-office-365/business-process-automation",
+        href: "https://www.powerplatformexperts.com.au/services/business-process-automation",
       },
     ],
   },

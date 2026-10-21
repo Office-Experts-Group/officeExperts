@@ -70,7 +70,7 @@ const groups = [
       {
         name: "MySQL, Oracle and any API",
         text: "If your product has an API, an ODBC driver or a database we can reach, we can usually link it to Office or build a custom app around it.",
-        href: "/services/microsoft-office-365/app-and-custom-development",
+        href: "/services/app-and-custom-development",
         linkText: "Custom app development",
       },
     ],
