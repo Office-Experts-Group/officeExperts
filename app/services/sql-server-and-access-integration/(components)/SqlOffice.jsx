@@ -41,8 +41,8 @@ const solutions = [
     body: "Automatically generate a monthly PowerPoint presentation from your SQL Server data, with no copying and pasting.",
     links: [
       {
-        href: "/services/microsoft-powerpoint/automate-presentations-with-vba",
-        text: "Automate presentations with VBA",
+        href: "/services/microsoft-powerpoint",
+        text: "PowerPoint solutions",
       },
       {
         href: "/services/vba-macro-development",

@@ -1,12 +1,11 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/whyChoose.module.scss";
-import faqs from "@/faqs/about-us";
+import faqs from "@//faqs/about-us";
 
-import semi from "@/public/shapes/semi600x600.webp";
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import semi from "@//public/shapes/semi600x600.webp";
+import AnimateOnScroll from "@//components/AnimateOnScroll";
 
 const WhyChooseUs = () => {
   return (
@@ -24,16 +23,8 @@ const WhyChooseUs = () => {
           <h2>Quality Personalised Services</h2>
           <p>
             We provide high quality solutions and offer personalised customer
-            service. It is our objective to exceed your expectations and be
-            acknowledged as your own personal{" "}
-            <Link href={"/services/microsoft-office"}>Microsoft Office</Link>,
-            Microsoft{" "}
-            <Link
-              href={"/services/3rd-party-application-or-office-integration"}
-            >
-              technologies and integration
-            </Link>{" "}
-            experts.
+            service. It is our aim to exceed your expectations and be
+            acknowledged as your new go-to Microsoft Office Gurus.
           </p>
         </div>
       </AnimateOnScroll>

@@ -155,7 +155,7 @@ const faqs = [
         Central, SAP, Salesforce, Xero, and MYOB. Systems without a native
         connector can be reached through{" "}
         <Link
-          href="/services/services/microsoft-365-api-integration"
+          href="/services/microsoft-365-api-integration"
           className={styles.link}
         >
           REST API calls

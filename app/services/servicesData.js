@@ -674,10 +674,6 @@ export const microsoft365Section = {
       icon: "cloud",
       items: [
         {
-          name: "Microsoft Office services",
-          href: "/services/microsoft-office",
-        },
-        {
           name: "Office upgrades and migration",
           href: "/services/upgrades-and-migration",
         },
@@ -707,7 +703,7 @@ export const microsoft365Section = {
         { name: "Word training", href: word("/training") },
         {
           name: "PowerPoint training",
-          href: "/services/microsoft-powerpoint/powerpoint-user-training-and-assistance",
+          href: "/microsoft-support-and-training-australia",
         },
       ],
     },

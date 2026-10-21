@@ -345,11 +345,11 @@ export const caseStudies = [
     services: [
       {
         label: "App & custom development",
-        href: "https://www.officeexperts.com.au/services/app-and-custom-development",
+        href: "/services/app-and-custom-development",
       },
       {
         label: "Business process automation",
-        href: "https://www.officeexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
     ],
   },
@@ -496,7 +496,7 @@ export const caseStudies = [
       },
       {
         label: "Business process automation",
-        href: "https://www.officeexperts.com.au/services/business-process-automation",
+        href: "/services/business-process-automation",
       },
     ],
   },
@@ -1199,7 +1199,7 @@ export const caseStudies = [
     services: [
       {
         label: "Custom Access database development",
-        href: "/database-design-and-development",
+        href: "/services/database-design-and-development",
       },
       {
         label: "Upgrading with Access",
@@ -2046,7 +2046,7 @@ export const caseStudies = [
       },
       {
         label: "Custom web application development",
-        href: "https://www.officeexperts.com.au/services/online-solutions",
+        href: "/services/online-solutions",
       },
     ],
   },
@@ -2273,7 +2273,7 @@ export const caseStudies = [
     services: [
       {
         label: "Custom web application development",
-        href: "https://www.officeexperts.com.au/services/online-solutions",
+        href: "/services/online-solutions",
       },
       {
         label: "Reporting and analytics",
@@ -2577,7 +2577,7 @@ export const caseStudies = [
     services: [
       {
         label: "Database development and solutions",
-        href: "https://www.officeexperts.com.au/services/database-development-and-solutions",
+        href: "/services/database-development-and-solutions",
       },
       {
         label: "Microsoft Access services",
