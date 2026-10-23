@@ -1,0 +1,29 @@
+// styles/compareScrollReveal.module.scss
+@use "./globals.scss" as *;
+
+// ── Wrapper ───────────────────────────────────────────────────────────────────
+// Purely a layout/visibility shell — no visual styles of its own.
+// The inner Compare card handles all appearance.
+.scrollRevealWrapper {
+  width: 100%;
+  display: block; // overridden to none by index classes on smaller screens
+}
+
+.index0,
+.index1 {
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.index3 {
+  @include phone {
+    display: none;
+  }
+}

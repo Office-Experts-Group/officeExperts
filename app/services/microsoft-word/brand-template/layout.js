@@ -1,7 +1,20 @@
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/brand-template";
+const PAGE_TITLE = "Microsoft Word Brand Template Services | Office Experts";
+const PAGE_DESCRIPTION =
+  "Professional Microsoft Word brand template services. Custom document templates that ensure consistent branding and a professional appearance.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
+
 export const metadata = {
-  title: "Microsoft Word Brand Template Services | Word Experts",
-  description:
-    "Professional Microsoft Word brand template services. Custom document templates that ensure consistent branding and a professional appearance.",
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
 
   keywords: [
     // Core service keywords
@@ -9,19 +22,11 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "Microsoft Word Brand Template Services | Word Experts",
-    description:
-      "Professional Microsoft Word brand template services. Custom document templates that ensure consistent branding and professional appearance across your organisation.",
-    url: "https://www.wordexperts.com.au/brand-template",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
@@ -29,15 +34,13 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title: "Microsoft Word Brand Template Services | Word Experts",
-    description:
-      "Professional Microsoft Word brand template services. Custom document templates that ensure consistent branding and professional appearance across your organisation.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
 
   alternates: {
-    canonical: "/brand-template",
+    canonical: PAGE_URL,
   },
 };
 

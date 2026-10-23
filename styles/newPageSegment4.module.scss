@@ -1,0 +1,123 @@
+@use "./globals.scss" as *;
+
+.pageSegment {
+  scroll-margin-top: 100px;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  img {
+    flex: 0 0 600px;
+    height: auto;
+    filter: grayscale(0%);
+    transition: all 0.3s ease;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+  @include phoneLandscape {
+    display: flex;
+    padding: 0 1rem;
+
+    flex-direction: column-reverse;
+  }
+  @include tablet {
+    display: flex;
+
+    flex-direction: column-reverse;
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 5rem;
+
+  p {
+    color: $darkGrayText;
+    line-height: 2rem;
+
+    &:first-of-type {
+      margin-bottom: 1rem;
+    }
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.deskOnly {
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  p {
+    color: $darkGrayText;
+    margin: 0 !important;
+    line-height: 1.5rem;
+  }
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #0eaa0e;
+  background-color: #0eaa0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $offWhite;
+    svg {
+      stroke: #0eaa0e;
+      color: #0eaa0e;
+    }
+  }
+  a {
+    color: $accent !important;
+  }
+}

@@ -2,15 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import styles from "../../../styles/expertsAwait.module.css";
+import styles from "@/styles/expertsAwait.module.scss";
 
-import bg from "../../../public/service-bg.webp";
-import stuckIcon from "../../../public/icons/connectBlue.webp";
-import issuesIcon from "../../../public/icons/wordBlue.webp";
-import migrateIcon from "../../../public/icons/fileBlue.webp";
-import expertsIcon from "../../../public/icons/supportBlue.webp";
+import bg from "@/public/service-bg.webp";
+import stuckIcon from "@/public/icons/connectBlue.webp";
+import issuesIcon from "@/public/icons/wordBlue.webp";
+import migrateIcon from "@/public/icons/fileBlue.webp";
+import expertsIcon from "@/public/icons/supportBlue.webp";
 
 const BlackSegment = () => {
   return (
@@ -28,7 +28,13 @@ const BlackSegment = () => {
           </div>
           <div className={styles.text}>
             <p>
-              We combine design expertise with deep Microsoft Office knowledge, as part of the <Link style={{ fontWeight: "700", color: "#046999"}} href={"https://www.officeexperts.com.au"}>Office Experts Group</Link> we are uniquely positioned to deliver beautiful and functional brand templates that your team will actually use.
+              We combine design expertise with deep Microsoft Office knowledge,
+              as part of the{" "}
+              <Link style={{ fontWeight: "700", color: "#046999" }} href="/">
+                Office Experts Group
+              </Link>{" "}
+              we are uniquely positioned to deliver beautiful and functional
+              brand templates that your team will actually use.
             </p>
             <div className={styles.link}>
               <Link
@@ -68,9 +74,7 @@ const BlackSegment = () => {
               height={30}
               className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
-              Brand design expertise with Microsoft Word specialists
-            </p>
+            <p>Brand design expertise with Microsoft Word specialists</p>
           </div>
 
           <div className={styles.point}>
@@ -81,9 +85,7 @@ const BlackSegment = () => {
               height={30}
               className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
-              Templates that work in the real world
-            </p>
+            <p>Templates that work in the real world</p>
           </div>
 
           <div className={styles.point}>
@@ -94,9 +96,7 @@ const BlackSegment = () => {
               height={30}
               className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
-              Consistent branding across all documents
-            </p>
+            <p>Consistent branding across all documents</p>
           </div>
 
           <div className={styles.point}>
@@ -107,9 +107,7 @@ const BlackSegment = () => {
               height={30}
               className={`${styles.icon} ${styles.hidden}`}
             />
-            <p>
-              Staff training and ongoing support
-            </p>
+            <p>Staff training and ongoing support</p>
           </div>
         </div>
       </AnimateOnScroll>

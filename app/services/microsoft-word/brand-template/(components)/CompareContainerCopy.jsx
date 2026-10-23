@@ -1,37 +1,17 @@
-// components/CompareContainer.jsx
+// /services/microsoft-word/brand-template/(components)/CompareContainerCopy.jsx
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
-import CompareScrollReveal from "../../../components/CompareScrollReveal";
-import Compare from "../../../components/Compare";
-import styles from "../../../styles/compareContainer.module.scss";
+import CompareScrollReveal from "../../(wordComponents)/CompareScrollReveal";
+import Compare from "../../(wordComponents)/Compare";
 
-import before1 from "../../../public/books/admin/broken.webp";
-import after1 from "../../../public/books/admin/fixed.webp";
+import styles from "@/styles/compareContainer.module.scss";
 
-const STORAGE_KEY = "compare-walkthrough-seen";
+import before1 from "@/public/books/admin/broken.webp";
+import after1 from "@/public/books/admin/fixed.webp";
 
 const pages = [{ before: before1, after: after1 }];
 
 export default function CompareContainer() {
-  const [shouldListen, setShouldListen] = useState(false);
-
-  useEffect(() => {
-    const alreadySeen =
-      typeof window !== "undefined" &&
-      localStorage.getItem(STORAGE_KEY) === "true";
-    setShouldListen(!alreadySeen);
-  }, []);
-
-  const handleFirstDrag = useCallback(() => {
-    const alreadySeen = localStorage.getItem(STORAGE_KEY) === "true";
-    if (alreadySeen) return;
-    setCurrentStep(0);
-    setWalkthroughVisible(true);
-    setShouldListen(false);
-    localStorage.setItem(STORAGE_KEY, "true");
-  }, []);
-
   return (
     <>
       <section className={styles.container}>
@@ -46,9 +26,6 @@ export default function CompareContainer() {
                 controlledSplit={scrollPosition}
                 onDragStart={onDragStart}
                 onDragEnd={onDragEnd}
-                onFirstDrag={
-                  shouldListen && i === 0 ? handleFirstDrag : undefined
-                }
               />
             )}
           </CompareScrollReveal>

@@ -1,6 +1,6 @@
 // styles/accessibilityProcess.module.scss
 
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .section {
   background: $white;

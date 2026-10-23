@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import styles from "../../../styles/boxSegment.module.scss";
+import styles from "@/styles/boxSegment.module.scss";
 import Image from "next/image";
 
-import tick from "../../../public/tick.png";
+import tick from "@/public/tick.png";
 
 const checkItems = [
   "Companies launching a new brand identity",

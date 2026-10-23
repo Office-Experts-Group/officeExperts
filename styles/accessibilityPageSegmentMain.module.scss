@@ -1,6 +1,6 @@
 // styles/accessibilityPageSegmentMain.module.scss
 
-@import "./globals.scss";
+@use "./globals.scss" as *;
 
 .pageSegment {
   display: grid;

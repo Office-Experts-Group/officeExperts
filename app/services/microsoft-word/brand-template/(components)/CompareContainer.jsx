@@ -1,20 +1,22 @@
-// components/CompareContainer.jsx
+// /services/microsoft-word/brand-template/(components)/CompareContainer.jsx
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import CompareScrollReveal from "../../../components/CompareScrollReveal";
-import Compare from "../../../components/Compare";
-import styles from "../../../styles/compareContainer.module.scss";
-import { customProposalChanges } from "../../../utils/customProposal";
+import CompareScrollReveal from "../../(wordComponents)/CompareScrollReveal";
+import Compare from "../../(wordComponents)/Compare";
 
-import before1 from "../../../public/books/customProposal/before/page1.webp";
-import after1 from "../../../public/books/customProposal/after/page1.webp";
-import before2 from "../../../public/books/customProposal/before/page2.webp";
-import after2 from "../../../public/books/customProposal/after/page2.webp";
-import before3 from "../../../public/books/customProposal/before/page3.webp";
-import after3 from "../../../public/books/customProposal/after/page3.webp";
-import before4 from "../../../public/books/customProposal/before/page4.webp";
-import after4 from "../../../public/books/customProposal/after/page4.webp";
+import styles from "@/styles/compareContainer.module.scss";
+
+import { customProposalChanges } from "@/utils/customProposal";
+
+import before1 from "@/public/books/customProposal/before/page1.webp";
+import after1 from "@/public/books/customProposal/after/page1.webp";
+import before2 from "@/public/books/customProposal/before/page2.webp";
+import after2 from "@/public/books/customProposal/after/page2.webp";
+import before3 from "@/public/books/customProposal/before/page3.webp";
+import after3 from "@/public/books/customProposal/after/page3.webp";
+import before4 from "@/public/books/customProposal/before/page4.webp";
+import after4 from "@/public/books/customProposal/after/page4.webp";
 
 const STORAGE_KEY = "compare-walkthrough-seen";
 
@@ -128,7 +130,10 @@ export default function CompareContainer() {
 
       <section className={styles.compareContainer}>
         <div className={styles.headingBlock}>
-          <h2 className={styles.heading}>What Word Templates Can Do For You</h2>
+          <h2 className={styles.heading}>
+            What Word Templates
+            <span className={styles.accent}> Can Do For You</span>
+          </h2>
           <p className={styles.intro}>
             Every document you send is a reflection of your business. Without a
             template, Microsoft Word has to make its own decisions defaulting to

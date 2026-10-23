@@ -1,0 +1,321 @@
+@use "./globals.scss" as *;
+
+// ============================================================
+// Variables
+// ============================================================
+$flip-dur: 900ms;
+$flip-ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+$radius: 1.75rem;
+$dark-bg: #232528;
+$light-card: #f2f3f5;
+$dark-card: #ffffff;
+$accent: #046999;
+
+// ============================================================
+// Section wrapper — background transitions with flip state
+// ============================================================
+.flipSection {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6rem 10vw 5rem;
+  transition: background-color 700ms ease;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.5rem 4rem;
+    gap: 1.5rem;
+  }
+}
+
+.lightSection {
+  background-color: #ffffff;
+}
+
+.darkSection {
+  background-color: $dark-bg;
+}
+
+.singleSection {
+  margin-top: -4rem;
+  @media screen and (max-width: 770px) {
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+}
+// ============================================================
+// Perspective wrapper
+// ============================================================
+.cardWrapper {
+  perspective: 1600px;
+  perspective-origin: center 40%;
+  padding: 2rem 2vw;
+  // Allow faces that grow taller than cardInner to show on mobile
+  overflow: visible;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+// ============================================================
+// The flipping element
+// ============================================================
+.cardInner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform $flip-dur $flip-ease;
+  min-height: 380px;
+
+  @media screen and (max-width: 768px) {
+    // Enough room for 4 wrapped list items at reduced font size
+    min-height: 320px;
+  }
+
+  @media screen and (max-width: 480px) {
+    min-height: 280px;
+  }
+}
+
+// ============================================================
+// Card faces — three faces each at 0 / 180 / 360 deg on X
+// ============================================================
+.cardFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2.5rem;
+  transition: box-shadow 400ms ease;
+  // Allow content to grow the face height beyond cardInner's min-height
+  // rather than clipping — faces are absolute so this is purely visual
+  overflow: visible;
+
+  @media screen and (max-width: 768px) {
+    padding: 1.75rem 1.25rem;
+    // Anchor top/sides, let height follow content so nothing is clipped
+    inset: 0 0 auto 0;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+.face0 {
+  transform: rotateX(0deg);
+}
+
+.face1 {
+  transform: rotateX(180deg);
+}
+
+.face2 {
+  transform: rotateX(360deg);
+}
+
+// ============================================================
+// Card backgrounds
+// ============================================================
+.lightCard {
+  background-color: $light-card;
+}
+
+.darkCard {
+  background-color: $dark-card;
+
+  .darkSection & {
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// ============================================================
+// Content — left card (text summary)
+// ============================================================
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+
+  p {
+    font-size: 1.25rem;
+    color: #6b7280;
+    line-height: 1.75;
+    margin: 0;
+    max-width: 28ch;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 2.4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+// ============================================================
+// Content — right card (bullet list)
+// ============================================================
+.lightCard .pointsBox li::before {
+  color: #0eaa0e;
+}
+
+.darkCard .pointsBox li::before {
+  color: #df1c1c;
+}
+
+.pointsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1.2rem;
+    color: #6b7280;
+    line-height: 1.75;
+    margin: 0 0 0.6rem 0;
+    // text-decoration: underline;
+    // text-decoration-color: #6b72800f;
+    // text-underline-offset: 5px;
+    // width: fit-content;
+    padding-left: 1.25rem;
+    position: relative;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0.2rem;
+      top: 0.1rem;
+      transition: color 2700ms ease;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.lightCard .pointsBox li {
+  list-style-type-color: green;
+}
+
+.darkCard .pointsBox li {
+  list-style-type-color: red;
+}
+
+// ============================================================
+// Decorative image — bottom-right of right card
+// ============================================================
+.cardImage {
+  position: absolute;
+  bottom: -28vh;
+  right: -18vw;
+  width: 600px;
+  height: 600px;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
+
+  img {
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 280px;
+    height: 280px;
+    bottom: -8vh;
+    right: -14vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 180px;
+    height: 180px;
+    bottom: -8vh;
+    right: -14vw;
+  }
+}
+
+.cardImageTopLeft {
+  position: absolute;
+  top: -12vw;
+  left: -12vw;
+  width: 400px;
+  height: 400px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+
+  img {
+    object-fit: contain;
+    transition: all ease 2s;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 300px;
+    height: 300px;
+    top: -18vw;
+    left: -12vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 180px;
+    height: 180px;
+    top: -18vw;
+    left: -12vw;
+  }
+}
+
+.cardImageTopLeft img {
+  transition: all ease 2s;
+  rotate: 0deg;
+}
+
+.face1.cardFace .cardImageTopLeft img {
+  transition: all ease 2s;
+  rotate: 200deg;
+  top: -5.5vw;
+  left: -5.5vw;
+}
+
+.face2.cardFace .cardImageTopLeft img {
+  transition: all ease 2s;
+
+  rotate: 0deg;
+}

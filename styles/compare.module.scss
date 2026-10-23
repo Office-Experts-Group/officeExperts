@@ -1,0 +1,209 @@
+// compare.module.scss
+@use "./globals.scss" as *;
+$handle-color: #046999;
+$handle-size: 2.5rem;
+$line-width: 2px;
+
+// ── Wrapper ───────────────────────────────────────────────────────────────────
+// Fills whatever grid cell it sits in.
+// Aspect ratio keeps all cards uniform — 3:4 suits A4/portrait pages.
+.compare {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: col-resize;
+  user-select: none;
+  touch-action: pan-y pinch-zoom; // allow vertical scroll; we handle horizontal
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+
+  // Subtle lift on hover
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  &:hover {
+    box-shadow:
+      0 8px 28px rgba(0, 0, 0, 0.16),
+      0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+// ── Images ────────────────────────────────────────────────────────────────────
+// Both images are absolutely stacked; "after" clips to reveal "before" behind it.
+.imageBase {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.imageBefore {
+  composes: imageBase;
+  z-index: 1;
+}
+
+.imageAfter {
+  composes: imageBase;
+  z-index: 2;
+  // clip-path is set inline via JS — clips the right portion to expose "before"
+}
+
+// ── Divider line ──────────────────────────────────────────────────────────────
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: $line-width;
+  background: #ffffff;
+  z-index: 3;
+  // left% set inline
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+// ── Handle ────────────────────────────────────────────────────────────────────
+.handle {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: $handle-size;
+  height: $handle-size;
+  border-radius: 50%;
+  background: $handle-color;
+  border: 3px solid #ffffff;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+  // left% set inline
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  cursor: col-resize;
+
+  &:hover,
+  .compare:active & {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Chevron arrows inside handle
+.handleArrows {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #ffffff;
+  pointer-events: none;
+
+  svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    flex-shrink: 0;
+  }
+}
+
+// ── Labels ────────────────────────────────────────────────────────────────────
+.label {
+  position: absolute;
+  bottom: 0.6rem;
+  z-index: 5;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  pointer-events: none;
+}
+
+.labelBefore {
+  composes: label;
+  left: 0.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+}
+
+.labelAfter {
+  composes: label;
+  right: 0.5rem;
+  background: rgba(4, 105, 153, 0.85);
+  color: #ffffff;
+}
+
+// ── Hint (shown briefly on first render) ─────────────────────────────────────
+.hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  pointer-events: none;
+  animation: hintFade 2s ease 0.8s forwards;
+  opacity: 1;
+}
+
+.hintPill {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+@keyframes hintFade {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.index0,
+.index1 {
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.index3 {
+  @include phone {
+    display: none !important;
+  }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import styles from "../../../styles/newPageSegment4.module.css";
+import styles from "@/styles/newPageSegment4.module.scss";
 
 import BookSegment from "./BookSegment";
 
@@ -23,7 +23,8 @@ const PageSegment4 = () => {
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <div className={styles.content}>
             <h2 style={{ marginBottom: "1rem" }}>
-              What Is a Brand Template in Microsoft Word?
+              What Is a Brand Template in{" "}
+              <span className={styles.accent}>Microsoft Word?</span>
             </h2>
             <p>
               A brand template in Microsoft Word is a pre-designed, reusable

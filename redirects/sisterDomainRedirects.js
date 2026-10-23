@@ -71,6 +71,7 @@ const WORD_SLUGS = [
 // Only the /services/microsoft-word/<slug> redirect is dropped for these.
 const WORD_MIGRATED = new Set([
   "accessibility",
+  "brand-template",
   // "companies-and-organisations",
   // "corporate-global-template-solution",
   // "corporate-identity",
