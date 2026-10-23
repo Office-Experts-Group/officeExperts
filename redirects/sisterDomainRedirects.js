@@ -78,7 +78,7 @@ const WORD_MIGRATED = new Set([
   "companies-and-organisations",
   "corporate-global-template-solution",
   "corporate-identity",
-  // "custom-toolbars-and-ribbons",
+  "custom-toolbars-and-ribbons",
   // "fill-in-forms",
   // "government-departments",
   // "popup-forms",

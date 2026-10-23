@@ -5,8 +5,8 @@ import Image from "next/image";
 import styles from "@/styles/formatTab.module.scss";
 
 import formatTab from "@/public/formatTab.webp";
-import formatTab2 from "@/public/formatTab2.webp"; // rename to match your import
-import formatTab3 from "@/public/formatTab3.webp"; // rename to match your import
+import formatTab2 from "@/public/formatTab2.webp";
+import formatTab3 from "@/public/formatTab3.webp";
 
 const slides = [
   {

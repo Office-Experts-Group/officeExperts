@@ -35,9 +35,7 @@ const PAGE_DESCRIPTION =
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const HERO_ALT = "Design palette for documents";
-// Original publish instant (2018-07-15T15:51:37+00:00) expressed in AEST
 const DATE_PUBLISHED = "2018-07-16T01:51:37+10:00";
-// Set by hand when real content changes (never new Date())
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
 
 const caseStudies = [

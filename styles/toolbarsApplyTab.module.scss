@@ -1,0 +1,107 @@
+// styles/toolbarsApplyTab.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 52rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}
+
+// ── Screenshot ───────────────────────────────
+.shot {
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: $grayBGC;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+// ── Group descriptions ───────────────────────
+.groups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem 2rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-strong;
+}
+
+// Mirrors the small group captions printed under a real Word ribbon
+.groupName {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.groupText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: $text-secondary;
+}

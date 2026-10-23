@@ -1,0 +1,144 @@
+// styles/toolbarsLockdown.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $grayBGC;
+  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 52rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}
+
+// ── Cards ────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: $white;
+  border-radius: 16px;
+
+  @include phone {
+    padding: 1.5rem;
+  }
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+// The featured card sits on the brand colour with lighter text
+.cardFeatured {
+  background: $accent;
+
+  .cardTitle {
+    color: $white;
+  }
+
+  .point {
+    color: $white-88;
+  }
+
+  .marker {
+    color: $white;
+  }
+}
+
+.frame {
+  padding: 1rem;
+  background: $grayBGC;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  min-width: 420px;
+  height: auto;
+}
+
+.points {
+  list-style: none;
+  padding: 0;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: $text-secondary;
+
+  & + & {
+    border-top: 1px solid $border;
+  }
+}
+
+.cardFeatured .point + .point {
+  border-top-color: $white-18;
+}
+
+.marker {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+  color: $text-muted;
+}
