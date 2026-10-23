@@ -76,7 +76,7 @@ const WORD_MIGRATED = new Set([
   "ai-ready-word-templates",
   "brand-template",
   "companies-and-organisations",
-  // "corporate-global-template-solution",
+  "corporate-global-template-solution",
   // "corporate-identity",
   // "custom-toolbars-and-ribbons",
   // "fill-in-forms",

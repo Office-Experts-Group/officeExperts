@@ -1,93 +1,131 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/NewServiceHero";
+import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
-const IFrame = dynamic(() => import("../(components)/IFrame"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const IFrame = dynamic(() => import("../(wordComponents)/IFrame"));
+const Contact = dynamic(() => import("@/components/Contact"));
 const BlackSegment = dynamic(() => import("./(components)/BlackSegment"));
-const FAQSection = dynamic(() => import("../../components/FAQSection"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const Contents = dynamic(() => import("./(components)/Contents"));
 const BookSegment = dynamic(() => import("./(components)/BookSegment"));
 const BoxSegment = dynamic(() => import("./(components)/BoxSegment"));
-const RelatedLinks = dynamic(() => import("../../components/RelatedLinks"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 
-import faqs from "../../faqs/corporate-solutions";
-import faqSchema from "../../faqs/corporateSolutionsSchema";
+import faqs from "../wordFaqs/corporate-solutions";
+import faqSchema from "../wordFaqs/corporateSolutionsSchema";
 
-import templates from "../../public/pageHeros/templates.webp";
-import templateMob from "../../public/pageHeros/mob/templateMob.webp";
+import templates from "@/public/pageHeros/templates.webp";
+import templateMob from "@/public/pageHeros/mob/templateMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/corporate-global-template-solution";
+const PAGE_TITLE = "Corporate Global Template Solution - Microsoft Word";
+const PAGE_DESCRIPTION =
+  "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.";
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const HERO_ALT_DESKTOP = "word templates";
+const HERO_ALT_MOBILE = "word templates";
+
+// Converted from the WE value 2018-07-15T15:50:26+00:00
+const DATE_PUBLISHED = "2018-07-16T01:50:26+10:00";
+// Set by hand when content really changes (Word Experts → Office Experts rewording)
+const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
+
+const caseStudies = [
+  {
+    href: "/case-studies/corporate-group-multi-entity-master-template-suite",
+    linkText: "See the Global Common template",
+    title: "One shared Global Common template keeping four entities on-brand",
+    description:
+      "A corporate group needed consistent, professional templates across four related entities without four separate builds. We built a shared Global Common template, a custom Master Template for each entity on top of it, and a custom Formatting tab with a copy/paste macro that strips foreign formatting and applies approved styling automatically.",
+    image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+    imageAlt:
+      "Master Templates for four entities built from one Global Common template",
+  },
+  {
+    href: "/case-studies/sporting-organisation-multi-brand-word-template",
+    linkText: "Explore the multi-brand template",
+    title:
+      "One Word Master Template and a colour theme for every discipline's brand",
+    description:
+      "A national sporting organisation runs several disciplines under one parent brand, each with its own colours. We built a single Word Master Template with a suite of discipline colour themes, so sub-templates pick up the right brand colours across covers, styles, numbering and tables. We also added more than 30 brand colours beyond Word's standard colour theme and trained the client's team to manage the templates.",
+    image: "/case-studies/theme-swap-sample.webp",
+    imageAlt:
+      "Word colour themes for each discipline of a national sporting organisation",
+  },
+];
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.wordexperts.com.au",
-      "Word Experts",
-      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.wordexperts.com.au/corporate-global-template-solution",
-      url: "https://www.wordexperts.com.au/corporate-global-template-solution",
-      name: "Corporate Word Solutions | Microsoft Word Corporate Integrity",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.wordexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2018-07-15T15:50:26+00:00",
-      dateModified: "2026-03-12T00:00:00+00:00",
-      description:
-        "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id":
-          "https://www.wordexperts.com.au/corporate-global-template-solution#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.wordexperts.com.au/corporate-global-template-solution",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.wordexperts.com.au/corporate-global-template-solution#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.wordexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
+          name: "Services",
+          item: `${SITE_URL}/services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Microsoft Word",
+          item: `${SITE_URL}/services/microsoft-word`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
           name: "Corporate Global Template Solution",
-          item: "https://www.wordexperts.com.au/corporate-global-template-solution",
+          item: PAGE_URL,
         },
       ],
     },
     {
       "@type": "Service",
-      "@id":
-        "https://www.wordexperts.com.au/corporate-global-template-solution#service",
+      "@id": `${PAGE_URL}#service`,
       name: "Corporate Global Template Solution",
       provider: {
-        "@id": "https://www.wordexperts.com.au#organization",
+        "@id": `${SITE_URL}#organization`,
       },
       description:
         "Advanced Corporate Word Template Solution for enterprise-wide document control and brand consistency",
@@ -139,8 +177,8 @@ const Page = () => {
         title="Corporate Global Template Solution"
         desktopImage={templates}
         mobileImage={templateMob}
-        altDesk={"word templates"}
-        altMob={"word templates"}
+        altDesk={HERO_ALT_DESKTOP}
+        altMob={HERO_ALT_MOBILE}
       />
       <PageSegmentMain />
       <IFrame />
@@ -151,34 +189,11 @@ const Page = () => {
         theme="light"
         eyebrow="Case Studies"
         heading="Corporate and multi-brand template projects we've delivered"
-        links={[
-          {
-            href: "https://www.officeexperts.com.au/case-studies/corporate-group-multi-entity-master-template-suite",
-            linkText: "See the Global Common template",
-            title:
-              "One shared Global Common template keeping four entities on-brand",
-            description:
-              "A corporate group needed consistent, professional templates across four related entities without four separate builds. We built a shared Global Common template, a custom Master Template for each entity on top of it, and a custom Formatting tab with a copy/paste macro that strips foreign formatting and applies approved styling automatically.",
-            image:
-              "https://www.officeexperts.com.au/case-studies/corporate-group-multi-entity-templatesLg.png",
-            imageAlt:
-              "Master Templates for four entities built from one Global Common template",
-          },
-          {
-            href: "https://www.officeexperts.com.au/case-studies/sporting-organisation-multi-brand-word-template",
-            linkText: "Explore the multi-brand template",
-            title:
-              "One Word Master Template and a colour theme for every discipline's brand",
-            description:
-              "A national sporting organisation runs several disciplines under one parent brand, each with its own colours. We built a single Word Master Template with a suite of discipline colour themes, so sub-templates pick up the right brand colours across covers, styles, numbering and tables. We also added more than 30 brand colours beyond Word's standard colour theme and trained the client's team to manage the templates.",
-            image:
-              "https://www.officeexperts.com.au/case-studies/theme-swap-sample.webp",
-            imageAlt:
-              "Word colour themes for each discipline of a national sporting organisation",
-          },
-        ]}
+        links={caseStudies}
       />
-      <FAQSection faqs={faqs} />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
       <Contact />
     </>
   );

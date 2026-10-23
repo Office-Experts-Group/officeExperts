@@ -1,22 +1,23 @@
+// /services/microsoft-word/corporate-global-template-solution/(components)/BookSegment.jsx
 import React from "react";
 
-import FlipBook from "../../../components/FlipBook";
+import FlipBook from "../../(wordComponents)/FlipBook";
 
-import styles from "../../../styles/flipBook.module.scss";
+import styles from "@/styles/flipBook.module.scss";
 
-import page1 from "../../../public/books/coral/page1.webp";
-import page2 from "../../../public/books/coral/page2.webp";
-import page3 from "../../../public/books/coral/page3.webp";
-import page4 from "../../../public/books/coral/page4.webp";
-import page5 from "../../../public/books/coral/page5.webp";
-import page6 from "../../../public/books/coral/page6.webp";
-import page7 from "../../../public/books/coral/page7.webp";
-import page8 from "../../../public/books/coral/page8.webp";
-import page9 from "../../../public/books/coral/page9.webp";
-import page10 from "../../../public/books/coral/page10.webp";
-import page11 from "../../../public/books/coral/page11.webp";
-import page12 from "../../../public/books/coral/page12.webp";
-import page13 from "../../../public/books/coral/page13.webp";
+import page1 from "@/public/books/coral/page1.webp";
+import page2 from "@/public/books/coral/page2.webp";
+import page3 from "@/public/books/coral/page3.webp";
+import page4 from "@/public/books/coral/page4.webp";
+import page5 from "@/public/books/coral/page5.webp";
+import page6 from "@/public/books/coral/page6.webp";
+import page7 from "@/public/books/coral/page7.webp";
+import page8 from "@/public/books/coral/page8.webp";
+import page9 from "@/public/books/coral/page9.webp";
+import page10 from "@/public/books/coral/page10.webp";
+import page11 from "@/public/books/coral/page11.webp";
+import page12 from "@/public/books/coral/page12.webp";
+import page13 from "@/public/books/coral/page13.webp";
 
 const BookSegment = () => {
   return (
@@ -25,12 +26,16 @@ const BookSegment = () => {
       id="template-services"
       style={{ scrollMarginTop: "100px" }}
     >
-      <h2>Professional Document Template Services</h2>
+      <h2>
+        Professional Document Template{" "}
+        <span className={styles.accent}>Services</span>
+      </h2>
       <p>
-        With Word Experts, your not just getting a template, your getting a long
-        term solution for consistent branding, efficient workflows and polished
-        communication. Every document your team creates will be consistently
-        visually striking, professionally formatted and hassle free.
+        With Office Experts, you're not just getting a template, you're getting
+        a long term solution for consistent branding, efficient workflows and
+        polished communication. Every document your team creates will be
+        consistently visually striking, professionally formatted and hassle
+        free.
       </p>
       <FlipBook
         images={[

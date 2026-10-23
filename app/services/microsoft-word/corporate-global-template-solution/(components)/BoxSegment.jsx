@@ -1,13 +1,14 @@
 "use client";
+// /services/microsoft-word/corporate-global-template-solution/(components)/BoxSegment.jsx
 
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import styles from "../../../styles/boxSegment.module.scss";
+import styles from "@/styles/boxSegment.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-import tick from "../../../public/tick.png";
-import cross from "../../../public/cross.png";
-import thumbsUp from "../../../public/thumbsUp.webp";
+import tick from "@/public/tick.png";
+import cross from "@/public/cross.png";
+import thumbsUp from "@/public/thumbsUp.webp";
 
 const controlItems = [
   "Control content inserted from other documents.",
@@ -136,7 +137,10 @@ export default function BoxSegment() {
               </h2>
               <p>
                 We can help you put an end to messy documents that break{" "}
-                <Link href="/corporate-identity">corporate branding</Link>.
+                <Link href="/services/microsoft-word/corporate-identity">
+                  corporate branding
+                </Link>
+                .
               </p>
             </div>
           </div>

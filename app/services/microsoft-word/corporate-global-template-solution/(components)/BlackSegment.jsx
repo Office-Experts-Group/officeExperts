@@ -1,16 +1,17 @@
+// /services/microsoft-word/corporate-global-template-solution/(components)/BlackSegment.jsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import styles from "../../../styles/expertsAwait.module.css";
+import styles from "@/styles/expertsAwait.module.scss";
 
-import bg from "../../../public/service-bg.webp";
-import stuckIcon from "../../../public/icons/computerBlue.webp";
-import issuesIcon from "../../../public/icons/supportBlue.webp";
-import migrateIcon from "../../../public/icons/ideaBlue.webp";
-import expertsIcon from "../../../public/icons/handShakeBlue.webp";
+import bg from "@/public/service-bg.webp";
+import stuckIcon from "@/public/icons/computerBlue.webp";
+import issuesIcon from "@/public/icons/supportBlue.webp";
+import migrateIcon from "@/public/icons/ideaBlue.webp";
+import expertsIcon from "@/public/icons/handShakeBlue.webp";
 
 const BlackSegment = () => {
   return (
@@ -24,7 +25,10 @@ const BlackSegment = () => {
       <AnimateOnScroll animation="slide-left" delay={0.1} duration={1.2}>
         <div className={styles.content}>
           <div className={styles.title}>
-            <h2>Streamlined and Secure Document Creation</h2>
+            <h2>
+              Streamlined and Secure{" "}
+              <span className={styles.accent}>Document Creation</span>
+            </h2>
           </div>
           <div className={styles.text}>
             <p>

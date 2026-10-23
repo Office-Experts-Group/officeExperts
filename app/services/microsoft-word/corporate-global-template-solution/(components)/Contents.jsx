@@ -1,6 +1,7 @@
 "use client";
+// /services/microsoft-word/corporate-global-template-solution/(components)/Contents.jsx
 import React, { useState } from "react";
-import styles from "../../../styles/contentsComponent.module.css";
+import styles from "@/styles/contentsComponent.module.scss";
 
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);

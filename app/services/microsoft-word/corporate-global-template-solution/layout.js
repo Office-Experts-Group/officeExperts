@@ -1,38 +1,37 @@
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/corporate-global-template-solution";
+const PAGE_TITLE = "Corporate Global Template Solution - Microsoft Word";
+const PAGE_DESCRIPTION =
+  "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
+
 export const metadata = {
-  title: "Corporate Global Template Solution - Microsoft Word",
-  description:
-    "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.",
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   keywords: ["global word templates"],
   openGraph: {
-    title: "Corporate Global Template Solution - Microsoft Word",
-    description:
-      "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.",
-    url: "https://www.wordexperts.com.au/corporate-global-template-solution",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title: "Corporate Global Template Solution - Microsoft Word",
-    description:
-      "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-  alternates: {
-    canonical: "/corporate-global-template-solution",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
 export default function Layout({ children }) {

@@ -1,19 +1,20 @@
+// /services/microsoft-word/corporate-global-template-solution/(components)/PageSegmentMain.jsx
 import React from "react";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import TemplateCards from "../../../components/TemplateCards";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import TemplateCards from "../../(wordComponents)/TemplateCards";
 
-import styles from "../../../styles/newPageSegment.module.css";
+import styles from "@/styles/newPageSegment.module.scss";
 
-import page1 from "../../../public/books/community/page1.webp";
-import page2 from "../../../public/books/community/page2.webp";
-import page3 from "../../../public/books/community/page3.webp";
-import page4 from "../../../public/books/community/page4.webp";
-import page5 from "../../../public/books/community/page5.webp";
-import page6 from "../../../public/books/community/page6.webp";
-import page7 from "../../../public/books/community/page7.webp";
-import page8 from "../../../public/books/community/page8.webp";
-import page9 from "../../../public/books/community/page9.webp";
+import page1 from "@/public/books/community/page1.webp";
+import page2 from "@/public/books/community/page2.webp";
+import page3 from "@/public/books/community/page3.webp";
+import page4 from "@/public/books/community/page4.webp";
+import page5 from "@/public/books/community/page5.webp";
+import page6 from "@/public/books/community/page6.webp";
+import page7 from "@/public/books/community/page7.webp";
+import page8 from "@/public/books/community/page8.webp";
+import page9 from "@/public/books/community/page9.webp";
 
 const PageSegmentMain = () => {
   const images = [
