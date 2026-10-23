@@ -12,7 +12,7 @@ export const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How does a controlled template environment benefit my organization?",
+      name: "How does a controlled template environment benefit my organisation?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "A controlled template environment restricts unauthorized changes to styles, fonts, and colors, ensuring that all documents adhere to brand guidelines. This protects your brand identity and reduces inconsistencies across corporate communications.",

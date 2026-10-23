@@ -52,6 +52,7 @@ function productRedirects(domain, { prefix, slugs, rootSlugs }) {
 
 const WORD_SLUGS = [
   "accessibility",
+  "brand-template",
   "companies-and-organisations",
   "corporate-global-template-solution",
   "corporate-identity",
@@ -72,7 +73,7 @@ const WORD_SLUGS = [
 const WORD_MIGRATED = new Set([
   "accessibility",
   "brand-template",
-  // "companies-and-organisations",
+  "companies-and-organisations",
   // "corporate-global-template-solution",
   // "corporate-identity",
   // "custom-toolbars-and-ribbons",

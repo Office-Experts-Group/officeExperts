@@ -1,0 +1,255 @@
+// styles/companiesControl.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.25rem, 7vw, 8rem)
+    clamp(4.5rem, 9vw, 8rem);
+  scroll-margin-top: 6rem;
+}
+
+// Solid $accent panel with light text, in place of an accent border
+.panel {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  background: $accent;
+  border-radius: 20px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $white;
+}
+
+.headingAccent {
+  color: $white-65;
+}
+
+.lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: $white;
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: $white-88;
+
+  // $accent text would vanish on this panel, so links are white and underlined
+  a {
+    font-weight: 700;
+    color: $white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// The flow is wide with small labels, so it is dropped once the panel gets narrow
+.art {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 766px) {
+    display: none;
+  }
+}
+
+// ── Items ────────────────────────────────────
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 3rem;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid $white-18;
+}
+
+.tick {
+  display: flex;
+  flex: 0 0 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  color: $white;
+  background: $white-12;
+  border-radius: 50%;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: $white;
+}
+
+.itemBody {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: $white-88;
+}
+
+// ── Where this has worked ────────────────────
+.examples {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $white-18;
+}
+
+.examplesLabel {
+  margin-bottom: 1.25rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.exampleList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 1.5rem;
+  color: $white;
+  text-decoration: none;
+  background: $white-08;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $white-12;
+
+    .exampleLink svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.exampleTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.exampleBody {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: $white-88;
+}
+
+.exampleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+// ── Closing CTA ──────────────────────────────
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem 1.75rem;
+  margin-top: 3rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: $accent;
+  text-decoration: none;
+  background: $white;
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.ctaNote {
+  font-size: 0.9rem;
+  color: $white-88;
+}

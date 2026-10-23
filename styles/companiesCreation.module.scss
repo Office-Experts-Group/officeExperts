@@ -1,0 +1,138 @@
+// styles/companiesCreation.module.scss
+@use "./globals.scss" as *;
+
+// Lighter brand blue for text on the dark background, where $accent is too dim to read
+$sky: #6fc3e8;
+
+.section {
+  background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+  scroll-margin-top: 6rem;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ─────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $sky;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $white-90;
+}
+
+.headingAccent {
+  color: $sky;
+}
+
+.lead {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $white-65;
+
+  a {
+    font-weight: 700;
+    color: $sky;
+  }
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ctaNote {
+  font-size: 0.85rem;
+  color: $white-55;
+}
+
+// ── Points ───────────────────────────────────
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.75rem;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: 14px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: $white;
+  background: $accent;
+  border-radius: 10px;
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.pointTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: $white-88;
+}
+
+.pointBody {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: $white-65;
+}
