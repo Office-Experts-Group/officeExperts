@@ -1,7 +1,7 @@
-// app/corporate-identity/(components)/CorporateIdentityAnatomy.jsx
+// /services/microsoft-word/corporate-identity/(components)/CorporateIdentityAnatomy.jsx
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/corporateIdentityAnatomy.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/corporateIdentityAnatomy.module.scss";
 
 import { BrandedDocumentSvg } from "../(svgs)/BrandedDocumentSvg";
 

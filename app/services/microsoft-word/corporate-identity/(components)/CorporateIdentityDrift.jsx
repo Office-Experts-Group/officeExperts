@@ -1,12 +1,12 @@
-// app/corporate-identity/(components)/CorporateIdentityDrift.jsx
+// /services/microsoft-word/corporate-identity/(components)/CorporateIdentityDrift.jsx
 
 import Link from "next/link";
-import styles from "../../../styles/corporateIdentityDrift.module.css";
+import styles from "@/styles/corporateIdentityDrift.module.scss";
 
 import { DriftComparisonSvg } from "../(svgs)/DriftComparisonSvg";
 
 const driftCauses = [
-  { label: "A staff member changes the font \u201cjust this once\u201d" },
+  { label: "A staff member changes the font “just this once”" },
   { label: "A document is copied from an old version and reused" },
   { label: "A new starter never sees the original brand guidelines" },
   { label: "A section is pasted in from an external source" },
@@ -32,9 +32,10 @@ const CorporateIdentityDrift = () => {
       <div className={styles.narrative}>
         <div className={styles.narrativeLead}>
           <p className={styles.leadText}>
-            "Without a governed template, a document&rsquo;s formatting is only
-            ever as consistent as the person who last edited it. It doesn't
-            usually happen overnight, it slowly creeps in over time."
+            &ldquo;Without a governed template, a document&rsquo;s formatting is
+            only ever as consistent as the person who last edited it. It
+            doesn&rsquo;t usually happen overnight, it slowly creeps in over
+            time.&rdquo;
           </p>
         </div>
 
@@ -63,7 +64,7 @@ const CorporateIdentityDrift = () => {
           entirely. If your organisation is managing branding across several
           templates, our{" "}
           <Link
-            href="/corporate-global-template-solution"
+            href="/services/microsoft-word/corporate-global-template-solution"
             className={styles.footerLink}
           >
             global template solution

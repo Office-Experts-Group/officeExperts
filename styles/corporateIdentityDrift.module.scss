@@ -1,5 +1,7 @@
 // styles/corporateIdentityDrift.module.scss
 @use "./globals.scss" as *;
+@use "sass:color";
+
 .section {
   background: $background;
   padding: 7rem 8rem;
@@ -165,6 +167,6 @@
   font-weight: 700;
 
   &:hover {
-    color: darken(#046999, 8%);
+    color: color.adjust($accent, $lightness: -8%);
   }
 }

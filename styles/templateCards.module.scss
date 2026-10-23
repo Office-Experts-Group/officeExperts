@@ -1,11 +1,10 @@
 // templateCards.module.scss
-// Fanned card spread — portrait document pages spread like a hand of cards
-// Hover any card to bring it to the foreground
+@use "sass:math";
 
 // =============================================================================
 // Tokens
 // =============================================================================
-$card-aspect: 210 / 297; // A4 portrait
+$card-aspect: math.div(210, 297); // A4 portrait
 $card-width: var(--card-width, 220px); // overridable via prop
 $shadow-color: rgba(0, 0, 0, 0.28);
 $page-bg: #f5f2ee;

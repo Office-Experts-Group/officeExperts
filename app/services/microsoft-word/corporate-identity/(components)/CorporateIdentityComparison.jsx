@@ -1,8 +1,7 @@
-// app/corporate-identity/(components)/CorporateIdentityComparison.jsx
+// /services/microsoft-word/corporate-identity/(components)/CorporateIdentityComparison.jsx
 
-import Link from "next/link";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/corporateIdentityComparison.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/corporateIdentityComparison.module.scss";
 
 // State icons for the table cells (custom SVGs kept in the route's svgs folder)
 import {

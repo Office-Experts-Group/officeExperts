@@ -1,4 +1,5 @@
-import React from "react";
+// /services/microsoft-word/corporate-identity/(components)/TabComparison.jsx
+
 import Image from "next/image";
 
 import restricted from "@/public/restrictedEditing.webp";
@@ -13,7 +14,7 @@ const TabComparison = () => {
         <h3>Limited Home Tab using Microsoft’s Restricted Editing</h3>
         <Image
           src={restricted}
-          alt="restricted microsoft word tab"
+          alt="Microsoft Word Home tab limited by Restricted Editing"
           width={500}
           height={150}
         />
@@ -22,7 +23,7 @@ const TabComparison = () => {
         <h3>Home Tab Using Office Experts Groups Global Template Solution</h3>
         <Image
           src={oegTab}
-          alt="Word Experts custom tab"
+          alt="Office Experts custom Home tab in Word"
           width={500}
           height={150}
         />
