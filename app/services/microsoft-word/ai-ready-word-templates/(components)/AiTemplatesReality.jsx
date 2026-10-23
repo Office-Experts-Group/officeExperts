@@ -1,10 +1,5 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesReality.jsx
-
-// next/image serves static-imported SVGs as-is (no optimisation pass), fine for SSR
-import Image from "next/image";
-
-// Compiled CSS module (source: styles/aiTemplatesReality.module.scss)
-import styles from "../../../styles/aiTemplatesReality.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesReality.jsx
+import styles from "@/styles/aiTemplatesReality.module.scss";
 
 // Decorative illustration: the four failures below drawn on one Word page
 import AiTemplatesRealitySvg from "../(svgs)/AiTemplatesRealitySvg";

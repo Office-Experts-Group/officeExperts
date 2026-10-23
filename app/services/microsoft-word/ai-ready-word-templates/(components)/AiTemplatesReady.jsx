@@ -1,8 +1,7 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesReady.jsx
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesReady.jsx
 import Link from "next/link";
 
-// Compiled CSS module (source: styles/aiTemplatesReady.module.scss)
-import styles from "../../../styles/aiTemplatesReady.module.css";
+import styles from "@/styles/aiTemplatesReady.module.scss";
 
 // Exploded view of the four structural layers in an AI-ready template
 import { TemplateLayersSvg } from "../(svgs)/TemplateLayersSvg";
@@ -34,14 +33,23 @@ const features = [
   },
 ];
 
-// Internal links to related Word Experts services
+// Internal links to related Office Experts Word services (final URLs, no legacy hop)
 const relatedLinks = [
-  { href: "/word-document-template-creation", label: "Word template creation" },
-  { href: "/word-template-conversions", label: "Template conversions" },
-  { href: "/quick-parts", label: "Quick Parts" },
-  { href: "/accessibility", label: "Accessible documents" },
   {
-    href: "/corporate-global-template-solution",
+    href: "/services/microsoft-word/word-document-template-creation",
+    label: "Word template creation",
+  },
+  {
+    href: "/services/microsoft-word/word-template-conversions",
+    label: "Template conversions",
+  },
+  { href: "/services/microsoft-word/quick-parts", label: "Quick Parts" },
+  {
+    href: "/services/microsoft-word/accessibility",
+    label: "Accessible documents",
+  },
+  {
+    href: "/services/microsoft-word/corporate-global-template-solution",
     label: "Corporate global templates",
   },
 ];

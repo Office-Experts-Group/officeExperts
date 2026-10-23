@@ -1,7 +1,5 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesRogue.jsx
-
-// Compiled CSS module (source: styles/aiTemplatesRogue.module.scss)
-import styles from "../../../styles/aiTemplatesRogue.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesRogue.jsx
+import styles from "@/styles/aiTemplatesRogue.module.scss";
 
 // Same document as the hero blueprint, drawn broken on the dark palette
 import { RogueDocumentSvg } from "../(svgs)/RogueDocumentSvg";

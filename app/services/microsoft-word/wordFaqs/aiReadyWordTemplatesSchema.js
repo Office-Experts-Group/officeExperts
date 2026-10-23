@@ -1,9 +1,9 @@
 // faqs/copilotAiTemplatesSchema.js
 // FAQPage structured data, generated from the same array FAQSection renders,
 // so visible answers and schema answers can never drift apart.
-import faqs from "./copilot-and-ai-templates";
+import faqs from "./ai-ready-word-templates";
 
-const PAGE_URL = "https://www.wordexperts.com.au/copilot-and-ai-templates";
+const PAGE_URL = "https://www.wordexperts.com.au/ai-ready-word-templates";
 
 const faqSchema = {
   "@context": "https://schema.org",

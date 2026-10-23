@@ -1,9 +1,9 @@
-// app/copilot-and-ai-templates/page.js
+// /services/microsoft-word/ai-ready-word-templates/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-// Above the fold: loaded statically. Replaces ServiceHero (no stock imagery).
-import ServiceHero from "../../components/ServiceHero";
+// Above the fold: loaded statically
+import ServiceHero from "@/components/ServiceHero";
 import AiTemplatesHero from "./(components)/AiTemplatesHero";
 
 // Below-the-fold components loaded dynamically (still server-rendered)
@@ -25,23 +25,32 @@ const AiTemplatesAgents = dynamic(
 const AiTemplatesProcess = dynamic(
   () => import("./(components)/AiTemplatesProcess"),
 );
-const ExpertsAwait = dynamic(() => import("../../components/ExpertsAwait"));
-const FAQSection = dynamic(() => import("../../components/FAQSection"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import faqs from "../../faqs/copilot-and-ai-templates";
-import faqSchema from "../../faqs/copilotAiTemplatesSchema";
+import faqs from "../wordFaqs/ai-ready-word-templates";
+import faqSchema from "../wordFaqs/aiReadyWordTemplatesSchema";
 
-import AiWord from "../../public/pageHeros/AiWord.webp";
-import AiWordMob from "../../public/pageHeros/mob/AiWordMob.webp";
+import AiWord from "@/public/pageHeros/AiWord.webp";
+import AiWordMob from "@/public/pageHeros/mob/AiWordMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-const PAGE_URL = "https://www.wordexperts.com.au/copilot-and-ai-templates";
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/ai-ready-word-templates";
+const PAGE_TITLE = "Copilot & AI-Ready Word Templates | Office Experts";
+const PAGE_DESCRIPTION =
+  "Make Copilot work properly in Word. Australian Word specialists building AI-ready templates and custom AI agents that keep your formatting and data in line.";
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const HERO_ALT = "AI in Word documents";
+
+const DATE_PUBLISHED = "2026-09-28T10:00:00+10:00";
+const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
 
 // Offers listed in the Service schema's catalogue
 const offers = [
@@ -63,28 +72,23 @@ const offers = [
 ];
 
 // ── Structured data ────────────────────────────────────────
+// No WebSite node here: the site has one, on the root homepage.
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.wordexperts.com.au",
-      "Word Experts",
-      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Copilot & AI-Ready Word Templates | Word Experts",
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.wordexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2026-09-28T00:00:00+00:00",
-      dateModified: "2026-09-28T00:00:00+00:00",
-      description:
-        "AI-ready Microsoft Word templates that Copilot can understand and fill, plus custom AI agents for document automation. Australian Word specialists since 2000.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
         "@id": `${PAGE_URL}#breadcrumb`,
       },
@@ -119,12 +123,24 @@ const schema = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.wordexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Copilot & AI Templates",
+          name: "Services",
+          item: `${SITE_URL}/services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Microsoft Word",
+          item: `${SITE_URL}/services/microsoft-word`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "AI-Ready Word Templates",
           item: PAGE_URL,
         },
       ],
@@ -134,7 +150,7 @@ const schema = {
       "@id": `${PAGE_URL}#service`,
       name: "AI-Ready Word Templates and Custom AI Agents",
       provider: {
-        "@id": "https://www.wordexperts.com.au#organization",
+        "@id": `${SITE_URL}#organization`,
       },
       description:
         "Microsoft Word template development for Copilot and other AI tools, and custom AI agent development for document automation.",
@@ -175,8 +191,8 @@ const Page = () => {
         title="AI Integration in Word"
         desktopImage={AiWord}
         mobileImage={AiWordMob}
-        altDesk={"Ai in Word documents"}
-        altMob={"Ai in Word documents"}
+        altDesk={HERO_ALT}
+        altMob={HERO_ALT}
       />
       <AiTemplatesHero />
       <AiTemplatesReality />
@@ -186,7 +202,9 @@ const Page = () => {
       <AiTemplatesAgents />
       <AiTemplatesProcess />
       <ExpertsAwait />
-      <FAQSection faqs={faqs} />
+      <div style={{ marginTop: "6rem" }}>
+        <FAQSection faqs={faqs} />
+      </div>
       <Contact />
     </>
   );

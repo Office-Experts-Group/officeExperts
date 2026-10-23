@@ -1,7 +1,5 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesComparison.jsx
-
-// Compiled CSS module (source: styles/aiTemplatesComparison.module.scss)
-import styles from "../../../styles/aiTemplatesComparison.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesComparison.jsx
+import styles from "@/styles/aiTemplatesComparison.module.scss";
 
 // Tenant boundary diagram: what stays inside Microsoft 365 and what leaves
 import { DataBoundarySvg } from "../(svgs)/DataBoundarySvg";

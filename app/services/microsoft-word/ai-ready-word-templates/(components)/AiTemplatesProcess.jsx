@@ -1,7 +1,5 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesProcess.jsx
-
-// Compiled CSS module (source: styles/aiTemplatesProcess.module.scss)
-import styles from "../../../styles/aiTemplatesProcess.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesProcess.jsx
+import styles from "@/styles/aiTemplatesProcess.module.scss";
 
 // Genuinely sequential, so this is the one numbered list on the page
 const steps = [

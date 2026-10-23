@@ -1,8 +1,5 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesAgents.jsx
-import Link from "next/link";
-
-// Compiled CSS module (source: styles/aiTemplatesAgents.module.scss)
-import styles from "../../../styles/aiTemplatesAgents.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesAgents.jsx
+import styles from "@/styles/aiTemplatesAgents.module.scss";
 
 // Inputs → agent → human approval → outputs
 import { AgentWorkflowSvg } from "../(svgs)/AgentWorkflowSvg";

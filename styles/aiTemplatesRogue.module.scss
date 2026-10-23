@@ -1,0 +1,103 @@
+// styles/aiTemplatesRogue.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.accent {
+  color: $darkGrayText;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 480px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $white-88;
+  line-height: 1.8;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $white-12;
+}
+
+.item {
+  padding: 1.1rem 0 1.1rem 1.25rem;
+  border-bottom: 1px solid $white-12;
+  border-left: 2px solid rgba($before-border, 0.7);
+}
+
+.itemTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $white-90;
+  margin-bottom: 0.3rem;
+}
+
+.itemBody {
+  font-size: 0.9rem;
+  color: $white-88;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.closing {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $white;
+}

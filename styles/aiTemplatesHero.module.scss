@@ -1,0 +1,147 @@
+// styles/aiTemplatesHero.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  // Extra top padding clears the fixed site header (no ServiceHero on this page)
+  padding: 8rem 7rem;
+
+  @include tablet {
+    padding: 9rem 4rem 6rem;
+  }
+  @include phoneLandscape {
+    padding: 8rem 2rem 5rem;
+  }
+  @include phone {
+    padding: 7rem 1.25rem 4rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.32rem 0.85rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+  width: fit-content;
+
+  @include phone {
+    letter-spacing: 1.5px;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: $text-secondary;
+  line-height: 1.8;
+  max-width: 38rem;
+}
+
+// ── Buttons ─────────────────────────────────────
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.secondary {
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+  }
+}
+
+.primary {
+  background: $accent;
+  color: $white;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid $accent;
+  }
+}
+
+.secondary {
+  color: $accent;
+  border: 1px solid $accent-border;
+
+  &:hover {
+    background: $accent-light;
+  }
+}
+
+// ── Blueprint SVG + fill animation ──────────────
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 520px;
+  }
+  @include phone {
+    display: none;
+  }
+
+  // .bp-fill is a plain class on SVG elements, so it's reached with :global
+  :global(.bp-fill) {
+    transform-box: fill-box;
+    transform-origin: left center;
+    animation: fillIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+}
+
+@keyframes fillIn {
+  from {
+    transform: scaleX(0);
+  }
+}

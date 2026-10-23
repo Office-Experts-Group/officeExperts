@@ -1,14 +1,11 @@
-// app/copilot-and-ai-templates/(components)/AiTemplatesHero.jsx
-
-// Compiled CSS module (source: styles/aiTemplatesHero.module.scss)
-import styles from "../../../styles/aiTemplatesHero.module.css";
+// /services/microsoft-word/ai-ready-word-templates/(components)/AiTemplatesHero.jsx
+import styles from "@/styles/aiTemplatesHero.module.scss";
 
 // Standalone blueprint illustration of an AI-ready Word template
 import { BlueprintDocumentSvg } from "../(svgs)/BlueprintDocumentSvg";
 
 // ── Component ─────────────────────────────────────────────────────────────────
-// Server component. Replaces the stock-image ServiceHero on this page, so the
-// page's only <h1> lives here.
+// Server component. The page's <h1> comes from ServiceHero above it.
 const AiTemplatesHero = () => {
   return (
     <section className={styles.section}>
@@ -31,7 +28,7 @@ const AiTemplatesHero = () => {
             tell you the job's done when it isn't.
           </p>
           <p className={styles.lead}>
-            Word Experts builds AI-ready Word templates that Copilot can
+            Office Experts builds AI-ready Word templates that Copilot can
             actually understand and fill accurately, every time. We can modify
             your existing templates, and even build custom AI agents that take
             repetitive document work completely off your team's plate.

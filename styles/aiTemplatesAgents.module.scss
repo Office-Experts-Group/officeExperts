@@ -1,0 +1,98 @@
+// styles/aiTemplatesAgents.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  // Too detailed to read at phone widths
+  @media (max-width: 766px) {
+    display: none;
+  }
+}
+
+// ── Agent grid ──────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 3rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-strong;
+}
+
+.agentTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.agentBody {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}

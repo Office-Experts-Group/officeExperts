@@ -3,7 +3,7 @@ import React from "react";
 const AiTemplatesRealitySvg = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 340" fill="none">
-      <circle cx="240" cy="170" r="150" fill="#0f6a99" fill-opacity="0.05" />
+      <circle cx="240" cy="170" r="150" fill="#0f6a99" fillOpacity="0.05" />
 
       <rect x="108" y="38" width="200" height="264" rx="12" fill="#e8eef3" />
       <rect
@@ -59,7 +59,7 @@ const AiTemplatesRealitySvg = () => {
         width="160"
         height="14"
         fill="#0f6a99"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
         stroke="#cfd8e1"
       />
       <rect
@@ -107,7 +107,7 @@ const AiTemplatesRealitySvg = () => {
         height="5"
         rx="2.5"
         fill="#d9534f"
-        fill-opacity="0.45"
+        fillOpacity="0.45"
       />
       <rect
         x="120"
@@ -116,7 +116,7 @@ const AiTemplatesRealitySvg = () => {
         height="5"
         rx="2.5"
         fill="#d9534f"
-        fill-opacity="0.45"
+        fillOpacity="0.45"
       />
       <rect
         x="120"
@@ -125,7 +125,7 @@ const AiTemplatesRealitySvg = () => {
         height="5"
         rx="2.5"
         fill="#d9534f"
-        fill-opacity="0.3"
+        fillOpacity="0.3"
       />
 
       <rect x="292" y="102" width="130" height="132" rx="12" fill="#e8eef3" />
@@ -151,7 +151,7 @@ const AiTemplatesRealitySvg = () => {
         height="6"
         rx="3"
         fill="#1f2a3a"
-        fill-opacity="0.7"
+        fillOpacity="0.7"
       />
       <rect x="338" y="132" width="68" height="16" rx="8" fill="#eef2f6" />
       <rect x="298" y="156" width="108" height="56" rx="10" fill="#0f6a99" />
@@ -162,7 +162,7 @@ const AiTemplatesRealitySvg = () => {
         height="4"
         rx="2"
         fill="#fff"
-        fill-opacity="0.85"
+        fillOpacity="0.85"
       />
       <rect
         x="310"
@@ -171,7 +171,7 @@ const AiTemplatesRealitySvg = () => {
         height="4"
         rx="2"
         fill="#fff"
-        fill-opacity="0.85"
+        fillOpacity="0.85"
       />
       <rect
         x="310"
@@ -180,7 +180,7 @@ const AiTemplatesRealitySvg = () => {
         height="4"
         rx="2"
         fill="#fff"
-        fill-opacity="0.85"
+        fillOpacity="0.85"
       />
 
       <rect x="44" y="202" width="96" height="34" rx="17" fill="#e8eef3" />
@@ -209,7 +209,7 @@ const AiTemplatesRealitySvg = () => {
         height="8"
         rx="4"
         fill="#1f2a3a"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
       <circle cx="132" cy="200" r="9" fill="#d9534f" />
       <rect x="131" y="194.5" width="2" height="6.5" rx="1" fill="#fff" />
@@ -223,13 +223,13 @@ const AiTemplatesRealitySvg = () => {
       <path
         transform="translate(400 60) scale(0.6)"
         fill="#0f6a99"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
         d="M0-12C1.5-3 3-1.5 12 0 3 1.5 1.5 3 0 12-1.5 3-3 1.5-12 0-3-1.5-1.5-3 0-12Z"
       />
       <path
         transform="translate(62 282) scale(0.5)"
         fill="#0f6a99"
-        fill-opacity="0.45"
+        fillOpacity="0.45"
         d="M0-12C1.5-3 3-1.5 12 0 3 1.5 1.5 3 0 12-1.5 3-3 1.5-12 0-3-1.5-1.5-3 0-12Z"
       />
     </svg>

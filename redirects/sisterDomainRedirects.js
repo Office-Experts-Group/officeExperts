@@ -52,6 +52,7 @@ function productRedirects(domain, { prefix, slugs, rootSlugs }) {
 
 const WORD_SLUGS = [
   "accessibility",
+  "ai-ready-word-templates",
   "brand-template",
   "companies-and-organisations",
   "corporate-global-template-solution",
@@ -72,6 +73,7 @@ const WORD_SLUGS = [
 // Only the /services/microsoft-word/<slug> redirect is dropped for these.
 const WORD_MIGRATED = new Set([
   "accessibility",
+  "ai-ready-word-templates",
   "brand-template",
   "companies-and-organisations",
   // "corporate-global-template-solution",
