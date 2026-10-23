@@ -1,11 +1,7 @@
 // app/case-studies/[slug]/layout.js
 import React from "react";
 
-import {
-  getCaseStudyBySlug,
-  siteMeta,
-  getCaseStudyMetaTitle,
-} from "../caseStudies";
+import { getCaseStudyBySlug, siteMeta } from "../caseStudies";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 
@@ -25,15 +21,16 @@ export async function generateMetadata({ params }) {
 
   const brand = siteMeta[study.site];
   const url = `${SITE_URL}/case-studies/${study.slug}`;
-  const title = getCaseStudyMetaTitle(study);
+  const title = study.metaTitle;
+  const description = study.metaDescription;
 
   return {
     title,
-    description: study.summary,
+    description,
 
     openGraph: {
       title,
-      description: study.summary,
+      description,
       url,
       siteName: "Office Experts Group",
       images: [
@@ -56,7 +53,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       site: "@OfficeExpertsG1",
       title,
-      description: study.summary,
+      description,
       images: [study.image || "/logo.png"],
     },
 

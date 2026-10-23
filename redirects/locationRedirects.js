@@ -91,8 +91,6 @@ const richmondRedirects = [
     "/word-and-powerpoint-experts-richmond",
     "/microsoft-support-and-training-richmond",
   ),
-  // Its siblings go to /microsoft-support-and-training-richmond, but this target page exists
-  // today (/excel-and-access-experts-richmond), so this stays a single hop.
   permanent(
     "/office-and-office-365-experts-richmond",
     "/excel-and-access-experts-richmond",

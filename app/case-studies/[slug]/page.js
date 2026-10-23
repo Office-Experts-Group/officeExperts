@@ -4,13 +4,7 @@ import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 
 import CaseStudyDetail from "./(components)/CaseStudyDetail";
-import {
-  caseStudies,
-  getCaseStudyBySlug,
-  siteMeta,
-  getCaseStudyMetaTitle,
-} from "../caseStudies";
-import { cardCopy } from "../caseStudyCardCopy";
+import { caseStudies, getCaseStudyBySlug, siteMeta } from "../caseStudies";
 
 const Contact = dynamic(() => import("@/components/Contact"));
 
@@ -30,12 +24,6 @@ const buildSchema = (study) => {
   const url = `${SITE_URL}/case-studies/${study.slug}`;
   const brand = siteMeta[study.site];
 
-  // Prefer the study's own short description, then the card copy, then the
-  // full summary. Must live inside this function as it depends on `study`.
-  const copy = cardCopy[study.slug];
-  const shortDescription =
-    study.truncatedDescription ?? copy?.truncatedDescription ?? study.summary;
-
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -50,10 +38,10 @@ const buildSchema = (study) => {
         "@type": "WebPage",
         "@id": url,
         url,
-        name: getCaseStudyMetaTitle(study),
+        name: study.metaTitle,
         isPartOf: { "@id": `${SITE_URL}#website` },
         about: { "@id": `${SITE_URL}#organization` },
-        description: shortDescription,
+        description: study.metaDescription,
         breadcrumb: { "@id": `${url}#breadcrumb` },
         inLanguage: "en-AU",
         potentialAction: [{ "@type": "ReadAction", target: [url] }],
@@ -77,8 +65,8 @@ const buildSchema = (study) => {
       {
         "@type": "Article",
         "@id": `${url}#article`,
-        headline: getCaseStudyMetaTitle(study),
-        description: shortDescription,
+        headline: study.metaTitle,
+        description: study.metaDescription,
         about: study.industry,
         publisher: brand
           ? { "@type": "Organization", name: brand.name, url: brand.domain }

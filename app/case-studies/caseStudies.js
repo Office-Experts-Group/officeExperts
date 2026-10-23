@@ -19,6 +19,10 @@
 //   results    - Array of short, quantifiable outcome strings (card + detail)
 //   image      - Path to the card/hero thumbnail (place assets in /public/case-studies/)
 //   featured   - Boolean, true pins the entry near the top of the grid
+//   metaTitle  - <title> / OpenGraph title for the detail page (max 60 chars)
+//   metaDescription - meta description for the detail page (max 160 chars)
+//   truncatedDescription - short description shown on the home page carousel card
+//   linkText   - anchor text for the carousel card's button
 //
 //   The fields below only need to be filled in once a detail page is written
 //   for that entry. Cards render fine without them.
@@ -52,6 +56,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/review-platform.webp",
     featured: true,
+    metaTitle: "AI Agent Investment Review: 6 Days to 90 Minutes",
+    metaDescription:
+      "How an AI agent workflow cut investment application reviews from 6-7 days to about 90 minutes, with every finding referenced and traceable.",
+    truncatedDescription:
+      "One person spent six to seven days manually researching each investment applicant. We built an AI agentic workflow that produces a detailed, referenced review in around 90 minutes.",
+    linkText: "See our AI agent review workflow",
 
     stats: [
       { value: "90 min", label: "Full RDAO review, down from 6-7 days" },
@@ -129,6 +139,12 @@ export const caseStudies = [
     image: "/case-studies/internal-ai-proposal-assistant.png",
     video: "/videos/OE-Props-Demo.mp4",
     featured: false,
+    metaTitle: "AI Proposal Assistant Drafting Inside Word | Case Study",
+    metaDescription:
+      "A conversational AI assistant drafts first-pass proposals in the real Word template using a live rate card, now fully hosted inside Azure.",
+    truncatedDescription:
+      "Reps drafted proposals by hand from call notes and copy-pasted fee figures. We built a conversational AI assistant that drafts a first-pass proposal in the real Word template, using a live rate card.",
+    linkText: "See how our AI proposal assistant works",
 
     stats: [
       {
@@ -211,6 +227,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/legal-firm-word-training-workshopLg.png",
     featured: false,
+    metaTitle: "Word Training Workshop for a Legal Firm | Case Study",
+    metaDescription:
+      "A live 90-minute Teams workshop for 29 legal professionals, built on the firm's own documents to fix formatting, numbering and paste problems.",
+    truncatedDescription:
+      "A legal firm struggled with inconsistent formatting, numbering issues and copy-and-paste chaos in Word. We delivered a live 90-minute Teams training session for around 29 legal professionals, built around its own documents.",
+    linkText: "Explore our Word training workshop",
 
     stats: [
       { value: "29", label: "Legal professionals trained in one live session" },
@@ -288,6 +310,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/custom-quoting-tool.png",
     featured: false,
+    metaTitle: "Online Tax Depreciation Calculator | Case Study",
+    metaDescription:
+      "A custom React calculator embedded in WordPress gives property investors an instant, branded depreciation estimate by email.",
+    truncatedDescription:
+      "Every tax depreciation quote was worked out by hand. We built a custom React calculator, embedded in the client's WordPress site as a plugin, that emails an instant branded estimate to the customer and the client's team.",
+    linkText: "Integrate modern tools with legacy systems",
 
     stats: [
       {
@@ -372,6 +400,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/food-manufacturer-excel-costing-workbookLg.png",
     featured: false,
+    metaTitle: "Excel Costing Workbook for a Food Manufacturer",
+    metaDescription:
+      "Disconnected costing files rebuilt as one Excel workbook with forms, automatic cost roll-ups, margins by state and an admin-only view.",
+    truncatedDescription:
+      "Product costing ran through disconnected, in-house Excel workbooks. We rebuilt it as a single Excel Costing Workbook with a forms interface, automatic cost updates and a restricted Admin view.",
+    linkText: "See our Excel costing workbook",
 
     stats: [
       {
@@ -455,6 +489,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/gm-building-consultants-inspection-crmLg.png",
     featured: false,
+    metaTitle: "Enquiry-to-Quote Automation for Building Inspections",
+    metaDescription:
+      "SharePoint, Power Apps and Power Automate now receive building inspection enquiries and generate quotes ready to email, with no manual rework.",
+    truncatedDescription:
+      "Building inspection enquiries and quotes were handled entirely by hand, causing rework. We built an automated system on SharePoint, Power Apps and Power Automate that manages enquiries and generates quotes ready to email.",
+    linkText: "Explore our enquiry-to-quote automation",
 
     stats: [
       { value: "End-to-end", label: "Enquiry to quote, fully automated" },
@@ -519,6 +559,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/retail-power-bi-partner-securityLg.webp",
     featured: false,
+    metaTitle: "Power BI Row-Level Security for External Partners",
+    metaDescription:
+      "Partner Power BI reports locked down with Row-Level Security and tested with a real external account, matching the client's figures to the cent.",
+    truncatedDescription:
+      "A retail data provider needed certainty that one partner could never see another's data. We locked down access with Row-Level Security and tested with a real external account, matching the client's figures to the cent.",
+    linkText: "See how we secured partner Power BI reports",
 
     stats: [
       {
@@ -600,6 +646,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/manufacturing-project-setupLg.webp",
     featured: true,
+    metaTitle: "Power Automate Project Folder Setup in Under a Minute",
+    metaDescription:
+      "A Power Automate flow reads the project email and builds the full SharePoint job folder structure automatically, cutting 30 minutes to under 1.",
+    truncatedDescription:
+      "Staff built each new job folder by hand across multiple SharePoint sites. We built a Power Automate flow that reads the project details from the notification email and does the entire setup automatically.",
+    linkText: "See our automated project folder setup",
 
     stats: [
       { value: "<1 min", label: "New project folder set up, start to finish" },
@@ -676,6 +728,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/government-workplace-safety-interactive-formsLg.webp",
     featured: false,
+    metaTitle: "Locked-Down Interactive Word Forms | Government",
+    metaDescription:
+      "A suite of assessment and referral forms rebuilt with content controls and document protection so staff tab through guided, tamper-proof fields.",
+    truncatedDescription:
+      "Complex Word forms were inconsistent and easy to alter. We rebuilt every form with structured styles, content controls and document protection, so staff complete each one by tabbing through guided, locked-down fields.",
+    linkText: "Explore our guided, locked-down Word forms",
 
     stats: [
       {
@@ -759,6 +817,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/government-health-master-template-transferLg.png",
     featured: false,
+    metaTitle: "Master Template Rebrand and Document Transfer",
+    metaDescription:
+      "A state health department's new Master Template, with its entire existing document set transferred cleanly into the new branding.",
+    truncatedDescription:
+      "A state government health department needed a new Master Template and every existing document brought across. We built the template and moved the entire document set into it using our in-house transfer process.",
+    linkText: "See our Master Template transfer process",
 
     stats: [
       {
@@ -836,6 +900,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/community-services-excelLg.png",
     featured: false,
+    metaTitle: "Replacing a 400MB Excel File with Power Query",
+    metaDescription:
+      "Four location workbooks and a 400MB linked file rebuilt as a row-based template, consolidated with a single Power Query refresh.",
+    truncatedDescription:
+      "Four location workbooks fed a central file that had grown past 400MB. We rebuilt it as a row-based entry template consolidated with Power Query, and migrated all existing data.",
+    linkText: "See our Power Query consolidation rebuild",
 
     stats: [
       { value: "400MB+", label: "Original file size before the rebuild" },
@@ -919,6 +989,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/healthcare-form-followupLg.webp",
     featured: false,
+    metaTitle: "Patient Form Follow-Up Automation with Power Automate",
+    metaDescription:
+      "Two scheduled Power Automate flows on Microsoft Fabric remind, escalate and close off patient forms, so staff stop chasing paperwork by hand.",
+    truncatedDescription:
+      "Tracking which patients had returned their forms was done entirely by hand. We built two scheduled Power Automate flows on a Microsoft Fabric data warehouse that send reminders, escalate overdue cases and close off completed forms.",
+    linkText: "Explore our patient form follow-up flows",
 
     stats: [
       { value: "~1200", label: "Active patients tracked automatically" },
@@ -1000,6 +1076,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/government-health-editable-pdf-formsLg.webp",
     featured: false,
+    metaTitle: "Editable PDF Forms Built on a Brand Template",
+    metaDescription:
+      "Two internal staff forms built into a health department's master template, converted to editable PDFs and handed over with training.",
+    truncatedDescription:
+      "A state government health department needed two internal staff forms on its new branded template. We built them into the template, converted them to editable PDFs and trained the team to update them.",
+    linkText: "See our editable PDF form design",
 
     stats: [
       { value: "2", label: "Internal forms built and converted" },
@@ -1074,6 +1156,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/professional-services-sharepoint-foundationLg.png",
     featured: false,
+    metaTitle: "SharePoint Foundation Workshops | Case Study",
+    metaDescription:
+      "Live workshops that moved a team off shared logins onto a structured SharePoint site, a proper access model and a plan to retire shared accounts.",
+    truncatedDescription:
+      "A small team ran email, files and calendar through one shared login. Our SharePoint Foundation Workshops built a proper site structure, an access model and a plan to retire the shared logins.",
+    linkText: "Explore our SharePoint Foundation Workshops",
 
     stats: [
       { value: "2", label: "Shared logins on a clear path to retirement" },
@@ -1151,6 +1239,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/windowline-proposals-databaseLg.png",
     featured: false,
+    metaTitle: "Automated Word Proposals from an Access Database",
+    metaDescription:
+      "An Access database, later moved to SQL Server, generates 50+ page proposals, quotes and contracts in Word from the sections staff select.",
+    truncatedDescription:
+      "Proposals, quotes and contracts of 50 or more pages were pieced together by hand from paper and Excel. We designed an Access database, later migrated to SQL Server, that generates the full Word document automatically.",
+    linkText: "See our Word document generator",
 
     stats: [
       { value: "50+ pages", label: "Typical proposal or contract generated" },
@@ -1226,6 +1320,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/red-fox-advisory-brand-templatesLg.png",
     featured: false,
+    metaTitle: "Branded Word Template Suite with Formatting Tab",
+    metaDescription:
+      "Eleven Word templates rebuilt from one Master Template, with a custom Formatting tab and branded Quick Parts that lock the new brand in.",
+    truncatedDescription:
+      "Word templates kept breaking and staff could override brand elements. We rebuilt the suite from one Master Template, with a custom Formatting tab locking down fonts and branded Quick Parts.",
+    linkText: "Explore our branded Word template suite",
 
     stats: [
       { value: "11", label: "Sub-templates rebuilt in the new branding" },
@@ -1298,6 +1398,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/on-course-golf-sales-summaryLg.png",
     featured: false,
+    metaTitle: "Supplier Sales Consolidation with Power Query",
+    metaDescription:
+      "Dozens of yearly supplier files combined automatically with Power Query and Power Pivot, with year-on-year comparisons by supplier, member and quarter.",
+    truncatedDescription:
+      "The client received dozens of separate supplier sales files each year. We built a Power Query and Power Pivot solution that consolidates them automatically and produces year-on-year comparisons by supplier, member, month and quarter.",
+    linkText: "See our supplier sales consolidation",
 
     stats: [
       {
@@ -1382,6 +1488,12 @@ export const caseStudies = [
     secondaryImage:
       "/case-studies/insurance-word-quoting-report-popup-form2.webp",
     featured: false,
+    metaTitle: "Pop-Up Form for Word Quoting Reports | Case Study",
+    metaDescription:
+      "A pop-up form gathers every field in a Word quoting report, checks mandatory entries and fills the document, with drop-down lists managed in one place.",
+    truncatedDescription:
+      "Staff had to hunt through Word reports to find every field to complete. We built a pop-up form that gathers them all, checks mandatory fields and populates the report, with one background list for all templates.",
+    linkText: "See our pop-up form for Word reports",
 
     stats: [
       {
@@ -1466,6 +1578,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/life-insurance-competitive-intelligenceLg.png",
     featured: true,
+    metaTitle: "AI Competitive Intelligence for a Life Insurer",
+    metaDescription:
+      "An AI system on Microsoft 365 monitors competitors around the clock and routes prioritised alerts into Teams, cutting response time from weeks to minutes.",
+    truncatedDescription:
+      "A bank's life insurance division was consistently late to competitor moves. We built an AI-driven system on its own Microsoft 365 tenancy that monitors competitors around the clock and routes prioritised alerts into Teams.",
+    linkText: "Explore our competitive intelligence system",
 
     stats: [
       { value: "12 min", label: "From competitor change detected to action" },
@@ -1545,6 +1663,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
     featured: false,
+    metaTitle: "Multi-Entity Word Template Suite | Case Study",
+    metaDescription:
+      "Master Templates for four entities built from one shared Global Common template, plus a Formatting tab with a macro that strips foreign formatting.",
+    truncatedDescription:
+      "A corporate group needed consistent templates across four related entities. We built each Master Template from one shared Global Common template, plus a Formatting tab with a macro that strips foreign formatting.",
+    linkText: "See our multi-entity template suite",
 
     stats: [
       { value: "4", label: "Entities templated from one shared foundation" },
@@ -1619,6 +1743,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/retail-analytics-deck-generatorLg.png",
     featured: false,
+    metaTitle: "Automated PowerPoint Deck Generator from Power BI",
+    metaDescription:
+      "A Python tool queries Power BI and assembles a fully branded deck of around 660 slides in under five minutes, replacing days of manual building.",
+    truncatedDescription:
+      "Review decks were built by hand, slide by slide, from Power BI figures. We built a Python tool that queries Power BI and assembles a fully branded deck of around 660 slides in under five minutes.",
+    linkText: "See our automated PowerPoint deck generator",
 
     stats: [
       {
@@ -1687,6 +1817,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/water-education-program-templatesLg.png",
     featured: false,
+    metaTitle: "Word and PowerPoint Lesson Templates from InDesign",
+    metaDescription:
+      "An InDesign lesson design translated into working Word and PowerPoint templates, with Quick Parts and a Slide Master system for consistent lessons.",
+    truncatedDescription:
+      "A lesson template designed in InDesign had to work for writers using Word and PowerPoint. We translated it into working templates with Quick Parts and a Slide Master system for consistent, branded lessons.",
+    linkText: "Explore our Word and PowerPoint lesson templates",
 
     stats: [
       {
@@ -1762,6 +1898,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/government-enterprise-office-templatesLg.png",
     featured: true,
+    metaTitle: "Custom Word Ribbon and Enterprise Templates | Govt",
+    metaDescription:
+      "17 Word templates redesigned, a custom Formatting Control Tab built and 10 precinct-specific PowerPoint themes added for a state transport department.",
+    truncatedDescription:
+      "A state government transport department faced formatting corruption and inconsistent branding. We redesigned 17 Word templates, built a custom Formatting Control Tab and added 10 precinct-specific PowerPoint themes.",
+    linkText: "See our custom Word ribbon and templates",
 
     stats: [
       { value: "17", label: "Enterprise Word templates redesigned" },
@@ -1844,6 +1986,12 @@ export const caseStudies = [
     image:
       "/case-studies/environmental-consultancy-word-template-rebuildLg.png",
     featured: false,
+    metaTitle: "Word Template Rebuild for an Environmental Firm",
+    metaDescription:
+      "A beautifully designed template suite rebuilt on proper Word foundations, keeping the approved design intact while designing out formatting errors.",
+    truncatedDescription:
+      "New Word templates looked right but weren't built the way Word needs, making them inefficient and error-prone. We rebuilt the whole suite from the ground up, keeping the approved design intact.",
+    linkText: "See our Word template rebuild",
 
     stats: [
       { value: "100%", label: "Approved brand look and feel preserved" },
@@ -1913,6 +2061,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/sporting-goods-agentic-customer-serviceLg.png",
     featured: true,
+    metaTitle: "Agentic AI Customer Service on Power Automate",
+    metaDescription:
+      "Chained AI agents on Power Automate and Power Apps now resolve two-thirds of customer service tickets with no human intervention.",
+    truncatedDescription:
+      "Customer service ran on manual ticket triage, spreadsheets and hand-written replies. We built a chained agentic AI system on Power Automate and Power Apps that now resolves two-thirds of tickets with no human intervention.",
+    linkText: "Explore our agentic AI customer service",
 
     stats: [
       { value: "94%", label: "Reduction in average resolution time" },
@@ -1986,6 +2140,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/film-crew-booking-system-rebuildLg.png",
     featured: true,
+    metaTitle: "Access to Azure SQL Migration with Next.js Website",
+    metaDescription:
+      "A VM-locked Access 2000 database rebuilt on Azure SQL Server, with the website rewritten in Next.js for a site that loads 10x faster.",
+    truncatedDescription:
+      "A crew booking operation ran on an Access 2000 database that only worked on a VM. We rebuilt it on Azure SQL Server and rewrote the website in Next.js, giving a site that loads 10x faster.",
+    linkText: "See our Access to Azure migration",
 
     stats: [
       { value: "10x", label: "Faster website load times on Next.js" },
@@ -2069,6 +2229,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/financial-services-compliance-automationLg.png",
     featured: true,
+    metaTitle: "AI Risk and Compliance Automation | Case Study",
+    metaDescription:
+      "A live SharePoint risk register, AI risk-mapping agents and automated regulatory alerts cut monthly compliance review time from 6 hours to 1.",
+    truncatedDescription:
+      "A compliance workflow ran on spreadsheets and scattered policy documents. We built a live SharePoint risk register, AI agents that map risks to controls, a compliance dashboard and automated regulatory alerting.",
+    linkText: "Explore our AI compliance automation",
 
     stats: [
       { value: "83%", label: "Reduction in monthly compliance review time" },
@@ -2145,6 +2311,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/committee-report-master-template-pdf-mergeLg.png",
     featured: false,
+    metaTitle: "Committee Report Master Template and PDF Merge",
+    metaDescription:
+      "Reports from several authors formatted into one Master Template and merged with supporting PDFs into a single submission-ready file over a weekend.",
+    truncatedDescription:
+      "Reports from several authors with limited Word experience had to become one document by an urgent deadline. We built a Master Template and merged the result with supporting PDFs into one submission-ready PDF.",
+    linkText: "See how we merged Word and PDF reports",
 
     stats: [
       {
@@ -2220,6 +2392,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/private-client-cashflow-plannerLg.png",
     featured: false,
+    metaTitle: "Cash Flow Forecasting Tool for a Private Client",
+    metaDescription:
+      "A private web planning tool forecasts cash flow across personal, investment and business, and solves for the exact income needed each month.",
+    truncatedDescription:
+      "Investment and business income arrived in seasonal lumps while commitments fell steadily. We built a private planning tool that forecasts cash flow and solves for the exact income needed each month.",
+    linkText: "See our private web planning tool",
 
     stats: [
       { value: "2 weeks", label: "From brief to delivered tool" },
@@ -2300,6 +2478,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/biochar-gtm-analysisLg.png",
     featured: false,
+    metaTitle: "AI Research Workflow for a UK Market Entry Report",
+    metaDescription:
+      "AI research agents synthesised 10,000+ documents into a reusable SharePoint knowledge base and a 70-page go-to-market report in four weeks.",
+    truncatedDescription:
+      "A UK BioChar go-to-market strategy had to be built fast from scattered research. AI research agents synthesised the sources into a reusable SharePoint knowledge base and auto-populated a standardised Word report.",
+    linkText: "Explore our AI research workflow",
 
     stats: [
       { value: "10,000+", label: "Documents synthesised into the report" },
@@ -2376,6 +2560,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/legal-firm-template-formatting-tabLg.png",
     featured: false,
+    metaTitle: "Law Firm Word Templates and Formatting Tab",
+    metaDescription:
+      "A full document suite built from a law firm's style guide, plus a custom Formatting tab for legal numbering lists and locked-down formatting.",
+    truncatedDescription:
+      "A law firm's style guide wasn't being followed in practice. We built a full document suite from it, plus our custom Formatting tab for easy access to the built-in legal numbering lists.",
+    linkText: "See our law firm Formatting tab",
 
     stats: [
       {
@@ -2450,6 +2640,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/theme-swap-sample.webp",
     featured: false,
+    metaTitle: "Multi-Brand Word Template with Colour Themes",
+    metaDescription:
+      "One Word Master Template with a colour theme for every discipline, so covers, styles, numbering and tables pick up the right brand colours.",
+    truncatedDescription:
+      "Each discipline under one parent brand has its own colours. We built a single Word Master Template with a suite of colour themes, so covers, styles, numbering and tables pick up the right brand colours.",
+    linkText: "Explore our multi-brand Word template",
 
     stats: [
       {
@@ -2529,6 +2725,12 @@ export const caseStudies = [
     ],
     image: "/case-studies/research-kanban-planner-boardLg.webp",
     featured: false,
+    metaTitle: "Kanban Planner Built Inside Microsoft Access",
+    metaDescription:
+      "A four-column Kanban planner form with drag and drop, due date highlighting and task details, built inside the client's existing Access database.",
+    truncatedDescription:
+      "A research organisation wanted something like Microsoft Planner inside its existing Access database. We built a Kanban planner form with four status columns, drag and drop, due date highlighting and a task details form.",
+    linkText: "See our Kanban planner for Access",
 
     stats: [
       { value: "4", label: "Status columns on the Kanban board" },
@@ -2607,6 +2809,12 @@ export const caseStudies = [
     secondaryImage:
       "/case-studies/financial-planning-word-document-builder-libraryLg2.webp",
     featured: false,
+    metaTitle: "Word Document Builder for Financial Planning Reports",
+    metaDescription:
+      "A Word pop-up form and background heading library let staff build financial planning reports from only the sections they need.",
+    truncatedDescription:
+      "Financial planning reports combined free text with a large library of ready-made headings. We built a Word document builder with a pop-up form, custom Heading 3 items and a background library the Administrator maintains.",
+    linkText: "See our Word document builder",
 
     stats: [
       {
@@ -2728,17 +2936,3 @@ export const getLatestDateModified = () =>
         : latest,
     "",
   );
-
-const META_TITLE_MAX = 60;
-
-export const getCaseStudyMetaTitle = (study) => {
-  // Optional per-study override: add metaTitle: "..." to any object
-  const title = study.metaTitle || study.title;
-
-  if (title.length <= META_TITLE_MAX) return title;
-
-  const cut = title.slice(0, META_TITLE_MAX - 1);
-  const lastSpace = cut.lastIndexOf(" ");
-  const base = lastSpace > 0 ? cut.slice(0, lastSpace) : cut;
-  return base.replace(/[\s,:;–-]+$/, "") + "…";
-};

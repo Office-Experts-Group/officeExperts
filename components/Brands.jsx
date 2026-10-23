@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "@/styles/brands.module.scss";
 import { brandData } from "../brandData";
@@ -84,7 +83,7 @@ export default function Brands() {
                 isVisible ? styles.visible : styles.hidden
               }`}
             >
-              <Link
+              <a
                 href={brand.href}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
@@ -97,7 +96,7 @@ export default function Brands() {
                   height={brand.height}
                   className={styles.brandImage}
                 />
-              </Link>
+              </a>
             </div>
           );
         })}

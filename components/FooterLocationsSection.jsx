@@ -18,6 +18,7 @@ const locationsByState = {
   Queensland: {
     Brisbane: "/microsoft-consultants-brisbane",
     "Gold Coast": "/microsoft-consultants-gold-coast",
+    Cairns: "/microsoft-consultants-cairns",
   },
   "Western Australia": {
     Perth: "/microsoft-consultants-perth",
