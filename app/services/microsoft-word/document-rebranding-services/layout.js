@@ -1,18 +1,24 @@
 import React from "react";
 
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/document-rebranding-services";
+const PAGE_TITLE = "Document Rebranding Services | Office Experts";
+const PAGE_DESCRIPTION =
+  "Update your existing Microsoft Word documents to reflect your new brand, including logos, colours, fonts, layouts and corporate styling.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+
 export const metadata = {
   // Basic metadata
-  title: "Document Rebranding Services | Word Experts",
-  description:
-    "Our Microsoft Word designers create custom templates with brand-consistent formatting and professional rebranding services.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
 
   // OpenGraph
   openGraph: {
-    title: "Document Rebranding Services | Word Experts",
-    description:
-      "Our Microsoft Word designers create custom templates with brand-consistent formatting and professional rebranding services.",
-    url: "https://www.wordexperts.com.au/document-rebranding-services",
-    siteName: "Word Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
     images: [
       {
         url: "/logo.png",
@@ -31,15 +37,14 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title: "Document Rebranding Services | Word Experts",
-    description:
-      "Our Microsoft Word designers create custom templates with brand-consistent formatting and professional rebranding services.",
+    site: "@OfficeExpertsAU",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: ["/logo.png"],
   },
 
   alternates: {
-    canonical: "/document-rebranding-services",
+    canonical: "services/microsoft-word/document-rebranding-services",
   },
 };
 
@@ -57,16 +62,15 @@ export default function RootLayout({ children }) {
             serviceType: "Document Rebranding",
             provider: {
               "@type": "Organization",
-              name: "Word Experts",
-              url: "https://www.wordexperts.com.au",
-              telephone: "+611300122038",
+              name: "Office Experts",
+              url: SITE_URL,
+              telephone: "1300122038",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "Australia",
               },
             },
-            description:
-              "Professional document rebranding service that applies your updated brand identity to all of your business templates and documentation including Microsoft Word templates, PowerPoint presentations, and Excel spreadsheets.",
+            description: PAGE_DESCRIPTION,
             offers: {
               "@type": "Offer",
               price: "",

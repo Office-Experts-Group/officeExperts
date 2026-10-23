@@ -27,7 +27,7 @@ const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/document-rebranding-services";
 const PAGE_TITLE = "Document Rebranding Services | Office Experts";
 const PAGE_DESCRIPTION =
-  "Our Microsoft Word designers create custom templates with brand-consistent formatting and professional rebranding services.";
+  "Update your existing Microsoft Word documents to reflect your new brand, including logos, colours, fonts, layouts and corporate styling.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 

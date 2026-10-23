@@ -1,0 +1,90 @@
+// styles/googleMigrationCta.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 4rem 8rem 8rem;
+
+  @include tablet {
+    padding: 3rem 4rem 6rem;
+  }
+  @include phoneLandscape {
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  @include phone {
+    padding: 2rem 1.25rem 4.5rem;
+  }
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4.5rem;
+  background: $dark-bg;
+  border-radius: 26px;
+  color: $white-88;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 2.5rem;
+  }
+  @include phoneLandscape {
+    padding: 2.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 2rem 1.4rem;
+  }
+}
+
+.art {
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.1rem, 3.8vw, 3.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: $white;
+}
+
+// Accent blue is too dim on the dark panel, so the second half is muted white
+.muted {
+  color: $white-65;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.link {
+  color: $white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 0.5rem;
+}

@@ -14,9 +14,6 @@ const OG_IMAGE = {
   alt: "Office Experts logo",
 };
 
-// This layout wraps only page.js (no child routes), so canonical and
-// openGraph.url are safe here. Do not copy this pattern into a layout that
-// has children.
 export const metadata = {
   title: { absolute: PAGE_TITLE },
   description: PAGE_DESCRIPTION,

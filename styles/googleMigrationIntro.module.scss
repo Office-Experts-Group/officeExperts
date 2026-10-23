@@ -1,0 +1,147 @@
+// styles/googleMigrationIntro.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Text and illustration ────────────────────
+.top {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 5rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// Internal links: accent colour, bold
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.visual {
+  background: $grayBGC;
+  border-radius: 20px;
+  padding: 2.5rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include phone {
+    padding: 1.25rem;
+  }
+}
+
+// ── Signs strip ──────────────────────────────
+.signsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-top: 2rem;
+  border-top: 2px solid $text-primary;
+}
+
+.signsLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.signs {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: $text-primary;
+}
+
+.signText {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: $text-secondary;
+}

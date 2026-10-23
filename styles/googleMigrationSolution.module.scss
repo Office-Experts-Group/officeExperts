@@ -1,0 +1,255 @@
+// styles/googleMigrationSolution.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 8rem;
+  scroll-margin-top: 150px;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 54rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  max-width: 60ch;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Bento grid: 3 columns, first tile spans 2 ──
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 2.25rem;
+  border-radius: 22px;
+  color: $white-88;
+
+  @include phone {
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.wide {
+  grid-column: span 2;
+
+  @include phoneLandscape {
+    grid-column: auto;
+  }
+  @include phone {
+    grid-column: auto;
+  }
+}
+
+.dark {
+  background: $dark-bg;
+}
+
+.brand {
+  background: $accent;
+}
+
+.paper {
+  background: $grayBGC;
+  color: $text-secondary;
+}
+
+.art {
+  height: 6.5rem;
+  color: $white;
+
+  svg {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .paper & {
+    color: $accent;
+  }
+}
+
+.tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white-65;
+
+  .paper & {
+    color: $text-muted;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: $white;
+
+  .paper & {
+    color: $text-primary;
+  }
+}
+
+.body {
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+// Internal links: white on coloured tiles, accent on the light tile
+.link {
+  color: $white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  .paper & {
+    color: $accent;
+    text-decoration: none;
+  }
+}
+
+// ── Includes and outcome: label above value ──
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid $white-18;
+
+  .paper & {
+    border-top-color: $border-strong;
+  }
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.metaLabel {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $white;
+
+  .paper & {
+    color: $text-primary;
+  }
+}
+
+// ── Sector strip ─────────────────────────────
+.sectors {
+  list-style: none;
+  padding: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  border-top: 2px solid $text-primary;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.sector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sectorLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.sectorTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.sectorText {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: $text-secondary;
+}
+
+.textLink {
+  color: $accent;
+  font-weight: 700;
+}

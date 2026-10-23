@@ -1,0 +1,221 @@
+// styles/googleMigrationFormatting.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 54rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.heading {
+  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: $white;
+}
+
+// Accent blue is too dim on the dark backdrop, so the second half is muted white
+.muted {
+  color: $white-65;
+}
+
+.lead {
+  max-width: 60ch;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $white-88;
+}
+
+// ── Bento grid: 12 columns ───────────────────
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 22px;
+  grid-column: span 4;
+  color: $white-88;
+
+  @media (max-width: 1024px) {
+    grid-column: auto;
+  }
+  @include phone {
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+// Placement on desktop
+.layouts {
+  grid-column: span 7;
+}
+
+.typography {
+  grid-column: span 5;
+}
+
+.publishing {
+  grid-column: span 12;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.5rem;
+
+  @media (max-width: 1024px) {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layouts,
+  .typography {
+    grid-column: auto;
+  }
+}
+
+// Tones
+.brand {
+  background: $accent;
+}
+
+.surface {
+  background: $dark-surface;
+  border: 1px solid $white-08;
+}
+
+.paper {
+  background: $white;
+  color: $text-secondary;
+}
+
+// Illustrations inherit the tile colour
+.art {
+  height: 7rem;
+  color: $white;
+
+  svg {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .layouts & {
+    height: 11rem;
+  }
+
+  .publishing & {
+    flex-shrink: 0;
+    height: 10rem;
+  }
+
+  .paper & {
+    color: $accent;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $white;
+
+  .paper & {
+    color: $text-primary;
+  }
+}
+
+.body {
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+// Internal links on dark and accent backdrops invert to white
+.link {
+  color: $white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $white;
+  background: $white-12;
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+
+  .paper & {
+    color: $text-primary;
+    background: $grayBGC;
+  }
+}
