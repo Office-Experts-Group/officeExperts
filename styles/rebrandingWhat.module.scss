@@ -1,0 +1,253 @@
+// styles/rebrandingWhat.module.scss
+@use "./globals.scss" as *;
+
+// Body text tone for dark and accent backdrops
+$text-on-dark: rgba($white, 0.85);
+
+.section {
+  background: $white;
+  padding: 8rem;
+  // Clears the fixed header when linked to as #no-more-headaches
+  scroll-margin-top: 150px;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 5rem;
+  align-items: end;
+  margin-bottom: 4rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── Bento grid ───────────────────────────────
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "word word elements"
+    "slides sheets elements";
+  gap: 1.5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "word word"
+      "elements elements"
+      "slides sheets";
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "word"
+      "elements"
+      "slides"
+      "sheets";
+    gap: 1.1rem;
+  }
+}
+
+// Each variant sets its own text colour, body tone and chip backdrop
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.25rem 2rem;
+  border-radius: 18px;
+  color: $white;
+  --body: #{$text-on-dark};
+  --chip: #{$white-18};
+
+  @include phone {
+    padding: 1.9rem 1.5rem;
+  }
+}
+
+.tileWord {
+  grid-area: word;
+  background: $accent;
+}
+
+.tileElements {
+  grid-area: elements;
+  background: $dark-bg;
+  --chip: #{$white-08};
+}
+
+.tileSlides {
+  grid-area: slides;
+  background: $grayBGC;
+  color: $text-primary;
+  --body: #{$text-secondary};
+  --chip: #{rgba($text-primary, 0.08)};
+}
+
+.tileSheets {
+  grid-area: sheets;
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  --chip: #{$white-08};
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--body);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.body {
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: var(--body);
+
+  .link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.chip {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--chip);
+}
+
+.art svg {
+  width: 100%;
+  height: auto;
+}
+
+// ── Word tile: copy beside the page illustration ──
+.wordLayout {
+  display: grid;
+  grid-template-columns: 1fr minmax(170px, 38%);
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tileText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+// ── Brand elements list ──────────────────────
+.elements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 0.75rem;
+}
+
+.element {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+}
+
+.elementIcon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background: $white-08;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+.elementName {
+  font-weight: 800;
+}
+
+.elementText {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--body);
+}

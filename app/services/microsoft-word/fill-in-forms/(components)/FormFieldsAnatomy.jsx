@@ -1,8 +1,8 @@
-// app/fill-in-forms/(components)/FormFieldsAnatomy.jsx
+// /services/microsoft-word/fill-in-forms/(components)/FormFieldsAnatomy.jsx
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { FormFieldsMockSVG } from "../(svgs)/FormFieldsMockSVG";
-import styles from "../../../styles/formFieldsAnatomy.module.css";
+import styles from "@/styles/formFieldsAnatomy.module.scss";
 
 // Each control type expands into a detail panel when its row is toggled
 // open. Using <details>/<summary> keeps the interactivity working without

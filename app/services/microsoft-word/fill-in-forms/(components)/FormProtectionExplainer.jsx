@@ -1,7 +1,7 @@
-// app/fill-in-forms/(components)/FormProtectionExplainer.jsx
+// /services/microsoft-word/fill-in-forms/(components)/FormProtectionExplainer.jsx
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/formProtectionExplainer.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/formProtectionExplainer.module.scss";
 
 const FormProtectionExplainer = () => {
   return (
@@ -18,16 +18,16 @@ const FormProtectionExplainer = () => {
             <p className={styles.body}>
               A form only stays consistent if the layout underneath it
               can&rsquo;t be disturbed. That protection can be built two
-              different ways in Word, and it matters which one your form
-              uses, because they don&rsquo;t mix well together.
+              different ways in Word, and it matters which one your form uses,
+              because they don&rsquo;t mix well together.
             </p>
             <p className={styles.body}>
               We build almost every form using modern{" "}
               <strong>content controls</strong> with the surrounding text{" "}
               <strong>grouped</strong>, rather than the older &ldquo;Restrict
               Editing &rarr; Filling in Forms&rdquo; method built for legacy
-              form fields. It&rsquo;s the more reliable approach for
-              documents opened across different versions of Word.
+              form fields. It&rsquo;s the more reliable approach for documents
+              opened across different versions of Word.
             </p>
           </div>
         </AnimateOnScroll>
@@ -56,8 +56,12 @@ const FormProtectionExplainer = () => {
               <span className={styles.methodBadgeMuted}>Older approach</span>
               <h3 className={styles.methodTitleMuted}>Legacy Form Fields</h3>
               <ul className={styles.methodListMuted}>
-                <li>Older technology, kept mainly for backward compatibility</li>
-                <li>Protected using &ldquo;Restrict Editing&rdquo; document-wide</li>
+                <li>
+                  Older technology, kept mainly for backward compatibility
+                </li>
+                <li>
+                  Protected using &ldquo;Restrict Editing&rdquo; document-wide
+                </li>
                 <li>
                   Breaks if it&rsquo;s ever mixed with content controls in the
                   same document

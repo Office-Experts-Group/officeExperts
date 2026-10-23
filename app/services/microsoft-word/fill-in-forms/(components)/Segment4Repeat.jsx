@@ -1,13 +1,11 @@
-// app/fill-in-forms/(components)/Segment4Repeat.jsx
+// /services/microsoft-word/fill-in-forms/(components)/Segment4Repeat.jsx
 
-import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { RealWorldFormsSVG } from "../(svgs)/RealWorldFormsSVG";
 
-import styles from "../../../styles/formBuilding.module.css";
-import { Span } from "next/dist/trace";
+import styles from "@/styles/formBuilding.module.scss";
 
 const scenarios = [
   {
@@ -37,12 +35,17 @@ const Segment4Repeat = () => {
             </h2>
             <p className={styles.introBody}>
               Most of the forms we build start life as something you already
-              use, a <Link href="/brand-template">Word template</Link>, a
-              printed checklist, or an old{" "}
-              <Link href="/popup-forms">popup form</Link> that&rsquo;s become
-              awkward to maintain. We rebuild it as a proper fill-in form
-              without losing the branding, tone or layout that your staff and
-              clients already recognise.
+              use, a{" "}
+              <Link href="/services/microsoft-word/brand-template">
+                Word template
+              </Link>
+              , a printed checklist, or an old{" "}
+              <Link href="/services/microsoft-word/popup-forms">
+                popup form
+              </Link>{" "}
+              that&rsquo;s become awkward to maintain. We rebuild it as a proper
+              fill-in form without losing the branding, tone or layout that your
+              staff and clients already recognise.
             </p>
           </AnimateOnScroll>
         </div>

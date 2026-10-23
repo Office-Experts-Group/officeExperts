@@ -1,0 +1,146 @@
+// styles/rebrandingWho.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $grayBGC;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ───────────────────────────────────
+.header {
+  max-width: 820px;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  margin-top: 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Audience rows ────────────────────────────
+.rows {
+  list-style: none;
+  border-bottom: 1px solid $border-strong;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) 1fr 1fr;
+  gap: 1.5rem 3rem;
+  align-items: start;
+  padding: 2.25rem 0;
+  border-top: 1px solid $border-strong;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    padding: 1.75rem 0;
+  }
+}
+
+.audience {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  @media (max-width: 1024px) {
+    grid-column: 1 / -1;
+  }
+}
+
+.iconTile {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 14px;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// Every second audience swaps to the dark backdrop
+li:nth-child(even) .iconTile {
+  background: $dark-bg;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: $text-primary;
+}
+
+.cellLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
+}
+
+.delivery .cellLabel {
+  color: $accent;
+}
+
+.cellText {
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: $text-secondary;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}

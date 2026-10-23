@@ -1,0 +1,99 @@
+// styles/rebrandingIntro.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 5rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+// ── Copy ─────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white;
+  background: $accent;
+  padding: 0.35rem 0.95rem;
+  border-radius: 2rem;
+}
+
+.heading {
+  font-size: clamp(2.3rem, 4.6vw, 3.9rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  max-width: 54ch;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: $text-primary;
+}
+
+.body {
+  max-width: 56ch;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+// ── Illustration ─────────────────────────────
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 520px;
+  }
+}

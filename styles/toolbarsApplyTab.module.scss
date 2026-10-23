@@ -1,9 +1,75 @@
 // styles/toolbarsApplyTab.module.scss
 @use "./globals" as *;
 
+// How long each tab stays on screen, including the slide to the next one.
+// The full loop is two tabs long.
+$slide-time: 10s;
+$cycle: $slide-time * 2;
+$side-padding: clamp(1.25rem, 7vw, 8rem);
+
+// ── Slide timeline ───────────────────────────
+// The track holds three slides: [clone of Apply] [Build] [Apply], so it starts on
+// Apply (far right), slides right to Build, then right again to the clone. The clone
+// looks identical to Apply, so the jump back to the start is invisible.
+// Each tab holds for 90% of its time and spends the last 10% sliding.
+@keyframes slide {
+  0%,
+  45% {
+    transform: translateX(-66.6667%);
+  }
+  50%,
+  95% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Progress bar for each tab: lit while that tab is showing
+@keyframes applyActive {
+  0%,
+  45%,
+  100% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+}
+
+@keyframes buildActive {
+  0%,
+  45%,
+  100% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
+  }
+}
+
 .section {
+  position: relative;
   background: $white;
-  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+  padding: clamp(4.5rem, 9vw, 8rem) 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 300%;
+  animation: slide $cycle cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 33.3333%;
+  padding: 0 $side-padding;
 }
 
 .inner {
@@ -104,4 +170,76 @@
   font-size: 0.95rem;
   line-height: 1.7;
   color: $text-secondary;
+}
+
+// ── Progress bars ────────────────────────────
+.indicators {
+  display: flex;
+  gap: 1rem;
+  max-width: 1280px;
+  margin: 3.5rem auto 0;
+  padding: 0 $side-padding;
+}
+
+.indicator {
+  position: relative;
+  flex: 0 0 8rem;
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
+
+  @include phone {
+    flex: 1;
+  }
+
+  // Grey bar underneath, with the brand-coloured bar fading in on top while active
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  &::before {
+    background: $border-strong;
+  }
+
+  &::after {
+    background: $accent;
+    animation: $cycle linear infinite;
+  }
+}
+
+.indicatorApply::after {
+  animation-name: applyActive;
+}
+
+.indicatorBuild::after {
+  animation-name: buildActive;
+}
+
+// ── Reduced motion: stack both tabs instead of sliding between them ──
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+    animation: none;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .clone,
+  .indicators {
+    display: none;
+  }
 }

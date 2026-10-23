@@ -1,10 +1,8 @@
-// app/fill-in-forms/(components)/PageSegmentMain.jsx
-
-import React from "react";
+// /services/microsoft-word/fill-in-forms/(components)/PageSegmentMain.jsx
 
 import { StreamlinedEntrySVG } from "../(svgs)/StreamlinedEntrySVG";
 
-import styles from "../../../styles/fillFormMain.module.css";
+import styles from "@/styles/fillFormMain.module.scss";
 
 const PageSegmentMain = () => {
   return (

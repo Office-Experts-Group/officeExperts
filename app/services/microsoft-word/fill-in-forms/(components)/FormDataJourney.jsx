@@ -1,8 +1,8 @@
-// app/fill-in-forms/(components)/FormDataJourney.jsx
+// /services/microsoft-word/fill-in-forms/(components)/FormDataJourney.jsx
 
 import Link from "next/link";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/formDataJourney.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/formDataJourney.module.scss";
 
 // Three-stage journey: the form itself, the extraction step, and where the
 // data ends up. Answers "does the data from my form go anywhere" style
@@ -66,7 +66,7 @@ const FormDataJourney = () => {
             The information entered into a Word form doesn't have to stay in the
             document. Content controls can capture structured data that can be
             extracted, checked and used elsewhere in your business. Invaluable
-            to businesses using other microsoft technologies.
+            to businesses using other Microsoft technologies.
           </p>
         </AnimateOnScroll>
       </div>
