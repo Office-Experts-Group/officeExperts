@@ -1,11 +1,9 @@
-// app/government-departments/(components)/GovDeptIntro.jsx
+// /services/microsoft-word/government-departments/(components)/GovDeptIntro.jsx
 
-import Link from "next/link";
-
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { DepartmentIcon } from "../(svgs)/DepartmentIcon";
 
-import styles from "../../../styles/govDeptIntro.module.css";
+import styles from "@/styles/govDeptIntro.module.scss";
 
 const GovDeptIntro = () => {
   return (
@@ -25,7 +23,7 @@ const GovDeptIntro = () => {
               Public Sector Document Solutions
             </span>
             <h2 className={styles.heading}>
-              How do Word Experts support{" "}
+              How do Office Experts support{" "}
               <span className={styles.accent}>government departments?</span>
             </h2>
             <p>

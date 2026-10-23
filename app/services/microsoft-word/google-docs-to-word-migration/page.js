@@ -44,8 +44,6 @@ const HERO_ALT = "Migrating birds in a flock";
 const DATE_PUBLISHED = "2025-08-15T02:07:45+10:00";
 const DATE_MODIFIED = "2026-10-24T00:00:00+11:00";
 
-// Case studies linked below the main content. No images yet: RelatedLinks
-// renders the card without a thumbnail when image is omitted.
 const caseStudies = [
   {
     href: "/case-studies/government-health-master-template-document-transfer",

@@ -1,4 +1,4 @@
-// app/government-departments/(components)/GovDeptCapabilities.jsx
+// /services/microsoft-word/government-departments/(components)/GovDeptCapabilities.jsx
 
 import Link from "next/link";
 
@@ -7,7 +7,7 @@ import { BrandLockIcon } from "../(svgs)/BrandLockIcon";
 import { RibbonRolloutIcon } from "../(svgs)/RibbonRolloutIcon";
 import { SystemLinkIcon } from "../(svgs)/SystemLinkIcon";
 
-import styles from "../../../styles/govDeptCapabilities.module.css";
+import styles from "@/styles/govDeptCapabilities.module.scss";
 
 const capabilities = [
   {
@@ -15,7 +15,7 @@ const capabilities = [
     heading: "Mail Merge at Scale",
     description:
       "Correspondence, notices and reports generated in bulk from your department's data sources, formatted correctly and consistently every time, regardless of volume.",
-    href: "/mail-merge",
+    href: "/services/microsoft-word/mail-merge",
     linkLabel: "Mail merge solutions",
     Icon: MergeAtScaleIcon,
   },
@@ -24,7 +24,7 @@ const capabilities = [
     heading: "Locked Corporate Identity",
     description:
       "Fonts, colours, logos and layout protected within the template itself, so departmental branding stays consistent no matter who in the organisation is producing a document.",
-    href: "/corporate-identity",
+    href: "/services/microsoft-word/corporate-identity",
     linkLabel: "Corporate identity protection",
     Icon: BrandLockIcon,
     featured: true,
@@ -34,7 +34,7 @@ const capabilities = [
     heading: "Custom Toolbars & Ribbons",
     description:
       "A dedicated ribbon tab can put your department's approved tools, templates and macros in front of staff, reducing reliance on standard Word menus for controlled tasks.",
-    href: "/custom-toolbars-and-ribbons",
+    href: "/services/microsoft-word/custom-toolbars-and-ribbons",
     linkLabel: "Custom toolbars and ribbons",
     Icon: RibbonRolloutIcon,
   },
@@ -43,7 +43,7 @@ const capabilities = [
     heading: "Records & System Integration",
     description:
       "Word templates connected to your existing records or case management systems, so document data stays in sync rather than being retyped between platforms.",
-    href: "/microsoft-word-api-integrations",
+    href: "/services/microsoft-word/microsoft-word-api-integrations",
     linkLabel: "Word API integrations",
     Icon: SystemLinkIcon,
   },
@@ -55,12 +55,13 @@ const GovDeptCapabilities = () => {
       <div className={styles.header}>
         <span className={styles.eyebrow}>What We Build</span>
         <h2 className={styles.heading}>
-          What Word solutions do you build for government departments?
+          What Word solutions do you build for{" "}
+          <span className={styles.accent}>government departments?</span>
         </h2>
         <p className={styles.intro}>
-          Beyond a single accessible template,most departments also need systems
-          integrated to allow for: bulk document generation, protected branding,
-          and integration with the records systems already in use.
+          Beyond a single accessible template, most departments also need
+          systems integrated to allow for: bulk document generation, protected
+          branding, and integration with the records systems already in use.
         </p>
       </div>
 

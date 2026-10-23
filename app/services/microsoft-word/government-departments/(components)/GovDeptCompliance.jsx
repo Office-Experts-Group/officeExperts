@@ -1,11 +1,11 @@
-// app/government-departments/(components)/GovDeptCompliance.jsx
+// /services/microsoft-word/government-departments/(components)/GovDeptCompliance.jsx
 
 import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { CompliantDocIcon } from "../(svgs)/CompliantDocIcon";
 
-import styles from "../../../styles/govDeptCompliance.module.css";
+import styles from "@/styles/govDeptCompliance.module.scss";
 
 // ── Standards a department template is measured against, beyond accessibility ──
 const standards = [
@@ -22,7 +22,7 @@ const standards = [
   {
     id: "version-control",
     label: "Version control",
-    body: "A single controlled master template underpins every document thats produced, once in place, an update only ever needs to happen once, not across hundreds of individual files.",
+    body: "A single controlled master template underpins every document that's produced. Once in place, an update only ever needs to happen once, not across hundreds of individual files.",
   },
 ];
 
@@ -47,8 +47,10 @@ const GovDeptCompliance = () => {
             </p>
             <p className={styles.intro}>
               We cover WCAG 2.1 AA compliance in full detail on our{" "}
-              <Link href="/accessibility">document accessibility page</Link>,
-              including reading order, alternative text and accessible table
+              <Link href="/services/microsoft-word/accessibility">
+                document accessibility page
+              </Link>
+              , including reading order, alternative text and accessible table
               structure.
             </p>
           </div>

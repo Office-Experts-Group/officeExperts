@@ -1,9 +1,9 @@
-// app/government-departments/(components)/GovDeptTemplateSystem.jsx
+// /services/microsoft-word/government-departments/(components)/GovDeptTemplateSystem.jsx
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { TemplateTreeIcon } from "../(svgs)/TemplateTreeIcon";
 
-import styles from "../../../styles/govDeptTemplateSystem.module.css";
+import styles from "@/styles/govDeptTemplateSystem.module.scss";
 
 const GovDeptTemplateSystem = () => {
   return (
