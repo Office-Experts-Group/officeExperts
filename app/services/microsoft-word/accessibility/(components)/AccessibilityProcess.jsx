@@ -1,7 +1,6 @@
-// app/accessibility/(components)/AccessibilityProcess.jsx
-
+// app/services/microsoft-word/accessibility/(components)/AccessibilityProcess.jsx
 import Link from "next/link";
-import styles from "../../../styles/accessibilityProcess.module.css";
+import styles from "@/styles/accessibilityProcess.module.scss";
 
 const steps = [
   {

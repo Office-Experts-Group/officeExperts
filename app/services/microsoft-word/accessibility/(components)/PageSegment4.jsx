@@ -1,13 +1,13 @@
-// app/accessibility/(components)/PageSegment4.jsx
+// app/services/microsoft-word/accessibility/(components)/PageSegment4.jsx
 
 import React from "react";
+import Link from "next/link";
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import styles from "../../../styles/pageSegment4.module.css";
+import styles from "@/styles/pageSegment4.module.scss";
 
 import TemplateGovernanceSVG from "../(svgs)/TemplateGovernanceSVG";
-import Link from "next/link";
 
 const Segment4Repeat = () => {
   return (

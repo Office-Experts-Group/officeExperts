@@ -70,7 +70,7 @@ const WORD_SLUGS = [
 // Pages already built on officeexperts.com.au. Add slugs here as each one is finished.
 // Only the /services/microsoft-word/<slug> redirect is dropped for these.
 const WORD_MIGRATED = new Set([
-  // "accessibility",
+  "accessibility",
   // "companies-and-organisations",
   // "corporate-global-template-solution",
   // "corporate-identity",

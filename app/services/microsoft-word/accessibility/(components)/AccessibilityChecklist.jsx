@@ -1,7 +1,6 @@
-// app/accessibility/(components)/AccessibilityChecklist.jsx
-
+// app/services/microsoft-word/accessibility/(components)/AccessibilityChecklist.jsx
 import TaggedStructureSVG from "../(svgs)/TaggedStructureSVG";
-import styles from "../../../styles/accessibilityChecklist.module.css";
+import styles from "@/styles/accessibilityChecklist.module.scss";
 
 // Each of these is an independent document element we check and remediate —
 // not a process, so rendered as a checklist rather than numbered steps.

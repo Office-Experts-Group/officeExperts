@@ -1,9 +1,8 @@
-// app/accessibility/(components)/PageSegmentMain.jsx
-
+// app/services/microsoft-word/accessibility/(components)/PageSegmentMain.jsx
 import React from "react";
 import Link from "next/link";
 
-import styles from "../../../styles/accessibilityPageSegmentMain.module.css";
+import styles from "@/styles/accessibilityPageSegmentMain.module.scss";
 
 import AccessibleDocumentSVG from "../(svgs)/AccessibleDocumentSVG";
 

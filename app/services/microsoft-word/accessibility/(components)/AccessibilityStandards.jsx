@@ -1,13 +1,13 @@
-// app/accessibility/(components)/AccessibilityStandards.jsx
-
+// app/services/microsoft-word/accessibility/(components)/AccessibilityStandards.jsx
 import React from "react";
-import styles from "../../../styles/accessibilityStandards.module.css";
+import Link from "next/link";
+
+import styles from "@/styles/accessibilityStandards.module.scss";
 
 // Custom SVGs from local svgs directory
 import ContrastSVG from "../(svgs)/ContrastSVG";
 import ReadingOrderSVG from "../(svgs)/ReadingOrderSVG";
 import AssistiveTechSVG from "../(svgs)/AssistiveTechSVG";
-import Link from "next/link";
 
 // Three standards a compliant document needs to satisfy at once — not a
 // sequence, so these are presented side by side rather than numbered.
