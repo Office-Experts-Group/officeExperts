@@ -1,87 +1,77 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-import ServicePageCards from "./(components)/ServicePageCards";
-import Contact from "@/components/Contact";
-import ExpertsAwait from "@/components/ExpertsAwait";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import PageSegment8 from "./(components)/PageSegment8";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegment5 from "./(components)/PageSegment5";
-import Segment4Repeat from "./(components)/Segment4Repeat";
-import FAQSection from "@/components/FAQSection";
+import ServiceHero from "../../components/ServiceHero";
+import TrainingHero from "./(components)/TrainingHero";
 
-import faqs from "@/faqs/training";
-import Contents from "./(components)/Contents";
+const TrainingNav = dynamic(() => import("./(components)/TrainingNav"));
+const TrainingAssistance = dynamic(
+  () => import("./(components)/TrainingAssistance"),
+);
+const TrainingSkills = dynamic(() => import("./(components)/TrainingSkills"));
+const TrainingEfficiency = dynamic(
+  () => import("./(components)/TrainingEfficiency"),
+);
+const RelatedLinks = dynamic(() => import("../../components/RelatedLinks"));
+const Contact = dynamic(() => import("../../components/Contact"));
 
-import support from "@/public/pageHeros/support.webp";
-import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
+import training from "../../public/pageHeros/training.webp";
+import coffeeMob from "../../public/pageHeros/mob/coffeeMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
+  generateWebSiteSchema,
+} from "../../utils/schemaGenerators";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.wordexperts.com.au",
+      "Word Experts",
+      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/training",
-      url: "https://www.officeexperts.com.au/services/microsoft-word/training",
+      "@id": "https://www.wordexperts.com.au/training",
+      url: "https://www.wordexperts.com.au/training",
       name: "Microsoft Word Training | Microsoft Word Help | Word Experts",
+      description:
+        "Professional Microsoft Word training and support services. Expert help with templates, documents, and automation. Available remotely or onsite across Australia.",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": "https://www.wordexperts.com.au#website",
       },
-      about: {
-        "@id": "https://www.officeexperts.com.au#organization",
-      },
-      datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2025-07-28T00:00:00+00:00",
+      datePublished: "2018-07-15T15:59:22+00:00",
+      dateModified: "2026-06-17T00:00:00+00:00",
       breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/microsoft-word/training#breadcrumb",
+        "@id": "https://www.wordexperts.com.au/training#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/microsoft-word/training",
-          ],
+          target: ["https://www.wordexperts.com.au/training"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/training#breadcrumb",
+      "@id": "https://www.wordexperts.com.au/training#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: "https://www.wordexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://www.officeexperts.com.au/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Our Microsoft Word Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-word",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "Help and Training",
+          name: "Microsoft Word Training",
+          item: "https://www.wordexperts.com.au/training",
         },
       ],
     },
@@ -95,24 +85,48 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Contents />
       <ServiceHero
-        title="Microsoft Word Help and Training"
-        desktopImage={support}
+        title="Microsoft Word Support and Training"
+        desktopImage={training}
         mobileImage={coffeeMob}
-        altDesk={"support"}
+        altDesk={"computer with word documents"}
         altMob={"coffee cup and laptop"}
       />
-      <ServicePageCards />
-      <PageSegmentMain />
-      <PageSegment8 />
-      <PageSegment4 />
-      <ExpertsAwait />
-      <PageSegment5 />
-      <Segment4Repeat />
-      <div style={{ marginTop: "6rem" }}>
-        <FAQSection faqs={faqs} />
-      </div>
+      <TrainingHero />
+      <TrainingNav />
+      <TrainingAssistance />
+      <TrainingSkills />
+      <TrainingEfficiency />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="Word training and handover projects with past clients"
+        links={[
+          {
+            href: "https://www.officeexperts.com.au/case-studies/legal-firm-word-training-workshop",
+            linkText: "See the training session",
+            title:
+              "Turning a 90-minute Word training session into fewer formatting headaches across the firm",
+            description:
+              "A legal firm wanted stronger Word skills but was really facing inconsistent formatting, numbering issues in long documents and copy-and-paste problems. We delivered a live 90-minute Microsoft Teams session to around 29 legal professionals, built around the firm's own documents and covering Styles, multilevel numbering, Track Changes and PDF conversion.",
+            image:
+              "https://www.officeexperts.com.au/case-studies/legal-firm-word-training-workshopLg.png",
+            imageAlt: "Live Word training session for a legal firm",
+          },
+          {
+            href: "https://www.officeexperts.com.au/case-studies/government-health-department-editable-pdf-forms",
+            linkText: "View the fillable form project",
+            title:
+              "Turning brand templates into editable PDF forms staff can fill in and maintain",
+            description:
+              "A state government health department needed two internal forms on the same branded foundation as its other documents. We built both forms into its existing master template, converted them to editable PDFs using Adobe Acrobat Pro, and trained the client's team to make minor content changes themselves.",
+            image:
+              "https://www.officeexperts.com.au/case-studies/government-health-editable-pdf-formsLg.png",
+            imageAlt:
+              "Editable PDF forms built on a state government health department master template",
+          },
+        ]}
+      />
       <Contact />
     </>
   );

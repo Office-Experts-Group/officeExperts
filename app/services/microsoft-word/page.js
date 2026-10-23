@@ -1,84 +1,110 @@
 import React from "react";
 
-import Hero from "./(components)/Hero";
-import Services from "./(components)/Services";
-import CTAMain from "./(components)/CTAMain";
-import IsRight from "./(components)/IsRight";
-import CTAFull from "./(components)/CTAFull";
-import Testimonials from "./(components)/Testimonials";
-import SolutionsCarousel from "./(components)/SolutionsCarousel";
-import Brands from "@/components/Brands";
-import Promo from "@/components/Promo";
-import Contact from "@/components/Contact";
+import dynamic from "next/dynamic";
 
-import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
+// Keep Hero static as it's above fold
+import Hero from "./(wordComponents)/Hero";
+
+// Dynamically import everything else
+const Services = dynamic(() => import("./(wordComponents)/Services"));
+const CTAMain = dynamic(() => import("@/app/(components)/CTAMain"));
+const IsRight = dynamic(() => import("./(wordComponents)/IsRight"));
+const LockedFormatting = dynamic(
+  () => import("./(wordComponents)/LockedFormatting"),
+);
+const SolutionsCarousel = dynamic(
+  () => import("./(wordComponents)/SolutionsCarousel"),
+);
+const CTAFull = dynamic(() => import("@/app/(components)/CTAFull"));
+const Testimonials = dynamic(() => import("@/app/(components)/Testimonials"));
+const Brands = dynamic(() => import("@/components/Brands"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const GoodToKnow = dynamic(
+  () => import("@/app/about-us/(components)/GoodToKnow"),
+);
+const OurTemplates = dynamic(() => import("./(wordComponents)/OurTemplates"));
+const CopilotIntegration = dynamic(
+  () => import("./(wordComponents)/CopilotIntegration"),
+);
+const FormatTab = dynamic(() => import("./(wordComponents)/FormatTab"));
+
 import { testimonials } from "@/testimonials";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
+import faqSchema from "./wordFaqs/homeSchema";
+
+const DESCRIPTION =
+  "Our Word Experts team has Australia's leading Microsoft Word Designers & Developers. Australia-wide senior consultants with 25+yrs experience";
+const TITLE = "Microsoft Word Consultants & Designers";
+
+const BASE = "https://www.officeexperts.com.au";
+const PAGE_URL = `${BASE}/services/microsoft-word`;
+
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 620,
+        alt: "Office Experts Logo",
+      },
+    ],
+    locale: "en-AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/services/microsoft-word",
+  },
+};
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getHomePageSchema(testimonials)["@graph"],
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/microsoft-word",
-      url: "https://www.officeexperts.com.au/services/microsoft-word",
-      name: "Microsoft Word Services | Experts in MS Office Design",
-      isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
-      },
-      about: {
-        "@id": "https://www.officeexperts.com.au#organization",
-      },
-      datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2025-07-28T00:00:00+00:00",
-      description:
-        "We offer ongoing support and training, Microsoft Word services in Australia for your staff to learn specific tasks as required. Call us Today 1300 102 810",
-      breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/microsoft-word#breadcrumb",
-      },
+      "@id": `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: TITLE,
+      description: DESCRIPTION,
+      datePublished: "2017-11-22T14:23:06+10:00",
+      dateModified: "2026-10-23T13:40:00+10:00",
+      isPartOf: { "@id": `${BASE}/#website` }, // must match the main site's WebSite @id
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
       inLanguage: "en-AU",
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/services/microsoft-word"],
-        },
-      ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au",
-        },
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services",
+          item: `${BASE}/services`,
         },
         {
           "@type": "ListItem",
           position: 3,
-          name: "Our Microsoft Word Services",
+          name: "Microsoft Word Experts",
+          item: PAGE_URL,
         },
       ],
     },
   ],
 };
-
 const Page = () => {
   return (
     <>
@@ -86,20 +112,23 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero />
       <Services />
+      <OurTemplates />
       <CTAMain />
+      <CopilotIntegration />
+      <FormatTab />
+      <LockedFormatting />
       <IsRight />
       <SolutionsCarousel />
       <Testimonials testimonials={testimonials} />
-      <Brands />
       <CTAFull />
-      <div style={{ padding: "3rem 0" }}>
-        <Promo
-          h2="Master Your Documents"
-          p="Professional Microsoft Word solutions to protect your brand, automate workflows, and empower your team to create consistent, high-quality documentation."
-        />
-      </div>
+      <Brands isBelowFold={true} />
+      <GoodToKnow />
       <Contact />
     </>
   );

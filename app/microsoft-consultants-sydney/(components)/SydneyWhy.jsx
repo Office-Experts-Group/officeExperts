@@ -51,10 +51,7 @@ const SydneyWhy = () => (
             approach to each project is tailored to your needs, and we value the
             longstanding relationships we have with our clients.
           </p>
-          <Link
-            href="https://www.officeexperts.com.au/client-testimonials"
-            className={styles.headerLink}
-          >
+          <Link href="/client-testimonials" className={styles.headerLink}>
             Read client testimonials
             <svg
               width="13"

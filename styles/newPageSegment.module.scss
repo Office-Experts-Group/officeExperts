@@ -1,0 +1,327 @@
+@use "./globals.scss" as *;
+
+.pageSegment {
+  position: relative;
+  scroll-margin-top: 150px;
+  display: flex;
+  gap: 4rem;
+  margin: 8rem 10vw;
+  @include phone {
+    flex-direction: column;
+    margin: 3rem 1rem;
+  }
+  @include phoneLandscape {
+    flex-direction: column;
+    margin: 3rem 1rem;
+  }
+  @include tablet {
+    flex-direction: column;
+    margin: 6rem 4rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.imgWrapper {
+  z-index: 2;
+  flex: 1;
+  border-bottom: 15px solid $accent;
+  height: fit-content;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 0.5rem;
+  }
+
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    border-bottom: none;
+  }
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  z-index: 2;
+  h2 {
+    color: $black;
+    font-size: 2.5rem;
+    margin: 2rem 0 2rem 0;
+    font-weight: 900;
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+
+  p:first-child {
+    color: $accent;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  p:nth-of-type(2) {
+    color: #777a7e;
+    line-height: 2rem;
+    margin-top: 1rem;
+  }
+
+  p:nth-of-type(3) {
+    color: #777a7e;
+    line-height: 2rem;
+    margin-top: 1rem;
+  }
+  p:nth-of-type(4) {
+    color: #777a7e;
+    line-height: 2rem;
+    margin-top: 1rem;
+  }
+  p:last-child {
+    color: #777a7e;
+    line-height: 2rem;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin: 0 !important;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  @include phone {
+    margin-left: 1rem;
+  }
+  @include phoneLandscape {
+    margin-left: 1rem;
+  }
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    color: $darkGrayText;
+    margin: 0 !important;
+  }
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  border: 1px solid $accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $accent;
+    svg {
+      stroke: $offWhite;
+    }
+  }
+}
+
+.semi {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  filter: brightness(1.5);
+  transform: scaleX(-1);
+  @include phone {
+    width: 450px;
+    height: 450px;
+  }
+  @include phone {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    color: $darkGrayText;
+    margin: 0 !important;
+    line-height: 1.5rem;
+  }
+}
+
+.tick {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  border: 1px solid #0eaa0e;
+  background-color: #0eaa0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  svg {
+    stroke: $offWhite;
+    color: $offWhite;
+  }
+  &:hover {
+    transition: all 0.5s ease;
+    background-color: $offWhite;
+    svg {
+      stroke: #0eaa0e;
+      color: #0eaa0e;
+    }
+  }
+}
+
+.btn {
+  -moz-user-select: none;
+  background: #046999;
+  border: medium none;
+  border-radius: 0.1rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  border: 1px solid transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #046999;
+    border: 1px solid $accent;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+// Variations ***********************
+.withImg {
+  @include phone {
+    display: flex;
+    flex-direction: column-reverse;
+    .imgWrapper {
+      display: flex;
+      margin: 0 auto;
+      border: none;
+    }
+  }
+}
+
+.customMargin {
+  margin: 6rem 10vw;
+  @include tablet {
+    margin: 6rem 5vw;
+  }
+  @include phoneLandscape {
+    margin: 6rem 2vw;
+  }
+  @include phone {
+    margin: 6rem 1rem;
+  }
+}
+
+.locationBtn {
+  margin-top: 2rem;
+  max-width: 90vw;
+  display: inline-flex; // Changed to inline-flex
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 1rem;
+  white-space: normal; // Forces text to wrap
+  overflow-wrap: break-word; // Breaks words when necessary
+  line-height: 1.2; // Helps with readability of wrapped text
+
+  svg {
+    flex: 0 0 auto; // Prevents svg from shrinking or growing
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.imgMarginTop {
+  @media screen and (min-width: 700px) {
+    margin-top: 6rem;
+  }
+}
+
+.homePromo {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 6rem;
+  padding: 6rem 10vw 6rem 5vw;
+
+  .content {
+    place-self: center;
+    p {
+      text-align: center;
+    }
+  }
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+}

@@ -1,0 +1,476 @@
+// flipBook.module.scss
+$perspective: 2000px;
+$spine-color: rgba(0, 0, 0, 0.18);
+$page-bg: #f2ede8; // warm off-white for blank page faces
+$shadow-color: rgba(0, 0, 0, 0.22);
+$hint-color: rgba(0, 0, 0, 0.35);
+$accent: #046999;
+
+$easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// =============================================================================
+// Wrapper  NO height constraints; scene's aspect-ratio drives all sizing
+// =============================================================================
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  user-select: none;
+  padding: 0 0 48px; // bottom space for dots + hint only
+
+  // Full-width: scene fills most of the container width
+  &.full .scene {
+    width: 90%;
+    max-width: 1200px;
+
+    @media (max-width: 768px) {
+      width: 96%;
+    }
+  }
+
+  // Half-width: scene constrained to roughly half a typical viewport
+  &.half .scene {
+    width: 100%;
+    max-width: 640px;
+
+    @media (max-width: 768px) {
+      width: 96%;
+    }
+  }
+}
+
+// =============================================================================
+// Scene  perspective container for the 3D effect
+// Always double-page aspect ratio  never changes, no layout shift.
+// The left half is simply empty on the cover page.
+// =============================================================================
+
+.scene {
+  position: relative;
+  // Always two A4 portrait pages side by side: (595Ã—2) Ã— 842
+  aspect-ratio: 1190 / 842;
+  perspective: $perspective;
+  perspective-origin: center 45%;
+  transform-style: preserve-3d;
+
+  // Drop shadow under the whole book
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4%;
+    left: 5%;
+    width: 90%;
+    height: 6%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.22) 0%,
+      transparent 70%
+    );
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @media (max-width: 600px) {
+    // Mobile: single portrait page
+    aspect-ratio: 595 / 842;
+  }
+}
+
+// =============================================================================
+// Background pages only rendered when there is actual content
+// (conditionally mounted in JSX, never ghost/blank)
+// =============================================================================
+
+.leftBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: $page-bg;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 3px 0 0 3px;
+
+  // Spine-side shadow
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.06), transparent);
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+.rightBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: $page-bg;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 0 3px 3px 0;
+
+  // Spine-side shadow
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.06), transparent);
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+// =============================================================================
+// Spine
+// =============================================================================
+
+.spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+// =============================================================================
+// Sheets (the flipping pages)
+// =============================================================================
+
+.sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform var(--anim-duration, 900ms) $easing;
+  pointer-events: none;
+
+  &.flipped {
+    transform: rotateY(-180deg);
+  }
+
+  // On mobile the scene is portrait (single page), so sheets go full width
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+// =============================================================================
+// Page faces (front & back of each sheet)
+// =============================================================================
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  background: $page-bg;
+}
+
+.front {
+  transform: rotateY(0deg);
+  // Slight rounded corner on the outer (right) edge only
+  border-radius: 0 2px 2px 0;
+}
+
+.back {
+  // Back face is mirrored, so we flip it back
+  transform: rotateY(180deg);
+  border-radius: 2px 0 0 2px;
+}
+
+// =============================================================================
+// Page image (Next.js Image component fills parent)
+// =============================================================================
+
+.pageImg {
+  object-fit: cover;
+  object-position: center;
+  // For portrait A4 images filling a landscape half-page slot,
+  // contain ensures the full image is always visible
+  object-fit: contain !important;
+}
+
+// =============================================================================
+// Depth shadows  add realism to the turning page
+// =============================================================================
+
+.pageShadowFront {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  // Shadow that appears on the front face as it starts to turn
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, transparent 40%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 300ms ease;
+
+  .flipped & {
+    opacity: 1;
+  }
+}
+
+.pageShadowBack {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 40%
+  );
+  z-index: 2;
+}
+
+// =============================================================================
+// Navigation buttons
+// =============================================================================
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  background: none;
+  border: 1.5px solid $accent;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 8px rgba($accent, 0.15);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.93);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @media (max-width: 480px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.navPrev {
+  left: 16px;
+  transition:
+    box-shadow 0.2s ease,
+    left 0.2s ease;
+
+  &:hover:not(:disabled) {
+    left: 12px;
+  }
+}
+
+.navNext {
+  right: 16px;
+  transition:
+    box-shadow 0.2s ease,
+    right 0.2s ease;
+
+  &:hover:not(:disabled) {
+    right: 12px;
+  }
+}
+
+// Arrow chevron inside the button
+// .navArrow is always a left-pointing chevron by default
+// .navArrowRight flips it for the next button
+.navArrow {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-left: 1.5px solid $accent;
+  border-bottom: 1.5px solid $accent;
+  transform: rotate(45deg); // points left â†
+  flex-shrink: 0;
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.navArrowRight {
+  transform: rotate(-135deg); // points right â†’
+  left: auto;
+  right: 13px;
+}
+
+// Horizontal line attached to the nav buttons
+.navLine {
+  position: absolute;
+  height: 1px;
+  background: $accent;
+  width: 28px;
+  transition: width 0.2s ease;
+
+  .navPrev & {
+    left: calc(100% + 4px);
+  }
+
+  .navNext & {
+    right: calc(100% + 4px);
+  }
+
+  .navPrev:hover &,
+  .navNext:hover & {
+    width: 40px;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+// =============================================================================
+// Dots  page indicator
+// =============================================================================
+
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  z-index: 10;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.35);
+    transform: scale(1.3);
+  }
+}
+
+.dotActive {
+  background: $accent;
+  box-shadow: 0 0 0 3px rgba($accent, 0.25);
+}
+
+// =============================================================================
+// Scroll hint
+// =============================================================================
+
+.hint {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $hint-color;
+  white-space: nowrap;
+  margin: 0;
+  animation: hintFade 0.8s ease-out 1.2s both;
+  pointer-events: none;
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+}
+
+@keyframes hintFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.bookSegment {
+  margin: 4rem 0;
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    text-align: center;
+    line-height: 2rem;
+    color: #777a7e;
+    max-width: 60%;
+    margin: 0 auto 2rem auto;
+  }
+  @media screen and (max-width: 770px) {
+    h2,
+    p {
+      text-align: left;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}

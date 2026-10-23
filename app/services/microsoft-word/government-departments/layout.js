@@ -1,48 +1,41 @@
-import React from "react";
-
 export const metadata = {
-  title: "Government Department Word Solutions | Office Experts Group",
+  title: "Government Department Word Document Solutions | Word Experts",
   description:
-    "Expert Microsoft Word document design and consulting services for government departments. Specialising in accessible documents, templates, and corporate identity protection for state and federal agencies.",
-
+    "25 years of expertise delivering Microsoft Word solutions for government departments. Accessible documents, compliant templates, and secure document management solutions.",
+  keywords: [
+    // Core services
+    "government word templates",
+  ],
   openGraph: {
-    title: "Government Department Word Solutions | Office Experts Group",
+    title: "Government Department Word Document Solutions | Word Experts",
     description:
-      "Expert Microsoft Word document design and consulting services for government departments. Specialising in accessible documents, templates, and corporate identity protection for state and federal agencies.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/government-departments",
-    siteName: "Office Experts Group",
+      "25 years of expertise delivering Microsoft Word solutions for government departments. Accessible documents, compliant templates, and secure document management solutions.",
+    url: "https://www.wordexperts.com.au/government-departments",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/government-departments",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/government-departments",
-      },
-    ],
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Government Department Word Solutions | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Government Department Word Document Solutions | Word Experts",
     description:
-      "Expert Microsoft Word document design and consulting services for government departments. Specialising in accessible documents, templates, and corporate identity protection for state and federal agencies.",
+      "25 years of expertise delivering Microsoft Word solutions for government departments. Accessible documents, compliant templates, and secure document management solutions.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/government-departments",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

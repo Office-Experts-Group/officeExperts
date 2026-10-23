@@ -1,0 +1,133 @@
+// styles/lockedFormatting.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  padding: 7rem 8rem 0 8rem;
+  background: $light-bg;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 480px;
+  }
+  @include phone {
+    display: none;
+  }
+
+  // Animation classes set inside LockedDocumentSvg
+  :global(.lfFloat) {
+    animation: float 6s ease-in-out infinite;
+  }
+  :global(.lfDelay1) {
+    animation-delay: -1.2s;
+  }
+  :global(.lfDelay2) {
+    animation-delay: -2.4s;
+  }
+  :global(.lfDelay3) {
+    animation-delay: -3.6s;
+  }
+  :global(.lfDelay4) {
+    animation-delay: -4.8s;
+  }
+  :global(.lfShackle) {
+    animation: lock 1.1s 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(.lfFloat),
+    :global(.lfShackle) {
+      animation: none;
+    }
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes lock {
+  from {
+    transform: translateY(-18px);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $accent;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 999px;
+}
+
+.callout {
+  padding: 0 1.5rem 0.5rem 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+// The offending font, shown in itself and struck through
+.comic {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: $replace-x;
+  text-decoration: line-through 2px;
+}

@@ -1,46 +1,43 @@
-import React from "react";
-
 export const metadata = {
-  title:
-    "Word Design Services | Word Template Designers | Office Experts Group",
+  title: "Word template conversions | Word Experts",
   description:
-    "Our team of Word design experts take the stress out of your company templates by converting all of your organisation's documents to our easy to use templates, complete with your branding, a consistent look and a professional feel.",
-
+    "Professional Word template conversions in Australia. We convert Adobe, InDesign and PDF files into fully functional, on-brand Microsoft Word templates.",
+  keywords: [
+    // Core services
+    "word template conversion",
+  ],
   openGraph: {
-    title:
-      "Word Template Conversions | Word Design Services | Office Experts Group",
+    title: "Word template conversions | Word Experts",
     description:
-      "Our team of Word design experts take the stress out of your company templates by converting all of your organisation's documents to our easy to use templates, complete with your branding, a consistent look and a professional feel.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/word-template-conversions",
-    siteName: "Office Experts Group",
+      "Professional Word template conversions in Australia. We convert Adobe, InDesign and PDF files into fully functional, on-brand Microsoft Word templates.",
+    url: "https://www.wordexperts.com.au/word-template-conversions",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
 
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/word-template-conversions",
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title:
-      "Word Template Conversions | Word Design Services | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Word template conversions | Word Experts",
     description:
-      "Our team of Word design experts take the stress out of your company templates by converting all of your organisation's documents to our easy to use templates, complete with your branding, a consistent look and a professional feel.",
+      "Professional Word template conversions in Australia. We convert Adobe, InDesign and PDF files into fully functional, on-brand Microsoft Word templates.",
     images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "/word-template-conversions",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

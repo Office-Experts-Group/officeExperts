@@ -59,10 +59,7 @@ const MelbourneWhy = () => (
             built long-term partnerships with businesses in every sector
             Melbourne operates in.
           </p>
-          <Link
-            href="https://www.officeexperts.com.au/client-testimonials"
-            className={styles.headerLink}
-          >
+          <Link href="/client-testimonials" className={styles.headerLink}>
             Read client testimonials
             <svg
               width="13"

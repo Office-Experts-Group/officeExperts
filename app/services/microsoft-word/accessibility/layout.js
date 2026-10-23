@@ -1,55 +1,42 @@
-import React from "react";
-
 export const metadata = {
-  title: "Microsoft Word Accessibility Solutions | Office Experts Group",
+  title: "Microsoft Word Accessibility | Word Experts",
   description:
-    "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
+    "Accessible Word document creation and template services. WCAG-compliant documents, accessibility audits, and remediation services for government and enterprise.",
 
   keywords: [
-    // Core accessibility services
-    "Microsoft word accessibility solutions",
-    "accessible document templates",
+    // Core accessibility
+    "word accessibility solutions",
   ],
-
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/accessibility",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/accessibility",
-      },
-    ],
-  },
-
-  // OpenGraph
   openGraph: {
-    title: "Microsoft Word Accessibility Solutions | Office Experts Group",
+    title: "Microsoft Word Accessibility | Word Experts",
     description:
-      "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/accessibility",
-    siteName: "Office Experts Group",
+      "Accessible Word document creation and template services. WCAG-compliant documents, accessibility audits, and remediation services for government and enterprise.",
+    url: "https://www.wordexperts.com.au/accessibility",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft Word Accessibility Solutions | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Microsoft Word Accessibility | Word Experts",
     description:
-      "Our team of Word design experts can deliver your document templates to the highest accessibility standards, setting your business up to efficiently and effectively produce quality, timely, consistent, and accessible documentation.",
+      "Accessible Word document creation and template services. WCAG-compliant documents, accessibility audits, and remediation services for government and enterprise.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/accessibility",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

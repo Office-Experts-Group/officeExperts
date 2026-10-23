@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "@/styles/pageSegment3.module.scss";
-import template from "@/public/template600x400.webp";
+import styles from "../../../styles/pageSegment3.module.css";
+
+import data from "../../../public/data600x400.webp";
 
 const PageSegment3 = () => {
   const checkItems = [
@@ -16,16 +18,11 @@ const PageSegment3 = () => {
 
   return (
     <section
-      className={`${styles.pageSegment} ${styles.padded}`}
+      className={`${styles.pageSegment} ${styles.mobPad}`}
       id="in-control"
     >
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
-        <Image
-          src={template}
-          alt="person clicking a computer mouse"
-          width={600}
-          height={400}
-        />
+        <Image src={data} alt="data on a screen" width={600} height={400} />
       </AnimateOnScroll>
 
       <div className={styles.content}>

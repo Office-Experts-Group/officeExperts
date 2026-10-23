@@ -1,77 +1,79 @@
 import React from "react";
-import Image from "next/image";
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
+import IconDocumentSystem from "../(svgs)/IconDocumentSystem";
+import styles from "../../../styles/automationIntegration.module.css";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+const documentElements = [
+  "Cover pages & title pages",
+  "Image layout pages",
+  "Chapter & section break pages",
+  "Pre-built branded tables",
+  "Landscape & A3 pages",
+  "Multi-column sections",
+  "Appendix sections",
+  "Terms & conditions sections",
+  "Dynamic header & footer content",
+  "Auto-populating content fields",
+  "Table of contents generation",
+  "Automated numbering & cross-references",
+];
 
-import styles from "@/styles/pageSegment4.module.scss";
-import success from "@/public/success400x267.webp";
+const PageSegment4 = () => (
+  <section className={styles.wrapper}>
+    <div className={styles.inner}>
+      <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
+        <div className={styles.content}>
+          <p className={styles.eyebrow}>Simple Integration</p>
+          <h2 className={styles.heading}>
+            Every Document Element,{" "}
+            <span className={styles.accent}>Automated</span>
+          </h2>
+          <p className={styles.body}>
+            Our Word automation solutions handle the full range of document
+            components your team works with day-to-day. We build it once, test
+            it thoroughly, and roll it out across your business so every
+            document is consistent and effortless to produce.
+          </p>
 
-const PageSegment4 = () => {
-  const checkItems = [
-    "Covers",
-    "Image layout pages",
-    "Chapter break pages",
-    "Pre-built tables",
-    "Landscape pages",
-    "Content",
-    "A3 pages",
-    "Multiple column sections",
-    "Appendix sections",
-    "Terms and conditions sections",
-    "Automation of header and footer content",
-  ];
-
-  return (
-    <div
-      className="animate-wrapper"
-      style={{ marginBottom: "2rem", marginTop: "-2rem" }}
-    >
-      <div className={styles.pageSegmentGrid} id="web-apps">
-        <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
-          <div className={styles.content}>
-            <div className={styles.underline}>
-              <h2>Simple Integration</h2>
-            </div>
-            <p>
-              We&apos;ll make documents consistent and effortless across your
-              business.
-            </p>
-          </div>
-          <div className={styles.pointsGrid}>
-            {checkItems.map((text, index) => (
-              <div key={index} className={styles.point}>
-                <div className={styles.tick}>
+          <ul
+            className={styles.checklist}
+            aria-label="Automated document elements"
+          >
+            {documentElements.map((item, index) => (
+              <li key={index} className={styles.checkItem}>
+                <span className={styles.tick} aria-hidden="true">
                   <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="1"
-                    viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
+                    viewBox="0 0 20 20"
+                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    <path
+                      d="M4 10l4.5 4.5L16 6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
-                </div>
-                <p>{text}</p>
-              </div>
+                </span>
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
-        </AnimateOnScroll>
+          </ul>
+        </div>
+      </AnimateOnScroll>
 
-        <AnimateOnScroll animation="scale-up" duration={1} delay={0.2}>
-          <div className="image-wrapper">
-            <Image
-              src={success}
-              alt="person clicking a computer mouse"
-              width={400}
-              height={267}
-            />
+      <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
+        <div className={styles.svgWrap}>
+          <IconDocumentSystem className={styles.illustration} />
+          <div className={styles.statPill}>
+            <strong>25+ years</strong>
+            <span>of Microsoft Word expertise</span>
           </div>
-        </AnimateOnScroll>
-      </div>
+        </div>
+      </AnimateOnScroll>
     </div>
-  );
-};
+  </section>
+);
 
 export default PageSegment4;

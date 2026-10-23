@@ -1,56 +1,42 @@
-import React from "react";
-
 export const metadata = {
-  // Basic metadata
-  title: "Corporate Identity Solutions | Office Experts Group",
+  title: "Corporate Identity | Word Experts",
   description:
-    "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
-
-  // OpenGraph
+    "Professional corporate identity protection expert Microsoft Word designers. Ensure brand consistency and document compliance across your organisation.",
+  keywords: [
+    // Core services
+    "corporate document control",
+  ],
   openGraph: {
-    title: "Corporate Identity Solutions | Office Experts Group",
+    title: "Corporate Identity | Word Experts",
     description:
-      "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/corporate-identity",
-    siteName: "Office Experts Group",
+      "Professional corporate identity protection expert Microsoft Word designers. Ensure brand consistency and document compliance across your organisation.",
+
+    url: "https://www.wordexperts.com.au/corporate-identity",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: [
-    // Core services
-    "Word corporate identity creation",
-  ],
-
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/corporate-identity",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/corporate-identity",
-      },
-    ],
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Corporate Identity Solutions | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Corporate Identity | Word Experts",
     description:
-      "Professional Word template solutions for consistent formatting and corporate identity protection. Expert document template design services.",
+      "Professional corporate identity protection expert Microsoft Word designers. Ensure brand consistency and document compliance across your organisation.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/corporate-identity",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

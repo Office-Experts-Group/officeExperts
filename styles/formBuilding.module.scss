@@ -1,0 +1,137 @@
+// styles/segment4Repeat.module.scss
+
+@use "./globals.scss" as *;
+
+.section {
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 6vw;
+
+  @include phone {
+    margin: 4rem auto;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Intro block ──────────────────────────────────────────────────────────
+.intro {
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+
+  p:first-child {
+    color: $accent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: $text-primary;
+
+    @include phone {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.introBody {
+  margin-top: 1.25rem;
+  color: $text-secondary;
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+// ── Body: SVG + scenario list, asymmetric split ─────────────────────────────
+.body {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.svgWrapper {
+  position: sticky;
+  top: 6rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include tablet {
+    position: static;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  @include phone {
+    position: static;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+// ── Scenario rows — a left accent border rather than a card treatment ──────
+.scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.scenario {
+  border-left: 3px solid $accent-border;
+  padding-left: 1.5rem;
+}
+
+.scenarioTag {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.5rem;
+}
+
+.scenarioBody {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.footNote {
+  margin-top: 0.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $border;
+  color: $text-secondary;
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}

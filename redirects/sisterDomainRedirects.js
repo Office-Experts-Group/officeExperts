@@ -34,8 +34,22 @@ function productRedirects(domain, { prefix, slugs, rootSlugs }) {
 }
 
 // ── wordexperts.com.au: REMOVE OR REPOINT IN THE WORD WAVE ──
-// Bare legacy paths (/training, /accessibility, ...) must then point at /services/microsoft-word/{slug},
-// not at wordexperts, and the blog redirect below goes with them.
+//
+// MIGRATION PROGRESS (branch: wordMigrate)
+//   Homepage (/services/microsoft-word) ........ DONE, redirect removed
+//   Subpages ................................... add each slug to WORD_MIGRATED below
+//
+// HOW TO MIGRATE A PAGE:
+//   1. Build the page at app/services/microsoft-word/<slug>/page.js
+//   2. Add "<slug>" to WORD_MIGRATED below (one line per page)
+//   3. Restart `npm run dev`: redirects are read from next.config at startup and are not hot-reloaded
+//   4. Check the page loads with no 301, then commit and push
+//
+// AT THE END OF THE WAVE (all pages migrated, same deploy as the wordexperts redirects going live):
+//   - Repoint the bare legacy /<slug> redirects below to /services/microsoft-word/<slug>
+//     (not to wordexperts), and repoint or remove the blog redirect
+//   - Then delete this whole Word section
+
 const WORD_SLUGS = [
   "accessibility",
   "companies-and-organisations",
@@ -53,12 +67,46 @@ const WORD_SLUGS = [
   "word-template-conversions",
 ];
 
+// Pages already built on officeexperts.com.au. Add slugs here as each one is finished.
+// Only the /services/microsoft-word/<slug> redirect is dropped for these.
+const WORD_MIGRATED = new Set([
+  // "accessibility",
+  // "companies-and-organisations",
+  // "corporate-global-template-solution",
+  // "corporate-identity",
+  // "custom-toolbars-and-ribbons",
+  // "fill-in-forms",
+  // "government-departments",
+  // "popup-forms",
+  // "quick-parts",
+  // "remove-repetition-and-increase-productivity",
+  // "training",
+  // "upgrades-and-migration",
+  // "word-document-template-creation",
+  // "word-template-conversions",
+]);
+
+// Fails the build on a typo, so a misspelt slug can't silently leave a redirect in place
+for (const slug of WORD_MIGRATED) {
+  if (!WORD_SLUGS.includes(slug)) {
+    throw new Error(`WORD_MIGRATED contains unknown slug: "${slug}"`);
+  }
+}
+
+const wordPending = WORD_SLUGS.filter((slug) => !WORD_MIGRATED.has(slug));
+
 const word = [
-  ...productRedirects(DOMAINS.word, {
-    prefix: "/services/microsoft-word",
-    slugs: WORD_SLUGS,
-    rootSlugs: WORD_SLUGS,
-  }),
+  // Homepage: MIGRATED. The /services/microsoft-word hub redirect has been removed.
+
+  // Subpages not yet migrated: /services/microsoft-word/<slug> -> wordexperts/<slug>
+  ...wordPending.map((slug) =>
+    permanent(`/services/microsoft-word/${slug}`, `${DOMAINS.word}/${slug}`),
+  ),
+
+  // Legacy top-level /<slug> URLs: leave pointing at wordexperts until the end of the wave.
+  // These stay for ALL slugs (including migrated ones) until the final repoint described above.
+  ...WORD_SLUGS.map((slug) => permanent(`/${slug}`, `${DOMAINS.word}/${slug}`)),
+
   permanent(
     "/blog/convert-canva-to-word",
     `${DOMAINS.word}/blog/convert-canva-to-word`,

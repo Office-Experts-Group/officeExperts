@@ -5,7 +5,7 @@
 // If content is ever moved into officeexperts.com.au, only the href values in this file need to change.
 
 const SITES = {
-  word: "https://www.wordexperts.com.au",
+  word: "/services/microsoft-word",
   excel: "https://www.excelexperts.com.au",
   access: "https://www.accessexperts.com.au",
   powerPlatform: "https://www.powerplatformexperts.com.au",

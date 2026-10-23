@@ -36,7 +36,7 @@ const reasons = [
     body: "Every consultant we have is a dedicated specialist with years of experience in their field. Together we operate as a unit to provide a fully integrated solution. Consistently our clients come to us with disjointed applications that fail to cooperate in any meaningful way. We pride our work on solving each individuals demand by integrating everything under one roof.",
     cta: {
       label: "Meet our Team",
-      href: "https://www.officeexperts.com.au/meet-the-team",
+      href: "/meet-the-team",
     },
   },
   {
@@ -46,7 +46,7 @@ const reasons = [
     body: "Being based in regional Queensland has historically meant slower access to specialist talent and higher travel costs when you needed someone on-site. Our remote-first model eliminates that disadvantage entirely. Cairns clients get the same response times and the same expertise as a client in the Sydney CBD. When on-site presence genuinely adds value, our Cairns consultants are available locally.",
     cta: {
       label: "See all locations",
-      href: "https://www.officeexperts.com.au/locations",
+      href: "/locations",
     },
   },
   {
@@ -56,7 +56,7 @@ const reasons = [
     body: "We have been in business since 2000, we have seen every major platform shift Microsoft has made. That allows us to take legacy applications and turn them into modern, easy to use systems. We are also 100% Australian owned, which means you are dealing with Aussies who understand the world your operating in.",
     cta: {
       label: "Read client testimonials",
-      href: "https://www.officeexperts.com.au/client-testimonials",
+      href: "/client-testimonials",
     },
   },
 ];

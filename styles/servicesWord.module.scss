@@ -1,0 +1,84 @@
+// styles/servicesWord.module.scss
+
+@use "./globals.scss" as *;
+
+.services {
+  background: $white;
+  padding: 8rem 10vw;
+
+  @include phone {
+    padding: 4rem 2rem 6rem;
+  }
+}
+
+.content {
+  h1,
+  h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: $text-primary;
+    margin: 1rem 0 2rem;
+    line-height: 1.1;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.subBox p {
+  color: $accent;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.portrait {
+  display: flex;
+  border-radius: 50%;
+  border: 2px solid $accent;
+  padding: 0.5rem;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.ctaBtn {
+  text-transform: capitalize;
+  // margin-right: 10vw;
+  &:hover {
+    border: 1px solid $accent;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
+}

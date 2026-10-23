@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "@/styles/pageSegment4.module.scss";
-import cloudSolution from "@/public/cloudSolution600x400.webp";
+import styles from "../../../styles/pageSegment4.module.css";
+
+import adobe from "../../../public/adobe-to-word.webp";
 
 const PageSegment4 = () => {
   return (
@@ -13,7 +14,7 @@ const PageSegment4 = () => {
         <AnimateOnScroll animation="slide-right" duration={1} delay={0.2}>
           <div className={styles.content}>
             <div className={styles.underline}>
-              <h2>Adobe to Word Conversions</h2>
+              <h2>Adobe to Word Templates</h2>
             </div>
             <p>
               Are you a graphic artist struggling to create Word templates that
@@ -31,8 +32,8 @@ const PageSegment4 = () => {
         <AnimateOnScroll animation="scale-up" duration={1} delay={0}>
           <div className="image-wrapper">
             <Image
-              src={cloudSolution}
-              alt="person clicking a computer mouse"
+              src={adobe}
+              alt="adobe to word conversion"
               width={450}
               height={300}
             />

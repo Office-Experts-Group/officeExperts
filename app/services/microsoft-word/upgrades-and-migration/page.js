@@ -1,86 +1,77 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
+import ServiceHero from "../../components/ServiceHero";
 import ServicePageCards from "./(components)/ServicePageCards";
-import Contact from "@/components/Contact";
-import PageSegment4 from "./(components)/PageSegment4";
-import PageSegmentMain from "./(components)/PageSegmentMain";
-import BlackSegment from "./(components)/BlackSegment";
-import Promo from "./(components)/Promo";
-import Segment4Repeat from "./(components)/Segment4Repeat";
-import ExpertsAwait from "./(components)/ExpertsAwait";
 import Contents from "./(components)/Contents";
 
-import twoComputers from "@/public/pageHeros/twoComputers.webp";
-import seatMob from "@/public/pageHeros/mob/seatMob.webp";
+const Contact = dynamic(() => import("../../components/Contact"));
+const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
+const PageSegmentMain = dynamic(() => import("./(components)/PageSegmentMain"));
+const BlackSegment = dynamic(() => import("./(components)/BlackSegment"));
+const Promo = dynamic(() => import("./(components)/Promo"));
+const Segment4Repeat = dynamic(() => import("./(components)/Segment4Repeat"));
+const ExpertsAwait = dynamic(() => import("./(components)/ExpertsAwait"));
+
+import twoComputers from "../../public/pageHeros/twoComputers.webp";
+import seatMob from "../../public/pageHeros/mob/seatMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
+  generateWebSiteSchema,
+} from "../../utils/schemaGenerators";
+import WhyChoose from "./(components)/WhyChoose";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.wordexperts.com.au",
+      "Word Experts",
+      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
-      url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
+      "@id": "https://www.wordexperts.com.au/upgrades-and-migration",
+      url: "https://www.wordexperts.com.au/upgrades-and-migration",
       name: "Word Upgrades and Migration | Office Expert Australia",
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": "https://www.wordexperts.com.au#website",
       },
-      about: {
-        "@id": "https://www.officeexperts.com.au#organization",
-      },
-      datePublished: "2024-10-27T00:00:00+00:00",
-      dateModified: "2025-07-28T00:00:00+00:00",
+      datePublished: "2018-09-11T00:20:15+00:00",
+      dateModified: "2024-11-12T00:00:00+00:00",
       description:
-        "Stuck On An Old Version? Are you experiencing the cold reality or unsettling concerns that your Microsoft Office workbooks, documents. Call us 1300102810",
+        "Expert Microsoft Word upgrade and migration services. Resolve formatting issues, maintain document integrity, and ensure smooth transitions.",
       breadcrumb: {
         "@id":
-          "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration#breadcrumb",
+          "https://www.wordexperts.com.au/upgrades-and-migration#breadcrumb",
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
-          ],
+          target: ["https://www.wordexperts.com.au/upgrades-and-migration"],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration#breadcrumb",
+      "@id": "https://www.wordexperts.com.au/upgrades-and-migration#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: "https://www.wordexperts.com.au",
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://www.officeexperts.com.au/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Our Microsoft Word Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-word",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "Upgrades and Migration",
+          item: "https://www.wordexperts.com.au/upgrades-and-migration",
         },
       ],
     },
@@ -108,6 +99,7 @@ const Page = () => {
       <BlackSegment />
       <Promo />
       <Segment4Repeat />
+      <WhyChoose />
       <ExpertsAwait />
       <Contact />
     </>

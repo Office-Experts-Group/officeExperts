@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "@/styles/promo.module.scss";
-import computer from "@/public/icons/computer.webp";
+import styles from "../../../styles/promo.module.css";
+
+import computer from "../../../public/icons/computer.webp";
 
 const Promo = ({ h2, p }) => {
   return (
@@ -15,13 +16,12 @@ const Promo = ({ h2, p }) => {
             <Image src={computer} alt="computer icon" width={30} height={30} />
           </div>
           <div className={`${styles.text} ${styles.leftMargin}`}>
-            <h2>Office Experts can Help!</h2>
+            <h2>Word Experts Can Help!</h2>
             <p style={{ marginBottom: "1rem" }}>
-              Our experts can create beautiful documents and templates that are
-              identical to your PDFs, InDesign layouts or Style Guide
-              requirements. Our documents and templates will not only look
-              great, they will work great and take the stress out of your
-              document management.
+              Our Microsoft Word specialists ensure smooth version upgrades and
+              seamless migrations to Microsoft 365. We fix formatting issues,
+              repair broken macros, update legacy templates, and maintain
+              document integrity throughout the transition.
             </p>
           </div>
         </div>

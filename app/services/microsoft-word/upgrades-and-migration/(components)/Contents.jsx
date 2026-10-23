@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import styles from "@/styles/contentsComponent.module.scss";
+import styles from "../../../styles/contentsComponent.module.css";
+
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);
 

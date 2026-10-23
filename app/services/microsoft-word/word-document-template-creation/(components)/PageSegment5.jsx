@@ -2,39 +2,39 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
 
-import styles from "@/styles/pageSegment3.module.scss";
-import eyes from "@/public/eyes400x263.webp";
+import styles from "../../../styles/pageSegment3.module.css";
 
 const PageSegment3 = () => {
   return (
-    <section className={styles.pageSegment} style={{ marginBottom: "6rem" }}>
-      <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
-        <Image
-          src={eyes}
-          alt="person clicking a computer mouse"
-          width={400}
-          height={267}
-        />
-      </AnimateOnScroll>
-
+    <section className={styles.pageSegment} style={{ marginBottom: "3rem" }}>
       <div className={styles.content}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
-          <div className={styles.underline}>
-            <h2>Professional Word Solutions</h2>
+          <div style={{ marginBottom: "1.5rem" }}>
+            <h2>Designs That Match Your Style Guides</h2>
           </div>
-          <p>
-            We create brand consistent solutions for your company. Controls can
-            be added to documents to assist users. We can create highly complex
-            documents by using features such as headers/footers, styles,
-            protection, tables, columns, content controls, VBA, quick parts,
-            bookmarks, fields, table of contents and many other features.
+          <p style={{ maxWidth: "100%" }}>
+            Your brand guidelines form the foundation of every template we
+            create. We ensure every element — from colours and fonts to heading
+            hierarchy and spacing — strictly follows your standards, while
+            enhancing them with our expert best practices for layout,
+            formatting, and usability. The result is a collection of templates
+            that is on brand, visually polished, and effortlessly user-friendly.
           </p>
 
-          <p>
-            If you need a Word template created properly, contact one of our
-            designers to talk through your requirements.
+          <p style={{ maxWidth: "100%" }}>
+            Whether starting from scratch or updating existing materials, we can
+            convert PDFs, legacy documents, or other designs into robust,
+            professional Word templates. The outcome is a seamless, cohesive,
+            and fully brand-compliant library of documents that elevates{" "}
+            <Link
+              style={{ fontWeight: "700", color: "#046999" }}
+              href="/corporate-identity"
+            >
+              your organisation's identity
+            </Link>
+            .
           </p>
         </AnimateOnScroll>
       </div>

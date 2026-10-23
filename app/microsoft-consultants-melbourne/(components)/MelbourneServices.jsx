@@ -54,7 +54,7 @@ const services = [
     category: "Cloud & Managed Services",
     description:
       "Most organisations are paying for capabilities inside their Microsoft 365 subscription that they are not using. We help look at your business needs and find what we can automate and simplify in order to cut down on repetitive tasks and remove error prone manual processes.",
-    href: "https://www.officeexperts.com.au/services/microsoft-office-365",
+    href: "/services/microsoft-office-365",
     linkText: "Microsoft 365 Integrations",
   },
   {
@@ -64,7 +64,7 @@ const services = [
     category: "Integration & Build",
     description:
       "When off-the-shelf Microsoft tools need to connect to the rest of your environment, we build the bridge. Third-party integrations, custom add-ins and Ai solutions. We build custom applications that work within the Microsoft stack to solve your particular pain points.",
-    href: "https://www.officeexperts.com.au/services/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom Office solutions",
   },
 ];

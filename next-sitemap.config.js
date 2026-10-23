@@ -14,7 +14,6 @@ const SITE_URL = process.env.SITE_URL || "https://www.officeexperts.com.au";
 // Note: don't Disallow these in robots.txt, or Google can't crawl them to see the canonical tag.
 const pathsWithDifferentCanonicals = new Set([
   // word
-  "/services/microsoft-word",
   "/services/microsoft-word/accessibility",
   "/services/microsoft-word/companies-and-organisations",
   "/services/microsoft-word/corporate-global-template-solution",

@@ -1,52 +1,48 @@
-import React from "react";
-
 export const metadata = {
-  // Basic metadata
-  title: "Companies and Organisations",
+  title: "Word Template Designers | Word Experts - Microsoft Word",
   description:
-    "Our team of Word design experts deliver versatile templates that meet the needs of any company or organisation. We ensure your corporate identity is protected and can cut costs through setting you up to produce your own inhouse reports.",
+    "Professional Word template solutions for companies and organisations. Custom document templates that protect corporate identity and improve efficiency.",
 
-  keywords: ["word template designers"],
-
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/companies-and-organisations",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations",
-      },
-    ],
-  },
-
-  // OpenGraph
+  keywords: [
+    // Business focus
+    "corporate word templates",
+  ],
   openGraph: {
-    title: "Companies and Organisations",
+    title: "Word Template Designers | Word Experts - Microsoft Word",
     description:
-      "Our team of Word design experts deliver versatile templates that meet the needs of any company or organisation. We ensure your corporate identity is protected and can cut costs through setting you up to produce your own inhouse reports.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations",
-    siteName: "Office Experts Group",
+      "Professional Word template solutions for companies and organisations. Custom document templates that protect corporate identity.",
+    url: "https://www.wordexperts.com.au/companies-and-organisations",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
+  alternates: {
+    canonical: "/companies-and-organisations",
+  },
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Companies and Organisations | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Word Template Designers | Word Experts - Microsoft Word",
     description:
-      "Our team of Word design experts deliver versatile templates that meet the needs of any company or organisation. We ensure your corporate identity is protected and can cut costs through setting you up to produce your own inhouse reports.",
+      "Professional Word template solutions for companies and organisations. Custom document templates that protect corporate identity.",
     images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "/companies-and-organisations",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

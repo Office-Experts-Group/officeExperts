@@ -1,0 +1,96 @@
+// styles/accessibilityStandards.module.scss
+
+@import "./globals.scss";
+
+.section {
+  position: relative;
+  background: $dark-bg;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+}
+
+// Faint dot grid texture behind the content, consistent with the other
+// dark sections across the group's sites
+.dotGrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient($white-08 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  color: $white-90;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.headingMuted {
+  color: $white-55;
+}
+
+.body {
+  max-width: 620px;
+  margin: 1.75rem auto 0;
+  color: $white-65;
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+  text-align: left;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillar {
+  border: 1px solid $white-12;
+  border-radius: 10px;
+  padding: 1.75rem;
+  background: $dark-surface;
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pillarLabel {
+  color: $white-90;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pillarNote {
+  color: $white-55;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}

@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
-
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
-import styles from "@/styles/pageSegment.module.scss";
-import migrate from "@/public/migrate600x400.webp";
 import Link from "next/link";
+
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
+
+import styles from "../../../styles/pageSegment.module.css";
+
+import blueCode from "../../../public/blueCode600x400.webp";
 
 const PageSegmentMain = () => {
   return (
@@ -13,8 +14,8 @@ const PageSegmentMain = () => {
       <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
           <Image
-            src={migrate}
-            alt="Image of a files leaving a computer"
+            src={blueCode}
+            alt="digital design featuring a person and code"
             width={600}
             height={400}
             priority
@@ -30,7 +31,7 @@ const PageSegmentMain = () => {
             <p>
               Our team of Word design experts deliver versatile templates that
               meet the needs of any company or organisation. Our{" "}
-              <Link href={"/"}>experienced word designers</Link> will ensure
+              <Link href={"/meet-the-team"}>experienced word designers</Link> will ensure
               your corporate identity is protected and can cut your costs
               through setting you up to produce your own inhouse reports.
             </p>

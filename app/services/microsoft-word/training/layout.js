@@ -1,48 +1,42 @@
-import React from "react";
-
 export const metadata = {
-  title: "Microsoft Word Training | Office Experts Group",
+  title: "Microsoft Word Training | Word Experts",
   description:
-    "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
+    "Professional Microsoft Word training and support services. Expert help with templates, documents, and automation. Available remotely or onsite across Australia.",
+  keywords: ["microsoft word training"],
 
   openGraph: {
-    title: "Microsoft Word Training | Office Experts Group",
+    title: "Microsoft Word Training | Word Experts",
     description:
-      "Our team of Word design experts are available to resolve your issues with Microsoft Word documents and templates. Whenever you need help, our Word experts accept small and large jobs at competitive rates.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/training",
-    siteName: "Office Experts Group",
+      "Professional Microsoft Word training and support services. Expert help with templates, documents, and automation. Available remotely or onsite across Australia.",
+    url: "https://www.wordexperts.com.au/training",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
 
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/training",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/training",
-      },
-    ],
-  },
-
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Word Fill In Forms & Form Design Services | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Microsoft Word Training | Word Experts",
     description:
-      "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
+      "Professional Microsoft Word training and support services. Expert help with templates, documents, and automation. Available remotely or onsite across Australia.",
     images: ["/logo.png"],
+  },
+
+  alternates: {
+    canonical: "/training",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

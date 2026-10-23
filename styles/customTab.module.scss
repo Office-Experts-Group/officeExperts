@@ -1,0 +1,36 @@
+@use "./globals.scss" as *;
+.customTab {
+  padding: 6rem 10vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h2 {
+    font-size: 3rem;
+    color: $black;
+    font-weight: 900;
+  }
+
+  p {
+    color: $darkGrayText;
+    line-height: 2.125rem;
+    font-size: 1.125rem;
+  }
+}
+
+.mainImage {
+  max-width: 80vw;
+  height: auto;
+  @include phone {
+    display: none;
+  }
+  @include phoneLandscape {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,257 @@
+// styles/corporateIdentityComparison.module.scss
+@use "./globals.scss" as *;
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+// ── Header ────────────────────────────────────
+.header {
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+  margin: 0;
+}
+
+// ── Availability meters ───────────────────────
+.meters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.meter {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.meterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.meterName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.meterValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.meterTrack {
+  height: 6px;
+  background: $grayBGC;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+// Width comes from the --fill custom property set in the component
+.meterFill {
+  height: 100%;
+  width: var(--fill);
+  border-radius: 3px;
+}
+
+.meterCaption {
+  display: block;
+  font-size: 0.78rem;
+  color: $text-muted;
+  margin-top: 0.6rem;
+}
+
+.meter_ms {
+  .meterValue {
+    color: $text-muted;
+  }
+  .meterFill {
+    background: $text-muted;
+  }
+}
+
+.meter_oeg {
+  border-color: $accent-border;
+
+  .meterValue {
+    color: $accent;
+  }
+  .meterFill {
+    background: $accent;
+  }
+}
+
+// ── Comparison table ──────────────────────────
+.tableWrapper {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+
+  th,
+  td {
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+
+    @include phone {
+      padding: 0.65rem 0.75rem;
+    }
+  }
+
+  thead th {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    border-bottom: 1px solid $border-strong;
+
+    @include phone {
+      font-size: 0.62rem;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// ── Legend (explains the icons, needed on phones where labels are hidden) ──
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 3rem;
+  font-size: 0.8rem;
+}
+
+// Kept for screen readers and search engines, hidden visually
+.caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.groupRow {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent;
+  background: $accent-light;
+}
+
+.row {
+  box-shadow: $shadow-row;
+}
+
+.control {
+  font-weight: 600;
+  color: $text-primary;
+  min-width: 11rem;
+
+  @include phone {
+    min-width: 8rem;
+  }
+}
+
+// Tints the Office Experts column so it reads as the recommended option
+.oegCol {
+  background: rgba($accent, 0.035);
+
+  thead & {
+    color: $accent;
+  }
+}
+
+// ── State labels ──────────────────────────────
+.state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+// Same visually-hidden pattern as .caption, applied on phones only
+.stateLabel {
+  @include phone {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+.state_locked {
+  color: $text-muted;
+}
+
+.state_open,
+.state_managed {
+  color: $accent;
+}
+
+.note {
+  display: block;
+  font-size: 0.75rem;
+  color: $text-secondary;
+  margin-top: 0.2rem;
+}

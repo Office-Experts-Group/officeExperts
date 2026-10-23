@@ -343,7 +343,7 @@ In VS Code: **Ctrl+Shift+H**, regex on (**Alt+R**), files to include `*.js, *.js
 
 `globals.scss` contains only variables and mixins, no CSS rules. That makes this a direct swap, and `as *` keeps `$accent` and `@include phone` working unchanged.
 
-- [ ] Files to include `*.scss`. **Find:** `@import "./globals.scss";` **Replace:** `@use "./globals" as *;`
+- [ ] Files to include `*.scss`. **Find:** `@use "./globals.scss" as *;` **Replace:** `@use "./globals" as *;`
 - [ ] Search `@import` in `*.scss`. Anything left (single quotes, other paths) gets changed by hand.
 - [ ] Optional tidy-up in `globals.scss`: `$accent-border` is declared twice (0.28, then 0.3; the second wins), and `$text-primary`, `$text-secondary` and `$text-muted` are each declared twice with the same value. Remove the duplicates; keep `$accent-border: rgba(4, 105, 153, 0.3)` so nothing changes visually.
 
@@ -1162,7 +1162,7 @@ These are the static routes for the `STATIC_ROUTES` list in `app/sitemap.js`, pl
 | Purpose                               | Files to include | Find (regex on)                                       | Replace                       |
 | ------------------------------------- | ---------------- | ----------------------------------------------------- | ----------------------------- |
 | Style imports → `.scss` via alias     | `*.js, *.jsx`    | `(["'])(?:\.{1,2}/)+styles/([\w.-]+?)\.module\.css\1` | `$1@/styles/$2.module.scss$1` |
-| `@import` → `@use`                    | `*.scss`         | `@import "./globals.scss";` (regex off)               | `@use "./globals" as *;`      |
+| `@import` → `@use`                    | `*.scss`         | `@use "./globals.scss" as *;` (regex off)             | `@use "./globals" as *;`      |
 | Component and utility imports → alias | `*.js, *.jsx`    | `from (["'])(?:\.{1,2}/)+(components\|utils)/`        | `from $1@/$2/`                |
 | Dynamic imports → alias               | `*.js, *.jsx`    | `import\((["'])(?:\.{1,2}/)+(components\|utils)/`     | `import($1@/$2/`              |
 | Leftover compiled CSS imports         | `*.js, *.jsx`    | `\.module\.css`                                       | (should find 0 results)       |

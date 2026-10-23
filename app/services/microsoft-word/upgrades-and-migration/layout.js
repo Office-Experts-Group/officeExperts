@@ -1,50 +1,42 @@
-import React from "react";
-
 export const metadata = {
-  // Basic metadata
-  title: "Word Upgrades and Migration | Office Experts Group",
+  title: "Word Upgrades and Migration | Word Experts",
   description:
-    "Expert Microsoft Word upgrade and migration services. Our team helps ensure smooth transitions between versions, fixes formatting issues, and handles PDF conversions professionally.",
-
-  // OpenGraph
+    "Expert Microsoft Word upgrade and migration services. Resolve formatting issues, maintain document integrity, and ensure smooth transitions.",
+  keywords: [
+    // Core services
+    "microsoft word version upgrade",
+    "microsoft word document migration",
+  ],
   openGraph: {
-    title: "Word Upgrades and Migration Services | Office Experts Group",
+    title: "Word Upgrades and Migration | Word Experts",
     description:
-      "Professional Microsoft Word upgrade and migration services. Specialists in version transitions, formatting fixes, and PDF conversions.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
-    siteName: "Office Experts Group",
+      "Expert Microsoft Word upgrade and migration services. Resolve formatting issues, maintain document integrity, and ensure smooth transitions.",
+    url: "https://www.wordexperts.com.au/upgrades-and-migration",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/upgrades-and-migration",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/upgrades-and-migration",
-      },
-    ],
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Word Upgrades and Migration Services | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Word Upgrades and Migration | Word Experts",
     description:
-      "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
+      "Expert Microsoft Word upgrade and migration services. Resolve formatting issues, maintain document integrity, and ensure smooth transitions.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/upgrades-and-migration",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

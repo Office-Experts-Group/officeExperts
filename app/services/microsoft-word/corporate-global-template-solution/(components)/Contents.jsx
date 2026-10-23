@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import styles from "@/styles/contentsComponent.module.scss";
+import styles from "../../../styles/contentsComponent.module.css";
+
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);
 
@@ -43,11 +44,19 @@ const Contents = () => {
           </svg>
           <h3>Contents</h3>
           <a
-            href="#template-solutions"
-            onClick={(e) => handleLinkClick(e, "#template-solutions")}
+            href="#consistent-branding"
+            onClick={(e) => handleLinkClick(e, "#consistent-branding")}
           >
             <div className={styles.contentLink}>
-              <p>Solutions You Need</p>
+              <p>Consistent Branding</p>
+            </div>
+          </a>
+          <a
+            href="#template-services"
+            onClick={(e) => handleLinkClick(e, "#template-services")}
+          >
+            <div className={styles.contentLink}>
+              <p>Template Services</p>
             </div>
           </a>
           <a
@@ -66,12 +75,9 @@ const Contents = () => {
               <p>No More Headaches!</p>
             </div>
           </a>
-          <a
-            href="#in-control"
-            onClick={(e) => handleLinkClick(e, "#in-control")}
-          >
+          <a href="#video" onClick={(e) => handleLinkClick(e, "#video")}>
             <div className={styles.contentLink}>
-              <p>Back In Control!</p>
+              <p>Video Tutorial</p>
             </div>
           </a>
         </div>

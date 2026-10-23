@@ -33,8 +33,6 @@ const generateReviewSchema = (
     name: testimonial.name,
   },
   reviewBody: testimonial.content,
-  // Use a real or approximate date if known; avoid all-same hardcoded dates for large sets
-  datePublished: testimonial.date || "2024-01-01",
   publisher: {
     "@type": "Organization",
     "@id": `${domain}#organization`,

@@ -1,11 +1,13 @@
+// app/accessibility/(components)/PageSegment4.jsx
+
 import React from "react";
-import Image from "next/image";
+
+import AnimateOnScroll from "../../../components/AnimateOnScroll";
+
+import styles from "../../../styles/pageSegment4.module.css";
+
+import TemplateGovernanceSVG from "../(svgs)/TemplateGovernanceSVG";
 import Link from "next/link";
-
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
-import styles from "@/styles/pageSegment4.module.scss";
-import eyes from "@/public/eyes600x394.webp";
 
 const Segment4Repeat = () => {
   return (
@@ -20,11 +22,11 @@ const Segment4Repeat = () => {
               We Understand Accessibility!
             </h2>
             <p>
-              Office Experts Group have worked with many{" "}
-              <Link href="/services/microsoft-word/government-departments">
+              Word Experts have worked with many{" "}
+              <Link href="/government-departments">
                 Government departments,
-              </Link>
-              state, federal and corporate, over many years. We understand the
+              </Link>{" "}
+              state, federal and corporate, over 25 years. We understand the
               department's needs and can tailor a solution that will assist
               hundreds of users in creating documents that not only look great
               but also adhere to the latest accessibility guidelines.
@@ -36,16 +38,9 @@ const Segment4Repeat = () => {
           </div>
         </AnimateOnScroll>
 
-        <AnimateOnScroll animation="scale-up" duration={1} delay={0.2}>
-          <div className="image-wrapper">
-            <Image
-              src={eyes}
-              alt="person clicking a computer mouse"
-              width={600}
-              height={394}
-            />
-          </div>
-        </AnimateOnScroll>
+        <div className={styles.svg}>
+          <TemplateGovernanceSVG />
+        </div>
       </div>
     </div>
   );

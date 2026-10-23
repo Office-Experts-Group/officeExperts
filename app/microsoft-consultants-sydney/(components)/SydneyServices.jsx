@@ -52,7 +52,7 @@ const services = [
     tag: "Cloud & Productivity",
     description:
       "Most organisations are paying for Microsoft 365 capabilities they are not using. We assess the current environment, identify what can be automated or simplified, and implement changes that reduce manual labour and open up a world of automation through Copilot Ai, Power Automate and Sharepoint.",
-    href: "https://www.officeexperts.com.au/services/microsoft-office-365",
+    href: "/services/microsoft-office-365",
     linkText: "Microsoft 365 Applications",
   },
   {
@@ -61,7 +61,7 @@ const services = [
     tag: "Integration & Build",
     description:
       "When your Microsoft environment needs to connect with third-party systems, or a standard tool does not quite fit the requirement, we build the bridge. Custom add-ins, API integrations, AI-powered automations and bespoke applications built on or even inside the Microsoft stack.",
-    href: "https://www.officeexperts.com.au/services/custom-office-solutions",
+    href: "/services/custom-office-solutions",
     linkText: "Custom Solutions",
   },
 ];

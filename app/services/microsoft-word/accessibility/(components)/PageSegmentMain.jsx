@@ -1,39 +1,51 @@
+// app/accessibility/(components)/PageSegmentMain.jsx
+
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "../../../styles/accessibilityPageSegmentMain.module.css";
 
-import styles from "@/styles/pageSegment.module.scss";
-import migrate from "@/public/migrate600x400.webp";
+import AccessibleDocumentSVG from "../(svgs)/AccessibleDocumentSVG";
 
 const PageSegmentMain = () => {
   return (
     <section className={styles.pageSegment}>
-      <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
-        <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
-          <Image
-            src={migrate}
-            alt="Image of a files leaving a computer"
-            width={600}
-            height={400}
-            priority
-          />
-        </AnimateOnScroll>
+      <div className={styles.svg}>
+        <AccessibleDocumentSVG />
       </div>
 
       <div className={styles.contentWrapper}>
-        <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
-          <div className={styles.content}>
-            <p>Expert Advice</p>
-            <h2>Accessible Documentation</h2>
-            <p>
-              Our team of word design experts can deliver your document
-              templates to the highest accessibility standards, setting your
-              business up to efficiently and effectively produce quality,
-              timely, consistent, and accessible documentation.
-            </p>
-          </div>
-        </AnimateOnScroll>
+        <div className={styles.content}>
+          <p>Professional Standards</p>
+          <h2>Word Document Accessibility</h2>
+          <p>
+            <strong>What is accessibility in a document?</strong> Document
+            accessibility means structuring a Word file, its headings, tables,
+            images, and reading order, so that anyone using a screen reader or
+            various forms of assistive technology can navigate and understand
+            the content as intended.
+          </p>
+          <p>
+            <strong>Why is it important?</strong> An inaccessible document can
+            lock people with disability out of information entirely, and for
+            government and many enterprise organisations, it's a legal
+            requirement, not just an added benefit.
+          </p>
+          <p>
+            Our team of word design experts can deliver your document templates
+            to the highest accessibility standards, setting your business up to
+            efficiently and effectively produce quality, timely, consistent, and
+            accessible documentation.
+          </p>
+
+          <Link
+            href="#standards"
+            className={`btn ${styles.ctaBtn}`}
+            style={{ width: "fit-content" }}
+          >
+            How we ensure accessibility
+          </Link>
+        </div>
       </div>
     </section>
   );

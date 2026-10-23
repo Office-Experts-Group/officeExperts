@@ -1,50 +1,43 @@
-import React from "react";
-
 export const metadata = {
-  // Basic metadata
-  title: "Microsoft Word Fill In Forms | Office Experts Group",
+  title: "Expert Creation of Word Fill in Forms | Word Experts",
   description:
-    "Expert Word form design services Specialising in user-friendly data entry solutions, form controls, and VBA integration. Professional form templates with consistent formatting.",
-
-  // OpenGraph
+    "Professional Microsoft Word form creation services. Custom fillable forms with data validation and protection. Improve data entry efficiency and accuracy.",
+  keywords: [
+    // Core services
+    "word fill in forms",
+  ],
   openGraph: {
-    title: "Word Fill In Forms & Form Design Services",
+    title: "Expert Creation of Word Fill in Forms | Word Experts",
     description:
-      "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
-    url: "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms",
-    siteName: "Office Experts Group",
+      "Professional Microsoft Word form creation services. Custom fillable forms with data validation and protection. Improve data entry efficiency and accuracy.",
+    url: "https://www.wordexperts.com.au/fill-in-forms",
+    siteName: "Word Experts",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Word Experts Logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
 
-  alternates: {
-    canonical: "https://www.wordexperts.com.au/fill-in-forms",
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms",
-      },
-    ],
-  },
-
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Word Fill In Forms & Form Design Services | Office Experts Group",
+    site: "@WordExpertsAU",
+    title: "Expert Creation of Word Fill in Forms | Word Experts",
     description:
-      "Professional Word form design services with user-friendly data entry, form controls, and VBA integration for consistent data formatting.",
+      "Professional Microsoft Word form creation services. Custom fillable forms with data validation and protection. Improve data entry efficiency and accuracy.",
     images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/fill-in-forms",
   },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

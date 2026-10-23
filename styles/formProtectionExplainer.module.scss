@@ -1,0 +1,210 @@
+// styles/formProtectionExplainer.module.scss
+
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: block;
+  color: $white-65;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  color: $white-90;
+
+  @include phone {
+    font-size: 1.7rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  margin-top: 1.25rem;
+  color: $white-55;
+  font-size: 1rem;
+  line-height: 1.7;
+
+  strong {
+    color: $white-88;
+  }
+}
+
+// ── Comparison diagram ───────────────────────────────────────────────────────
+.diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.method {
+  flex: 1;
+  border: 1px solid $white-12;
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.methodCurrent {
+  background: $accent-dim;
+  border-color: $accent-border;
+}
+
+.methodBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
+  background: $accent;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.methodBadgeMuted {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white-55;
+  border: 1px solid $white-18;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+}
+
+.methodTitle {
+  margin-top: 0.9rem;
+  font-size: 1.25rem;
+  color: $white-90;
+}
+
+.methodTitleMuted {
+  margin-top: 0.9rem;
+  font-size: 1.25rem;
+  color: $white-65;
+}
+
+.methodList {
+  margin-top: 1.1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    color: $white-88;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+}
+
+.methodListMuted {
+  margin-top: 1.1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    color: $white-55;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $white-35;
+    }
+  }
+}
+
+.methodDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: $white-08;
+    color: $white-55;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  @include phone {
+    span {
+      margin: 0 auto;
+    }
+  }
+}

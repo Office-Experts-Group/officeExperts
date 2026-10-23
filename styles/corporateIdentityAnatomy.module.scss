@@ -1,0 +1,141 @@
+// styles/corporateIdentityAnatomy.module.scss
+@use "./globals.scss" as *;
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba($accent, 0.9);
+  padding: 0.32rem 0.85rem;
+  border: 1px solid $accent-border;
+  border-radius: 2rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: $white-88;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 1rem 0 0 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.8;
+  margin: 1.25rem 0 0 0;
+}
+
+// ── Diagram + zone list, asymmetric split ──────────────
+.diagramRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 4.5rem;
+  align-items: start;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.diagramWrap {
+  position: sticky;
+  top: 6rem;
+  max-width: 340px;
+  margin: 0 auto;
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @include tablet {
+    position: relative;
+    top: auto;
+  }
+  @include phone {
+    position: relative;
+    top: auto;
+    max-width: 260px;
+  }
+}
+
+.zoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.zone {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1.1rem;
+}
+
+.zoneNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: $accent-dim;
+  border: 1px solid $accent-border;
+  color: $accent;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.zoneTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $white-88;
+  margin: 0.3rem 0 0.4rem 0;
+}
+
+.zoneBody {
+  font-size: 0.92rem;
+  color: $white-55;
+  line-height: 1.75;
+  margin: 0;
+}

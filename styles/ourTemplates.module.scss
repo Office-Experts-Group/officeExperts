@@ -1,0 +1,41 @@
+@use "./globals.scss" as *;
+
+.ourTemplates {
+  padding: 6rem 10vw;
+  background-color: $dark-bg;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 2rem;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.content {
+  margin-top: 5vw;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $white-90;
+  }
+  p {
+    color: $white-65;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    margin-top: 1.5rem;
+    text-transform: capitalize;
+  }
+}
+
+.deskOnly {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

@@ -55,10 +55,7 @@ const CanberraWhy = () => (
               in government, small business, hospitality and the ACT public
               sector.
             </p>
-            <Link
-              href="https://www.officeexperts.com.au/client-testimonials"
-              className={styles.headerLink}
-            >
+            <Link href="/client-testimonials" className={styles.headerLink}>
               Read client testimonials
               <svg
                 width="13"
