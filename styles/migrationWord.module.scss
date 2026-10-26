@@ -1,0 +1,185 @@
+// styles/migrationWord.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// ── Header ──
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1rem 4rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eyebrow {
+  grid-column: 1 / -1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── Version timeline ──
+// A rule runs along the top of the row; each era's dot sits on it
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid $border-strong;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.era {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.75rem;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: $accent;
+  }
+
+  // Latest era stands out as the destination
+  &:last-child::before {
+    box-shadow: 0 0 0 5px $accent-dim;
+  }
+}
+
+.format {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $text-muted;
+}
+
+.version {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+// ── What we fix ──
+.fixes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fix {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 6px;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+}
+
+.fixLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+}

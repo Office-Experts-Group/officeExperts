@@ -9,104 +9,12 @@ const CTAMain = dynamic(() => import("../(components)/CTAMain"));
 import styles from "../../styles/videoPortal.module.scss";
 
 import {
-  videoData,
   categories,
   getFeaturedVideos,
   getVideosByCategory,
   formatDuration,
   getPlainTextPreview,
-} from "../../videoData";
-
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
-
-// Generate video schema for each video
-const generateVideoSchema = (video) => ({
-  "@type": "VideoObject",
-  "@id": `https://www.wordexperts.com.au/video-portal#video-${video.id}`,
-  name: video.title,
-  description: video.description,
-  thumbnailUrl: video.thumbnailUrl,
-  uploadDate: video.uploadDate,
-  duration: `PT${video.duration}S`,
-  contentUrl: `https://www.wordexperts.com.au${video.videoUrl}`,
-  embedUrl: `https://www.wordexperts.com.au${video.videoUrl}`,
-  inLanguage: "en-AU",
-});
-
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.wordexperts.com.au",
-      "Word Experts",
-      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
-    ),
-    {
-      "@type": "WebPage",
-      "@id": "https://www.wordexperts.com.au/video-portal",
-      url: "https://www.wordexperts.com.au/video-portal",
-      name: "Microsoft Word Video Tutorials | Word Experts Australia",
-      isPartOf: {
-        "@id": "https://www.wordexperts.com.au#website",
-      },
-      datePublished: "2025-10-13T00:00:00+00:00",
-      dateModified: "2025-10-13T00:00:00+00:00",
-      description:
-        "Watch expert video tutorials on Microsoft Word. Learn document automation, template creation, VBA programming, and advanced Word techniques.",
-      breadcrumb: {
-        "@id": "https://www.wordexperts.com.au/video-portal#breadcrumb",
-      },
-      inLanguage: "en-AU",
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: ["https://www.wordexperts.com.au/video-portal"],
-        },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.wordexperts.com.au/video-portal#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.wordexperts.com.au",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Video Portal",
-        },
-      ],
-    },
-    {
-      "@type": "VideoGallery",
-      "@id": "https://www.wordexperts.com.au/video-portal#gallery",
-      name: "Word Experts Video Tutorial Library",
-      description:
-        "Comprehensive video tutorials covering Microsoft Word automation, templates, and advanced features",
-      inLanguage: "en-AU",
-      video: videoData.map((video) => generateVideoSchema(video)),
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.wordexperts.com.au#website",
-      url: "https://www.wordexperts.com.au",
-      name: "Word Experts Australia",
-      description:
-        "Australia's leading Microsoft Word specialists, creating custom templates, toolbars, ribbons, and document automation solutions for businesses nationwide.",
-      inLanguage: "en-AU",
-    },
-  ],
-};
+} from "./videoData";
 
 const VideoPortalPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -175,10 +83,6 @@ const VideoPortalPage = () => {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
       <div className={styles.headFiller}></div>
       <div className={styles.videoHeader}>
         <div className={styles.headerContent}>

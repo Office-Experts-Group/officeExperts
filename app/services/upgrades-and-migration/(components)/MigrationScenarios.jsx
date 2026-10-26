@@ -1,10 +1,24 @@
 // app/services/upgrades-and-migration/(components)/MigrationScenarios.jsx
+// Bento grid of the situations we see most often. Server component.
 
 import Link from "next/link";
 import styles from "@/styles/migrationScenarios.module.scss";
+
+// Custom icons, one per scenario, stored in the route's (svgs) folder
+import { SpreadsheetIcon } from "../(svgs)/SpreadsheetIcon";
+import { DatabaseIcon } from "../(svgs)/DatabaseIcon";
+import { WorkflowIcon } from "../(svgs)/WorkflowIcon";
+import { DataHubIcon } from "../(svgs)/DataHubIcon";
+import { LegacyAppIcon } from "../(svgs)/LegacyAppIcon";
+import { ArrowUpRightIcon } from "../(svgs)/ArrowUpRightIcon";
+
+// tone: "accent" or "dark" gives an inverse tile, anything else is a white tile.
+// wide: spans two thirds of the row on desktop and splits the copy into columns.
 const scenarios = [
   {
-    num: "01",
+    icon: SpreadsheetIcon,
+    tone: "accent",
+    wide: true,
     title: "Excel-based systems that have become unmanageable",
     problem:
       "Multiple files passed between teams, manual data entry with no validation, formulas referencing other files that may or may not be open, and macros nobody wants to touch. The business depends on the output but nobody trusts it completely.",
@@ -17,25 +31,25 @@ const scenarios = [
     },
   },
   {
-    num: "02",
+    icon: DatabaseIcon,
     title: "Access databases pushing past their limits",
     problem:
-      "Slow performance on larger datasets, crashes or data corruption in multi-user environments, and an interface that is frozen in a decade that has since passed. Access is capable software that has been around for decades, but it has clear limits around data volume, concurrent users, and integration.",
+      "Slow performance on larger datasets, crashes or corruption in multi-user environments, and an interface frozen in a decade that has since passed. Access is capable, but it has clear limits on data volume, concurrent users and integration.",
     resolution:
-      "We migrate the backend to SQL Server or Azure, and modernise or rebuild the frontend as a web application or Power App. The data and logic survive. The constraints don't.",
+      "We migrate the back end to SQL Server or Azure, and modernise or rebuild the front end as a web application or Power App. The data and logic survive. The constraints don't.",
     tag: "Access",
     link: {
-      href: "https://www.accessexperts.com.au/upgrades-and-migration",
-      label: "Access migration services",
+      href: "/services/sql-server-and-access-integration",
+      label: "SQL Server Upgrades",
     },
   },
   {
-    num: "03",
+    icon: WorkflowIcon,
     title: "Manual processes that should have been automated",
     problem:
-      "Email-based approvals sitting in inboxes. Data someone copies from one system into another every morning. Reports assembled by hand from five different sources. These get added to job descriptions and quietly accepted as how things work.",
+      "Approvals sitting in inboxes, data copied between systems every morning, and reports assembled by hand from five sources, quietly accepted as how things work.",
     resolution:
-      "We map the process, identify where automation makes sense, and build it using Power Automate. Approvals become workflows. Data moves automatically. Notifications happen without anyone sending them.",
+      "We map the process and build it in Power Automate. Approvals become workflows and data moves without anyone touching it.",
     tag: "Power Automate",
     link: {
       href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
@@ -43,12 +57,12 @@ const scenarios = [
     },
   },
   {
-    num: "04",
+    icon: DataHubIcon,
     title: "Data scattered across systems with no clear picture",
     problem:
-      "When data lives in multiple places with no structure connecting them, reporting becomes a project. By the time a report is finished, it is already out of date. Nobody is quite sure which version of the numbers is the right one.",
+      "When data lives in several places with nothing connecting them, reporting becomes a project, and nobody is sure which version of the numbers is right.",
     resolution:
-      "We centralise the data using Azure or SQL Server, build Power BI dashboards that pull from a single source, and where the volume warrants it, introduce Microsoft Fabric for more advanced analytics. Reporting that reflects what is actually happening now, not last week.",
+      "We centralise the data in Azure or SQL Server and build Power BI dashboards from a single source, adding Microsoft Fabric where the volume warrants it.",
     tag: "Power BI · Azure",
     link: {
       href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
@@ -56,23 +70,40 @@ const scenarios = [
     },
   },
   {
-    num: "05",
+    icon: LegacyAppIcon,
+    tone: "dark",
     title: "Legacy systems never built for today",
     problem:
-      "Some systems were not designed for remote access, modern browsers, or integration with anything built in the last five years. They do what they do, slowly, and cannot be extended without significant pain.",
+      "Systems not designed for remote access, modern browsers or integration with anything built in the last five years. They do what they do, slowly.",
     resolution:
-      "We rebuild or extend these as modern web applications, connect them to the rest of the environment via APIs and cloud services, and where it makes sense, introduce AI capabilities through tools like Microsoft Copilot.",
+      "We rebuild them as modern web applications, connect them through APIs and cloud services, and add AI with tools like Microsoft Copilot where it makes sense.",
     tag: "Custom Development",
-    link: null,
+    link: {
+      href: "/services/app-and-custom-development",
+      label: "App and custom development",
+    },
   },
 ];
+
+// Builds the tile's class list from its tone and width
+const tileClass = ({ tone, wide }) =>
+  [
+    styles.tile,
+    wide && styles.wide,
+    tone === "accent" && styles.toneAccent,
+    tone === "dark" && styles.toneDark,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
 const MigrationScenarios = () => {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
         <p className={styles.eyebrow}>Real-world scenarios</p>
-        <h2 className={styles.heading}>Situations we see most often.</h2>
+        <h2 className={styles.heading}>
+          Situations we see <span className={styles.accent}>most often.</span>
+        </h2>
         <p className={styles.subheading}>
           The clients we work with aren&rsquo;t usually dealing with exotic
           problems. They&rsquo;re dealing with systems that made sense when they
@@ -80,69 +111,43 @@ const MigrationScenarios = () => {
         </p>
       </div>
 
-      <div className={styles.scenarios}>
-        {scenarios.map((s) => (
-          <article key={s.num} className={styles.card}>
-            <div className={styles.cardMeta}>
-              <span className={styles.cardNum}>{s.num}</span>
-              <span className={styles.cardTag}>{s.tag}</span>
-            </div>
+      <ul className={styles.bento}>
+        {scenarios.map((s) => {
+          // Capitalised so JSX treats it as a component
+          const Icon = s.icon;
 
-            <h3 className={styles.cardTitle}>{s.title}</h3>
-
-            <div className={styles.cardSplit}>
-              <div className={styles.cardProblem}>
-                <p className={styles.splitLabel}>The situation</p>
-                <p>{s.problem}</p>
+          return (
+            <li key={s.title} className={tileClass(s)}>
+              <div className={styles.tileTop}>
+                <span className={styles.icon}>
+                  <Icon />
+                </span>
+                <span className={styles.tag}>{s.tag}</span>
               </div>
 
-              {/* Inlined -- no sub-component declaration */}
-              <div className={styles.cardDivider} aria-hidden="true">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 9h12M11 5l4 4-4 4"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+              <h3 className={styles.tileTitle}>{s.title}</h3>
+
+              <div className={styles.body}>
+                <div>
+                  <p className={styles.label}>The situation</p>
+                  <p>{s.problem}</p>
+                </div>
+                <div>
+                  <p className={styles.label}>What we do</p>
+                  <p>{s.resolution}</p>
+                </div>
               </div>
 
-              <div className={styles.cardResolution}>
-                <p className={styles.splitLabel}>What we do</p>
-                <p>{s.resolution}</p>
-                {s.link && (
-                  <Link href={s.link.href} className={styles.cardLink}>
-                    {s.link.label}
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link>
-                )}
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+              {s.link && (
+                <Link href={s.link.href} className={styles.tileLink}>
+                  {s.link.label}
+                  <ArrowUpRightIcon />
+                </Link>
+              )}
+            </li>
+          );
+        })}
+      </ul>
 
       <div className={styles.cta}>
         <div className={styles.ctaContent}>

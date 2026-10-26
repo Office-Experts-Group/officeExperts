@@ -7,7 +7,6 @@ import ThirdPartyIntro from "./(components)/ThirdPartyIntro";
 
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const Contact = dynamic(() => import("@/components/Contact"));
-const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const ThirdPartyPlatforms = dynamic(
   () => import("./(components)/ThirdPartyPlatforms"),
 );
