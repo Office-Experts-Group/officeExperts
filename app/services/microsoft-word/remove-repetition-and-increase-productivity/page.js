@@ -1,133 +1,181 @@
+// /services/microsoft-word/document-automation/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
-import PageSegmentMain from "./(components)/PageSegmentMain";
+// Above the fold: imported normally so they render in the initial HTML without a separate chunk
+import ServiceHero from "@/components/ServiceHero";
+import AutomationMain from "./(components)/AutomationMain";
 
-const PageSegmentImpact = dynamic(
-  () => import("./(components)/PageSegmentImpact"),
+// Below the fold: next/dynamic splits these into their own chunks (still server-rendered)
+const AutomationImpact = dynamic(
+  () => import("./(components)/AutomationImpact"),
 );
-const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
-const RelatedLinks = dynamic(() => import("../../components/RelatedLinks"));
-const Contact = dynamic(() => import("../../components/Contact"));
+const AutomationAi = dynamic(() => import("./(components)/AutomationAi"));
+const AutomationIntegration = dynamic(
+  () => import("./(components)/AutomationIntegration"),
+);
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import repetition from "../../public/pageHeros/repetition.webp";
-import repetitionMob from "../../public/pageHeros/mob/repetitionMob.webp";
+// Static image imports give Next.js the dimensions and a blur placeholder at build time
+import repetition from "@/public/pageHeros/repetition.webp";
+import repetitionMob from "@/public/pageHeros/mob/repetitionMob.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/document-automation";
+const PAGE_TITLE = "Word Document Automation Services";
+const PAGE_DESCRIPTION =
+  "Automate repetitive Word tasks with VBA macros, Building Blocks, smart templates, Copilot and custom AI agents. Australian Word automation experts since 2000.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+const HERO_ALT = "Microsoft Word automation flow";
+
+const DATE_PUBLISHED = "2018-07-16T02:11:12+10:00";
+const DATE_MODIFIED = "2026-10-26T00:00:00+11:00";
+
+// Shared Australia-wide service area used by each Service node
+const AREA_SERVED = { "@type": "Country", name: "Australia" };
+const PROVIDER = { "@id": `${SITE_URL}#organization` };
+
+// Small helper so each catalogue entry stays one line in the schema below
+const offer = (name, description) => ({
+  "@type": "Offer",
+  itemOffered: { "@type": "Service", name, description },
+});
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.wordexperts.com.au",
-      "Word Experts",
-      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
-      url: "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
-      name: "Word Document Automation Services | Word Experts",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.wordexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2018-07-15T16:11:12+00:00",
-      dateModified: "2026-06-17T00:00:00+00:00",
-      description:
-        "Automate repetitive Word tasks and increase productivity. Custom automation solutions for Microsoft Word documents and templates.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id":
-          "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
       },
+      mainEntity: { "@id": `${PAGE_URL}#service` },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.wordexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
+          name: "Services",
+          item: `${SITE_URL}/services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Microsoft Word",
+          item: `${SITE_URL}/services/microsoft-word`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
           name: "Word Document Automation",
-          item: "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity",
+          item: PAGE_URL,
         },
       ],
     },
     {
       "@type": "Service",
-      "@id":
-        "https://www.wordexperts.com.au/remove-repetition-and-increase-productivity#service",
+      "@id": `${PAGE_URL}#service`,
       name: "Word Document Automation",
-      provider: {
-        "@id": "https://www.wordexperts.com.au#organization",
-      },
-      description:
-        "Automate repetitive Word tasks and increase productivity. Custom automation solutions for Microsoft Word documents and templates.",
+      serviceType: "Microsoft Word document automation",
+      description: PAGE_DESCRIPTION,
+      provider: PROVIDER,
+      areaServed: AREA_SERVED,
       category: "Productivity Solutions",
-      areaServed: {
-        "@type": "Country",
-        name: "Australia",
-      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Word Automation Services",
         itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "VBA Macro Development",
-              description:
-                "Custom macro development for Word document automation",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Building Blocks & Quick Parts",
-              description: "Pre-built reusable document element libraries",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Template Automation",
-              description: "Automated document template solutions for teams",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Header & Footer Automation",
-              description: "Dynamic header and footer content automation",
-            },
-          },
+          offer(
+            "VBA Macro Development",
+            "Custom macros that run multi-step Word tasks at the click of a button",
+          ),
+          offer(
+            "Building Blocks & Quick Parts",
+            "Libraries of pre-formatted, reusable document elements",
+          ),
+          offer(
+            "Header & Footer Automation",
+            "Dynamic header and footer content that updates itself",
+          ),
+          offer(
+            "One-Click Page Layouts",
+            "Landscape, A3, multi-column and section break pages inserted on demand",
+          ),
+          offer(
+            "Template Standardisation",
+            "Locked templates that enforce brand standards across a team",
+          ),
+          offer(
+            "End-to-End Workflow Automation",
+            "Data merge, content population, PDF output and distribution",
+          ),
+        ],
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#ai-service`,
+      name: "AI Document Automation for Microsoft Word",
+      serviceType: "AI-assisted document automation",
+      description:
+        "Copilot in Word, Copilot Studio agents and custom-coded AI agents that draft content into structured Word templates for review.",
+      provider: PROVIDER,
+      areaServed: AREA_SERVED,
+      isRelatedTo: { "@id": `${PAGE_URL}#service` },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "AI Document Automation Services",
+        itemListElement: [
+          offer(
+            "Copilot in Word Setup",
+            "Configuring Microsoft 365 Copilot and training staff to produce on-brand drafts",
+          ),
+          offer(
+            "Copilot Studio Agents",
+            "Agents grounded in SharePoint content that assemble first drafts",
+          ),
+          offer(
+            "Custom AI Agent Development",
+            "Python and JavaScript agents that write directly into Word templates",
+          ),
+          offer(
+            "AI-Ready Word Templates",
+            "Templates rebuilt with styles and content controls so AI output lands correctly",
+          ),
         ],
       },
     },
@@ -145,19 +193,20 @@ const Page = () => {
         title="Word Document Automation"
         desktopImage={repetition}
         mobileImage={repetitionMob}
-        altDesk={"Microsoft Word automation flow"}
-        altMob={"Microsoft Word automation flow"}
+        altDesk={HERO_ALT}
+        altMob={HERO_ALT}
       />
-      <PageSegmentMain />
-      <PageSegmentImpact />
-      <PageSegment4 />
+      <AutomationMain />
+      <AutomationImpact />
+      <AutomationAi />
+      <AutomationIntegration />
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
         heading="Projects that removed repetitive document work"
         links={[
           {
-            href: "https://www.officeexperts.com.au/case-studies/financial-planning-word-document-builder",
+            href: "/case-studies/financial-planning-word-document-builder",
             linkText: "View the report builder",
             title:
               "Building each financial planning report from a pop-up form and a library of ready-made headings",
@@ -169,10 +218,10 @@ const Page = () => {
               "Word document builder with a pop-up form and heading library for financial planning reports",
           },
           {
-            href: "https://www.officeexperts.com.au/case-studies/windowline-proposals-database",
+            href: "/case-studies/automated-proposal-generation-in-microsoft",
             linkText: "Explore the Access to SQL Server build",
             title:
-              "Replacing 50-page proposals built with a database-driven document generator",
+              "Replacing 50-page proposals built by hand with a database-driven document generator",
             description:
               "A window and door installer was assembling proposals, quotes and contracts, often 50 pages or more, by hand from paper records and Excel. We designed an Access database, later migrated to SQL Server, where staff select the sections they need and the full Word document is generated with project and client details, quote tables, data and images.",
             image:

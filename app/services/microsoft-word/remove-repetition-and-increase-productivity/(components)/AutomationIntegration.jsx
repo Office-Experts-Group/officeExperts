@@ -1,7 +1,8 @@
-import React from "react";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
+// /services/microsoft-word/document-automation/(components)/AutomationIntegration.jsx
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+// Route-level illustration of a connected document system
 import IconDocumentSystem from "../(svgs)/IconDocumentSystem";
-import styles from "../../../styles/automationIntegration.module.css";
+import styles from "@/styles/automationIntegration.module.scss";
 
 const documentElements = [
   "Cover pages & title pages",
@@ -18,7 +19,20 @@ const documentElements = [
   "Automated numbering & cross-references",
 ];
 
-const PageSegment4 = () => (
+// Simple tick mark reused for every checklist row
+const Tick = () => (
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M4 10l4.5 4.5L16 6"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const AutomationIntegration = () => (
   <section className={styles.wrapper}>
     <div className={styles.inner}>
       <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
@@ -30,31 +44,19 @@ const PageSegment4 = () => (
           </h2>
           <p className={styles.body}>
             Our Word automation solutions handle the full range of document
-            components your team works with day-to-day. We build it once, test
-            it thoroughly, and roll it out across your business so every
-            document is consistent and effortless to produce.
+            components your team works with day to day. We build it once, test
+            it thoroughly and roll it out across your business so every document
+            is consistent and effortless to produce.
           </p>
 
           <ul
             className={styles.checklist}
             aria-label="Automated document elements"
           >
-            {documentElements.map((item, index) => (
-              <li key={index} className={styles.checkItem}>
+            {documentElements.map((item) => (
+              <li key={item} className={styles.checkItem}>
                 <span className={styles.tick} aria-hidden="true">
-                  <svg
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 10l4.5 4.5L16 6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Tick />
                 </span>
                 <span>{item}</span>
               </li>
@@ -67,8 +69,8 @@ const PageSegment4 = () => (
         <div className={styles.svgWrap}>
           <IconDocumentSystem className={styles.illustration} />
           <div className={styles.statPill}>
-            <strong>25+ years</strong>
-            <span>of Microsoft Word expertise</span>
+            <strong>Since 2000</strong>
+            <span>automating Microsoft Word for Australian teams</span>
           </div>
         </div>
       </AnimateOnScroll>
@@ -76,4 +78,4 @@ const PageSegment4 = () => (
   </section>
 );
 
-export default PageSegment4;
+export default AutomationIntegration;

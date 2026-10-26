@@ -1,0 +1,183 @@
+// styles/automationAi.module.scss
+@use "./globals" as *;
+
+.wrapper {
+  background: $background;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 48rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $darkGrayText;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: $text-primary;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// ── Approach cards ───────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Fill the AnimateOnScroll wrapper so both cards match height
+.grid > * {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 2.25rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 12px;
+
+  @include phone {
+    padding: 1.75rem;
+  }
+}
+
+.icon {
+  width: 2.75rem;
+  height: auto;
+  color: $accent;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  line-height: 1.75;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+  color: $body;
+  line-height: 1.6;
+
+  li::marker {
+    color: $accent;
+  }
+}
+
+.bestFor {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid $border;
+  font-size: 0.85rem;
+  color: $text-secondary;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── Accent band linking to AI-ready templates ──
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: $accent;
+  border-radius: 12px;
+
+  @media (max-width: 766px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+}
+
+.bandTitle {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 800;
+  color: $white;
+  line-height: 1.25;
+}
+
+.bandText {
+  max-width: 44rem;
+  margin-top: 0.6rem;
+  color: $white-88;
+  line-height: 1.75;
+}
+
+.bandLink {
+  flex-shrink: 0;
+  padding: 0.85rem 1.5rem;
+  background: $white;
+  color: $accent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}
