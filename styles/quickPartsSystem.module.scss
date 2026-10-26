@@ -1,0 +1,105 @@
+// styles/quickPartsSystem.module.scss
+
+@use "./globals" as *;
+
+.section {
+  background: $accent;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.eyebrow {
+  color: $white-65;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: $white;
+
+  @include phone {
+    font-size: 1.8rem;
+  }
+}
+
+// Second half of the headline — accent can't be used on an accent background
+.light {
+  color: $white-65;
+}
+
+.intro {
+  margin-top: 1.25rem;
+  color: $white-88;
+  line-height: 1.7;
+}
+
+.list {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $white-18;
+
+  &:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+.rowTitle {
+  display: block;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.rowDesc {
+  display: block;
+  margin-top: 0.35rem;
+  color: $white-88;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: $white;
+  transition: transform 0.2s ease;
+}

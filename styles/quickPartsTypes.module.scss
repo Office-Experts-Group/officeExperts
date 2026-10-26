@@ -1,0 +1,172 @@
+// styles/quickPartsTypes.module.scss
+
+@use "./globals" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  color: $white-65;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: $white-90;
+
+  @include phone {
+    font-size: 1.8rem;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin-top: 1.25rem;
+  color: $white-55;
+  line-height: 1.7;
+}
+
+// ── Feature rows: term | what it is | best used for ──
+.feature {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $white-12;
+
+  @include tablet {
+    grid-template-columns: 200px 1fr;
+  }
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.term {
+  color: $white;
+  font-weight: 700;
+}
+
+.what {
+  color: $white-65;
+  line-height: 1.6;
+}
+
+.use {
+  color: $white-55;
+  font-size: 0.92rem;
+  line-height: 1.6;
+
+  @include tablet {
+    grid-column: 2;
+  }
+}
+
+// ── Storage locations ──
+.storage {
+  margin-top: 5rem;
+}
+
+.storageHeading {
+  font-size: 1.5rem;
+  color: $white-90;
+}
+
+.storageIntro {
+  max-width: 720px;
+  margin-top: 0.75rem;
+  color: $white-55;
+  line-height: 1.7;
+}
+
+.storageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.storageCard {
+  background: $dark-surface;
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.storageRecommended {
+  background: $accent;
+
+  .storageTag {
+    background: $white-18;
+    color: $white;
+  }
+
+  .storageResult {
+    color: $white-88;
+  }
+}
+
+.storageTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $white-65;
+  background: $white-08;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+
+.storagePlace {
+  margin-top: 1rem;
+  color: $white;
+  font-weight: 700;
+}
+
+.storageResult {
+  margin-top: 0.5rem;
+  color: $white-55;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
