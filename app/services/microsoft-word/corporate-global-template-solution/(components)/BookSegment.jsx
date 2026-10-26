@@ -27,8 +27,8 @@ const BookSegment = () => {
       style={{ scrollMarginTop: "100px" }}
     >
       <h2>
-        Professional Document Template{" "}
-        <span className={styles.accent}>Services</span>
+        Professional Document{" "}
+        <span className={styles.accent}>Template Services</span>
       </h2>
       <p>
         With Office Experts, you're not just getting a template, you're getting

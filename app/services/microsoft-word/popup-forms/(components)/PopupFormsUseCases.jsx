@@ -1,9 +1,11 @@
-// app/popup-forms/(components)/PopupFormsUseCases.jsx
+// app/services/microsoft-word/popup-forms/(components)/PopupFormsUseCases.jsx
 
 import Link from "next/link";
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/popupFormsUseCases.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/popupFormsUseCases.module.scss";
 
+// size: lg (7 cols) · md (5 cols) · sm (4 cols) · wide (12 cols)
+// accent: true tiles sit on the brand-blue background
 const scenarios = [
   {
     id: "client-onboarding",
@@ -13,7 +15,9 @@ const scenarios = [
     capability:
       "A single popup form captures client details once and populates every document the engagement requires, from the engagement letter to the internal file note, keeping every record identical.",
     tag: "Onboarding",
-    href: "/companies-and-organisations",
+    href: "/services/microsoft-word/companies-and-organisations",
+    size: "lg",
+    accent: true,
   },
   {
     id: "compliance",
@@ -24,6 +28,7 @@ const scenarios = [
       "Validation rules and mandatory fields make sure a compliance document can't be finalised until every required detail has been entered correctly, reducing risk and rework.",
     tag: "Risk reduction",
     href: "/blog/word-templates-for-legal-firms",
+    size: "md",
   },
   {
     id: "government-forms",
@@ -33,7 +38,8 @@ const scenarios = [
     capability:
       "We build popup forms that enforce departmental formatting and accessibility requirements automatically, so compliant documents come out the same way every time, regardless of who's entering the data.",
     tag: "Public sector",
-    href: "/government-departments",
+    href: "/services/microsoft-word/government-departments",
+    size: "sm",
   },
   {
     id: "branded-comms",
@@ -43,7 +49,8 @@ const scenarios = [
     capability:
       "Form-driven documents pull from a locked brand template, so every letter, proposal or report keeps consistent fonts, spacing and logo placement without staff needing design skills.",
     tag: "Brand consistency",
-    href: "/brand-template",
+    href: "/services/microsoft-word/brand-template",
+    size: "sm",
   },
   {
     id: "hr-forms",
@@ -53,7 +60,8 @@ const scenarios = [
     capability:
       "Structured popup forms with required fields and dropdown answers make internal paperwork consistent and searchable, and can write directly into a tracking spreadsheet or database at the same time.",
     tag: "Internal process",
-    href: "/services/by-business-solution/custom-office-solutions",
+    href: "/services/custom-office-solutions",
+    size: "sm",
   },
   {
     id: "repeating-data",
@@ -64,12 +72,27 @@ const scenarios = [
       "We build forms that let users add as many repeating entries as needed, with each one correctly inserted into a table or repeating section in the finished document.",
     tag: "Repeating fields",
     href: "/blog/fields-and-repeating-data-in-word",
+    size: "wide",
+    accent: true,
   },
 ];
 
+const sizeClass = {
+  lg: styles.tileLg,
+  md: styles.tileMd,
+  sm: styles.tileSm,
+  wide: styles.tileWide,
+};
+
 // ── Small arrow icon ──────────────────────────────────────────────────────────
 const ArrowRight = () => (
-  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    aria-hidden="true"
+  >
     <path
       d="M3 7h8M7 3l4 4-4 4"
       stroke="currentColor"
@@ -102,42 +125,45 @@ const PopupFormsUseCases = () => (
       </div>
     </div>
 
-    {/* ── Scenario grid ── */}
-    <div className={styles.grid}>
-      {scenarios.map((s, i) => (
-        <AnimateOnScroll key={s.id} animation="fade-up" duration={0.5} delay={i * 0.07}>
-          <article className={styles.card}>
-            <div className={styles.cardHeader}>
-              <span className={styles.cardTag}>{s.tag}</span>
-              <h3 className={styles.cardScenario}>{s.scenario}</h3>
+    {/* ── Bento grid ── */}
+    <AnimateOnScroll animation="fade-up" duration={0.6}>
+      <div className={styles.bento}>
+        {scenarios.map((s, i) => (
+          <article
+            key={s.id}
+            className={`${styles.tile} ${sizeClass[s.size]} ${
+              s.accent ? styles.tileAccent : ""
+            }`}
+          >
+            <span className={styles.tileNum} aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+
+            <div className={styles.tileHead}>
+              <span className={styles.tileTag}>{s.tag}</span>
+              <h3 className={styles.tileTitle}>{s.scenario}</h3>
             </div>
 
-            <div className={styles.divider} aria-hidden="true" />
+            <div className={styles.tileBody}>
+              <div className={styles.challenge}>
+                <span className={styles.label}>A common challenge</span>
+                <p>{s.challenge}</p>
+              </div>
 
-            <div className={styles.block}>
-              <span className={styles.blockLabel}>
-                <span className={styles.labelDot} aria-hidden="true" />
-                A common challenge
-              </span>
-              <p className={styles.blockText}>{s.challenge}</p>
+              <div className={styles.help}>
+                <span className={styles.label}>How we can help</span>
+                <p>{s.capability}</p>
+              </div>
             </div>
 
-            <div className={`${styles.block} ${styles.blockSolution}`}>
-              <span className={styles.blockLabel}>
-                <span className={`${styles.labelDot} ${styles.labelDotAccent}`} aria-hidden="true" />
-                How we can help
-              </span>
-              <p className={styles.blockText}>{s.capability}</p>
-            </div>
-
-            <Link href={s.href} className={styles.cardLink}>
+            <Link href={s.href} className={styles.tileLink}>
               Read more
               <ArrowRight />
             </Link>
           </article>
-        </AnimateOnScroll>
-      ))}
-    </div>
+        ))}
+      </div>
+    </AnimateOnScroll>
   </section>
 );
 

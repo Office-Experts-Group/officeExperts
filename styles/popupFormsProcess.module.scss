@@ -1,0 +1,124 @@
+// styles/popupFormsProcess.module.scss
+
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: block;
+  color: $accent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: $text-primary;
+
+  @include phone {
+    font-size: 1.7rem;
+  }
+}
+
+.body {
+  margin-top: 1.25rem;
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  color: $accent;
+  font-weight: 700;
+}
+
+// ── Numbered steps ───────────────────────────────────────────────────────────
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $border;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.stepNum {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $accent-border;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepHeading {
+  font-size: 1.15rem;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+}
+
+.stepBody {
+  color: $text-secondary;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.cta {
+  width: fit-content;
+  color: #fff;
+  &:hover {
+    border: 1px solid $accent;
+  }
+}

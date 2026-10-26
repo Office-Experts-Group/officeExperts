@@ -1,7 +1,7 @@
-// app/popup-forms/(components)/PopupFormsProcess.jsx
+// app/services/microsoft-word/popup-forms/(components)/PopupFormsProcess.jsx
 
 import Link from "next/link";
-import styles from "../../../styles/popupFormsProcess.module.css";
+import styles from "@/styles/popupFormsProcess.module.scss";
 
 const steps = [
   {
@@ -29,7 +29,7 @@ const PopupFormsProcess = () => {
           <span className={styles.eyebrow}>How We Work</span>
           <h2 className={styles.heading}>
             What it's like to work with{" "}
-            <span className={styles.accent}>Word Experts.</span>
+            <span className={styles.accent}>Office Experts.</span>
           </h2>
           <p className={styles.body}>
             The best results come from understanding your pain points first,
@@ -38,10 +38,7 @@ const PopupFormsProcess = () => {
           </p>
           <p className={styles.body}>
             As part of the nationwide organisation{" "}
-            <Link
-              style={{ color: "#046999", fontWeight: "700" }}
-              href="https://www.officeexperts.com.au"
-            >
+            <Link style={{ color: "#046999", fontWeight: "700" }} href="/">
               Office Experts Group
             </Link>
             , we can also call on specialists in{" "}

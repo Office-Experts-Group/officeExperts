@@ -1,0 +1,315 @@
+// styles/popupFormsUseCases.module.scss
+// Bento layout for PopupFormsUseCases (12-column grid).
+
+$brand: #046999;
+$brand-deep: #03506f;
+$ink: #0f1f2b;
+$muted: #55626d;
+$page-bg: #f1f2f4;
+$radius: 24px;
+
+.section {
+  background: $page-bg;
+  padding: 5rem 2.5rem 6rem;
+}
+
+// ── Header ───────────────────────────────────────────────────────────────────
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $brand;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: $ink;
+}
+
+.accent {
+  font-family: var(--font-aptos), system-ui, sans-serif;
+  font-weight: 700;
+  color: $brand;
+}
+
+.headerBody {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: $muted;
+}
+
+// ── Bento grid ───────────────────────────────────────────────────────────────
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tileLg {
+  grid-column: span 7;
+}
+.tileMd {
+  grid-column: span 5;
+}
+.tileSm {
+  grid-column: span 4;
+}
+.tileWide {
+  grid-column: span 12;
+}
+
+// ── Tile ─────────────────────────────────────────────────────────────────────
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  padding: 2rem 2rem 1.75rem;
+  border-radius: $radius;
+  background: #fff;
+  color: $ink;
+  box-shadow: 0 1px 2px rgba(15, 31, 43, 0.04);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px rgba(15, 31, 43, 0.28);
+  }
+}
+
+// Large faded index number in the corner
+.tileNum {
+  position: absolute;
+  top: 0.6rem;
+  right: 1.5rem;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: 5.5rem;
+  line-height: 1;
+  color: rgba(4, 105, 153, 0.09);
+  pointer-events: none;
+  user-select: none;
+}
+
+.tileHead {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  max-width: 85%;
+}
+
+.tileTag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(4, 105, 153, 0.1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $brand;
+}
+
+.tileTitle {
+  margin: 0;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.tileBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  p {
+    margin: 0.4rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+}
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.challenge {
+  color: $muted;
+
+  .label {
+    color: #8a949c;
+  }
+}
+
+.help {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(15, 31, 43, 0.1);
+
+  .label {
+    color: $brand;
+  }
+}
+
+.tileLink {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: $brand;
+  text-decoration: none;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+// ── Accent tiles ─────────────────────────────────────────────────────────────
+.tileAccent {
+  background: linear-gradient(145deg, $brand 0%, $brand-deep 100%);
+  color: #fff;
+
+  .tileNum {
+    color: rgba(255, 255, 255, 0.12);
+  }
+
+  .tileTag {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+  }
+
+  .challenge {
+    color: rgba(255, 255, 255, 0.82);
+
+    .label {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .help {
+    border-top-color: rgba(255, 255, 255, 0.22);
+
+    .label {
+      color: #fff;
+    }
+  }
+
+  .tileLink {
+    color: #fff;
+  }
+}
+
+// Wide tile: challenge and solution side by side
+.tileWide {
+  .tileBody {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .challenge,
+  .help {
+    flex: 1;
+  }
+
+  .help {
+    padding-top: 0;
+    padding-left: 3rem;
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 1100px) {
+  .bento {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .tileLg,
+  .tileMd,
+  .tileWide {
+    grid-column: span 6;
+  }
+
+  .tileSm {
+    grid-column: span 3;
+  }
+
+  // Five tiles before the wide one: let the last small tile fill the row
+  .tileSm:nth-of-type(5) {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .tileLg,
+  .tileMd,
+  .tileSm,
+  .tileWide,
+  .tileSm:nth-of-type(5) {
+    grid-column: auto;
+  }
+
+  .tile {
+    padding: 1.5rem 1.35rem;
+  }
+
+  .tileHead {
+    max-width: 100%;
+  }
+
+  .tileWide .tileBody {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .tileWide .help {
+    padding-top: 1.25rem;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+}

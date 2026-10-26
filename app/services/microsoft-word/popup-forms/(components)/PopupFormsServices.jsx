@@ -1,11 +1,11 @@
-// app/popup-forms/(components)/PopupFormsServices.jsx
+// app/services/microsoft-word/popup-forms/(components)/PopupFormsServices.jsx
 
 import { PopupFormsSVG } from "../(svgs)/PopupFormsSVG";
 import { FormCaptureIcon } from "../(svgs)/FormCaptureIcon";
 import { ValidationRulesIcon } from "../(svgs)/ValidationRulesIcon";
 import { ConditionalLogicIcon } from "../(svgs)/ConditionalLogicIcon";
 import { DocumentMergeIcon } from "../(svgs)/DocumentMergeIcon";
-import styles from "../../../styles/popupFormsServices.module.css";
+import styles from "@/styles/popupFormsServices.module.scss";
 
 const services = [
   {

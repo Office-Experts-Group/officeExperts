@@ -1,7 +1,7 @@
-// app/popup-forms/(components)/PopupFormsHero.jsx
+// app/services/microsoft-word/popup-forms/(components)/PopupFormsHero.jsx
 import Link from "next/link";
 
-import styles from "../../../styles/popupFormsHero.module.css";
+import styles from "@/styles/popupFormsHero.module.scss";
 
 import PopupFormsCapabilities from "./PopupFormsCapabilities";
 
@@ -15,8 +15,8 @@ const PopupFormsHero = () => {
         {/* ── Left column ── */}
         <div className={styles.leftCol}>
           <h2 className={styles.heading}>
-            Popup forms that{" "}
-            <span className={styles.accent}>guide, validate, and protect.</span>
+            Popup forms that guide, validate,{" "}
+            <span className={styles.accent}>and protect.</span>
           </h2>
 
           <div className={styles.body}>
@@ -40,7 +40,7 @@ const PopupFormsHero = () => {
               Book a free consultation
             </Link>
             <Link
-              href="https://www.officeexperts.com.au/case-studies?site=word"
+              href="/case-studies?site=word"
               className={styles.ctaSecondary}
             >
               See what we build

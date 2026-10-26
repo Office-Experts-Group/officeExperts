@@ -8,6 +8,9 @@ $accent: #046999;
 
 $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
+.accent {
+  color: $accent;
+}
 // =============================================================================
 // Wrapper  NO height constraints; scene's aspect-ratio drives all sizing
 // =============================================================================

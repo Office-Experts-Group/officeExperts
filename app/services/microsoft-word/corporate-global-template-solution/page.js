@@ -182,7 +182,9 @@ const Page = () => {
       />
       <PageSegmentMain />
       <IFrame />
-      <BookSegment />
+      <div style={{ marginTop: "9rem" }}>
+        <BookSegment />
+      </div>
       <BlackSegment />
       <BoxSegment />
       <RelatedLinks

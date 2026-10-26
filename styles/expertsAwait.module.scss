@@ -44,6 +44,7 @@
     color: $offWhite;
     font-size: clamp(2rem, 5vw, 4rem);
     margin: 2rem 0 1rem 0;
+    line-height: 1.2;
   }
 
   @include phone {
@@ -77,6 +78,10 @@
     color: $offWhite;
     margin: 0 0 -0.5rem 0;
   }
+}
+
+.accent {
+  color: $accent;
 }
 
 .text {

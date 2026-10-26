@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { ArrowIcon } from "../(svgs)/ArrowIcon";
 
-import styles from "../../../styles/popupFormsHero.module.css";
+import styles from "@/styles/popupFormsHero.module.scss";
 
 // ── Expandable capability list shown on the right of the hero ────────────────
 const capabilities = [

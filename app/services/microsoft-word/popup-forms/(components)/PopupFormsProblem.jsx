@@ -1,7 +1,7 @@
-// app/popup-forms/(components)/PopupFormsProblem.jsx
+// app/services/microsoft-word/popup-forms/(components)/PopupFormsProblem.jsx
 
-import AnimateOnScroll from "../../../components/AnimateOnScroll";
-import styles from "../../../styles/popupFormsProblem.module.css";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import styles from "@/styles/popupFormsProblem.module.scss";
 
 // One custom icon per pain point — replaces the numbered badge used
 // elsewhere on this page, so each row is visually distinct at a glance.
@@ -61,7 +61,7 @@ const PopupFormsProblem = () => (
         </h2>
         <p className={styles.intro}>
           When templates rely heavily on manual text entry, formatting and
-          consistency will inevitably one of these days break down. With Word
+          consistency will inevitably one of these days break down. With Office
           Experts implementing automated pop-up forms, we eliminate these
           vulnerabilities entirely, guiding all users through error-proof,
           consistent data entry.

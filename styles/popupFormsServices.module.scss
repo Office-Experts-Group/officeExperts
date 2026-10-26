@@ -1,0 +1,204 @@
+// styles/popupFormsServices.module.scss
+
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4rem 6vw;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.leftCol {
+  position: sticky;
+  top: 6rem;
+
+  @include tablet {
+    position: static;
+  }
+
+  @include phone {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: block;
+  color: $white-65;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: $white-90;
+
+  @include phone {
+    font-size: 1.7rem;
+  }
+}
+
+.intro {
+  margin-top: 1.25rem;
+  color: $white-55;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.svgWrap {
+  margin-top: 2.5rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Service list ─────────────────────────────────────────────────────────────
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+// ── Highlighted card variant — used for the featured service (accent background) ──
+.serviceAccent {
+  background: $accent;
+  border-color: $accent;
+
+  .serviceHeading {
+    color: $white;
+  }
+
+  .serviceTag {
+    color: $white;
+    background: $white-18;
+  }
+
+  .serviceDescription,
+  .capabilities li {
+    color: $white-88;
+  }
+
+  .capabilities li::before {
+    background: $white;
+  }
+
+  .iconWrap {
+    color: $white;
+  }
+}
+
+.serviceTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.iconWrap {
+  color: $accent;
+  flex-shrink: 0;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.serviceTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.serviceHeading {
+  font-size: 1.3rem;
+  color: $text-primary;
+}
+
+.serviceTag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.75rem;
+  color: $accent;
+  background: $accent-light;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.serviceDescription {
+  color: $text-secondary;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.capabilities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: $text-secondary;
+    font-size: 0.92rem;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+}
