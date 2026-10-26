@@ -16,19 +16,19 @@ export const navigationData = {
         items: [
           {
             label: "Sydney",
-            href: "/microsoft-consultants-sydney/",
+            href: "/microsoft-consultants-sydney",
           },
           {
             label: "Wollongong",
-            href: "/microsoft-consultants-wollongong/",
+            href: "/microsoft-consultants-wollongong",
           },
           {
             label: "Central Coast",
-            href: "/microsoft-consultants-central-coast-nsw/",
+            href: "/microsoft-consultants-central-coast-nsw",
           },
           {
             label: "Northern Rivers",
-            href: "/microsoft-consultants-northern-rivers-nsw/",
+            href: "/microsoft-consultants-northern-rivers-nsw",
           },
         ],
       },
@@ -166,83 +166,79 @@ export const navigationData = {
       },
       {
         label: "Microsoft Word",
-        href: WORD_EXPERTS_URL,
+        href: "/services/microsoft-word",
         items: [
           {
             label: "Corporate Global Template",
-            href: `${WORD_EXPERTS_URL}/corporate-global-template-solution`,
+            href: `/services/microsoft-word/corporate-global-template-solution`,
           },
           {
             label: "Corporate Identity",
-            href: `${WORD_EXPERTS_URL}/corporate-identity`,
+            href: `/services/microsoft-word/corporate-identity`,
           },
           {
             label: "Word Document Template Creation",
-            href: `${WORD_EXPERTS_URL}/word-document-template-creation`,
+            href: `/services/microsoft-word/word-document-template-creation`,
           },
           {
             label: "Government Departments",
-            href: `${WORD_EXPERTS_URL}/government-departments`,
+            href: `/services/microsoft-word/government-departments`,
           },
           {
             label: "Companies & Organisations",
-            href: `${WORD_EXPERTS_URL}/companies-and-organisations`,
+            href: `/services/microsoft-word/companies-and-organisations`,
           },
           {
             label: "Remove Repetition, Increase Productivity",
-            href: `${WORD_EXPERTS_URL}/remove-repetition-and-increase-productivity`,
+            href: `/services/microsoft-word/remove-repetition-and-increase-productivity`,
           },
           {
             label: "Quick Parts",
-            href: `${WORD_EXPERTS_URL}/quick-parts`,
+            href: `/services/microsoft-word/quick-parts`,
           },
           {
             label: "Popup Forms",
-            href: `${WORD_EXPERTS_URL}/popup-forms`,
+            href: `/services/microsoft-word/popup-forms`,
           },
           {
             label: "Fill-In Forms",
-            href: `${WORD_EXPERTS_URL}/fill-in-forms`,
+            href: `/services/microsoft-word/fill-in-forms`,
           },
           {
             label: "Upgrading Word",
-            href: `${WORD_EXPERTS_URL}/upgrades-and-migration`,
+            href: `/services/microsoft-word/upgrades-and-migration`,
           },
           {
             label: "Accessibility",
-            href: `${WORD_EXPERTS_URL}/accessibility`,
+            href: `/services/microsoft-word/accessibility`,
           },
           {
             label: "Converting to Word Documents",
-            href: `${WORD_EXPERTS_URL}/word-template-conversions`,
+            href: `/services/microsoft-word/word-template-conversions`,
           },
           {
             label: "Custom Toolbars & Ribbons",
-            href: `${WORD_EXPERTS_URL}/custom-toolbars-and-ribbons`,
-          },
-          {
-            label: "Training and User Support",
-            href: `${WORD_EXPERTS_URL}/training`,
+            href: `/services/microsoft-word/custom-toolbars-and-ribbons`,
           },
           {
             label: "Document Rebranding",
-            href: `${WORD_EXPERTS_URL}/document-rebranding-services`,
+            href: `/services/microsoft-word/document-rebranding-services`,
           },
           {
             label: "Brand Templates",
-            href: `${WORD_EXPERTS_URL}/brand-template`,
+            href: `/services/microsoft-word/brand-template`,
           },
           {
             label: "Google Docs Migration",
-            href: `${WORD_EXPERTS_URL}/google-docs-to-word-migration`,
+            href: `/services/microsoft-word/google-docs-to-word-migration`,
           },
           {
             label: "API Integrations",
-            href: `${WORD_EXPERTS_URL}/microsoft-word-api-integrations`,
+            href: `/services/microsoft-word/microsoft-word-api-integrations`,
           },
           {
             label: "Mail Merge",
-            href: `${WORD_EXPERTS_URL}/mail-merge`,
+            href: `/services/microsoft-word/mail-merge`,
           },
         ],
       },
@@ -394,7 +390,7 @@ export const navigationData = {
           },
           {
             label: "AI Templates In Word",
-            href: `${WORD_EXPERTS_URL}/copilot-and-ai-templates`,
+            href: `/services/microsoft-word/ai-ready-word-templates`,
           },
         ],
       },

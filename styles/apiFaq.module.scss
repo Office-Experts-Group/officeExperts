@@ -1,0 +1,136 @@
+// styles/apiFaq.module.scss
+@use "./globals" as *;
+@use "./apiIntegration" as api;
+
+.section {
+  @include api.section-pad;
+  background: $grayBGC;
+}
+
+.inner {
+  @include api.inner;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 4rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.eyebrow {
+  @include api.eyebrow;
+}
+
+.heading {
+  @include api.heading;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include api.lede;
+  @include api.inline-link;
+}
+
+// ── Accordion ──
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  background: $white;
+  border: 1px solid api.$line;
+  border-radius: 12px;
+
+  &[open] .toggle::after {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.35rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: $text-primary;
+  cursor: pointer;
+  list-style: none;
+
+  // Hide the default disclosure triangle (Safari needs the webkit selector)
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+
+  @include phone {
+    padding: 1.15rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+// Plus sign built from two bars
+.toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: $accent;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  &::before {
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+  }
+
+  &::after {
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+  }
+}
+
+.answer {
+  padding: 0 1.6rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: $text-secondary;
+
+  @include phone {
+    padding: 0 1.25rem 1.25rem;
+  }
+}

@@ -1,6 +1,4 @@
 // /services/microsoft-word/government-departments/layout.js
-
-// Keep these three constants in sync with page.js (no shared config file).
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/government-departments";
 const PAGE_TITLE = "Government Department Word Document Solutions";
@@ -17,10 +15,7 @@ const OG_IMAGE = {
 export const metadata = {
   title: { absolute: PAGE_TITLE },
   description: PAGE_DESCRIPTION,
-  keywords: [
-    // Core services
-    "government word templates",
-  ],
+  keywords: ["government word templates"],
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,

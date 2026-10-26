@@ -1,0 +1,74 @@
+// styles/apiIntro.module.scss
+@use "./globals" as *;
+@use "./apiIntegration" as api;
+
+.section {
+  @include api.section-pad;
+  background: $white;
+}
+
+.inner {
+  @include api.inner;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.eyebrow {
+  @include api.eyebrow;
+}
+
+.heading {
+  @include api.heading;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  @include api.lede;
+}
+
+.chips {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: $accent;
+  background: rgba(4, 105, 153, 0.08);
+  border-radius: 2rem;
+  padding: 0.35rem 0.9rem;
+}
+
+.visual {
+  max-width: 520px;
+  margin: 0 auto;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

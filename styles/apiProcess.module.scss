@@ -1,0 +1,154 @@
+// styles/apiProcess.module.scss
+@use "./globals" as *;
+@use "./apiIntegration" as api;
+
+.section {
+  @include api.section-pad;
+  background: $white;
+}
+
+.inner {
+  @include api.inner;
+}
+
+.header {
+  max-width: 820px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  @include api.eyebrow;
+}
+
+.heading {
+  @include api.heading;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Steps: five columns on wide screens, stacked below ──
+.steps {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+
+  @include desktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid api.$line;
+}
+
+.number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $accent;
+}
+
+.title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: $text-primary;
+}
+
+.text {
+  @include api.inline-link;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: $text-secondary;
+}
+
+// ── Proof strip ──
+.proof {
+  margin-top: 4.5rem;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3.5rem;
+  align-items: center;
+  padding: 2.75rem 3rem;
+  border-radius: 14px;
+  background: linear-gradient(155deg, api.$ink 0%, #0e3a52 100%);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.25rem;
+  }
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 2rem 1.75rem;
+  }
+  @include phone {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.proofList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.proofItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.proofValue {
+  font-size: clamp(2.2rem, 3.8vw, 3.1rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $white;
+}
+
+.proofLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: $white-65;
+}
+
+.proofText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: $white-88;
+}

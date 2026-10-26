@@ -1,48 +1,57 @@
-import React from "react";
+// app/services/microsoft-365-api-integration/layout.js
+// Combined page: the Word, Excel, Power Platform and Access API pages
+// redirect here as part of the single-domain migration.
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-365-api-integration";
+const PAGE_TITLE =
+  "Microsoft 365 API Integration | Word, Excel & Power Platform";
+const PAGE_DESCRIPTION =
+  "Custom Microsoft 365 API integrations for Word, Excel, Outlook, Power Platform and Access. Office add-ins, Graph, Dataverse and AI agents, since 2000.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  title: "Microsoft 365 API Integration Services | Office Experts Group",
-  description:
-    "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
-
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    "microsoft 365 api integration",
+    "microsoft graph api integration",
+    "office add-in development",
+    "office.js developers",
+    "microsoft word api integration",
+    "excel api integration",
+    "power platform integration",
+    "dataverse api",
+    "power bi rest api",
+    "access database integration",
+    "copilot agent integration",
+    "mcp server microsoft 365",
+    "microsoft 365 integration australia",
+  ],
   openGraph: {
-    title: "Microsoft 365 API Integration Services | Office Experts Group",
-    description:
-      "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs.",
-    url: "https://www.officeexperts.com.au/services/microsoft-365-api-integration",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  keywords: [
-    // Core service keywords
-    "microsoft 365 api integration",
-  ],
-
-  alternates: {
-    canonical: "/services/microsoft-365-api-integration",
-  },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft 365 API Integration Services | Office Experts Group",
-    description:
-      "Professional Microsoft 365 API integration services. Custom portals, apps, and add-ins using Microsoft Graph and Office.js APIs—secure, mobile-ready, and tailored to your workflows.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function Microsoft365ApiIntegrationLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }
