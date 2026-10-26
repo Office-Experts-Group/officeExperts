@@ -1,0 +1,125 @@
+// styles/mailMergeOutputs.module.scss
+@use "./globals.scss" as *;
+
+@mixin stacked {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+.section {
+  background: $grayBGC;
+  padding: 7rem 8rem;
+  scroll-margin-top: 150px;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+// ── Header ──
+.header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.note {
+  margin-top: 1.25rem;
+  max-width: 56ch;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Typographic index: title | description | example fields ──
+.list {
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(14rem, 18rem) 1fr minmax(12rem, 16rem);
+  gap: 3rem;
+  align-items: start;
+  padding: 2.25rem 0;
+  border-top: 1px solid $border-strong;
+
+  &:last-child {
+    border-bottom: 1px solid $border-strong;
+  }
+
+  @include stacked {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1.75rem 0;
+  }
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.desc {
+  line-height: 1.85;
+  color: $text-secondary;
+  max-width: 62ch;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.fields {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+// Styled to read like a Word merge field
+.field {
+  font-family: ui-monospace, "Consolas", monospace;
+  font-size: 0.78rem;
+  color: $text-primary;
+  background: $white;
+  border: 1px solid $border-strong;
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+}

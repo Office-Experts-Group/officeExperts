@@ -1,0 +1,120 @@
+// styles/mailMergeIntro.module.scss
+@use "./globals.scss" as *;
+
+// Single-column layout below desktop (covers tablet, phone landscape and phone)
+@mixin stacked {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include stacked {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  p {
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: $text-secondary;
+  }
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+// Specificity bump so the eyebrow isn't overridden by `.copy p`
+.copy .eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Data source strip ──
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border;
+}
+
+.sourcesLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.sourceList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+
+  li {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: $text-primary;
+  }
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

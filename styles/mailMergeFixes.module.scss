@@ -1,0 +1,175 @@
+// styles/mailMergeFixes.module.scss
+@use "./globals.scss" as *;
+
+@mixin stacked {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+$mono: ui-monospace, "Consolas", monospace;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 150px;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+// ── Header ──
+.header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.note {
+  margin-top: 1.25rem;
+  max-width: 56ch;
+  line-height: 1.85;
+  color: $text-secondary;
+}
+
+// ── Rows: explanation | specimen ──
+.list {
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr minmax(20rem, 30rem);
+  gap: 4rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid $border-strong;
+
+  &:last-child {
+    border-bottom: 1px solid $border-strong;
+  }
+
+  @include stacked {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+}
+
+.problem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+
+  p {
+    max-width: 60ch;
+    line-height: 1.8;
+    color: $text-secondary;
+  }
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.code {
+  margin-top: 0.4rem;
+  font-family: $mono;
+  font-size: 0.82rem;
+  color: $text-primary;
+  background: $light-bg;
+  border-radius: 4px;
+  padding: 0.35rem 0.65rem;
+  overflow-wrap: anywhere;
+}
+
+// ── Specimen ──
+.specimen {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 0.75rem;
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.before,
+.after {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  font-family: $mono;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.before {
+  background: $before-bg;
+  color: $replace-x;
+}
+
+.after {
+  background: $grayBGC;
+  color: $text-primary;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.arrow {
+  align-self: center;
+  font-size: 1.2rem;
+  color: $accent;
+
+  @include phone {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+}

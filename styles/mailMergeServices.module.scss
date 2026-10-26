@@ -1,0 +1,206 @@
+// styles/mailMergeServices.module.scss
+@use "./globals.scss" as *;
+
+@mixin stacked {
+  @include tablet {
+    @content;
+  }
+  @include phoneLandscape {
+    @content;
+  }
+  @include phone {
+    @content;
+  }
+}
+
+.section {
+  background: $dark-bg;
+  padding: 8rem 8rem;
+  scroll-margin-top: 150px;
+
+  @include tablet {
+    padding: 5.5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include stacked {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// ── Left column ──
+.intro {
+  position: sticky;
+  top: 8rem;
+
+  @include stacked {
+    position: static;
+  }
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-55;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: $white;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  margin-top: 1.25rem;
+  max-width: 40ch;
+  line-height: 1.85;
+  color: $white-65;
+}
+
+// ── Disclosure list ──
+.item {
+  border-top: 1px solid $white-12;
+
+  &:last-child {
+    border-bottom: 1px solid $white-12;
+  }
+}
+
+.summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  padding: 1.75rem 0;
+
+  // Hide the default disclosure triangle in Safari
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.title {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white-55;
+}
+
+// Plus sign built from two bars; the vertical bar collapses when open to leave a minus
+.toggle {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: auto; // pushes the toggle to the right of the title and tag
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: $white-08;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.8rem;
+    height: 2px;
+    background: $white;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.item[open] .toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+}
+
+.body {
+  padding-bottom: 2.25rem;
+}
+
+.desc {
+  max-width: 64ch;
+  line-height: 1.85;
+  color: $white-65;
+  margin-bottom: 1.5rem;
+}
+
+.capabilities {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem 2rem;
+
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: $white-88;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+}
+
+// Accent text is low contrast on the dark background, so links use white with a soft underline
+.desc a,
+.capabilities a {
+  color: $white;
+  font-weight: 700;
+  text-decoration-color: $white-35;
+  text-underline-offset: 3px;
+}
