@@ -1,49 +1,51 @@
-import React from "react";
+// /app/blog/fields-and-repeating-data-in-word/layout.js
+
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/fields-and-repeating-data-in-word";
+const PAGE_TITLE = "Fields and Repeating Data in Word | Office Experts";
+const PAGE_DESCRIPTION =
+  "Enter data once and repeat it everywhere in Word. Learn REF fields, bookmarks, document properties and content controls for reliable business templates.";
+const PAGE_KEYWORDS = [
+  "fields and repeating data in word",
+  "word REF field",
+  "word bookmarks",
+  "word document properties",
+  "word content controls",
+  "business templates",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Fields and Repeating Data in Word - Business Templates",
-  description:
-    "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   openGraph: {
-    title: "Fields and Repeating Data in Word - Business Templates",
-    description:
-      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
-    url: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["fields and repeating data"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Fields and Repeating Data in Word - Business Templates",
-    description:
-      "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
-  alternates: {
-    canonical:
-      "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function BlogLayout({ children }) {
   return <>{children}</>;
 }

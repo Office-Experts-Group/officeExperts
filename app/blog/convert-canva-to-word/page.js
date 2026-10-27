@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Contact from "@/components/Contact";
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 import styles from "@/styles/canvaToWordBlog.module.scss";
 
@@ -66,7 +65,6 @@ const formatDate = (iso) =>
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

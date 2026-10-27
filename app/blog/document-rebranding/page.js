@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import Contact from "@/components/Contact";
 import RelatedLinks from "@/components/RelatedLinks";
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 import dan from "@/public/team/dan.webp";
 import styles from "@/styles/documentRebrandingBlog.module.scss";
 
@@ -64,7 +63,6 @@ const formatDate = (iso) =>
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

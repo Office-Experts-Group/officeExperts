@@ -1,15 +1,10 @@
 // /app/blog/document-rebranding/layout.js
-// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
-// This layout wraps only page.js, so canonical here is safe.
+
 const PAGE_URL = "https://www.officeexperts.com.au/blog/document-rebranding";
 const PAGE_TITLE = "Document Rebranding Without Starting Over | Office Experts";
 const PAGE_DESCRIPTION =
   "Rebrand your business documents without rebuilding them. Update logos, colours and details while keeping your structure, wording and workflow.";
-const PAGE_KEYWORDS = [
-  "document rebranding",
-  "rebrand business documents",
-  "Word template rebranding",
-];
+const PAGE_KEYWORDS = ["document rebranding"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
 const OG_IMAGE = {
