@@ -1,49 +1,49 @@
-import React from "react";
+// /app/blog/google-docs-vs-microsoft-word/layout.js
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+// This layout wraps only its own page.js, so canonical here is safe.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/google-docs-vs-microsoft-word";
+const PAGE_TITLE = "Google Docs vs Microsoft Word | Office Experts";
+const PAGE_DESCRIPTION =
+  "Compare Google Docs and Microsoft Word for enterprise use: collaboration, compliance, automation and scale, plus how to migrate from Docs to Word.";
+const PAGE_KEYWORDS = [
+  "google docs vs microsoft word",
+  "google docs to word migration",
+  "enterprise document management",
+  "microsoft word templates",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Google Docs vs Microsoft Word",
-  description:
-    "Compare Google Docs and Microsoft Word for enterprise use. Discover why many organisations migrate from Google Docs to Word for advanced features.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   openGraph: {
-    title: "Google Docs vs Microsoft Word",
-    description:
-      "Compare Google Docs and Microsoft Word for enterprise use. Discover why many organisations migrate from Google Docs to Word for advanced features, compliance, automation, and scalability needs.",
-    url: "https://www.wordexperts.com.au/blog/google-docs-vs-microsoft-word",
-    siteName: "Word Experts Australia",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Australia Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["google docs vs microsoft word"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title:
-      "Google Docs vs Microsoft Word: Which Is Best for Enterprise Workflows?",
-    description:
-      "Compare Google Docs and Microsoft Word for enterprise use. Discover why many organizations migrate from Google Docs to Word for advanced features, compliance, automation, and scalability needs.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
-  alternates: {
-    canonical: "/blog/google-docs-vs-microsoft-word",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }
