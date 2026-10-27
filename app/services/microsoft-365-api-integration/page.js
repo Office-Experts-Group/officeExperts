@@ -17,11 +17,6 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const ApiFaq = dynamic(() => import("./(components)/ApiFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 // Case study data (single source of truth for every case study card and page)
 import { getCaseStudyBySlug } from "@/app/case-studies/caseStudies";
 
@@ -124,8 +119,6 @@ const offers = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
@@ -182,7 +175,6 @@ const schema = {
       serviceType: "Software integration",
       url: PAGE_URL,
       description: PAGE_DESCRIPTION,
-      // Check this @id matches the one generateOrganizationSchema() outputs
       provider: { "@id": `${SITE_URL}#organization` },
       areaServed: { "@type": "Country", name: "Australia" },
       audience: {

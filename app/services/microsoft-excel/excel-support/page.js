@@ -11,16 +11,9 @@ import PageSegment3 from "./(components)/PageSegment3";
 import support from "@/public/pageHeros/support.webp";
 import meetingMob from "@/public/pageHeros/mob/meetingMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

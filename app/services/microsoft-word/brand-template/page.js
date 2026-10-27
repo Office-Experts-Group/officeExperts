@@ -19,11 +19,6 @@ const BoxSegment = dynamic(() => import("./(components)/BoxSegment"));
 import brandTemplate from "@/public/pageHeros/brandTemplate.webp";
 import brandTemplateMob from "@/public/pageHeros/mob/brandTemplateMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/brand-template";
 const PAGE_TITLE = "Microsoft Word Brand Template Services | Office Experts";
@@ -62,8 +57,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

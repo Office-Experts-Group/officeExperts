@@ -29,11 +29,6 @@ import faqSchema from "@/faqs/quickPartsSchema";
 import quickParts from "@/public/pageHeros/quickParts.webp";
 import quickPartsMob from "@/public/pageHeros/mob/quickPartsMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/quick-parts";
 const PAGE_TITLE = "Microsoft Word Quick Parts Services";
@@ -58,8 +53,6 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

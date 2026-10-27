@@ -8,20 +8,9 @@ import ContactNextSteps from "./(components)/ContactNextSteps";
 import contactUs from "@/public/pageHeros/contactUs.webp";
 import contactUsMob from "@/public/pageHeros/mob/contactUsMob.webp";
 
-import {
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/contact-us",

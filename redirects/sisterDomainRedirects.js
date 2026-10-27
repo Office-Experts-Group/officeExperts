@@ -112,11 +112,6 @@ const word = [
   // Legacy top-level /<slug> URLs: leave pointing at wordexperts until the end of the wave.
   // These stay for ALL slugs (including migrated ones) until the final repoint described above.
   ...WORD_SLUGS.map((slug) => permanent(`/${slug}`, `${DOMAINS.word}/${slug}`)),
-
-  permanent(
-    "/blog/convert-canva-to-word",
-    `${DOMAINS.word}/blog/convert-canva-to-word`,
-  ),
 ];
 
 // ── excelexperts.com.au: REMOVE OR REPOINT IN THE EXCEL WAVE ──

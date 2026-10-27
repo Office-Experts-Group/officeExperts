@@ -39,12 +39,6 @@ import { thirdPartyFaqs } from "@/faqs/thirdPartyFaqs";
 import thirdParty from "@/public/pageHeros/thirdParty.webp";
 import thirdPartyMob from "@/public/pageHeros/mob/thirdPartyMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const pageUrl =
   "https://www.officeexperts.com.au/services/3rd-party-application-or-office-integration";
 
@@ -54,8 +48,6 @@ const description =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts",

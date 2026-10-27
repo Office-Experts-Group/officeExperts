@@ -2,11 +2,7 @@
 // Structured data for the Northern NSW hub, kept out of page.js so the page stays readable.
 // Organization and ProfessionalService come from the shared generators. There is no
 // LocalBusiness node because no street address has been confirmed for this region.
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import { faqs } from "./northernNswData";
 
@@ -47,7 +43,6 @@ const buildFaqSchema = () => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Northern Rivers",

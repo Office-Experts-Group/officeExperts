@@ -22,11 +22,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import mailMerge from "@/public/pageHeros/merge.webp";
 import mailMergeMob from "@/public/pageHeros/mob/mergeMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/mail-merge";
 const PAGE_TITLE = "Mail Merge Services for Word, Excel and Outlook";
@@ -77,8 +72,6 @@ const SERVICES = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
@@ -141,7 +134,6 @@ const schema = {
       serviceType: "Mail merge set-up, automation and repair",
       description: PAGE_DESCRIPTION,
       url: PAGE_URL,
-      // Check this @id matches the one generateOrganizationSchema() outputs
       provider: { "@id": `${SITE_URL}#organization` },
       areaServed: { "@type": "Country", name: "Australia" },
       audience: {

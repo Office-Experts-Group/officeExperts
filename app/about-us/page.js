@@ -12,11 +12,6 @@ import ExpertsAwait from "@/components/ExpertsAwait";
 
 import { getAboutPageSchema } from "@/utils/testimonialSchemaGenerator";
 import { testimonials } from "@/testimonials";
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 
 import aboutUs from "@/public/pageHeros/aboutUs.webp";
 import aboutUsMob from "@/public/pageHeros/mob/aboutUsMob.webp";
@@ -26,14 +21,6 @@ const schema = {
   "@graph": [
     // Review + AggregateRating nodes (3 reviews on about page)
     ...getAboutPageSchema(testimonials)["@graph"],
-    generateOrganizationSchema(),
-
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     {
       "@type": "WebPage",

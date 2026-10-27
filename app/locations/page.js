@@ -9,12 +9,6 @@ import Contact from "@/components/Contact";
 import australia from "@/public/pageHeros/australia.webp";
 import australiaMob from "@/public/pageHeros/mob/australiaMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 // Import location images
 
 import sydney from "@/public/pageHeros/sydney.webp";
@@ -34,13 +28,6 @@ import cairns from "@/public/pageHeros/mob/cairnsColourMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/locations",

@@ -12,11 +12,7 @@ const RichmondContext = dynamic(() => import("./(components)/RichmondContext"));
 const RichmondWhy = dynamic(() => import("./(components)/RichmondWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 // TODO: add these two images (see hand-off notes)
 import richmond from "@/public/pageHeros/richmond.webp";
@@ -31,18 +27,12 @@ const PAGE_DESCRIPTION =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Richmond",
       regionCode: "VIC",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

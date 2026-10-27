@@ -13,11 +13,7 @@ const CairnsApproach = dynamic(() => import("./(components)/CairnsApproach"));
 const CairnsWhy = dynamic(() => import("./(components)/CairnsWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import cairns from "@/public/pageHeros/cairns.webp";
 import cairnsMob from "@/public/pageHeros/mob/cairnsMob.webp";
@@ -28,18 +24,12 @@ const PAGE_URL =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Cairns",
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

@@ -12,11 +12,7 @@ const BrisbaneContext = dynamic(() => import("./(components)/BrisbaneContext"));
 const BrisbaneWhy = dynamic(() => import("./(components)/BrisbaneWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import brisbane from "@/public/pageHeros/brisbane.webp";
 import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
@@ -27,18 +23,12 @@ const PAGE_URL =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Brisbane",
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

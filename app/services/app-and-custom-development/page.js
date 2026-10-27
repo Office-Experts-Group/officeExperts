@@ -19,12 +19,6 @@ import faqSchema from "@/faqs/appAndCustomDevelopmentSchema";
 import customDev from "@/public/pageHeros/custom-development.webp";
 import customDevMob from "@/public/pageHeros/mob/custom-development.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/app-and-custom-development`;
 
@@ -112,8 +106,6 @@ const offerings = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       SITE_URL,
       "Office Experts Group",

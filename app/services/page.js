@@ -38,12 +38,6 @@ import servicesHero from "@/public/pageHeros/services.webp";
 import servicesHeroMob from "@/public/pageHeros/mob/servicesMob.webp";
 
 import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
-import {
   pageMeta,
   groupIntro,
   navItems,
@@ -68,8 +62,6 @@ const PAGE_URL = `${pageMeta.siteUrl}${pageMeta.path}`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       pageMeta.siteUrl,
       "Office Experts",

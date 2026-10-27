@@ -28,17 +28,9 @@ const SolutionsCarousel = dynamic(
 import handShake from "@/public/pageHeros/handShake.webp";
 import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

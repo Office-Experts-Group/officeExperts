@@ -12,19 +12,12 @@ import RelatedLinks from "@/components/RelatedLinks";
 import graphMeeting from "@/public/pageHeros/graphMeeting.webp";
 import meetingMob from "@/public/pageHeros/mob/meetingMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 import faqs from "@/faqs/pivot";
 import faqSchema from "@/faqs/pivotSchema";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts",

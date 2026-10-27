@@ -14,11 +14,7 @@ import richmondMob from "@/public/pageHeros/mob/richmondMob.webp";
 import askExpert from "@/public/askExpert540x480.webp";
 import support from "@/public/support.webp";
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-support-and-training-richmond";
@@ -27,18 +23,13 @@ const PAGE_URL =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Richmond",
       regionCode: "VIC",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
+
     {
       "@type": "WebPage",
       "@id":

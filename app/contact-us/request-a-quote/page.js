@@ -7,20 +7,9 @@ import CTAMain from "../(components)/CTAMain";
 import calculator from "@/public/pageHeros/calculator.webp";
 import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
-import {
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/contact-us/request-a-quote",

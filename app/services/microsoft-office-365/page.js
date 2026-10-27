@@ -22,11 +22,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
 import { testimonials } from "@/testimonials";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 import longDesk from "@/public/pageHeros/longDesk.webp";
 import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
@@ -37,8 +32,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     ...getTestimonialsPageSchema(testimonials)["@graph"],
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

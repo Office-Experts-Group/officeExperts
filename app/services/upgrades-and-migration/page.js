@@ -11,10 +11,6 @@ import upgrades from "@/public/pageHeros/upgrades.webp";
 import upgradesMob from "@/public/pageHeros/mob/upgradesMob.webp";
 
 // Shared schema builders used across every service page
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
 
 // ── Below the fold: dynamic imports to split the JS bundle ──
 const MigrationProblem = dynamic(
@@ -131,8 +127,6 @@ const SERVICE_OFFERS = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

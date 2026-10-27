@@ -35,11 +35,6 @@ import faqSchema from "../wordFaqs/aiReadyWordTemplatesSchema";
 import AiWord from "@/public/pageHeros/AiWord.webp";
 import AiWordMob from "@/public/pageHeros/mob/AiWordMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/ai-ready-word-templates";
 const PAGE_TITLE = "Copilot & AI-Ready Word Templates | Office Experts";
@@ -76,8 +71,6 @@ const offers = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

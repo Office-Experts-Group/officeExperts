@@ -12,11 +12,7 @@ const AdelaideContext = dynamic(() => import("./(components)/AdelaideContext"));
 const AdelaideWhy = dynamic(() => import("./(components)/AdelaideWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import adelaide from "@/public/pageHeros/adelaide.webp";
 import adelaideMob from "@/public/pageHeros/mob/adelaideMob.webp";
@@ -30,18 +26,12 @@ const PAGE_DESCRIPTION =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Adelaide",
       regionCode: "SA",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

@@ -21,11 +21,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import repetition from "@/public/pageHeros/repetition.webp";
 import repetitionMob from "@/public/pageHeros/mob/repetitionMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/document-automation";
 const PAGE_TITLE = "Word Document Automation Services";
@@ -51,8 +46,6 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

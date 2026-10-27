@@ -13,17 +13,11 @@ import faqs from "@/faqs/custom-formulas";
 import tableGraph from "@/public/pageHeros/tableGraph.webp";
 import glassesMob from "@/public/pageHeros/mob/glassesMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
 import PageSegmentCenter from "./(components)/PageSegmentCenter";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

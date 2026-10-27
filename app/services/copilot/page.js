@@ -18,11 +18,6 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 // Schema generators shared across all pages
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 
 // Hero images
 import copilotDesk from "@/public/pageHeros/copilot.webp";
@@ -33,14 +28,6 @@ const PAGE_URL = "https://www.officeexperts.com.au/services/copilot";
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
-
     // ── Service ──────────────────────────────
     {
       "@type": "Service",

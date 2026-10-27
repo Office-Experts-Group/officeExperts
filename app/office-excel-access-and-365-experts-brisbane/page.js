@@ -12,11 +12,7 @@ import brisbane from "@/public/pageHeros/brisbane.webp";
 import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
 
 import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+
 import { testimonials } from "@/testimonials";
 
 import LocationSummary from "../(components)/LocationSummary";
@@ -26,13 +22,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     ...getHomePageSchema(testimonials, "office")["@graph"],
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
+
     {
       "@type": "WebPage",
       "@id":

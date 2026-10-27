@@ -29,12 +29,6 @@ import { testimonials } from "@/testimonials";
 import powerpoint from "@/public/pageHeros/powerpoint.webp";
 import powerpointMob from "@/public/pageHeros/mob/powerpointMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-powerpoint";
 
@@ -71,8 +65,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     ...getTestimonialsPageSchema(testimonials)["@graph"],
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
+
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts",

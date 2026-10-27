@@ -34,12 +34,6 @@ import faqSchema from "@/faqs/aiAgentDevelopmentSchema";
 import agents from "@/public/pageHeros/agents.webp";
 import agentsMob from "@/public/pageHeros/mob/agentsMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-agent-development`;
 
@@ -47,8 +41,6 @@ const PAGE_URL = `${SITE_URL}/services/ai-agent-development`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     generateWebSiteSchema(
       SITE_URL,
       "Office Experts",

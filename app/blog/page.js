@@ -11,23 +11,9 @@ import styles from "@/styles/blog.module.scss";
 
 import { blogPosts } from "./blogPosts";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
-
     // WebPage — describes this specific blog listing page
     {
       "@type": "WebPage",

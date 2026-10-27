@@ -28,11 +28,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import template from "@/public/pageHeros/template.webp";
 import templateMob from "@/public/pageHeros/mob/templateMob2.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation";
 const PAGE_TITLE = "Word Document Template Creation Services";
@@ -58,8 +53,6 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

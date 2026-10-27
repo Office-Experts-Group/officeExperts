@@ -14,11 +14,7 @@ const GoldCoastContext = dynamic(
 const GoldCoastWhy = dynamic(() => import("./(components)/GoldCoastWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import goldCoast from "@/public/pageHeros/goldCoast.webp";
 import goldCoastMob from "@/public/pageHeros/mob/goldCoastMob.webp";
@@ -32,18 +28,12 @@ const PAGE_DESCRIPTION =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Gold Coast",
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

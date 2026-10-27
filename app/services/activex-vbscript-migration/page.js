@@ -14,12 +14,6 @@ const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const Promo = dynamic(() => import("@/components/Promo"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 import migrate from "@/public/pageHeros/migrate.webp";
 import migrateMob from "@/public/pageHeros/mob/migrateMob.webp";
 
@@ -29,8 +23,6 @@ const PAGE_URL =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

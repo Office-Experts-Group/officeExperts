@@ -27,11 +27,6 @@ import faqs from "../wordFaqs/wordTemplateConversions";
 import conversion from "@/public/pageHeros/conversion.webp";
 import conversionMob from "@/public/pageHeros/mob/conversionMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-word/word-template-conversions`;
 const PAGE_TITLE = "Word Template Conversions | Office Experts";
@@ -83,8 +78,6 @@ const buildService = (slug, name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

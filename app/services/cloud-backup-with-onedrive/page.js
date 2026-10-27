@@ -8,22 +8,9 @@ import PageSegmentMain from "./(components)/PageSegmentMain";
 import marker from "@/public/pageHeros/marker.webp";
 import glassesMob from "@/public/pageHeros/mob/glassesMob.webp";
 
-import {
-  generateWebSiteSchema,
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts",
-      "Australia-wide Microsoft Office, Power Platform and AI Experts",
-    ),
     {
       "@type": "WebPage",
       "@id":

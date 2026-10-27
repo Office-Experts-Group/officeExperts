@@ -13,17 +13,9 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import notes from "@/public/pageHeros/notes.webp";
 import glassesMob from "@/public/pageHeros/mob/glassesMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts",

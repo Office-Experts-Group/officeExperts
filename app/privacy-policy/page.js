@@ -2,12 +2,11 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@/styles/boringStuff.module.scss";
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
+i;
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/privacy-policy",

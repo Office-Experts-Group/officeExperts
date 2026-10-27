@@ -11,22 +11,9 @@ import GoodToKnow from "../about-us/(components)/GoodToKnow";
 import perth from "@/public/pageHeros/perth.webp";
 import perthMob from "@/public/pageHeros/mob/perthMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id":

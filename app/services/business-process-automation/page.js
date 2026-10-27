@@ -16,12 +16,6 @@ const BPAFaq = dynamic(() => import("./(components)/BPAFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 import party from "@/public/pageHeros/3rdParty.webp";
 import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
@@ -33,8 +27,6 @@ const DESCRIPTION =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

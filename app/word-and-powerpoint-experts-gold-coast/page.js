@@ -11,22 +11,9 @@ import GoodToKnow from "../about-us/(components)/GoodToKnow";
 import goldCoast from "@/public/pageHeros/goldCoast.webp";
 import goldCoastMob from "@/public/pageHeros/mob/goldCoastMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id":

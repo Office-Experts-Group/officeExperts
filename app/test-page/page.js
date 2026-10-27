@@ -10,11 +10,6 @@ import Contact from "@/components/Contact";
 import upgrades from "@/public/pageHeros/upgrades.webp";
 import upgradesMob from "@/public/pageHeros/mob/upgradesMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 // ── Below-the-fold dynamic imports ───────────────────────
 const MigrationProblem = dynamic(
   () => import("./(components)/MigrationProblem"),
@@ -32,8 +27,6 @@ const MigrationScenarios = dynamic(
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/upgrades-and-migration",

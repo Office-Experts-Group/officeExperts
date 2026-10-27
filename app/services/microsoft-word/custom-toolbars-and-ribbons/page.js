@@ -29,11 +29,6 @@ import faqSchema from "../wordFaqs/customToolbarsSchema";
 import toolbars from "@/public/pageHeros/toolbars.webp";
 import toolbarsMob from "@/public/pageHeros/mob/toolbarsMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons";
 const PAGE_TITLE = "Custom Toolbars and Ribbons | Office Experts";
@@ -87,8 +82,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

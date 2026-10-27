@@ -7,12 +7,11 @@ import ServiceHero from "@/components/ServiceHero";
 import calculator from "@/public/pageHeros/calculator.webp";
 import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
+i;
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/refund-policy",

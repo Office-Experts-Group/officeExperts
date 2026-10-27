@@ -10,16 +10,9 @@ import SolutionsCarouselReverse from "./(components)/SolutionsCarouselReverse";
 import graphMeeting from "@/public/pageHeros/graphMeeting.webp";
 import meetingMob from "@/public/pageHeros/mob/meetingMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/by-business-solution",

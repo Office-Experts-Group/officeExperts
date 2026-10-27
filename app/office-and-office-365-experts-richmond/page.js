@@ -12,11 +12,7 @@ import richmond from "@/public/pageHeros/richmond.webp";
 import richmondMob from "@/public/pageHeros/mob/richmondMob.webp";
 
 import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+
 import { testimonials } from "@/testimonials";
 
 import LocationSummary from "../(components)/LocationSummary";
@@ -25,14 +21,8 @@ import Testimonials from "../(components)/Testimonials";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     ...getHomePageSchema(testimonials, "office")["@graph"],
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
+
     {
       "@type": "WebPage",
       "@id":

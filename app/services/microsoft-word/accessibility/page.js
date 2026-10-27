@@ -28,11 +28,6 @@ import faqSchema from "../wordFaqs/accessibilitySchema";
 import accessibility from "@/public/pageHeros/accessibility.webp";
 import accessibilityMob from "@/public/pageHeros/mob/accessibilityMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/accessibility";
 const PAGE_TITLE = "Microsoft Word Accessibility | Office Experts";
@@ -47,8 +42,6 @@ const DATE_PUBLISHED = "2018-07-16T02:14:28+10:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

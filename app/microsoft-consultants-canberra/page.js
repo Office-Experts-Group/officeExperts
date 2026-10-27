@@ -12,11 +12,7 @@ const CanberraContext = dynamic(() => import("./(components)/CanberraContext"));
 const CanberraWhy = dynamic(() => import("./(components)/CanberraWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import canberra from "@/public/pageHeros/canberra.webp";
 import canberraMob from "@/public/pageHeros/mob/canberraMob.webp";
@@ -27,18 +23,12 @@ const PAGE_URL =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Canberra",
       regionCode: "ACT",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

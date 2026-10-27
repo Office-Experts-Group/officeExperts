@@ -13,16 +13,9 @@ import ContentsCopy from "./(components)/ContentsCopy";
 import graphic from "@/public/pageHeros/graphic.webp";
 import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

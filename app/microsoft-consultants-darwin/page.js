@@ -10,11 +10,7 @@ const DarwinContext = dynamic(() => import("./(components)/DarwinContext"));
 const DarwinWhy = dynamic(() => import("./(components)/DarwinWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 // TODO: add these two images (see hand-off notes)
 import darwin from "@/public/pageHeros/darwin.webp";
@@ -29,18 +25,12 @@ const PAGE_DESCRIPTION =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Darwin",
       regionCode: "NT",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

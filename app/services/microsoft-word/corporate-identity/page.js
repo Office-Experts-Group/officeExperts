@@ -22,11 +22,6 @@ import faqSchema from "../wordFaqs/corporateSchema";
 import identity from "@/public/pageHeros/identity.webp";
 import identityMob from "@/public/pageHeros/mob/identityMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/corporate-identity";
 const PAGE_TITLE = "Word Document Corporate Identity";
@@ -65,8 +60,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

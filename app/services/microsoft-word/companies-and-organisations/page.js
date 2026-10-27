@@ -27,11 +27,6 @@ import faqSchema from "../wordFaqs/companiesSchema";
 import companies from "@/public/pageHeros/companies.webp";
 import companiesMob from "@/public/pageHeros/mob/companiesMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations";
 const PAGE_TITLE = "Word Template Designers | Office Experts";
@@ -82,8 +77,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

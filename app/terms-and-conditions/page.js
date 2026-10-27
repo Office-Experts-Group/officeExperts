@@ -7,12 +7,11 @@ import ServiceHero from "@/components/ServiceHero";
 import handShake from "@/public/pageHeros/handShake.webp";
 import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
+i;
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/terms-and-conditions",

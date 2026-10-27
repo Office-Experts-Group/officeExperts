@@ -10,16 +10,9 @@ import RelatedLinks from "@/components/RelatedLinks";
 import pen from "@/public/pageHeros/pen.webp";
 import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     {
       "@type": "WebPage",
       "@id":

@@ -10,11 +10,6 @@ import styles from "@/styles/caseStudies.module.scss";
 import caseStudiesPic from "@/public/pageHeros/caseStudies.webp";
 import caseStudiesPicMob from "@/public/pageHeros/mob/caseStudiesMob.webp";
 
-import {
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 // The ?site= param only ever changes the ORDER case studies render in, never
 // which ones appear — so this stays one page as far as Google's concerned.
 // Canonicalising to the bare URL makes that explicit, rather than leaving
@@ -26,12 +21,6 @@ export const metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Australia-wide Microsoft Office, Excel, Access, Word and Power Platform consulting experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/case-studies",

@@ -16,18 +16,11 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import query from "@/public/pageHeros/query.webp";
 import queryMob from "@/public/pageHeros/mob/queryMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 import faqs from "@/faqs/query";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

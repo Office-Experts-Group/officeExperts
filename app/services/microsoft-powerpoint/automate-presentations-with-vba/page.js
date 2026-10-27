@@ -10,17 +10,9 @@ import RelatedLinks from "@/components/RelatedLinks";
 import whiteBoard from "@/public/pageHeros/whiteBoard.webp";
 import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",

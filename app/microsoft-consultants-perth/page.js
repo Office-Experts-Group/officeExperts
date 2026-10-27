@@ -10,11 +10,7 @@ const PerthContext = dynamic(() => import("./(components)/PerthContext"));
 const PerthWhy = dynamic(() => import("./(components)/PerthWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import perth from "@/public/pageHeros/perth.webp";
 import perthMob from "@/public/pageHeros/mob/perthMob.webp";
@@ -24,18 +20,12 @@ const PAGE_URL = "https://www.officeexperts.com.au/microsoft-consultants-perth";
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Perth",
       regionCode: "WA",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────────────────────────────────
     {

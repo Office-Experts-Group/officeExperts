@@ -28,11 +28,6 @@ import dashboards from "@/public/pageHeros/dashboards.webp";
 import dashboardsMob from "@/public/pageHeros/mob/dashboardsMob.webp";
 
 // Shared schema builders used across the site
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/dashboards`;
@@ -72,8 +67,6 @@ const videos = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       SITE_URL,
       "Office Experts",

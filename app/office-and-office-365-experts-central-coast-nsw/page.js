@@ -14,24 +14,14 @@ import centralCoast from "@/public/pageHeros/melbourne.webp";
 import centralCoastMob from "@/public/pageHeros/mob/melbourneMob.webp";
 
 import { getHomePageSchema } from "@/utils/testimonialSchemaGenerator";
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+
 import { testimonials } from "@/testimonials";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     ...getHomePageSchema(testimonials, "office")["@graph"],
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
+
     {
       "@type": "WebPage",
       "@id":

@@ -60,7 +60,7 @@ export const blogPosts = [
     title: "How to Convert a Canva Design into a Microsoft Word Template",
     description:
       "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
-    slug: "https://www.wordexperts.com.au/blog/convert-canva-to-word",
+    slug: "https://www.officeexperts.com.au/blog/convert-canva-to-word",
     date: "April 14, 2025",
     author: "Daniel Thomas",
     readingTime: "5 min",
@@ -74,7 +74,7 @@ export const blogPosts = [
     title: "Ultimate Guide to Microsoft Word Templates",
     description:
       "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.",
-    slug: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
+    slug: "https://www.officeexperts.com.au/blog/ultimate-guide-to-word-templates",
     date: "April 8, 2025",
     author: "Daniel Thomas",
     readingTime: "8 min",
@@ -132,7 +132,7 @@ export const blogPosts = [
       "Fields and Repeating Data in Word: Best Practices for Business Templates",
     description:
       "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
-    slug: "https://www.wordexperts.com.au/blog/fields-and-repeating-data-in-word",
+    slug: "https://www.officeexperts.com.au/blog/fields-and-repeating-data-in-word",
     date: "July 24, 2025",
     author: "Daniel Thomas",
     readingTime: "12 min",
@@ -145,7 +145,7 @@ export const blogPosts = [
     title: "Creating Word Templates for Legal Firms: Best Practices",
     description:
       "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
-    slug: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
+    slug: "https://www.officeexperts.com.au/blog/word-templates-for-legal-firms",
     date: "July 25, 2025",
     author: "Daniel Thomas",
     readingTime: "10 min",
@@ -188,7 +188,7 @@ export const blogPosts = [
       "Google Docs vs Microsoft Word: Which Is Best for Enterprise Workflows?",
     description:
       "Compare Google Docs and Microsoft Word for enterprise use. Discover why many organisations migrate from Google Docs to Word for advanced features, compliance, automation, and scalability needs.",
-    slug: "https://www.wordexperts.com.au/blog/google-docs-vs-microsoft-word",
+    slug: "https://www.officeexperts.com.au/blog/google-docs-vs-microsoft-word",
     date: "August 27, 2025",
     author: "Rochelle Robinson",
     readingTime: "12 min",
@@ -216,7 +216,7 @@ export const blogPosts = [
     title: "PDF to Word Conversion That Works for Business",
     description:
       "Discover why professional PDF to Word conversion matters for business. Learn about accuracy, security, and formatting challenges that free converters can't handle.",
-    slug: "https://www.wordexperts.com.au/blog/pdf-to-word-conversion",
+    slug: "https://www.officeexperts.com.au/blog/pdf-to-word-conversion",
     date: "October 3, 2025",
     author: "Aleisha Robinson",
     readingTime: "10 min",

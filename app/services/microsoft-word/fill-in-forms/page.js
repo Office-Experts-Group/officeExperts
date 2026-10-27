@@ -24,11 +24,6 @@ import faqSchema from "../wordFaqs/fillFormsSchema";
 import fillForm from "@/public/pageHeros/fillForm.webp";
 import fillFormMob from "@/public/pageHeros/mob/fillFormMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms";
 const PAGE_TITLE = "Expert Creation of Word Fill in Forms | Office Experts";
@@ -71,8 +66,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

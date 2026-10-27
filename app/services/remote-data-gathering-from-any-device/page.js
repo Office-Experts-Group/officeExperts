@@ -13,22 +13,9 @@ const RDGHowItWorks = dynamic(() => import("./(components)/RDGHowItWorks"));
 import remote from "@/public/pageHeros/remote.webp";
 import remoteMob from "@/public/pageHeros/mob/remoteMob.webp";
 
-import {
-  generateWebSiteSchema,
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id":

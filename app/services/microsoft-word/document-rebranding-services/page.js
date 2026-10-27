@@ -18,11 +18,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import rebrand from "@/public/pageHeros/rebrand.webp";
 import rebrandingMob from "@/public/pageHeros/mob/rebrandingMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/document-rebranding-services";
 const PAGE_TITLE = "Document Rebranding Services | Office Experts";
@@ -77,8 +72,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

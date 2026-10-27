@@ -12,11 +12,6 @@ import faqSchema from "../wordFaqs/govSchema";
 import government from "@/public/pageHeros/government.webp";
 import governmentMob from "@/public/pageHeros/mob/governmentMob.webp";
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 const Contact = dynamic(() => import("@/components/Contact"));
 const GovDeptCompliance = dynamic(
   () => import("./(components)/GovDeptCompliance"),
@@ -83,8 +78,6 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

@@ -8,12 +8,6 @@ import { caseStudies, getCaseStudyBySlug, siteMeta } from "../caseStudies";
 
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
-
 const SITE_URL = "https://www.officeexperts.com.au";
 
 export function generateStaticParams() {
@@ -27,13 +21,6 @@ const buildSchema = (study) => {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      generateOrganizationSchema(),
-      generateProfessionalServiceSchema(),
-      generateWebSiteSchema(
-        SITE_URL,
-        "Office Experts Group",
-        "Australia-wide Microsoft Office, Excel, Word, Access and Power Platform Experts",
-      ),
       {
         "@type": "WebPage",
         "@id": url,

@@ -40,11 +40,6 @@ import emailTriage from "@/public/pageHeros/emailTriage.webp";
 import emailTriageMob from "@/public/pageHeros/mob/emailTriageMob.webp";
 
 // Shared schema builders (organisation, professional service, website)
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;
@@ -53,8 +48,6 @@ const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
-    generateProfessionalServiceSchema(),
     generateWebSiteSchema(
       SITE_URL,
       "Office Experts Group",

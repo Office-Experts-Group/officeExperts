@@ -12,11 +12,7 @@ const SydneyContext = dynamic(() => import("./(components)/SydneyContext"));
 const SydneyWhy = dynamic(() => import("./(components)/SydneyWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import {
-  generateLocalBusinessSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
+import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
 import sydney from "@/public/pageHeros/sydney.webp";
 import sydneyMob from "@/public/pageHeros/mob/sydneyMob.webp";
@@ -27,18 +23,12 @@ const PAGE_URL =
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     generateLocalBusinessSchema({
       pageUrl: PAGE_URL,
       city: "Sydney",
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Your Microsoft Office Design, Development and Consulting Experts",
-    ),
 
     // ── WebPage ──────────────────────────────
     {

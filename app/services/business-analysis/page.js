@@ -37,11 +37,6 @@ import ba from "@/public/pageHeros/business-analysis.webp";
 import baMob from "@/public/pageHeros/mob/business-analysisMob.webp";
 
 // Shared schema builders used across the group's sites
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/business-analysis`;
@@ -50,8 +45,6 @@ const PAGE_URL = `${SITE_URL}/services/business-analysis`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     generateWebSiteSchema(
       SITE_URL,
       "Office Experts Group",
