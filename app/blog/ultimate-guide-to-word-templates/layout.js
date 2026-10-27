@@ -1,42 +1,53 @@
+// /app/blog/ultimate-guide-to-word-templates/layout.js
+
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/ultimate-guide-to-word-templates";
+const PAGE_TITLE =
+  "Ultimate Guide to Microsoft Word Templates | Office Experts";
+const PAGE_DESCRIPTION =
+  "What is a Word template? Types, benefits, template hierarchy and management tips from Australia’s Word specialists, plus a guide to choosing the right one.";
+const PAGE_KEYWORDS = [
+  "what is a word template",
+  "microsoft word templates",
+  "word template guide",
+  "normal.dotm",
+  "workgroup templates",
+  "global templates word",
+  "word template types",
+  "corporate word templates australia",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
+
 export const metadata = {
-  title: "Ultimate Guide to Microsoft Word Templates",
-  description:
-    "What is a Word Template? Expert insights, tips, and guides for Microsoft Word users from Australia's leading Word specialists.",
-  keywords: [
-    // Reviews and feedback
-    "word experts reviews",
-  ],
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   openGraph: {
-    title: "Ultimate Guide to Microsoft Word Templates",
-    description:
-      "What is a Word Template? Expert insights, tips, and guides for Microsoft Word users from Australia's leading Word specialists.",
-    url: "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
-    siteName: "Office Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Word Experts Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Ultimate Guide to Microsoft Word Templates",
-    description:
-      "What is a Word Template? Expert insights, tips, and guides for Microsoft Word users from Australia's leading Word specialists.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
   alternates: {
-    canonical:
-      "https://www.wordexperts.com.au/blog/ultimate-guide-to-word-templates",
+    canonical: PAGE_URL,
   },
 };
 
