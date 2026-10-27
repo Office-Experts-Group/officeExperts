@@ -1,0 +1,120 @@
+// /styles/templateWhyChoose.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: $text-secondary;
+  line-height: 1.8;
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+// Rows split by hairlines, each led by a small accent dot
+.points {
+  list-style: none;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding: 1.1rem 0 1.1rem 1.75rem;
+    border-bottom: 1px solid $border;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.7rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+}
+
+.pointTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+// The flip book needs room to turn pages, so it is desktop only
+.book {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.conclusion {
+  max-width: 58rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.6;
+  color: $text-primary;
+
+  a {
+    color: $accent;
+  }
+}

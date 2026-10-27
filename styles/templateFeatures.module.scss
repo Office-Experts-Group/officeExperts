@@ -1,0 +1,142 @@
+// /styles/templateFeatures.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  // The AnimateOnScroll wrappers are the grid items; stretch the cards to fill them
+  > * {
+    display: flex;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card,
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 16px;
+  line-height: 1.8;
+
+  a {
+    font-weight: 700;
+  }
+
+  @include phone {
+    padding: 2rem 1.5rem;
+  }
+}
+
+// ── Quick Parts: light card ──
+.card {
+  background: $white;
+  color: $text-secondary;
+
+  a {
+    color: $accent;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0.4rem 0.9rem;
+    background: $grayBGC;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+}
+
+// ── Accessibility: accent panel with lighter text ──
+.panel {
+  background: $accent;
+  color: $white-88;
+
+  a {
+    color: $white;
+  }
+}
+
+.panelHeading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $white;
+}
+
+.muted {
+  color: $white-75;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-weight: 700;
+    color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+// /styles/templateStyleGuides.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+// Heading on the left, copy on the right
+.guides {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $white-90;
+}
+
+.accent {
+  color: $accent;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: $white-75;
+  line-height: 1.8;
+
+  strong {
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    font-weight: 700;
+  }
+}
+
+// ── InDesign conversion ──
+.conversion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3.5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 2rem;
+  }
+  @include phone {
+    padding: 2rem 1.25rem;
+  }
+}
+
+.subheading {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: $white-90;
+}
+
+// The illustration uses currentColor, so the colour is set here
+.visual {
+  color: $white-65;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  [data-accent] {
+    fill: $accent;
+  }
+}

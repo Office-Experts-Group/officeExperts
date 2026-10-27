@@ -1,0 +1,104 @@
+// /styles/templateDesignPrinciples.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: $white-75;
+  line-height: 1.8;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $white-65;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $white-90;
+}
+
+.accent {
+  color: $accent;
+}
+
+// The pages are tall and tilted, so on desktop they are pulled up and down
+// to close the empty space above the text and below the cards
+.cards {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 1025px) {
+    margin: -6rem 0 -3rem;
+  }
+}
+
+// Three plain columns split by hairlines, so they read differently to the card grids elsewhere
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid $white-18;
+    color: $white-75;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.principleTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $white-90;
+}
+
+.closing {
+  max-width: 60rem;
+  color: $white-75;
+  line-height: 1.8;
+}

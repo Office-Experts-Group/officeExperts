@@ -209,6 +209,7 @@ export const caseStudies = [
     ],
   },
   {
+    // on LinkedIn***
     slug: "legal-firm-word-training-workshop",
     client: "the client",
     author: "Damien",

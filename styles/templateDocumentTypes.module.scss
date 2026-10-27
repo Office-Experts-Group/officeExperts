@@ -1,0 +1,238 @@
+// /styles/templateDocumentTypes.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 6vw;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Bento grid ──
+// Four columns on desktop. Tiles span 1 or 2 columns and rows, and the grid places them
+// automatically in the order they appear in the component.
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 15rem;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 766px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(14rem, auto);
+  }
+}
+
+// ── Shapes ──
+.shapeHero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.shapeWide {
+  grid-column: span 2;
+}
+
+.shapeTall {
+  grid-row: span 2;
+}
+
+// A tall tile has no room for two rows once the grid drops to two columns
+@media (max-width: 1024px) {
+  .shapeTall {
+    grid-row: auto;
+  }
+}
+
+// Single column: every tile is one cell
+@media (max-width: 766px) {
+  .shapeHero,
+  .shapeWide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+// ── Tiles: illustration in the corner, text anchored to the bottom ──
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 1.75rem;
+  background: $light-bg;
+  border-radius: 20px;
+  color: $text-secondary;
+  font-size: 0.92rem;
+  line-height: 1.6;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.tileBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tileTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+// ── Illustrations ──
+// They draw in currentColor, so each tone below sets the colour.
+.art {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.25rem;
+  width: 40%;
+  color: $accent;
+  pointer-events: none;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Sits behind the text once tiles get narrow
+  @media (max-width: 766px) {
+    opacity: 0.25;
+  }
+}
+
+.shapeWide .art {
+  top: auto;
+  right: 1.5rem;
+  bottom: -2.5rem;
+  width: 38%;
+}
+
+.shapeHero .art {
+  top: 1.5rem;
+  right: -2rem;
+  width: 58%;
+}
+
+@media (min-width: 1025px) {
+  .shapeTall .art {
+    top: -1rem;
+    right: 50%;
+    width: 70%;
+    transform: translateX(50%);
+  }
+}
+
+// Text keeps to the side the illustration leaves free
+.shapeWide .tileBody,
+.shapeHero .tileBody {
+  max-width: 52%;
+
+  @media (max-width: 766px) {
+    max-width: none;
+  }
+}
+
+.shapeHero {
+  padding: 2.5rem;
+  font-size: 1.1rem;
+
+  .tileTitle {
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    letter-spacing: -0.03em;
+  }
+
+  @include phone {
+    padding: 1.75rem;
+  }
+}
+
+// ── Tones: accent and dark tiles use lighter text ──
+.toneAccent {
+  background: $accent;
+  color: $white-88;
+
+  a {
+    color: $white;
+  }
+
+  .tileTitle,
+  .art {
+    color: $white;
+  }
+}
+
+.toneDark {
+  background: $dark-bg;
+  color: $white-75;
+
+  a {
+    color: $white;
+  }
+
+  .tileTitle {
+    color: $white-90;
+  }
+
+  .art {
+    color: $white;
+
+    // Pops the highlighted shapes in the illustration
+    [data-accent] {
+      fill: $accent;
+    }
+  }
+}
+
+.showcase {
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,80 @@
+// /styles/templateIntro.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 6vw;
+  overflow: hidden;
+  // Creates a stacking context so the cards can sit behind the text but above the background
+  isolation: isolate;
+
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// The cards follow the text in the HTML but sit on the left on desktop.
+// The tilt fans the pages out; z-index keeps any overhang behind the text.
+.cards {
+  order: -1;
+  position: relative;
+  // z-index: -1;
+  padding: 2rem 0;
+  transform: rotate(-10deg);
+
+  @media (max-width: 1024px) {
+    order: 0;
+    transform: rotate(-6deg);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  color: $text-secondary;
+  line-height: 1.8;
+
+  strong {
+    color: $text-primary;
+  }
+
+  a:not(:global(.btn)) {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.accent {
+  color: $accent;
+}

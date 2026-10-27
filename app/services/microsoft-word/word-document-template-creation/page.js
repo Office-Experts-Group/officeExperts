@@ -1,102 +1,191 @@
+// /services/microsoft-word/word-document-template-creation/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "../../components/ServiceHero";
-import PageSegmentMain from "./(components)/PageSegmentMain";
+// Above the fold: imported normally so they render in the initial HTML without a separate chunk
+import ServiceHero from "@/components/ServiceHero";
+import TemplateIntro from "./(components)/TemplateIntro";
 
-const Contact = dynamic(() => import("../../components/Contact"));
-const Segment4Repeat = dynamic(() => import("./(components)/Segment4Repeat"));
-const PageSegment5 = dynamic(() => import("./(components)/PageSegment5"));
-const ExpertsAwait = dynamic(() => import("../../components/ExpertsAwait"));
-const Segment4 = dynamic(() => import("./(components)/Segment4"));
-const Segment5 = dynamic(() => import("./(components)/Segment5"));
-const Segment6 = dynamic(() => import("./(components)/Segment6"));
-const Segment7 = dynamic(() => import("./(components)/Segment7"));
-const Segment8 = dynamic(() => import("./(components)/Segment8"));
-const Conclusion = dynamic(() => import("./(components)/Conclusion"));
-const Image = dynamic(() => import("./(components)/Image"));
-const TemplateCards = dynamic(() => import("../../components/TemplateCards"));
-const RelatedLinks = dynamic(() => import("../../components/RelatedLinks"));
+// Below the fold: next/dynamic splits these into their own chunks (still server-rendered)
+const TemplateDesignPrinciples = dynamic(
+  () => import("./(components)/TemplateDesignPrinciples"),
+);
+const TemplateDocumentTypes = dynamic(
+  () => import("./(components)/TemplateDocumentTypes"),
+);
+const TemplateStyleGuides = dynamic(
+  () => import("./(components)/TemplateStyleGuides"),
+);
+const TemplateFeatures = dynamic(
+  () => import("./(components)/TemplateFeatures"),
+);
+const TemplateWhyChoose = dynamic(
+  () => import("./(components)/TemplateWhyChoose"),
+);
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import startup from "../../public/pageHeros/startup.webp";
-import graph from "../../public/pageHeros/mob/graph.webp";
+import template from "@/public/pageHeros/template.webp";
+import templateMob from "@/public/pageHeros/mob/templateMob2.webp";
 
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
-  generateWebSiteSchema,
-} from "../../utils/schemaGenerators";
+} from "@/utils/schemaGenerators";
 
-import page1 from "../../public/books/environment/page1.webp";
-import page2 from "../../public/books/environment/page2.webp";
-import page3 from "../../public/books/environment/page3.webp";
-import page4 from "../../public/books/environment/page4.webp";
-import page5 from "../../public/books/environment/page5.webp";
-import page6 from "../../public/books/environment/page6.webp";
-import page7 from "../../public/books/environment/page7.webp";
-import page8 from "../../public/books/environment/page8.webp";
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation";
+const PAGE_TITLE = "Word Document Template Creation Services";
+const PAGE_DESCRIPTION =
+  "Professional Microsoft Word template creation services. Custom document templates that maintain brand consistency and improve productivity.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+const HERO_ALT = "Word document template design";
+
+const DATE_PUBLISHED = "2018-01-13T14:26:07+00:00";
+const DATE_MODIFIED = "2026-10-27T00:00:00+11:00";
+
+// Shared Australia-wide service area used by each Service node
+const AREA_SERVED = { "@type": "Country", name: "Australia" };
+const PROVIDER = { "@id": `${SITE_URL}#organization` };
+
+// Small helper so each catalogue entry stays one line in the schema below
+const offer = (name, description) => ({
+  "@type": "Offer",
+  itemOffered: { "@type": "Service", name, description },
+});
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
     generateOrganizationSchema(),
-    generateWebSiteSchema(
-      "https://www.wordexperts.com.au",
-      "Word Experts",
-      "Australia-wide Microsoft Word Design, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
-      "@id": "https://www.wordexperts.com.au/word-document-template-creation",
-      url: "https://www.wordexperts.com.au/word-document-template-creation",
-      name: "Word Document Template Creation",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.wordexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2018-01-13T14:26:07+00:00",
-      dateModified: "2026-03-02T00:00:00+00:00",
-      description:
-        "Professional Microsoft Word template creation services. Custom document templates that maintain brand consistency and improve productivity.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id":
-          "https://www.wordexperts.com.au/word-document-template-creation#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
       },
+      mainEntity: { "@id": `${PAGE_URL}#service` },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.wordexperts.com.au/word-document-template-creation",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.wordexperts.com.au/word-document-template-creation#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.wordexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Word Document/Template Creation",
-          item: "https://www.wordexperts.com.au/word-document-template-creation",
+          name: "Services",
+          item: `${SITE_URL}/services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Microsoft Word",
+          item: `${SITE_URL}/services/microsoft-word`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Word Document Template Creation",
+          item: PAGE_URL,
         },
       ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#service`,
+      name: "Word Document Template Creation",
+      serviceType: "Microsoft Word template design",
+      description: PAGE_DESCRIPTION,
+      provider: PROVIDER,
+      areaServed: AREA_SERVED,
+      category: "Document Design",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Word Template Creation Services",
+        itemListElement: [
+          offer(
+            "Custom Word Template Design",
+            "Branded templates for proposals, reports, letterheads, memos, agendas and meeting minutes",
+          ),
+          offer(
+            "Template Suites",
+            "Complete suites of cohesive templates so every document shares the same precision and style",
+          ),
+          offer(
+            "Existing Document Transfer",
+            "Moving your current documents into new templates with a consistent, brand-perfect finish",
+          ),
+          offer(
+            "Style Guide Compliance",
+            "Colours, fonts, heading hierarchy and spacing built to your brand guidelines",
+          ),
+          offer(
+            "Quick Parts & Building Blocks",
+            "Reusable content blocks such as chapter pages, image layouts, appendices, tables and terms and conditions",
+          ),
+          offer(
+            "Accessible Template Design",
+            "Accessible styles and headings, alternative text, structured tables and high-contrast colour schemes",
+          ),
+        ],
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#conversion-service`,
+      name: "Design to Word Template Conversion",
+      serviceType: "Document template conversion",
+      description:
+        "Converting Adobe InDesign layouts, PDFs and legacy documents into fully functional, brand-compliant Microsoft Word templates.",
+      provider: PROVIDER,
+      areaServed: AREA_SERVED,
+      isRelatedTo: { "@id": `${PAGE_URL}#service` },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Word Template Conversion Services",
+        itemListElement: [
+          offer(
+            "InDesign to Word Conversion",
+            "Turning Adobe InDesign layouts into practical Word templates that are easy for your team to use",
+          ),
+          offer(
+            "PDF to Word Template Conversion",
+            "Rebuilding PDF designs as robust, editable Word templates",
+          ),
+          offer(
+            "Legacy Document Conversion",
+            "Modernising older documents and designs into consistent, workflow-ready templates",
+          ),
+        ],
+      },
     },
   ],
 };
 
 const Page = () => {
-  const images = [page1, page2, page3, page4, page5, page6, page7, page8];
-
   return (
     <>
       <script
@@ -105,32 +194,24 @@ const Page = () => {
       />
       <ServiceHero
         title="Word Document Template Creation"
-        desktopImage={startup}
-        mobileImage={graph}
-        altDesk={"Word template"}
-        altMob={"graphs"}
+        desktopImage={template}
+        mobileImage={templateMob}
+        altDesk={HERO_ALT}
+        altMob={HERO_ALT}
       />
-      <PageSegmentMain />
-      <Segment4Repeat />
-      <section style={{ display: "flex", margin: "0 auto" }}>
-        <Image />
-      </section>
-      <PageSegment5 />
-      <Segment4 />
-      <TemplateCards images={images} cardWidth={340} />
-      <Segment5 />
-      <Segment6 />
-      <Segment7 />
-      <ExpertsAwait />
-      <Segment8 />
-      <Conclusion />
+      <TemplateIntro />
+      <TemplateDesignPrinciples />
+      <TemplateDocumentTypes />
+      <TemplateStyleGuides />
+      <TemplateFeatures />
+      <TemplateWhyChoose />
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
         heading="Word template builds we've delivered"
         links={[
           {
-            href: "https://www.officeexperts.com.au/case-studies/committee-report-master-template-pdf-merge",
+            href: "/case-studies/committee-report-master-template-pdf-merge",
             linkText: "See the weekend turnaround",
             title:
               "Turning a multi-author committee report into one polished PDF over a weekend",
@@ -142,7 +223,7 @@ const Page = () => {
               "Master Template and merged PDF for a multi-author committee report",
           },
           {
-            href: "https://www.officeexperts.com.au/case-studies/water-education-program-word-powerpoint-templates",
+            href: "/case-studies/water-education-program-word-powerpoint-templates",
             linkText: "See the lesson templates",
             title:
               "Turning an InDesign lesson design into Word and PowerPoint templates educators can use",
