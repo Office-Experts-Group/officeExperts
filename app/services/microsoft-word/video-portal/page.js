@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const Contact = dynamic(() => import("../../components/Contact"));
-const CTAMain = dynamic(() => import("../(components)/CTAMain"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const CTAMain = dynamic(() => import("../../../(components)/CTAMain"));
 
-import styles from "../../styles/videoPortal.module.scss";
+import styles from "@/styles/videoPortal.module.scss";
 
 import {
   categories,

@@ -3,8 +3,8 @@
 @use "./apiIntegration" as api;
 
 .section {
-  @include api.section-pad;
   background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+  @include api.section-pad;
 }
 
 .inner {
