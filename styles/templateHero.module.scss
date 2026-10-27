@@ -1,0 +1,97 @@
+// /styles/templateHero.module.scss
+@use "sass:color";
+@use "./globals" as *;
+
+// Lighter tint of the accent so it stays readable on the dark background
+$accent-bright: color.adjust($accent, $lightness: 28%);
+
+.section {
+  background: $dark-bg;
+  color: $white;
+  padding-block: 7rem 5rem;
+}
+
+.inner {
+  @include container;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  color: $white-75;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin-block: 1.25rem;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+}
+
+.accentWord {
+  color: $accent-bright;
+  font-weight: 700;
+}
+
+.lead {
+  max-width: 38rem;
+  color: $white-75;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.secondary {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: $white-88;
+  font-weight: 600;
+
+  svg {
+    width: 1.1rem;
+  }
+
+  &:hover {
+    color: $accent-bright;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  list-style: none;
+
+  li {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid $white-18;
+    border-radius: 999px;
+    color: $white-65;
+    font-size: 0.85rem;
+  }
+}
+
+// Custom properties are consumed by the SVG in Icons.jsx
+.visual {
+  --accent: #{$accent-bright};
+  --bg: #{$dark-bg};
+  color: $white;
+}

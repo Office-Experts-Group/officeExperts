@@ -81,3 +81,22 @@ $shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
     @content;
   }
 }
+
+// /styles/globals.scss (additions)
+@mixin container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@mixin belowDesktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 766px) {
+    @content;
+  }
+}

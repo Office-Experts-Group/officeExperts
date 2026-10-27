@@ -1,0 +1,106 @@
+// /styles/conversionComparison.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $dark-bg;
+  padding-block: 6rem;
+  color: $white;
+}
+
+.inner {
+  @include container;
+}
+
+.header {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  color: $white-65;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin-top: 0.75rem;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.accentWord {
+  color: $white-65;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid $white-12;
+  border-radius: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  text-align: left;
+
+  th,
+  td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid $white-08;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  thead th {
+    color: $white-65;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  tbody th {
+    color: $white;
+    font-weight: 600;
+  }
+
+  td {
+    color: $white-65;
+  }
+
+  tbody tr:last-child {
+    th,
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+// Highlights the Word Experts column
+.proHead {
+  background: $accent;
+  color: $white;
+}
+
+.pro {
+  display: flex;
+  gap: 0.6rem;
+  background: $accent-dim;
+  color: $white-90;
+
+  svg {
+    flex-shrink: 0;
+    width: 1.1rem;
+    margin-top: 0.3rem;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
