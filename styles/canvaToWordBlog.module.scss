@@ -40,7 +40,7 @@ $shadow-card: 0 10px 30px rgba(13, 27, 42, 0.08);
   position: relative;
   background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
   color: $white;
-  padding: 8rem 0 6rem;
+  padding: 14rem 0 8rem 6rem;
   overflow: hidden;
 
   &::before {
@@ -171,12 +171,14 @@ $shadow-card: 0 10px 30px rgba(13, 27, 42, 0.08);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: $accent;
-  color: $white;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  box-shadow: 0 0 0 3px $white-12;
+  border: 4px solid $accent;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    object-fit: cover;
+  }
 }
 
 .metaName {

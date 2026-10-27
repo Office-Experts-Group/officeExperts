@@ -1,50 +1,47 @@
-import React from "react";
+// /app/blog/document-rebranding/layout.js
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+// This layout wraps only page.js, so canonical here is safe.
+const PAGE_URL = "https://www.officeexperts.com.au/blog/document-rebranding";
+const PAGE_TITLE = "Document Rebranding Without Starting Over | Office Experts";
+const PAGE_DESCRIPTION =
+  "Rebrand your business documents without rebuilding them. Update logos, colours and details while keeping your structure, wording and workflow.";
+const PAGE_KEYWORDS = [
+  "document rebranding",
+  "rebrand business documents",
+  "Word template rebranding",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "How to Rebrand Your Business Documents Without Starting From Scratch",
-  description:
-    "Learn how to efficiently rebrand your business documents without rebuilding everything. Discover smart strategies for updating logos, colors, and brand elements while preserving your existing document structure and saving time.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   openGraph: {
-    title:
-      "How to Rebrand Your Business Documents Without Starting From Scratch",
-    description:
-      "Learn how to efficiently rebrand your business documents without rebuilding everything. Discover smart strategies for updating logos, colors, and brand elements while preserving your existing document structure and saving time.",
-    url: "https://www.wordexperts.com.au/blog/document-rebranding",
-    siteName: "Word Experts Australia",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["document rebranding"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@WordExpertsAU",
-    title:
-      "How to Rebrand Your Business Documents Without Starting From Scratch",
-    description:
-      "Learn how to efficiently rebrand your business documents without rebuilding everything. Discover smart strategies for updating logos, colors, and brand elements while preserving your existing document structure and saving time.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
-  alternates: {
-    canonical: "/blog/document-rebranding",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

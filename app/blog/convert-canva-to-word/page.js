@@ -33,6 +33,8 @@ import {
   UsersIcon,
 } from "./(svgs)/Icons";
 
+import dan from "@/public/team/dan.webp";
+
 // Keep these three in sync with layout.js (no shared config file).
 const PAGE_URL = "https://www.officeexperts.com.au/blog/convert-canva-to-word";
 const PAGE_TITLE = "How to Convert Canva to a Word Template | Office Experts";
@@ -480,15 +482,6 @@ const CanvaToWordBlogPost = () => (
       <header className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroText}>
-            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <Link href="/">Home</Link>
-              <span aria-hidden="true">/</span>
-              <Link href="/blog">Blog</Link>
-              <span aria-hidden="true">/</span>
-              <span aria-current="page">{BREADCRUMB_NAME}</span>
-            </nav>
-
-            <p className={styles.eyebrow}>Word templates · Guide</p>
             <h1 className={styles.heroTitle}>
               How to Convert a Canva Design into a{" "}
               <span className={styles.accent}>Microsoft Word Template</span>
@@ -502,16 +495,12 @@ const CanvaToWordBlogPost = () => (
 
             <div className={styles.meta}>
               <span className={styles.avatar} aria-hidden="true">
-                DT
+                <Image src={dan} alt={AUTHOR_NAME} width={38} height={38} />
               </span>
               <div>
                 <p className={styles.metaName}>By {AUTHOR_NAME}</p>
                 <p className={styles.metaDates}>
-                  Published{" "}
-                  <time dateTime={DATE_PUBLISHED}>
-                    {formatDate(DATE_PUBLISHED)}
-                  </time>{" "}
-                  · Updated{" "}
+                  Updated{" "}
                   <time dateTime={DATE_MODIFIED}>
                     {formatDate(DATE_MODIFIED)}
                   </time>{" "}
@@ -1026,7 +1015,7 @@ const CanvaToWordBlogPost = () => (
 
             <div className={styles.author}>
               <span className={styles.avatarLarge} aria-hidden="true">
-                DT
+                <Image src={dan} alt={AUTHOR_NAME} width={38} height={38} />
               </span>
               <div>
                 <p className={styles.authorName}>{AUTHOR_NAME}</p>
