@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Contact from "@/components/Contact";
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 import styles from "@/styles/googleDocsVsWordBlog.module.scss";
 
@@ -647,7 +646,6 @@ export default function GoogleDocsVsWordBlogPost() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      generateOrganizationSchema(),
       {
         "@type": "WebPage",
         "@id": PAGE_URL,
