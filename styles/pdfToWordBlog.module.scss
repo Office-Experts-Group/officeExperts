@@ -1,0 +1,1273 @@
+// /styles/pdfToWordBlog.module.scss
+@use "./globals" as *;
+
+$accent-on-dark: #5bbce6;
+$card-shadow: 0 10px 28px rgba(13, 27, 42, 0.07);
+$card-shadow-hover: 0 16px 36px rgba(13, 27, 42, 0.12);
+
+.page {
+  background: $white;
+  color: $text-secondary;
+}
+
+.accent {
+  color: $accent;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 14rem 0 8rem 6rem;
+  color: $white;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(91, 188, 230, 0.16),
+      transparent 45%
+    ),
+    linear-gradient(135deg, $dark-bg, $dark-mid);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient($white-08 1px, transparent 1px),
+      linear-gradient(90deg, $white-08 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: linear-gradient(90deg, transparent, #000 60%);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include belowDesktop {
+    padding: 11rem 0 7rem 3rem;
+  }
+
+  @include mobile {
+    padding: 6.5rem 0 5rem;
+  }
+}
+
+.heroInner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline-end: 2rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    padding-inline-end: 3rem;
+  }
+
+  @include mobile {
+    padding-inline: 1.5rem;
+    gap: 2rem;
+  }
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  line-height: 1.1;
+  color: $white;
+
+  .accent {
+    color: $accent-on-dark;
+  }
+}
+
+.lede {
+  margin: 0 0 2rem;
+  max-width: 34rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: $white-88;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.avatar {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 4px solid $accent;
+  overflow: hidden;
+  background: $dark-surface;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.authorName {
+  font-weight: 600;
+  color: $white;
+}
+
+.authorDate {
+  font-size: 0.9rem;
+  color: $white-65;
+}
+
+.heroArt {
+  min-width: 0;
+}
+
+/* ---------- At a glance ---------- */
+
+.glance {
+  @include container;
+  position: relative;
+  z-index: 2;
+  margin-top: -3.5rem;
+}
+
+.glanceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glanceCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "value label"
+    "text text";
+  align-items: center;
+  gap: 0.35rem 1rem;
+  padding: 1.4rem 1.5rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+}
+
+.glanceValue {
+  grid-area: value;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $accent;
+}
+
+.glanceLabel {
+  grid-area: label;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.glanceText {
+  grid-area: text;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ---------- Layout + contents ---------- */
+
+.layout {
+  @include container;
+  padding-block: 4rem 3rem;
+
+  @media (min-width: 1400px) {
+    max-width: none;
+    padding-inline: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 820px 1fr;
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.toc {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  padding: 1.4rem 1.6rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: 16px;
+
+  @media (min-width: 1400px) {
+    grid-column: 1;
+    justify-self: end;
+    position: sticky;
+    top: 7rem;
+    width: 220px;
+    margin: 0;
+    padding: 1.2rem 1.2rem;
+  }
+}
+
+.tocTitle {
+  margin: 0 0 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.tocList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 1.5rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.35rem 0;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.article {
+  width: 100%;
+  max-width: 820px;
+  margin-inline: auto;
+
+  @media (min-width: 1400px) {
+    grid-column: 2;
+  }
+}
+
+.section {
+  scroll-margin-top: 7rem;
+  margin-bottom: 5rem;
+
+  h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    color: $text-primary;
+  }
+
+  h3 {
+    margin: 2.5rem 0 0.9rem;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    color: $text-primary;
+  }
+
+  > p {
+    margin: 0 0 1.15rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  a {
+    color: $accent;
+  }
+}
+
+/* ---------- Callout ---------- */
+
+.callout {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin: 2rem 0;
+  padding: 1.4rem 1.6rem;
+  background: linear-gradient(135deg, $accent-light, $white 75%);
+  border: 1px solid $accent-border;
+  border-radius: 16px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(4, 105, 153, 0.14);
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 120px;
+    height: 120px;
+    top: -42px;
+    right: -42px;
+  }
+
+  &::after {
+    width: 210px;
+    height: 210px;
+    top: -88px;
+    right: -88px;
+  }
+}
+
+.calloutIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.callout .calloutLabel {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.callout .calloutText {
+  position: relative;
+  margin: 0;
+  line-height: 1.65;
+  color: $text-primary;
+}
+
+/* ---------- Reason cards ---------- */
+
+.reasonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0 1rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reasonCard {
+  padding: 1.6rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $card-shadow-hover;
+    }
+  }
+}
+
+.iconBadge {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.reasonCard .cardTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: $text-primary;
+}
+
+.reasonCard .cardText {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* ---------- Tick lists ---------- */
+
+.tickList,
+.checkGrid {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    line-height: 1.6;
+  }
+}
+
+.tickList li {
+  margin-bottom: 0.7rem;
+}
+
+.checkGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1.25rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    padding: 0.9rem 1rem;
+    background: $light-bg;
+    border: 1px solid $border;
+    border-radius: 10px;
+    font-size: 0.97rem;
+  }
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 0.1rem;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2.6;
+  }
+}
+
+/* ---------- Icon rows ---------- */
+
+.iconRows {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 12px;
+    box-shadow: $shadow-row;
+  }
+}
+
+.rowBadge {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.iconRows .rowTitle {
+  margin: 0 0 0.15rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.iconRows .rowText {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+/* ---------- Quote cards ---------- */
+
+.quoteCard {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.6rem 1.8rem 1.4rem 4.6rem;
+  background: $light-bg;
+  border: 1px solid $border-strong;
+  border-radius: 16px;
+
+  blockquote {
+    margin: 0;
+
+    p {
+      margin: 0 0 0.9rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: $text-primary;
+    }
+  }
+
+  figcaption a {
+    font-weight: 600;
+    color: $accent;
+    text-decoration: none;
+
+    &::before {
+      content: "— ";
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include mobile {
+    padding: 4.2rem 1.25rem 1.25rem;
+  }
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $white;
+  border: 1px solid $accent-border;
+  color: $accent;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ---------- Diagrams ---------- */
+
+.diagram {
+  margin: 2.25rem 0;
+  padding: 1.25rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 480px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.diagram .diagramCaption {
+  margin: 0.9rem 0 0;
+  font-size: 0.92rem;
+  color: $text-secondary;
+}
+
+/* ---------- Comparison table ---------- */
+
+.tableWrap {
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+
+  table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    padding: 0.95rem 1.1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    background: $dark-bg;
+    color: $white;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $light-bg;
+  }
+
+  tbody tr:last-child {
+    background: $accent-light;
+  }
+
+  tbody th,
+  td {
+    padding: 0.95rem 1.1rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    border-bottom: 1px solid $border;
+  }
+
+  tbody th {
+    font-weight: 700;
+    color: $text-primary;
+  }
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 21px;
+    width: 2px;
+    background: linear-gradient(180deg, $accent, $accent-border);
+  }
+}
+
+.step {
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 2.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stepNum {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+  font-weight: 700;
+  box-shadow: 0 0 0 6px $white;
+}
+
+.step .stepTitle {
+  margin: 0.25rem 0 0.4rem;
+  font-size: 1.25rem;
+  color: $text-primary;
+}
+
+.step .stepText {
+  margin: 0 0 0.9rem;
+  line-height: 1.7;
+}
+
+.step .proTip {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: $text-primary;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+.proTipLabel {
+  flex: none;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: $accent;
+  color: $white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Method cards ---------- */
+
+.methodGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.methodCard {
+  overflow: hidden;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+}
+
+.methodHead {
+  padding: 1.3rem 1.6rem;
+  background: linear-gradient(135deg, $dark-bg, $dark-mid);
+}
+
+.methodKicker {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent-on-dark;
+}
+
+.methodCard .methodTitle {
+  margin: 0;
+  font-size: 1.3rem;
+  color: $white;
+}
+
+.methodBody {
+  padding: 1.4rem 1.6rem 1.2rem;
+}
+
+.methodBody .methodText {
+  margin: 0 0 0.5rem;
+  line-height: 1.7;
+
+  a {
+    color: $accent;
+  }
+}
+
+/* ---------- Walkthrough cards ---------- */
+
+.walkGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.walkCard {
+  padding: 1.6rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $card-shadow-hover;
+    }
+  }
+}
+
+.walkHead {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+
+  .iconBadge {
+    margin-bottom: 0;
+    flex: none;
+  }
+}
+
+.walkCard .walkTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: $text-primary;
+}
+
+.walkCard .walkText {
+  margin: 0 0 1.1rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.walkSteps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    align-items: start;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  a {
+    color: $accent;
+  }
+}
+
+.miniNum {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  color: $accent;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ---------- Mistake cards ---------- */
+
+.mistakeList {
+  margin: 1.5rem 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.mistakeCard {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.6rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mistakeNum {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px $accent;
+}
+
+.mistakeCard .mistakeTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: $text-primary;
+}
+
+.mistakeCard .mistakeText {
+  margin: 0 0 0.9rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.mistakeCard .insteadRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: $text-primary;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+.instead {
+  flex: none;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: $accent;
+  color: $white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sketch {
+  min-width: 0;
+}
+
+/* ---------- CTA band ---------- */
+
+.ctaBand {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 5rem;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, $dark-bg, $dark-mid);
+  color: $white-88;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid $white-12;
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 220px;
+    height: 220px;
+    top: -90px;
+    right: -60px;
+  }
+
+  &::after {
+    width: 380px;
+    height: 380px;
+    top: -170px;
+    right: -150px;
+  }
+
+  h2 {
+    position: relative;
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    line-height: 1.2;
+    color: $white;
+
+    .accent {
+      color: $accent-on-dark;
+    }
+  }
+
+  p {
+    position: relative;
+    max-width: 34rem;
+    margin: 0 0 1.75rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  @include mobile {
+    padding: 2.25rem 1.5rem;
+  }
+}
+
+.ctaButtons {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ctaBand .btnPrimary {
+  background: $accent;
+  color: $white;
+}
+
+.ctaBand .btnGhost {
+  border: 1px solid $white-35;
+  color: $white;
+}
+
+.ctaBand .btnPrimary:hover {
+  background: #0580b8;
+}
+
+.ctaBand .btnGhost:hover {
+  background: $white-08;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  display: grid;
+  gap: 0.8rem;
+
+  details {
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 12px;
+    box-shadow: $shadow-row;
+
+    &[open] {
+      border-color: $accent-border;
+    }
+
+    &[open] .chev {
+      transform: rotate(180deg);
+    }
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    font-weight: 600;
+    color: $text-primary;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  details p {
+    margin: 0;
+    padding: 0 1.3rem 1.2rem;
+    line-height: 1.7;
+  }
+}
+
+.chev {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+  transition: transform 0.2s ease;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ---------- Author box ---------- */
+
+.authorBox {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  padding: 1.6rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: 16px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.avatarLarge {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 4px solid $accent;
+  overflow: hidden;
+  background: $dark-surface;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.authorBox .authorBoxTitle {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: $text-primary;
+}
+
+.authorBox .authorBoxText {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+/* ---------- Related ---------- */
+
+.related {
+  margin-bottom: 2rem;
+}
+
+.relatedTitle {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.relatedCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.3rem 1.3rem 3rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 16px;
+  box-shadow: $card-shadow;
+  text-decoration: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $card-shadow-hover;
+    }
+  }
+}
+
+.relatedTag {
+  align-self: flex-start;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: $accent-light;
+  color: $accent;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.relatedName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: $text-primary;
+}
+
+.relatedText {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: $text-secondary;
+}
+
+.relatedArrow {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  color: $accent;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
