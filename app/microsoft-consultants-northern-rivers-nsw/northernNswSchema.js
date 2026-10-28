@@ -49,11 +49,6 @@ const schema = {
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
-    generateWebSiteSchema(
-      SITE_URL,
-      "Office Experts",
-      "Australia-wide Microsoft consulting, development and AI experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

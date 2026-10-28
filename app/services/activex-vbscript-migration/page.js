@@ -23,11 +23,6 @@ const PAGE_URL =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Australia-wide Microsoft Office Programming, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

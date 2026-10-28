@@ -7,8 +7,6 @@ import ServiceHero from "@/components/ServiceHero";
 import calculator from "@/public/pageHeros/calculator.webp";
 import calcMob from "@/public/pageHeros/mob/calcMob.webp";
 
-i;
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

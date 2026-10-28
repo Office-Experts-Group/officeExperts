@@ -66,11 +66,6 @@ const schema = {
   "@graph": [
     ...getTestimonialsPageSchema(testimonials)["@graph"],
 
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

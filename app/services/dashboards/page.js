@@ -67,11 +67,6 @@ const videos = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      SITE_URL,
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

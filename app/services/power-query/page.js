@@ -16,16 +16,9 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import query from "@/public/pageHeros/query.webp";
 import queryMob from "@/public/pageHeros/mob/queryMob.webp";
 
-import faqs from "@/faqs/query";
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Australia-wide Microsoft Office consulting, development and support services",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/power-query",

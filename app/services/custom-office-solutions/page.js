@@ -17,11 +17,6 @@ import meetingMob from "@/public/pageHeros/mob/meetingMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id":

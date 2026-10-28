@@ -7,8 +7,6 @@ import ServiceHero from "@/components/ServiceHero";
 import handShake from "@/public/pageHeros/handShake.webp";
 import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
-i;
-
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

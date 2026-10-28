@@ -48,11 +48,6 @@ const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      SITE_URL,
-      "Office Experts Group",
-      "Australia-wide Microsoft Office, Microsoft 365 and Power Platform consulting experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

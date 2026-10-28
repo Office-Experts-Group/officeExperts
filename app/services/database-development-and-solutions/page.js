@@ -37,12 +37,6 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      SITE_URL,
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
-
     // WebPage
     {
       "@type": "WebPage",

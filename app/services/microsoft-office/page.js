@@ -31,11 +31,6 @@ import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts Group",
-      "Australia-wide Microsoft Office Programming, Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-office",

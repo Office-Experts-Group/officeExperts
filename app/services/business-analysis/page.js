@@ -45,11 +45,6 @@ const PAGE_URL = `${SITE_URL}/services/business-analysis`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      SITE_URL,
-      "Office Experts Group",
-      "Your Microsoft Technology Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

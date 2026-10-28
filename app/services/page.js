@@ -62,11 +62,6 @@ const PAGE_URL = `${pageMeta.siteUrl}${pageMeta.path}`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      pageMeta.siteUrl,
-      "Office Experts",
-      "Australia-wide Microsoft Office, Power Platform and AI Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

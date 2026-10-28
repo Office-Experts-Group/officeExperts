@@ -17,11 +17,6 @@ import seatMob from "@/public/pageHeros/mob/seatMob.webp";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateWebSiteSchema(
-      "https://www.officeexperts.com.au",
-      "Office Experts",
-      "Australia-wide Microsoft Office Development and Consulting Experts",
-    ),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/add-in-creation",
