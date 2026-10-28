@@ -1,49 +1,43 @@
-import React from "react";
+// /app/blog/word-templates-for-legal-firms/layout.js
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/word-templates-for-legal-firms";
+const PAGE_TITLE = "Word Templates for Legal Firms | Office Experts";
+const PAGE_DESCRIPTION =
+  "Create professional Word templates for legal firms. Reduce errors, keep branding consistent and protect client confidentiality with these best practices.";
+const PAGE_KEYWORDS = ["Word templates for legal firms"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Creating Word Templates for Legal Firms: Best Practices",
-  description:
-    "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   openGraph: {
-    title: "Creating Word Templates for Legal Firms: Best Practices",
-    description:
-      "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
-    url: "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
-    siteName: "Word Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Word templates for legal firms"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Creating Word Templates for Legal Firms: Best Practices",
-    description:
-      "Create professional Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
-  alternates: {
-    canonical:
-      "https://www.wordexperts.com.au/blog/word-templates-for-legal-firms",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }
