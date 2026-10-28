@@ -34,7 +34,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Word",
-      link: "https://www.wordexperts.com.au/",
+      link: "/services/microsoft-word/",
       image: project3,
       description: [
         "Format and design documents",

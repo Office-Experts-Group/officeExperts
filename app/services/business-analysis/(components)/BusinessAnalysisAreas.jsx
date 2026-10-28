@@ -17,15 +17,15 @@ const areas = [
     links: [
       {
         label: "Corporate template solutions",
-        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+        href: "/services/microsoft-word/corporate-global-template-solution",
       },
       {
         label: "Mail merge",
-        href: "https://www.wordexperts.com.au/mail-merge",
+        href: "/services/microsoft-word/mail-merge",
       },
       {
         label: "Copilot and AI templates",
-        href: "https://www.wordexperts.com.au/copilot-and-ai-templates",
+        href: "/services/microsoft-word/ai-ready-word-templates",
       },
     ],
   },

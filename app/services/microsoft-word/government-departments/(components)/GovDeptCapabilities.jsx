@@ -43,7 +43,7 @@ const capabilities = [
     heading: "Records & System Integration",
     description:
       "Word templates connected to your existing records or case management systems, so document data stays in sync rather than being retyped between platforms.",
-    href: "/services/microsoft-word/microsoft-word-api-integrations",
+    href: "/services/microsoft-365-api-integration",
     linkLabel: "Word API integrations",
     Icon: SystemLinkIcon,
   },

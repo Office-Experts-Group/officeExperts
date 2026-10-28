@@ -74,7 +74,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="https://www.wordexperts.com.au/custom-toolbars-and-ribbons"
+            href="/services/microsoft-word/custom-toolbars-and-ribbons"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>
@@ -82,7 +82,7 @@ const Contents = () => {
             </div>
           </Link>
           <Link
-            href="https://www.wordexperts.com.au/word-template-conversions"
+            href="/services/microsoft-word/word-template-conversions"
             onClick={handleLinkClick}
           >
             <div className={styles.contentLink}>

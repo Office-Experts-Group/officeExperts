@@ -52,7 +52,7 @@ const IsRight = () => {
                 Expert development in{" "}
                 <Link href="https://www.excelexperts.com.au">Excel</Link>,{" "}
                 <Link href="https://www.accessexperts.com.au">Access</Link>,{" "}
-                <Link href="https://www.wordexperts.com.au">Word</Link>,{" "}
+                <Link href="/services/microsoft-word">Word</Link>,{" "}
                 <Link href="/services/microsoft-powerpoint">PowerPoint</Link>,
                 and complete Office integration solutions.
               </p>

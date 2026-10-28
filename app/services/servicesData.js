@@ -169,7 +169,7 @@ export const ai = {
         "Set up Copilot properly and make it genuinely useful across Word, Excel, Outlook and Teams.",
       also: {
         name: "Copilot and AI templates",
-        href: word("/copilot-and-ai-templates"),
+        href: word("/ai-ready-word-templates"),
       },
     },
     {
@@ -196,7 +196,7 @@ export const ai = {
         "Connect Microsoft 365 data and documents to your other systems.",
       also: {
         name: "Word API integrations",
-        href: word("/microsoft-word-api-integrations"),
+        href: "services/microsoft-365-api-integration",
       },
     },
   ],
@@ -441,7 +441,7 @@ export const wordSection = {
           name: "Word to PDF conversion",
           description:
             "Reliable PDF output, including accessible and editable PDF forms.",
-          href: word("/word-to-pdf-conversion"),
+          href: word("/word-template-conversions"),
         },
         {
           name: "Accessibility",
@@ -450,27 +450,10 @@ export const wordSection = {
           href: word("/accessibility"),
         },
         {
-          name: "Word training",
-          description:
-            "Practical training built around your own documents and templates.",
-          href: word("/training"),
-        },
-        {
-          name: "Video portal",
-          description: "Short how-to videos your team can watch any time.",
-          href: word("/video-portal"),
-        },
-        {
           name: "Google Docs to Word migration",
           description:
             "Move content from Google Docs into properly structured Word documents.",
           href: word("/google-docs-to-word-migration"),
-        },
-        {
-          name: "Upgrades and migration",
-          description:
-            "Smooth upgrades and migrations for your Word templates and macros.",
-          href: word("/upgrades-and-migration"),
         },
       ],
     },
@@ -700,7 +683,10 @@ export const microsoft365Section = {
       title: "Training",
       icon: "training",
       items: [
-        { name: "Word training", href: word("/training") },
+        {
+          name: "Word training",
+          href: "/microsoft-support-and-training-australia",
+        },
         {
           name: "PowerPoint training",
           href: "/microsoft-support-and-training-australia",

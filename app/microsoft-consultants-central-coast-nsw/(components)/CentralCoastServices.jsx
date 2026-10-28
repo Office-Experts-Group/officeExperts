@@ -55,7 +55,7 @@ const services = [
     description:
       "Quotes, contracts, care plans and compliance reports. We build Word templates with content controls, smart fields and one-click generation, so documents come out consistent and on-brand no matter who is typing.",
     chips: ["Templates", "Content controls", "Automation"],
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

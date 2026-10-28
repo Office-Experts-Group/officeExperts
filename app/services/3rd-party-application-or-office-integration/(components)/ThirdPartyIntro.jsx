@@ -32,10 +32,7 @@ const ThirdPartyIntro = () => {
               <Link href="https://www.excelexperts.com.au/custom-design-and-development">
                 Excel
               </Link>
-              ,{" "}
-              <Link href="https://www.wordexperts.com.au/microsoft-word-api-integrations">
-                Word
-              </Link>
+              , <Link href="/services/microsoft-365-api-integration">Word</Link>
               ,{" "}
               <Link href="https://www.accessexperts.com.au/3rd-party-product-integration">
                 Access

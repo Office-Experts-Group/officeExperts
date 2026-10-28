@@ -85,7 +85,7 @@ const solutionsData = [
   },
   {
     title: "Upgrading Word For 2026",
-    link: "/services/microsoft-word/upgrades-and-migration",
+    link: "/services/upgrades-and-migration",
     Icon: UpgradeIcon,
     description: [
       "Upgrading Word can introduce issues with page layouts, tables, images and macros. We can identify and resolve compatibility problems so your documents continue to work as expected.",
@@ -117,7 +117,7 @@ const solutionsData = [
   },
   {
     title: "Help and Training",
-    link: "/services/microsoft-word/training",
+    link: "/microsoft-support-and-training-australia",
     Icon: GraduationIcon,
     description: [
       "We provide Word training, remote support and practical documentation to help your staff work more efficiently. When you need assistance, we're available through screen sharing, with video and PDF guides also available.",

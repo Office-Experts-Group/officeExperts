@@ -191,7 +191,7 @@ const CopilotIntegration = () => {
               them for you.
             </p>
             <Link
-              href="/services/microsoft-word/copilot-and-ai-templates"
+              href="/services/microsoft-word/ai-ready-word-templates"
               className={`btn ${styles.ctaBtn}`}
             >
               Ai-ready templates

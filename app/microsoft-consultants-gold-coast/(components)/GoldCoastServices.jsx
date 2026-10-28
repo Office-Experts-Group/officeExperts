@@ -30,7 +30,7 @@ const groups = [
         description:
           "Contracts, proposals, reports and letters generated from controlled templates with content controls and smart fields, so the output is consistent whoever is typing.",
         chips: ["Templates", "Content controls", "Automation"],
-        href: "https://www.wordexperts.com.au",
+        href: "/services/microsoft-word",
         linkText: "Word Designers",
       },
       {

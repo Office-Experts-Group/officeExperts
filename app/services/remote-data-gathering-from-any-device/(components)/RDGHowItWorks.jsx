@@ -1,4 +1,4 @@
-// services/microsoft-office-365/remote-data-gathering-from-any-device/RDGHowItWorks.jsx
+// services/remote-data-gathering-from-any-device/RDGHowItWorks.jsx
 import React from "react";
 
 import AnimateOnScroll from "@/components/AnimateOnScroll";

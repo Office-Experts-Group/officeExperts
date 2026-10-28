@@ -34,7 +34,7 @@ const services = [
     tag: "Document Solutions",
     description:
       "Law firms in the CBD, government agencies in Macquarie Street and corporate compliance teams across the city all need document systems that produce consistent, accurate output at volume. We design templates, automate generation and build the workflows with custom ribbons and add-ins.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

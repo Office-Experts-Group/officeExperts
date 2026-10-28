@@ -26,7 +26,7 @@ const pairings = [
       "Share one Quick Parts library across every template in the organisation, maintained in a single file.",
   },
   {
-    href: "/services/microsoft-word/copilot-and-ai-templates",
+    href: "/services/microsoft-word/ai-ready-word-templates",
     title: "Copilot and AI templates",
     description:
       "Let AI draft the variable content while Quick Parts hold the wording that must never change.",
@@ -44,8 +44,8 @@ const QuickPartsSystem = () => (
         </h2>
         <p className={styles.intro}>
           On their own, Quick Parts save time. Combined with forms, ribbons and
-          automation, they become the backbone of a document process where
-          staff assemble a complete, on-brand document in minutes.
+          automation, they become the backbone of a document process where staff
+          assemble a complete, on-brand document in minutes.
         </p>
       </div>
 

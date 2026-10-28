@@ -92,7 +92,7 @@ const ApiAgents = () => (
           AI agent development
           <ArrowIcon />
         </Link>
-        <Link href="/services/microsoft-office-365/copilot" className={styles.link}>
+        <Link href="/services/copilot" className={styles.link}>
           Microsoft 365 Copilot set-up
           <ArrowIcon />
         </Link>

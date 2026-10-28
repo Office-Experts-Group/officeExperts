@@ -56,7 +56,7 @@ const GoogleMigrationIntro = () => (
               potential of Microsoft Word’s enterprise capabilities. Our expert
               team handles everything from document format conversion to{" "}
               <Link
-                href="/word-document-template-creation"
+                href="/services/microsoft-word/word-document-template-creation"
                 className={styles.link}
               >
                 custom template development
@@ -69,7 +69,10 @@ const GoogleMigrationIntro = () => (
               in Google Docs can fall apart when it is simply opened in Word:
               styles collapse, numbering restarts and tables shift. We rebuild
               the structure underneath through{" "}
-              <Link href="/word-template-conversions" className={styles.link}>
+              <Link
+                href="/services/microsoft-word/word-template-conversions"
+                className={styles.link}
+              >
                 professional template conversion
               </Link>
               , so your content arrives clean and your brand rules arrive with

@@ -205,10 +205,6 @@ export const navigationData = {
             href: `/services/microsoft-word/fill-in-forms`,
           },
           {
-            label: "Upgrading Word",
-            href: `/services/microsoft-word/upgrades-and-migration`,
-          },
-          {
             label: "Accessibility",
             href: `/services/microsoft-word/accessibility`,
           },
@@ -231,10 +227,6 @@ export const navigationData = {
           {
             label: "Google Docs Migration",
             href: `/services/microsoft-word/google-docs-to-word-migration`,
-          },
-          {
-            label: "API Integrations",
-            href: `/services/microsoft-word/microsoft-word-api-integrations`,
           },
           {
             label: "Mail Merge",

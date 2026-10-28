@@ -78,7 +78,7 @@ const Services = () => {
                 "Template creation",
                 "Macro development",
               ]}
-              link={"https://www.wordexperts.com.au"}
+              link={"/services/microsoft-word"}
               linkText={"Word"}
             />
           </CardIntersectionWrapper>

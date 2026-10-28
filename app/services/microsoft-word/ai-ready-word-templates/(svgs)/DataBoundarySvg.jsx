@@ -1,4 +1,4 @@
-// app/copilot-and-ai-templates/(svgs)/DataBoundarySvg.jsx
+// app/ai-ready-word-templates/(svgs)/DataBoundarySvg.jsx
 // What stays inside a Microsoft 365 tenant (Copilot grounded in your content,
 // governed by your permissions) versus a third-party AI add-in outside it.
 
@@ -12,23 +12,68 @@ const MUTED = "#9a9da1";
 const glyphs = {
   doc: (
     <>
-      <path d="M-9-12h12l6 6v18h-18z" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinejoin="round" />
-      <path d="M-5-2h10M-5 3h10M-5 8h6" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />
+      <path
+        d="M-9-12h12l6 6v18h-18z"
+        fill="none"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M-5-2h10M-5 3h10M-5 8h6"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
     </>
   ),
   mail: (
     <>
-      <rect x="-12" y="-8" width="24" height="17" rx="2" fill="none" stroke={ACCENT} strokeWidth="1.6" />
-      <path d="M-12-7l12 9 12-9" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinejoin="round" />
+      <rect
+        x="-12"
+        y="-8"
+        width="24"
+        height="17"
+        rx="2"
+        fill="none"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+      />
+      <path
+        d="M-12-7l12 9 12-9"
+        fill="none"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
     </>
   ),
   folder: (
-    <path d="M-12-8h8l3 3h13v14h-24z" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinejoin="round" />
+    <path
+      d="M-12-8h8l3 3h13v14h-24z"
+      fill="none"
+      stroke={ACCENT}
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
   ),
   shield: (
     <>
-      <path d="M0-12l10 4v7c0 7-4.5 11-10 13-5.5-2-10-6-10-13v-7z" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinejoin="round" />
-      <path d="M-4 0l3 3 5-6" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M0-12l10 4v7c0 7-4.5 11-10 13-5.5-2-10-6-10-13v-7z"
+        fill="none"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M-4 0l3 3 5-6"
+        fill="none"
+        stroke={ACCENT}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </>
   ),
 };
@@ -69,15 +114,39 @@ export const DataBoundarySvg = () => (
 
     {/* Connectors to Copilot */}
     {nodes.map((n) => (
-      <line key={n.label} x1={n.cx} y1={n.cy} x2="185" y2="170" stroke={ACCENT} strokeOpacity="0.35" strokeWidth="1.5" />
+      <line
+        key={n.label}
+        x1={n.cx}
+        y1={n.cy}
+        x2="185"
+        y2="170"
+        stroke={ACCENT}
+        strokeOpacity="0.35"
+        strokeWidth="1.5"
+      />
     ))}
 
     {/* Satellite nodes */}
     {nodes.map((n) => (
       <g key={n.label}>
-        <rect x={n.cx - 28} y={n.cy - 28} width="56" height="56" rx="12" fill="#fff" stroke={ACCENT} strokeOpacity="0.3" />
+        <rect
+          x={n.cx - 28}
+          y={n.cy - 28}
+          width="56"
+          height="56"
+          rx="12"
+          fill="#fff"
+          stroke={ACCENT}
+          strokeOpacity="0.3"
+        />
         <g transform={`translate(${n.cx} ${n.cy})`}>{glyphs[n.glyph]}</g>
-        <text x={n.cx} y={n.cy + 44} fontSize="10.5" fill={SECONDARY} textAnchor="middle">
+        <text
+          x={n.cx}
+          y={n.cy + 44}
+          fontSize="10.5"
+          fill={SECONDARY}
+          textAnchor="middle"
+        >
           {n.label}
         </text>
       </g>
@@ -86,21 +155,51 @@ export const DataBoundarySvg = () => (
     {/* Copilot hub */}
     <circle cx="185" cy="170" r="34" fill={ACCENT} />
     <path d={sparkle} transform="translate(185 170)" fill="#fff" />
-    <text x="185" y="224" fontSize="11.5" fontWeight="700" fill={INK} textAnchor="middle">
+    <text
+      x="185"
+      y="224"
+      fontSize="11.5"
+      fontWeight="700"
+      fill={INK}
+      textAnchor="middle"
+    >
       Copilot
     </text>
 
     {/* ── Outside the tenant: third-party add-in ── */}
     <defs>
-      <marker id="db-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto">
+      <marker
+        id="db-arrow"
+        viewBox="0 0 8 8"
+        refX="7"
+        refY="4"
+        markerWidth="8"
+        markerHeight="8"
+        orient="auto"
+      >
         <path d="M0 0l8 4-8 4z" fill={MUTED} />
       </marker>
     </defs>
-    <path d="M320 170 H424" stroke={MUTED} strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#db-arrow)" />
+    <path
+      d="M320 170 H424"
+      stroke={MUTED}
+      strokeWidth="1.5"
+      strokeDasharray="4 4"
+      markerEnd="url(#db-arrow)"
+    />
     <text x="392" y="160" fontSize="9.5" fill={SECONDARY} textAnchor="middle">
       leaves tenant
     </text>
-    <rect x="430" y="136" width="72" height="68" rx="12" fill="#fff" stroke={MUTED} strokeDasharray="4 3" />
+    <rect
+      x="430"
+      y="136"
+      width="72"
+      height="68"
+      rx="12"
+      fill="#fff"
+      stroke={MUTED}
+      strokeDasharray="4 3"
+    />
     <path d={sparkle} transform="translate(466 170)" fill={MUTED} />
     <text x="466" y="224" fontSize="10.5" fill={SECONDARY} textAnchor="middle">
       Third-party

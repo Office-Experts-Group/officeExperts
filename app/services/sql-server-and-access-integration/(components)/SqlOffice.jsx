@@ -27,12 +27,12 @@ const solutions = [
     body: "Automatically generate Word documents for your customers using the data in your existing SQL Server databases.",
     links: [
       {
-        href: "https://www.wordexperts.com.au/mail-merge",
+        href: "/services/microsoft-word/mail-merge",
         text: "Word mail merge",
       },
       {
-        href: "https://www.wordexperts.com.au/microsoft-word-api-integrations",
-        text: "Word API integrations",
+        href: "/services/microsoft-365-api-integration",
+        text: "API integrations",
       },
     ],
   },

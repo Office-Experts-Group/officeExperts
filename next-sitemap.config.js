@@ -79,7 +79,7 @@ const pathsWithDifferentCanonicals = new Set([
   "/office-excel-access-and-365-experts-perth",
   "/word-and-powerpoint-experts-richmond",
   "/office-and-office-365-experts-richmond",
-  "/excel-and-access-experts-richmond ",
+  "/excel-and-access-experts-richmond",
   "/office-excel-access-and-365-experts-wollongong",
 
   // blogs

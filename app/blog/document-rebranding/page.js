@@ -987,7 +987,7 @@ export default function DocumentRebrandingBlogPost() {
                   </Link>{" "}
                   optimised for your workflows, implement automated solutions
                   for recurring updates,{" "}
-                  <Link href="/services/microsoft-word/training">
+                  <Link href="/microsoft-support-and-training-australia">
                     train your staff on best practices
                   </Link>
                   , and provide ongoing support and{" "}

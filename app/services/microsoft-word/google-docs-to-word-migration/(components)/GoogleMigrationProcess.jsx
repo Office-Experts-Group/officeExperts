@@ -32,7 +32,7 @@ const steps = [
         We deploy the templates and any custom ribbons across the organisation,
         hand over documentation and stay on call. Need to move other tools too?
         See our{" "}
-        <Link href="/upgrades-and-migration" className={styles.link}>
+        <Link href="/services/upgrades-and-migration" className={styles.link}>
           upgrades and migration services
         </Link>
         .

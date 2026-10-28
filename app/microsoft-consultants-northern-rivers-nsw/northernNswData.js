@@ -14,7 +14,7 @@
 //   (by-business-solution and microsoft-office levels removed).
 
 const EXCEL = "https://www.excelexperts.com.au";
-const WORD = "https://www.wordexperts.com.au";
+const WORD = "/services/microsoft-word";
 const ACCESS = "https://www.accessexperts.com.au";
 const POWER = "https://www.powerplatformexperts.com.au";
 

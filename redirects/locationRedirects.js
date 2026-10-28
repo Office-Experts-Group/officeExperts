@@ -92,7 +92,7 @@ const richmondRedirects = [
     "/microsoft-consultants-richmond",
   ),
   permanent(
-    "//excel-and-access-experts-richmond",
+    "/excel-and-access-experts-richmond",
     "/microsoft-consultants-richmond",
   ),
 ];

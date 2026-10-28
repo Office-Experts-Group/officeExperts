@@ -284,11 +284,11 @@ export const caseStudies = [
     services: [
       {
         label: "Microsoft Word training",
-        href: "https://www.wordexperts.com.au/training",
+        href: "/microsoft-support-and-training-australia",
       },
       {
         label: "Word template design",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
     ],
   },
@@ -791,11 +791,11 @@ export const caseStudies = [
     services: [
       {
         label: "Fillable Forms",
-        href: "https://www.wordexperts.com.au/fill-in-forms",
+        href: "/services/microsoft-word/fill-in-forms",
       },
       {
         label: "Government department services",
-        href: "https://www.wordexperts.com.au/government-departments",
+        href: "/services/microsoft-word/government-departments",
       },
     ],
   },
@@ -874,11 +874,11 @@ export const caseStudies = [
     services: [
       {
         label: "Brand Template services",
-        href: "https://www.wordexperts.com.au/brand-template",
+        href: "/services/microsoft-word/brand-template",
       },
       {
         label: "Fillable Forms",
-        href: "https://www.wordexperts.com.au/fill-in-forms",
+        href: "/services/microsoft-word/fill-in-forms",
       },
     ],
   },
@@ -1130,11 +1130,11 @@ export const caseStudies = [
     services: [
       {
         label: "Government department services",
-        href: "https://www.wordexperts.com.au/government-departments",
+        href: "/services/microsoft-word/government-departments",
       },
       {
         label: "Editable PDF form design",
-        href: "https://www.wordexperts.com.au/word-to-pdf-conversion",
+        href: "/services/microsoft-word/word-template-conversions",
       },
     ],
   },
@@ -1372,11 +1372,11 @@ export const caseStudies = [
     services: [
       {
         label: "Quick Parts",
-        href: "https://www.wordexperts.com.au/quick-parts",
+        href: "/services/microsoft-word/quick-parts",
       },
       {
         label: "Document rebranding services",
-        href: "https://www.wordexperts.com.au/document-rebranding-services",
+        href: "/services/microsoft-word/document-rebranding-services",
       },
     ],
   },
@@ -1553,11 +1553,11 @@ export const caseStudies = [
     services: [
       {
         label: "Pop-up forms for Word",
-        href: "https://www.wordexperts.com.au/popup-forms",
+        href: "/services/microsoft-word/popup-forms",
       },
       {
         label: "Fillable Forms",
-        href: "https://www.wordexperts.com.au/fill-in-forms",
+        href: "/services/microsoft-word/fill-in-forms",
       },
     ],
   },
@@ -1717,11 +1717,11 @@ export const caseStudies = [
     services: [
       {
         label: "Quick Parts",
-        href: "https://www.wordexperts.com.au/quick-parts",
+        href: "/services/microsoft-word/quick-parts",
       },
       {
         label: "Corporate templates",
-        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+        href: "/services/microsoft-word/corporate-global-template-solution",
       },
     ],
   },
@@ -1872,11 +1872,11 @@ export const caseStudies = [
     services: [
       {
         label: "Word template design",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
       {
         label: "Corporate templates",
-        href: "https://www.wordexperts.com.au/corporate-global-template-solution",
+        href: "/services/microsoft-word/corporate-global-template-solution",
       },
     ],
   },
@@ -1959,11 +1959,11 @@ export const caseStudies = [
     services: [
       {
         label: "Custom Word ribbon development",
-        href: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+        href: "/services/microsoft-word/custom-toolbars-and-ribbons",
       },
       {
         label: "Enterprise template design and governance",
-        href: "https://www.wordexperts.com.au/corporate-identity",
+        href: "/services/microsoft-word/corporate-identity",
       },
     ],
   },
@@ -2035,11 +2035,11 @@ export const caseStudies = [
     services: [
       {
         label: "Word template design",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
       {
         label: "Document rebranding services",
-        href: "https://www.wordexperts.com.au/document-rebranding-services",
+        href: "/services/microsoft-word/document-rebranding-services",
       },
     ],
   },
@@ -2366,11 +2366,11 @@ export const caseStudies = [
     services: [
       {
         label: "Word document template creation",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
       {
         label: "Word template conversions",
-        href: "https://www.wordexperts.com.au/word-template-conversions",
+        href: "/services/microsoft-word/word-template-conversions",
       },
     ],
   },
@@ -2614,11 +2614,11 @@ export const caseStudies = [
     services: [
       {
         label: "Custom Word ribbon development",
-        href: "https://www.wordexperts.com.au/custom-toolbars-and-ribbons",
+        href: "/services/microsoft-word/custom-toolbars-and-ribbons",
       },
       {
         label: "Word template design",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
     ],
   },
@@ -2699,11 +2699,11 @@ export const caseStudies = [
     services: [
       {
         label: "Microsoft Word solutions",
-        href: "https://www.wordexperts.com.au",
+        href: "/services/microsoft-word",
       },
       {
         label: "Brand template services",
-        href: "https://www.wordexperts.com.au/brand-template",
+        href: "/services/microsoft-word/brand-template",
       },
     ],
   },
@@ -2879,11 +2879,11 @@ export const caseStudies = [
     services: [
       {
         label: "Pop-up forms for Word",
-        href: "https://www.wordexperts.com.au/popup-forms",
+        href: "/services/microsoft-word/popup-forms",
       },
       {
         label: "Word template design",
-        href: "https://www.wordexperts.com.au/word-document-template-creation",
+        href: "/services/microsoft-word/word-document-template-creation",
       },
     ],
   },
@@ -2901,7 +2901,7 @@ export const siteMeta = {
   },
   word: {
     name: "Word Experts",
-    domain: "https://www.wordexperts.com.au",
+    domain: "/services/microsoft-word",
   },
   excel: {
     name: "Excel Experts",

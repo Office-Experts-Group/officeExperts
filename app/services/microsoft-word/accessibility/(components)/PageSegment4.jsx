@@ -23,7 +23,7 @@ const Segment4Repeat = () => {
             </h2>
             <p>
               Word Experts have worked with many{" "}
-              <Link href="/government-departments">
+              <Link href="/services/microsoft-word/government-departments">
                 Government departments,
               </Link>{" "}
               state, federal and corporate, over 25 years. We understand the

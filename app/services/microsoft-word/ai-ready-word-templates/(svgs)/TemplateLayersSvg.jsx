@@ -1,4 +1,4 @@
-// app/copilot-and-ai-templates/(svgs)/TemplateLayersSvg.jsx
+// app/ai-ready-word-templates/(svgs)/TemplateLayersSvg.jsx
 // Exploded view of an AI-ready template: four stacked layers with the
 // style foundation at the bottom. Each layer's glyphs are drawn in a 0–100
 // unit square and mapped onto the rhombus with an SVG matrix transform.
@@ -19,9 +19,25 @@ const layers = [
     sub: "What to write, and what not to",
     glyphs: (
       <>
-        <circle cx="16" cy="18" r="6" fill="none" stroke={ACCENT} strokeWidth="1.2" />
+        <circle
+          cx="16"
+          cy="18"
+          r="6"
+          fill="none"
+          stroke={ACCENT}
+          strokeWidth="1.2"
+        />
         {[16, 32, 46, 60].map((y, i) => (
-          <line key={y} x1="28" y1={y + 2} x2={[80, 70, 76, 58][i]} y2={y + 2} stroke={MUTED} strokeWidth="2" strokeDasharray="4 3" />
+          <line
+            key={y}
+            x1="28"
+            y1={y + 2}
+            x2={[80, 70, 76, 58][i]}
+            y2={y + 2}
+            stroke={MUTED}
+            strokeWidth="2"
+            strokeDasharray="4 3"
+          />
         ))}
       </>
     ),
@@ -31,8 +47,28 @@ const layers = [
     sub: "Where AI writes",
     glyphs: (
       <>
-        <rect x="12" y="14" width="76" height="22" rx="2" fill="none" stroke={ACCENT} strokeWidth="1.2" strokeDasharray="3 2" />
-        <rect x="12" y="48" width="76" height="34" rx="2" fill="none" stroke={ACCENT} strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect
+          x="12"
+          y="14"
+          width="76"
+          height="22"
+          rx="2"
+          fill="none"
+          stroke={ACCENT}
+          strokeWidth="1.2"
+          strokeDasharray="3 2"
+        />
+        <rect
+          x="12"
+          y="48"
+          width="76"
+          height="34"
+          rx="2"
+          fill="none"
+          stroke={ACCENT}
+          strokeWidth="1.2"
+          strokeDasharray="3 2"
+        />
       </>
     ),
   },
@@ -40,7 +76,16 @@ const layers = [
     label: "Locked zones",
     sub: "Where AI can't",
     glyphs: (
-      <rect x="12" y="48" width="76" height="36" rx="2" fill="url(#tl-hatch)" stroke={MUTED} strokeWidth="1" />
+      <rect
+        x="12"
+        y="48"
+        width="76"
+        height="36"
+        rx="2"
+        fill="url(#tl-hatch)"
+        stroke={MUTED}
+        strokeWidth="1"
+      />
     ),
   },
   {
@@ -50,7 +95,15 @@ const layers = [
       <>
         <rect x="14" y="14" width="42" height="8" rx="1.5" fill={INK} />
         {[30, 40, 50].map((y, i) => (
-          <rect key={y} x="14" y={y} width={[70, 62, 66][i]} height="4" rx="1.5" fill={MUTED} />
+          <rect
+            key={y}
+            x="14"
+            y={y}
+            width={[70, 62, 66][i]}
+            height="4"
+            rx="1.5"
+            fill={MUTED}
+          />
         ))}
         <rect x="14" y="62" width="34" height="6" rx="1.5" fill={ACCENT} />
         <rect x="14" y="74" width="60" height="4" rx="1.5" fill={MUTED} />
@@ -74,7 +127,15 @@ export const TemplateLayersSvg = () => (
         patternUnits="userSpaceOnUse"
         patternTransform="rotate(45)"
       >
-        <line x1="0" y1="0" x2="0" y2="5" stroke={MUTED} strokeOpacity="0.5" strokeWidth="1.5" />
+        <line
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="5"
+          stroke={MUTED}
+          strokeOpacity="0.5"
+          strokeWidth="1.5"
+        />
       </pattern>
     </defs>
 
@@ -93,10 +154,19 @@ export const TemplateLayersSvg = () => (
             strokeWidth={isBase ? 1.5 : 1}
           />
           {/* Map 0–100 glyph space onto the plane */}
-          <g transform={`matrix(1.6 -0.5 1.6 0.5 60 ${y + 50})`}>{layer.glyphs}</g>
+          <g transform={`matrix(1.6 -0.5 1.6 0.5 60 ${y + 50})`}>
+            {layer.glyphs}
+          </g>
 
           {/* Leader and label */}
-          <line x1="380" y1={y + 50} x2="408" y2={y + 50} stroke={ACCENT} strokeOpacity="0.5" />
+          <line
+            x1="380"
+            y1={y + 50}
+            x2="408"
+            y2={y + 50}
+            stroke={ACCENT}
+            strokeOpacity="0.5"
+          />
           <circle cx="380" cy={y + 50} r="2.5" fill={ACCENT} />
           <text x="416" y={y + 48} fontSize="13" fontWeight="700" fill={INK}>
             {layer.label}

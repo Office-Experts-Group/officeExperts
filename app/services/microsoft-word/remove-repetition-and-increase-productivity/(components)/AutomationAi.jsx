@@ -22,7 +22,7 @@ const approaches = [
     ],
     bestFor: "Teams already licensed for Microsoft 365 Copilot",
     link: {
-      href: "/services/microsoft-office-365/copilot",
+      href: "/services/copilot",
       text: "Microsoft Copilot consulting",
     },
   },
@@ -46,7 +46,15 @@ const approaches = [
 ];
 
 // One approach card: icon, heading, description, outcomes and a link down to the service page
-const ApproachCard = ({ Icon, label, title, description, points, bestFor, link }) => (
+const ApproachCard = ({
+  Icon,
+  label,
+  title,
+  description,
+  points,
+  bestFor,
+  link,
+}) => (
   <article className={styles.card}>
     <Icon className={styles.icon} />
     <p className={styles.label}>{label}</p>
@@ -105,9 +113,9 @@ const AutomationAi = () => (
           </h3>
           <p className={styles.bandText}>
             Without proper styles, content controls and locked layouts, AI
-            output arrives as unformatted text that someone still has to fix.
-            We rebuild templates so generated content lands in the right place,
-            in the right format, every time.
+            output arrives as unformatted text that someone still has to fix. We
+            rebuild templates so generated content lands in the right place, in
+            the right format, every time.
           </p>
         </div>
         <Link

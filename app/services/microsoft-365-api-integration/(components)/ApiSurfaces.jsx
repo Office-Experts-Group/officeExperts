@@ -31,7 +31,7 @@ const surfaces = [
     id: "mobile",
     title: "Mobile and offline apps for the field",
     text: "React Native apps and installable Progressive Web Apps let field teams fill in forms, take photos and read site documents with no signal, then sync to SharePoint or Dataverse when they're back in range. No app store needed for a PWA.",
-    href: "/services/microsoft-office-365/remote-data-gathering-from-any-device",
+    href: "/services/remote-data-gathering-from-any-device",
     linkText: "Remote data gathering",
   },
   {

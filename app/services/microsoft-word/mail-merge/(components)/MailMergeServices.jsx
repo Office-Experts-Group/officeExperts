@@ -71,7 +71,9 @@ const services = [
     capabilities: [
       <>
         Split a merge into individual Word or{" "}
-        <Link href="/services/microsoft-word/word-to-pdf-conversion">PDF</Link>{" "}
+        <Link href="/services/microsoft-word/word-template-conversions">
+          PDF
+        </Link>{" "}
         files, each named from the data
       </>,
       "Save each file straight into the matching client or project folder",
@@ -92,7 +94,9 @@ const services = [
     description: (
       <>
         Short, practical{" "}
-        <Link href="/services/microsoft-word/training">Word training</Link>{" "}
+        <Link href="/microsoft-support-and-training-australia">
+          Word training
+        </Link>{" "}
         built around your own templates and data, in person or over Teams, so
         your team can run merges confidently without calling for help.
       </>
@@ -139,7 +143,7 @@ const services = [
       </>,
       <>
         System-generated documents through{" "}
-        <Link href="/microsoft-365-api-integration">
+        <Link href="/services/microsoft-365-api-integration">
           Microsoft 365 API integration
         </Link>
       </>,
@@ -159,8 +163,8 @@ const MailMergeServices = () => (
             <span className={styles.accent}>to fully automated.</span>
           </h2>
           <p className={styles.lead}>
-            Most projects combine a few of these. Open any service to see
-            what's included.
+            Most projects combine a few of these. Open any service to see what's
+            included.
           </p>
         </AnimateOnScroll>
       </div>

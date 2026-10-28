@@ -1,4 +1,4 @@
-// services/microsoft-office-365/remote-data-gathering-from-any-device/RDGCapabilities.jsx
+// services/remote-data-gathering-from-any-device/RDGCapabilities.jsx
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";

@@ -33,7 +33,7 @@ const services = [
     category: "Document Solutions",
     description:
       "Pumping out documents eats up time and money, but it\u2019s an inherent part of almost every business. We build Word systems that standardise templates, automate formatting and make document generation faster and less error-prone. Custom ribbons, dynamic fields and branded templates for high-volume needs.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

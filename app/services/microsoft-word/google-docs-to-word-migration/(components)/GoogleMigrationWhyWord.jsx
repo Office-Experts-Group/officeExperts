@@ -50,12 +50,15 @@ const cards = [
     body: (
       <>
         Our programmers{" "}
-        <Link href="/custom-toolbars-and-ribbons" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/custom-toolbars-and-ribbons"
+          className={styles.link}
+        >
           create custom ribbons and toolbars
         </Link>{" "}
         and{" "}
         <Link
-          href="/corporate-global-template-solution"
+          href="/services/microsoft-word/corporate-global-template-solution"
           className={styles.link}
         >
           custom automated templates
@@ -75,7 +78,10 @@ const cards = [
         detail: (
           <>
             Fields, content controls and{" "}
-            <Link href="/quick-parts" className={styles.link}>
+            <Link
+              href="/services/microsoft-word/quick-parts"
+              className={styles.link}
+            >
               Quick Parts
             </Link>{" "}
             fill in repeat content for you.
@@ -88,7 +94,7 @@ const cards = [
           <>
             Generate contracts and reports from your data, or connect through{" "}
             <Link
-              href="/microsoft-word-api-integrations"
+              href="/services/microsoft-365-api-integration"
               className={styles.link}
             >
               Word API integrations
@@ -135,7 +141,10 @@ const cards = [
     body: (
       <>
         For{" "}
-        <Link href="/government-departments" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/government-departments"
+          className={styles.link}
+        >
           government departments
         </Link>{" "}
         and regulated industries, Word provides advanced security features,

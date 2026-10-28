@@ -26,7 +26,7 @@ const services = [
     category: "Document Solutions",
     description:
       "Proposals, contracts, client reports and brand-controlled templates all take longer than they should. We build Word templates with dynamic fields, custom ribbons and one-click document generation, so every document goes out consistent, on-brand and correct.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

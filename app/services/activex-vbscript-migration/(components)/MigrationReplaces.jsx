@@ -8,7 +8,7 @@ import styles from "@/styles/activexReplaces.module.scss";
 // Cross-site links, kept in one place so URLs are easy to maintain.
 const LINKS = {
   excelVba: "https://www.excelexperts.com.au",
-  wordContentControls: "https://www.wordexperts.com.au",
+  wordContentControls: "/services/microsoft-word",
   access: "https://www.accessexperts.com.au",
   powerApps:
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",

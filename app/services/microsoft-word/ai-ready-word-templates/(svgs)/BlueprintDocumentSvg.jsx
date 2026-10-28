@@ -1,4 +1,4 @@
-// app/copilot-and-ai-templates/(svgs)/BlueprintDocumentSvg.jsx
+// app/ai-ready-word-templates/(svgs)/BlueprintDocumentSvg.jsx
 // Hero illustration: an AI-ready Word template drawn as a blueprint.
 // Elements with className "bp-fill" are animated by aiTemplatesHero.module.scss
 // (they "fill in" as if Copilot is completing the content controls).
@@ -69,7 +69,12 @@ export const BlueprintDocumentSvg = () => (
     aria-hidden="true"
   >
     <defs>
-      <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <pattern
+        id="bp-grid"
+        width="20"
+        height="20"
+        patternUnits="userSpaceOnUse"
+      >
         <path d="M20 0H0V20" fill="none" stroke={ACCENT} strokeOpacity="0.08" />
       </pattern>
       <pattern
@@ -79,10 +84,24 @@ export const BlueprintDocumentSvg = () => (
         patternUnits="userSpaceOnUse"
         patternTransform="rotate(45)"
       >
-        <line x1="0" y1="0" x2="0" y2="6" stroke={MUTED} strokeOpacity="0.35" strokeWidth="2" />
+        <line
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="6"
+          stroke={MUTED}
+          strokeOpacity="0.35"
+          strokeWidth="2"
+        />
       </pattern>
       <filter id="bp-shadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor={ACCENT} floodOpacity="0.12" />
+        <feDropShadow
+          dx="0"
+          dy="8"
+          stdDeviation="12"
+          floodColor={ACCENT}
+          floodOpacity="0.12"
+        />
       </filter>
     </defs>
 
@@ -104,36 +123,121 @@ export const BlueprintDocumentSvg = () => (
 
     {/* Letterhead */}
     <rect x="176" y="54" width="40" height="12" rx="2" fill={ACCENT} />
-    <rect x="330" y="54" width="54" height="4" rx="2" fill={MUTED} fillOpacity="0.5" />
-    <rect x="344" y="62" width="40" height="4" rx="2" fill={MUTED} fillOpacity="0.5" />
+    <rect
+      x="330"
+      y="54"
+      width="54"
+      height="4"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.5"
+    />
+    <rect
+      x="344"
+      y="62"
+      width="40"
+      height="4"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.5"
+    />
 
     {/* Heading 1 + body text */}
     <rect x="176" y="90" width="150" height="12" rx="2" fill={INK} />
-    <rect x="176" y="114" width="208" height="5" rx="2" fill={MUTED} fillOpacity="0.45" />
-    <rect x="176" y="124" width="190" height="5" rx="2" fill={MUTED} fillOpacity="0.45" />
-    <rect x="176" y="134" width="200" height="5" rx="2" fill={MUTED} fillOpacity="0.45" />
+    <rect
+      x="176"
+      y="114"
+      width="208"
+      height="5"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.45"
+    />
+    <rect
+      x="176"
+      y="124"
+      width="190"
+      height="5"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.45"
+    />
+    <rect
+      x="176"
+      y="134"
+      width="200"
+      height="5"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.45"
+    />
 
     {/* Content control 1 */}
-    <ContentControl x={172} y={162} w={216} h={30} title="Client name" tabW={60} />
+    <ContentControl
+      x={172}
+      y={162}
+      w={216}
+      h={30}
+      title="Client name"
+      tabW={60}
+    />
     <FillBar x={182} y={174} w={120} delay={0.3} />
 
     {/* Heading 2 */}
     <rect x="176" y="208" width="110" height="9" rx="2" fill={ACCENT} />
 
     {/* Content control 2 */}
-    <ContentControl x={172} y={238} w={216} h={52} title="Scope of work" tabW={70} />
+    <ContentControl
+      x={172}
+      y={238}
+      w={216}
+      h={52}
+      title="Scope of work"
+      tabW={70}
+    />
     <FillBar x={182} y={248} w={190} delay={0.7} />
     <FillBar x={182} y={260} w={170} delay={0.85} />
     <FillBar x={182} y={272} w={130} delay={1} />
 
     {/* Content control 3: fee table */}
-    <ContentControl x={172} y={312} w={216} h={50} title="Fee schedule" tabW={64} />
-    <rect x="180" y="319" width="200" height="10" rx="1" fill={ACCENT} fillOpacity="0.18" />
+    <ContentControl
+      x={172}
+      y={312}
+      w={216}
+      h={50}
+      title="Fee schedule"
+      tabW={64}
+    />
+    <rect
+      x="180"
+      y="319"
+      width="200"
+      height="10"
+      rx="1"
+      fill={ACCENT}
+      fillOpacity="0.18"
+    />
     {[329, 341].map((y) => (
-      <line key={y} x1="180" y1={y} x2="380" y2={y} stroke={ACCENT} strokeOpacity="0.25" />
+      <line
+        key={y}
+        x1="180"
+        y1={y}
+        x2="380"
+        y2={y}
+        stroke={ACCENT}
+        strokeOpacity="0.25"
+      />
     ))}
     {[246, 314].map((x) => (
-      <line key={x} x1={x} y1="319" x2={x} y2="354" stroke={ACCENT} strokeOpacity="0.25" />
+      <line
+        key={x}
+        x1={x}
+        y1="319"
+        x2={x}
+        y2="354"
+        stroke={ACCENT}
+        strokeOpacity="0.25"
+      />
     ))}
     <FillBar x={186} y={333} w={50} h={5} delay={1.25} />
     <FillBar x={252} y={333} w={40} h={5} delay={1.35} />
@@ -152,11 +256,49 @@ export const BlueprintDocumentSvg = () => (
       stroke={MUTED}
       strokeOpacity="0.55"
     />
-    <rect x="182" y="398" width="12" height="10" rx="2" fill={INK} fillOpacity="0.7" />
-    <path d="M184.5 398v-3a3.5 3.5 0 0 1 7 0v3" fill="none" stroke={INK} strokeOpacity="0.7" strokeWidth="1.6" />
-    <rect x="204" y="392" width="160" height="4" rx="2" fill={MUTED} fillOpacity="0.6" />
-    <rect x="204" y="401" width="170" height="4" rx="2" fill={MUTED} fillOpacity="0.6" />
-    <rect x="204" y="410" width="120" height="4" rx="2" fill={MUTED} fillOpacity="0.6" />
+    <rect
+      x="182"
+      y="398"
+      width="12"
+      height="10"
+      rx="2"
+      fill={INK}
+      fillOpacity="0.7"
+    />
+    <path
+      d="M184.5 398v-3a3.5 3.5 0 0 1 7 0v3"
+      fill="none"
+      stroke={INK}
+      strokeOpacity="0.7"
+      strokeWidth="1.6"
+    />
+    <rect
+      x="204"
+      y="392"
+      width="160"
+      height="4"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.6"
+    />
+    <rect
+      x="204"
+      y="401"
+      width="170"
+      height="4"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.6"
+    />
+    <rect
+      x="204"
+      y="410"
+      width="120"
+      height="4"
+      rx="2"
+      fill={MUTED}
+      fillOpacity="0.6"
+    />
 
     {/* ── Left annotations ── */}
     <Annotation label="Heading 1" y={100} toY={96} />
@@ -182,7 +324,14 @@ export const BlueprintDocumentSvg = () => (
       d="M490 234c1.8 9.5 5.5 13.2 15 15-9.5 1.8-13.2 5.5-15 15-1.8-9.5-5.5-13.2-15-15 9.5-1.8 13.2-5.5 15-15z"
       fill="#fff"
     />
-    <text x="490" y="300" fontSize="12" fontWeight="700" fill={INK} textAnchor="middle">
+    <text
+      x="490"
+      y="300"
+      fontSize="12"
+      fontWeight="700"
+      fill={INK}
+      textAnchor="middle"
+    >
       Copilot
     </text>
     <text x="490" y="315" fontSize="10" fill="#4a5568" textAnchor="middle">

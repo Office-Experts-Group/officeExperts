@@ -1183,8 +1183,11 @@ const WordDesktopVsWebBlogPost = () => {
                   <li key={i}>{i}</li>
                 ))}
                 <li>
-                  <Link href={WORD + "/training"}>Support</Link> and{" "}
-                  <Link href={WORD + "/upgrades-and-migration"}>updates</Link>{" "}
+                  <Link href={"/microsoft-support-and-training-australia"}>
+                    Support
+                  </Link>{" "}
+                  and{" "}
+                  <Link href={"/services/upgrades-and-migration"}>updates</Link>{" "}
                   matter
                 </li>
               </ul>
@@ -1331,7 +1334,10 @@ const WordDesktopVsWebBlogPost = () => {
                   <Link href="/contact-us" className={styles.ctaPrimary}>
                     Talk to our team <Icon name="arrow" />
                   </Link>
-                  <Link href={WORD + "/training"} className={styles.ctaGhost}>
+                  <Link
+                    href={"/microsoft-support-and-training-australia"}
+                    className={styles.ctaGhost}
+                  >
                     Word training and support
                   </Link>
                 </div>

@@ -58,7 +58,7 @@ const apps = [
     color: "#0F6CBD",
     description:
       "Microsoft Purview, Defender and the built-in compliance tools across 365 give your business enterprise-grade data protection, audit trails and regulatory reporting. Our designers on the Word Experts Team create accessible, secure and compliant document templates. Together, these tools help you manage risk, protect sensitive information and meet industry requirements, while ensuring your documents and systems remain usable, consistent and aligned with your organisation’s governance policies.",
-    link: "https://www.wordexperts.com.au/corporate-global-template-solution",
+    link: "/services/microsoft-word/corporate-global-template-solution",
     linkLabel: "Word Document Solutions",
   },
   {

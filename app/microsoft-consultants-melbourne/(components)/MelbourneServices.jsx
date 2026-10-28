@@ -24,7 +24,7 @@ const services = [
     category: "Document Solutions",
     description:
       "Legal firms, government departments and professional services organisations rely on consistent, correctly structured documents at volume. We build the templates, styles and automation that make that possible without depending on individuals getting it right every time.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

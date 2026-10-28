@@ -1,4 +1,4 @@
-// app/copilot-and-ai-templates/(svgs)/AgentWorkflowSvg.jsx
+// app/ai-ready-word-templates/(svgs)/AgentWorkflowSvg.jsx
 // Custom AI agent flow: business inputs → agent (templates + rules) →
 // human approval → finished outputs.
 

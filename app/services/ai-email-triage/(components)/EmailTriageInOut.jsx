@@ -25,10 +25,7 @@ const EmailTriageInOut = () => {
             Dataverse data using Word mail merge. Together they automate both
             ends of your email workload.
           </p>
-          <a
-            href="https://www.wordexperts.com.au/mail-merge"
-            className={styles.cta}
-          >
+          <a href="/services/microsoft-word/mail-merge" className={styles.cta}>
             Explore our Mail Merge services
           </a>
         </div>

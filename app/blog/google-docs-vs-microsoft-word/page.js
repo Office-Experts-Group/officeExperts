@@ -426,7 +426,9 @@ const STEPS = [
     body: (
       <>
         Even the most powerful software is underused without{" "}
-        <Link href="/services/microsoft-word/training">the right training</Link>
+        <Link href="/microsoft-support-and-training-australia">
+          the right training
+        </Link>
         . Teams familiar with Google Docs often don’t know the depth of Word’s
         toolset — from advanced reviewing and track changes to mail merge,
         macros and collaboration with SharePoint. A structured onboarding

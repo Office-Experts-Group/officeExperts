@@ -85,7 +85,7 @@ const RebrandingWho = () => (
             and small, sturggling on your own to create a meanigful brand
             position, or even have a large team trying to work together on a new
             concept?{" "}
-            <Link href="meet-the-team" className={styles.link}>
+            <Link href="/meet-the-team" className={styles.link}>
               Our Word Designers
             </Link>{" "}
             have all the expertise you need to get the job done.

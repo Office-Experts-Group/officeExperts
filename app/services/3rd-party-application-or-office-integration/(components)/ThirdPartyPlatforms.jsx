@@ -39,7 +39,7 @@ const groups = [
       {
         name: "Salesforce integration",
         text: "Sync leads, accounts and opportunities with Excel, generate quotes and proposals in Word straight from a Salesforce record, and keep pipeline reports current.",
-        href: "https://www.wordexperts.com.au/microsoft-word-api-integrations",
+        href: "/services/microsoft-365-api-integration",
         linkText: "Word API integrations",
       },
       {

@@ -57,7 +57,7 @@ const SegmentMainCopy = () => {
             <p>VB.NET</p>
           </div>
         </Link>
-        <Link href="https://www.wordexperts.com.au">
+        <Link href="/services/microsoft-word">
           <div className={styles.contentLink}>
             <p>Microsoft Word</p>
           </div>

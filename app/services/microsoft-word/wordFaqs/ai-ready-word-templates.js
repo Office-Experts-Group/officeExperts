@@ -1,5 +1,5 @@
-// faqs/copilot-and-ai-templates.js
-// FAQ content for /copilot-and-ai-templates. Also the single source for the
+// faqs/ai-ready-word-templates.js
+// FAQ content for /ai-ready-word-templates. Also the single source for the
 // FAQPage schema (faqs/copilotAiTemplatesSchema.js), so answers only live here.
 // Each answer opens with a direct one-sentence answer for snippets/answer engines.
 

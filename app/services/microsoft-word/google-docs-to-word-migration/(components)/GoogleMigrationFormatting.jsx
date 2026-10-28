@@ -37,7 +37,10 @@ const tiles = [
         Access advanced character spacing, ligature controls, OpenType features
         and precise baseline adjustments. Word’s comprehensive style management,
         paired with a proper{" "}
-        <Link href="/brand-template" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/brand-template"
+          className={styles.link}
+        >
           brand template
         </Link>
         , keeps your corporate look consistent across entire document libraries.
@@ -80,11 +83,17 @@ const tiles = [
         and precise page layout controls help ensure documents keep their
         intended appearance across different printers and viewing devices. We
         also build{" "}
-        <Link href="/accessibility" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/accessibility"
+          className={styles.link}
+        >
           accessible Word documents
         </Link>{" "}
         and handle{" "}
-        <Link href="/word-to-pdf-conversion" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/word-template-conversions"
+          className={styles.link}
+        >
           Word to PDF conversion
         </Link>{" "}
         to your exact specification.

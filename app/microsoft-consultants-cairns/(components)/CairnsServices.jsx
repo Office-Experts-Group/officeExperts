@@ -26,7 +26,7 @@ const services = [
     id: "word",
     title: "Microsoft Word",
     category: "Document Solutions",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Experts",
     description:
       "Consistent, professionally structured documents at scale. We build templates, corporate styles and document automation that eliminate formatting errors and reduce the time your team spends on document production.",

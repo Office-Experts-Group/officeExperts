@@ -49,7 +49,7 @@ const services = [
     description:
       "Tenders, contracts, reports and board papers built from controlled templates with content controls and smart fields, so the 40th document looks like the first and nobody is copying old files to start a new one.",
     chips: ["Templates", "Content controls", "Document generation"],
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

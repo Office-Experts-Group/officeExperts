@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "@/styles/businessAnalysisValue.module.scss";
 const teams = [
-  { label: "Word", href: "https://www.wordexperts.com.au" },
+  { label: "Word", href: "/services/microsoft-word" },
   { label: "Excel", href: "https://www.excelexperts.com.au" },
   { label: "Access & SQL Server", href: "https://www.accessexperts.com.au" },
   { label: "Power Platform", href: "https://www.powerplatformexperts.com.au" },

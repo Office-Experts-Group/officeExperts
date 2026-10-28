@@ -1,4 +1,4 @@
-// services/microsoft-office-365/remote-data-gathering-from-any-device/(svgs)/ConnectionDiagram.jsx
+// services/remote-data-gathering-from-any-device/(svgs)/ConnectionDiagram.jsx
 import React from "react";
 
 /**

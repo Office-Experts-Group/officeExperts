@@ -27,7 +27,7 @@ const services = [
     category: "Document Solutions",
     description:
       "Official correspondence, policy documents, ministerial briefs, tender responses, Canberra produces more structured written output per capita than anywhere else in Australia. We build the Word templates, styles, content controls and automation that enforce correct formatting at scale.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Experts",
   },
   {

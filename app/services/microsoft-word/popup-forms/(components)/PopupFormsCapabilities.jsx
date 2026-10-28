@@ -15,7 +15,7 @@ const capabilities = [
     title: "Guided, step-by-step data entry",
     tag: "UserForms",
     desc: "Custom VBA UserForms that walk staff through exactly what's required, in the right order, so nothing gets missed or entered out of sequence.",
-    href: "/fill-in-forms",
+    href: "/services/microsoft-word/fill-in-forms",
   },
   {
     id: "02",
@@ -36,14 +36,14 @@ const capabilities = [
     title: "Direct document & field integration",
     tag: "Mail merge & quick parts",
     desc: "Captured data flows straight into your Word document's fields, content controls, or quick parts, keeping formatting and branding consistent every time.",
-    href: "/mail-merge",
+    href: "/services/microsoft-word/mail-merge",
   },
   {
     id: "05",
     title: "External data source linking",
     tag: "Connectivity",
     desc: "Connect popup forms to SharePoint lists, SQL databases, or existing spreadsheets so the form is always working from current data.",
-    href: "/microsoft-word-api-integrations",
+    href: "/services/microsoft-365-api-integration",
   },
 ];
 

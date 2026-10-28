@@ -32,7 +32,10 @@ const services = [
         numbering, and images, tables, comments and suggestions come across
         intact, so nothing needs reworking after the move. Large libraries are
         handled through our{" "}
-        <Link href="/word-template-conversions" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/word-template-conversions"
+          className={styles.link}
+        >
           template conversion service
         </Link>
         .
@@ -52,7 +55,10 @@ const services = [
       <>
         Master templates built on real styles, Quick Parts and content controls,
         so every new document starts on brand. See our{" "}
-        <Link href="/brand-template" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/brand-template"
+          className={styles.link}
+        >
           brand template service
         </Link>
         .
@@ -72,7 +78,10 @@ const services = [
       <>
         People move faster when they see how their own documents behave in Word.
         Our{" "}
-        <Link href="/training" className={styles.link}>
+        <Link
+          href="/microsoft-support-and-training-australia"
+          className={styles.link}
+        >
           Word trainers
         </Link>{" "}
         work with your real files, not generic examples, and teach the shortcuts
@@ -105,15 +114,24 @@ const services = [
         Pull data from your CRM, finance or case management system straight into
         Word, and send finished documents to SharePoint, Teams or your records
         system. Explore{" "}
-        <Link href="/mail-merge" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/mail-merge"
+          className={styles.link}
+        >
           mail merge
         </Link>
         ,{" "}
-        <Link href="/microsoft-word-api-integrations" className={styles.link}>
+        <Link
+          href="/services/microsoft-365-api-integration"
+          className={styles.link}
+        >
           API integrations
         </Link>{" "}
         and{" "}
-        <Link href="/copilot-and-ai-templates" className={styles.link}>
+        <Link
+          href="/services/microsoft-word/ai-ready-word-templates"
+          className={styles.link}
+        >
           Copilot-ready templates
         </Link>
         .
@@ -143,7 +161,10 @@ const sectors = [
     text: (
       <>
         Sensitivity labels and protective markings for{" "}
-        <Link href="/government-departments" className={styles.textLink}>
+        <Link
+          href="/services/microsoft-word/government-departments"
+          className={styles.textLink}
+        >
           government agencies
         </Link>{" "}
         handling classified material.

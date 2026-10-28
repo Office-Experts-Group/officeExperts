@@ -19,7 +19,7 @@ const apps = [
       "For inspiration, correcting grammar or even final drafts, many people are already using LLM's to help with document creation, but Copilot integrated into Word not just saves time copy and pasting text from one window to another. Copilot is a fully context aware partner that can be taught to follow your own document standards. If your business has the right templates and tools in place, Copilot creates meaningful, useable material, not just more Ai slop.",
     highlight:
       "When your business already relies on branded templates or advanced document systems, our consultants ensure Copilot enhances the process rather than destroying it.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word experts",
   },
   {

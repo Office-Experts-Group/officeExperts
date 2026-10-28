@@ -56,7 +56,7 @@ const services = [
     description:
       "Tenders, grant applications, safety plans, contracts and reports built from controlled templates with content controls and smart fields, so the document is consistent and on-brand regardless of who writes it.",
     points: ["Templates", "Content controls", "Document generation"],
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {

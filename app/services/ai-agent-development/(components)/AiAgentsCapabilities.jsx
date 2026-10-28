@@ -44,7 +44,7 @@ const right = [
     // Cross-domain link rendered inside the body copy
     link: {
       text: "AI-ready Word templates",
-      href: "https://www.wordexperts.com.au/copilot-and-ai-templates",
+      href: "/services/microsoft-word/ai-ready-word-templates",
       lead: "Pair them with ",
     },
   },

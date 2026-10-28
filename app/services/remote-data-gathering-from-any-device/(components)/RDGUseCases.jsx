@@ -1,4 +1,4 @@
-// services/microsoft-office-365/remote-data-gathering-from-any-device/RDGUseCases.jsx
+// services/remote-data-gathering-from-any-device/RDGUseCases.jsx
 import React from "react";
 import Link from "next/link";
 

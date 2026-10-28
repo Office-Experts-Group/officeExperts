@@ -88,7 +88,7 @@ const EmailTriageSuite = () => {
             </Link>
             {/* Outbound counterpart to triage (brief's required internal link) */}
             <a
-              href="https://www.wordexperts.com.au/mail-merge"
+              href="/services/microsoft-word/mail-merge"
               className={styles.link}
             >
               Automated outbound email with mail merge

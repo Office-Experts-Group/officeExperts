@@ -34,7 +34,7 @@ const services = [
     category: "Document Solutions",
     description:
       "Government contractors, engineering firms and professional services businesses in Perth produce a tonne of documents, tenders, reports, contracts, proposals. We build Word systems with standardised templates, dynamic fields and automated formatting that make high-volume document production consistent and fast, without your team spending hours on layout.",
-    href: "https://www.wordexperts.com.au",
+    href: "/services/microsoft-word",
     linkText: "Word Designers",
   },
   {
