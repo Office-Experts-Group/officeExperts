@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import styles from "@/styles/ultimateGuideToWordTemplatesBlog.module.scss";
 import Contact from "@/components/Contact";
-import { generateOrganizationSchema } from "@/utils/schemaGenerators";
 
 // TODO: confirm the original post's author and that this file exists in public/team/
 import dan from "@/public/team/dan.webp";
@@ -68,7 +67,7 @@ const HERO_IMAGE_ALT =
   "A master Word template producing a letter, a report and an invoice";
 // TODO: copy datePublished from the original post. Left empty so the schema
 // omits it rather than inventing a date.
-const DATE_PUBLISHED = "";
+const DATE_PUBLISHED = "2026-01-28T00:00:00+11:00";
 const DATE_MODIFIED = "2026-10-28T00:00:00+11:00";
 
 function formatDate(iso) {
@@ -83,7 +82,6 @@ function formatDate(iso) {
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
