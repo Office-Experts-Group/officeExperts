@@ -84,16 +84,16 @@ const cityRedirects = Object.entries(OLD_URLS_BY_CITY).flatMap(
 // Richmond stays as it is: there is no Richmond hub planned (checklist: "Richmond stays").
 const richmondRedirects = [
   permanent(
-    "/excel-consultants-richmond",
-    "/microsoft-support-and-training-richmond",
-  ),
-  permanent(
     "/word-and-powerpoint-experts-richmond",
     "/microsoft-support-and-training-richmond",
   ),
   permanent(
     "/office-and-office-365-experts-richmond",
-    "/excel-and-access-experts-richmond",
+    "/microsoft-consultants-richmond",
+  ),
+  permanent(
+    "//excel-and-access-experts-richmond",
+    "/microsoft-consultants-richmond",
   ),
 ];
 
