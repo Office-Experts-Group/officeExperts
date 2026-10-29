@@ -1,4 +1,5 @@
 // styles/popupFormsUseCases.module.scss
+@use "./globals.scss" as *;
 // Bento layout for PopupFormsUseCases (12-column grid).
 
 $brand: #046999;
@@ -6,7 +7,7 @@ $brand-deep: #03506f;
 $ink: #0f1f2b;
 $muted: #55626d;
 $page-bg: #f1f2f4;
-$radius: 24px;
+$curve: 24px;
 
 .section {
   background: $page-bg;
@@ -84,7 +85,7 @@ $radius: 24px;
   gap: 1.5rem;
   overflow: hidden;
   padding: 2rem 2rem 1.75rem;
-  border-radius: $radius;
+  border-radius: $curve;
   background: #fff;
   color: $ink;
   box-shadow: 0 1px 2px rgba(15, 31, 43, 0.04);

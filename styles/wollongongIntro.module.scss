@@ -1,19 +1,6 @@
 // styles/wollongongIntro.module.scss
 @use "./globals" as *;
 
-// Everything below the desktop breakpoint
-@mixin belowDesktop {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 // ── Section ──────────────────────────────────
 .section {
   background: $white;

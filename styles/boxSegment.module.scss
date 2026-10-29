@@ -5,11 +5,10 @@
 // ============================================================
 $flip-dur: 900ms;
 $flip-ease: cubic-bezier(0.645, 0.045, 0.355, 1);
-$radius: 1.75rem;
+$curve: 1.75rem;
 $dark-bg: #232528;
 $light-card: #f2f3f5;
 $dark-card: #ffffff;
-$accent: #046999;
 
 // ============================================================
 // Section wrapper — background transitions with flip state
@@ -86,7 +85,7 @@ $accent: #046999;
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: $radius;
+  border-radius: $curve;
   display: flex;
   align-items: center;
   justify-content: center;

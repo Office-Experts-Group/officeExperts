@@ -1,10 +1,6 @@
 // styles/dashboardsDataSources.module.scss
 @use "./globals.scss" as *;
 
-// $accent is too dark to read on $dark-bg, so the lighter tint used elsewhere
-// on the site (no globals token exists for it) is hardcoded here
-$accent-on-dark: #5ba4c4;
-
 .section {
   background: $dark-bg;
   padding: 7rem 8rem;

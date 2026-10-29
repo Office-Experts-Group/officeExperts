@@ -3,7 +3,7 @@
 
 $earth: #2a1810;
 $ember: #e8743b;
-$line: #eadfd2;
+$earth-line: #eadfd2;
 $count: 8;
 
 // ── Section ──────────────────────────────────
@@ -73,7 +73,7 @@ $count: 8;
 .layout {
   display: grid;
   grid-template-columns: 17rem 1fr;
-  border: 1px solid $line;
+  border: 1px solid $earth-line;
   border-radius: 14px;
   overflow: hidden;
   min-height: 28rem;
@@ -94,19 +94,19 @@ $count: 8;
   display: flex;
   flex-direction: column;
   background: #faf5ee;
-  border-right: 1px solid $line;
+  border-right: 1px solid $earth-line;
 
   @include phoneLandscape {
     flex-direction: row;
     overflow-x: auto;
     border-right: none;
-    border-bottom: 1px solid $line;
+    border-bottom: 1px solid $earth-line;
   }
   @include phone {
     flex-direction: row;
     overflow-x: auto;
     border-right: none;
-    border-bottom: 1px solid $line;
+    border-bottom: 1px solid $earth-line;
   }
 }
 

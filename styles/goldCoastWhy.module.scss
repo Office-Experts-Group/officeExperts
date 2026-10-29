@@ -4,7 +4,6 @@
 
 // Local tones derived from the global accent so the page stays in the site theme
 $ink: color.adjust($accent, $lightness: -20%);
-$line: #e1e5ea;
 
 // ── Section ──────────────────────────────────
 .section {
