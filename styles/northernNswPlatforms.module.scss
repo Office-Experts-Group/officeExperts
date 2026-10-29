@@ -42,7 +42,7 @@
 
 .heading {
   font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -86,7 +86,7 @@
 
 .num {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $text-muted;
   letter-spacing: 0.05em;
 }
@@ -99,7 +99,7 @@
 
 .name {
   font-size: clamp(1.25rem, 2vw, 1.6rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
 }
 

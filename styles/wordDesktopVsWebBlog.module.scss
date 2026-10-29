@@ -182,7 +182,7 @@ $article-width: 820px;
 .glanceValue {
   display: block;
   font-size: 2.3rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: $accent;
   margin-bottom: 0.5rem;
@@ -340,7 +340,7 @@ $article-width: 820px;
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   color: $accent;
   margin-bottom: 0.35rem;
 }
@@ -364,7 +364,7 @@ $article-width: 820px;
     top: 0.2rem;
     left: 0.9rem;
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1;
     color: $accent;
     opacity: 0.22;
@@ -546,7 +546,7 @@ $article-width: 820px;
   tbody tr.groupRow td {
     background: $accent-light;
     color: $accent;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -638,7 +638,7 @@ $article-width: 820px;
     font-size: 0.76rem;
     letter-spacing: 0.09em;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     color: $accent;
   }
 
@@ -691,7 +691,7 @@ $article-width: 820px;
 
 .bigPrice {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: $accent;
 }
@@ -709,7 +709,7 @@ $article-width: 820px;
   }
 
   span.price {
-    font-weight: 800;
+    font-weight: 700;
     color: $accent;
     text-align: right;
   }
@@ -737,7 +737,7 @@ $article-width: 820px;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   vertical-align: middle;
 }
 
@@ -840,7 +840,7 @@ $article-width: 820px;
   font-size: 0.74rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 0.4rem;
 }
 
@@ -892,7 +892,7 @@ $article-width: 820px;
   border-radius: 50%;
   background: $accent;
   color: $white;
-  font-weight: 800;
+  font-weight: 700;
   display: grid;
   place-items: center;
   box-shadow: 0 0 0 6px $light-bg;
@@ -952,7 +952,7 @@ $article-width: 820px;
 .mistakeNum {
   display: block;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1.5px $accent;
@@ -969,7 +969,7 @@ $article-width: 820px;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .mistakeText {

@@ -50,7 +50,7 @@ $accent-bright: #4fb3e0;
 
 .heading {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 700;
   color: $white;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -80,7 +80,7 @@ $accent-bright: #4fb3e0;
 
 .stat {
   font-size: clamp(3.5rem, 6vw, 5rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: $accent-bright;
 }

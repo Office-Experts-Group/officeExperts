@@ -49,7 +49,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .heading {
   font-size: clamp(2.3rem, 4.4vw, 3.4rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $text-primary;
@@ -133,7 +133,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .itemTitle {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   color: $text-primary;
 }
@@ -182,7 +182,7 @@ $text-on-dark: rgba($white, 0.85);
 .capTitle {
   margin-bottom: 0.4rem;
   font-size: 0.98rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $text-primary;
 }
 
@@ -219,7 +219,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .panelTitle {
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }

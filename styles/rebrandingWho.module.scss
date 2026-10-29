@@ -42,7 +42,7 @@
 
 .heading {
   font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $text-primary;
@@ -115,7 +115,7 @@ li:nth-child(even) .iconTile {
 
 .name {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   color: $text-primary;
 }
@@ -124,7 +124,7 @@ li:nth-child(even) .iconTile {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.68rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $text-secondary;

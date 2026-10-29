@@ -45,7 +45,7 @@
 
 .heading {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $text-primary;
@@ -105,7 +105,7 @@
 // Outlined numeral
 .number {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.05em;
   color: transparent;
@@ -114,7 +114,7 @@
 
 .title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.015em;
   color: $text-primary;
@@ -146,7 +146,7 @@
 
 .receiveLabel {
   font-size: 0.62rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: $text-muted;

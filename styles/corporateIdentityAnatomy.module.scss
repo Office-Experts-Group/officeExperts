@@ -35,7 +35,7 @@
 
 .heading {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 700;
   color: $white-88;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -121,7 +121,7 @@
   background: $accent-dim;
   border: 1px solid $accent-border;
   color: $accent;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
   flex-shrink: 0;
 }

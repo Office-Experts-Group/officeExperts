@@ -223,7 +223,7 @@ $shadow-card: 0 10px 30px rgba(13, 27, 42, 0.08);
 .glanceValue {
   margin: 0;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   color: $accent;
 }
@@ -736,7 +736,7 @@ $sidebar-min: 1400px;
     border-radius: 50%;
     background: $accent;
     color: $white;
-    font-weight: 800;
+    font-weight: 700;
     box-shadow: 0 0 0 5px $white;
   }
 
@@ -866,7 +866,7 @@ $sidebar-min: 1400px;
       background: $accent-light;
       color: $accent;
       font-size: 0.78rem;
-      font-weight: 800;
+      font-weight: 700;
     }
   }
 }
@@ -999,7 +999,7 @@ $sidebar-min: 1400px;
   flex: none;
   min-width: 2.4rem;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1.5px $accent;

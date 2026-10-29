@@ -66,7 +66,7 @@
 
 .headline {
   font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -192,7 +192,7 @@
 
 .stepNum {
   font-size: 0.62rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
   color: $text-muted;
 }
@@ -278,7 +278,7 @@
 
 .outputsLabel {
   font-size: 0.62rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $text-muted;
@@ -347,7 +347,7 @@
 
 .promoHeading {
   font-size: clamp(1.75rem, 2.8vw, 2.4rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.18;
   letter-spacing: -0.025em;

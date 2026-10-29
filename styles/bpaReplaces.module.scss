@@ -75,7 +75,7 @@ $bp-phone: 449px;
 
 .title {
   font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.18;
   letter-spacing: -0.03em;
@@ -198,7 +198,7 @@ $bp-phone: 449px;
 
 .colHeaderLabel {
   font-size: 0.65rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: $text-muted;
@@ -296,7 +296,7 @@ $bp-phone: 449px;
 
 .xIcon {
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   color: rgba($before-border, 0.65);
   line-height: 1;
   flex-shrink: 0;
@@ -304,7 +304,7 @@ $bp-phone: 449px;
 
 .checkIcon {
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $accent;
   line-height: 1;
   flex-shrink: 0;

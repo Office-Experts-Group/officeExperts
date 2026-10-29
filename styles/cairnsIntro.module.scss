@@ -44,7 +44,7 @@
 // ── Large headline — left-aligned, wide ───────
 .headline {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.12;
   letter-spacing: -0.03em;
@@ -132,7 +132,7 @@
 
 .statValue {
   font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   letter-spacing: -0.03em;
   line-height: 1;

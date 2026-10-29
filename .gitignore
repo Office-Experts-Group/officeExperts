@@ -52,3 +52,11 @@ testInvoiceGen.html
 checkLinks.mjscheckRedirects.js
 shots.mjs
 /.css-baseline/
+/.css-check/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

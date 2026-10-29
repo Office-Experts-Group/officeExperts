@@ -52,7 +52,7 @@
 
 .heading {
   font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  font-weight: 800;
+  font-weight: 700;
   color: $white;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -106,7 +106,7 @@
 // Oversized shorthand acts as the row's visual anchor
 .tag {
   font-size: clamp(1.3rem, 2vw, 1.65rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: $white-35;
   transition: color 0.25s ease;

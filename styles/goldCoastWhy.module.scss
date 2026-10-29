@@ -50,7 +50,7 @@ $ink: color.adjust($accent, $lightness: -20%);
 
 .heading {
   font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $ink;
@@ -146,7 +146,7 @@ $ink: color.adjust($accent, $lightness: -20%);
 
 .label {
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: $accent;
@@ -154,7 +154,7 @@ $ink: color.adjust($accent, $lightness: -20%);
 
 .title {
   font-size: 1.55rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.025em;
   color: $ink;
@@ -235,7 +235,7 @@ $ink: color.adjust($accent, $lightness: -20%);
 
 .proofValue {
   font-size: clamp(2.2rem, 3.4vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
   color: $ink;

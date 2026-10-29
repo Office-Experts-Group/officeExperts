@@ -93,7 +93,7 @@ $bp-phone: 449px;
 
 .headline {
   font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 900;
+  font-weight: 700;
   color: #ffffff;
   line-height: 1.18;
   letter-spacing: -0.025em;
@@ -150,7 +150,7 @@ $bp-phone: 449px;
 
 .diffHeading {
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $white-88;
   margin: 0 0 0.3rem;
   letter-spacing: -0.01em;
@@ -354,7 +354,7 @@ $bp-phone: 449px;
 
 .stepNum {
   font-size: 0.63rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
   color: $white-18;
   transition: color 0.25s ease;
@@ -372,7 +372,7 @@ $bp-phone: 449px;
 
 .stepPhase {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
-  font-weight: 800;
+  font-weight: 700;
   color: $white-65;
   margin: 0 0 0.3rem;
   letter-spacing: -0.01em;

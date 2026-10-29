@@ -44,7 +44,7 @@
 // ── Headline ──────────────────────────────────
 .headline {
   font-size: clamp(2.4rem, 5vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.1;
   letter-spacing: -0.035em;
@@ -117,7 +117,7 @@
 
 .stripValue {
   font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   letter-spacing: -0.03em;
   line-height: 1;

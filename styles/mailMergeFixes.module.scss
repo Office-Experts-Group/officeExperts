@@ -48,7 +48,7 @@ $mono: ui-monospace, "Consolas", monospace;
 
 .heading {
   font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $text-primary;
@@ -104,7 +104,7 @@ $mono: ui-monospace, "Consolas", monospace;
 
 .title {
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: $text-primary;
 }

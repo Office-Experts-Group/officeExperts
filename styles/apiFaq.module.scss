@@ -1,14 +1,23 @@
 // styles/apiFaq.module.scss
 @use "./globals" as *;
-@use "./apiIntegration" as api;
 
 .section {
   background: $grayBGC;
-  @include api.section-pad;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
 }
 
 .inner {
-  @include api.inner;
+  @include container;
   display: grid;
   grid-template-columns: 5fr 7fr;
   gap: 4rem;
@@ -29,11 +38,12 @@
 }
 
 .eyebrow {
-  @include api.eyebrow;
+  margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  @include api.heading;
+  @include heading-main;
 }
 
 .accent {
@@ -41,8 +51,10 @@
 }
 
 .lede {
-  @include api.lede;
-  @include api.inline-link;
+  margin-top: 1.5rem;
+  max-width: 62ch;
+  @include lede;
+  @include inline-link;
 }
 
 // ── Accordion ──
@@ -54,7 +66,7 @@
 
 .item {
   background: $white;
-  border: 1px solid api.$line;
+  border: 1px solid $line;
   border-radius: 12px;
 
   &[open] .toggle::after {

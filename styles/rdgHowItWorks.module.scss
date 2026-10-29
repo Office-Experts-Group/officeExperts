@@ -42,7 +42,7 @@
 
 .title {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.18;
   letter-spacing: -0.025em;
@@ -189,7 +189,7 @@
 
 .stepNumber {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 700;
   color: rgba($accent, 0.08);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -208,7 +208,7 @@
 // ── Phase label ───────────────────────────────
 .phase {
   font-size: 0.62rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: $accent;
@@ -217,7 +217,7 @@
 // ── Step text ─────────────────────────────────
 .stepHeading {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.35;
   letter-spacing: -0.01em;

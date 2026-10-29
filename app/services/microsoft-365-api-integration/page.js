@@ -233,7 +233,7 @@ const Page = () => {
         <RelatedLinks
           theme="light"
           eyebrow="Case studies"
-          heading="Microsoft integrations we've built"
+          heading="Some Microsoft integrations we've built"
           text="Real projects where Word, Excel, Power Platform, Access and AI were connected to remove manual work."
           links={caseStudyLinks}
         />

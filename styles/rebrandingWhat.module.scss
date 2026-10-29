@@ -52,7 +52,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .heading {
   font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.035em;
   color: $text-primary;
@@ -147,7 +147,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .label {
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--body);
@@ -155,7 +155,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .title {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }
@@ -243,7 +243,7 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .elementName {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .elementText {

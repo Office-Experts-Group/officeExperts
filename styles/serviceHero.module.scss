@@ -40,8 +40,8 @@
 
 .serviceHero h1 {
   z-index: 2;
-  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
-  font-weight: 900;
+  font-size: $heading-size;
+  font-weight: 700;
   text-align: center;
   color: $offWhite;
   max-width: 70vw;

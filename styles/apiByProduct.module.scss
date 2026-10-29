@@ -1,14 +1,23 @@
 // styles/apiByProduct.module.scss
 @use "./globals" as *;
-@use "./apiIntegration" as api;
 
 .section {
   background: $grayBGC;
-  @include api.section-pad;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
 }
 
 .inner {
-  @include api.inner;
+  @include container;
 }
 
 .header {
@@ -17,11 +26,12 @@
 }
 
 .eyebrow {
-  @include api.eyebrow;
+  margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  @include api.heading;
+  @include heading-main;
 }
 
 .accent {
@@ -29,7 +39,9 @@
 }
 
 .text {
-  @include api.lede;
+  margin-top: 1.5rem;
+  max-width: 62ch;
+  @include lede;
 }
 
 // ── Card grid ──
@@ -53,7 +65,7 @@
   gap: 1.25rem;
   padding: 2.25rem;
   background: $white;
-  border: 1px solid api.$line;
+  border: 1px solid $line;
   border-radius: 14px;
   transition:
     box-shadow 0.25s ease,
@@ -102,7 +114,7 @@
 
 .title {
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: $text-primary;
@@ -146,7 +158,7 @@
 }
 
 .link {
-  @include api.arrow-link;
+  @include arrow-link;
   margin-top: auto;
 }
 

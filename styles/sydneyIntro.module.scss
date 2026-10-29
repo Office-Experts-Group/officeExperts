@@ -48,7 +48,7 @@
 
 .headline {
   font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $text-primary;
   line-height: 1.18;
 }
@@ -149,7 +149,7 @@
 
 .statValue {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 900;
+  font-weight: 700;
   color: $accent;
   letter-spacing: -0.03em;
   line-height: 1;

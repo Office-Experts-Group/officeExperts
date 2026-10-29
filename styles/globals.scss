@@ -78,9 +78,8 @@ $shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
   }
 }
 
-// /styles/globals.scss (additions)
-@mixin container {
-  max-width: 1200px;
+@mixin container($max: $container) {
+  max-width: $max;
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
@@ -94,5 +93,231 @@ $shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
 @mixin mobile {
   @media (max-width: 766px) {
     @content;
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// STANDARD RULES (Phase 1). Variables and mixins only: no selectors, no
+// top-level @keyframes. Nothing here changes an existing token's value.
+// `eyebrow` and `hide-on-phone` emit @media: include them AFTER plain decls.
+// ════════════════════════════════════════════════════════════════════════════
+
+// ── 1. COLOUR ───────────────────────────────────────────────────────────────
+$accent-on-dark: #6fc3e8;
+$accent-dark: #034e72;
+$accent-tint: rgba(4, 105, 153, 0.08);
+$eyebrow-on-dark: #ffffffbf;
+$ink: #0b2433;
+$line: #e3e8ec;
+$line-strong: #d4d6d9;
+$success: #0eaa0e;
+$error: #c53030;
+$error-bg: #fff5f5;
+$error-border: #feb2b2;
+
+// ── 2. SHAPE ────────────────────────────────────────────────────────────────
+$radius: 1.5rem; // cards, panels, images, inputs
+$radius-pill: 999px; // chips only; circles stay 50%; buttons keep 0.1rem
+$shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.07);
+$shadow-panel: 0 20px 50px rgba(13, 27, 42, 0.06);
+
+// ── 3. LAYOUT ───────────────────────────────────────────────────────────────
+$container: 1200px;
+$gutter: 10vw;
+$header-offset: 130px; // measure the real header before changing
+$scroll-offset: 150px;
+
+// ── 4. BREAKPOINTS (belowDesktop, mobile already exist above) ───────────────
+@mixin belowDeskL {
+  // the mobile nav covers everything below 1200px
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin tabletUp {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+@mixin desktopUp {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+// ── 5. TYPOGRAPHY ───────────────────────────────────────────────────────────
+$heading-size: clamp(2.4rem, 4.5vw, 3.8rem); // main heading
+$heading-size-section: clamp(1.9rem, 3.2vw, 2.75rem); // section heading
+$heading-weight: 700;
+$eyebrow-size: 0.8rem; // A1: read "8rem" as 0.8rem; change here if wrong
+$eyebrow-tracking: 0.06rem;
+
+@mixin hide-on-phone {
+  @include phone {
+    display: none;
+  }
+}
+
+@mixin eyebrow($color: $accent) {
+  font-size: $eyebrow-size;
+  font-weight: 700;
+  letter-spacing: $eyebrow-tracking;
+  text-transform: uppercase;
+  color: $color;
+  @include hide-on-phone;
+}
+@mixin eyebrow-on-dark {
+  @include eyebrow($eyebrow-on-dark);
+}
+
+@mixin heading-main($color: $text-primary) {
+  font-size: $heading-size;
+  font-weight: $heading-weight;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $color;
+}
+@mixin heading-section($color: $text-primary) {
+  font-size: $heading-size-section;
+  font-weight: $heading-weight;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: $color;
+}
+
+@mixin card-title($size: md, $color: $text-primary) {
+  @if $size == sm {
+    font-size: 1rem;
+  } @else if $size == lg {
+    font-size: 1.4rem;
+  } @else {
+    font-size: 1.15rem;
+  }
+  font-weight: $heading-weight;
+  line-height: 1.25;
+  color: $color;
+}
+
+@mixin lede($color: $text-secondary) {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $color;
+}
+@mixin body-text($color: $text-secondary) {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: $color;
+}
+@mixin small-text($color: $text-secondary) {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: $color;
+}
+@mixin label($color: $text-muted) {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color;
+}
+
+// ── 6. BUTTONS (replace the global .btn wipe) ───────────────────────────────
+@mixin -btn-wipe($bg, $fg, $sweep) {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 13px 25px;
+  background: $bg;
+  color: $fg;
+  border: 1px solid transparent;
+  border-radius: 0.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $sweep;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $bg;
+    border-color: $bg;
+    &::before {
+      left: 0;
+    }
+  }
+}
+@mixin btn {
+  @include -btn-wipe($accent, $white, $white);
+}
+@mixin btn-on-accent {
+  @include -btn-wipe($white, $accent, $accent);
+}
+
+// ── 7. LINKS AND UTILITIES ──────────────────────────────────────────────────
+@mixin arrow-link($color: $accent) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $color;
+  text-decoration: none;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  &:hover svg {
+    transform: translateX(3px);
+  }
+}
+@mixin inline-link($color: $accent) {
+  a {
+    color: $color;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@mixin kf-fade-up($name: fadeUp) {
+  @keyframes #{$name} {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

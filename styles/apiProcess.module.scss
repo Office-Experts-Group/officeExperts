@@ -1,14 +1,23 @@
 // styles/apiProcess.module.scss
 @use "./globals" as *;
-@use "./apiIntegration" as api;
 
 .section {
   background: $white;
-  @include api.section-pad;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5.5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
 }
 
 .inner {
-  @include api.inner;
+  @include container;
 }
 
 .header {
@@ -17,11 +26,12 @@
 }
 
 .eyebrow {
-  @include api.eyebrow;
+  margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  @include api.heading;
+  @include heading-main;
 }
 
 .accent {
@@ -57,12 +67,12 @@
   flex-direction: column;
   gap: 0.75rem;
   padding-top: 1.5rem;
-  border-top: 1px solid api.$line;
+  border-top: 1px solid $line;
 }
 
 .number {
   font-size: 2.2rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
   color: $accent;
@@ -70,13 +80,13 @@
 
 .title {
   font-size: 1.08rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.3;
   color: $text-primary;
 }
 
 .text {
-  @include api.inline-link;
+  @include inline-link;
   font-size: 0.92rem;
   line-height: 1.75;
   color: $text-secondary;
@@ -91,7 +101,7 @@
   align-items: center;
   padding: 2.75rem 3rem;
   border-radius: 14px;
-  background: linear-gradient(155deg, api.$ink 0%, #0e3a52 100%);
+  background: linear-gradient(155deg, $ink 0%, #0e3a52 100%);
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -132,7 +142,7 @@
 
 .proofValue {
   font-size: clamp(2.2rem, 3.8vw, 3.1rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
   color: $white;
