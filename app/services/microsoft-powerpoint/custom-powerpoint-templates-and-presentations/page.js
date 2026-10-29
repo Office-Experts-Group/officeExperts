@@ -101,7 +101,8 @@ const Page = () => {
               "A PowerPoint framework with 10 precinct-specific themes for a state department",
             description:
               "After a major brand refresh, the client needed its Office environment brought into line. We rebuilt its PowerPoint presentation framework with expanded slide layouts, icon libraries, accessibility guidance and improved data visualisation, then built 10 additional precinct-specific themes so each precinct keeps its own identity within the corporate brand. The same project redesigned 17 enterprise Word templates.",
-            image: "/case-studies/government-enterprise-office-templatesLg.png",
+            image:
+              "/case-studies/government-enterprise-office-templatesLg.webp",
             imageAlt:
               "PowerPoint framework and precinct themes for a state government department",
           },

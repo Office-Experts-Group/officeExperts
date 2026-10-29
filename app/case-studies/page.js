@@ -1,5 +1,5 @@
 // app/case-studies/page.js
-
+import { cookies } from "next/headers";
 import { caseStudies, getLatestDateModified, siteMeta } from "./caseStudies";
 import CaseStudyRow from "./(components)/CaseStudyRow";
 
@@ -64,11 +64,16 @@ const schema = {
 
 // Next 15's searchParams is async, same as `params` already is on the
 // [slug] route — has to be awaited before you can read `site` off it.
+// Next 16: searchParams and cookies() are both async and must be awaited.
 const CaseStudiesPage = async ({ searchParams }) => {
-  const { site } = await searchParams;
+  const { site: siteParam } = await searchParams;
+  const cookieSite = (await cookies()).get("oe-site")?.value;
 
-  // Unknown/missing site falls straight back to the original, unordered
-  // list — this only ever reorders, it never filters anything out.
+  // An explicit ?site= always wins; otherwise use the section the visitor was
+  // last browsing. Unknown values fall through to the default order below.
+  const site = siteMeta[siteParam] ? siteParam : cookieSite;
+
+  // Only reorders, never filters, so the canonical stays the bare URL.
   const orderedCaseStudies = siteMeta[site]
     ? [
         ...caseStudies.filter((study) => study.site === site),

@@ -15,6 +15,20 @@ const GOOGLE_HOSTS =
 const AHREFS_HOSTS = "*.ahrefs.com analytics.ahrefs.com";
 const VIDEO_SCRIPT_HOSTS = "*.vimeo.com *.youtube.com *.ytimg.com";
 const BPOINT_HOSTS = "*.bpoint.com.au";
+// Remembers which platform section the visitor is browsing, so the
+// /case-studies page can list that platform's studies first (see page.js).
+const SITE_COOKIE = "oe-site";
+// Maps /services/microsoft-{platform} to the `site` key in caseStudies.js.
+// Kept local so the large case study array isn't bundled into the proxy.
+// Adjust the keys to match your actual folder names.
+const PLATFORM_TO_SITE = {
+  word: "word",
+  excel: "excel",
+  "power-platform": "powerplatform",
+  access: "access",
+};
+// Captures "word" from /services/microsoft-word/anything
+const PLATFORM_PATH = /^\/services\/microsoft-([^/]+)/;
 
 // 'unsafe-inline' is required without a nonce: Next's hydration scripts and
 // GTM are inline. script-src-elem overrides script-src for <script> elements,
@@ -74,6 +88,7 @@ export function proxy(request) {
   }
 
   const response = NextResponse.next();
+  rememberSite(request, response);
   const isPaymentPage = normalisedPath === "/ccp";
 
   if (isPaymentPage) {
@@ -107,6 +122,26 @@ function isGoneUrl(normalisedPath) {
     ? normalisedPath
     : `${normalisedPath}/`;
   return goneUrls.includes(normalisedPath) || goneUrls.includes(withSlash);
+}
+
+// Sets the section cookie when a visitor opens a /services/microsoft-* page
+function rememberSite(request, response) {
+  // <Link> prefetches as links scroll into view; only real visits count
+  if (request.headers.get("next-router-prefetch")) return;
+
+  const platform = request.nextUrl.pathname.match(PLATFORM_PATH)?.[1];
+  const site = PLATFORM_TO_SITE[platform];
+  if (!site) return;
+
+  // Already remembered, so avoid sending a redundant Set-Cookie header
+  if (request.cookies.get(SITE_COOKIE)?.value === site) return;
+
+  // Session cookie (no maxAge): lasts for the visit only
+  response.cookies.set(SITE_COOKIE, site, {
+    path: "/",
+    sameSite: "lax",
+    httpOnly: true,
+  });
 }
 
 export const config = {

@@ -47,7 +47,7 @@ const caseStudies = [
       "A custom Word ribbon that stops corporate templates breaking under everyday use",
     description:
       "After a major brand refresh, a state government department needed its Office environment modernised. We redesigned 17 enterprise Word templates, built a custom Formatting Control Tab that enforces approved styles, tables and numbering, and added controlled copy-and-paste with a one-click Styles Clean Up tool. The same project delivered a PowerPoint framework with 10 precinct-specific themes.",
-    image: "/case-studies/government-enterprise-office-templatesLg.png",
+    image: "/case-studies/government-enterprise-office-templatesLg.webp",
     imageAlt:
       "Custom Word ribbon and enterprise templates for a state government department",
   },

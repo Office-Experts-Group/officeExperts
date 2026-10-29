@@ -53,7 +53,7 @@ const caseStudyLinks = [
   {
     href: "/case-studies/government-department-enterprise-office-template-suite",
     title: "Enterprise Template Suite",
-    image: "/case-studies/government-enterprise-office-templatesLg.png",
+    image: "/case-studies/government-enterprise-office-templatesLg.webp",
 
     description:
       "Redesigned 17 enterprise Word templates and built a PowerPoint framework so a state department's documents stay on brand.",

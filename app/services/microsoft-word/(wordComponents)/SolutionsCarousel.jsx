@@ -1,11 +1,16 @@
-// app/(components)/SolutionsCarousel.jsx
+// /(wordComponents)/SolutionsCarousel.jsx
 
 import Link from "next/link";
 // Client-side wrapper that fades each tile in as it enters the viewport
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-// Compiled CSS from styles/solutionsCarousel2.module.scss
+// Compiled CSS from styles/solutionsCarouselWord.module.scss
 import styles from "@/styles/solutionsCarouselWord.module.scss";
+
+// Client component holding the expand/collapse buttons, and the server
+// component whose tiles it reveals
+import WordServicesToggle from "./WordServicesToggle";
+import MoreWordServices from "./MoreWordServices";
 
 // Inline SVG icon components — each renders a stroke icon using currentColor
 import { ShieldIcon } from "../(svgs)/ShieldIcon";
@@ -187,23 +192,12 @@ const SolutionsCarousel = () => (
       })}
     </ul>
 
-    {/* ── CTA ── */}
-    <div className={styles.linkWrapper}>
-      <Link href="/services" className={styles.cta}>
-        View all our services
-        <span className={styles.ctaArrow} aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M3 8h10M9 4l4 4-4 4"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </span>
-      </Link>
-    </div>
+    {/* ── Remaining services + buttons ──
+        MoreWordServices is rendered on the server and passed in as children,
+        so its links are in the HTML even while the panel is collapsed. */}
+    <WordServicesToggle>
+      <MoreWordServices />
+    </WordServicesToggle>
   </section>
 );
 

@@ -7,7 +7,7 @@ import BookSegment from "./BookSegment";
 
 const OurTemplates = () => {
   return (
-    <section className={styles.ourTemplates}>
+    <section className={styles.ourTemplates} id="ourTemplates">
       <div className={styles.content}>
         <h2>
           Professional Document<br></br>

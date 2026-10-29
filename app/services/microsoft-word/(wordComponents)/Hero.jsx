@@ -61,7 +61,7 @@ const Hero = () => {
         <h1>
           Word<br></br>Experts
         </h1>
-        <Link href="/about-us" className="btn">
+        <Link href="#ourTemplates" className="btn">
           Discover More
         </Link>
       </div>

@@ -36,15 +36,14 @@ const RelatedLinks = ({
   heading,
   text,
   links = [],
+  showCaseStudiesLink = true,
 }) => {
-  // Links the heading to the section for screen readers
   const headingId = useId();
 
-  // Nothing to show, so render nothing rather than an empty section
   if (!links.length) return null;
 
-  // Any value other than "light" falls back to the dark theme
   const themeClass = theme === "light" ? styles.light : styles.dark;
+  const hasHeader = eyebrow || heading || text;
 
   return (
     <section
@@ -52,16 +51,31 @@ const RelatedLinks = ({
       aria-labelledby={heading ? headingId : undefined}
     >
       <div className={styles.inner}>
-        {(eyebrow || heading || text) && (
-          <header className={styles.header}>
-            {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
-            {heading && (
-              <h2 id={headingId} className={styles.heading}>
-                {heading}
-              </h2>
+        {(hasHeader || showCaseStudiesLink) && (
+          <div className={styles.top}>
+            {hasHeader && (
+              <header className={styles.header}>
+                {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
+                {heading && (
+                  <h2 id={headingId} className={styles.heading}>
+                    {heading}
+                  </h2>
+                )}
+                {text && <p className={styles.text}>{text}</p>}
+              </header>
             )}
-            {text && <p className={styles.text}>{text}</p>}
-          </header>
+
+            {showCaseStudiesLink && (
+              <div className={styles.aside}>
+                <p className={styles.clients}>
+                  <span className={styles.count}>2500+</span> Happy Clients
+                </p>
+                <Link href={"/case-studies"} className={styles.allLink}>
+                  Read all case studies <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            )}
+          </div>
         )}
 
         <ul className={styles.grid}>

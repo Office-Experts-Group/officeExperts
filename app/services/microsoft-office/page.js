@@ -122,7 +122,8 @@ const Page = () => {
             linkText: "Explore the enterprise template suite",
             description:
               "After a major brand refresh, the client needed its Office environment brought into line, with pasted content regularly breaking the corporate styles. We redesigned 17 enterprise Word templates, built a custom Formatting Control tab that enforces approved styles, and delivered a PowerPoint framework with 10 precinct-specific themes.",
-            image: "/case-studies/government-enterprise-office-templatesLg.png",
+            image:
+              "/case-studies/government-enterprise-office-templatesLg.webp",
             imageAlt: "Word Experts Brand Templates",
           },
         ]}

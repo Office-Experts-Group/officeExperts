@@ -1662,7 +1662,7 @@ export const caseStudies = [
       "Copy/paste macro strips foreign formatting and applies approved styling automatically",
       "Custom Formatting tab gives staff practical, everyday tools without leaving Word",
     ],
-    image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+    image: "/case-studies/corporate-group-multi-entity-templatesLg.webp",
     featured: false,
     metaTitle: "Multi-Entity Word Template Suite | Case Study",
     metaDescription:
@@ -1897,7 +1897,7 @@ export const caseStudies = [
       "Custom ribbon lets non-technical staff create on-brand documents without Word expertise",
       "Copy-and-paste formatting corruption controlled at the source, with a one-click clean-up fallback",
     ],
-    image: "/case-studies/government-enterprise-office-templatesLg.png",
+    image: "/case-studies/government-enterprise-office-templatesLg.webp",
     featured: true,
     metaTitle: "Custom Word Ribbon and Enterprise Templates | Govt",
     metaDescription:

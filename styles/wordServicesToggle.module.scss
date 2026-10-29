@@ -1,0 +1,48 @@
+// styles/wordServicesToggle.module.scss
+@use "./globals.scss" as *;
+
+// Sits directly under the main tile grid, so its top margin matches that
+// grid's gap and the two grids read as one. No display is set here, as it
+// would override the hidden attribute.
+.panel {
+  margin-top: 0.75rem;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0.5rem;
+  }
+}
+
+// ── Buttons ────────────────────────────────────────────────
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+
+  a,
+  button {
+    width: fit-content;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 3rem;
+  }
+}
+
+.panel:not([hidden]) + .actions {
+  margin-top: -9.5rem;
+  transition: margin-top 1s ease;
+
+  @include phoneLandscape {
+    margin-top: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

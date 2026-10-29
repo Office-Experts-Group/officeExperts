@@ -153,7 +153,7 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Template solutions we've delivered"
+        heading="A Sample of Template solutions we've delivered"
         links={caseStudies}
       />
       <CorporateIdentityComparison />

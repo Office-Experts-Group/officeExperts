@@ -41,7 +41,7 @@ const caseStudies = [
     title: "One shared Global Common template keeping four entities on-brand",
     description:
       "A corporate group needed consistent, professional templates across four related entities without four separate builds. We built a shared Global Common template, a custom Master Template for each entity on top of it, and a custom Formatting tab with a copy/paste macro that strips foreign formatting and applies approved styling automatically.",
-    image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+    image: "/case-studies/corporate-group-multi-entity-templatesLg.webp",
     imageAlt:
       "Master Templates for four entities built from one Global Common template",
   },

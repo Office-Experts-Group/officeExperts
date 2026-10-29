@@ -123,7 +123,8 @@ const Page = () => {
               "One shared Global Common template keeping four entities on-brand without four separate rebuilds",
             description:
               "A corporate group needed consistent, professional templates across four related entities. We built a custom Master Template for each entity from a single shared Global Common template, then added a custom Formatting tab with a copy/paste macro that strips foreign formatting out of pasted content and applies the approved styling automatically.",
-            image: "/case-studies/corporate-group-multi-entity-templatesLg.png",
+            image:
+              "/case-studies/corporate-group-multi-entity-templatesLg.webp",
             imageAlt:
               "Custom Word Master Templates for four entities of a corporate group",
           },
