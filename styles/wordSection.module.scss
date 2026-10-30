@@ -21,8 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -43,19 +42,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section($white);
 }
 
 .accent {
@@ -65,9 +56,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $white-88;
-  line-height: 1.8;
+  @include lede($white-88);
 }
 
 // ── Paper sheets ─────────────────────────────
@@ -99,9 +88,7 @@
 
 .sheetTitle {
   margin-bottom: 0.75rem;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .sheetList {
@@ -179,11 +166,6 @@
 // White button so it stands out on the blue background
 .siteLink {
   align-self: flex-start;
-  padding: 0.75rem 1.5rem;
-  background: $white;
-  color: $accent;
   font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: 3px;
-  text-decoration: none;
+  @include btn-on-accent;
 }

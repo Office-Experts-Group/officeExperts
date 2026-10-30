@@ -33,7 +33,7 @@ const GoldCoastIntro = () => (
           <h2 className={styles.headline}>
             Microsoft expertise for the Gold Coast,{" "}
             <span className={styles.accentText}>
-              minus the traffic on the M1.
+              without the traffic on the M1.
             </span>
           </h2>
           <p className={styles.lead}>

@@ -42,21 +42,16 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin: 0 0 1.1rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent;
 }
 
 .subheading {
@@ -147,10 +142,7 @@
   font-size: 0.88rem;
   color: $white-35;
   line-height: 1.6;
-
-  @include phone {
-    display: none;
-  }
+  @include hide-on-phone;
 }
 
 .rowChevron {
@@ -221,29 +213,15 @@
 }
 
 .rowLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #7ec8e3;
-  text-decoration: none !important;
   letter-spacing: 0.3px;
   border-bottom: 1px solid rgba(126, 200, 227, 0.3);
   padding-bottom: 1px;
   align-self: flex-start;
+  text-decoration: none !important;
   transition: border-color 0.18s ease;
-
-  svg {
-    transition: transform 0.18s ease;
-    flex-shrink: 0;
-  }
+  @include arrow-link($accent-on-dark);
 
   &:hover {
-    border-bottom-color: #7ec8e3;
-
-    svg {
-      transform: translate(2px, -2px);
-    }
+    border-bottom-color: $accent-on-dark;
   }
 }

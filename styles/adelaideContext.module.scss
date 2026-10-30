@@ -1,11 +1,9 @@
 // styles/adelaideContext.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // Local palette: cool stone, to separate this band from the white above and dark below
 $stone: #eef1f3;
 $stone-line: #d9dfe4;
-$ink: #0b2433;
 
 $card-w: 24rem;
 
@@ -58,24 +56,12 @@ $card-w: 24rem;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -129,7 +115,7 @@ $card-w: 24rem;
   padding: 2.25rem 2rem 2rem;
   background: $white;
   border: 1px solid $stone-line;
-  border-radius: 14px;
+  border-radius: $radius;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -192,20 +178,20 @@ $card-w: 24rem;
   font-size: 0.72rem;
   font-weight: 600;
   color: $accent;
-  background: rgba(4, 105, 153, 0.08);
-  border-radius: 2rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 }
 
 // Closing card
 .cta {
   justify-content: center;
-  background: linear-gradient(155deg, $ink 0%, #0e3a52 100%);
-  border-color: $ink;
+  background: linear-gradient(155deg, $text-primary 0%, #0e3a52 100%);
+  border-color: $text-primary;
 
   &:hover {
     transform: none;
-    border-color: $ink;
+    border-color: $text-primary;
     box-shadow: none;
   }
 }
@@ -225,25 +211,9 @@ $card-w: 24rem;
 }
 
 .ctaBtn {
+  @include btn-on-accent;
   align-self: flex-start;
   margin-top: 0.75rem;
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
 }
 
 .hint {

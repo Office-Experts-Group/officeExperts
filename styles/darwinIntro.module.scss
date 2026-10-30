@@ -35,11 +35,7 @@ $earth: #2a1810;
     grid-template-columns: 3.5rem 1fr;
     gap: 2.5rem;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -51,10 +47,7 @@ $earth: #2a1810;
   display: flex;
   justify-content: center;
 
-  @include phoneLandscape {
-    display: none;
-  }
-  @include phone {
+  @include mobile {
     display: none;
   }
 }
@@ -79,25 +72,14 @@ $earth: #2a1810;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $ember;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow($ember);
 }
 
 .headline {
-  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-  color: $earth;
-  max-width: 18ch;
+  @include heading-section($earth);
+  max-width: 38ch;
 }
 
 .accentText {
@@ -119,11 +101,7 @@ $earth: #2a1810;
   @include tablet {
     gap: 2rem;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
@@ -136,7 +114,7 @@ $earth: #2a1810;
   align-items: center;
   gap: 2.5rem;
   padding: 2.5rem 3rem;
-  border-radius: 14px;
+  border-radius: $radius;
   background: linear-gradient(120deg, $sun 0%, $ember 100%);
   max-width: 62rem;
 
@@ -195,10 +173,7 @@ $earth: #2a1810;
     transform: translateY(-1px);
   }
 
-  @include phoneLandscape {
-    justify-self: start;
-  }
-  @include phone {
+  @include mobile {
     justify-self: start;
   }
 }

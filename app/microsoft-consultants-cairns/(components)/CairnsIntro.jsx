@@ -16,11 +16,6 @@ const stats = [
 const CairnsIntro = () => (
   <section className={styles.section}>
     <div className={styles.inner}>
-      {/* ── Eyebrow ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.5} delay={0}>
-        <span className={styles.eyebrow}>Office Experts Group — Cairns</span>
-      </AnimateOnScroll>
-
       {/* ── Large centred headline ── */}
       <AnimateOnScroll animation="fade-up" duration={0.65} delay={0.08}>
         <h2 className={styles.headline}>
@@ -41,12 +36,6 @@ const CairnsIntro = () => (
             responsibility than their counterparts in larger cities. This only
             makes it more imperative that these operations are equipped with the
             right software to work consistently day in, day out.
-          </p>
-          <p>
-            Office Experts Group has been solving that problem since 2000. We
-            are a national consultancy with a local Cairns presence, which means
-            your projects are handled by specialists who understand Far North
-            Queensland's difficult business environment.
           </p>
         </div>
       </AnimateOnScroll>

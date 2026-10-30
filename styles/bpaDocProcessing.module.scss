@@ -2,11 +2,6 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// ── Breakpoints ──────────────────────────────
-$bp-desktop-xl: 1400px;
-$bp-tablet-min: 767px;
-$bp-tablet-max: 1024px;
-
 // ─────────────────────────────────────────────
 // Section shell
 // ─────────────────────────────────────────────
@@ -14,10 +9,10 @@ $bp-tablet-max: 1024px;
   background: $dark-bg;
   padding: 8rem;
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     padding: 6rem 4rem;
   }
-  @media screen and (max-width: 766px) {
+  @include mobile {
     padding: 5rem 1.25rem;
   }
 }
@@ -29,30 +24,22 @@ $bp-tablet-max: 1024px;
   max-width: 700px;
   margin-bottom: 4.5rem;
 
-  @media screen and (max-width: 766px) {
+  @include mobile {
     margin-bottom: 3rem;
   }
 }
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
 }
 
 .title {
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.18;
   margin: 0 0 1.25rem;
+
+  @include heading-section($white-88);
 
   span {
     font-style: normal;
@@ -75,7 +62,7 @@ $bp-tablet-max: 1024px;
 .cardStack {
   display: flex;
   flex-direction: column;
-  gap: 0; // hairline separators handled per-card
+  gap: 1rem;
 }
 
 // ─────────────────────────────────────────────
@@ -83,19 +70,8 @@ $bp-tablet-max: 1024px;
 // ─────────────────────────────────────────────
 .card {
   overflow: hidden;
-  border-left: 1px solid $white-08;
-  border-right: 1px solid $white-08;
-  border-bottom: 1px solid $white-08;
+  border: 1px solid $white-08;
   transition: box-shadow 0.3s ease;
-
-  // First card gets a top border too
-  &:first-of-type {
-    border-top: 1px solid $white-08;
-    border-radius: 6px 6px 0 0;
-  }
-  &:last-of-type {
-    border-radius: 0 0 6px 6px;
-  }
 
   &:hover {
     box-shadow: 0 16px 56px rgba(0, 0, 0, 0.4);
@@ -110,10 +86,10 @@ $bp-tablet-max: 1024px;
   grid-template-columns: 1fr 320px;
   min-height: 300px;
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     grid-template-columns: 1fr 240px;
   }
-  @media screen and (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -143,7 +119,7 @@ $bp-tablet-max: 1024px;
   }
   .tag {
     background: rgba($accent, 0.18);
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
     border: 1px solid $accent-border;
   }
   .expandBtn {
@@ -159,7 +135,7 @@ $bp-tablet-max: 1024px;
     border-left: 1px solid $white-08;
   }
   .statValue {
-    color: #ffffff;
+    color: $white;
   }
   .statLabel {
     color: $white-55;
@@ -203,7 +179,7 @@ $bp-tablet-max: 1024px;
     border-left: 1px solid $white-08;
   }
   .statValue {
-    color: #ffffff;
+    color: $white;
   }
   .statLabel {
     color: $white-65;
@@ -215,15 +191,15 @@ $bp-tablet-max: 1024px;
   background: $accent;
 
   .cardIndex {
-    color: rgba(255, 255, 255, 0.18);
+    color: $white-18;
   }
   .cardEyebrow {
     color: rgba(255, 255, 255, 0.92);
-    background: rgba(255, 255, 255, 0.12);
+    background: $white-12;
     border: 1px solid rgba(255, 255, 255, 0.22);
   }
   .cardHeading {
-    color: #ffffff;
+    color: $white;
   }
   .cardBody,
   .expandDetail p {
@@ -235,19 +211,19 @@ $bp-tablet-max: 1024px;
     border: 1px solid rgba(255, 255, 255, 0.22);
   }
   .expandBtn {
-    color: rgba(255, 255, 255, 0.88);
+    color: $white-88;
     border-color: rgba(255, 255, 255, 0.3);
   }
   .expandBtn:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    color: $white;
   }
   .visual {
     background: color.adjust($accent, $lightness: -8%);
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid $white-12;
   }
   .statValue {
-    color: #ffffff;
+    color: $white;
   }
   .statLabel {
     color: rgba(255, 255, 255, 0.68);
@@ -263,7 +239,7 @@ $bp-tablet-max: 1024px;
   flex-direction: column;
   gap: 1rem;
 
-  @media screen and (max-width: 766px) {
+  @include mobile {
     padding: 1.75rem 1.25rem;
   }
 }
@@ -288,7 +264,7 @@ $bp-tablet-max: 1024px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 0.2rem 0.7rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   line-height: 1.6;
 }
 
@@ -351,7 +327,7 @@ $bp-tablet-max: 1024px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   line-height: 1.5;
 }
 
@@ -364,7 +340,7 @@ $bp-tablet-max: 1024px;
   letter-spacing: 0.4px;
   background: transparent;
   border: 1px solid;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.4rem 1rem;
   cursor: pointer;
   transition:
@@ -394,9 +370,9 @@ $bp-tablet-max: 1024px;
   gap: 1.75rem;
   padding: 2.25rem 1.75rem;
 
-  @media screen and (max-width: 766px) {
+  @include mobile {
     padding: 1.5rem 1.25rem;
-    border-left: none !important;
+    border-left: none !important; // overrides .cardDark/.cardMid/.cardAccent .visual
     border-top: 1px solid $white-08;
   }
 }

@@ -4,10 +4,10 @@
 
 .section {
   background: $dark-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
-    padding: 4rem 6vw;
+    padding: 4rem $gutter;
   }
 }
 
@@ -19,27 +19,18 @@
 
 .eyebrow {
   display: block;
-  color: $white-65;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
   margin-bottom: 0.75rem;
-  text-transform: uppercase;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.25;
-  color: $white-90;
   margin-bottom: 1.1rem;
+
+  @include heading-section-on-dark($white-90);
 
   span {
     color: $white-55;
-  }
-
-  @include phone {
-    font-size: 1.6rem;
   }
 }
 
@@ -55,11 +46,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include phoneLandscape {
+  @include belowDesktop {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -71,7 +58,7 @@
 .card {
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 12px;
+  border-radius: $radius;
   padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
@@ -104,9 +91,9 @@
 }
 
 .cardHeading {
-  font-size: 1.15rem;
-  color: $white-90;
   margin-bottom: 0.6rem;
+
+  @include card-title(md, $white-90);
 }
 
 .cardDescription {
@@ -122,8 +109,4 @@
   color: $accent;
   font-size: 0.9rem;
   font-weight: 700;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

@@ -3,7 +3,7 @@
 
 .section {
   background: $white;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
     padding: 4.5rem 1.25rem;
@@ -11,11 +11,10 @@
 }
 
 .inner {
+  @include container;
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
 .top {
@@ -23,7 +22,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -42,19 +41,14 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   color: $accent;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -93,14 +87,12 @@
 }
 
 .pointTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 // The flip book needs room to turn pages, so it is desktop only
 .book {
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     display: none;
   }
 }

@@ -4,7 +4,7 @@
 
 .services {
   background: $white;
-  padding: 8rem 10vw;
+  padding: 8rem $gutter;
 
   @include phone {
     padding: 4rem 2rem 6rem;
@@ -12,13 +12,14 @@
 }
 
 .content {
-  h1,
   h2 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: 700;
-    color: $text-primary;
     margin: 1rem 0 2rem;
-    line-height: 1.1;
+
+    @include heading-section;
+  }
+
+  .accent {
+    color: $accent;
   }
 
   p {
@@ -72,11 +73,9 @@
 }
 
 .ctaBtn {
-  text-transform: capitalize;
+  @include btn;
+
   // margin-right: 10vw;
-  &:hover {
-    border: 1px solid $accent;
-  }
 
   @media screen and (max-width: 768px) {
     margin-top: 2rem;

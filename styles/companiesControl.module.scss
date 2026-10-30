@@ -14,7 +14,7 @@
   margin: 0 auto;
   padding: clamp(2rem, 5vw, 4.5rem);
   background: $accent;
-  border-radius: 20px;
+  border-radius: $radius;
 }
 
 .top {
@@ -23,7 +23,7 @@
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -36,23 +36,12 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
-
-  @include phone {
-    display: none;
-  }
+  margin-bottom: -0.5rem;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $white;
+  @include heading-section-on-dark;
 }
 
 .headingAccent {
@@ -71,13 +60,8 @@
   line-height: 1.85;
   color: $white-88;
 
-  // $accent text would vanish on this panel, so links are white and underlined
-  a {
-    font-weight: 700;
-    color: $white;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  // $accent text would vanish on this panel, so links are white
+  @include inline-link($white);
 }
 
 // The flow is wide with small labels, so it is dropped once the panel gets narrow
@@ -88,7 +72,7 @@
     height: auto;
   }
 
-  @media (max-width: 766px) {
+  @include mobile {
     display: none;
   }
 }
@@ -102,7 +86,7 @@
   padding: 0;
   list-style: none;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     margin-top: 2.5rem;
   }
@@ -170,7 +154,7 @@
   padding: 0;
   list-style: none;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -184,7 +168,7 @@
   color: $white;
   text-decoration: none;
   background: $white-08;
-  border-radius: 12px;
+  border-radius: $radius;
   transition: background 0.2s ease;
 
   &:hover {

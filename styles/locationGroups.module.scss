@@ -19,16 +19,13 @@
 
 .container {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  @include container(1280px);
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
-  color: $accent;
   margin-bottom: 2.5rem;
   position: relative;
+  @include heading-section($accent);
 
   &::after {
     content: "";
@@ -58,8 +55,8 @@
 .locationCard {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border-radius: 0.5rem;
+  background-color: $white;
+  border-radius: $radius;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition:
@@ -88,7 +85,7 @@
   left: 0;
   width: 100%;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-  color: white;
+  color: $white;
   padding: 1.5rem 1rem;
   margin: 0;
   font-size: 1.75rem;
@@ -131,15 +128,15 @@
   background-color: $grayBGC;
   border-radius: 0.25rem;
   color: $body;
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s ease;
 
   &:hover {
     background-color: $accent;
-    color: white;
+    color: $white;
 
     .linkIcon {
-      stroke: white;
+      stroke: $white;
     }
   }
 

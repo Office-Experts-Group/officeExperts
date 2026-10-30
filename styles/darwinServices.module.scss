@@ -31,16 +31,9 @@ $count: 8;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $ember;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow($ember);
 }
 
 .heading {
@@ -74,7 +67,7 @@ $count: 8;
   display: grid;
   grid-template-columns: 17rem 1fr;
   border: 1px solid $earth-line;
-  border-radius: 14px;
+  border-radius: $radius;
   overflow: hidden;
   min-height: 28rem;
 
@@ -96,13 +89,7 @@ $count: 8;
   background: #faf5ee;
   border-right: 1px solid $earth-line;
 
-  @include phoneLandscape {
-    flex-direction: row;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid $earth-line;
-  }
-  @include phone {
+  @include mobile {
     flex-direction: row;
     overflow-x: auto;
     border-right: none;
@@ -129,14 +116,7 @@ $count: 8;
     color: $earth;
   }
 
-  @include phoneLandscape {
-    flex: 0 0 auto;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    padding: 1rem 1.15rem;
-  }
-  @include phone {
+  @include mobile {
     flex: 0 0 auto;
     border-left: none;
     border-bottom: 3px solid transparent;
@@ -211,35 +191,21 @@ $count: 8;
   font-size: 0.76rem;
   font-weight: 600;
   color: $accent;
-  background: rgba(4, 105, 153, 0.08);
-  border-radius: 2rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
   padding: 0.35rem 0.9rem;
 }
 
 .link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  @include arrow-link;
   font-size: 0.88rem;
-  font-weight: 700;
   letter-spacing: 0.3px;
-  color: $accent;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(4, 105, 153, 0.35);
+  border-bottom: 1px solid $accent-border;
   padding-bottom: 2px;
   transition: border-color 0.2s ease;
 
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
   &:hover {
     border-bottom-color: $accent;
-
-    svg {
-      transform: translateX(3px);
-    }
   }
 }
 
@@ -254,11 +220,7 @@ $count: 8;
     color: $earth;
     border-left-color: $ember;
 
-    @include phoneLandscape {
-      border-left-color: transparent;
-      border-bottom-color: $ember;
-    }
-    @include phone {
+    @include mobile {
       border-left-color: transparent;
       border-bottom-color: $ember;
     }

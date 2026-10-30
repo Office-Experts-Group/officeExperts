@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -32,19 +31,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -60,10 +51,10 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     row-gap: 0;
   }
@@ -83,7 +74,7 @@
   }
 
   // Vertical rail on phones
-  @media (max-width: 766px) {
+  @include mobile {
     padding: 0 0 2.5rem 2.25rem;
     border-top: none;
     border-left: 1px solid $border-strong;
@@ -107,7 +98,7 @@
   padding: 0.3rem 0.65rem;
   border-radius: 2rem;
 
-  @media (max-width: 766px) {
+  @include mobile {
     top: -0.1rem;
     left: -1.1rem;
   }

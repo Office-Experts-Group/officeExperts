@@ -25,10 +25,10 @@
   margin: 0 auto;
   padding: 4.5rem;
   background: $dark-bg;
-  border-radius: 26px;
+  border-radius: $radius;
   color: $white-88;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding: 3rem 2.5rem;
@@ -57,11 +57,7 @@
 }
 
 .heading {
-  font-size: clamp(2.1rem, 3.8vw, 3.1rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  color: $white;
+  @include heading-section-on-dark;
 }
 
 // Accent blue is too dim on the dark panel, so the second half is muted white
@@ -77,8 +73,7 @@
 .link {
   color: $white;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 
 .actions {

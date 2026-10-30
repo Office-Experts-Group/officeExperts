@@ -45,20 +45,13 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 0.75rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  @include heading-section-on-dark($white-88);
 }
 
 .headingMuted {
@@ -115,17 +108,13 @@
 }
 
 .triggerCategory {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $accent;
+  @include label($accent);
 }
 
 .triggerTitle {
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   font-weight: 700;
-  color: $text-primary;
+  color: $white-75;
   line-height: 1.2;
 }
 

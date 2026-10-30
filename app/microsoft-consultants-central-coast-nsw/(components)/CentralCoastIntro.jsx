@@ -45,7 +45,6 @@ const CentralCoastIntro = () => (
       {/* ── Headline ── */}
       <AnimateOnScroll animation="fade-up" duration={0.65} delay={0}>
         <div className={styles.head}>
-          <span className={styles.eyebrow}>Central Coast NSW</span>
           <h2 className={styles.headline}>
             Microsoft expertise for the Coast,{" "}
             <span className={styles.accentText}>without the commute.</span>

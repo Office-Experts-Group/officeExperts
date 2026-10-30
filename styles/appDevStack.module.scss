@@ -17,11 +17,11 @@
 }
 
 .inner {
+  @include container;
+  padding-inline: 0; // section already supplies the gutter
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header {
@@ -32,19 +32,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -52,9 +44,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Diagram beside a two-by-two grid of capabilities ──
@@ -64,7 +54,7 @@
   align-items: center;
   gap: 3rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -81,7 +71,7 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -95,9 +85,7 @@
 }
 
 .itemTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(sm);
 }
 
 .itemBody {
@@ -107,9 +95,7 @@
 }
 
 .link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
+  @include arrow-link;
 
   &::after {
     content: " \2192";
@@ -121,8 +107,13 @@
   color: $text-secondary;
 }
 
+// Inline keyword link: bold accent, no underline at rest
 .inline {
   font-weight: 700;
   color: $accent;
-  text-decoration: underline;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

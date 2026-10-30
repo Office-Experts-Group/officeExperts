@@ -39,27 +39,15 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  width: fit-content;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 700;
   color: $text-primary;
   line-height: 1.12;
   letter-spacing: -0.03em;
+
+  @include heading-section;
 }
 
 .headingAccent {

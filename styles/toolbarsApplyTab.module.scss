@@ -76,8 +76,7 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1280px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -88,23 +87,11 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-main;
 }
 
 .accent {
@@ -121,7 +108,7 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 .shot {
   padding: clamp(1rem, 3vw, 2.5rem);
   background: $grayBGC;
-  border-radius: 16px;
+  border-radius: $radius;
   overflow-x: auto;
 }
 
@@ -140,7 +127,7 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
   list-style: none;
   padding: 0;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -159,11 +146,7 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 
 // Mirrors the small group captions printed under a real Word ribbon
 .groupName {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $accent;
+  @include label($accent);
 }
 
 .groupText {
@@ -176,20 +159,16 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 .indicators {
   display: flex;
   gap: 1rem;
-  max-width: 1280px;
+  @include container;
   margin: 3.5rem auto 0;
   padding: 0 $side-padding;
 }
 
 .indicator {
+  @include label($text-secondary);
   position: relative;
   flex: 0 0 8rem;
   padding-top: 1rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $text-secondary;
 
   @include phone {
     flex: 1;

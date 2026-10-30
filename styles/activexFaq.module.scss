@@ -27,24 +27,15 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .title {
-  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
   margin-bottom: 1rem;
+
+  @include heading-section;
 }
 
 .accentText {
@@ -52,9 +43,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Two-column grid ─────────────────────────────────────────
@@ -62,14 +51,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
+  @include container;
 
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }

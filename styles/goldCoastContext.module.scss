@@ -2,8 +2,7 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// Local tones derived from the global accent so the page stays in the site theme
-$ink: color.adjust($accent, $lightness: -20%);
+// Local tone kept: no global matches this pale grey
 $mist: #f4f6f8;
 
 // ── Section ──────────────────────────────────
@@ -37,24 +36,13 @@ $mist: #f4f6f8;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $ink;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -66,7 +54,7 @@ $mist: #f4f6f8;
   max-width: 54ch;
   font-size: 1.02rem;
   line-height: 1.85;
-  color: rgba($ink, 0.76);
+  color: rgba($text-primary, 0.76);
 }
 
 // ── Grid ─────────────────────────────────────
@@ -80,14 +68,13 @@ $mist: #f4f6f8;
     display: flex;
   }
 
-  @include tablet {
+  @include belowDesktop {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include phoneLandscape {
+  @include mobile {
     grid-template-columns: 1fr;
   }
   @include phone {
-    grid-template-columns: 1fr;
     gap: 1.1rem;
   }
 }
@@ -100,14 +87,14 @@ $mist: #f4f6f8;
   padding: 2.25rem 2rem 2rem;
   background: $white;
   border: 1px solid $line;
-  border-radius: 16px;
+  border-radius: $radius;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba($ink, 0.12);
+    box-shadow: 0 18px 40px rgba($text-primary, 0.12);
   }
 
   @include phone {
@@ -120,22 +107,19 @@ $mist: #f4f6f8;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: $ink;
+  color: $text-primary;
 }
 
 .sector {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   line-height: 1.6;
-  color: $accent;
+
+  @include label($accent);
 }
 
 .body {
   font-size: 0.93rem;
   line-height: 1.85;
-  color: rgba($ink, 0.76);
+  color: rgba($text-primary, 0.76);
 }
 
 .uses {
@@ -150,9 +134,9 @@ $mist: #f4f6f8;
 .use {
   font-size: 0.72rem;
   font-weight: 600;
-  color: $ink;
+  color: $text-primary;
   background: $mist;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 }
 
@@ -165,11 +149,7 @@ $mist: #f4f6f8;
   grid-template-columns: 12rem 1fr;
   gap: 1.5rem;
 
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }
@@ -180,12 +160,12 @@ $mist: #f4f6f8;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba($ink, 0.6);
+  color: rgba($text-primary, 0.6);
   padding-top: 0.2rem;
 }
 
 .areasText {
   font-size: 0.95rem;
   line-height: 1.9;
-  color: $ink;
+  color: $text-primary;
 }

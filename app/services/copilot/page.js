@@ -160,7 +160,8 @@ const Page = () => {
         <RelatedLinks
           theme="light"
           eyebrow="Case Studies"
-          heading="Real world examples of AI projects we've built"
+          heading="Real world examples of AI projects"
+          headingAccent="we've delivered"
           links={[
             {
               href: "/case-studies/biochar-ai-go-to-market-analysis-uk",

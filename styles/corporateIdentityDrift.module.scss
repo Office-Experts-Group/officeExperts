@@ -24,15 +24,7 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
+  @include eyebrow;
 }
 
 .heading {

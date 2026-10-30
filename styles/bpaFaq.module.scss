@@ -2,23 +2,8 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// ── Tokens ───────────────────────────────────
-$light-bg: #f7f8f9;
-$white: #ffffff;
-$accent: #046999;
-$accent-light: rgba(4, 105, 153, 0.08);
-$accent-border: rgba(4, 105, 153, 0.28);
-$text-primary: #0d1b2a;
-$text-secondary: #4a5568;
-$text-muted: #9a9da1;
-$border: rgba(0, 0, 0, 0.07);
-$border-strong: rgba(0, 0, 0, 0.11);
+// ── Tokens not yet in globals ────────────────
 $item-hover-bg: rgba(4, 105, 153, 0.03);
-
-// ── Breakpoints ──────────────────────────────
-$bp-tablet-min: 767px;
-$bp-tablet-max: 1024px;
-$bp-phone: 449px;
 
 // ─────────────────────────────────────────────
 // Section shell
@@ -27,10 +12,10 @@ $bp-phone: 449px;
   background: $light-bg;
   padding: 8rem;
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     padding: 6rem 4rem;
   }
-  @media (max-width: $bp-phone) {
+  @include phone {
     padding: 5rem 1.25rem;
   }
 }
@@ -45,13 +30,13 @@ $bp-phone: 449px;
   gap: 3rem;
   margin-bottom: 4rem;
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     margin-bottom: 3rem;
   }
-  @media (max-width: $bp-phone) {
+  @include phone {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.75rem;
@@ -65,24 +50,15 @@ $bp-phone: 449px;
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .title {
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
   margin: 0 0 1.1rem;
+
+  @include heading-section;
 }
 
 // Accent underline span — editorial headline treatment
@@ -123,7 +99,7 @@ $bp-phone: 449px;
   flex-shrink: 0;
   align-self: flex-start; // don't stretch to bottom of header
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     align-self: auto;
   }
 }
@@ -135,7 +111,7 @@ $bp-phone: 449px;
   color: $text-muted;
   background: $white;
   border: 1px solid $border-strong;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.4rem 1rem;
   cursor: pointer;
   transition:
@@ -145,7 +121,7 @@ $bp-phone: 449px;
   white-space: nowrap;
 
   &:hover {
-    background: $accent-light;
+    background: $accent-tint;
     color: $accent;
     border-color: $accent-border;
   }
@@ -153,12 +129,12 @@ $bp-phone: 449px;
 
 .filterBtnActive {
   background: $accent;
-  color: #ffffff;
+  color: $white;
   border-color: $accent;
 
   &:hover {
     background: color.adjust($accent, $lightness: -5%);
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -171,11 +147,11 @@ $bp-phone: 449px;
   gap: 0 4rem;
   margin-bottom: 4rem;
 
-  @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+  @include tablet {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  @media (max-width: $bp-phone) {
+  @include phone {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -192,7 +168,6 @@ $bp-phone: 449px;
 // ─────────────────────────────────────────────
 .item {
   border-bottom: 1px solid $border;
-  border-left: 3px solid transparent;
   padding-left: 0;
   transition:
     border-color 0.28s ease,
@@ -210,9 +185,7 @@ $bp-phone: 449px;
 
 // Open state — left accent border appears
 .itemOpen {
-  border-left-color: $accent;
-  padding-left: 1rem;
-  background: rgba($accent, 0.025);
+  padding: 0 1rem;
 
   .chevron {
     color: $accent;
@@ -301,7 +274,7 @@ $bp-phone: 449px;
 .link {
   color: $accent;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
   transition: border-color 0.18s ease;
@@ -336,7 +309,7 @@ $bp-phone: 449px;
   align-items: center;
   gap: 0.35rem;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: $accent;
   text-decoration: none;
   border-bottom: 1px solid transparent;

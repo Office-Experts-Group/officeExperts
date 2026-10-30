@@ -208,7 +208,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case studies"
-        heading="Custom development in practice"
+        heading="Custom development"
+        headingAccent=" in practice"
         text="See how we have built portals, quoting tools, CRMs and AI agents for Australian and international organisations."
         links={relatedLinks}
       />

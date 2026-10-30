@@ -30,28 +30,19 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
 }
 
 .title {
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
   margin: 0 0 1.25rem;
 
   span {
     color: $accent;
   }
+
+  @include heading-section-on-dark($white-88);
 }
 
 .subtitle {
@@ -106,8 +97,8 @@
   }
   .cardEyebrow {
     color: rgba($accent, 0.9);
-    background: $accent-dim;
-    border: 1px solid $accent-border;
+    // background: $accent-dim;
+    // border: 1px solid $accent-border;
   }
   .cardHeading {
     color: $white-88;
@@ -124,7 +115,7 @@
   }
   .tag {
     background: rgba($accent, 0.18);
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
     border: 1px solid $accent-border;
   }
   .expandBtn {
@@ -140,7 +131,7 @@
     border-left: 1px solid $white-08;
   }
   .statValue {
-    color: #fff;
+    color: $white;
   }
   .statLabel {
     color: $white-55;
@@ -155,8 +146,6 @@
   }
   .cardEyebrow {
     color: rgba($accent, 0.9);
-    background: $accent-dim;
-    border: 1px solid $accent-border;
   }
   .cardHeading {
     color: $white-88;
@@ -173,7 +162,7 @@
   }
   .tag {
     background: rgba($accent, 0.18);
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
     border: 1px solid $accent-border;
   }
   .expandBtn {
@@ -189,7 +178,7 @@
     border-left: 1px solid $white-08;
   }
   .statValue {
-    color: #fff;
+    color: $white;
   }
   .statLabel {
     color: $white-55;
@@ -203,26 +192,24 @@
     color: rgba(255, 255, 255, 0.15);
   }
   .cardEyebrow {
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: $white-90;
   }
   .cardHeading {
-    color: #fff;
+    color: $white;
   }
   .cardBody,
   .expandDetail p {
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
   }
   .detailLink {
-    color: #fff;
+    color: $white;
   }
   .detailLink:hover {
     border-bottom-color: rgba(255, 255, 255, 0.6);
   }
   .tag {
     background: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.9);
+    color: $white-90;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   .expandBtn {
@@ -231,17 +218,17 @@
   }
   .expandBtn:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: $white;
   }
   .visual {
-    background: #024d72;
+    background: $accent-dark;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
   .statValue {
-    color: #fff;
+    color: $white;
   }
   .statLabel {
-    color: rgba(255, 255, 255, 0.65);
+    color: $white-65;
   }
 }
 
@@ -275,8 +262,6 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 0.2rem 0.65rem;
-  border-radius: 2rem;
 }
 
 .cardHeading {
@@ -357,7 +342,7 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .expandBtn {

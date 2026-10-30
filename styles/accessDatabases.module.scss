@@ -21,10 +21,10 @@
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 4.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include container;
+
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -42,19 +42,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -83,8 +75,8 @@
   align-self: start;
   padding: 0 2.5rem 1rem 2.5rem;
   background: $white;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(13, 27, 42, 0.06);
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
 
   @include phone {
     padding: 0.5rem 1.5rem 1.75rem;
@@ -123,7 +115,7 @@
     font-family: var(--font-aptos);
   }
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }

@@ -17,14 +17,14 @@
 }
 
 .inner {
+  @include container;
+  padding-inline: 0; // section already supplies the gutter
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   align-items: start;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -36,19 +36,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -56,9 +48,7 @@
 }
 
 .text {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Problems: hairline-separated rows, no boxes ──
@@ -70,7 +60,7 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -84,9 +74,7 @@
 }
 
 .problemTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(sm);
 }
 
 .problemBody {
@@ -96,9 +84,7 @@
 }
 
 .link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
+  @include arrow-link;
 
   &::after {
     content: " \2192";
@@ -111,14 +97,15 @@
   align-items: flex-end;
   height: 100%;
 }
+
 .tiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 
-  @media (min-width: 1025px) {
+  @include desktopUp {
     position: sticky;
-    top: 2rem;
+    top: 2rem; // coupled to the header; check before changing
   }
 }
 
@@ -129,7 +116,7 @@
   padding: 1.75rem;
   background: $light-bg;
   border: 1px solid $border-strong;
-  border-radius: 6px;
+  border-radius: $radius;
 
   @include phone {
     padding: 1.4rem;
@@ -151,11 +138,7 @@
 
 // Small caption above each figure
 .label {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $darkGrayText;
+  @include label($darkGrayText);
 
   .accentTile & {
     color: $white-65;
@@ -206,9 +189,9 @@
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #04f904;
+  color: #04f904; // off-palette, no global token (see Bugs noticed)
   border: 2px solid #04f904;
-  border-radius: 4px;
+  border-radius: 0.5rem;
 }
 
 .more {

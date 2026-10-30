@@ -21,8 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -33,19 +32,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -53,9 +44,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Platform rows ────────────────────────────
@@ -78,7 +67,7 @@
   @include tablet {
     grid-template-columns: 3rem 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -114,10 +103,8 @@
 }
 
 .text {
+  @include body-text;
   max-width: 38rem;
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
 }
 
 .links {
@@ -136,8 +123,4 @@
   color: $accent;
   font-size: 0.9rem;
   font-weight: 700;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

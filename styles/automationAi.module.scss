@@ -17,11 +17,11 @@
 }
 
 .inner {
+  @include container;
+  padding-inline: 0; // wrapper already supplies the gutter
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header {
@@ -32,19 +32,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $darkGrayText;
+  @include eyebrow($darkGrayText);
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -62,7 +54,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -80,7 +72,7 @@
   padding: 2.25rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 12px;
+  border-radius: $radius;
 
   @include phone {
     padding: 1.75rem;
@@ -102,15 +94,11 @@
 }
 
 .cardTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(lg);
 }
 
 .text {
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
+  @include body-text;
 }
 
 .points {
@@ -148,9 +136,9 @@
   gap: 2rem;
   padding: 2.5rem;
   background: $accent;
-  border-radius: 12px;
+  border-radius: $radius;
 
-  @media (max-width: 766px) {
+  @include mobile {
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
@@ -171,13 +159,10 @@
   line-height: 1.75;
 }
 
+// White button on the accent band: the global .btn default
 .bandLink {
+  @include btn;
+
   flex-shrink: 0;
-  padding: 0.85rem 1.5rem;
-  background: $white;
-  color: $accent;
   font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 3px;
-  text-decoration: none;
 }

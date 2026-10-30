@@ -22,8 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -37,19 +36,11 @@
 .eyebrow {
   display: block;
   margin-bottom: 1rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-55;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark;
 }
 
 .muted {
@@ -63,7 +54,7 @@
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border: 1px solid $white-18;
-  border-radius: 3px;
+  border-radius: 0.1rem;
   transition: background 0.2s ease;
 
   &:hover {
@@ -100,11 +91,11 @@
     outline-offset: -2px;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 10rem 1fr;
     gap: 0.75rem 2rem;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.6rem;
     padding: 1.5rem 0;
@@ -165,20 +156,15 @@
 // Tablet: description and link sit in the second column under the metric
 .body,
 .cta {
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: 2;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-column: auto;
   }
 }
 
 // Screen-reader-only text
 .visuallyHidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  @include visually-hidden;
 }

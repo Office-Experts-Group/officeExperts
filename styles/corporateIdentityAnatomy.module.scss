@@ -22,15 +22,7 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
+  @include eyebrow-on-dark;
 }
 
 .heading {
@@ -47,10 +39,9 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $white-55;
-  line-height: 1.8;
   margin: 1.25rem 0 0 0;
+
+  @include lede($white-55);
 }
 
 // ── Diagram + zone list, asymmetric split ──────────────

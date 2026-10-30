@@ -21,10 +21,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
+  padding-inline: 0;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -36,7 +36,7 @@
     height: auto;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     max-width: 480px;
   }
   @include phone {
@@ -115,7 +115,7 @@
   color: $accent;
   background: $accent-light;
   border: 1px solid $accent-border;
-  border-radius: 999px;
+  border-radius: $radius-pill;
 }
 
 .callout {

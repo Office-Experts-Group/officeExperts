@@ -1,6 +1,5 @@
 // styles/melbourneIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -61,22 +60,11 @@
   // No max-width constraint — left column is already bounded by the grid
 }
 
-// Eyebrow pill
+// Eyebrow
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 // Headline
@@ -109,7 +97,7 @@
 // Inline link inside body
 .bodyLink {
   color: $accent;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
@@ -122,22 +110,13 @@
 
 // CTA button
 .btn {
-  display: inline-block;
   margin-top: 2.25rem;
-  padding: 0.9rem 2rem;
   font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
+
+  @include btn-on-accent;
 }

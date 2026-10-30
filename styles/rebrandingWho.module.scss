@@ -32,20 +32,13 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -73,10 +66,10 @@
   padding: 2.25rem 0;
   border-top: 1px solid $border-strong;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     padding: 1.75rem 0;
   }
@@ -87,7 +80,7 @@
   align-items: center;
   gap: 1.25rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: 1 / -1;
   }
 }
@@ -114,20 +107,14 @@ li:nth-child(even) .iconTile {
 }
 
 .name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .cellLabel {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $text-secondary;
+
+  @include label($text-secondary);
 }
 
 .delivery .cellLabel {
@@ -135,9 +122,7 @@ li:nth-child(even) .iconTile {
 }
 
 .cellText {
-  font-size: 0.96rem;
-  line-height: 1.75;
-  color: $text-secondary;
+  @include body-text;
 }
 
 .link {

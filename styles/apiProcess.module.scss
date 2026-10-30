@@ -31,7 +31,7 @@
 }
 
 .heading {
-  @include heading-main;
+  @include heading-section;
 }
 
 .accent {
@@ -100,8 +100,8 @@
   gap: 3.5rem;
   align-items: center;
   padding: 2.75rem 3rem;
-  border-radius: 14px;
-  background: linear-gradient(155deg, $ink 0%, #0e3a52 100%);
+  border-radius: $radius;
+  background: linear-gradient(155deg, $text-primary 0%, #0e3a52 100%);
 
   @include tablet {
     grid-template-columns: 1fr;

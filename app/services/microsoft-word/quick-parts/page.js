@@ -207,7 +207,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Quick Parts projects we've delivered"
+        heading="Some Quick Parts projects we've delivered"
+        headingAccent="for clients"
         links={[
           {
             href: "/case-studies/advisory-branding-template-rollout",

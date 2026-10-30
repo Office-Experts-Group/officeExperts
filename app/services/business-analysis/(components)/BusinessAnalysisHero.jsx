@@ -22,10 +22,6 @@ const BusinessAnalysisHero = () => {
       <div className={styles.inner}>
         {/* ── Left: content ── */}
         <div className={styles.content}>
-          <span className={styles.eyebrow}>
-            Understanding Real Business Requirements
-          </span>
-
           <h2 className={styles.heading}>
             Our value isn't just building the solution.{" "}
             <span className={styles.accent}>It's knowing what to build.</span>
@@ -46,7 +42,7 @@ const BusinessAnalysisHero = () => {
             </Link>
             {/* In-page anchor to the proof section, so a plain <a> */}
             <a href="#proof" className={styles.secondary}>
-              See what we&apos;ve built
+              See what we&apos;ve built...
             </a>
           </div>
 

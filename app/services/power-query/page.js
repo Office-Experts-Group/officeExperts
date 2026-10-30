@@ -94,7 +94,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Power Query projects we've delivered"
+        heading="Some Power Query projects"
+        headingAccent={"we've delivered"}
         links={[
           {
             href: "/case-studies/community-services-excel-consolidation-rebuild",

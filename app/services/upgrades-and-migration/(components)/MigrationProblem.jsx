@@ -52,7 +52,8 @@ const MigrationProblem = () => {
         <div className={styles.introLeft}>
           <p className={styles.eyebrow}>Why businesses get stuck</p>
           <h2 className={styles.heading}>
-            Most systems don&rsquo;t fail suddenly.
+            Most systems don&rsquo;t fail
+            <span className={styles.accent}> suddenly.</span>
           </h2>
         </div>
         <div className={styles.introRight}>

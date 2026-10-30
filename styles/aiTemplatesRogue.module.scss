@@ -25,10 +25,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -40,7 +39,7 @@
     height: auto;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     max-width: 480px;
   }
   @include phone {
@@ -55,17 +54,11 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark;
 }
 
 .lead {
-  font-size: 1rem;
-  color: $white-88;
-  line-height: 1.8;
+  @include lede($white-88);
 }
 
 .list {
@@ -83,17 +76,13 @@
 }
 
 .itemTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: $white-90;
+  @include card-title(sm, $white-90);
   margin-bottom: 0.3rem;
 }
 
 .itemBody {
-  font-size: 0.9rem;
-  color: $white-88;
+  @include small-text($white-88);
   opacity: 0.8;
-  line-height: 1.7;
 }
 
 .closing {

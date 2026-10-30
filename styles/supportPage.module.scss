@@ -10,8 +10,9 @@
   margin: 0 auto;
   text-align: center;
   h2 {
-    font-size: 1.75rem;
     line-height: 1.5;
+
+    @include heading-section;
   }
   @media screen and (max-width: 700px) {
     max-width: 90vw;
@@ -31,13 +32,15 @@
   display: flex;
   gap: 5vw;
   margin: 3rem 0;
-  padding: 0 5vw;
+  padding: 0 $gutter;
 
   @media screen and (max-width: 700px) {
     margin: 3rem 0 1rem 0;
   }
   h2 {
     margin-bottom: 2rem;
+
+    @include heading-section;
   }
   p {
     color: $darkGrayText;
@@ -87,12 +90,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-top: 2rem;
-  @include phone {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-  }
-  @include phoneLandscape {
+  @include mobile {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
@@ -169,6 +167,8 @@
   justify-content: center;
   h2 {
     text-align: center;
+
+    @include heading-section;
   }
   p {
     color: $darkGrayText;

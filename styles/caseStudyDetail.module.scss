@@ -53,23 +53,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.3rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heroTitle {
-  font-size: clamp(2.1rem, 3.6vw, 3rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  @include heading-main($white);
 }
 
 .heroSummary {
@@ -110,7 +100,7 @@
 .heroImageWrap {
   position: relative;
   width: 100%;
-  border-radius: 10px;
+  border-radius: $radius;
   overflow: hidden;
   border: 1px solid $white-08;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
@@ -148,7 +138,7 @@
   grid-template-columns: repeat(3, 1fr);
   background: $white;
   border: 1px solid $border;
-  border-radius: 10px;
+  border-radius: $radius;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 
@@ -176,14 +166,7 @@
     border-right: none;
   }
 
-  @include phoneLandscape {
-    border-right: none;
-    border-bottom: 1px solid $border;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  @include phone {
+  @include mobile {
     border-right: none;
     border-bottom: 1px solid $border;
     &:last-child {
@@ -231,12 +214,9 @@
 }
 
 .blockLabel {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .bodyText {
@@ -310,7 +290,7 @@
 .secondaryImageWrap {
   position: relative;
   width: 100%;
-  border-radius: 10px;
+  border-radius: $radius;
   overflow: hidden;
   border: 1px solid $border;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
@@ -353,11 +333,9 @@
 }
 
 .approachHeading {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
   margin-bottom: 0.5rem;
-  line-height: 1.35;
+
+  @include card-title(sm);
 }
 
 .approachBody {
@@ -458,17 +436,7 @@
 }
 
 .relatedLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
-
-  svg {
-    transition: transform 0.2s ease;
-  }
+  @include arrow-link;
 
   &:hover svg {
     transform: translate(2px, -2px);
@@ -494,15 +462,10 @@
 }
 
 .backLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   max-width: 900px;
   margin: 0 auto;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $text-secondary;
-  text-decoration: none;
+
+  @include arrow-link($text-secondary);
 
   &:hover {
     color: $accent;
@@ -513,13 +476,18 @@
 
 .videoBlock {
   margin-top: 3rem;
+
+  @include phone {
+    margin-top: 2rem;
+  }
 }
 
 // Fluid size: scales down smoothly on mobile, so no breakpoint is needed
 .videoHeading {
-  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
   margin-bottom: 0.5rem;
   text-align: center;
+
+  @include heading-section;
 }
 
 .videoIntro {
@@ -539,10 +507,4 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
-}
-
-@media (max-width: 449px) {
-  .videoBlock {
-    margin-top: 2rem;
-  }
 }

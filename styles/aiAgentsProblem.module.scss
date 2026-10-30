@@ -24,10 +24,7 @@
 }
 
 .heading {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.1;
+  @include heading-section-on-dark;
   max-width: 70vw;
   margin-bottom: 4rem;
 }
@@ -41,7 +38,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -58,7 +55,7 @@
     padding: 0 0 1.5rem 3rem;
     border-left: 1px solid $white-18;
 
-    @media (max-width: 766px) {
+    @include mobile {
       padding: 2.5rem 0 0;
       border-left: none;
       border-top: 1px solid $white-18;
@@ -67,11 +64,7 @@
 }
 
 .label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-55;
+  @include eyebrow-on-dark;
 }
 
 .labelAccent {
@@ -79,9 +72,7 @@
 }
 
 .statement {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: $white-90;
+  @include card-title(lg, $white-90);
   line-height: 1.4;
 }
 
@@ -108,7 +99,7 @@
   background: $white-12;
   list-style: none;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -125,7 +116,7 @@
     padding: 2rem 0 2.5rem 3rem;
   }
 
-  @media (max-width: 766px) {
+  @include mobile {
     padding: 1.75rem 0;
 
     &:nth-child(even) {
@@ -135,9 +126,7 @@
 }
 
 .symptomTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $white;
+  @include card-title(sm, $white);
 }
 
 .symptomBody {

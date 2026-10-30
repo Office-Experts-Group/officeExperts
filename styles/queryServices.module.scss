@@ -56,21 +56,16 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
   margin: 0 0 1.25rem;
+
+  @include heading-section;
+
   span {
     color: $accent;
   }
@@ -91,7 +86,7 @@
   font-weight: 700;
   color: $accent;
   text-decoration: none;
-  border-bottom: 1px solid rgba($accent, 0.3);
+  border-bottom: 1px solid $accent-border;
   padding-bottom: 1px;
   transition: border-color 0.18s ease;
 
@@ -162,12 +157,10 @@
 }
 
 .serviceHeading {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $text-primary;
   margin: 0;
-  line-height: 1.25;
   transition: color 0.2s ease;
+
+  @include card-title(md);
 
   .service:hover & {
     color: $accent;
@@ -289,7 +282,7 @@
   font-weight: 700;
   color: $accent;
   text-decoration: none;
-  border-bottom: 1px solid rgba($accent, 0.3);
+  border-bottom: 1px solid $accent-border;
   padding-bottom: 1px;
   margin-bottom: 0.5rem;
   transition: border-color 0.18s ease;

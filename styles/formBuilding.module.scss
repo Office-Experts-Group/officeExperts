@@ -5,7 +5,7 @@
 .section {
   max-width: 1300px;
   margin: 6rem auto;
-  padding: 0 6vw;
+  padding: 0 $gutter;
 
   @include phone {
     margin: 4rem auto;
@@ -23,22 +23,13 @@
   text-align: center;
 
   p:first-child {
-    color: $accent;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    @include eyebrow;
   }
 
   h2 {
     margin-top: 1rem;
-    font-size: 2.2rem;
-    line-height: 1.2;
-    color: $text-primary;
 
-    @include phone {
-      font-size: 1.75rem;
-    }
+    @include heading-section;
   }
 }
 
@@ -48,10 +39,7 @@
   font-size: 1.05rem;
   line-height: 1.7;
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 // ── Body: SVG + scenario list, asymmetric split ─────────────────────────────
@@ -130,8 +118,5 @@
   font-size: 0.95rem;
   line-height: 1.7;
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }

@@ -33,23 +33,11 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -69,13 +57,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1fr;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -85,7 +70,7 @@
   flex-direction: column;
   gap: 0.9rem;
   padding: 2.25rem;
-  border-radius: 22px;
+  border-radius: $radius;
   color: $white-88;
 
   @include phone {
@@ -96,10 +81,7 @@
 .wide {
   grid-column: span 2;
 
-  @include phoneLandscape {
-    grid-column: auto;
-  }
-  @include phone {
+  @include mobile {
     grid-column: auto;
   }
 }
@@ -133,11 +115,7 @@
 }
 
 .tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $white-65;
+  @include label($white-65);
 
   .paper & {
     color: $text-muted;
@@ -165,12 +143,9 @@
 .link {
   color: $white;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 
   .paper & {
     color: $accent;
-    text-decoration: none;
   }
 }
 
@@ -217,7 +192,7 @@
   gap: 2.5rem;
   border-top: 2px solid $text-primary;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }
@@ -230,17 +205,11 @@
 }
 
 .sectorLabel {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include label($accent);
 }
 
 .sectorTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .sectorText {

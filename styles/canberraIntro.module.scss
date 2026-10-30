@@ -1,6 +1,5 @@
 // styles/canberraIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section — light background ────────────────
 .section {
@@ -26,33 +25,19 @@
 // ── Eyebrow pill ──────────────────────────────
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  padding: 0.32rem 0.9rem;
   margin-bottom: 2rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 // ── Headline ──────────────────────────────────
 .headline {
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
   max-width: 20ch;
   margin-bottom: 2rem;
 
+  @include heading-section;
+
   @include phone {
-    font-size: clamp(2rem, 8vw, 2.8rem);
     margin-bottom: 1.5rem;
   }
 }
@@ -72,24 +57,10 @@
 
 // ── CTA button ────────────────────────────────
 .btn {
-  display: inline-block;
-  padding: 0.9rem 2.25rem;
   font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
   margin-bottom: 4rem;
 
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
+  @include btn-on-accent;
 }
 
 // ── Milestone strip ───────────────────────────

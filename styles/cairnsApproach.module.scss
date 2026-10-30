@@ -1,6 +1,5 @@
 // styles/cairnsApproach.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section — off-white background ───────────
 .section {
@@ -36,24 +35,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -200,22 +188,8 @@
 }
 
 .nicheBtn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
   white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
 
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
+  @include btn-on-accent;
 }

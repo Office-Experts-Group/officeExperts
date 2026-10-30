@@ -1,6 +1,5 @@
 // styles/migrationScenarios.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section shell ──────────────────────────────────────────
 .section {
@@ -32,21 +31,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  @include heading-section;
 }
 
 .accent {
@@ -54,9 +45,7 @@
 }
 
 .subheading {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Bento grid ────────────────────────────────────────────
@@ -70,16 +59,12 @@
   padding: 0;
   margin-bottom: 3.5rem;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-
-  @include phone {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -92,7 +77,7 @@
   padding: 2.25rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 10px;
+  border-radius: $radius;
   color: $text-secondary;
   font-size: 0.9rem;
   line-height: 1.75;
@@ -106,12 +91,11 @@
     grid-column: span 1;
   }
 
-  @include phoneLandscape {
+  @include mobile {
     grid-column: auto;
   }
 
   @include phone {
-    grid-column: auto;
     padding: 1.75rem 1.25rem;
   }
 }
@@ -132,11 +116,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
 
-    @include phoneLandscape {
-      grid-template-columns: 1fr;
-    }
-
-    @include phone {
+    @include mobile {
       grid-template-columns: 1fr;
     }
   }
@@ -167,14 +147,11 @@
   color: $accent;
   background: $grayBGC;
   padding: 0.3rem 0.75rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .tileTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.3;
+  @include card-title(md);
 }
 
 .body {
@@ -193,23 +170,9 @@
 
 // Pinned to the bottom so links line up across a row
 .tileLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
   align-self: flex-start;
   margin-top: auto;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
-
-  svg {
-    transition: transform 0.18s ease;
-  }
-
-  &:hover svg {
-    transform: translate(2px, -2px);
-  }
+  @include arrow-link;
 }
 
 // ── Inverse tiles: accent and dark ────────────────────────
@@ -279,12 +242,8 @@
 }
 
 .ctaEyebrow {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
+  @include eyebrow-on-dark;
 }
 
 .ctaHeading {
@@ -318,25 +277,14 @@
 }
 
 .ctaPrimary {
-  display: inline-block;
-  background: $accent;
-  color: $white;
   font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  padding: 0.9rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  white-space: nowrap;
-  text-align: center;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
     transform: translateY(-1px);
-    background: color.adjust($accent, $lightness: 6%);
   }
+
+  @include btn-on-accent;
 }
 
 .ctaSecondary {
@@ -346,7 +294,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.9rem 2rem;
-  border-radius: 4px;
+  border-radius: 0.1rem;
   border: 1px solid $white-18;
   text-decoration: none;
   white-space: nowrap;

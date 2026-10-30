@@ -4,10 +4,10 @@
 
 .section {
   background: $dark-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
-    padding: 4rem 6vw;
+    padding: 4rem $gutter;
   }
 }
 
@@ -37,33 +37,22 @@
   position: sticky;
   top: 6rem;
 
-  @include tablet {
-    position: static;
-  }
-
-  @include phone {
+  @include belowDesktop {
     position: static;
   }
 }
 
 .eyebrow {
   display: block;
-  color: $white-65;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   margin-bottom: 1rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: 2.2rem;
-  line-height: 1.2;
   color: $white-90;
 
-  @include phone {
-    font-size: 1.7rem;
-  }
+  @include heading-section-on-dark;
 }
 
 .intro {
@@ -81,11 +70,7 @@
     height: auto;
   }
 
-  @include tablet {
-    display: none;
-  }
-
-  @include phone {
+  @include belowDesktop {
     display: none;
   }
 }
@@ -100,7 +85,7 @@
 .service {
   background: $white;
   border: 1px solid $border;
-  border-radius: 12px;
+  border-radius: $radius;
   padding: 2rem;
 }
 
@@ -167,7 +152,7 @@
   color: $accent;
   background: $accent-light;
   padding: 0.2rem 0.6rem;
-  border-radius: 999px;
+  border-radius: $radius-pill;
 }
 
 .serviceDescription {

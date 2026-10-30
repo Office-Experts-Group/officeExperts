@@ -41,21 +41,15 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
   margin: 0 0 1.75rem;
+
+  @include heading-section;
 }
 
 .accent {
@@ -130,7 +124,7 @@
 .infoCard {
   background: $light-bg;
   border: 1px solid $border;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.25rem;
 }
 
@@ -155,8 +149,9 @@
 
   a {
     color: $accent;
+    font-weight: 700;
     text-decoration: none;
-    border-bottom: 1px solid rgba($accent, 0.3);
+    border-bottom: 1px solid $accent-border;
     transition: border-color 0.18s ease;
 
     &:hover {
@@ -177,9 +172,9 @@
   font-size: 0.78rem;
   font-weight: 600;
   color: $accent;
-  background: rgba($accent, 0.07);
+  background: $accent-tint;
   border: 1px solid rgba($accent, 0.22);
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.35rem 0.9rem;
   letter-spacing: 0.2px;
 }

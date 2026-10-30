@@ -1,6 +1,5 @@
 // styles/centralCoastContext.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // Local palette: a warm sand that reads as "beach" next to the cool blues
 $sand: #f7f3ea;
@@ -8,7 +7,7 @@ $sand-line: #000;
 
 // ── Section ──────────────────────────────────
 .section {
-  background-color: #fff;
+  background-color: $white;
   padding: 8rem;
 
   @include tablet {
@@ -48,36 +47,18 @@ $sand-line: #000;
   top: 130px;
   align-self: start;
 
-  @include tablet {
-    position: static;
-  }
-  @include phoneLandscape {
-    position: static;
-  }
-  @include phone {
+  @include belowDesktop {
     position: static;
   }
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -116,7 +97,7 @@ $sand-line: #000;
   background: $white;
   border: 1px solid $sand-line;
   padding: 0.4rem 0.9rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   transition:
     background 0.18s ease,
     color 0.18s ease,
@@ -144,22 +125,14 @@ $sand-line: #000;
 }
 
 .ctaBtn {
+  @include btn-on-accent;
   display: inline-block;
   padding: 0.75rem 1.75rem;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
   white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
 }
@@ -181,10 +154,10 @@ $sand-line: #000;
     width: 2px;
     background: linear-gradient(
       to bottom,
-      rgba(4, 105, 153, 0) 0%,
-      rgba(4, 105, 153, 0.4) 8%,
-      rgba(4, 105, 153, 0.4) 92%,
-      rgba(4, 105, 153, 0) 100%
+      rgba($accent, 0) 0%,
+      rgba($accent, 0.4) 8%,
+      rgba($accent, 0.4) 92%,
+      rgba($accent, 0) 100%
     );
 
     @include phone {
@@ -284,7 +257,7 @@ $sand-line: #000;
   font-size: 0.72rem;
   font-weight: 600;
   color: $accent;
-  background: rgba(4, 105, 153, 0.08);
-  border-radius: 2rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 }

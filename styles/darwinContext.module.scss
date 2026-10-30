@@ -40,16 +40,9 @@ $text-on-earth-soft: rgba(255, 244, 230, 0.66);
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $sun;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow($sun);
 }
 
 .heading {
@@ -105,12 +98,7 @@ $text-on-earth-soft: rgba(255, 244, 230, 0.66);
     gap: 1.25rem 1.5rem;
     padding: 2rem 0;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1.75rem 0;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1.75rem 0;
@@ -125,10 +113,7 @@ $text-on-earth-soft: rgba(255, 244, 230, 0.66);
   padding-top: 0.35rem;
   transition: color 0.2s ease;
 
-  @include phoneLandscape {
-    display: none;
-  }
-  @include phone {
+  @include mobile {
     display: none;
   }
 }
@@ -186,7 +171,7 @@ $text-on-earth-soft: rgba(255, 244, 230, 0.66);
   font-weight: 600;
   color: $sun;
   border: 1px solid rgba($sun, 0.4);
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.28rem 0.8rem;
 }
 
@@ -197,11 +182,7 @@ $text-on-earth-soft: rgba(255, 244, 230, 0.66);
   grid-template-columns: 12rem 1fr;
   gap: 1.5rem;
 
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }

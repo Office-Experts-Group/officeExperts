@@ -1,18 +1,6 @@
 // styles/mailMergeServices.module.scss
 @use "./globals.scss" as *;
 
-@mixin stacked {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 .section {
   background: $dark-bg;
   padding: 8rem 8rem;
@@ -37,7 +25,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  @include stacked {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -48,26 +36,18 @@
   position: sticky;
   top: 8rem;
 
-  @include stacked {
+  @include belowDesktop {
     position: static;
   }
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-55;
   margin-bottom: 1.25rem;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $white;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -169,10 +149,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.85rem 2rem;
 
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 

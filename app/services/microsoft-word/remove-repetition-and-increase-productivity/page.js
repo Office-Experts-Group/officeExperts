@@ -196,7 +196,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Projects that removed repetitive document work"
+        heading="Some past projects that removed repetitive"
+        headingAccent="document work"
         links={[
           {
             href: "/case-studies/financial-planning-word-document-builder",

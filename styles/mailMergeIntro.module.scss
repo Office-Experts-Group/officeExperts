@@ -1,19 +1,6 @@
 // styles/mailMergeIntro.module.scss
 @use "./globals.scss" as *;
 
-// Single-column layout below desktop (covers tablet, phone landscape and phone)
-@mixin stacked {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 .section {
   background: $white;
   padding: 7rem 8rem;
@@ -37,7 +24,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  @include stacked {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -54,27 +41,16 @@
     color: $text-secondary;
   }
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 // Specificity bump so the eyebrow isn't overridden by `.copy p`
 .copy .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {

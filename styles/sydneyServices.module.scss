@@ -30,29 +30,18 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 700;
   color: $white-88;
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+
+  @include heading-section-on-dark;
 }
 
 .headingAccent {
@@ -70,7 +59,7 @@
 // ═══════════════════════════════════════════════
 .featured {
   background: $accent;
-  border-radius: 8px;
+  border-radius: $radius;
   margin-bottom: 1.5rem;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
@@ -242,7 +231,7 @@
 .card {
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 6px;
+  border-radius: $radius;
   display: flex;
   overflow: hidden;
   height: 100%;
@@ -299,10 +288,10 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba($accent, 0.8);
+  color: $accent;
   background: $accent-dim;
   padding: 0.2rem 0.6rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .cardTitle {

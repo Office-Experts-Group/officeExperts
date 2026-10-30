@@ -55,11 +55,9 @@ const ApiIntro = () => (
         </div>
       </AnimateOnScroll>
 
-      <AnimateOnScroll animation="scale-up" duration={0.8} delay={0.15}>
-        <div className={styles.visual}>
-          <ApiHubSvg />
-        </div>
-      </AnimateOnScroll>
+      <div className={styles.visual}>
+        <ApiHubSvg />
+      </div>
     </div>
   </section>
 );

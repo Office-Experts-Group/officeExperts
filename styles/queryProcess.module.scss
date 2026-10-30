@@ -1,6 +1,5 @@
 // styles/queryProcess.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Process section ───────────────────────────────────────
 .section {
@@ -56,21 +55,15 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
   margin: 0 0 1.5rem;
+
+  @include heading-section;
 }
 
 .accent {
@@ -102,7 +95,7 @@
   flex-direction: column;
   gap: 1rem;
   border: 1px solid $border;
-  border-radius: 2px;
+  border-radius: $radius;
   transition: background 0.2s ease;
 
   &:hover {
@@ -271,7 +264,7 @@
 .stepOutputs {
   background: $light-bg;
   border: 1px solid $border;
-  border-radius: 4px;
+  border-radius: $radius;
   padding: 1.25rem 1.5rem;
   max-width: 520px;
 }
@@ -334,15 +327,9 @@
 
 .promoEyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.5rem;
+
+  @include eyebrow;
 }
 
 .promoHeading {
@@ -363,19 +350,13 @@
 }
 
 .promoBtn {
+  @include btn;
+
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  text-decoration: none;
-  padding: 0.9rem 2rem;
-  border-radius: 4px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   svg {
     transition: transform 0.18s ease;
@@ -383,7 +364,6 @@
   }
 
   &:hover {
-    background: color.adjust($accent, $lightness: -6%);
     transform: translateY(-1px);
 
     svg {

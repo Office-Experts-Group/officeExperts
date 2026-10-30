@@ -20,8 +20,9 @@
   @include container;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
+  overflow: visible;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -43,7 +44,7 @@
 }
 
 .heading {
-  @include heading-main;
+  @include heading-section;
 }
 
 .accent {
@@ -70,14 +71,15 @@
   font-weight: 600;
   color: $accent;
   background: $accent-tint;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.35rem 0.9rem;
 }
 
 .visual {
-  max-width: 520px;
+  // max-width: 520px;
   margin: 0 auto;
-
+  overflow: visible;
+  width: 100%;
   svg {
     display: block;
     width: 100%;

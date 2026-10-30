@@ -34,6 +34,7 @@ const RelatedLinks = ({
   theme = "dark",
   eyebrow,
   heading,
+  headingAccent,
   text,
   links = [],
   showCaseStudiesLink = true,
@@ -58,7 +59,10 @@ const RelatedLinks = ({
                 {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
                 {heading && (
                   <h2 id={headingId} className={styles.heading}>
-                    {heading}
+                    {heading}{" "}
+                    {headingAccent && (
+                      <span className={styles.accent}>{headingAccent}</span>
+                    )}
                   </h2>
                 )}
                 {text && <p className={styles.text}>{text}</p>}

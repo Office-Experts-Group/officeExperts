@@ -21,11 +21,7 @@
 }
 
 .eyebrow {
-  color: $accent;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  @include eyebrow;
 }
 
 .heading {
@@ -54,7 +50,7 @@
   li {
     padding: 0.35rem 0.9rem;
     border: 1px solid $accent-border;
-    border-radius: 999px;
+    border-radius: $radius-pill;
     background: $accent-light;
     color: $accent;
     font-size: 0.9rem;
@@ -77,16 +73,15 @@
   position: relative;
   padding: 2rem;
   border: 1px solid $border;
-  border-radius: 1.5rem;
+  border-radius: $radius;
   background: $white;
   color: $text-secondary;
   line-height: 1.65;
 
   h3 {
     margin-block: 1.25rem 0.5rem;
-    color: $text-primary;
-    font-size: 1.2rem;
-    line-height: 1.3;
+
+    @include card-title(md);
   }
 
   // The middle step is the accent tile

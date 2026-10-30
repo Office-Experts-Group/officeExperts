@@ -1,6 +1,7 @@
 @use "./globals" as *;
 
 // ── Pulse animation ────────────────────────────────────────────────────────
+// Not used in this file (see Bugs noticed).
 
 @keyframes ringPulse {
   0% {
@@ -56,20 +57,15 @@
 
 .eyebrow {
   display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: $white-55;
   margin-bottom: 1rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  font-weight: 700;
-  color: $white-90;
-  line-height: 1.2;
   margin-bottom: 1.25rem;
+
+  @include heading-section($white-90);
 }
 
 .accent {
@@ -124,9 +120,9 @@
 
   // Gradient from accent to a deeper blue-teal as items progress
   // Achieved via custom property set inline and background pulled from a gradient stop
-  background: linear-gradient(135deg, $accent 0%, #034f72 100%);
+  background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
   color: $white;
-  box-shadow: 0 0 0 4px rgba(4, 105, 153, 0.15);
+  box-shadow: 0 0 0 4px $accent-dim;
 
   @include phone {
     width: 28px;
@@ -172,23 +168,23 @@
 
 .beforePanel {
   background: $dark-surface;
-  border-radius: 10px 0 0 10px;
+  border-radius: $radius 0 0 $radius;
 
   @include phone {
-    border-radius: 10px 10px 0 0;
+    border-radius: $radius $radius 0 0;
   }
 }
 
 .afterPanel {
   background: $dark-mid;
   border-left: 2px solid $accent;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 $radius $radius 0;
   position: relative;
 
   @include phone {
     border-left: none;
     border-top: 2px solid $accent;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 $radius $radius;
   }
 }
 

@@ -4,10 +4,10 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
-    padding: 4rem 6vw;
+    padding: 4rem $gutter;
   }
 }
 
@@ -35,23 +35,15 @@
   position: sticky;
   top: 6rem;
 
-  @include tablet {
-    position: static;
-  }
-
-  @include phone {
+  @include belowDesktop {
     position: static;
   }
 }
 
 .heading {
-  font-size: 2.6rem;
-  line-height: 1.15;
   color: $text-primary;
 
-  @include phone {
-    font-size: 1.9rem;
-  }
+  @include heading-main;
 }
 
 .accent {
@@ -59,10 +51,9 @@
 }
 
 .ctaBtn {
-  &:hover {
-    border: 1px solid $accent;
-  }
+  @include btn;
 }
+
 .body {
   margin-top: 1.5rem;
   color: $text-secondary;
@@ -86,8 +77,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: $accent;
-  font-weight: 700;
+
+  @include inline-link;
 }
 
 // ── Stat pills ───────────────────────────────────────────────────────────────
@@ -137,6 +128,8 @@
   text-transform: uppercase;
   color: $text-muted;
   margin-bottom: 1rem;
+
+  @include hide-on-phone;
 }
 
 .capList {
@@ -213,7 +206,7 @@
   color: $accent;
   background: $accent-light;
   padding: 0.2rem 0.6rem;
-  border-radius: 999px;
+  border-radius: $radius-pill;
   white-space: nowrap;
 }
 
@@ -240,9 +233,9 @@
   align-items: center;
   gap: 0.4rem;
   margin-top: 0.6rem;
-  color: $accent;
-  font-weight: 700;
   font-size: 0.9rem;
+
+  @include inline-link;
 }
 
 .capArrow {

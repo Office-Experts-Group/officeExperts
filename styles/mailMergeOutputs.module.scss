@@ -1,18 +1,6 @@
 // styles/mailMergeOutputs.module.scss
 @use "./globals.scss" as *;
 
-@mixin stacked {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 .section {
   background: $grayBGC;
   padding: 7rem 8rem;
@@ -36,20 +24,12 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -80,7 +60,7 @@
     border-bottom: 1px solid $border-strong;
   }
 
-  @include stacked {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 0.9rem;
     padding: 1.75rem 0;
@@ -88,22 +68,15 @@
 }
 
 .title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: $text-primary;
+  @include card-title(lg);
 }
 
 .desc {
   line-height: 1.85;
   color: $text-secondary;
   max-width: 62ch;
-
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 .fields {

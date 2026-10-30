@@ -1,14 +1,13 @@
 // app/services/upgrades-and-migration/(components)/migrationPaths.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // Intensity palette -- low to high change
 $intensity-low-bar: #5ba4c4;
-$intensity-mid-bar: #046999;
-$intensity-high-bar: #034e72;
+$intensity-mid-bar: $accent;
+$intensity-high-bar: $accent-dark;
 
 $intensity-low-bg: #f0f8fd;
-$intensity-mid-bg: #e8f4fa;
+$intensity-mid-bg: $accent-light;
 $intensity-high-bg: $dark-surface;
 
 $intensity-low-text: $text-primary;
@@ -40,28 +39,22 @@ $intensity-high-text: $white-88;
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.1rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
   margin: 0 0 1.1rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
 }
 
 .subheading {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
   margin: 0;
+  @include lede;
 }
 
 // ── Spectrum indicator ────────────────────────────────────
@@ -80,9 +73,7 @@ $intensity-high-text: $white-88;
     white-space: nowrap;
   }
 
-  @include phone {
-    display: none;
-  }
+  @include hide-on-phone;
 }
 
 .spectrumTrack {
@@ -111,19 +102,18 @@ $intensity-high-text: $white-88;
   gap: 1.25rem;
   margin-bottom: 2.5rem;
 
-  @include tablet {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 
   @include phone {
-    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
 
 // ── Individual path card ──────────────────────────────────
 .path {
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
@@ -250,7 +240,7 @@ $intensity-high-text: $white-88;
 }
 
 .mid .pathFit {
-  background: rgba(4, 105, 153, 0.07);
+  background: $accent-tint;
 }
 
 .pathDesc {
@@ -297,31 +287,16 @@ $intensity-high-text: $white-88;
 }
 
 .pathLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  border-bottom: 1px solid rgba(4, 105, 153, 0.3);
-  padding-bottom: 1px;
   align-self: flex-start;
   margin-top: auto;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid $accent-border;
+  padding-bottom: 1px;
   transition: border-color 0.18s ease;
-
-  svg {
-    transition: transform 0.18s ease;
-    flex-shrink: 0;
-  }
+  @include arrow-link;
 
   &:hover {
     border-bottom-color: $accent;
-
-    svg {
-      transform: translate(2px, -2px);
-    }
   }
 }
 
@@ -329,7 +304,7 @@ $intensity-high-text: $white-88;
 .closer {
   background: $white;
   border: 1px solid $border;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 3rem 3.5rem;
   display: flex;
   align-items: center;
@@ -372,25 +347,15 @@ $intensity-high-text: $white-88;
 }
 
 .closerCta {
-  display: inline-block;
-  background: $accent;
-  color: $white;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  padding: 0.9rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  white-space: nowrap;
   flex-shrink: 0;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease;
 
   &:hover {
     transform: translateY(-1px);
-    background: color.adjust($accent, $lightness: 6%);
   }
+
+  @include btn-on-accent;
 
   @media screen and (max-width: 770px) {
     display: none;

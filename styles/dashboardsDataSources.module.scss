@@ -21,10 +21,9 @@
   grid-template-columns: 1fr 1.15fr;
   align-items: center;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -51,19 +50,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $white-90;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark($white-90);
 }
 
 .accent {
@@ -71,9 +62,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $white-65;
-  line-height: 1.8;
+  @include lede($white-65);
 }
 
 // ── Source groups ────────────────────────────
@@ -88,7 +77,7 @@
   padding: 1.25rem 0;
   border-bottom: 1px solid $white-12;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -117,7 +106,7 @@
   border: 1px solid $white-18;
   color: $white-88;
   font-size: 0.75rem;
-  border-radius: 999px;
+  border-radius: $radius-pill;
 }
 
 .groupNote {
@@ -138,11 +127,7 @@
 }
 
 .footer {
-  font-size: 0.9rem;
-  color: $white-65;
-  line-height: 1.7;
+  @include small-text($white-65);
 
-  a {
-    color: $white-90;
-  }
+  @include inline-link($white-90);
 }

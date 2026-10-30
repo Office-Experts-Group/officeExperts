@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .layout {
@@ -30,11 +29,7 @@
   gap: 4rem;
   align-items: center;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phoneLandscape {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -50,11 +45,7 @@
   gap: 1.5rem;
 
   h2 {
-    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-    font-weight: 700;
-    color: $text-primary;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    @include heading-section($text-primary);
   }
 
   p {
@@ -62,22 +53,11 @@
     line-height: 1.8;
   }
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-
-  @include phone {
-    letter-spacing: 1.5px;
-  }
+  @include eyebrow;
 }
 
 .accent {
@@ -104,11 +84,10 @@
   padding: 1.75rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 12px;
+  border-radius: $radius;
 
   h3 {
-    font-size: 1.15rem;
-    color: $text-primary;
+    @include card-title(md);
   }
 
   p {

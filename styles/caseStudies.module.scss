@@ -4,7 +4,7 @@
 // ── Hero ──────────────────────────────────────
 .hero {
   background: $dark-bg;
-  padding: 7rem 8rem 4rem;
+  padding: 7rem 8rem;
 
   @include tablet {
     padding: 6rem 4rem 3rem;
@@ -23,23 +23,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.3rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heroTitle {
-  font-size: clamp(2.1rem, 4vw, 3.2rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -128,14 +118,7 @@
   }
 
   // Single column on phones: clear the explicit placement so the image sits on top
-  @include phoneLandscape {
-    .rowImageWrap,
-    .rowBody {
-      grid-column: auto;
-      grid-row: auto;
-    }
-  }
-  @include phone {
+  @include mobile {
     .rowImageWrap,
     .rowBody {
       grid-column: auto;
@@ -150,7 +133,7 @@
 .rowImageWrap {
   position: relative;
   width: 100%;
-  border-radius: 8px;
+  border-radius: $radius;
   overflow: hidden;
 }
 
@@ -175,7 +158,7 @@
   color: $accent;
   background: $accent-light;
   padding: 0.22rem 0.6rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .rowTitle {
@@ -193,9 +176,7 @@
 }
 
 .rowSummary {
-  font-size: 0.98rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Results list ──────────────────────────────
@@ -225,21 +206,8 @@
 }
 
 .readMore {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
   width: fit-content;
   margin-top: 0.5rem;
 
-  svg {
-    transition: transform 0.2s ease;
-  }
-
-  &:hover svg {
-    transform: translateX(3px);
-  }
+  @include arrow-link;
 }

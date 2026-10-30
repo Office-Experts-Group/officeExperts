@@ -60,7 +60,8 @@ const MigrationPaths = () => {
       <div className={styles.header}>
         <p className={styles.eyebrow}>Choosing your path</p>
         <h2 className={styles.heading}>
-          Upgrade, migration, or transformation?
+          Upgrade, migration, or
+          <span className={styles.accent}> transformation?</span>
         </h2>
         <p className={styles.subheading}>
           Not every system needs to be rebuilt. The right approach depends on

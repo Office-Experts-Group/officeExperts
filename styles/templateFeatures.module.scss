@@ -3,7 +3,7 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
     padding: 4.5rem 1.25rem;
@@ -11,18 +11,17 @@
 }
 
 .inner {
+  @include container;
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 2rem;
-  max-width: 1300px;
-  margin: 0 auto;
 
   // The AnimateOnScroll wrappers are the grid items; stretch the cards to fill them
   > * {
     display: flex;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -34,7 +33,7 @@
   gap: 1.25rem;
   width: 100%;
   padding: 3rem;
-  border-radius: 16px;
+  border-radius: $radius;
   line-height: 1.8;
 
   a {
@@ -57,19 +56,14 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   color: $accent;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -86,7 +80,7 @@
   li {
     padding: 0.4rem 0.9rem;
     background: $grayBGC;
-    border-radius: 999px;
+    border-radius: $radius-pill;
     font-size: 0.85rem;
     font-weight: 700;
     color: $text-primary;
@@ -104,11 +98,7 @@
 }
 
 .panelHeading {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  color: $white;
+  @include heading-section($white);
 }
 
 .muted {

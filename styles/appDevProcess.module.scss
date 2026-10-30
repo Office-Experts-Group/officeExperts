@@ -17,13 +17,13 @@
 }
 
 .inner {
+  @include container;
+  padding-inline: 0; // section already supplies the gutter
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -36,19 +36,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -56,9 +48,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Vertical timeline: a rule runs behind the numbered circles ──
@@ -108,9 +98,7 @@
 }
 
 .stepTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(sm);
 }
 
 .stepBody {
@@ -120,9 +108,7 @@
 }
 
 .link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
+  @include arrow-link;
 
   &::after {
     content: " \2192";

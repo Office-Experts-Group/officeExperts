@@ -3,7 +3,7 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
   overflow: hidden;
   // Creates a stacking context so the cards can sit behind the text but above the background
   isolation: isolate;
@@ -14,14 +14,13 @@
 }
 
 .inner {
+  @include container;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 4rem;
   align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -35,7 +34,7 @@
   padding: 2rem 0;
   transform: rotate(-10deg);
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     order: 0;
     transform: rotate(-6deg);
   }
@@ -60,19 +59,14 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   color: $accent;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-main;
 }
 
 .accent {

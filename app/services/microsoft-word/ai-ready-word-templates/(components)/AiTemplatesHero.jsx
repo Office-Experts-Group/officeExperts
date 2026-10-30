@@ -12,10 +12,6 @@ const AiTemplatesHero = () => {
       <div className={styles.inner}>
         {/* ── Left: content ── */}
         <div className={styles.content}>
-          <span className={styles.eyebrow}>
-            Microsoft Copilot and AI for Word
-          </span>
-
           <h2 className={styles.heading}>
             AI-ready Word templates and{" "}
             <span className={styles.accent}>custom AI agents</span>

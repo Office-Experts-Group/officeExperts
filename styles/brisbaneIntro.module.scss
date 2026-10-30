@@ -1,6 +1,5 @@
 // styles/brisbaneIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -10,10 +9,7 @@
   @include tablet {
     padding: 5rem 4rem;
   }
-  @include phoneLandscape {
-    padding: 4rem 1rem;
-  }
-  @include phone {
+  @include mobile {
     padding: 4rem 1rem;
   }
 }
@@ -31,10 +27,7 @@
   @include tablet {
     grid-template-columns: 1fr 1fr;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -59,23 +52,11 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(4, 105, 153, 0.9);
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.22;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accentText {
@@ -127,23 +108,12 @@
 
 // ── CTA button ──────────────────────────────
 .btn {
-  display: inline-block;
+  @include btn-on-accent;
   margin: auto 0 0 auto;
-  padding: 0.9rem 2rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
   width: fit-content;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
 

@@ -52,21 +52,13 @@
 
 .title {
   flex: 1;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
+
+  @include card-title(sm);
 }
 
 .tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $darkGrayText;
-
-  @include phone {
-    display: none;
-  }
+  @include label($darkGrayText);
+  @include hide-on-phone;
 }
 
 .arrow {
@@ -126,9 +118,7 @@
 }
 
 .link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
+  @include arrow-link;
 
   &::after {
     content: " \2192";

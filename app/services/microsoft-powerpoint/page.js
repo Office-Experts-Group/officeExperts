@@ -164,7 +164,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="See it in practice"
-        heading="PowerPoint projects we have delivered"
+        heading="A few PowerPoint projects"
+        headingAccent={"we have delivered"}
         text="Real examples of templates, redesigns and automation for Australian organisations."
         links={caseStudyLinks}
       />

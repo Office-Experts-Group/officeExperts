@@ -6,25 +6,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   a {
-    color: $accent;
-    font-weight: 700;
-    &:hover {
-      text-decoration: underline;
-    }
+    @include inline-link;
   }
 
   @include phone {
-    margin: 6rem 1rem;
-    flex-direction: column;
     text-align: center;
   }
-  @include phoneLandscape {
-    margin: 6rem 1rem;
-    flex-direction: column;
-  }
 
-  @include tablet {
+  @include belowDesktop {
     margin: 6rem 1rem;
     flex-direction: column;
   }
@@ -51,25 +42,23 @@
   display: flex;
   flex-direction: column;
   max-width: 70%;
+
   h2 {
     color: $black;
-    font-size: 2rem;
-    font-weight: 700;
     margin-bottom: 1rem;
+
+    @include heading-section;
   }
+
   p {
-    color: #777a7e;
+    color: $darkGrayText;
     line-height: 2rem;
     max-width: 80%;
   }
 
   a {
-    color: $accent;
-    font-weight: 700 !important;
+    @include inline-link;
     line-height: 2rem;
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   @include phone {
@@ -107,6 +96,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   img {
     filter: grayscale(0%);
     transition: all 0.5s ease-in-out;
@@ -116,13 +106,7 @@
     }
   }
 
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include tablet {
+  @include belowDesktop {
     display: none;
   }
 }
@@ -137,12 +121,7 @@
   .text a {
     color: $accent !important;
     cursor: pointer;
-    font-weight: 500;
-    &:hover {
-      text-decoration: underline;
-      transition: all 0.5s ease-in-out;
-      font-weight: 700;
-    }
+    font-weight: 700;
   }
 
   @include phone {
@@ -157,25 +136,10 @@
 }
 
 .link {
-  -moz-user-select: none;
-  background: #046999;
-  border: medium none;
-  border-radius: 0.1rem;
-  color: #fff;
-  display: inline-block;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1;
-  margin-bottom: 0;
-  padding: 1.5rem 3rem;
-  text-align: center;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
+  @include btn;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  text-decoration: none;
   width: fit-content;
 
   &::before {
@@ -185,14 +149,13 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: $white;
     transition: left 0.3s ease;
     z-index: -1;
   }
 
   &:hover {
     color: $accent !important;
-    border: 1px solid $accent;
 
     &::before {
       left: 0;
@@ -237,6 +200,7 @@
     margin-left: 2rem;
   }
 }
+
 .topMargin {
   margin-top: 8rem;
 }

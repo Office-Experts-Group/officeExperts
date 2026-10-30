@@ -16,11 +16,7 @@
 }
 
 .eyebrow {
-  color: $accent;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  @include eyebrow;
 }
 
 .heading {
@@ -47,7 +43,7 @@
 
 .item {
   border: 1px solid $border;
-  border-radius: 1.25rem;
+  border-radius: $radius;
   background: $white;
 
   &[open] {

@@ -17,11 +17,7 @@
 }
 
 .eyebrow {
-  color: $white-65;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  @include eyebrow-on-dark;
 }
 
 .heading {
@@ -37,7 +33,7 @@
 .tableWrapper {
   overflow-x: auto;
   border: 1px solid $white-12;
-  border-radius: 1.5rem;
+  border-radius: $radius;
 }
 
 .table {
@@ -98,9 +94,5 @@
 }
 
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
+  @include visually-hidden;
 }

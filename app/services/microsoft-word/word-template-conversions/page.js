@@ -170,7 +170,8 @@ const Page = () => {
       <RelatedLinks
         theme="light"
         eyebrow="Case Studies"
-        heading="Template conversion and document transfer projects"
+        heading="Template conversion and document transfer"
+        headingAccent="projects"
         links={CASE_STUDIES}
       />
       <ConversionFaq />

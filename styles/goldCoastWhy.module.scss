@@ -2,9 +2,6 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// Local tones derived from the global accent so the page stays in the site theme
-$ink: color.adjust($accent, $lightness: -20%);
-
 // ── Section ──────────────────────────────────
 .section {
   background: $white;
@@ -36,24 +33,13 @@ $ink: color.adjust($accent, $lightness: -20%);
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $ink;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -65,7 +51,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   max-width: 56ch;
   font-size: 1.02rem;
   line-height: 1.85;
-  color: rgba($ink, 0.76);
+  color: rgba($text-primary, 0.76);
 }
 
 // ── Three modes ──────────────────────────────
@@ -79,14 +65,10 @@ $ink: color.adjust($accent, $lightness: -20%);
     display: flex;
   }
 
-  @include tablet {
-    grid-template-columns: 1fr;
-  }
-  @include phoneLandscape {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
   @include phone {
-    grid-template-columns: 1fr;
     gap: 1.1rem;
   }
 }
@@ -98,7 +80,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   gap: 1rem;
   padding: 2.5rem 2.25rem;
   border: 1px solid $line;
-  border-radius: 18px;
+  border-radius: $radius;
   background: $white;
 
   @include phone {
@@ -114,7 +96,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   box-shadow: 0 24px 48px rgba($accent, 0.25);
 
   .label {
-    color: rgba($white, 0.75);
+    color: $white-75;
   }
   .title {
     color: $white;
@@ -133,23 +115,13 @@ $ink: color.adjust($accent, $lightness: -20%);
     }
   }
 
-  @include tablet {
-    transform: none;
-  }
-  @include phoneLandscape {
-    transform: none;
-  }
-  @include phone {
+  @include belowDesktop {
     transform: none;
   }
 }
 
 .label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include label($accent);
 }
 
 .title {
@@ -157,13 +129,13 @@ $ink: color.adjust($accent, $lightness: -20%);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.025em;
-  color: $ink;
+  color: $text-primary;
 }
 
 .body {
   font-size: 0.96rem;
   line-height: 1.85;
-  color: rgba($ink, 0.76);
+  color: rgba($text-primary, 0.76);
 }
 
 .examples {
@@ -181,7 +153,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   padding-left: 1.2rem;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: $ink;
+  color: $text-primary;
 
   &::before {
     content: "";
@@ -204,7 +176,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   flex-wrap: wrap;
   gap: 2rem 3rem;
   padding: 2.25rem 0 0;
-  border-top: 2px solid $ink;
+  border-top: 2px solid $text-primary;
 
   @include phone {
     margin-top: 3rem;
@@ -238,17 +210,14 @@ $ink: color.adjust($accent, $lightness: -20%);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: $ink;
+  color: $text-primary;
 }
 
 .proofLabel {
   max-width: 9rem;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
   line-height: 1.5;
-  color: rgba($ink, 0.62);
+
+  @include label(rgba($text-primary, 0.62));
 }
 
 // Underline rather than a coloured border, per the site style
@@ -260,8 +229,7 @@ $ink: color.adjust($accent, $lightness: -20%);
   font-weight: 700;
   letter-spacing: 0.3px;
   color: $accent;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 
   svg {
     flex-shrink: 0;

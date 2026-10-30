@@ -24,27 +24,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  padding: 0.32rem 0.9rem;
   margin-bottom: 1.5rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -81,11 +67,7 @@
 }
 
 .rowEyebrow {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .rowTitle {
@@ -127,7 +109,7 @@
 // ── Row body ──────────────────────────────────
 .rowBody {
   font-size: 1rem;
-  color: $text-secondary;
+  color: $white-88;
   line-height: 1.9;
 }
 
@@ -159,19 +141,11 @@
 }
 
 .coverageEyebrow {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $text-muted;
+  @include eyebrow($text-muted);
 }
 
 .coverageHeading {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  @include heading-section;
 }
 
 .coverageBody {
@@ -209,7 +183,7 @@
   color: $text-secondary;
   background: $light-bg;
   border: 1px solid $border;
-  border-radius: 2rem;
+  border-radius: 3px;
   padding: 0.4rem 0.9rem;
   transition:
     background 0.18s ease,

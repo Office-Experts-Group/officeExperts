@@ -34,24 +34,15 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
 }
 
 .title {
-  font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 700;
-  color: $gray;
-  line-height: 1.18;
-  letter-spacing: -0.03em;
   margin-bottom: 1.1rem;
+
+  @include heading-section($gray);
 }
 
 .accentText {
@@ -60,9 +51,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $white-55;
-  line-height: 1.85;
+  @include lede($white-55);
 }
 
 // ─────────────────────────────────────────────
@@ -150,7 +139,7 @@
   color: $accent;
   background: $accent-dim;
   border: 1px solid $accent-border;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.18rem 0.65rem;
   text-decoration: none;
   transition:

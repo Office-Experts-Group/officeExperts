@@ -12,14 +12,10 @@
     margin-bottom: 3rem;
 
     .leadText {
-      font-size: 2.5rem;
-      font-weight: 700;
       margin: 6rem 0 3rem 0;
       color: $accent;
 
-      @media (max-width: 768px) {
-        font-size: 2rem;
-      }
+      @include heading-main;
     }
 
     .subText {
@@ -35,14 +31,17 @@
     }
   }
 
+  .accent {
+    color: $accent;
+  }
+
   .locationGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-bottom: 3rem;
-    margin: 0 5vw;
+    margin: 0 $gutter;
 
-    @media (max-width: 1024px) {
+    @include belowDesktop {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -53,11 +52,11 @@
 
   .locationCard {
     display: block;
-    border-radius: 8px;
+    border-radius: $radius;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    background-color: white;
+    background-color: $white;
     text-decoration: none;
     height: 100%;
 
@@ -97,10 +96,10 @@
         transition: opacity 0.3s ease;
 
         span {
-          color: white;
+          color: $white;
           font-weight: 600;
           padding: 0.5rem 1rem;
-          border: 2px solid white;
+          border: 2px solid $white;
           border-radius: 4px;
         }
       }
@@ -128,16 +127,17 @@
     text-align: center;
 
     h2 {
-      font-size: 2rem;
       margin-bottom: 2.5rem;
       color: $accent;
+
+      @include heading-section;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
-      margin: 0 5vw 6rem 5vw;
+      margin: 0 $gutter 6rem;
 
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -181,15 +181,16 @@
     margin: 4rem 1rem;
     padding: 2rem;
     background-color: var(--bg-light);
-    border-radius: 8px;
+    border-radius: $radius;
     display: flex;
     flex-direction: column;
 
     h2 {
-      font-size: 1.8rem;
       margin-bottom: 1.5rem;
       color: $accent;
       text-align: center;
+
+      @include heading-section;
     }
 
     p {

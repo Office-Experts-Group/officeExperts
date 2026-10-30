@@ -78,27 +78,12 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  width: fit-content;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .headline {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.14;
-  letter-spacing: -0.03em;
+  @include heading-main($white);
 }
 
 .accent {
@@ -178,7 +163,7 @@
   align-items: stretch;
   gap: 0;
   border: 1px solid $white-08;
-  border-radius: 6px;
+  border-radius: $radius;
   overflow: hidden;
 
   @include phone {
@@ -248,7 +233,7 @@
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: $white-18;
+  color: $white-65;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -268,8 +253,8 @@
   background: $white-08;
   border: 1px solid $white-08;
   padding: 0.3rem 0.75rem;
-  border-radius: 2rem;
-  letter-spacing: 0.3px;
+  border-radius: $radius-pill;
+  letter-spacing: 0.5px;
   transition:
     background 0.2s ease,
     color 0.2s ease,

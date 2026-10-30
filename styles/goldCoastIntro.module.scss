@@ -2,8 +2,7 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// Local tones derived from the global accent so the page stays in the site theme
-$ink: color.adjust($accent, $lightness: -20%);
+// Local tone kept: no global matches this pale grey
 $mist: #f4f6f8;
 
 // ── Section ──────────────────────────────────
@@ -38,11 +37,7 @@ $mist: #f4f6f8;
     grid-template-columns: 1fr;
     gap: 4rem;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -57,26 +52,12 @@ $mist: #f4f6f8;
 
 .eyebrow {
   align-self: flex-start;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white;
-  background: $accent;
-  padding: 0.35rem 0.95rem;
-  border-radius: 2rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
-  font-weight: 700;
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-  color: $ink;
+  @include heading-section;
 }
 
 .accentText {
@@ -87,14 +68,14 @@ $mist: #f4f6f8;
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.75;
-  color: rgba($ink, 0.9);
+  color: rgba($text-primary, 0.9);
   max-width: 54ch;
 }
 
 .body {
   font-size: 0.98rem;
   line-height: 1.85;
-  color: rgba($ink, 0.72);
+  color: rgba($text-primary, 0.72);
   max-width: 56ch;
 }
 
@@ -107,28 +88,12 @@ $mist: #f4f6f8;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
+  @include btn-on-accent;
 }
 
 .ctaNote {
   font-size: 0.85rem;
-  color: rgba($ink, 0.62);
+  color: rgba($text-primary, 0.62);
 }
 
 // ── Tilted note cards ────────────────────────
@@ -139,11 +104,7 @@ $mist: #f4f6f8;
   display: flex;
   flex-direction: column;
 
-  @include phoneLandscape {
-    padding-left: 0;
-    gap: 1rem;
-  }
-  @include phone {
+  @include mobile {
     padding-left: 0;
     gap: 1rem;
   }
@@ -153,8 +114,8 @@ $mist: #f4f6f8;
   position: relative;
   padding: 1.75rem 2rem;
   background: $white;
-  border-radius: 14px;
-  box-shadow: 0 14px 34px rgba($ink, 0.12);
+  border-radius: $radius;
+  box-shadow: 0 14px 34px rgba($text-primary, 0.12);
   transition: transform 0.25s ease;
 
   & + & {
@@ -181,7 +142,7 @@ $mist: #f4f6f8;
       transform: rotate(1.5deg) translateX(0.75rem);
     }
   }
-  @include phoneLandscape {
+  @include mobile {
     & + & {
       margin-top: 0;
     }
@@ -191,29 +152,19 @@ $mist: #f4f6f8;
   }
   @include phone {
     padding: 1.5rem 1.4rem;
-
-    & + & {
-      margin-top: 0;
-    }
-    &:nth-child(n) {
-      transform: none;
-    }
   }
 }
 
 .kicker {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 0.6rem;
+
+  @include label($accent);
 }
 
 .noteBody {
   font-size: 0.93rem;
   line-height: 1.75;
-  color: rgba($ink, 0.82);
+  color: rgba($text-primary, 0.82);
 }
 
 // ── Wave ─────────────────────────────────────

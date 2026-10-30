@@ -22,10 +22,9 @@
   grid-template-columns: 1.05fr 1fr;
   gap: 4rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -38,27 +37,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  width: fit-content;
-
-  @include phone {
-    letter-spacing: 1.5px;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.4rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  @include heading-main;
 }
 
 .accent {
@@ -83,7 +66,7 @@
   font-size: 0.88rem;
   font-weight: 700;
   padding: 0.85rem 1.75rem;
-  border-radius: 3px;
+  border-radius: 0.1rem;
   text-decoration: none;
   transition: background 0.2s ease;
 
@@ -94,15 +77,9 @@
 }
 
 .primary {
-  background: $accent;
-  color: $white;
-  text-transform: capitalize;
+  @include btn-on-accent;
   display: flex;
   align-items: center;
-
-  &:hover {
-    border: 1px solid $accent;
-  }
 }
 
 .secondary {
@@ -121,7 +98,7 @@
     height: auto;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     max-width: 520px;
   }
   @include phone {

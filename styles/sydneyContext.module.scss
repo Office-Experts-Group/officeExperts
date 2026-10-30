@@ -1,6 +1,5 @@
 // styles/sydneyContext.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -24,11 +23,7 @@
 .gridTexture {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    circle,
-    rgba(4, 105, 153, 0.08) 1px,
-    transparent 1px
-  );
+  background-image: radial-gradient(circle, $accent-tint 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   mask-image: linear-gradient(
@@ -55,25 +50,19 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
+  color: $eyebrow-on-dark;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
-  font-weight: 700;
   color: $white-88;
   line-height: 1.18;
   letter-spacing: -0.025em;
+
+  @include heading-section-on-dark;
 }
 
 .headingAccent {
@@ -108,7 +97,7 @@
 .panel {
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
@@ -148,7 +137,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin: 3rem 8vw 0 auto;
+  margin: 3rem $gutter 0 auto;
   width: fit-content;
 
   @include phone {
@@ -171,9 +160,7 @@
   padding: 0.75rem 1.75rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
+  border-radius: 0.1rem;
   text-decoration: none;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -182,9 +169,10 @@
     transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
+
+  @include btn-on-accent;
 }
 
 // ── Divider ─────────────────────────────────
@@ -259,7 +247,7 @@
   background: $white-08;
   border: 1px solid $white-08;
   padding: 0.4rem 0.9rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   transition:
     background 0.18s ease,
     color 0.18s ease,
@@ -267,7 +255,7 @@
 
   &:hover {
     background: $accent-dim;
-    color: rgba($accent, 0.9);
+    color: $accent;
     border-color: $accent-border;
   }
 }

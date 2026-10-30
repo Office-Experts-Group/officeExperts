@@ -41,20 +41,11 @@ const Introduction = () => (
             </h2>
 
             <p className={styles.lead}>
-              Paper forms, emailed spreadsheets, and manual data entry are no
-              longer acceptable when Power Apps can deploy a custom form to any
-              device in minutes. Field staff, remote offices, and third-party
-              contractors all feed live structured data directly into your
-              Microsoft 365 environment the moment a form is submitted.
-            </p>
-
-            <p className={styles.body}>
-              We build end-to-end remote collection solutions on the Microsoft
-              stack. Data captured on a phone in the field triggers a Power
-              Automate flow, updates a Dataverse record, notifies the right
-              person in Teams, and syncs to your ERP before the worker has
-              walked back to the van. No middleware, no custom development, no
-              fragile third-party tools.
+              Paper forms, emailed spreadsheets, and manual data entry are old
+              news when we deploy a custom form to any device in minutes. Field
+              staff, remote offices, and third-party contractors all feed live
+              structured data directly into your Microsoft 365 environment the
+              moment a form is submitted.
             </p>
 
             <div className={styles.ctaRow}>

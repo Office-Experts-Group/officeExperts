@@ -2,8 +2,7 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// Local tones derived from the global accent so the page stays in the site theme
-$ink: color.adjust($accent, $lightness: -20%);
+// Local tone kept: no global matches this pale grey
 $mist: #f4f6f8;
 
 // ── Section ──────────────────────────────────
@@ -32,24 +31,13 @@ $mist: #f4f6f8;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $ink;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -63,15 +51,7 @@ $mist: #f4f6f8;
   gap: 2rem;
   align-items: start;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phone {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -79,14 +59,14 @@ $mist: #f4f6f8;
 
 .group {
   border: 1px solid $line;
-  border-radius: 18px;
+  border-radius: $radius;
   overflow: hidden;
   background: $white;
 }
 
 .groupHead {
   padding: 2.25rem 2.5rem;
-  background: $ink;
+  background: $text-primary;
   color: $white;
 
   @include phone {
@@ -155,13 +135,13 @@ $mist: #f4f6f8;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.015em;
-  color: $ink;
+  color: $text-primary;
 }
 
 .desc {
   font-size: 0.95rem;
   line-height: 1.85;
-  color: rgba($ink, 0.76);
+  color: rgba($text-primary, 0.76);
 }
 
 .chips {
@@ -176,9 +156,9 @@ $mist: #f4f6f8;
 .chip {
   font-size: 0.72rem;
   font-weight: 600;
-  color: $ink;
+  color: $text-primary;
   background: $mist;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 }
 
@@ -191,8 +171,7 @@ $mist: #f4f6f8;
   font-weight: 700;
   letter-spacing: 0.3px;
   color: $accent;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 
   svg {
     flex-shrink: 0;

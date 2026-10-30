@@ -15,10 +15,10 @@ const TemplateHero = () => {
         <div className={styles.content}>
           <span className={styles.eyebrow}>Australian-owned · Est. 2000</span>
 
-          <h1 className={styles.heading}>
+          <h2 className={styles.heading}>
             Word template conversions,{" "}
             <span className={styles.accentWord}>built the way Word needs.</span>
-          </h1>
+          </h2>
 
           <p className={styles.lead}>
             We convert Adobe, InDesign and PDF files into fully functional,

@@ -33,24 +33,12 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -62,7 +50,7 @@ $cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
 
 .ledger {
   border: 1px solid $line;
-  border-radius: 14px;
+  border-radius: $radius;
   overflow: hidden;
 }
 
@@ -70,21 +58,18 @@ $cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
   display: grid;
   grid-template-columns: $cols;
   padding: 1rem 2.25rem;
-  background: $ink;
+  background: $text-primary;
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: $white-75;
 
   span:last-child {
     color: $white;
   }
 
-  @include phoneLandscape {
-    display: none;
-  }
-  @include phone {
+  @include mobile {
     display: none;
   }
 }
@@ -105,10 +90,7 @@ $cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
     border-top: none;
   }
 
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -191,7 +173,7 @@ $cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
   gap: 4rem;
   align-items: center;
   padding: 2.75rem 3rem;
-  border-radius: 14px;
+  border-radius: $radius;
   background: linear-gradient(155deg, $text-primary 0%, #0e3a52 100%);
 
   @include tablet {
@@ -272,29 +254,7 @@ $cols: minmax(0, 1fr) 3rem minmax(0, 1.15fr);
 }
 
 .proofLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+  @include arrow-link($white);
   align-self: flex-start;
-  font-size: 0.85rem;
-  font-weight: 700;
   letter-spacing: 0.3px;
-  color: $white;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
-  padding-bottom: 2px;
-  transition: border-color 0.2s ease;
-
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
-  &:hover {
-    border-bottom-color: $white;
-
-    svg {
-      transform: translateX(3px);
-    }
-  }
 }

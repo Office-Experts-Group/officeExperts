@@ -3,18 +3,16 @@
 .aboutUs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 8rem 10vw 2rem 10vw;
+  padding: 8rem $gutter 2rem $gutter;
   gap: 3rem;
+
   h2 {
-    font-size: 3rem;
     margin: 1rem 0 2rem 0;
+
+    @include heading-section;
   }
 
-  @include phone {
-    display: flex;
-    flex-direction: column;
-  }
-  @include phoneLandscape {
+  @include mobile {
     display: flex;
     flex-direction: column;
   }
@@ -67,11 +65,7 @@
   position: relative;
   height: fit-content;
   img {
-    @include phone {
-      width: 340px;
-      height: 362px;
-    }
-    @include phoneLandscape {
+    @include mobile {
       width: 340px;
       height: 362px;
     }
@@ -88,7 +82,7 @@
   height: 12rem;
   width: 20rem;
   padding: 2rem 3rem;
-  background-color: #fff;
+  background-color: $white;
   p {
     font-family: var(--garamond);
     font-size: 1.5rem;
@@ -96,11 +90,7 @@
     margin-bottom: 2rem;
   }
 
-  @include phone {
-    width: 17rem;
-    height: 10rem;
-  }
-  @include phoneLandscape {
+  @include mobile {
     width: 17rem;
     height: 10rem;
   }

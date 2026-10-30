@@ -21,8 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // ── Top: header and illustration left, capabilities right ──
@@ -32,7 +31,7 @@
   align-items: start;
   gap: 4rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -51,19 +50,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -71,9 +62,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 .visual svg {
@@ -113,14 +102,9 @@
 }
 
 .capText {
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
+  @include body-text;
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 .cta {
@@ -135,7 +119,7 @@
   gap: 2.5rem;
   padding: 2.5rem;
   background: $light-bg;
-  border-radius: 12px;
+  border-radius: $radius;
 
   @include phone {
     padding: 2rem 1.25rem;
@@ -160,7 +144,7 @@
   @include tablet {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -190,13 +174,9 @@
 }
 
 .stepTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(sm);
 }
 
 .stepText {
-  font-size: 0.88rem;
-  color: $text-secondary;
-  line-height: 1.7;
+  @include small-text;
 }

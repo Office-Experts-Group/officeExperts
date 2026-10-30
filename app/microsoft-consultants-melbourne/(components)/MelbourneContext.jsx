@@ -35,7 +35,8 @@ const MelbourneContext = () => (
         <div className={styles.splitLeft}>
           <p className={styles.eyebrow}>Melbourne context</p>
           <h2 className={styles.heading}>
-            Understanding Melbourne&rsquo;s business environment
+            Understanding Melbourne&rsquo;s
+            <span className={styles.accent}> business environment</span>
           </h2>
         </div>
 
@@ -72,7 +73,8 @@ const MelbourneContext = () => (
         <div className={styles.coverageLeft}>
           <p className={styles.eyebrow}>Reach</p>
           <h2 className={styles.heading}>
-            On-site and remote support across Melbourne
+            On-site and remote support across
+            <span className={styles.accent}> Melbourne</span>
           </h2>
           <p className={styles.coverageLead}>
             Most of our work is delivered remotely, it's faster to start, lower

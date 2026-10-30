@@ -20,8 +20,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 }
 
 .header {
@@ -32,19 +32,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -66,7 +58,7 @@
 // ── Table ───────────────────────────────────────
 .tableWrap {
   overflow-x: auto;
-  border-radius: 10px;
+  border-radius: $radius;
   background: $dark-surface;
   border: 1px solid $white-08;
 
@@ -203,4 +195,5 @@ thead .featured {
 .inlineLink {
   color: $accent;
   font-weight: 700;
+  text-decoration: none;
 }

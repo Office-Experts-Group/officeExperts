@@ -1,3 +1,5 @@
+@use "./globals.scss" as *;
+
 .quote {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
   p {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #046999;
+    color: $accent;
     font-style: italic;
     text-align: center;
   }

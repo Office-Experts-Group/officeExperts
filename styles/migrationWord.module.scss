@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // ── Header ──
@@ -30,32 +29,18 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 1rem 4rem;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
 
 .eyebrow {
   grid-column: 1 / -1;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -85,14 +70,11 @@
   padding: 0;
   border-top: 1px solid $border-strong;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -102,9 +84,7 @@
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 1.75rem;
-  color: $text-secondary;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  @include small-text;
 
   &::before {
     content: "";
@@ -143,14 +123,11 @@
   list-style: none;
   padding: 0;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -161,25 +138,15 @@
   padding: 2rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 6px;
-  color: $text-secondary;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  border-radius: $radius;
+  @include small-text;
 
   h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: $text-primary;
+    @include card-title(sm);
   }
 }
 
 .fixLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
   margin-top: auto;
-  color: $accent;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-decoration: none;
+  @include arrow-link;
 }

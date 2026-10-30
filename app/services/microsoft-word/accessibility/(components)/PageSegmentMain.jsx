@@ -16,7 +16,9 @@ const PageSegmentMain = () => {
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
           <p>Professional Standards</p>
-          <h2>Word Document Accessibility</h2>
+          <h2>
+            Word Document <span className={styles.accent}>Accessibility</span>
+          </h2>
           <p>
             <strong>What is accessibility in a document?</strong> Document
             accessibility means structuring a Word file, its headings, tables,

@@ -59,7 +59,6 @@ const CompaniesIntro = () => (
       <AnimateOnScroll animation="fade-up" duration={0.6}>
         <div className={styles.split}>
           <div className={styles.copy}>
-            <p className={styles.eyebrow}>Expert Advice</p>
             <h2 className={styles.heading}>
               Company documents{" "}
               <span className={styles.headingAccent}>back under control</span>

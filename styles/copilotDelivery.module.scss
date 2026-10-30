@@ -28,29 +28,14 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
+  @include heading-section;
+  margin: 0.5rem 0 1.25rem 0;
 }
 
 .accent {
@@ -134,7 +119,7 @@
 .card {
   background: $light-bg;
   border: 1px solid $border;
-  border-radius: 8px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   transition:
     border-color 0.25s ease,
@@ -142,7 +127,7 @@
 
   &:hover {
     border-color: $accent-border;
-    box-shadow: 0 4px 20px rgba(4, 105, 153, 0.08);
+    box-shadow: 0 4px 20px $accent-tint;
   }
 
   @include phone {
@@ -166,10 +151,7 @@
 }
 
 .cardPhase {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.3;
+  @include card-title(md);
 }
 
 // ── Card summary — short bold line ──────────

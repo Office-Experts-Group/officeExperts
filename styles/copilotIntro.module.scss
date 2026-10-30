@@ -1,6 +1,5 @@
 // styles/copilotIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ─────────────────────────────────
 .section {
@@ -29,11 +28,7 @@
     grid-template-columns: 1fr 340px;
     gap: 3.5rem;
   }
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phoneLandscape {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -48,31 +43,17 @@
   min-width: 0;
 }
 
-// Eyebrow pill
+// Eyebrow
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 // Headline
 .headline {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  margin-bottom: 2rem;
+  @include heading-section;
+  margin: 1rem 0 1.5rem 0;
 }
 
 .accent {
@@ -101,24 +82,9 @@
 
 // CTA button
 .btn {
-  display: inline-block;
   margin-top: 2.25rem;
-  padding: 0.9rem 2rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
 
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
+  @include btn-on-accent;
 }
 
 // ── Right column ────────────────────────────
@@ -129,15 +95,7 @@
   top: 130px;
   margin-top: 6rem;
 
-  @include tablet {
-    position: static;
-    margin-top: 0;
-  }
-  @include phoneLandscape {
-    position: static;
-    margin-top: 0;
-  }
-  @include phone {
+  @include belowDesktop {
     position: static;
     margin-top: 0;
   }
@@ -174,7 +132,7 @@
   padding: 0.9rem 0.85rem;
   text-decoration: none;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: $radius;
   background: $accent-light;
   transition:
     background 0.2s ease,

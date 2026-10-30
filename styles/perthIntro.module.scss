@@ -1,6 +1,5 @@
 // styles/perthIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 .section {
   background: $white;
@@ -53,23 +52,11 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(4, 105, 153, 0.9);
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accentText {
@@ -119,25 +106,10 @@
 }
 
 .btn {
-  display: inline-block;
-  margin: auto 0 0 auto;
-  padding: 0.9rem 2rem;
+  @include btn-on-accent;
   font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
+  margin: auto 0 0 auto;
   width: fit-content;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
 
   @media screen and (max-width: 770px) {
     margin: 4rem 0 0 auto;

@@ -48,7 +48,7 @@
 }
 
 .heading {
-  @include heading-main($white);
+  @include heading-section($white);
 }
 
 .accent {
@@ -99,7 +99,7 @@
   flex-direction: column;
   gap: 0.85rem;
   padding: 1.75rem;
-  border-radius: 14px;
+  border-radius: $radius;
   background: $white-08;
   border: 1px solid $white-12;
 }
@@ -112,15 +112,12 @@
   text-transform: uppercase;
   color: $white;
   background: $accent;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.75rem;
 }
 
 .title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: $white;
+  @include card-title(md, $white);
 }
 
 .itemText {

@@ -1,7 +1,7 @@
 @use "./globals.scss" as *;
 
 .meetTheTeam {
-  padding: 6rem 10vw;
+  padding: 6rem $gutter;
   margin: 0 auto;
 }
 
@@ -21,7 +21,7 @@
 .imageWrapper {
   margin-bottom: 1rem;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: $radius;
 
   &:hover {
     .memberImage {
@@ -50,10 +50,8 @@
   }
 
   h3 {
-    color: $accent;
-    font-size: 1rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
+    @include card-title(sm, $accent);
   }
 }
 

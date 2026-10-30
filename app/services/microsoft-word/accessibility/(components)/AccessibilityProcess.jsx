@@ -32,7 +32,8 @@ const AccessibilityProcess = () => {
         <div className={styles.leftCol}>
           <span className={styles.eyebrow}>How We Work</span>
           <h2 className={styles.heading}>
-            Starting from scratch or existing document repair.
+            Starting from scratch or existing
+            <span className={styles.accent}> document repair</span>
           </h2>
           <p className={styles.body}>
             Remediation doesn't need to mean rebuilding every document you own.

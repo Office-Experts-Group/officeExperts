@@ -11,7 +11,6 @@ const BPAApprovals = dynamic(() => import("./(components)/BPAApprovals"));
 const BPAEmailTriage = dynamic(() => import("./(components)/BPAEmailTriage"));
 const BPAReplaces = dynamic(() => import("./(components)/BPAReplaces"));
 const BPAProcess = dynamic(() => import("./(components)/BPAProcess"));
-const Promo = dynamic(() => import("@/components/Promo"));
 const BPAFaq = dynamic(() => import("./(components)/BPAFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
@@ -156,7 +155,8 @@ const Page = () => {
       <RelatedLinks
         theme="light"
         eyebrow="Case Studies"
-        heading="Business process automation projects we've delivered"
+        heading="A few automation projects"
+        headingAccent="we've delivered"
         links={[
           {
             href: "/case-studies/manufacturing-project-setup-automation",
@@ -193,12 +193,6 @@ const Page = () => {
       />
       <BPAReplaces />
       <BPAProcess />
-      <Promo
-        h2={"Let's Do This!"}
-        p={
-          "Once you have decided to take advantage of our services, we will carefully customise those services to match your requirements, keeping you informed every step of the way. We realise that our success is hinged on our ability to ensure your own"
-        }
-      />
       <BPAFaq />
       <Contact />
     </>

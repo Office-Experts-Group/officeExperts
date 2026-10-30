@@ -15,7 +15,7 @@
   max-width: 1280px;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -29,23 +29,12 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-
-  @include phone {
-    display: none;
-  }
+  margin-bottom: -0.5rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -64,10 +53,7 @@
   line-height: 1.85;
   color: $text-secondary;
 
-  a {
-    font-weight: 700;
-    color: $accent;
-  }
+  @include inline-link;
 }
 
 .art {
@@ -118,10 +104,8 @@
 }
 
 .itemTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
+  @include card-title(md);
   line-height: 1.4;
-  color: $text-primary;
 }
 
 .itemBody {
@@ -138,7 +122,7 @@
   margin-top: 2.5rem;
   padding: 2rem;
   background: $light-bg;
-  border-radius: 14px;
+  border-radius: $radius;
 
   @include phone {
     padding: 1.5rem 1.25rem;
@@ -158,8 +142,5 @@
   line-height: 1.85;
   color: $text-secondary;
 
-  a {
-    font-weight: 700;
-    color: $accent;
-  }
+  @include inline-link;
 }

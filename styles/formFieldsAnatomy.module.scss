@@ -4,10 +4,10 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 6vw;
+  padding: 7rem $gutter;
 
   @include phone {
-    padding: 4rem 6vw;
+    padding: 4rem $gutter;
   }
 }
 
@@ -19,22 +19,13 @@
 
 .eyebrow {
   display: block;
-  color: $accent;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   margin-bottom: 1rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: 2.4rem;
-  line-height: 1.2;
-  color: $text-primary;
-
-  @include phone {
-    font-size: 1.8rem;
-  }
+  @include heading-section;
 }
 
 .accent {
@@ -56,9 +47,9 @@
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
   align-items: start;
+
+  @include container;
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -85,7 +76,7 @@
 }
 
 .mockForm {
-  border-radius: 14px;
+  border-radius: $radius;
   box-shadow: 0 30px 60px -30px rgba(13, 27, 42, 0.18);
   overflow: hidden;
 

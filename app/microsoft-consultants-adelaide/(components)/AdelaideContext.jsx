@@ -119,10 +119,6 @@ const AdelaideContext = () => (
       </aside>
     </div>
 
-    <p className={styles.hint} aria-hidden="true">
-      Scroll sideways to see more industries &rarr;
-    </p>
-
     {/* ── Areas as a plain sentence, not another pill cloud ── */}
     <div className={styles.areas}>
       <p className={styles.areasLabel}>Areas we support</p>

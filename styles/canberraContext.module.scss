@@ -33,25 +33,15 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
   margin-bottom: 1rem;
+
+  @include heading-section;
 }
 
 .headingAccent {
@@ -86,12 +76,13 @@
 .card {
   background: $white;
   border: 1px solid $border;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.5rem;
   display: grid;
   grid-template-columns: 7rem 1fr;
   gap: 2rem;
   align-items: start;
+  height: 100%;
 
   @include tablet {
     grid-template-columns: 6rem 1fr;
@@ -137,10 +128,7 @@
 }
 
 .cardTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.25;
+  @include card-title(sm);
 }
 
 .cardBody {
@@ -184,11 +172,8 @@
 }
 
 .coverageHeading {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  margin-top: -1.5rem;
+  @include heading-section;
 }
 
 .coverageCopy {
@@ -203,12 +188,9 @@
 }
 
 .tagsLabel {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $text-muted;
   margin-bottom: 1.25rem;
+
+  @include label($text-muted);
 }
 
 .tags {

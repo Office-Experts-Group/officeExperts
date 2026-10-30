@@ -177,7 +177,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Database solutions from past projects"
+        heading="A few database solutions from"
+        headingAccent={"past projects"}
         links={[
           {
             href: "/case-studies/automated-proposal-generation-in-microsoft",

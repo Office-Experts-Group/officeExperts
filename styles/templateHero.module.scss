@@ -1,9 +1,5 @@
 // /styles/templateHero.module.scss
-@use "sass:color";
 @use "./globals" as *;
-
-// Lighter tint of the accent so it stays readable on the dark background
-$accent-bright: color.adjust($accent, $lightness: 28%);
 
 .section {
   background: $dark-bg;
@@ -26,19 +22,18 @@ $accent-bright: color.adjust($accent, $lightness: 28%);
 .eyebrow {
   display: inline-block;
   color: $white-75;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
   margin-block: 1.25rem;
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  line-height: 1.1;
+
+  @include heading-section($white);
 }
 
 .accentWord {
-  color: $accent-bright;
+  color: $accent-on-dark;
   font-weight: 700;
 }
 
@@ -69,7 +64,7 @@ $accent-bright: color.adjust($accent, $lightness: 28%);
   }
 
   &:hover {
-    color: $accent-bright;
+    color: $accent-on-dark;
   }
 }
 
@@ -83,7 +78,7 @@ $accent-bright: color.adjust($accent, $lightness: 28%);
   li {
     padding: 0.3rem 0.8rem;
     border: 1px solid $white-18;
-    border-radius: 999px;
+    border-radius: $radius-pill;
     color: $white-65;
     font-size: 0.85rem;
   }
@@ -91,7 +86,7 @@ $accent-bright: color.adjust($accent, $lightness: 28%);
 
 // Custom properties are consumed by the SVG in Icons.jsx
 .visual {
-  --accent: #{$accent-bright};
+  --accent: #{$accent-on-dark};
   --bg: #{$dark-bg};
   color: $white;
 }

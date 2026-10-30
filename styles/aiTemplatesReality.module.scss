@@ -24,8 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // ── Intro copy left, illustration fills the right ──
@@ -59,17 +58,11 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Problem list: red top rule marks each as a known failure ──
@@ -80,7 +73,7 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -94,13 +87,9 @@
 }
 
 .itemTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .itemBody {
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
+  @include body-text;
 }

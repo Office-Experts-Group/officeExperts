@@ -15,22 +15,14 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  margin: 0 0 1rem;
+  margin: 1rem 0;
+  @include heading-section;
 }
 
 .accent {
@@ -38,9 +30,7 @@
 }
 
 .intro {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
   margin: 0;
 }
 
@@ -63,7 +53,7 @@
 .meter {
   background: $white;
   border: 1px solid $border;
-  border-radius: 4px;
+  border-radius: $radius;
   padding: 1.5rem;
 }
 
@@ -133,7 +123,7 @@
 .tableWrapper {
   background: $white;
   border: 1px solid $border;
-  border-radius: 4px;
+  border-radius: $radius;
   overflow-x: auto;
 }
 
@@ -180,12 +170,7 @@
 
 // Kept for screen readers and search engines, hidden visually
 .caption {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
+  @include visually-hidden;
 }
 
 .groupRow {
@@ -232,11 +217,7 @@
 // Same visually-hidden pattern as .caption, applied on phones only
 .stateLabel {
   @include phone {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+    @include visually-hidden;
   }
 }
 

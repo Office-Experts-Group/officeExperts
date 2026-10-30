@@ -1,7 +1,11 @@
 // /app/services/layout.js
-// Route metadata for /services, in the same shape as the other page layouts.
-// The title and description live in servicesData.js so the page schema uses the same wording.
-import { pageMeta } from "./servicesData";
+const pageMeta = {
+  title: "Microsoft Office, Power Platform and AI Services",
+  description:
+    "Word, Excel, Access, PowerPoint, Power Platform, Microsoft 365 and AI agent development from Australia's Microsoft Office specialists since 2000.",
+  path: "/services",
+  siteUrl: "https://www.officeexperts.com.au",
+};
 
 export const metadata = {
   title: pageMeta.title,

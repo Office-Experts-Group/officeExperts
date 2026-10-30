@@ -2,7 +2,7 @@
 
 .pageSegment {
   scroll-margin-top: 100px;
-  padding: 0 10vw;
+  padding: 0 $gutter;
   display: grid;
   grid-template-columns: 50% 1fr;
   gap: 1rem;
@@ -15,16 +15,10 @@
     transition: all 0.3s ease;
   }
 
-  @include phone {
+  @include mobile {
     display: flex;
     flex-direction: column-reverse;
     padding: 0 1rem;
-  }
-  @include phoneLandscape {
-    display: flex;
-    padding: 0 1rem;
-
-    flex-direction: column-reverse;
   }
   @include tablet {
     display: flex;
@@ -58,20 +52,11 @@
   a {
     color: $accent;
     font-weight: 700;
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
 .deskOnly {
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include tablet {
+  @include belowDesktop {
     display: none;
   }
 }
@@ -98,8 +83,8 @@
   height: 30px;
   width: 30px;
   min-width: 30px;
-  border: 1px solid #0eaa0e;
-  background-color: #0eaa0e;
+  border: 1px solid $success;
+  background-color: $success;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +98,8 @@
     transition: all 0.5s ease;
     background-color: $offWhite;
     svg {
-      stroke: #0eaa0e;
-      color: #0eaa0e;
+      stroke: $success;
+      color: $success;
     }
   }
   a {

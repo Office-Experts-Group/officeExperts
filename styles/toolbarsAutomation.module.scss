@@ -8,11 +8,10 @@
 
 // Dark panel sitting inside the light section
 .panel {
-  max-width: 1280px;
-  margin: 0 auto;
+  @include container;
   padding: clamp(1.75rem, 5vw, 4.5rem);
   background: $dark-bg;
-  border-radius: 20px;
+  border-radius: $radius;
 }
 
 .header {
@@ -22,7 +21,7 @@
   gap: 3rem;
   margin-bottom: 3rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
@@ -35,23 +34,11 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $white-90;
+  @include heading-main($white-90);
 }
 
 .accent {
@@ -71,7 +58,7 @@
   gap: 1.25rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -79,7 +66,7 @@
 .group {
   padding: 2rem;
   background: $dark-surface;
-  border-radius: 14px;
+  border-radius: $radius;
   height: 100%;
 
   @include phone {
@@ -111,9 +98,7 @@
 }
 
 .groupTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $white-88;
+  @include card-title(md, $white-88);
 }
 
 .list {
@@ -147,14 +132,9 @@
 }
 
 .itemTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: $white-88;
+  @include card-title(sm, $white-88);
 }
 
 .itemText {
-  font-size: 0.92rem;
-  line-height: 1.7;
-  color: $white-55;
+  @include small-text($white-55);
 }

@@ -1,10 +1,6 @@
 // styles/sqlSecurityProof.module.scss
 @use "./globals.scss" as *;
 
-// The brand accent is too dark to read on the dark background, so a lighter tint
-// is used here. It isn't in globals.scss, so it is hardcoded locally.
-$accent-bright: #4fb3e0;
-
 .section {
   background: $dark-bg;
   padding: 7rem 8rem;
@@ -25,10 +21,10 @@ $accent-bright: #4fb3e0;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include container;
+
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -41,23 +37,21 @@ $accent-bright: #4fb3e0;
 }
 
 .eyebrow {
-  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   color: $white-65;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white;
   line-height: 1.15;
   letter-spacing: -0.025em;
+
+  @include heading-section-on-dark;
 }
 
 .accent {
-  color: $accent-bright;
+  color: $accent-on-dark;
 }
 
 .lead {
@@ -75,14 +69,14 @@ $accent-bright: #4fb3e0;
   padding: 2.5rem;
   background: $dark-surface;
   border: 1px solid $white-12;
-  border-radius: 6px;
+  border-radius: $radius;
 }
 
 .stat {
   font-size: clamp(3.5rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1;
-  color: $accent-bright;
+  color: $accent-on-dark;
 }
 
 .quote {
@@ -98,8 +92,9 @@ $accent-bright: #4fb3e0;
 
   a {
     color: $white-65;
-    text-decoration: underline;
     text-underline-offset: 3px;
+
+    @include inline-link;
 
     &:hover {
       color: $white;

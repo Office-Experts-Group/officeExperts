@@ -24,7 +24,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -36,31 +36,8 @@
   gap: 1.5rem;
 }
 
-.eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.32rem 0.85rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  width: fit-content;
-
-  @media (max-width: 770px) {
-    display: none;
-  }
-}
-
 .heading {
-  font-size: clamp(2.3rem, 4.6vw, 3.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-  @media (max-width: 770px) {
-    margin-top: 2rem;
-  }
+  @include heading-section;
 }
 
 .accent {
@@ -82,33 +59,15 @@
 }
 
 .primary {
-  background: $accent;
-  color: $white;
+  @include btn-on-accent;
   display: flex;
   align-items: center;
-
-  &:hover {
-    border: 1px solid $accent;
-  }
 }
 
 .secondary {
   font-size: 0.88rem;
   font-weight: 700;
   padding: 0.85rem 1.75rem;
-  border-radius: 3px;
-  text-decoration: none;
-  color: $accent;
-  border: 1px solid $accent-border;
-  transition: background 0.2s ease;
-
-  &:hover {
-    background: $accent-light;
-  }
-  &:focus-visible {
-    outline: 2px solid $accent;
-    outline-offset: 3px;
-  }
 }
 
 // ── Fact strip ──────────────────────────────────

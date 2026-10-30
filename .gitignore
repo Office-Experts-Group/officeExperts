@@ -53,6 +53,7 @@ checkLinks.mjscheckRedirects.js
 shots.mjs
 /.css-baseline/
 /.css-check/
+meeting-notes.md
 
 # Playwright
 /test-results/

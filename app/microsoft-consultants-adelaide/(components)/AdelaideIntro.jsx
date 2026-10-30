@@ -59,7 +59,6 @@ const AdelaideIntro = () => (
       {/* ── Headline ── */}
       <AnimateOnScroll animation="fade-up" duration={0.6}>
         <div className={styles.head}>
-          <p className={styles.eyebrow}>Adelaide &amp; South Australia</p>
           <h2 className={styles.headline}>
             Professional Support For{" "}
             <span className={styles.accentText}>Adelaide Businesses</span>

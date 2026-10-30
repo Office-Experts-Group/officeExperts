@@ -20,25 +20,17 @@
 // ── Shared eyebrow ────────────────────────────
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 // ── Shared heading ────────────────────────────
 .heading {
-  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
 }
 
 // ── Block 1: sticky split ─────────────────────
@@ -156,7 +148,7 @@
   background: $light-bg;
   border: 1px solid $border;
   padding: 0.4rem 0.9rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   transition: all 0.18s ease;
 
   &:hover {

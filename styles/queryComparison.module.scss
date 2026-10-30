@@ -37,28 +37,19 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.5rem;
+
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
   margin: 0 0 1.25rem;
+
+  @include heading-section-on-dark($white-88);
 }
 
 .accent {
-  color: rgba($accent, 0.9);
+  color: $accent-on-dark;
 }
 
 .intro {
@@ -72,7 +63,7 @@
 // ── Comparison table ──────────────────────────────────────
 .tableWrap {
   border: 1px solid $white-12;
-  border-radius: 6px;
+  border-radius: $radius;
   overflow: hidden;
 }
 
@@ -115,10 +106,10 @@ $col-vba: 39%;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba($accent, 0.9);
+  color: $accent-on-dark;
   background: $accent-dim;
   border: 1px solid $accent-border;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.25rem 0.75rem;
   display: inline-block;
 }
@@ -246,7 +237,7 @@ $col-vba: 39%;
 }
 
 .colLabelPq {
-  color: rgba($accent, 0.9);
+  color: $accent-on-dark;
 }
 
 .colLabelVba {
@@ -261,7 +252,7 @@ $col-vba: 39%;
 .combined {
   background: $dark-surface;
   border: 1px solid $white-12;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.25rem;
   max-width: 760px;
 }
@@ -271,7 +262,7 @@ $col-vba: 39%;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba($accent, 0.9);
+  color: $accent-on-dark;
   margin: 0 0 0.85rem;
 }
 
@@ -316,7 +307,7 @@ $col-vba: 39%;
   gap: 0.35rem;
   font-size: 0.82rem;
   font-weight: 700;
-  color: rgba($accent, 0.9);
+  color: $accent-on-dark;
   text-decoration: none;
   border-bottom: 1px solid $accent-border;
   padding-bottom: 1px;

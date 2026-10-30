@@ -24,17 +24,9 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .title {
@@ -51,9 +43,7 @@
 }
 
 .subtitle {
-  color: $white-55;
-  font-size: 1rem;
-  line-height: 1.8;
+  @include lede($white-55);
 }
 
 // ── Card grid — two columns, top card spans full width ──
@@ -67,13 +57,7 @@
     grid-column: 1 / -1;
   }
 
-  @include tablet {
-    grid-template-columns: 1fr;
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -82,7 +66,7 @@
 .card {
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 10px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
@@ -123,7 +107,7 @@
   color: $accent;
   background: $accent-dim;
   padding: 0.2rem 0.6rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 // ── Card title ──────────────────────────────
@@ -169,29 +153,16 @@
 
 // ── Card link ───────────────────────────────
 .cardLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  @include arrow-link;
   margin-top: 1.5rem;
   font-size: 0.82rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
   letter-spacing: 0.5px;
-
-  svg {
-    transition: transform 0.2s ease;
-  }
-
-  &:hover svg {
-    transform: translateX(4px);
-  }
 }
 
 .accentCard {
   background-color: $accent;
   border: 1px solid $white-18;
-  border-radius: 10px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   height: 100%;
   .cardTag {

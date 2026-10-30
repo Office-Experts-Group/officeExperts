@@ -1,6 +1,5 @@
 // styles/centralCoastIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // Local palette: cool sea tints that sit on the brand accent
 $sea-deep: #033a55;
@@ -39,35 +38,8 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
   gap: 1.5rem;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-
-  &::before {
-    content: "";
-    width: 2.25rem;
-    height: 2px;
-    background: $accent;
-    border-radius: 2px;
-  }
-
-  @include phone {
-    display: none;
-  }
-}
-
 .headline {
-  font-size: clamp(2.6rem, 5.6vw, 4.8rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
   max-width: 22ch;
 }
 
@@ -98,7 +70,7 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
     left: 0;
     right: 0;
     top: calc(#{$tag-space} + #{$dot-size} / 2 - 1px);
-    border-top: 2px dashed rgba(4, 105, 153, 0.28);
+    border-top: 2px dashed $accent-border;
   }
 }
 
@@ -136,7 +108,7 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
   height: $dot-size;
   border-radius: 50%;
   background: $white;
-  border: 2px solid rgba(4, 105, 153, 0.45);
+  border: 2px solid rgba($accent, 0.45);
 }
 
 .stopLabel {
@@ -185,14 +157,14 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
   color: $white;
   background: $accent;
   padding: 0.45rem 1.1rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .coreStop {
   .dot {
     background: $accent;
     border-color: $white;
-    box-shadow: 0 0 0 3px rgba(4, 105, 153, 0.25);
+    box-shadow: 0 0 0 3px rgba($accent, 0.25);
   }
 
   .stopLabel {
@@ -220,7 +192,7 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
       top: 0;
       bottom: 0;
       border-top: none;
-      border-left: 2px dashed rgba(4, 105, 153, 0.28);
+      border-left: 2px dashed $accent-border;
     }
   }
 
@@ -269,16 +241,12 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(4, 105, 153, 0.18);
+  border-top: 1px solid rgba($accent, 0.18);
 
   @include tablet {
     gap: 2rem;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 2.25rem;
   }
@@ -321,21 +289,13 @@ $tag-space: 3rem; // room above the rail for the "Central Coast NSW" tag
 }
 
 .btn {
+  @include btn-on-accent;
   display: inline-block;
   padding: 0.9rem 2rem;
   font-size: 0.88rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
 }

@@ -30,23 +30,19 @@
 }
 
 .eyebrow {
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: $accent;
   margin-bottom: 1.5rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
+
+  @include heading-section-on-dark($white-88);
+}
+
+.accent {
+  color: $accent;
 }
 
 .headingMuted {
@@ -87,7 +83,7 @@
   @include phone {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media screen and (max-width: 767px) {
+  @include mobile {
     gap: 0.5rem;
   }
 }
@@ -112,7 +108,7 @@
   gap: 0.75rem;
   background: $accent;
   border: 1px solid $white-12;
-  border-radius: 8px;
+  border-radius: $radius;
   padding: 1rem 0.75rem;
   text-align: center;
   color: $white-88;
@@ -132,7 +128,7 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     max-width: 150px;
   }
 }
@@ -160,7 +156,7 @@
   padding: 1rem 1.1rem;
   background: $dark-mid;
   border: 1px solid $accent-border;
-  border-radius: 8px;
+  border-radius: $radius;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
   color: $white-65;
   font-size: 0.85rem;
@@ -209,49 +205,18 @@
 }
 
 .cta {
+  @include btn-on-accent;
+
   margin: 1.5rem 0 0 auto;
-  background: #fff;
-  border-radius: 0.1rem;
-  color: $accent;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1;
-  padding: 13px 25px;
-  text-align: center;
-  touch-action: manipulation;
-  white-space: nowrap;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: $accent;
-    transition: left 0.3s ease;
-    z-index: -1;
+  &:hover svg {
+    color: $white;
   }
 
-  &:hover {
-    color: #fff;
-
-    &::before {
-      left: 0;
-    }
-
-    svg {
-      color: #fff;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
+  @include mobile {
     margin-bottom: 3rem;
   }
 }

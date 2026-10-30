@@ -66,23 +66,14 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0;
+  @include heading-section;
 
-  // Ruled underline on last line only
+  // Ruled underline below the heading block
   &::after {
     content: "";
     display: block;
@@ -92,6 +83,10 @@
     border-radius: 2px;
     margin-top: 1.25rem;
   }
+}
+
+.accent {
+  color: $accent;
 }
 
 .introRight {
@@ -136,11 +131,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 0;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-  }
-
-  @include phone {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -150,11 +141,7 @@
   gap: 1.5rem;
   padding: 2rem 2rem 2rem 0;
   border-bottom: 1px solid $border;
-  border-left: 3px solid transparent;
   padding-left: 1.5rem;
-  transition:
-    border-left-color 0.2s ease,
-    background 0.2s ease;
 
   // Right-column items get a left gutter via margin
   &:nth-child(even) {
@@ -168,7 +155,6 @@
   }
 
   &:hover {
-    border-left-color: $accent;
     background: rgba(4, 105, 153, 0.03);
   }
 
@@ -216,11 +202,8 @@
   min-width: 0;
 
   h3 {
-    font-size: 0.97rem;
-    font-weight: 700;
-    color: $text-primary;
     margin: 0 0 0.5rem;
-    line-height: 1.3;
+    @include card-title(sm);
   }
 
   p {
@@ -236,36 +219,21 @@
 }
 
 .signLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
   letter-spacing: 0.3px;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
   transition: border-color 0.18s ease;
-
-  svg {
-    transition: transform 0.18s ease;
-    flex-shrink: 0;
-  }
+  @include arrow-link;
 
   &:hover {
     border-bottom-color: $accent;
-
-    svg {
-      transform: translate(2px, -2px);
-    }
   }
 }
 
 // ── Closer: the actual problem ─────────────────────────────
 .closer {
   background: $dark-surface;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 3.5rem 4rem;
   position: relative;
   overflow: hidden;
@@ -279,7 +247,7 @@
     bottom: 0;
     width: 4px;
     background: $accent;
-    border-radius: 6px 0 0 6px;
+    border-radius: $radius 0 0 $radius;
   }
 
   @include tablet {
@@ -297,12 +265,8 @@
 }
 
 .closerEyebrow {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin: 0 0 1.25rem;
+  @include eyebrow-on-dark;
 }
 
 .closerText {

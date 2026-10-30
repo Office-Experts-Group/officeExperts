@@ -32,23 +32,11 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  color: $white;
+  @include heading-section-on-dark($white);
 }
 
 // Accent blue is too dim on the dark backdrop, so the second half is muted white
@@ -69,13 +57,10 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 1.25rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1fr;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -85,11 +70,11 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 2.5rem;
-  border-radius: 22px;
+  border-radius: $radius;
   grid-column: span 4;
   color: $white-88;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: auto;
   }
   @include phone {
@@ -112,7 +97,7 @@
   align-items: center;
   gap: 3.5rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: 1 / -1;
     flex-direction: column;
     align-items: flex-start;
@@ -120,7 +105,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include belowDesktop {
   .layouts,
   .typography {
     grid-column: auto;
@@ -174,11 +159,7 @@
 }
 
 .title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: $white;
+  @include card-title(lg, $white);
 
   .paper & {
     color: $text-primary;
@@ -194,8 +175,7 @@
 .link {
   color: $white;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 .tags {
@@ -211,7 +191,7 @@
   font-weight: 600;
   color: $white;
   background: $white-12;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 
   .paper & {

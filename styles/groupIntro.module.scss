@@ -20,8 +20,8 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 }
 
 .top {
@@ -33,7 +33,7 @@
   @include tablet {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -47,19 +47,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -67,9 +59,7 @@
 }
 
 .text {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── The main ways we help ────────────────────
@@ -81,11 +71,7 @@
 
 .listTitle,
 .overviewTitle {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $text-muted;
+  @include eyebrow($text-muted);
 }
 
 .services {
@@ -144,8 +130,7 @@
 }
 
 .serviceTitle {
-  font-size: 1.15rem;
-  color: $text-primary;
+  @include card-title(md);
   transition: color 0.2s ease;
 }
 
@@ -207,9 +192,7 @@
 }
 
 .itemTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
   transition: color 0.2s ease;
 }
 

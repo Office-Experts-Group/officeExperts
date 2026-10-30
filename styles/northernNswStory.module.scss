@@ -21,13 +21,12 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 5rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 
   @include tablet {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -40,19 +39,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $white-90;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section($white-90);
 }
 
 // Accent colour is too dark on this background, so the second half is dimmed instead
@@ -61,9 +52,7 @@
 }
 
 .text {
-  font-size: 1rem;
-  color: $white-65;
-  line-height: 1.8;
+  @include lede($white-65);
 }
 
 .links {

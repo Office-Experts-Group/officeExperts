@@ -156,7 +156,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Fillable form projects we've delivered"
+        heading="Some fillable form projects for"
+        headingAccent={"happy clients"}
         links={caseStudies}
       />
       <FormDataJourney />

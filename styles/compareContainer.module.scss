@@ -2,21 +2,12 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-$accent-dark: #034e73;
-$accent-light: #e8f4f9;
-$text: #1a1a2e;
-$surface: #ffffff;
-$border: rgba(0, 0, 0, 0.08);
-
 // ── Section wrapper ──────────────────────────────────────────────────────────
 .compareContainer {
   width: 100%;
-  padding: 8rem 10vw;
+  padding: 8rem $gutter;
   position: relative;
-  @include phone {
-    padding: 5rem 1rem 0 1rem;
-  }
-  @include phoneLandscape {
+  @include mobile {
     padding: 5rem 1rem 0 1rem;
   }
 }
@@ -36,12 +27,8 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .heading {
-  font-size: clamp(1.75rem, 4vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: $text;
   margin: 0 0 1.25rem;
+  @include heading-section;
 }
 
 .accent {
@@ -74,7 +61,7 @@ $border: rgba(0, 0, 0, 0.08);
   gap: 1.25rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
@@ -132,8 +119,8 @@ $border: rgba(0, 0, 0, 0.08);
 // ── Walkthrough card ──────────────────────────────────────────────────────────
 .walkthroughCard {
   position: relative;
-  background: $surface;
-  border-radius: 0.75rem;
+  background: $white;
+  border-radius: $radius;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.14),
     0 2px 8px rgba(0, 0, 0, 0.08),
@@ -201,9 +188,7 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .walkthroughTitle {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: $text;
+  @include card-title(sm);
   margin: 0 0 0.4rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -242,7 +227,7 @@ $border: rgba(0, 0, 0, 0.08);
     background 0.15s ease;
 
   &:hover {
-    color: $text;
+    color: $text-primary;
     background: rgba(0, 0, 0, 0.04);
   }
 
@@ -253,12 +238,8 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .nextBtn {
-  appearance: none;
-  border: none;
-  background: $accent;
-  color: #ffffff;
+  @include btn-on-accent;
   font-size: 0.82rem;
-  font-weight: 600;
   cursor: pointer;
   padding: 0.4rem 0.9rem;
   border-radius: 0.4rem;
@@ -278,7 +259,6 @@ $border: rgba(0, 0, 0, 0.08);
   }
 
   &:hover {
-    background: $accent-dark;
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba($accent, 0.35);
   }
@@ -295,13 +275,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 .index0,
 .index1 {
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include tablet {
+  @include belowDesktop {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 @use "./globals.scss" as *;
 
 .servicePageCards {
-  padding: 6rem 10vw 4rem 10vw;
+  padding: 6rem $gutter 4rem;
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -9,10 +9,7 @@
   @include tablet {
     padding: 3rem 2vw 4rem 2vw;
   }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include phone {
+  @include mobile {
     display: none;
   }
 }
@@ -34,10 +31,7 @@
     cursor: pointer;
   }
 
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
+  @include mobile {
     display: none;
   }
 }

@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // ── Top row ───────────────────────────────────
@@ -31,7 +30,7 @@
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -43,26 +42,16 @@
   gap: 1.1rem;
 
   p {
-    font-size: 1rem;
-    color: $text-secondary;
-    line-height: 1.8;
+    @include lede;
   }
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -99,7 +88,7 @@
   grid-template-columns: 1fr 1.6fr;
   gap: 1.5rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -110,7 +99,7 @@
   gap: 0.9rem;
   padding: 2.5rem;
   background: $accent;
-  border-radius: 12px;
+  border-radius: $radius;
 
   p {
     color: $white-88;
@@ -158,8 +147,6 @@
 .upgradeLink {
   color: $white;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 // ── Jump list ─────────────────────────────────
@@ -168,7 +155,7 @@
 .toc {
   padding: 2.25rem;
   background: $dark-bg;
-  border-radius: 12px;
+  border-radius: $radius;
 
   ol {
     position: relative;
@@ -198,7 +185,7 @@
     border-top: 1px solid $white-12;
     color: $white-88;
     font-size: 0.92rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 
     // The dot, centred on the pipe

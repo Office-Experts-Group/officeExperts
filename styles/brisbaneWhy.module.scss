@@ -44,28 +44,12 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.5rem;
-  width: fit-content;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  @include heading-section($white-88);
 }
 
 .headingAccent {
@@ -87,13 +71,7 @@
 }
 
 .headerLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
+  @include arrow-link;
   letter-spacing: 0.3px;
   align-self: flex-start;
   border-bottom: 1px solid $accent-border;
@@ -102,17 +80,8 @@
     border-color 0.2s ease,
     color 0.2s ease;
 
-  svg {
-    transition: transform 0.2s ease;
-    flex-shrink: 0;
-  }
-
   &:hover {
     border-bottom-color: $accent;
-
-    svg {
-      transform: translateX(3px);
-    }
   }
 }
 
@@ -129,7 +98,7 @@
 
 // ── Base card ────────────────────────────────
 .card {
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -178,7 +147,7 @@
   }
 
   .statLabel {
-    color: rgba(255, 255, 255, 0.55);
+    color: $white-55;
   }
 
   .cardTitle {
@@ -186,7 +155,7 @@
   }
 
   .cardBody {
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
   }
 }
 

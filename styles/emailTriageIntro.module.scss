@@ -20,8 +20,8 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 }
 
 // ── Centred definition ──────────────────────────
@@ -36,11 +36,7 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -61,7 +57,7 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     max-width: 34rem;
     width: 100%;
@@ -75,7 +71,7 @@
   background: $light-bg;
   border: 1px solid $border;
   border-top: 3px solid var(--tone);
-  border-radius: 6px;
+  border-radius: $radius;
   overflow: hidden;
 }
 
@@ -125,7 +121,7 @@
   color: var(--tone);
   padding: 0.3rem 0.7rem;
   border: 1px solid var(--tone);
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   width: fit-content;
 }
 
@@ -142,22 +138,20 @@
   gap: 3rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
 
 .text {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 .inlineLink {
   color: $accent;
-  font-weight: 600;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .rule {

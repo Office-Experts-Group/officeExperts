@@ -66,23 +66,26 @@
   max-width: 44rem;
 }
 
+.accent {
+  color: $accent;
+}
+
 // Header on the left, client count and link on the right. Wraps below the
 // header on narrow screens rather than squeezing it.
 .top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   gap: 2rem;
 }
 
-// margin-left: auto keeps it on the right even when there is no header
 .aside {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  margin-left: auto;
 
   @include phone {
     align-items: flex-start;

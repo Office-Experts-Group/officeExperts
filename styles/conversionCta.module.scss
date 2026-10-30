@@ -12,7 +12,7 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
   padding: 3.5rem;
-  border-radius: 2rem;
+  border-radius: $radius;
   background: $accent;
   color: $white-88;
   overflow: hidden;
@@ -40,10 +40,7 @@
 }
 
 .eyebrow {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  @include eyebrow-on-dark;
 }
 
 .heading {
@@ -66,10 +63,11 @@
   gap: 0.6rem;
   align-items: center;
   padding: 0.9rem 1.6rem;
-  border-radius: 999px;
+  border-radius: $radius-pill;
   background: $white;
   color: $accent;
   font-weight: 700;
+  text-decoration: none;
 
   svg {
     width: 1.1rem;
@@ -80,6 +78,7 @@
   color: $white;
   font-weight: 700;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .trust {
@@ -94,7 +93,7 @@
     align-items: center;
     padding: 1rem 1.25rem;
     border: 1px solid $white-18;
-    border-radius: 1rem;
+    border-radius: $radius;
     background: $white-08;
   }
 

@@ -1,3 +1,5 @@
+@use "./globals.scss" as *;
+
 .wrapper {
   width: 100%;
   padding: 0 0 3rem 0;
@@ -12,7 +14,7 @@
   flex-direction: row;
   align-items: center;
   gap: 3rem;
-  margin: 0 10vw;
+  margin: 0 $gutter;
 }
 
 // ─── Image column ───────────────────────────────────────────────
@@ -135,7 +137,7 @@
 }
 
 .infoCard {
-  background: #fff;
+  background: $white;
   animation: fadeSlide 0.5s ease forwards;
 }
 
@@ -166,7 +168,7 @@
 .infoText {
   font-size: 1rem;
   line-height: 1.75;
-  color: #333;
+  color: $body;
   margin: 0.5rem 0 1.5rem 0;
 }
 
@@ -174,7 +176,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--app-color);
   text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--app-color) 30%, transparent);

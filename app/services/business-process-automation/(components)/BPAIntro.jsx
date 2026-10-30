@@ -10,7 +10,6 @@ const BPAIntro = () => {
     <section className={styles.section}>
       <div className={`${styles.grid} ${styles.gridVisible}`}>
         <div className={styles.leftCol}>
-          <div className={styles.eyebrow}>Office Experts</div>
           <h2 className={styles.headline}>
             Your processes are only as fast as the{" "}
             <span className={styles.accentWord}>slowest manual step.</span>

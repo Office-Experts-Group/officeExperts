@@ -21,10 +21,9 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -37,11 +36,7 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -49,9 +44,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $white-65;
-  line-height: 1.8;
+  @include lede($white-65);
 }
 
 // ── Staggered control stack ─────────────────────
@@ -75,7 +68,7 @@
   background: $dark-mid;
   border-left: 3px solid $accent;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.4rem;
     margin-left: calc(var(--i) * 0.75rem);

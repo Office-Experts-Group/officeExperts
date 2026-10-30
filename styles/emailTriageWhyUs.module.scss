@@ -21,10 +21,10 @@
   grid-template-columns: 1fr 1.15fr;
   gap: 5rem;
   align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include container;
+
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -37,11 +37,7 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -56,11 +52,7 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .case {
@@ -71,7 +63,7 @@
   background: $white;
   border: 1px solid $border-strong;
   border-left: 3px solid $accent;
-  border-radius: 4px;
+  border-radius: $radius;
   text-decoration: none;
   transition: background 0.2s ease;
 
@@ -127,7 +119,5 @@
 }
 
 .itemBody {
-  font-size: 0.92rem;
-  color: $text-secondary;
-  line-height: 1.7;
+  @include small-text;
 }

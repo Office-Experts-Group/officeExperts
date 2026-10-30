@@ -3,7 +3,7 @@
 
 // ── Section ───────────────────────────────────
 .section {
-  background: #fff;
+  background: $white;
   padding: 8rem;
 
   @include tablet {
@@ -29,24 +29,15 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.3rem 0.85rem;
-  border: 1px solid rgba($accent, 0.3);
-  border-radius: 2rem;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .title {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
   margin: 0 0 1rem;
+
+  @include heading-section;
 }
 
 .accent {
@@ -66,15 +57,9 @@
   gap: 0;
   position: relative;
 
-  @include tablet {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-  }
-  @include phone {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -90,13 +75,7 @@
   pointer-events: none;
   z-index: 0;
 
-  @include tablet {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include phone {
+  @include belowDesktop {
     display: none;
   }
 }
@@ -106,16 +85,16 @@
   height: 1px;
   background: linear-gradient(
     to right,
-    rgba($accent, 0.3),
-    rgba($accent, 0.08)
+    $accent-border,
+    $accent-tint
   );
   margin-top: 17px;
 
   &:nth-child(2) {
     background: linear-gradient(
       to right,
-      rgba($accent, 0.08),
-      rgba($accent, 0.3)
+      $accent-tint,
+      $accent-border
     );
   }
 }
@@ -190,7 +169,7 @@
 .stepNumber {
   font-size: 3.5rem;
   font-weight: 700;
-  color: rgba($accent, 0.08);
+  color: $accent-tint;
   line-height: 1;
   letter-spacing: -0.04em;
   // Prevents layout shift from the big number
@@ -216,11 +195,9 @@
 
 // ── Step text ─────────────────────────────────
 .stepHeading {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.35;
   letter-spacing: -0.01em;
+
+  @include card-title(sm);
 }
 
 .stepBody {

@@ -16,11 +16,7 @@
 }
 
 .eyebrow {
-  color: $accent;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  @include eyebrow;
 }
 
 .heading {
@@ -60,7 +56,7 @@
   flex-direction: column;
   gap: 0.75rem;
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: $radius;
   overflow: hidden;
   line-height: 1.65;
 }
@@ -161,6 +157,7 @@
   line-height: 1;
 }
 
+// Pre-heading inside the tile (kept local; see Bugs/questions)
 .tileEyebrow {
   font-size: 0.78rem;
   font-weight: 700;
@@ -170,9 +167,7 @@
 }
 
 .tileHeading {
-  color: $text-primary;
-  font-size: 1.4rem;
-  line-height: 1.25;
+  @include card-title(lg);
 
   .accent &,
   .dark & {
@@ -204,7 +199,8 @@
   align-items: center;
   margin-top: auto;
   color: $white;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: none;
 
   svg {
     width: 1.1rem;
@@ -220,7 +216,7 @@
   li {
     padding: 0.4rem 1rem;
     border: 1px solid $accent-border;
-    border-radius: 999px;
+    border-radius: $radius-pill;
     background: $accent-light;
     color: $accent;
     font-weight: 600;

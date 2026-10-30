@@ -101,28 +101,16 @@
 // Eyebrow pill
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
 
-  @media screen and (max-width: 450px) {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 // Headline
 .headline {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
   margin: 0 0 2rem;
+
+  @include heading-section;
 }
 
 // Accent word — double underline drawn on scroll entry
@@ -165,7 +153,7 @@
 // Inline link inside body copy
 .bodyLink {
   color: $accent;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
@@ -184,7 +172,7 @@
   align-items: center;
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid $border;
 
   @media screen and (max-width: 770px) {
     flex-direction: column;
@@ -220,7 +208,7 @@
 
 .statLabel {
   font-size: 0.75rem;
-  color: #9a9da1;
+  color: $text-muted;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -229,7 +217,7 @@
 .statDivider {
   width: 1px;
   height: 44px;
-  background: rgba(0, 0, 0, 0.08);
+  background: $border;
   flex-shrink: 0;
 
   @include phone {
@@ -334,7 +322,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #d4d6d9;
+  background: $line-strong;
   transition:
     background 0.2s,
     transform 0.2s;
@@ -360,12 +348,10 @@
 }
 
 .capTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: $text-primary;
   margin: 0;
   transition: color 0.2s;
-  line-height: 1.3;
+
+  @include card-title(sm);
 }
 .capItemActive .capTitle {
   color: $accent;
@@ -379,7 +365,7 @@
   color: $accent;
   background: $accent-light;
   padding: 0.2rem 0.6rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   white-space: nowrap;
   flex-shrink: 0;
   opacity: 0;
@@ -466,6 +452,6 @@
 
 .ctaNote {
   font-size: 0.82rem;
-  color: #9a9da1;
+  color: $text-muted;
   font-style: italic;
 }

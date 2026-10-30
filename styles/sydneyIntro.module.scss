@@ -1,6 +1,5 @@
 // styles/sydneyIntro.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -30,27 +29,15 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
   color: $text-primary;
   line-height: 1.18;
+  margin-top: 1rem;
+
+  @include heading-section;
 }
 
 .accent {
@@ -110,7 +97,7 @@
   display: flex;
   align-items: stretch;
   border: 1px solid $border;
-  border-radius: 6px;
+  border-radius: $radius;
   overflow: hidden;
 
   @include phone {
@@ -169,9 +156,7 @@
   padding: 0.9rem 2rem;
   font-size: 0.88rem;
   font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
+  border-radius: 0.1rem;
   text-decoration: none;
   letter-spacing: 0.3px;
   width: fit-content;
@@ -180,7 +165,8 @@
     transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: -8%);
     transform: translateY(-1px);
   }
+
+  @include btn-on-accent;
 }

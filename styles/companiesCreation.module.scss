@@ -1,9 +1,6 @@
 // styles/companiesCreation.module.scss
 @use "./globals.scss" as *;
 
-// Lighter brand blue for text on the dark background, where $accent is too dim to read
-$sky: #6fc3e8;
-
 .section {
   background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
   padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
@@ -18,7 +15,7 @@ $sky: #6fc3e8;
   max-width: 1280px;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -32,27 +29,15 @@ $sky: #6fc3e8;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $sky;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $white-90;
+  @include heading-section-on-dark($white-90);
 }
 
 .headingAccent {
-  color: $sky;
+  color: $accent-on-dark;
 }
 
 .lead {
@@ -60,10 +45,7 @@ $sky: #6fc3e8;
   line-height: 1.85;
   color: $white-65;
 
-  a {
-    font-weight: 700;
-    color: $sky;
-  }
+  @include inline-link($accent-on-dark);
 }
 
 .ctaRow {
@@ -94,7 +76,7 @@ $sky: #6fc3e8;
   padding: 0;
   list-style: none;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -106,7 +88,7 @@ $sky: #6fc3e8;
   padding: 1.75rem;
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 14px;
+  border-radius: $radius;
 }
 
 .icon {

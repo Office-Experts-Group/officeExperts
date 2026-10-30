@@ -1,10 +1,6 @@
 // styles/sqlComparison.module.scss
 @use "./globals.scss" as *;
 
-// The brand accent is too dark to read on the dark panel, so a lighter tint
-// is used here. It isn't in globals.scss, so it is hardcoded locally.
-$accent-bright: #4fb3e0;
-
 .section {
   background: $light-bg;
   padding: 7rem 8rem;
@@ -28,8 +24,8 @@ $accent-bright: #4fb3e0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 }
 
 .topRow {
@@ -38,7 +34,7 @@ $accent-bright: #4fb3e0;
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -51,11 +47,11 @@ $accent-bright: #4fb3e0;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
   color: $text-primary;
   line-height: 1.15;
   letter-spacing: -0.025em;
+
+  @include heading-section;
 }
 
 .lead,
@@ -71,7 +67,7 @@ $accent-bright: #4fb3e0;
     height: auto;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     max-width: 520px;
   }
   @include phone {
@@ -149,11 +145,11 @@ thead .before {
 
 thead .after {
   color: $white;
-  border-radius: 14px 14px 0 0;
+  border-radius: $radius $radius 0 0;
 }
 
 tbody tr:last-child .after {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 $radius $radius;
 }
 
 // Cross and tick icons, drawn in CSS so no extra markup or files are needed
@@ -175,7 +171,7 @@ tbody tr:last-child .after {
 
 .after .value::before {
   content: "\2713";
-  color: $accent-bright;
+  color: $accent-on-dark;
 }
 
 // ── Summary ─────────────────────────────────────
@@ -185,7 +181,7 @@ tbody tr:last-child .after {
   gap: 3rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -201,7 +197,8 @@ tbody tr:last-child .after {
 
   a {
     color: $accent;
-    text-decoration: underline;
     text-underline-offset: 3px;
+
+    @include inline-link;
   }
 }

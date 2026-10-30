@@ -1,17 +1,15 @@
 // styles/thirdPartyMethods.module.scss
 @use "./globals.scss" as *;
 
-// Local tokens: the site's $accent is too dark to read on #111820,
-// so this section uses a lighter tint of the same blue.
-$tpm-bg: #111820;
+// Local tokens with no global equivalent. The light blue for text on dark
+// comes from the global $accent-on-dark.
 $tpm-text: #eef2f6;
 $tpm-muted: #9aa9b8;
 $tpm-line: rgba(255, 255, 255, 0.1);
-$tpm-accent: #4fb3e8;
 $tpm-hover: rgba(79, 179, 232, 0.06);
 
 .section {
-  background: $tpm-bg;
+  background: $dark-bg;
   padding: 6rem 8rem;
 
   @include tablet {
@@ -29,8 +27,7 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // Headline on the left, supporting copy on the right
@@ -41,11 +38,7 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
   align-items: end;
 
   h2 {
-    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-    font-weight: 700;
-    color: $tpm-text;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    @include heading-section($tpm-text);
   }
 
   p {
@@ -89,20 +82,13 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
       transform: scaleY(1);
     }
 
-    .link {
-      text-decoration-thickness: 2px;
-    }
-
     h3 {
-      color: $tpm-accent;
+      color: $accent-on-dark;
     }
   }
 
   h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1.25;
-    color: $tpm-text;
+    @include card-title(lg, $tpm-text);
     transition: color 0.2s ease;
   }
 
@@ -133,13 +119,9 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
 
 .link {
   justify-self: start;
-  color: $tpm-accent;
+  color: $accent-on-dark;
   font-weight: 700;
   font-size: 0.9rem;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.3em;
-  transition: text-decoration-thickness 0.15s ease;
 
   // Stretches the link's click area over the whole row
   &::after {
@@ -152,7 +134,7 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
     outline: none;
 
     &::after {
-      outline: 2px solid $tpm-accent;
+      outline: 2px solid $accent-on-dark;
       outline-offset: -2px;
     }
   }
@@ -161,8 +143,7 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
 @media (prefers-reduced-motion: reduce) {
   .item,
   .item::before,
-  .item h3,
-  .link {
+  .item h3 {
     transition: none;
   }
 }

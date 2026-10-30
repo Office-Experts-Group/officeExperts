@@ -1,24 +1,9 @@
 @use "./globals.scss" as *;
 
 // ── Tokens ─────────────────────────────────────────────────────────────────
-$accent: #046999;
-$accentLight: #e8f4fa;
-$accentDark: #024d72;
-$black: #1a1a1a;
-$grayText: #777a7e;
-$offWhite: #f7f8f9;
-$border: rgba(0, 0, 0, 0.08);
-
-// Dark card palette
-$darkBg: #111820;
+// Global tokens are used directly (the local redeclarations were removed).
+// Kept local: no global exists yet for this dark surface.
 $darkSurface: #18232e;
-$darkBorder: rgba(255, 255, 255, 0.08);
-$darkText: rgba(255, 255, 255, 0.88);
-$darkSubtext: rgba(255, 255, 255, 0.55);
-
-// Accent card palette
-$accentBg: $accent;
-$accentDark: $accentDark;
 
 // ── Section wrapper ─────────────────────────────────────────────────────────
 .section {
@@ -45,24 +30,13 @@ $accentDark: $accentDark;
 
 .headerEyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid rgba($accent, 0.3);
-  border-radius: 2rem;
+  @include eyebrow;
 }
 
 .headerTitle {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $black;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
   margin: 0 0 1.25rem;
+  @include heading-section($black);
 
   em {
     font-style: normal;
@@ -72,7 +46,7 @@ $accentDark: $accentDark;
 
 .headerSub {
   font-size: 1.05rem;
-  color: $grayText;
+  color: $darkGrayText;
   line-height: 1.8;
   margin: 0;
   max-width: 520px;
@@ -92,7 +66,7 @@ $accentDark: $accentDark;
 
 // ── Card base ───────────────────────────────────────────────────────────────
 .card {
-  border-radius: 4px;
+  border-radius: $radius;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 
@@ -118,7 +92,7 @@ $accentDark: $accentDark;
 
 // ── Light card ──────────────────────────────────────────────────────────────
 .card--light {
-  background: #ffffff;
+  background: $white;
   border: 1px solid $border;
 
   .cardMeta {
@@ -139,11 +113,11 @@ $accentDark: $accentDark;
 
   .cardBody,
   .cardDetail p {
-    color: $grayText;
+    color: $darkGrayText;
   }
 
   .tag {
-    background: $accentLight;
+    background: $accent-light;
     color: $accent;
   }
 
@@ -151,7 +125,7 @@ $accentDark: $accentDark;
     color: $accent;
 
     &:hover {
-      background: $accentLight;
+      background: $accent-light;
     }
   }
 
@@ -165,21 +139,21 @@ $accentDark: $accentDark;
   }
 
   .statLabel {
-    color: $grayText;
+    color: $darkGrayText;
   }
 }
 
 // ── Dark card ───────────────────────────────────────────────────────────────
 .card--dark {
-  background: $darkBg;
-  border: 1px solid $darkBorder;
+  background: $dark-bg;
+  border: 1px solid $white-08;
 
   .cardMeta {
     color: rgba(255, 255, 255, 0.4);
   }
 
   .cardIndex {
-    color: rgba(255, 255, 255, 0.12);
+    color: $white-12;
   }
 
   .cardEyebrow {
@@ -187,23 +161,23 @@ $accentDark: $accentDark;
     // Override eyebrow for dark
     background: rgba($accent, 0.15);
     padding: 0.2rem 0.65rem;
-    border-radius: 2rem;
-    border: 1px solid rgba($accent, 0.3);
+    border-radius: $radius-pill;
+    border: 1px solid $accent-border;
   }
 
   .cardHeading {
-    color: $darkText;
+    color: $white-88;
   }
 
   .cardBody,
   .cardDetail p {
-    color: $darkSubtext;
+    color: $white-55;
   }
 
   .tag {
     background: rgba($accent, 0.2);
     color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba($accent, 0.3);
+    border: 1px solid $accent-border;
   }
 
   .expandBtn {
@@ -212,21 +186,21 @@ $accentDark: $accentDark;
 
     &:hover {
       background: rgba(255, 255, 255, 0.06);
-      color: rgba(255, 255, 255, 0.9);
+      color: $white-90;
     }
   }
 
   .cardVisual {
     background: $darkSurface;
-    border-left: 1px solid $darkBorder;
+    border-left: 1px solid $white-08;
   }
 
   .statValue {
-    color: #ffffff;
+    color: $white;
   }
 
   .statLabel {
-    color: $darkSubtext;
+    color: $white-55;
   }
 }
 
@@ -244,15 +218,15 @@ $accentDark: $accentDark;
   }
 
   .cardEyebrow {
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.12);
+    color: $white-90;
+    background: $white-12;
     padding: 0.2rem 0.65rem;
-    border-radius: 2rem;
+    border-radius: $radius-pill;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .cardHeading {
-    color: #ffffff;
+    color: $white;
   }
 
   .cardBody,
@@ -262,7 +236,7 @@ $accentDark: $accentDark;
 
   .tag {
     background: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.9);
+    color: $white-90;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
@@ -272,17 +246,17 @@ $accentDark: $accentDark;
 
     &:hover {
       background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
+      color: $white;
     }
   }
 
   .cardVisual {
-    background: $accentDark;
+    background: $accent-dark;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .statValue {
-    color: #ffffff;
+    color: $white;
   }
 
   .statLabel {
@@ -381,7 +355,7 @@ $accentDark: $accentDark;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
 }
 
 .expandBtn {
@@ -393,7 +367,7 @@ $accentDark: $accentDark;
   letter-spacing: 0.5px;
   background: transparent;
   border: 1px solid currentColor;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   padding: 0.4rem 0.85rem;
   cursor: pointer;
   transition:

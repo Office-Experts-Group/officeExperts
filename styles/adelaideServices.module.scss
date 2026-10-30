@@ -1,9 +1,5 @@
 // styles/adelaideServices.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
-
-$card-line: #e3e8ec;
-$ink: #0b2433;
 
 // ── Section ──────────────────────────────────
 .section {
@@ -32,24 +28,12 @@ $ink: #0b2433;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -82,25 +66,25 @@ $ink: #0b2433;
   align-items: start;
   padding: 2.5rem 2.75rem;
   background: $white;
-  border: 1px solid $card-line;
+  border: 1px solid $line;
   border-top: 3px solid $accent;
-  border-radius: 12px;
+  border-radius: $radius;
   box-shadow: 0 -10px 30px rgba(11, 36, 51, 0.06);
 
-  @include tablet {
+  @include belowDesktop {
     position: static;
+  }
+  @include tablet {
     grid-template-columns: 4rem 1fr;
     gap: 1.5rem 2rem;
     padding: 2rem;
   }
   @include phoneLandscape {
-    position: static;
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 1.75rem;
   }
   @include phone {
-    position: static;
     grid-template-columns: 1fr;
     gap: 1.1rem;
     padding: 1.6rem 1.35rem;
@@ -109,15 +93,15 @@ $ink: #0b2433;
 
 // The AI card is the one we want people to notice
 .feature {
-  background: linear-gradient(150deg, $ink 0%, #0e3a52 100%);
-  border-color: $ink;
+  background: linear-gradient(150deg, $text-primary 0%, #0e3a52 100%);
+  border-color: $text-primary;
   border-top-color: $accent;
 
   .icon {
-    color: #6fc3e8;
+    color: $accent-on-dark;
   }
   .tag {
-    color: #6fc3e8;
+    color: $accent-on-dark;
   }
   .title {
     color: $white;
@@ -127,15 +111,10 @@ $ink: #0b2433;
   }
   .chip {
     color: $white;
-    background: rgba(255, 255, 255, 0.12);
+    background: $white-12;
   }
   .link {
     color: $white;
-    border-bottom-color: rgba(255, 255, 255, 0.45);
-
-    &:hover {
-      border-bottom-color: $white;
-    }
   }
 }
 
@@ -146,11 +125,7 @@ $ink: #0b2433;
   height: 3.2rem;
   color: $accent;
 
-  @include phoneLandscape {
-    width: 2.6rem;
-    height: 2.6rem;
-  }
-  @include phone {
+  @include mobile {
     width: 2.6rem;
     height: 2.6rem;
   }
@@ -209,34 +184,12 @@ $ink: #0b2433;
   font-size: 0.74rem;
   font-weight: 600;
   color: $accent;
-  background: rgba(4, 105, 153, 0.08);
-  border-radius: 2rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
   padding: 0.32rem 0.85rem;
 }
 
 .link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.85rem;
-  font-weight: 700;
+  @include arrow-link;
   letter-spacing: 0.3px;
-  color: $accent;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(4, 105, 153, 0.35);
-  padding-bottom: 2px;
-  transition: border-color 0.2s ease;
-
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
-  &:hover {
-    border-bottom-color: $accent;
-
-    svg {
-      transform: translateX(3px);
-    }
-  }
 }

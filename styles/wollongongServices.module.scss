@@ -18,8 +18,7 @@
 }
 
 .inner {
-  max-width: 1280px;
-  margin: 0 auto;
+  @include container;
 }
 
 // ── Header ───────────────────────────────────
@@ -34,22 +33,12 @@
 
 .eyebrow {
   margin-bottom: 1.25rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  @include heading-section;
   color: $text-primary;
 }
 
@@ -83,7 +72,7 @@
   padding: 2.25rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 14px;
+  border-radius: $radius;
 
   @include belowDesktop {
     grid-column: auto;
@@ -195,8 +184,6 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: $accent;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 
   svg {
     flex-shrink: 0;

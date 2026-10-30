@@ -23,25 +23,14 @@
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .headline {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $white-90;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  @include heading-section($white);
+  margin-top: 0.5rem;
 }
 
 .accent {
@@ -56,25 +45,19 @@
   gap: 3rem;
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 10px;
+  border-radius: $radius;
   padding: 2.5rem;
   margin-bottom: 2rem;
 
-  @include tablet {
+  @include belowDesktop {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
   }
   @include phoneLandscape {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
     padding: 2rem 1.5rem;
   }
   @include phone {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
     padding: 1.75rem 1.25rem;
   }
 }
@@ -94,10 +77,7 @@
     margin-bottom: 0;
   }
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 // ── Price tag — right side callout ──────────
@@ -108,7 +88,7 @@
   text-align: center;
   background: $accent-dim;
   border: 1px solid $accent-border;
-  border-radius: 8px;
+  border-radius: $radius;
   padding: 1.75rem 2.25rem;
   flex-shrink: 0;
 

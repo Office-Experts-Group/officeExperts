@@ -13,7 +13,6 @@ const AccessibilityStandards = dynamic(
 const AccessibilityChecklist = dynamic(
   () => import("./(components)/AccessibilityChecklist"),
 );
-const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
 const AccessibilityProcess = dynamic(
   () => import("./(components)/AccessibilityProcess"),
 );
@@ -185,10 +184,10 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Past projects with built in accessibility"
+        heading="Some past projects with built in"
+        headingAccent={"accessibility"}
         links={caseStudies}
       />
-      <PageSegment4 />
       <AccessibilityProcess />
       <ExpertsAwait />
       <div style={{ marginTop: "6rem" }}>

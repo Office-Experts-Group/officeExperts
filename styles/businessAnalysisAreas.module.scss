@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .topRow {
@@ -30,7 +29,7 @@
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -43,19 +42,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -63,9 +54,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
   max-width: 34rem;
 }
 
@@ -103,11 +92,11 @@
     background: $white;
   }
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1.4fr;
     gap: 1rem 2rem;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.75rem;
     padding: 1.5rem 0;
@@ -122,9 +111,7 @@
 }
 
 .body {
-  font-size: 0.92rem;
-  color: $text-secondary;
-  line-height: 1.7;
+  @include small-text;
 }
 
 .links {
@@ -135,30 +122,24 @@
   padding: 0;
 
   // On tablet the links drop to a second line, aligned under the description
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: 2;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-column: auto;
   }
 }
 
 .link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
+  @include arrow-link;
 
   &::after {
     content: "→";
     display: inline-block;
-    margin-left: 0.3rem;
     transition: transform 0.2s ease;
   }
   &:hover::after {
     transform: translateX(3px);
-  }
-  &:hover {
-    text-decoration: underline;
   }
   &:focus-visible {
     outline: 2px solid $accent;

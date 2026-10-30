@@ -149,7 +149,8 @@ const Page = () => {
       <RelatedLinks
         theme="light"
         eyebrow="Case Studies"
-        heading="Template and document projects we've delivered"
+        heading="Examples of some template and document projects"
+        headingAccent="we've delivered"
         links={caseStudies}
       />
       <GoogleMigrationCta />

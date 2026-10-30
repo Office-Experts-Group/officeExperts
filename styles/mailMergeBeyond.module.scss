@@ -1,18 +1,6 @@
 // styles/mailMergeBeyond.module.scss
 @use "./globals.scss" as *;
 
-@mixin stacked {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 $dot: 1.1rem; // marker diameter
 $track: 2.5rem; // space between the track line and the stop content
 
@@ -38,20 +26,12 @@ $track: 2.5rem; // space between the track line and the stop content
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -85,7 +65,7 @@ $track: 2.5rem; // space between the track line and the stop content
     background: $border-strong;
   }
 
-  @include stacked {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.25rem;
     padding-top: 0;
@@ -119,7 +99,7 @@ $track: 2.5rem; // space between the track line and the stop content
     border-radius: 50%;
     background: $text-primary;
 
-    @include stacked {
+    @include belowDesktop {
       top: 0.25rem;
       left: -$track;
     }
@@ -149,11 +129,7 @@ $track: 2.5rem; // space between the track line and the stop content
 .desc {
   line-height: 1.8;
   color: $text-secondary;
-
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 // ── Call to action ──
@@ -173,7 +149,7 @@ $track: 2.5rem; // space between the track line and the stop content
     color: $text-primary;
   }
 
-  @include stacked {
+  @include belowDesktop {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 3.5rem;

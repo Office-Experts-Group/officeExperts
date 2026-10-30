@@ -4,17 +4,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 40% 1fr;
-  padding: 8rem 10vw;
+  padding: 8rem $gutter;
   gap: 3rem;
   background-color: $grayBGC;
   overflow: hidden;
 
-  @include phone {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @include phoneLandscape {
+  @include mobile {
     display: flex;
     flex-direction: column;
   }
@@ -47,10 +42,7 @@
     line-height: 2rem;
   }
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link;
 }
 
 // FAQS ***********
@@ -73,8 +65,8 @@
 
 .faqItem {
   background: $offWhite;
-  border: 1px solid rgba($black, 0.1);
-  border-radius: 0.2rem;
+  border: 1px solid $border-strong;
+  border-radius: $radius;
   transition: all 0.3s ease;
 
   &[open] {

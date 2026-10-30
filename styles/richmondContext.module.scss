@@ -1,6 +1,5 @@
 // styles/richmondContext.module.scss
 @use "./globals.scss" as *;
-@use "sass:color";
 
 // ── Section ──────────────────────────────────
 .section {
@@ -26,7 +25,7 @@
   inset: 0;
   background-image: radial-gradient(
     circle,
-    rgba(4, 105, 153, 0.07) 1px,
+    rgba($accent, 0.07) 1px,
     transparent 1px
   );
   background-size: 40px 40px;
@@ -56,24 +55,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  @include heading-main;
 }
 
 .headingAccent {
@@ -104,7 +92,7 @@
 .panel {
   background: $white;
   border: 1px solid $border;
-  border-radius: 6px;
+  border-radius: $radius;
   padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
@@ -125,10 +113,8 @@
 }
 
 .panelTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.25;
+  @include card-title(md);
+
   letter-spacing: -0.01em;
 }
 
@@ -162,24 +148,10 @@
 }
 
 .nicheBtn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: $white;
-  background: $accent;
-  border-radius: 4px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  @include btn;
 
-  &:hover {
-    background: color.adjust($accent, $lightness: -8%);
-    transform: translateY(-1px);
-  }
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 // ── Coverage block ──────────────────────────
@@ -241,7 +213,7 @@
   background: $grayBGC;
   border: 1px solid $border;
   padding: 0.4rem 0.9rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   transition:
     background 0.18s ease,
     color 0.18s ease,

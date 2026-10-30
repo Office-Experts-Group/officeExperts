@@ -15,7 +15,7 @@
     inset: 0;
     background-image: radial-gradient(
       circle,
-      rgba(4, 105, 153, 0.08) 1px,
+      $accent-tint 1px,
       transparent 1px
     );
     background-size: 40px 40px;
@@ -49,27 +49,12 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
   margin-bottom: 1.5rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  @include heading-section($white-88);
 }
 
 .headingMuted {
@@ -119,7 +104,8 @@
     }
   }
 
-  @include desktop {
+  // Desktop and tablet share one layout: two columns, middle card unspanned
+  @include belowDeskL {
     grid-template-columns: 5fr 1fr;
     gap: 1rem;
 
@@ -127,23 +113,8 @@
       grid-row: span 1;
     }
   }
-  @include tablet {
-    grid-template-columns: 5fr 1fr;
-    gap: 1rem;
-
-    & > *:nth-child(2) {
-      grid-row: span 1;
-    }
-  }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-
-    & > *:nth-child(2) {
-      grid-row: span 1;
-    }
-  }
-  @include phone {
+  // Phones: single column
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 1rem;
 
@@ -189,39 +160,25 @@
   font-weight: 700;
   color: $white-88;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.5px;
 }
 
 // Description
 .itemDesc {
   font-size: 0.93rem;
-  color: $white-55;
+  color: $white-75;
   line-height: 1.85;
 }
 
 // Link
 .itemLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  @include arrow-link($white-88);
   font-size: 0.8rem;
-  font-weight: 700;
-  color: $white-35;
-  text-decoration: none;
   letter-spacing: 0.5px;
   white-space: nowrap;
   transition: color 0.2s ease;
 
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
   .item:hover & {
     color: $accent;
-  }
-
-  &:hover svg {
-    transform: translateX(3px);
   }
 }

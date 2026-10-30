@@ -1,136 +1,100 @@
+// /styles/faqSection.module.scss
 @use "./globals.scss" as *;
 
-.faqSection {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0 6rem 0;
+.section {
+  background: $white;
+  padding: 0 8rem 6rem 8rem;
 
-  h2 {
-    margin-bottom: 3rem;
-    color: $black;
-  }
-  @include phone {
-    max-width: 90vw;
-    padding: 0rem 0rem 6rem 0rem;
+  @include tablet {
+    padding: 6rem 4rem;
   }
   @include phoneLandscape {
-    max-width: 90vw;
-    padding: 0rem 0rem 6rem 0rem;
+    padding: 5rem 2rem;
   }
-  @include tablet {
-    max-width: 90vw;
-    padding: 0rem 0rem 6rem 0rem;
-  }
-  @include desktop {
-    max-width: 90vw;
-    padding: 0rem 0rem 6rem 0rem;
+  @include phone {
+    padding: 5rem 1.25rem;
   }
 }
 
-.faqContainer {
+.inner {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
-  // When any details is opened, close siblings
-  details[open] ~ details[open] {
-    display: revert;
-    & > *:not(summary) {
-      display: none;
-    }
-    &[open] summary::after {
-      content: "+";
-    }
-  }
-
-  .content {
-    font-family: var(--font-aptos);
-  }
+  gap: 2.5rem;
+  max-width: 52rem;
+  margin: 0 auto;
 }
 
-.faqItem {
-  background: transparent;
-  border: 1px solid rgba($black, 0.1);
-  border-radius: 0.2rem;
-  transition: all 0.3s ease;
+.heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: $text-primary;
+}
 
-  &[open] {
-    box-shadow: 0 4px 12px rgba($black, 0.1);
+// Hairlines only, no boxes or shadows, to match the other sections
+.list {
+  border-top: 1px solid $border-strong;
+}
 
-    summary::after {
-      content: "−";
-      transform: translateY(-50%);
-    }
+.item {
+  border-bottom: 1px solid $border-strong;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-primary;
+  list-style: none;
+  cursor: pointer;
+
+  &::-webkit-details-marker {
+    display: none;
   }
 
-  summary {
-    position: relative;
-    padding: 1.5rem;
-    line-height: 1.5rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    &::after {
-      content: "+";
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: $black;
-      font-size: 1.5rem;
-      font-weight: 400;
-      transition: all 0.3s ease;
-    }
-  }
-
-  .questionNumber {
+  // Plus sign, which becomes a dash when the item is open
+  &::after {
+    content: "+";
+    margin-left: auto;
+    font-size: 1.5rem;
     color: $accent;
-    font-weight: 700;
-    font-size: 1.1rem;
-    min-width: 2rem;
   }
 
-  .questionText {
-    color: $black;
-    margin: 0;
-    padding-right: 2rem;
-    font-weight: 500;
-  }
-
-  .content {
-    padding: 0 1.5rem 1.5rem 4.5rem;
-    color: rgba($black, 0.8);
-    line-height: 1.6;
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
   }
 }
 
-// Animation for opening/closing
-.faqItem {
-  &[open] .content {
-    animation: slideDown 0.3s ease-out;
-  }
+.item[open] .question::after {
+  content: "–";
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.number {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $accent;
 }
 
-// Hover state
-.faqItem:hover {
-  background: rgba($black, 0.01);
+.questionText {
+  flex: 1;
+}
+
+// Indented to sit under the question text, not the number
+.answer {
+  max-width: 44rem;
+  padding: 0 0 1.25rem 3.25rem;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: $text-secondary;
+
+  @include phone {
+    padding-left: 0;
+  }
 }

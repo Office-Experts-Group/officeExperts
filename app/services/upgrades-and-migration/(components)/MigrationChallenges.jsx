@@ -102,7 +102,8 @@ const MigrationChallenges = () => {
       <div className={styles.header}>
         <p className={styles.eyebrow}>Common challenges</p>
         <h2 className={styles.heading}>
-          Upgrades and migrations are rarely as simple as they look.
+          Upgrades and migrations are rarely as simple as
+          <span className={styles.accent}> they look</span>
         </h2>
         <p className={styles.subheading}>
           What on the surface appears to be a straightforward version update or

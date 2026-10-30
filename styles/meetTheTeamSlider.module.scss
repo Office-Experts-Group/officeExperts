@@ -6,19 +6,16 @@
 @use "./globals.scss" as *;
 
 .teamSlider {
+  @include container;
   width: 100%;
-  max-width: 1200px;
   margin: 4rem auto 6rem auto;
   padding: 2rem 0;
   overflow: hidden;
-  @include desktop {
+  @include belowDeskL {
     padding: 2rem;
   }
-  @include tablet {
-    padding: 2rem;
-  }
-  @include phoneLandscape {
-    padding: 2rem;
+  @include phone {
+    padding: 2rem 0;
   }
 }
 
@@ -38,10 +35,9 @@
 }
 
 .teamHeading {
-  color: $black;
   text-align: center;
-  font-size: 3rem;
   margin: 0 auto;
+  @include heading-section($black);
 }
 
 .sliderWrapper {
@@ -113,7 +109,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include belowDesktop {
   .slide {
     flex: 0 0 calc((100% - 2rem) / 2);
   }

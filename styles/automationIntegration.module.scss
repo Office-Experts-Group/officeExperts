@@ -36,20 +36,15 @@
 
 .eyebrow {
   display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
-  font-weight: 700;
-  color: $black;
-  line-height: 1.25;
   margin-bottom: 1rem;
+
+  @include heading-section($black);
 }
 
 .accent {
@@ -130,10 +125,10 @@
 .statPill {
   position: absolute;
   bottom: 1.5rem;
-  left: -1.75rem;
+  left: -1.75rem; // overhangs the SVG column (see Bugs noticed)
   background: $accent;
   color: $white;
-  border-radius: 10px;
+  border-radius: $radius;
   padding: 0.9rem 1.25rem;
   display: flex;
   flex-direction: column;

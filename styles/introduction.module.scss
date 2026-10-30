@@ -1,16 +1,8 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-// ─── Tokens (extend the site palette) ───────────────────────────────────────
-$accent: #046999;
-$accentLight: #e8f4fa;
-$black: #1a1a1a;
-$grayText: #777a7e;
-$offWhite: #f7f8f9;
-$border: rgba(0, 0, 0, 0.08);
-
-// ─── Breakpoint helpers (mirror site convention) ─────────────────────────────
-// (assumes globals.scss already has phone/tablet/desktop mixins)
+// Local tokens removed: $accent, $accentLight, $black, $grayText, $offWhite
+// and $border now come from globals.scss ($accent-light, $black, $darkGrayText).
 
 // ─── Entrance animation ──────────────────────────────────────────────────────
 @keyframes fadeSlideUp {
@@ -111,24 +103,13 @@ $border: rgba(0, 0, 0, 0.08);
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid rgba($accent, 0.3);
-  border-radius: 2rem;
+  @include eyebrow;
 }
 
 .headline {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 700;
-  color: $black;
-  line-height: 1.18;
   margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+  @include heading-section($black);
 }
 
 .accentLine {
@@ -161,7 +142,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 .introBody {
   p {
-    color: $grayText;
+    color: $darkGrayText;
     line-height: 1.9;
     font-size: 1.05rem;
     margin-bottom: 1rem;
@@ -215,7 +196,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 .statLabel {
   font-size: 0.8rem;
-  color: $grayText;
+  color: $darkGrayText;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -238,13 +219,9 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .serviceBlockLabel {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: color.adjust($grayText, $lightness: 15%);
   margin-bottom: 1rem;
   padding-left: 2rem; // align with list content
+  @include eyebrow(color.adjust($darkGrayText, $lightness: 15%));
 }
 
 .serviceList {
@@ -309,7 +286,7 @@ $border: rgba(0, 0, 0, 0.08);
 .serviceNum {
   font-size: 0.65rem;
   font-weight: 700;
-  color: color.adjust($grayText, $lightness: 20%);
+  color: color.adjust($darkGrayText, $lightness: 20%);
   letter-spacing: 1px;
   transition: color 0.2s;
 
@@ -322,7 +299,7 @@ $border: rgba(0, 0, 0, 0.08);
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: color.adjust($grayText, $lightness: 25%);
+  background: color.adjust($darkGrayText, $lightness: 25%);
   transition:
     background 0.2s,
     transform 0.2s;
@@ -349,11 +326,9 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .serviceLabel {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: $black;
   margin: 0;
   transition: color 0.2s;
+  @include card-title(sm, $black);
 
   .serviceItemActive & {
     color: $accent;
@@ -366,9 +341,9 @@ $border: rgba(0, 0, 0, 0.08);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $accent;
-  background: $accentLight;
+  background: $accent-light;
   padding: 0.2rem 0.6rem;
-  border-radius: 2rem;
+  border-radius: $radius-pill;
   white-space: nowrap;
   opacity: 0;
   transform: translateX(8px);
@@ -397,7 +372,7 @@ $border: rgba(0, 0, 0, 0.08);
   }
 
   p {
-    color: $grayText;
+    color: $darkGrayText;
     line-height: 1.8;
     font-size: 0.95rem;
     margin: 0.75rem 0 0.75rem;
@@ -405,13 +380,8 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .serviceLink {
-  display: inline-flex;
-  align-items: center;
+  @include arrow-link;
   gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
   letter-spacing: 0.5px;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid transparent;
@@ -432,7 +402,7 @@ $border: rgba(0, 0, 0, 0.08);
 
 // arrow on the right
 .serviceArrow {
-  color: color.adjust($grayText, $lightness: 20%);
+  color: color.adjust($darkGrayText, $lightness: 20%);
   padding-top: 2px;
   flex-shrink: 0;
   transition:
@@ -455,47 +425,13 @@ $border: rgba(0, 0, 0, 0.08);
 }
 
 .ctaBtn {
-  display: inline-block;
-  background: $accent;
-  color: #fff;
-  font-weight: 700;
+  @include btn-on-accent;
   font-size: 0.9rem;
-  letter-spacing: 1px;
   padding: 1rem 2.25rem;
-  border: 1px solid transparent;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.25s;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #fff;
-    transform: translateX(-101%);
-    transition: transform 0.3s ease;
-    z-index: 0;
-  }
-
-  span,
-  &:not(.nospan) {
-    position: relative;
-    z-index: 1;
-  }
-
-  &:hover {
-    color: $accent;
-    border-color: $accent;
-
-    &::before {
-      transform: translateX(0);
-    }
-  }
 }
 
 .ctaNote {
   font-size: 0.82rem;
-  color: $grayText;
+  color: $darkGrayText;
   font-style: italic;
 }

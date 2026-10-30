@@ -1,6 +1,5 @@
 // compare.module.scss
 @use "./globals.scss" as *;
-$handle-color: #046999;
 $handle-size: 2.5rem;
 $line-width: 2px;
 
@@ -12,7 +11,7 @@ $line-width: 2px;
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: $radius;
   cursor: col-resize;
   user-select: none;
   touch-action: pan-y pinch-zoom; // allow vertical scroll; we handle horizontal
@@ -63,7 +62,7 @@ $line-width: 2px;
   top: 0;
   bottom: 0;
   width: $line-width;
-  background: #ffffff;
+  background: $white;
   z-index: 3;
   // left% set inline
   transform: translateX(-50%);
@@ -79,8 +78,8 @@ $line-width: 2px;
   width: $handle-size;
   height: $handle-size;
   border-radius: 50%;
-  background: $handle-color;
-  border: 3px solid #ffffff;
+  background: $accent;
+  border: 3px solid $white;
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.25),
     0 0 0 1px rgba(0, 0, 0, 0.08);
@@ -108,7 +107,7 @@ $line-width: 2px;
   display: flex;
   align-items: center;
   gap: 2px;
-  color: #ffffff;
+  color: $white;
   pointer-events: none;
 
   svg {
@@ -136,14 +135,14 @@ $line-width: 2px;
   composes: label;
   left: 0.5rem;
   background: rgba(0, 0, 0, 0.55);
-  color: #ffffff;
+  color: $white;
 }
 
 .labelAfter {
   composes: label;
   right: 0.5rem;
-  background: rgba(4, 105, 153, 0.85);
-  color: #ffffff;
+  background: rgba($accent, 0.85);
+  color: $white;
 }
 
 // ── Hint (shown briefly on first render) ─────────────────────────────────────
@@ -161,7 +160,7 @@ $line-width: 2px;
 
 .hintPill {
   background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: $white;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -191,13 +190,7 @@ $line-width: 2px;
 
 .index0,
 .index1 {
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include tablet {
+  @include belowDesktop {
     display: none;
   }
 }

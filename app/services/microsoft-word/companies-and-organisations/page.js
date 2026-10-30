@@ -197,7 +197,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Template projects for companies and organisations"
+        heading="A few template projects delivered for"
+        headingAccent="companies and organisations"
         links={caseStudies}
       />
       <div style={{ marginTop: "6rem" }}>

@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 }
 
 .header {
@@ -43,19 +43,17 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
   color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
 }
 
 .intro {
@@ -82,8 +80,8 @@
   padding: 1.5rem;
   background: $white;
   border: 1px solid $border;
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(4, 105, 153, 0.08);
+  border-radius: $radius;
+  box-shadow: 0 8px 24px $accent-tint;
 
   &::before {
     content: "";

@@ -57,7 +57,8 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Related projects"
-        heading="Work we have done in industries you will recognise"
+        heading="Work we have done in industries"
+        headingAccent="you will recognise"
         text="These projects were for clients across Australia. The problems, from slow quoting to spreadsheets that have outgrown themselves, will be familiar to many Northern NSW businesses."
         links={caseStudies}
       />

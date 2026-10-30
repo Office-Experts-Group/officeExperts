@@ -39,16 +39,9 @@ $sun: #f6c177;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $ember;
   margin-bottom: 1.25rem;
 
-  @include phone {
-    display: none;
-  }
+  @include eyebrow($ember);
 }
 
 .heading {
@@ -68,10 +61,7 @@ $sun: #f6c177;
   column-count: 2;
   column-gap: 1.75rem;
 
-  @include phoneLandscape {
-    column-count: 1;
-  }
-  @include phone {
+  @include mobile {
     column-count: 1;
   }
 }
@@ -83,7 +73,7 @@ $sun: #f6c177;
   padding: 2.5rem 2.25rem 2.25rem;
   background: $white;
   border: 1px solid $cream-line;
-  border-radius: 14px;
+  border-radius: $radius;
 
   @include phone {
     padding: 2.1rem 1.5rem 1.75rem;
@@ -174,29 +164,14 @@ $sun: #f6c177;
 }
 
 .proofLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+  @include arrow-link($white);
   align-self: flex-start;
-  font-size: 0.85rem;
-  font-weight: 700;
   letter-spacing: 0.3px;
-  color: $white;
-  text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
   padding-bottom: 2px;
   transition: border-color 0.2s ease;
 
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
   &:hover {
     border-bottom-color: $white;
-
-    svg {
-      transform: translateX(3px);
-    }
   }
 }

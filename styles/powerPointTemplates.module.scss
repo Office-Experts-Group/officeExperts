@@ -25,7 +25,7 @@
   max-width: 1280px;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -38,23 +38,13 @@
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
   color: $white-90;
+
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -129,7 +119,7 @@
   padding: 2.5rem;
   background: $dark-surface;
   border: 1px solid $white-08;
-  border-radius: 12px;
+  border-radius: $radius;
   color: $white-65;
 
   @include phone {

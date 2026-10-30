@@ -2,9 +2,8 @@
 @use "./globals.scss" as *;
 
 .intro {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 1.5rem;
+  @include container(1400px);
+  padding-block: 6rem;
 }
 
 .container {
@@ -19,8 +18,7 @@
 }
 
 .heading {
-  color: $text-primary;
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  @include heading-section;
 }
 
 .accent {
@@ -42,11 +40,7 @@
 
 // Eyebrow label, matches the "What we do" style used across the site
 .jumpTitle {
-  color: #888;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  @include eyebrow($text-muted);
 }
 
 .jumpList {

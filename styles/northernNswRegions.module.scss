@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -32,19 +31,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .headingAccent {
@@ -52,9 +43,7 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 // ── Region cards ─────────────────────────────
@@ -65,7 +54,7 @@
   list-style: none;
   padding: 0;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
   }
 }
@@ -86,7 +75,7 @@
   height: 100%;
   padding: 2.25rem;
   background: $white;
-  border-radius: 4px;
+  border-radius: $radius;
   box-shadow: $shadow-row;
 
   @include phone {
@@ -110,9 +99,7 @@
 }
 
 .body {
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
+  @include body-text;
 }
 
 .link {
@@ -135,7 +122,7 @@
   color: $text-secondary;
   font-size: 0.75rem;
   font-weight: 700;
-  border-radius: 999px;
+  border-radius: $radius-pill;
 }
 
 // ── Nearby ───────────────────────────────────

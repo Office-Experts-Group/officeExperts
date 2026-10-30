@@ -2,12 +2,8 @@
 @use "./globals.scss" as *;
 // Bento layout for PopupFormsUseCases (12-column grid).
 
-$brand: #046999;
-$brand-deep: #03506f;
-$ink: #0f1f2b;
 $muted: #55626d;
 $page-bg: #f1f2f4;
-$curve: 24px;
 
 .section {
   background: $page-bg;
@@ -27,25 +23,22 @@ $curve: 24px;
 .eyebrow {
   display: block;
   margin-bottom: 1rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: $brand;
+
+  @include eyebrow;
 }
 
 .heading {
   margin: 0;
   font-family: var(--font-garamond), Georgia, serif;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1.1;
-  color: $ink;
+  color: $text-primary;
+
+  @include heading-section;
 }
 
 .accent {
   font-family: var(--font-aptos), system-ui, sans-serif;
   font-weight: 700;
-  color: $brand;
+  color: $accent;
 }
 
 .headerBody {
@@ -85,9 +78,9 @@ $curve: 24px;
   gap: 1.5rem;
   overflow: hidden;
   padding: 2rem 2rem 1.75rem;
-  border-radius: $curve;
-  background: #fff;
-  color: $ink;
+  border-radius: $radius;
+  background: $white;
+  color: $text-primary;
   box-shadow: 0 1px 2px rgba(15, 31, 43, 0.04);
   transition:
     transform 0.25s ease,
@@ -107,7 +100,7 @@ $curve: 24px;
   font-family: var(--font-garamond), Georgia, serif;
   font-size: 5.5rem;
   line-height: 1;
-  color: rgba(4, 105, 153, 0.09);
+  color: $accent-tint;
   pointer-events: none;
   user-select: none;
 }
@@ -123,11 +116,11 @@ $curve: 24px;
 
 .tileTag {
   padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(4, 105, 153, 0.1);
+  border-radius: $radius-pill;
+  background: $accent-tint;
   font-size: 0.75rem;
   font-weight: 600;
-  color: $brand;
+  color: $accent;
 }
 
 .tileTitle {
@@ -172,7 +165,7 @@ $curve: 24px;
   border-top: 1px solid rgba(15, 31, 43, 0.1);
 
   .label {
-    color: $brand;
+    color: $accent;
   }
 }
 
@@ -181,9 +174,8 @@ $curve: 24px;
   align-items: center;
   align-self: flex-start;
   gap: 0.5rem;
-  font-weight: 700;
-  color: $brand;
-  text-decoration: none;
+
+  @include arrow-link;
 
   svg {
     transition: transform 0.2s ease;
@@ -196,16 +188,16 @@ $curve: 24px;
 
 // ── Accent tiles ─────────────────────────────────────────────────────────────
 .tileAccent {
-  background: linear-gradient(145deg, $brand 0%, $brand-deep 100%);
-  color: #fff;
+  background: linear-gradient(145deg, $accent 0%, $accent-dark 100%);
+  color: $white;
 
   .tileNum {
     color: rgba(255, 255, 255, 0.12);
   }
 
   .tileTag {
-    background: rgba(255, 255, 255, 0.18);
-    color: #fff;
+    background: $white-18;
+    color: $white;
   }
 
   .challenge {
@@ -220,12 +212,12 @@ $curve: 24px;
     border-top-color: rgba(255, 255, 255, 0.22);
 
     .label {
-      color: #fff;
+      color: $white;
     }
   }
 
   .tileLink {
-    color: #fff;
+    color: $white;
   }
 }
 

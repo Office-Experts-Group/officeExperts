@@ -21,14 +21,14 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  @include container;
 
   @include tablet {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -43,10 +43,7 @@
   flex-direction: column;
   gap: 1.1rem;
 
-  @include tablet {
-    position: static;
-  }
-  @media (max-width: 766px) {
+  @include belowDesktop {
     position: static;
   }
 }
@@ -62,36 +59,25 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
 }
 
 .text {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 .siteLink {
   align-self: flex-start;
-  padding: 0.75rem 1.5rem;
-  background: $accent;
-  color: $white;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: 3px;
-  text-decoration: none;
+
+  @include btn-on-accent;
 }
 
 // ── Service rows ─────────────────────────────
@@ -160,9 +146,9 @@
 }
 
 .rowTitle {
-  font-size: 1.15rem;
-  color: $text-primary;
   transition: color 0.2s ease;
+
+  @include card-title(md);
 }
 
 // Description is collapsed until the row is hovered or focused

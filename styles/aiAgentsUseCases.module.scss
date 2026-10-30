@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 .header {
@@ -32,11 +31,7 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -44,28 +39,13 @@
 }
 
 .lead {
-  font-size: 1rem;
-  color: $text-secondary;
-  line-height: 1.8;
+  @include lede;
 }
 
 .textLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: $accent;
-  text-decoration: none;
+  @include arrow-link;
   width: fit-content;
   margin: 0 0 0 auto;
-
-  svg {
-    transition: transform 0.2s ease;
-  }
-  &:hover svg {
-    transform: translateX(3px);
-  }
 }
 
 // ── Featured rows: story left, time compression right ──
@@ -85,7 +65,7 @@
   padding: 3rem 0;
   border-bottom: 1px solid $border-strong;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -98,25 +78,16 @@
 }
 
 .useCase {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .rowTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.25;
+  @include card-title(lg);
   letter-spacing: -0.015em;
 }
 
 .rowBody {
-  font-size: 0.95rem;
-  color: $text-secondary;
-  line-height: 1.75;
+  @include body-text;
 }
 
 .compare {
@@ -197,9 +168,7 @@
 }
 
 .moreHeading {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .moreList {
@@ -228,19 +197,17 @@
     outline-offset: 2px;
   }
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }
 }
 
 .moreTitle {
+  @include card-title(sm);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: $text-primary;
 
   svg {
     color: $accent;
@@ -248,7 +215,5 @@
 }
 
 .moreBody {
-  font-size: 0.9rem;
-  color: $text-secondary;
-  line-height: 1.7;
+  @include small-text;
 }

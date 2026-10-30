@@ -36,19 +36,7 @@
     gap: 4rem;
   }
 
-  @include phoneLandscape {
-    padding: 8rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-
-    .imageWrapper {
-      max-width: 90vw;
-      margin: 0 auto;
-    }
-  }
-
-  @include phone {
+  @include mobile {
     padding: 8rem 2rem;
     display: flex;
     flex-direction: column;
@@ -64,19 +52,21 @@
 .content {
   padding-right: 4rem;
   h2 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: 700;
-    color: $offWhite;
     margin: 1rem 0 2rem 0;
+
+    @include heading-section($offWhite);
   }
+
+  .accent {
+    color: $accent;
+  }
+
   p {
     color: $grayText;
     line-height: 2rem;
   }
-  @include phoneLandscape {
-    padding-right: 0;
-  }
-  @include phone {
+
+  @include mobile {
     padding-right: 0;
   }
 

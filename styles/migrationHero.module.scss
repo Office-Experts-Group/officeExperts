@@ -2,16 +2,7 @@
 @use "./globals.scss" as *;
 @use "sass:color";
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@include kf-fade-up;
 
 @keyframes orbPulse {
   0%,
@@ -77,28 +68,13 @@
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  padding: 0.3rem 0.85rem;
   margin-bottom: 1.5rem;
-
-  @include phone {
-    font-size: 0.6rem;
-  }
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 700;
-  color: $white;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
   margin: 0 0 1.75rem;
+  @include heading-section-on-dark;
 
   @include phone {
     font-size: clamp(2rem, 8vw, 2.6rem);
@@ -107,8 +83,6 @@
 
 .accent {
   color: $accent;
-
-  // Subtle text shadow gives depth against dark background
   text-shadow: 0 0 40px rgba(4, 105, 153, 0.45);
 }
 
@@ -153,23 +127,14 @@
 }
 
 .ctaPrimary {
-  display: inline-block;
-  background: $accent;
-  color: $white;
   font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  padding: 0.85rem 1.75rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+  transition: transform 0.15s ease;
 
   &:hover {
-    background: color.adjust($accent, $lightness: 6%);
     transform: translateY(-1px);
   }
+
+  @include btn-on-accent;
 }
 
 .ctaSecondary {
@@ -179,7 +144,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.85rem 1.75rem;
-  border-radius: 4px;
+  border-radius: 0.1rem;
   border: 1px solid $white-18;
   text-decoration: none;
   transition:
@@ -230,7 +195,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: $radius-pill;
   border: 1px solid;
   letter-spacing: 0.2px;
   transition:
@@ -247,13 +212,13 @@
 .primary {
   background: rgba(4, 105, 153, 0.22);
   border-color: rgba(4, 105, 153, 0.55);
-  color: #7ec8e3;
+  color: $accent-on-dark;
   animation: tagFloat 5s ease-in-out infinite;
 }
 
 .secondary {
   background: rgba(4, 105, 153, 0.1);
-  border-color: rgba(4, 105, 153, 0.3);
+  border-color: $accent-border;
   color: $white-65;
   animation: tagFloat 6s ease-in-out 0.8s infinite;
 }

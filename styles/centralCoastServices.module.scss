@@ -50,24 +50,13 @@ $sea-mist: #eef6fa;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
-
-  @include phone {
-    display: none;
-  }
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
+  @include heading-section;
   line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: $text-primary;
 }
 
 .headingAccent {
@@ -103,19 +92,7 @@ $sea-mist: #eef6fa;
       "ppt m365"
       "custom custom";
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "excel"
-      "power"
-      "ai"
-      "word"
-      "access"
-      "ppt"
-      "m365"
-      "custom";
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     grid-template-areas:
       "excel"
@@ -164,8 +141,8 @@ $sea-mist: #eef6fa;
   min-width: 0;
   overflow: hidden;
   background: $white;
-  border: 1px solid rgba(4, 105, 153, 0.12);
-  border-radius: 16px;
+  border: 1px solid rgba($accent, 0.12);
+  border-radius: $radius;
   padding: 2.25rem;
   transition:
     transform 0.25s ease,
@@ -242,30 +219,15 @@ $sea-mist: #eef6fa;
   font-size: 0.72rem;
   font-weight: 600;
   color: $accent;
-  background: rgba(4, 105, 153, 0.08);
-  border-radius: 2rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
   padding: 0.3rem 0.8rem;
 }
 
 .tileLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  @include arrow-link;
   align-self: flex-start;
-  font-size: 0.82rem;
-  font-weight: 700;
   letter-spacing: 0.3px;
-  color: $accent;
-  text-decoration: none;
-
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
-  &:hover svg {
-    transform: translateX(3px);
-  }
 }
 
 // ── Tile variants ────────────────────────────
@@ -303,11 +265,11 @@ $sea-mist: #eef6fa;
   }
 
   .tileIndex {
-    color: rgba(255, 255, 255, 0.75);
+    color: $white-75;
   }
 
   .tileTag {
-    color: rgba(255, 255, 255, 0.65);
+    color: $white-65;
   }
 
   .tileTitle {
@@ -315,7 +277,7 @@ $sea-mist: #eef6fa;
   }
 
   .tileDesc {
-    color: rgba(255, 255, 255, 0.84);
+    color: $white-88;
   }
 
   .chip {

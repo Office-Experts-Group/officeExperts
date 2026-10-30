@@ -27,7 +27,7 @@ $text-on-dark: rgba($white, 0.85);
   gap: 4rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -39,20 +39,13 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -81,7 +74,7 @@ $text-on-dark: rgba($white, 0.85);
 
 .item {
   background: $light-bg;
-  border-radius: 16px;
+  border-radius: $radius;
   overflow: hidden;
 }
 
@@ -132,10 +125,7 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .itemTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .itemSub {
@@ -167,7 +157,7 @@ $text-on-dark: rgba($white, 0.85);
   gap: 1rem;
   padding: 0 1.75rem 1.75rem;
 
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     padding: 0 1.25rem 1.25rem;
   }
@@ -176,20 +166,17 @@ $text-on-dark: rgba($white, 0.85);
 .cap {
   padding: 1.25rem;
   background: $white;
-  border-radius: 12px;
+  border-radius: $radius;
 }
 
 .capTitle {
   margin-bottom: 0.4rem;
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: $text-primary;
+
+  @include card-title(sm);
 }
 
 .capText {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: $text-secondary;
+  @include small-text;
 }
 
 // ── Ribbon panel ─────────────────────────────
@@ -201,10 +188,10 @@ $text-on-dark: rgba($white, 0.85);
   gap: 1.25rem;
   padding: 2rem;
   background: $dark-bg;
-  border-radius: 20px;
+  border-radius: $radius;
   color: $white;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     position: static;
   }
   @include phone {
@@ -218,10 +205,7 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .panelTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  @include card-title(lg, inherit);
 }
 
 .panelText {

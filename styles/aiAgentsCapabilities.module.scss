@@ -20,8 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  @include container;
 }
 
 // Centred header to frame the symmetrical layout below
@@ -34,19 +33,11 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  color: $text-primary;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  @include heading-section;
 }
 
 .accent {
@@ -61,7 +52,7 @@
   align-items: center;
 
   // Illustration moves to the top, principles stack beneath
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1fr;
 
     .visual {
@@ -71,7 +62,7 @@
       width: min(100%, 380px);
     }
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 }
@@ -114,19 +105,15 @@
 }
 
 .itemTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: $text-primary;
+  @include card-title(sm);
 }
 
 .itemBody {
-  font-size: 0.88rem;
-  color: $text-secondary;
-  line-height: 1.7;
+  @include small-text;
 }
 
 .link {
   color: $accent;
-  font-weight: 600;
-  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: none;
 }

@@ -1,18 +1,6 @@
 // styles/mailMergeFixes.module.scss
 @use "./globals.scss" as *;
 
-@mixin stacked {
-  @include tablet {
-    @content;
-  }
-  @include phoneLandscape {
-    @content;
-  }
-  @include phone {
-    @content;
-  }
-}
-
 $mono: ui-monospace, "Consolas", monospace;
 
 .section {
@@ -38,20 +26,12 @@ $mono: ui-monospace, "Consolas", monospace;
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $accent;
   margin-bottom: 1.25rem;
+  @include eyebrow;
 }
 
 .heading {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $text-primary;
+  @include heading-section;
 }
 
 .accent {
@@ -82,7 +62,7 @@ $mono: ui-monospace, "Consolas", monospace;
     border-bottom: 1px solid $border-strong;
   }
 
-  @include stacked {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 2rem 0;
@@ -138,7 +118,7 @@ $mono: ui-monospace, "Consolas", monospace;
   flex-direction: column;
   gap: 0.35rem;
   padding: 0.9rem 1rem;
-  border-radius: 6px;
+  border-radius: $radius;
   font-family: $mono;
   font-size: 0.9rem;
   overflow-wrap: anywhere;

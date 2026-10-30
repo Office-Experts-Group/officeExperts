@@ -1,18 +1,12 @@
 @use "./globals.scss" as *;
 
-// ── Tokens ──────────────────────────────────────────────────────────────────
-$accent: #046999;
-$accentLight: #e8f4fa;
-$black: #1a1a1a;
-$grayText: #777a7e;
-$offWhite: #f7f8f9;
-$border: rgba(0, 0, 0, 0.08);
-$darkBg: #111820;
-$darkBorder: rgba(255, 255, 255, 0.08);
+// Local tokens removed: $accent, $accentLight, $black, $grayText, $offWhite,
+// $border, $darkBg and $darkBorder now come from globals.scss
+// ($dark-bg, $accent-light, $black, $darkGrayText, $white-08).
 
 // ── Section wrapper ──────────────────────────────────────────────────────────
 .section {
-  background: $darkBg;
+  background: $dark-bg;
   padding: 8rem;
 
   @include tablet {
@@ -63,23 +57,12 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.3rem 0.85rem;
-  border: 1px solid rgba($accent, 0.35);
-  border-radius: 2rem;
+  @include eyebrow-on-dark;
 }
 
 .headline {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
   margin: 0;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -87,52 +70,17 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 }
 
 .intro {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.9;
   margin: 0;
   max-width: 420px;
+  font-size: 1rem;
+  color: $white-55;
+  line-height: 1.9;
 }
 
 .ctaBtn {
-  display: inline-block;
-  background: $accent;
-  color: #ffffff;
-  font-weight: 700;
+  @include btn-on-accent;
   font-size: 0.88rem;
-  letter-spacing: 1px;
   padding: 0.9rem 2rem;
-  text-decoration: none;
-  border: 1px solid transparent;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.25s;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #ffffff;
-    transform: translateX(-101%);
-    transition: transform 0.3s ease;
-    z-index: 0;
-  }
-
-  &:hover {
-    color: $accent;
-    border-color: $accent;
-
-    &::before {
-      transform: translateX(0);
-    }
-  }
-
-  // Ensure text sits above the pseudo element
-  &,
-  & * {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 // ── Reasons grid ─────────────────────────────────────────────────────────────
@@ -140,8 +88,8 @@ $darkBorder: rgba(255, 255, 255, 0.08);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: $darkBorder;
-  border: 1px solid $darkBorder;
+  background: $white-08;
+  border: 1px solid $white-08;
 
   @include phone {
     grid-template-columns: 1fr;
@@ -149,7 +97,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 }
 
 .reasonCard {
-  background: #18232e;
+  background: $dark-surface;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -172,7 +120,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 .reasonHeading {
   font-size: 0.95rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.88);
+  color: $white-88;
   margin: 0 0 0.3rem 0;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -187,7 +135,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 
 // ── Process block ─────────────────────────────────────────────────────────────
 .processBlock {
-  border-top: 1px solid $darkBorder;
+  border-top: 1px solid $white-08;
   padding-top: 5rem;
 
   @include phone {
@@ -243,7 +191,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 // ── Individual step ───────────────────────────────────────────────────────────
 .step {
   padding: 2rem 2rem 2rem 0.3rem;
-  border-right: 1px solid $darkBorder;
+  border-right: 1px solid $white-08;
   cursor: default;
   outline: none;
   transition: background 0.25s ease;
@@ -258,7 +206,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
 
   @include tablet {
     border-right: none;
-    border-bottom: 1px solid $darkBorder;
+    border-bottom: 1px solid $white-08;
     padding: 1.75rem 0;
     display: grid;
     grid-template-columns: 64px 1fr;
@@ -286,7 +234,7 @@ $darkBorder: rgba(255, 255, 255, 0.08);
   }
 
   .stepLabel {
-    color: #ffffff;
+    color: $white;
   }
 }
 

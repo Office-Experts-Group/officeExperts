@@ -127,9 +127,7 @@ const CorporateIdentityComparison = () => {
   return (
     <section className={styles.section} id="governance">
       <div className={styles.header}>
-        <span className={styles.eyebrow}>
-          Restricted editing vs governed templates
-        </span>
+        <span className={styles.eyebrow}>governed templates</span>
         <h2 className={styles.heading}>
           Lock down your brand,{" "}
           <span className={styles.accent}>not your people.</span>

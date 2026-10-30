@@ -31,7 +31,7 @@
 }
 
 .heading {
-  @include heading-main;
+  @include heading-section;
 }
 
 .accent {
@@ -69,7 +69,7 @@
   padding: 2rem;
   background: $white;
   border: 1px solid $line;
-  border-radius: 14px;
+  border-radius: $radius;
 
   @include phone {
     padding: 1.6rem 1.35rem;
@@ -89,10 +89,7 @@
 }
 
 .title {
-  font-size: 1.12rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: $text-primary;
+  @include card-title(md);
 }
 
 .text {

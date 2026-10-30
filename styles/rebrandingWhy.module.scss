@@ -34,7 +34,7 @@ $text-on-dark: rgba($white, 0.85);
   align-items: end;
   margin-bottom: 4rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr;
     margin-bottom: 2.5rem;
   }
@@ -47,23 +47,15 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-65;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.3rem, 4.4vw, 3.7rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: $white-90;
+  @include heading-section-on-dark($white-90);
 }
 
 .accent {
-  color: $white;
+  color: $accent;
 }
 
 .lead {
@@ -77,8 +69,7 @@ $text-on-dark: rgba($white, 0.85);
 .link {
   color: $white;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  letter-spacing: 0.5px;
 }
 
 .cta {
@@ -128,10 +119,10 @@ $text-on-dark: rgba($white, 0.85);
   grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 1.1rem;
   }
@@ -142,7 +133,7 @@ $text-on-dark: rgba($white, 0.85);
   flex-direction: column;
   gap: 1rem;
   padding: 2.25rem;
-  border-radius: 18px;
+  border-radius: $radius;
   color: $white;
   --chip: #{$white-12};
 
@@ -156,10 +147,10 @@ $text-on-dark: rgba($white, 0.85);
   background: $accent;
   --chip: #{$white-18};
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: span 2;
   }
-  @media (max-width: 766px) {
+  @include mobile {
     grid-column: span 1;
   }
 }
@@ -169,7 +160,7 @@ $text-on-dark: rgba($white, 0.85);
   background: $dark-surface;
   border: 1px solid $white-12;
 
-  @media (max-width: 1024px) {
+  @include belowDesktop {
     grid-column: span 1;
   }
 }
@@ -185,10 +176,7 @@ $text-on-dark: rgba($white, 0.85);
 }
 
 .title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  @include card-title(lg, inherit);
 }
 
 .text {
@@ -210,6 +198,7 @@ $text-on-dark: rgba($white, 0.85);
   font-size: 0.78rem;
   font-weight: 700;
   padding: 0.3rem 0.8rem;
-  border-radius: 999px;
+  border-radius: $radius-pill;
   background: var(--chip);
+  letter-spacing: 0.2px;
 }

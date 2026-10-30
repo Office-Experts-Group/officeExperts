@@ -1,6 +1,6 @@
 @use "./globals.scss" as *;
 .customTab {
-  padding: 6rem 10vw;
+  padding: 6rem $gutter;
 }
 
 .content {
@@ -24,13 +24,8 @@
 .mainImage {
   max-width: 80vw;
   height: auto;
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
-  @include tablet {
+
+  @include belowDesktop {
     display: none;
   }
 }

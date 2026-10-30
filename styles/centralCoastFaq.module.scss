@@ -30,28 +30,12 @@ $sea-deep: #033a55;
 }
 
 .eyebrow {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba($accent, 0.9);
-  padding: 0.32rem 0.9rem;
-  border: 1px solid $accent-border;
-  border-radius: 2rem;
-  margin-bottom: 1.5rem;
-
-  @include phone {
-    display: none;
-  }
+  margin-bottom: 0.5rem;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 700;
-  color: $white-88;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  @include heading-section-on-dark($white-88);
 }
 
 .headingAccent {
@@ -69,11 +53,7 @@ $sea-deep: #033a55;
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  @include phoneLandscape {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  @include phone {
+  @include mobile {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -88,17 +68,13 @@ $sea-deep: #033a55;
   flex-direction: column;
   gap: 1.75rem;
   padding: 2.75rem;
-  border-radius: 16px;
+  border-radius: $radius;
   background: linear-gradient(160deg, $accent 0%, $sea-deep 100%);
 
-  @include tablet {
-    position: static;
-  }
-  @include phoneLandscape {
+  @include belowDesktop {
     position: static;
   }
   @include phone {
-    position: static;
     padding: 2rem 1.75rem;
   }
 }
@@ -108,7 +84,7 @@ $sea-deep: #033a55;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: $white-75;
 }
 
 .proofList {
@@ -124,7 +100,7 @@ $sea-deep: #033a55;
   align-items: baseline;
   gap: 1.25rem;
   padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid $white-18;
 
   &:first-child {
     padding-top: 0;
@@ -145,40 +121,25 @@ $sea-deep: #033a55;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: $white-75;
 }
 
 .proofText {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.84);
+  color: $white-88;
 }
 
 .proofLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+  @include arrow-link($white);
   align-self: flex-start;
-  font-size: 0.85rem;
-  font-weight: 700;
   letter-spacing: 0.3px;
-  color: $white;
-  text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
   padding-bottom: 2px;
   transition: border-color 0.2s ease;
 
-  svg {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
   &:hover {
     border-bottom-color: $white;
-
-    svg {
-      transform: translateX(3px);
-    }
   }
 }
 

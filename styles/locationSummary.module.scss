@@ -7,7 +7,7 @@
   padding: 1.5rem;
   background-color: rgba(238, 238, 238, 0.544);
   border: 1px solid rgba($darkGrayText, 0.1);
-  border-radius: 0.2rem;
+  border-radius: $radius;
   box-shadow: 0 4px 12px rgba($darkGrayText, 0.1);
   max-width: 800px;
   margin: 6rem auto -2rem auto;

@@ -77,7 +77,9 @@ const AccessibilityChecklist = () => {
         {/* Left: sticky intro + tagged structure illustration */}
         <div className={styles.leftCol}>
           <span className={styles.eyebrow}>What We Check</span>
-          <h2 className={styles.heading}>Five issues we often find.</h2>
+          <h2 className={styles.heading}>
+            Five issues we<span className={styles.accent}> often find</span>
+          </h2>
           <p className={styles.intro}>
             Most inaccessible Word documents we work on hide their underlying
             issues without thorough testing by a professional. We work through

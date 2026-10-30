@@ -30,7 +30,6 @@ const cities = [
   {
     id: "adelaide",
     label: "Adelaide",
-    sublabel: "South Australia",
     x: ADELAIDE.x,
     y: ADELAIDE.y,
     type: "primary",
@@ -40,22 +39,112 @@ const cities = [
   },
 
   // ── Eastern seaboard ─────────────────────────────────────
-  { id: "cairns", label: "Cairns", x: 448, y: 60, type: "secondary", labelAnchor: "end", labelDx: -16, labelDy: -4 },
-  { id: "brisbane", label: "Brisbane", x: 448, y: 192, type: "secondary", labelAnchor: "end", labelDx: -16, labelDy: -4 },
-  { id: "gold-coast", label: "Gold Coast", x: 446, y: 248, type: "tertiary", labelAnchor: "end", labelDx: -12, labelDy: -4 },
-  { id: "central-coast", label: "Central Coast", x: 448, y: 375, type: "tertiary", labelAnchor: "end", labelDx: -12, labelDy: -4 },
-  { id: "sydney", label: "Sydney", x: 400, y: 420, type: "secondary", labelAnchor: "end", labelDx: -16, labelDy: -4 },
-  { id: "wollongong", label: "Wollongong", x: 420, y: 468, type: "tertiary", labelAnchor: "end", labelDx: -12, labelDy: -4 },
-  { id: "canberra", label: "Canberra", x: 340, y: 448, type: "secondary", labelAnchor: "end", labelDx: -16, labelDy: -4 },
+  {
+    id: "cairns",
+    label: "Cairns",
+    x: 448,
+    y: 60,
+    type: "secondary",
+    labelAnchor: "end",
+    labelDx: -16,
+    labelDy: -4,
+  },
+  {
+    id: "brisbane",
+    label: "Brisbane",
+    x: 448,
+    y: 192,
+    type: "secondary",
+    labelAnchor: "end",
+    labelDx: -16,
+    labelDy: -4,
+  },
+  {
+    id: "gold-coast",
+    label: "Gold Coast",
+    x: 446,
+    y: 248,
+    type: "tertiary",
+    labelAnchor: "end",
+    labelDx: -12,
+    labelDy: -4,
+  },
+  {
+    id: "central-coast",
+    label: "Central Coast",
+    x: 448,
+    y: 375,
+    type: "tertiary",
+    labelAnchor: "end",
+    labelDx: -12,
+    labelDy: -4,
+  },
+  {
+    id: "sydney",
+    label: "Sydney",
+    x: 400,
+    y: 420,
+    type: "secondary",
+    labelAnchor: "end",
+    labelDx: -16,
+    labelDy: -4,
+  },
+  {
+    id: "wollongong",
+    label: "Wollongong",
+    x: 420,
+    y: 468,
+    type: "tertiary",
+    labelAnchor: "end",
+    labelDx: -12,
+    labelDy: -4,
+  },
+  {
+    id: "canberra",
+    label: "Canberra",
+    x: 340,
+    y: 448,
+    type: "secondary",
+    labelAnchor: "end",
+    labelDx: -16,
+    labelDy: -4,
+  },
 
   // ── Melbourne ────────────────────────────────────────────
-  { id: "melbourne", label: "Melbourne", x: 160, y: 510, type: "secondary", labelAnchor: "middle", labelDx: 0, labelDy: -14 },
+  {
+    id: "melbourne",
+    label: "Melbourne",
+    x: 160,
+    y: 510,
+    type: "secondary",
+    labelAnchor: "middle",
+    labelDx: 0,
+    labelDy: -14,
+  },
 
   // ── Darwin ───────────────────────────────────────────────
-  { id: "darwin", label: "Darwin", x: 80, y: 60, type: "secondary", labelAnchor: "start", labelDx: 16, labelDy: -4 },
+  {
+    id: "darwin",
+    label: "Darwin",
+    x: 80,
+    y: 60,
+    type: "secondary",
+    labelAnchor: "start",
+    labelDx: 16,
+    labelDy: -4,
+  },
 
   // ── Perth ────────────────────────────────────────────────
-  { id: "perth", label: "Perth", x: 38, y: 380, type: "secondary", labelAnchor: "start", labelDx: 16, labelDy: -4 },
+  {
+    id: "perth",
+    label: "Perth",
+    x: 38,
+    y: 380,
+    type: "secondary",
+    labelAnchor: "start",
+    labelDx: 16,
+    labelDy: -4,
+  },
 ];
 
 // All connections radiate from HQ
@@ -282,19 +371,7 @@ const AdelaideMap = () => (
       />
       <circle cx={ADELAIDE.x} cy={ADELAIDE.y} r={DR.primary} fill="#046999" />
       {/* Label sits above the node: Melbourne is close on the lower right */}
-      <text
-        x={ADELAIDE.x}
-        y={ADELAIDE.y - R.primary - 14}
-        textAnchor="middle"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        fontSize="8"
-        fontWeight="600"
-        fill="#046999"
-        fillOpacity="0.58"
-        letterSpacing="1.6"
-      >
-        SOUTH AUSTRALIA
-      </text>
+
       <text
         x={ADELAIDE.x}
         y={ADELAIDE.y - R.primary - 4}

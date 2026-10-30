@@ -181,7 +181,8 @@ const Page = () => {
         <RelatedLinks
           theme="dark"
           eyebrow="Case Studies"
-          heading="Automated document generation projects we completed"
+          heading="A couple of automated document generation projects "
+          headingAccent="we completed"
           links={[
             {
               href: "/case-studies/financial-planning-word-document-builder",
