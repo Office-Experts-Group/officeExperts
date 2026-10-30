@@ -1,0 +1,101 @@
+// styles/vbaProcess.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $accent;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+// The second half of the heading is softened rather than coloured, because the section is already accent blue
+.accent {
+  color: $white-65;
+}
+
+.lede {
+  margin-bottom: 0.5rem;
+  @include lede($white-88);
+  @include inline-link($white);
+}
+
+// ── Steps ───────────────────────────────────────────────────────────────────
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid $white-35;
+
+  // The dot that starts each step's line
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $white;
+  }
+}
+
+.num {
+  color: $white-35;
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.phase {
+  @include card-title(lg, $white);
+}
+
+.text {
+  @include small-text($white-88);
+}

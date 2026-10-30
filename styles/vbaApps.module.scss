@@ -1,0 +1,209 @@
+// styles/vbaApps.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $dark-bg;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  @include lede($white-65);
+}
+
+// ── Tabs (CSS only) ─────────────────────────────────────────────────────────
+// The radios are visually hidden but stay focusable, so arrow keys switch tab.
+.tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.radio {
+  @include visually-hidden;
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include belowDesktop {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: $radius;
+  background: $white-08;
+  color: $white-65;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background: $white-12;
+    color: $white;
+  }
+
+  @include belowDesktop {
+    flex-shrink: 0;
+  }
+}
+
+.tabIcon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+
+// ── Panels ──────────────────────────────────────────────────────────────────
+.panels {
+  min-width: 0;
+}
+
+.panel {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+  padding: 2.5rem;
+  background: $dark-surface;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.watermark {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 120px;
+  height: 120px;
+  color: $accent-on-dark;
+  opacity: 0.1;
+  pointer-events: none;
+
+  @include mobile {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.panelHeading {
+  max-width: 80%;
+  @include card-title(lg, $white);
+}
+
+.panelText {
+  max-width: 62ch;
+  @include body-text($white-75);
+}
+
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 2rem;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    @include small-text($white-88);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.55rem;
+      left: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: $accent-on-dark;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $white-12;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}
+
+// ── Show the tab, panel and focus ring that belong to the checked radio ─────
+@for $i from 1 through 5 {
+  .radio:nth-of-type(#{$i}):checked ~ .rail .tab:nth-child(#{$i}) {
+    background: $accent;
+    color: $white;
+  }
+
+  .radio:nth-of-type(#{$i}):checked ~ .panels .panel:nth-child(#{$i}) {
+    display: flex;
+  }
+
+  .radio:nth-of-type(#{$i}):focus-visible ~ .rail .tab:nth-child(#{$i}) {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 2px;
+  }
+}

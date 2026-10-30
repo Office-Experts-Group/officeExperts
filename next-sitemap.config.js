@@ -110,6 +110,7 @@ const pathsWithDifferentCanonicals = new Set([
   "/case-study-submission",
   "/services/microsoft-vbscript",
   "/services/office-and-sql-server-integration",
+  "/services/microsoft-word/video-portal",
 ]);
 
 /** @type {import('next-sitemap').IConfig} */

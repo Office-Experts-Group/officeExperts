@@ -1,0 +1,151 @@
+// styles/vbaWorkflow.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $white;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+}
+
+// ── Stages ──────────────────────────────────────────────────────────────────
+.stages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  // A dashed link in the gap between one stage and the next
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 3.6rem;
+    left: 100%;
+    width: 1.5rem;
+    border-top: 2px dashed $line-strong;
+
+    @include belowDesktop {
+      display: none;
+    }
+  }
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  background: $accent;
+  color: $white;
+  border-radius: $radius;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.num {
+  @include label;
+}
+
+.stageTitle {
+  @include card-title(lg);
+}
+
+.stageText {
+  @include small-text;
+}
+
+// ── Case study callout ──────────────────────────────────────────────────────
+.callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background: $ink;
+  border-radius: $radius;
+
+  @include belowDesktop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include mobile {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.calloutText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 64ch;
+
+  p {
+    @include body-text($white-88);
+  }
+}
+
+.calloutLabel {
+  @include label($accent-on-dark);
+}
+
+.calloutLink {
+  flex-shrink: 0;
+  @include arrow-link($accent-on-dark);
+}

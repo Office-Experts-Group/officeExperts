@@ -27,7 +27,7 @@ const IsRight = () => {
       <AnimateOnScroll animation="scale-down" delay={0.2} duration={1.6}>
         <div className={styles.contentWrapper}>
           <div className={styles.sub}>
-            <p>Your Microsoft Office Solutions Experts</p>
+            <p>Business Solutions</p>
           </div>
           <h2>For All Of Your Microsoft Office Consulting Needs</h2>
           <p className={styles.text}>

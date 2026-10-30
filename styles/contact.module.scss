@@ -107,6 +107,22 @@
     }
   }
 
+  .contactOpen {
+    border: none;
+    background: none;
+    color: $accent;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      background: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
   .description {
     max-height: 0;
     opacity: 0;

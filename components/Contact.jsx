@@ -58,7 +58,9 @@ const Contact = ({ isQuote }) => {
               if (e.key === "Enter") handleFormSwitch("quote");
             }}
           >
-            <h2>Request a Quote</h2>
+            <h2 className={activeForm === "contact" ? styles.contactOpen : ""}>
+              Need to attach a file?
+            </h2>
             <div className={styles.description}>
               <p>
                 Need pricing for a specific project? Fill out our quote form and

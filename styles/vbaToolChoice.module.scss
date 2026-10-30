@@ -1,0 +1,131 @@
+// styles/vbaToolChoice.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $light-bg;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  @include inline-link;
+}
+
+// ── Cards ───────────────────────────────────────────────────────────────────
+// Each card spans four rows of this grid and hands them down with subgrid,
+// so every "Runs in", "Best for" and "Watch for" block lines up across the row.
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  padding: 1.75rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+}
+
+.name {
+  @include card-title(lg);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  p {
+    @include small-text;
+  }
+}
+
+.label {
+  @include label;
+}
+
+.featured {
+  background: $accent;
+  border-color: transparent;
+
+  .name {
+    color: $white;
+  }
+
+  .label {
+    color: $white-65;
+  }
+
+  .block p {
+    color: $white-88;
+  }
+}
+
+// ── Closing note ────────────────────────────────────────────────────────────
+.note {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.rule {
+  @include card-title(md);
+  line-height: 1.6;
+}
+
+.small {
+  @include small-text;
+  @include inline-link;
+}

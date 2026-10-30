@@ -1,78 +1,155 @@
+// /services/vba-macro-development/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
+// Above the fold: loaded normally
 import ServiceHero from "@/components/ServiceHero";
-import ServicePageCards from "./(components)/ServicePageCards";
 import Contents from "./(components)/Contents";
+import VbaIntro from "./(components)/VbaIntro";
 
-const PageSegmentMain = dynamic(() => import("./(components)/PageSegmentMain"));
-const PageSegmentCenter = dynamic(
-  () => import("./(components)/PageSegmentCenter"),
-);
-const BlackSegment = dynamic(() => import("./(components)/BlackSegment"));
-const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
-const PageSegment5 = dynamic(() => import("./(components)/PageSegment5"));
-const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
+// Below the fold: loaded on demand
+const VbaApps = dynamic(() => import("./(components)/VbaApps"));
+const VbaCapabilities = dynamic(() => import("./(components)/VbaCapabilities"));
+const VbaWorkflow = dynamic(() => import("./(components)/VbaWorkflow"));
+const VbaToolChoice = dynamic(() => import("./(components)/VbaToolChoice"));
+const VbaAi = dynamic(() => import("./(components)/VbaAi"));
+const VbaUpgrades = dynamic(() => import("./(components)/VbaUpgrades"));
+const VbaAddins = dynamic(() => import("./(components)/VbaAddins"));
+const VbaProcess = dynamic(() => import("./(components)/VbaProcess"));
+const VbaFaq = dynamic(() => import("./(components)/VbaFaq"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
+// Hero images are shared with the previous version of this page
 import longDesk from "@/public/pageHeros/longDesk.webp";
 import codingMob from "@/public/pageHeros/mob/codingMob.webp";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/vba-macro-development";
+const PAGE_TITLE = "VBA Macro Development for Excel, Word, Access & Outlook";
+const PAGE_DESCRIPTION =
+  "Custom VBA macros, forms and add-ins for Excel, Word, Access, PowerPoint and Outlook. Australian VBA developers, plus 64-bit and Office upgrade fixes.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+const HERO_ALT = "Long desk in an office";
+const HERO_ALT_MOBILE = "Computer code on a screen";
+
+const DATE_PUBLISHED = "2024-10-26T00:00:00+11:00";
+const DATE_MODIFIED = "2026-10-30T00:00:00+11:00";
+
+// The services this page covers, listed once and turned into the Service schema offer catalogue below
+const services = [
+  [
+    "Custom VBA macros and automation",
+    "Macros that automate repetitive work in Excel, Word, Access, PowerPoint and Outlook.",
+  ],
+  [
+    "Custom forms and user interfaces",
+    "VBA UserForms and popup forms with real-time validation that write into workbooks, documents and databases.",
+  ],
+  [
+    "Custom ribbons and toolbars",
+    "Custom ribbon tabs that put your most-used functions one click away.",
+  ],
+  [
+    "Office add-in development",
+    "VBA, VSTO and web add-ins that make your tools available across every file.",
+  ],
+  [
+    "Macro upgrade and 64-bit compatibility fixes",
+    "Reviewing and repairing macros that fail after an Office, Windows or Outlook upgrade.",
+  ],
+  [
+    "External data connections and API integration",
+    "Live connections from Office files to SQL Server, SharePoint, Dataverse, web APIs and third-party systems.",
+  ],
+  [
+    "Automated reporting",
+    "Reports, charts and pivot tables generated on demand or on a schedule.",
+  ],
+];
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/vba-macro-development",
-      url: "https://www.officeexperts.com.au/services/vba-macro-development",
-      name: "VBA Macro Development | Office Experts Australia",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-10-21T00:00:00+00:00",
-      description:
-        "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/vba-macro-development#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
+      },
+      mainEntity: {
+        "@id": `${PAGE_URL}#service`,
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/vba-macro-development",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
     {
       // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/vba-macro-development#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services",
+          item: `${SITE_URL}/services`,
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "VBA Macro Development",
-          item: "https://www.officeexperts.com.au/services/vba-macro-development",
+          item: PAGE_URL,
         },
       ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#service`,
+      name: "VBA Macro Development",
+      serviceType: "VBA macro development",
+      description: PAGE_DESCRIPTION,
+      url: PAGE_URL,
+      provider: {
+        "@type": "Organization",
+        name: "Office Experts Group",
+        url: SITE_URL,
+      },
+      areaServed: [
+        { "@type": "Country", name: "Australia" },
+        { "@type": "Country", name: "New Zealand" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "VBA services",
+        itemListElement: services.map(([name, description]) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name,
+            description,
+          },
+        })),
+      },
     },
   ],
 };
@@ -86,23 +163,26 @@ const Page = () => {
       />
       <Contents />
       <ServiceHero
-        title={"VBA Macro Development"}
+        title="VBA Macro Development"
         desktopImage={longDesk}
         mobileImage={codingMob}
-        altDesk={"long desk in office"}
-        altMob={"computer code on a screen"}
+        altDesk={HERO_ALT}
+        altMob={HERO_ALT_MOBILE}
       />
-      <ServicePageCards />
-      <PageSegmentMain />
-      <PageSegmentCenter />
-      <BlackSegment />
-      <PageSegment4 />
-      <PageSegment5 />
-      <ExpertsAwait />
+      <VbaIntro />
+      <VbaApps />
+      <VbaCapabilities />
+      <VbaWorkflow />
+      <VbaToolChoice />
+      <VbaAi />
+      <VbaUpgrades />
+      <VbaAddins />
+      <VbaProcess />
       <RelatedLinks
-        theme="light"
+        theme="dark"
         eyebrow="Case Studies"
-        heading="Word automation and macro projects we've delivered"
+        heading=" A few VBA and automation projects"
+        headingAccent="we've delivered"
         links={[
           {
             href: "/case-studies/insurance-word-quoting-report-popup-form",
@@ -128,8 +208,23 @@ const Page = () => {
             imageAlt:
               "Custom Word Master Templates for four entities of a corporate group",
           },
+          {
+            href: "/case-studies/food-manufacturer-excel-costing-workbook",
+            linkText: "See the Excel costing workbook",
+            title:
+              "Merging an array of clunky Excel workbooks into one automated costing system",
+            description:
+              "A food manufacturer built and costed every product in disconnected, in-house Excel workbooks. Data didn't flow between them and key costing components were missing. We rebuilt it as a single Excel Costing Workbook with a forms interface, automatic cost updates and a restricted Admin view of the core costing data.",
+            // Confirm this file exists in /public/case-studies (the other two are taken from the previous page)
+            image:
+              "/case-studies/food-manufacturer-excel-costing-workbookLg.png",
+            imageAlt:
+              "Excel costing workbook with a forms interface for a food manufacturer",
+          },
         ]}
       />
+      <VbaFaq />
+
       <Contact />
     </>
   );

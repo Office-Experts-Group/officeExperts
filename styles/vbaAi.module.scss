@@ -1,0 +1,141 @@
+// styles/vbaAi.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $dark-bg;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.body {
+  @include lede($white-75);
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    max-width: 520px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Two columns: where AI helps, where an expert is needed ──────────────────
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  background: $dark-surface;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.column:last-child {
+  background: $accent;
+
+  .list li::before {
+    background: $white;
+  }
+}
+
+.columnTitle {
+  @include card-title(lg, $white);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    @include small-text($white-88);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.55rem;
+      left: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: $accent-on-dark;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.5rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}

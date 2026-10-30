@@ -1,6 +1,22 @@
+// /services/vba-macro-development/(components)/Contents.jsx
 "use client";
 import React, { useState } from "react";
 import styles from "@/styles/contentsComponent.module.scss";
+
+// Anchor targets match the section ids used by the components on this page
+const links = [
+  { id: "#vba", label: "What VBA Can Do For You" },
+  { id: "#apps", label: "VBA By Application" },
+  { id: "#capabilities", label: "What We Build" },
+  { id: "#workflow", label: "Applications Working Together" },
+  { id: "#which-tool", label: "VBA or Office Scripts?" },
+  { id: "#ai", label: "VBA and AI" },
+  { id: "#upgrades", label: "Upgrades and Compatibility" },
+  { id: "#add-ins", label: "Add-ins and Deployment" },
+  { id: "#process", label: "How We Work" },
+  { id: "#faq", label: "FAQ" },
+];
+
 const Contents = () => {
   const [isHidden, setIsHidden] = useState(true);
 
@@ -38,26 +54,13 @@ const Contents = () => {
             <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"></path>
           </svg>
           <h3>Contents</h3>
-          <a href="#vba" onClick={(e) => handleLinkClick(e, "#vba")}>
-            <div className={styles.contentLink}>
-              <p>What VBA Can Do For You</p>
-            </div>
-          </a>
-          <a href="#macros" onClick={(e) => handleLinkClick(e, "#macros")}>
-            <div className={styles.contentLink}>
-              <p>Macros in Office</p>
-            </div>
-          </a>
-          <a href="#add-ins" onClick={(e) => handleLinkClick(e, "#add-ins")}>
-            <div className={styles.contentLink}>
-              <p>To Extend Functionality</p>
-            </div>
-          </a>
-          <a href="#upgrade" onClick={(e) => handleLinkClick(e, "#upgrade")}>
-            <div className={styles.contentLink}>
-              <p>Your Office Products</p>
-            </div>
-          </a>
+          {links.map(({ id, label }) => (
+            <a key={id} href={id} onClick={(e) => handleLinkClick(e, id)}>
+              <div className={styles.contentLink}>
+                <p>{label}</p>
+              </div>
+            </a>
+          ))}
         </div>
       )}
     </div>

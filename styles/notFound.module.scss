@@ -1,0 +1,59 @@
+// /styles/notFound.module.scss
+@use "./globals" as *;
+
+.section {
+  display: grid;
+  align-items: center;
+  min-height: 75vh;
+  padding-block: $header-offset 4rem;
+  background: $dark-bg;
+  padding-top: $header-offset;
+}
+
+.inner {
+  @include container(1000px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    align-items: center;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.text {
+  @include lede($white-75);
+  max-width: 34rem;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  justify-self: center;
+}

@@ -391,6 +391,10 @@ export const navigationData = {
         href: `/services`,
         items: [
           {
+            label: "Business Analysis",
+            href: `/services/business-analysis`,
+          },
+          {
             label: "Office 365",
             href: `/services/microsoft-office-365`,
           },
@@ -425,6 +429,14 @@ export const navigationData = {
           {
             label: "Publisher",
             href: `/services/microsoft-publisher`,
+          },
+          {
+            label: "OneDrive Cloud Backup",
+            href: `/services/cloud-backup-with-onedrive`,
+          },
+          {
+            label: "API Integrations",
+            href: `/services/microsoft-365-api-integration`,
           },
         ],
       },

@@ -1,0 +1,137 @@
+// styles/vbaCapabilities.module.scss
+@use "./globals" as *;
+
+.section {
+  padding: 7rem $gutter;
+  background: $light-bg;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+}
+
+// ── Bento grid: three illustrated tiles, then two wide tiles, then three ───
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  grid-column: span 2;
+  padding: 1.75rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-3px);
+  }
+}
+
+.tile:nth-child(4),
+.tile:nth-child(5) {
+  grid-column: span 3;
+}
+
+@include belowDesktop {
+  .tile,
+  .tile:nth-child(4),
+  .tile:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+.art {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  @include card-title(md);
+}
+
+.text {
+  @include small-text;
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  @include arrow-link;
+}
+
+// ── The one accent-filled tile ──────────────────────────────────────────────
+.emphasis {
+  background: $accent;
+  border-color: transparent;
+
+  .title {
+    color: $white;
+  }
+
+  .text {
+    color: $white-88;
+  }
+
+  .link {
+    color: $white;
+  }
+}

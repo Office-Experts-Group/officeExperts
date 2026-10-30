@@ -1,47 +1,49 @@
-import React from "react";
+// /services/vba-macro-development/layout.js
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/vba-macro-development";
+const PAGE_TITLE = "VBA Macro Development for Excel, Word, Access & Outlook";
+const PAGE_DESCRIPTION =
+  "Custom VBA macros, forms and add-ins for Excel, Word, Access, PowerPoint and Outlook. Australian VBA developers, plus 64-bit and Office upgrade fixes.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "VBA Macro Development",
-  description:
-    "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
-
-  keywords: ["VBA programming"],
-
-  alternates: {
-    canonical: "/services/vba-macro-development",
-  },
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    "VBA macro development",
+    "VBA programmers Australia",
+    "Excel VBA developer",
+    "Word VBA macros",
+    "Access VBA programming",
+    "Outlook VBA macros",
+    "fix VBA macros 64-bit",
+    "VBA add-ins",
+    "custom Office automation",
+  ],
   openGraph: {
-    title: "VBA Macro Development",
-    description:
-      "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
-    url: "https://www.officeexperts.com.au/services/vba-macro-development",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "VBA Macro Development",
-    description:
-      "We are VBA Macro Experts! Our highly experienced VBA macro programmers are ready to advise you of the best solution to take your business to the next level.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }
