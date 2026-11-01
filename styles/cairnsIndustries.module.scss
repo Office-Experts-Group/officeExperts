@@ -46,7 +46,7 @@
 
 .intro {
   font-size: 1rem;
-  color: $white-55;
+  color: $white-75;
   line-height: 1.85;
   max-width: 60ch;
 }
@@ -86,8 +86,8 @@
   // Right col: description
   grid-template-columns: 38% 1fr;
   align-items: center;
-  gap: 5rem;
-  padding: 5rem 0 5rem 3rem;
+  gap: 3rem;
+  padding: 3rem 0 3rem 3rem;
   border-bottom: 1px solid $white-08;
   overflow: hidden;
 
@@ -209,13 +209,13 @@
 // ── Right column: description ─────────────────
 .rowDesc {
   font-size: 0.95rem;
-  color: $white-55;
+  color: $white-65;
   line-height: 1.9;
   max-width: 58ch;
   transition: color 0.25s ease;
 
   .row:hover & {
-    color: $white-65;
+    color: $white-75;
   }
 
   @media (max-width: 860px) {

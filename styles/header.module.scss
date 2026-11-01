@@ -564,11 +564,12 @@ $cycle-duration: 33s;
   @include tablet {
     display: none;
   }
-  @include phone {
-    display: none;
-  }
   @include phoneLandscape {
     display: none;
+  }
+  @include phone {
+    scale: 0.8;
+    margin-left: 3vw;
   }
 }
 
@@ -626,7 +627,7 @@ $cycle-duration: 33s;
     display: none;
   }
   @include phone {
-    scale: 0.5;
+    display: none;
   }
 }
 
@@ -636,14 +637,14 @@ $cycle-duration: 33s;
   margin: 0 1rem 0 auto;
   transition: all 0.5s ease;
   @include phone {
-    scale: 0.5;
+    display: none;
   }
 }
 
 .logoImg {
   @include phone {
-    max-width: 150px;
-    max-height: 65px;
+    max-width: 135px;
+    max-height: 58.5px;
     margin: 1rem 0;
   }
 }

@@ -37,7 +37,6 @@ const QuoteLocation = ({ location }) => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
-  const termsRef = useRef(null);
 
   // Check if conversion tracking is available
   useEffect(() => {
@@ -122,7 +121,6 @@ const QuoteLocation = ({ location }) => {
     name: nameRef,
     email: emailRef,
     message: messageRef,
-    acceptTerms: termsRef,
   };
 
   const handleSubmit = async (e) => {
@@ -145,9 +143,6 @@ const QuoteLocation = ({ location }) => {
       newError.email = "*Email is required...";
     } else if (!emailRegex.test(formData.email.trim())) {
       newError.email = "*Invalid email address...";
-    }
-    if (!formData.acceptTerms) {
-      newError.acceptTerms = "*You must accept the terms.";
     }
 
     if (Object.keys(newError).length > 0) {
@@ -206,7 +201,6 @@ const QuoteLocation = ({ location }) => {
           operatingSystem: "",
           softwareVersions: "",
           website: "",
-          acceptTerms: false,
           honeypot: "",
         });
       } else {
@@ -538,47 +532,6 @@ const QuoteLocation = ({ location }) => {
               aria-live="polite"
             >
               {error.file}
-            </p>
-          )}
-        </div>
-        <div className={styles.termsField}>
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              id="acceptTerms"
-              name="acceptTerms"
-              checked={formData.acceptTerms}
-              onChange={handleChange}
-              aria-required="true"
-              aria-invalid={!!error.acceptTerms}
-              required
-              ref={termsRef}
-              disabled={isSubmitting}
-            />
-            <span className={styles.checkboxText}>
-              I accept the{" "}
-              <Link
-                href="/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="/terms-and-conditions"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                Terms and Conditions
-              </Link>
-            </span>
-          </label>
-          {error.acceptTerms && (
-            <p className={styles.errorMessage} role="alert" aria-live="polite">
-              {error.acceptTerms}
             </p>
           )}
         </div>
