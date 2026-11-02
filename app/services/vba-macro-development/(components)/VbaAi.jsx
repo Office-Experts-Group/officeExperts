@@ -62,7 +62,9 @@ const VbaAi = () => (
           </ul>
         </div>
         <div className={styles.column}>
-          <h3 className={styles.columnTitle}>Where an expert earns their keep</h3>
+          <h3 className={styles.columnTitle}>
+            Where an expert earns their keep
+          </h3>
           <ul className={styles.list}>
             {expertHelps.map((item) => (
               <li key={item}>{item}</li>
@@ -76,7 +78,7 @@ const VbaAi = () => (
           Custom AI agents that read and write Office files
           <VbaArrowSvg />
         </Link>
-        <Link href="/services/microsoft-office-365/copilot" className={styles.link}>
+        <Link href="/services/copilot" className={styles.link}>
           Getting value from Copilot in Microsoft 365
           <VbaArrowSvg />
         </Link>
