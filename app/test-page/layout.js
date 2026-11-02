@@ -1,53 +1,48 @@
-// app/services/upgrades-and-migration/layout.js
+// app/test-page/layout.js
+// Design review copy of the new home page. Kept out of search results with
+// noindex until it replaces app/page.js. When it goes live, move this metadata
+// into the home page layout, set PAGE_URL to the site root and remove robots.
+const PAGE_URL = "https://www.officeexperts.com.au/test-page";
+const PAGE_TITLE =
+  "Microsoft Consultants and Developers Australia | Office Experts";
+const PAGE_DESCRIPTION =
+  "Australian Microsoft consultants since 2000. Our team builds, fixes and supports the Word, Excel, Access, Power Platform and AI solutions your business relies on.";
 
-import React from "react";
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // ── Primary metadata ─────────────────────
-  title:
-    "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-  description:
-    "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-
-  keywords: ["Microsoft Office upgrades", "Microsoft migration services"],
-
-  // ── Canonical ────────────────────────────
-  alternates: {
-    canonical: "/services/upgrades-and-migration",
-  },
-
-  // ── OpenGraph ────────────────────────────
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    "microsoft consultants australia",
+    "microsoft developers",
+    "office experts",
+  ],
+  // Test page only: remove when this becomes the home page
+  robots: { index: false, follow: false },
   openGraph: {
-    title:
-      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-    description:
-      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-    url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group — Microsoft Office Upgrades & Migration",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // ── Twitter / X Card ─────────────────────
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title:
-      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-    description:
-      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function UpgradesMigrationLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

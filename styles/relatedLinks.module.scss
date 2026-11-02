@@ -6,7 +6,7 @@
 // Interpolation (#{}) is needed to pass SCSS variables into custom properties.
 .dark {
   --bg: #{$dark-bg};
-  --eyebrow: #{$white-55};
+  --eyebrow: #{$eyebrow-on-dark};
   --heading: #{$white};
   --text: #{$white-75};
   --card-bg: #{$dark-surface};
@@ -33,7 +33,7 @@
 // ── Layout ──────────────────────────────────────
 .section {
   background: var(--bg);
-  padding: 5rem 8rem;
+  padding: 8rem;
 
   @include tablet {
     padding: 4rem 4rem;
@@ -117,19 +117,11 @@
 }
 
 .eyebrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--eyebrow);
+  @include eyebrow(var(--eyebrow));
 }
 
 .heading {
-  font-size: clamp(1.75rem, 3vw, 2.4rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--heading);
+  @include heading-section(var(--heading));
 }
 
 .text {

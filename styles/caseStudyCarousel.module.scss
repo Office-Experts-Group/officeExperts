@@ -6,6 +6,10 @@
 //   .carousel > section > div > ul > li
 //   wrapper     section    inner  grid  card
 
+.carousel {
+  padding: 6rem 0;
+}
+
 // The inner box is the size reference for the cards and the slide distance.
 .carousel > section > div {
   container-type: inline-size;

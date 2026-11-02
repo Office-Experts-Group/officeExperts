@@ -169,6 +169,7 @@
     transform 0.2s ease,
     visibility 0.2s;
   pointer-events: none;
+  z-index: 50;
 
   // Pointer arrow, rotated square sharing the tooltip's border
   &::after {

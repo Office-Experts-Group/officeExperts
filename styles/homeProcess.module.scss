@@ -1,0 +1,367 @@
+// styles/homeProcess.module.scss
+// "How it works": intro on the left, accordion steps on the right joined by a
+// vertical pipe. The pipe is built from pseudo-elements, with no JavaScript:
+//  - .steps::before/::after   the short lead-in above dot 1
+//  - .step::before/::after    the stretch from a step's dot down to the next dot
+// ::before is the grey track, ::after is the accent fill that grows downwards.
+
+@use "./globals.scss" as *;
+
+$dot: 2.75rem; // numbered dot diameter
+$pipe: 3px; // pipe thickness
+$lead: 2rem; // pipe length above the first dot
+$flow: 0.25s; // time for the fill to travel one step
+$pipe-left: calc($dot / 2 - $pipe / 2); // centres the pipe on the dots
+
+// A step counts as "reached" when it is open, keyboard focused or, for mouse
+// users only, hovered. Hover is gated so a tap on a phone doesn't leave it stuck.
+@mixin reached-self {
+  &:has(details[open]),
+  &:has(summary:focus-visible) {
+    @content;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Same test, but for any later step: the pipe has to pass through this one
+@mixin reached-below {
+  &:has(~ .step details[open]),
+  &:has(~ .step summary:focus-visible) {
+    @content;
+  }
+
+  @media (hover: hover) {
+    &:has(~ .step:hover) {
+      @content;
+    }
+  }
+}
+
+// Passed through or reached
+@mixin reached-through {
+  @include reached-self {
+    @content;
+  }
+  @include reached-below {
+    @content;
+  }
+}
+
+// ── Section ──────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 7rem 4rem;
+
+  @include tablet {
+    padding: 5rem 2rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 4rem 6rem;
+  align-items: start;
+  max-width: $container;
+  margin: 0 auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Intro ────────────────────────────────────
+.copy {
+  position: sticky;
+  top: $header-offset;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  @include lede;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.phone {
+  font-weight: 700;
+  color: $text-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// ── Steps and pipe ───────────────────────────
+.steps {
+  position: relative;
+  list-style: none;
+  padding: $lead 0 0;
+  // Lets the panels animate their height to "auto" where the browser supports it
+  interpolate-size: allow-keywords;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: $pipe-left;
+    width: $pipe;
+    height: calc($lead + $dot / 2);
+    border-radius: $pipe;
+  }
+
+  &::before {
+    background: $line-strong;
+  }
+
+  &::after {
+    background: $accent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform $flow linear;
+  }
+
+  // The lead-in fills as soon as any step is reached
+  &:has(details[open]),
+  &:has(summary:focus-visible) {
+    &::after {
+      transform: scaleY(1);
+    }
+  }
+
+  @media (hover: hover) {
+    &:has(.step:hover)::after {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.step {
+  position: relative;
+  padding: 0 0 2rem calc($dot + 1.5rem);
+
+  // Track and fill from this dot's centre down to the next dot's centre
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc($dot / 2);
+    bottom: calc($dot / -2);
+    left: $pipe-left;
+    width: $pipe;
+    border-radius: $pipe;
+  }
+
+  &::before {
+    background: $line-strong;
+  }
+
+  &::after {
+    background: $accent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform $flow linear;
+  }
+
+  // Fills once a later step is reached. The delay grows with the step's
+  // position, so the fill runs on down the pipe instead of all at once.
+  @include reached-below {
+    &::after {
+      transform: scaleY(1);
+      transition-delay: calc(var(--i) * $flow);
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  // The dot lights up as the pipe arrives, so it waits for the stretch above it
+  @include reached-through {
+    .dot {
+      background: $accent;
+      border-color: $accent;
+      color: $white;
+      transition-delay: calc(max(var(--i), 1) * $flow);
+    }
+  }
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: $dot;
+  height: $dot;
+  border: 2px solid $line-strong;
+  border-radius: 50%;
+  background: $white;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: $text-muted;
+  transition:
+    background-color $flow linear,
+    border-color $flow linear,
+    color $flow linear;
+}
+
+// ── Accordion ────────────────────────────────
+.details {
+  // Native height animation for the panel where supported (older browsers just snap)
+  &::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition:
+      block-size 0.5s ease,
+      content-visibility 0.5s allow-discrete;
+  }
+
+  &[open]::details-content {
+    block-size: auto;
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: $dot;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  // Chevron, flips when the step is open
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-left: auto;
+    border: solid $text-muted;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-0.15rem) rotate(45deg);
+    transition: all 0.5s ease;
+  }
+
+  .details[open] > &::after {
+    transform: translateY(0.15rem) rotate(-135deg);
+    color: $accent;
+  }
+}
+
+.stepTitle {
+  @include card-title(lg);
+  transition: color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .summary:hover .stepTitle {
+    color: $accent;
+  }
+}
+
+.stepText {
+  max-width: 34rem;
+  padding-top: 0.5rem;
+  @include lede;
+  @include inline-link;
+}
+
+// ── Draw-in on scroll ────────────────────────
+// Where scroll-driven animation is supported, the lead-in and first dot draw as
+// the list scrolls into view. Elsewhere they simply start in their final state.
+@supports (animation-timeline: view()) {
+  .steps {
+    view-timeline: --process-steps block;
+
+    &::after {
+      animation: pipeDraw linear backwards;
+      animation-timeline: --process-steps;
+      animation-range: entry 5% entry 30%;
+    }
+  }
+
+  .step:first-child .dot {
+    animation: dotReach linear backwards;
+    animation-timeline: --process-steps;
+    animation-range: entry 26% entry 34%;
+  }
+}
+
+@keyframes pipeDraw {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes dotReach {
+  from {
+    background-color: $white;
+    border-color: $line-strong;
+    color: $text-muted;
+  }
+}
+
+// Nothing slides or draws for visitors who ask for reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .steps::after,
+  .step::after,
+  .dot,
+  .stepTitle,
+  .summary::after,
+  .details::details-content {
+    transition: none;
+    animation: none;
+  }
+}

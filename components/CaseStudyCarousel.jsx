@@ -6,16 +6,9 @@ import { caseStudies } from "../app/case-studies/caseStudies";
 import { cardCopy } from "../app/case-studies/caseStudyCardCopy";
 
 import styles from "@/styles/caseStudyCarousel.module.scss";
-// Case study pages and images live on this domain, so every other Office
-// Experts Group site links to it. On officeexperts.com.au itself pass
-// baseUrl="" to keep links and images on the same domain.
-// Sites on a different domain need this domain added to images.remotePatterns
-// in next.config.js.
-const DEFAULT_BASE_URL = "https://www.officeexperts.com.au";
 
-// How long the slide takes per card. The total is set from the number of
-// cards, so adding case studies never speeds the carousel up.
-const DEFAULT_SECONDS_PER_CARD = 5;
+const DEFAULT_BASE_URL = "https://www.officeexperts.com.au";
+const DEFAULT_SECONDS_PER_CARD = 10;
 
 // Puts the case studies for one site first. The original order is kept inside
 // each group, and every case study is still included.
@@ -27,34 +20,11 @@ const sortBySite = (studies, site) => {
   ];
 };
 
-/**
- * A right-to-left carousel of every case study, built on RelatedLinks.
- * Server component: no client JavaScript, so every link is in the initial HTML.
- * The sliding is done entirely in CSS (see caseStudyCarousel.module.scss).
- *
- * Props:
- * - site: "office" | "word" | "excel" | "powerplatform" | "access".
- *   Case studies with this site value are shown first (optional)
- * - theme: "dark" or "light", passed to RelatedLinks (default "light")
- * - eyebrow, heading, text: passed to RelatedLinks
- * - studies: array of case studies (default: the caseStudies array)
- * - baseUrl: domain used for the case study links and images
- * - limit: show only the first N case studies after ordering (optional)
- * - secondsPerCard: slide speed (default 5)
- * - getLinkText: function(study) returning the button text (optional)
- *
- * Card text, in order of preference:
- * - description: study.truncatedDescription, then cardCopy[slug], then study.summary
- * - button text: getLinkText, then study.linkText, then cardCopy[slug], then
- *   "Read the {industry} case study"
- * - image alt: study.imageAlt, then study.title
- */
 const CaseStudyCarousel = ({
   site,
   theme = "dark",
   eyebrow = "Case Studies",
-  heading = "Case studies from our client work",
-  text,
+  heading = "Case studies from our",
   studies = caseStudies,
   baseUrl = DEFAULT_BASE_URL,
   limit,
@@ -66,6 +36,9 @@ const CaseStudyCarousel = ({
 
   // Nothing to show, so render nothing
   if (!list.length) return null;
+
+  const text =
+    "Browse recent work from our consultants across the Microsoft suite. Each project started with a real business problem, whether a manual process, a tangled spreadsheet or an ageing database, and ended with a solution that saves time and holds up day to day.";
 
   const links = list.map((study) => {
     const copy = cardCopy[study.slug] ?? {};
@@ -96,6 +69,7 @@ const CaseStudyCarousel = ({
         theme={theme}
         eyebrow={eyebrow}
         heading={heading}
+        headingAccent={"client work"}
         text={text}
         links={links}
       />

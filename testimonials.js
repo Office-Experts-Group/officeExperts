@@ -336,15 +336,6 @@ export const testimonials = [
   },
   {
     content:
-      "Penny provided a fantastic service in attending to our Excel needs. It was a pleasure working with someone who had such a genuine customer focus. Penny actively listened to our needs and provided quality value-added solutions that were delivered in a timely manner. It's great to deal with someone who gives you confidence that your needs are being met in a professional and sincere manner. I would have no hesitation in recommending Penny from Office Experts.",
-    name: "Adrian Pollock",
-    contact: "www.queenslandrail.com.au",
-    image: queenslandRailLogo,
-    width: 150,
-    height: 23,
-  },
-  {
-    content:
       "Engaging Office Experts, and specifically Jason to handle an inventory upload project saved us time, money and made the process much more streamlined and automated. They were a pleasure to deal with, got the job done ahead of time and communicated progress throughout. Thoroughly recommend their services to anyone.",
     name: "Glen Blakely",
     contact: "www.trackspares.com.au",

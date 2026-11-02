@@ -149,7 +149,7 @@ $scroll-offset: 150px;
 $heading-size: clamp(2.4rem, 4.5vw, 3.8rem); // main heading
 $heading-size-section: clamp(1.9rem, 3.2vw, 2.75rem); // section heading
 $heading-weight: 700;
-$eyebrow-size: 0.8rem; // A1: read "8rem" as 0.8rem; change here if wrong
+$eyebrow-size: 0.9rem;
 $eyebrow-tracking: 0.06rem;
 
 @mixin hide-on-phone {
@@ -162,7 +162,7 @@ $eyebrow-tracking: 0.06rem;
   font-size: $eyebrow-size;
   font-weight: 700;
   letter-spacing: $eyebrow-tracking;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: $color;
   @include hide-on-phone;
 }

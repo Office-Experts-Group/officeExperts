@@ -136,16 +136,14 @@ const SolutionsCarousel = () => (
         <span className={styles.headingMuted}>only solutions.</span>
       </h2>
       <p className={styles.intro}>
-        We work across every area of Microsoft, from Word, Excel, Access,
-        PowerPoint and Outlook to Microsoft 365, SharePoint, Power Platform and
-        Azure. We also build AI agents and custom web apps, so you can solve a
-        problem with one team rather than several.
+        We work across every platform in the Microsoft suite. We also build AI
+        agents, custom web apps and design complete business process solutions,
+        so you can solve a problem with one team rather than several.
       </p>
       <p className={styles.intro}>
         Every project begins with a full business analysis. We look at how your
         people, data and processes fit together, then deliver integrated
-        software solutions that work as one system, from the first workflow to
-        the final report.
+        software solutions that work as one system.
       </p>
       <p className={styles.intro}>
         Unsure of what you need?{" "}

@@ -1,0 +1,304 @@
+// styles/heroStage.module.scss
+// Illustration for HeroStageSvg. data-frame is written by HeroRotator on a parent
+// element; attribute selectors are not renamed by CSS modules, so they work here.
+// Only transform and opacity are animated, which the browser handles off the
+// main thread and which never causes layout shift.
+@use "./globals" as *;
+
+$ease: cubic-bezier(0.65, 0, 0.35, 1);
+
+.stage {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// ── Always running: orbit, float, hub glow ──────
+.orbit {
+  transform-box: view-box;
+  transform-origin: 280px 230px;
+  animation: spin 60s linear infinite;
+}
+
+.ring {
+  fill: none;
+  stroke: $white-12;
+  stroke-dasharray: 2 8;
+}
+
+.orbitDot {
+  fill: $accent-on-dark;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.hub {
+  fill: $accent;
+}
+
+.hubGlow {
+  fill: $accent;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: breathe 4s ease-out infinite;
+}
+
+.hubLabel {
+  fill: $white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+// ── Tiles ───────────────────────────────────────
+.tileState {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.9s $ease,
+    opacity 0.6s ease;
+}
+
+.tile {
+  fill: $dark-surface;
+  stroke: $white-12;
+}
+
+.glyph {
+  fill: $white-18;
+}
+
+.glyphAccent {
+  fill: $accent-on-dark;
+}
+
+.label {
+  fill: $white-55;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.warn {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.4s $ease,
+    opacity 0.3s ease;
+}
+
+.warnDot {
+  fill: $error;
+}
+
+.warnText {
+  fill: $white;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+// ── Connectors, pulses and tick ─────────────────
+.link {
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0.6;
+  transition:
+    stroke-dashoffset 0.9s $ease 0.35s,
+    opacity 0.6s ease;
+}
+
+.pulses {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pulse {
+  fill: $accent-on-dark;
+  animation: travel 2.4s linear infinite;
+}
+
+.tick {
+  opacity: 0;
+  transform: scale(0.4);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.5s $ease 0.8s,
+    opacity 0.3s ease 0.8s;
+}
+
+.tickDot {
+  fill: $white;
+}
+
+.tickMark,
+.answerTick {
+  fill: none;
+  stroke: $accent;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+// ── Bubbles ─────────────────────────────────────
+.bubble {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    transform 0.6s $ease,
+    opacity 0.4s ease;
+}
+
+.bubbleLight {
+  fill: $white;
+}
+
+.bubbleAccent {
+  fill: $accent;
+}
+
+.bubbleIcon {
+  fill: $accent;
+}
+
+.bubbleIconText {
+  fill: $white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.lineDark {
+  fill: rgba($dark-bg, 0.14);
+}
+
+.lineLight {
+  fill: $white-55;
+}
+
+// ── Frame 1: scattered, tilted, problems flagged ─
+[data-frame="0"] {
+  .docs {
+    transform: translate(56px, 50px) rotate(-9deg);
+  }
+  .sheets {
+    transform: translate(-60px, 64px) rotate(7deg);
+  }
+  .data {
+    transform: translate(62px, -46px) rotate(6deg);
+  }
+  .ai {
+    transform: translate(-48px, -60px) rotate(-5deg);
+  }
+}
+
+// Warning badges only belong to frame 1
+[data-frame="1"],
+[data-frame="2"] {
+  .warn {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  .link {
+    stroke-dashoffset: 0;
+  }
+  .tick {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ── Frame 2: connected (tiles use their drawn position) ─
+[data-frame="1"] .pulses {
+  opacity: 1;
+}
+
+// ── Frame 3: tools step back, question and answer appear ─
+[data-frame="2"] {
+  .tileState {
+    opacity: 0.35;
+  }
+  .docs {
+    transform: translate(-14px, -14px) scale(0.92);
+  }
+  .sheets {
+    transform: translate(14px, -14px) scale(0.92);
+  }
+  .data {
+    transform: translate(-14px, 14px) scale(0.92);
+  }
+  .ai {
+    transform: translate(14px, 14px) scale(0.92);
+  }
+  .link {
+    opacity: 0.15;
+  }
+  .bubble {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+  }
+  .bubbleAnswer {
+    transition-delay: 0.9s;
+  }
+}
+
+// ── Reduced motion: keep the frame layouts, drop the movement ─
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .float,
+  .hubGlow,
+  .pulse {
+    animation: none;
+  }
+  .hubGlow {
+    opacity: 0;
+  }
+  .tileState,
+  .bubble,
+  .link {
+    transition-duration: 0.01s;
+    transition-delay: 0s;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes breathe {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.18, 1.35);
+  }
+}
+
+@keyframes travel {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 0;
+  }
+}

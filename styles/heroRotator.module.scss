@@ -1,0 +1,197 @@
+// styles/heroRotator.module.scss
+// Layout, frame switching and tab controls for HeroRotator.
+// Frames are matched to data-frame by position (nth-child), so HomeHero keeps
+// plain markup and the client component never needs to touch its children.
+@use "./globals" as *;
+
+$frame-count: 3;
+$exit: 0.3s; // outgoing frame fades this fast before the next one starts
+
+// ── Layout ──────────────────────────────────────
+.rotator {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  min-width: 0;
+}
+
+.visual {
+  @include belowDesktop {
+    width: min(100%, 32rem);
+    justify-self: center;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+// ── Frames ──────────────────────────────────────
+// Every frame shares one grid cell, so the block is always as tall as the
+// longest frame and nothing below it moves when frames swap (no CLS).
+.frames {
+  display: grid;
+  align-items: start;
+
+  > * {
+    grid-area: 1 / 1;
+    visibility: hidden;
+    transition: visibility 0s linear $exit;
+  }
+
+  // Each line of a frame rises in shortly after the one before it
+  > * > * {
+    opacity: 0;
+    transform: translateY(0.9rem);
+    transition:
+      opacity $exit ease,
+      transform $exit ease;
+  }
+}
+
+@for $i from 0 to $frame-count {
+  .rotator[data-frame="#{$i}"] .frames > :nth-child(#{$i + 1}) {
+    visibility: visible;
+    transition: none;
+
+    > * {
+      opacity: 1;
+      transform: none;
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    @for $n from 1 through 5 {
+      > :nth-child(#{$n}) {
+        transition-delay: $exit + $n * 0.07s;
+      }
+    }
+  }
+}
+
+// ── Tabs with progress bars ─────────────────────
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat($frame-count, 1fr);
+  gap: 1rem;
+  flex: 1;
+  max-width: 32rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0 0.2rem;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: $eyebrow-tracking;
+  text-align: left;
+  color: $white-55;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &[aria-selected="true"] {
+    color: $white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 4px;
+  }
+}
+
+.track {
+  position: relative;
+  height: 3px;
+  overflow: hidden;
+  background: $white-12;
+  border-radius: $radius-pill;
+}
+
+// Duration is set inline per frame; animationend advances to the next frame
+.fill {
+  position: absolute;
+  inset: 0;
+  background: $accent-on-dark;
+  transform-origin: left;
+  animation: progress linear forwards;
+}
+
+.toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: $white-08;
+  border: 0;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $white-18;
+  }
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 3px;
+  }
+}
+
+// ── Pausing ─────────────────────────────────────
+// Paused by the visitor: bar shows full and no timer runs
+.rotator[data-paused="true"] .fill {
+  animation: none;
+}
+
+// Hovering the copy or tabbing through its links holds the current frame.
+// Scrolled out of view freezes everything, illustration included.
+.copy:has(.frames:hover, .frames :focus-visible) .fill,
+.rotator[data-onscreen="false"] * {
+  animation-play-state: paused;
+}
+
+// Reduced motion: no autoplay at all, the tabs still switch frames
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    animation: none;
+  }
+  .toggle {
+    display: none;
+  }
+  .frames > * > * {
+    transform: none;
+  }
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+}

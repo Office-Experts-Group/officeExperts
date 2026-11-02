@@ -84,17 +84,17 @@ const pathsWithDifferentCanonicals = new Set([
 
   // blogs
   "/blog/20-advanced-excel-shortcuts",
-  "/blog/convert-canva-to-word",
+  // "/blog/convert-canva-to-word",
   "/blog/convert-custom-excel-shortcuts-with-macros",
   "/blog/export-to-pdf-in-power-apps",
-  "/blog/fields-and-repeating-data-in-word",
+  // "/blog/fields-and-repeating-data-in-word",
   "/blog/file-attachments-in-power-apps",
   "/blog/power-apps-pdf-function",
   "/blog/power-apps-with-sql-database",
   "/blog/sharepoint-lists",
   "/blog/spreadsheet-errors-in-excel",
-  "/blog/ultimate-guide-to-word-templates",
-  "/blog/word-templates-for-legal-firms",
+  // "/blog/ultimate-guide-to-word-templates",
+  // "/blog/word-templates-for-legal-firms",
   "/blog/custom-excel-shortcuts-with-macros",
   // office 365
   "/services/microsoft-office-365/office-365-implementation",

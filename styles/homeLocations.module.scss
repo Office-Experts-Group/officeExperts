@@ -1,0 +1,71 @@
+// styles/homeLocations.module.scss
+// City links block near the end of the new home page.
+@use "./globals" as *;
+
+.section {
+  background: $light-bg;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4.5rem 2rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  @include lede;
+}
+
+.link {
+  @include arrow-link;
+}
+
+// ── Coverage map ────────────────────────────────
+// White card so the light-background map sits cleanly on $light-bg
+.map {
+  width: 100%;
+  max-width: 32rem;
+  justify-self: end;
+  max-height: 60vh;
+
+  @include belowDesktop {
+    justify-self: center;
+  }
+}

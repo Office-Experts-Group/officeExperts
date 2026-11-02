@@ -1,135 +1,107 @@
-// app/services/upgrades-and-migration/page.js
-
+// app/test-page/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-import MigrationHero from "./(components)/MigrationHero";
-import Contact from "@/components/Contact";
+// Above the fold: normal import so it is in the first chunk
+import HomeHero from "./(components)/HomeHero";
 
-import upgrades from "@/public/pageHeros/upgrades.webp";
-import upgradesMob from "@/public/pageHeros/mob/upgradesMob.webp";
+// Below the fold: next/dynamic splits them into their own chunks.
+// They are still server rendered, so all their content is in the HTML.
+const HomeTrust = dynamic(() => import("./(components)/HomeTrust"));
+// Existing production component, shared with the live home page
+const SolutionsCarousel = dynamic(
+  () => import("../(components)/SolutionsCarousel"),
+);
+const HomeProcess = dynamic(() => import("./(components)/HomeProcess"));
+const HomeTestimonials = dynamic(
+  () => import("./(components)/HomeTestimonials"),
+);
+const CaseStudyCarousel = dynamic(
+  () => import("@/components/CaseStudyCarousel"),
+);
+const HomeLocations = dynamic(() => import("./(components)/HomeLocations"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-// ── Below-the-fold dynamic imports ───────────────────────
-const MigrationProblem = dynamic(
-  () => import("./(components)/MigrationProblem"),
-);
-const MigrationStack = dynamic(() => import("./(components)/MigrationStack"));
-const MigrationPaths = dynamic(() => import("./(components)/MigrationPaths"));
-const MigrationChallenges = dynamic(
-  () => import("./(components)/MigrationChallenges"),
-);
-const MigrationScenarios = dynamic(
-  () => import("./(components)/MigrationScenarios"),
-);
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
 
-// ── Schema ────────────────────────────────────────────────
+// Swap PAGE_URL for SITE_URL when this replaces the home page
+const PAGE_URL = "https://www.officeexperts.com.au/test-page";
+const PAGE_TITLE =
+  "Microsoft Consultants and Developers Australia | Office Experts";
+const PAGE_DESCRIPTION =
+  "Australian Microsoft consultants since 2000. Our team builds, fixes and supports the Word, Excel, Access, Power Platform and AI solutions your business relies on.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const DATE_PUBLISHED = "2018-07-16T02:07:45+10:00";
+const DATE_MODIFIED = "2026-11-01T00:00:00+11:00";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(
+      "https://www.officeexperts.com.au",
+      "Office Experts Group",
+      "Your Microsoft Office Design, Development and Consulting Experts",
+    ),
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/services/upgrades-and-migration",
-      url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
-      name: "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-05-01T00:00:00+00:00",
-      description:
-        "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-      breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/upgrades-and-migration#breadcrumb",
+      about: {
+        "@id": `${SITE_URL}#organization`,
       },
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/upgrades-and-migration",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
+    // The services the home page summarises, as one catalogue the provider offers
     {
-      "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/upgrades-and-migration#breadcrumb",
+      "@type": "OfferCatalog",
+      "@id": `${PAGE_URL}#services`,
+      name: "Microsoft consulting and development services",
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au",
+        "Business analysis",
+        "AI agent development",
+        "Microsoft 365 and Copilot",
+        "Business process automation",
+        "VBA and macro development",
+        "Dashboards and reporting",
+        "Database and SQL Server development",
+        "Web apps and custom software",
+        "Upgrades and migration",
+        "Word and PowerPoint templates",
+        "Microsoft support and training",
+      ].map((name) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name,
+          provider: { "@id": `${SITE_URL}#organization` },
+          areaServed: { "@type": "Country", name: "Australia" },
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: "https://www.officeexperts.com.au/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Our Microsoft Office Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-office",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "Upgrades and Migration",
-        },
-      ],
+      })),
     },
   ],
 };
 
-// ── Metadata ──────────────────────────────────────────────
-export const metadata = {
-  title:
-    "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-  description:
-    "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-
-  openGraph: {
-    title:
-      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-    description:
-      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments -- connecting your tools into a system that actually works together.",
-    url: "https://www.officeexperts.com.au/services/upgrades-and-migration",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
-    locale: "en-AU",
-    type: "website",
-  },
-
-  keywords: ["Microsoft Office upgrades", "Microsoft migration services"],
-
-  twitter: {
-    card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title:
-      "Microsoft Office Upgrades & Migration Services | Office Experts Australia",
-    description:
-      "Expert Microsoft Office upgrades and migration services across Australia. We modernise legacy Excel workbooks, Access databases, and disconnected 365 environments. Get the full power from your Microsoft Office tools.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical: "/services/upgrades-and-migration",
-  },
-};
-
-// ── Page ──────────────────────────────────────────────────
 const Page = () => {
   return (
     <>
@@ -137,20 +109,17 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Upgrades and Migration"
-        desktopImage={upgrades}
-        mobileImage={upgradesMob}
-        altDesk="Upgrading Microsoft Office"
-        altMob="Upgrading Microsoft Office"
-      />
-      <MigrationHero />
-      <MigrationProblem />
-      <MigrationStack />
-      <MigrationPaths />
-      <MigrationChallenges />
-      <MigrationScenarios />
-      <Contact />
+
+      <main>
+        <HomeHero />
+        <HomeTrust />
+        <SolutionsCarousel />
+        <HomeProcess />
+        <HomeTestimonials />
+        <CaseStudyCarousel />
+        <HomeLocations />
+        <Contact />
+      </main>
     </>
   );
 };
