@@ -23,7 +23,7 @@ const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-gold-coast";
 
 const PAGE_DESCRIPTION =
-  "Need better business systems on the Gold Coast? Our Microsoft consultants build custom AI agents, databases, Power Apps and any other microsoft solution you need.";
+  "Need better business systems on the Gold Coast? Our Microsoft consultants build custom AI agents, databases, Power Apps and more.";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -40,7 +40,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Gold Coast | Office Experts Group Australia",
+      name: "Microsoft Consultants Gold Coast",
       description: PAGE_DESCRIPTION,
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {

@@ -32,7 +32,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Perth | Office Experts Group Australia",
+      name: "Microsoft Consultants Perth",
       description:
         "Australia's leading Microsoft consultants with a local Perth team. For over 25 years we have provided software solutions across the entire Microsoft suite. Contact us for a free consultation.",
       about: { "@id": `${PAGE_URL}#localbusiness` },

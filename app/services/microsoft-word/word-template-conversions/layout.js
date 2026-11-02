@@ -3,7 +3,7 @@ const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/word-template-conversions";
 const PAGE_TITLE = "Word Template Conversions | Office Experts";
 const PAGE_DESCRIPTION =
-  "Professional Word template conversions in Australia. We convert Adobe, InDesign and PDF files into fully functional, on-brand Microsoft Word templates, and build fillable PDF forms from Word.";
+  "We convert Adobe, InDesign and PDF files into fully functional, on-brand Word templates, and build fillable PDF forms from Word. Australia-wide.";
 
 const OG_IMAGE = {
   url: "/logo.png",

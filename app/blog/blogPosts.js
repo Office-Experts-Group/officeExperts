@@ -60,7 +60,7 @@ export const blogPosts = [
     title: "How to Convert a Canva Design into a Microsoft Word Template",
     description:
       "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Power Pivot, and more.",
-    slug: "https://www.officeexperts.com.au/blog/convert-canva-to-word",
+    slug: "/blog/convert-canva-to-word",
     date: "April 14, 2025",
     author: "Daniel Thomas",
     readingTime: "5 min",
@@ -74,7 +74,7 @@ export const blogPosts = [
     title: "Ultimate Guide to Microsoft Word Templates",
     description:
       "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.",
-    slug: "https://www.officeexperts.com.au/blog/ultimate-guide-to-word-templates",
+    slug: "/blog/ultimate-guide-to-word-templates",
     date: "April 8, 2025",
     author: "Daniel Thomas",
     readingTime: "8 min",
@@ -132,7 +132,7 @@ export const blogPosts = [
       "Fields and Repeating Data in Word: Best Practices for Business Templates",
     description:
       "Learn how to use Word's fields to transform static templates into dynamic, error-resistant tools. Master REF fields, document properties, and content controls to eliminate manual data entry and reduce costly errors.",
-    slug: "https://www.officeexperts.com.au/blog/fields-and-repeating-data-in-word",
+    slug: "/blog/fields-and-repeating-data-in-word",
     date: "July 24, 2025",
     author: "Daniel Thomas",
     readingTime: "12 min",
@@ -145,7 +145,7 @@ export const blogPosts = [
     title: "Creating Word Templates for Legal Firms: Best Practices",
     description:
       "Learn how to create professional, efficient Word templates for legal firms. Discover best practices for reducing errors, ensuring consistency, and protecting client confidentiality with smart template design.",
-    slug: "https://www.officeexperts.com.au/blog/word-templates-for-legal-firms",
+    slug: "/blog/word-templates-for-legal-firms",
     date: "July 25, 2025",
     author: "Daniel Thomas",
     readingTime: "10 min",
@@ -188,7 +188,7 @@ export const blogPosts = [
       "Google Docs vs Microsoft Word: Which Is Best for Enterprise Workflows?",
     description:
       "Compare Google Docs and Microsoft Word for enterprise use. Discover why many organisations migrate from Google Docs to Word for advanced features, compliance, automation, and scalability needs.",
-    slug: "https://www.officeexperts.com.au/blog/google-docs-vs-microsoft-word",
+    slug: "/blog/google-docs-vs-microsoft-word",
     date: "August 27, 2025",
     author: "Rochelle Robinson",
     readingTime: "12 min",
@@ -216,7 +216,7 @@ export const blogPosts = [
     title: "PDF to Word Conversion That Works for Business",
     description:
       "Discover why professional PDF to Word conversion matters for business. Learn about accuracy, security, and formatting challenges that free converters can't handle.",
-    slug: "https://www.officeexperts.com.au/blog/pdf-to-word-conversion",
+    slug: "/blog/pdf-to-word-conversion",
     date: "October 3, 2025",
     author: "Aleisha Robinson",
     readingTime: "10 min",
@@ -324,5 +324,33 @@ export const blogPosts = [
     featured: true,
     youtubeId: null,
     imagePath: "/blog/2gb/stop.webp",
+  },
+  {
+    id: 24,
+    title: "Microsoft Word for Mac: What You Need to Know",
+    description:
+      "Discover the real differences between Word for Mac and Windows. Learn about missing features, VBA limitations, workarounds, and whether Word for Mac is right for your workflow.",
+    slug: "/blog/microsoft-word-for-mac",
+    date: "December 13, 2025",
+    author: "Rochelle Robinson",
+    readingTime: "11 min",
+    category: "Word",
+    featured: false,
+    youtubeId: null,
+    imagePath: "/blog/word-mac/word-to-mac.webp",
+  },
+  {
+    id: 25,
+    title: "Word Desktop vs Web: Do You Really Need to Pay?",
+    description:
+      "Compare Word for Web and desktop versions to find out which is right for you. Understand feature differences, pricing options, and when the free web version is enough for your needs.",
+    slug: "/blog/word-desktop-vs-web",
+    date: "December 15, 2025",
+    author: "Rochelle Robinson",
+    readingTime: "15 min",
+    category: "Comparison",
+    featured: true,
+    youtubeId: null,
+    imagePath: "/blog/desktop/desktop-or-web.webp",
   },
 ];

@@ -31,7 +31,7 @@ const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-word/word-template-conversions`;
 const PAGE_TITLE = "Word Template Conversions | Office Experts";
 const PAGE_DESCRIPTION =
-  "Professional Word template conversions in Australia. We convert Adobe, InDesign and PDF files into fully functional, on-brand Microsoft Word templates, and build fillable PDF forms from Word.";
+  "We convert Adobe, InDesign and PDF files into fully functional, on-brand Word templates, and build fillable PDF forms from Word. Australia-wide.";
 
 const DATE_PUBLISHED = "2018-01-13T14:25:35+00:00";
 const DATE_MODIFIED = "2026-10-27T00:00:00+11:00";
@@ -39,26 +39,25 @@ const DATE_MODIFIED = "2026-10-27T00:00:00+11:00";
 // Case studies shown in the RelatedLinks block
 const CASE_STUDIES = [
   {
-    href: "https://www.officeexperts.com.au/case-studies/government-health-master-template-document-transfer",
+    href: "/case-studies/government-health-master-template-document-transfer",
     linkText: "Explore the rebranded Master Template",
     title:
       "Rebranding a Master Template, then transferring a whole document set into it",
     description:
       "During an organisation-wide branding update, a state government health department needed a new Master Template for its intranet and every existing document brought across. We built the template with a Quick Part for a repeating element, then used our in-house transfer process to move the document set into it without corrupting content, followed by manual refinement for full brand alignment.",
-    image:
-      "https://www.officeexperts.com.au/case-studies/government-health-master-template-transferLg.png",
+    image: "/case-studies/government-health-master-template-transferLg.png",
     imageAlt:
       "Rebranded Master Template and transferred documents for a state government health department",
   },
   {
-    href: "https://www.officeexperts.com.au/case-studies/environmental-consultancy-word-template-rebuild",
+    href: "/case-studies/environmental-consultancy-word-template-rebuild",
     linkText: "Explore the structural fix",
     title:
       "Rebuilding a beautifully designed template that Word itself couldn't cope with",
     description:
       "The client's new Word templates looked exactly right, but hadn't been built the way Word needs to be built, which made them inefficient to use and prone to formatting errors. We rebuilt the entire suite on proper styles, headings and page structure, keeping the approved design intact.",
     image:
-      "https://www.officeexperts.com.au/case-studies/environmental-consultancy-word-template-rebuildLg.png",
+      "/case-studies/environmental-consultancy-word-template-rebuildLg.png",
     imageAlt: "Word template suite rebuilt on proper styles and page structure",
   },
 ];

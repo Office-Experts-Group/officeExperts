@@ -3,17 +3,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title:
-    "Microsoft 365 Copilot Consulting & Integration | Office Experts Group",
+  title: "Microsoft 365 Copilot Consulting & Integration",
   description:
-    "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the Ai Hype.",
+    "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the AI Hype.",
 
   // OpenGraph
   openGraph: {
-    title:
-      "Microsoft 365 Copilot Consulting & Integration | Office Experts Group",
+    title: "Microsoft 365 Copilot Consulting & Integration",
     description:
-      "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the Ai Hype.",
+      "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the AI Hype.",
     url: "https://www.officeexperts.com.au/services/copilot",
     siteName: "Office Experts Group",
     images: [
@@ -35,10 +33,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Microsoft 365 Copilot Consulting & Integration | Office Experts Group",
+    title: "Microsoft 365 Copilot Consulting & Integration",
     description:
-      "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the Ai Hype.",
+      "Expert Microsoft 365 Copilot consulting, deployment and training for Australian businesses. We help your team get real value from Copilot without the AI Hype.",
     images: ["/logo.png"],
   },
 

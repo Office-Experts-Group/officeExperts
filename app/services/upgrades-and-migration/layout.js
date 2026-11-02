@@ -3,7 +3,7 @@ const PAGE_URL =
   "https://www.officeexperts.com.au/services/upgrades-and-migration";
 const PAGE_TITLE = "Microsoft Office Upgrades & Migration Services";
 const PAGE_DESCRIPTION =
-  "Office upgrades and migration across Australia. We modernise legacy Word templates, Excel workbooks and Access databases for Microsoft 365, SQL Server and Azure.";
+  "Office upgrades and migration across Australia. We modernise legacy Word templates, Excel workbooks and Access databases for Microsoft 365 and Azure.";
 
 const OG_IMAGE = {
   url: "/logo.png",

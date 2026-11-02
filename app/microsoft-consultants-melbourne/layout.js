@@ -3,15 +3,15 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultants Melbourne | Office Experts Group Australia",
+  title: "Microsoft Consultants Melbourne",
   description:
-    "Office Experts Group is an Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
+    "Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Consultants Melbourne | Office Experts Group Australia",
+    title: "Microsoft Consultants Melbourne",
     description:
-      "Office Experts Group is an Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
+      "Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
     url: "https://www.officeexperts.com.au/microsoft-consultants-melbourne",
     siteName: "Office Experts Group",
     images: [
@@ -33,9 +33,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Consultants Melbourne | Office Experts Group Australia",
+    title: "Microsoft Consultants Melbourne",
     description:
-      "Office Experts Group is an Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
+      "Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today.",
     images: ["/logo.png"],
   },
 

@@ -3,13 +3,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Migrate Legacy ActiveX & VBScript Solutions | Office Experts Group",
+  title: "Migrate Legacy ActiveX & VBScript Solutions",
   description:
     "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
 
   // OpenGraph
   openGraph: {
-    title: "Migrate Legacy ActiveX & VBScript Solutions | Office Experts Group",
+    title: "Migrate Legacy ActiveX & VBScript Solutions",
     description:
       "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
     url: "https://www.officeexperts.com.au/services/activex-vbscript-migration",
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Migrate Legacy ActiveX & VBScript Solutions | Office Experts Group",
+    title: "Migrate Legacy ActiveX & VBScript Solutions",
     description:
       "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our Australian consultants modernise your legacy macros and controls so nothing breaks.",
     images: ["/logo.png"],

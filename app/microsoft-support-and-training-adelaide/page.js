@@ -35,7 +35,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-adelaide",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-adelaide",
-      name: "Microsoft Support and Training Adelaide | Office Experts Group",
+      name: "Microsoft Support and Training Adelaide",
       description:
         "Professional Microsoft support and training services in Adelaide. Our local experts provide customised training, technical support and troubleshooting.",
       isPartOf: {

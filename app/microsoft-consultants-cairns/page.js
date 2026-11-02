@@ -36,7 +36,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Cairns | Office Experts Group Australia",
+      name: "Microsoft Consultants Cairns",
       description:
         "Microsoft consultants backed by a national team of 25+ specialists. 25+ years helping FNQ businesses streamline operations with sturdy software solutions.",
       about: { "@id": `${PAGE_URL}#localbusiness` },

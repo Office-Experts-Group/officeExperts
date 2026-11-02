@@ -35,7 +35,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Sydney | Office Experts Group Australia",
+      name: "Microsoft Consultants Sydney",
       description:
         "Microsoft Office specialists operating nationally since 2000. Office Experts Group has local consultants in Sydney delivering expert solutions across the entire Microsoft suite.",
       about: { "@id": `${PAGE_URL}#localbusiness` },

@@ -5,8 +5,7 @@ const DESCRIPTION =
 
 export const metadata = {
   // ── Primary metadata ─────────────────────
-  title:
-    "Business Process Automation & AI Integration | Office Experts Australia",
+  title: "Business Process Automation & AI Integration",
   description: DESCRIPTION,
 
   keywords: ["microsoft process automation australia"],
@@ -18,8 +17,7 @@ export const metadata = {
 
   // ── OpenGraph ────────────────────────────
   openGraph: {
-    title:
-      "Business Process Automation & AI Integration | Office Experts Australia",
+    title: "Business Process Automation & AI Integration",
     description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/services/business-process-automation",
     siteName: "Office Experts Group",
@@ -39,8 +37,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title:
-      "Business Process Automation & AI Integration | Office Experts Australia",
+    title: "Business Process Automation & AI Integration",
     description: DESCRIPTION,
     images: ["/logo.png"],
   },

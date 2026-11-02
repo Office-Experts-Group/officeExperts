@@ -31,7 +31,7 @@ const schema = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Business Process Automation & AI Integration | Office Experts Australia",
+      name: "Business Process Automation & AI Integration",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

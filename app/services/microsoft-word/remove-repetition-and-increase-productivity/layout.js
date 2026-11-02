@@ -1,9 +1,9 @@
-// /services/microsoft-word/document-automation/layout.js
+// /services/microsoft-word/remove-repetition-and-increase-productivity/layout.js
 const PAGE_URL =
-  "https://www.officeexperts.com.au/services/microsoft-word/document-automation";
-const PAGE_TITLE = "Word Document Automation Services";
+  "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity";
+const PAGE_TITLE = "Word Document Automation Services | Office Experts";
 const PAGE_DESCRIPTION =
-  "Automate repetitive Word tasks with VBA macros, Building Blocks, smart templates, Copilot and custom AI agents. Australian Word automation experts since 2000.";
+  "Automate repetitive Word tasks and increase productivity. Custom automation solutions for Microsoft Word documents and templates.";
 
 const OG_IMAGE = {
   url: "/logo.png",
@@ -15,16 +15,7 @@ const OG_IMAGE = {
 export const metadata = {
   title: { absolute: PAGE_TITLE },
   description: PAGE_DESCRIPTION,
-  keywords: [
-    "Word document automation",
-    "Microsoft Word automation",
-    "automate Word documents",
-    "Word VBA macros",
-    "Word Building Blocks",
-    "Copilot in Word",
-    "AI document automation",
-    "custom AI agents Word",
-  ],
+  keywords: ["Word document automation"],
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,

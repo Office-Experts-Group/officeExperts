@@ -1,10 +1,9 @@
 // app/microsoft-consultants-gold-coast/layout.js
 import React from "react";
 
-const TITLE =
-  "Microsoft Consultants Gold Coast | Office Experts Group Australia";
+const TITLE = "Microsoft Consultants Gold Coast";
 const DESCRIPTION =
-  "Need better business systems on the Gold Coast? Our Microsoft consultants build custom AI agents, databases, Power Apps and any other microsoft solution you need.";
+  "Need better business systems on the Gold Coast? Our Microsoft consultants build custom AI agents, databases, Power Apps and more.";
 
 export const metadata = {
   // Basic metadata

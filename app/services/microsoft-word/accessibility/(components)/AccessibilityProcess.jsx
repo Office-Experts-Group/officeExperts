@@ -43,10 +43,7 @@ const AccessibilityProcess = () => {
           </p>
           <p className={styles.body}>
             As part of{" "}
-            <Link
-              style={{ color: "#046999", fontWeight: "700" }}
-              href="https://www.officeexperts.com.au"
-            >
+            <Link style={{ color: "#046999", fontWeight: "700" }} href="/">
               Office Experts Group
             </Link>
             , we can also call on our{" "}
@@ -59,7 +56,7 @@ const AccessibilityProcess = () => {
             ,{" "}
             <Link
               style={{ color: "#046999", fontWeight: "700" }}
-              href="https://www.powewrplatformexperts.com.au"
+              href="https://www.powerplatformexperts.com.au"
             >
               Power Platform
             </Link>{" "}

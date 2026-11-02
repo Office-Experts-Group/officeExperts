@@ -23,7 +23,7 @@ const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-consultants-central-coast-nsw";
 
 const PAGE_DESCRIPTION =
-  "Microsoft consultants for the NSW Central Coast, helping businesses improve reporting, streamline manual processes and connect systems with custom Microsoft solutions.";
+  "Microsoft consultants for the NSW Central Coast, helping businesses improve reporting, streamline manual processes and connect their systems.";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -40,7 +40,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Central Coast NSW | Office Experts Group",
+      name: "Microsoft Consultants Central Coast NSW",
       description: PAGE_DESCRIPTION,
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {

@@ -27,7 +27,7 @@ const schema = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Migrate Legacy ActiveX & VBScript Solutions | Office Experts Group",
+      name: "Migrate Legacy ActiveX & VBScript Solutions",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

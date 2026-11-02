@@ -1,7 +1,7 @@
 // app/microsoft-consultants-darwin/layout.js
 import React from "react";
 
-const TITLE = "Microsoft Consultants Darwin | Office Experts Group Australia";
+const TITLE = "Microsoft Consultants Darwin";
 const DESCRIPTION =
   "Microsoft consulting for Darwin businesses, from Excel and Access development to workflow automation and AI solutions, delivered by our Australia-wide team.";
 

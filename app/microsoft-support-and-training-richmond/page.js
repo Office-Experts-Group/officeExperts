@@ -35,7 +35,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-richmond",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-richmond",
-      name: "Microsoft Support and Training Richmond | Office Experts Group",
+      name: "Microsoft Support and Training Richmond",
       description:
         "Professional Microsoft support and training services in Richmond. Our experts provide customised training, technical support and troubleshooting.",
       isPartOf: {

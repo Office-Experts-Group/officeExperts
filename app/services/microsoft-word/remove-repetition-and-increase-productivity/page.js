@@ -1,4 +1,4 @@
-// /services/microsoft-word/document-automation/page.js
+// /services/microsoft-word/remove-repetition-and-increase-productivity/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
@@ -22,10 +22,10 @@ import repetition from "@/public/pageHeros/repetition.webp";
 import repetitionMob from "@/public/pageHeros/mob/repetitionMob.webp";
 
 const PAGE_URL =
-  "https://www.officeexperts.com.au/services/microsoft-word/document-automation";
-const PAGE_TITLE = "Word Document Automation Services";
+  "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity";
+const PAGE_TITLE = "Word Document Automation Services | Office Experts";
 const PAGE_DESCRIPTION =
-  "Automate repetitive Word tasks with VBA macros, Building Blocks, smart templates, Copilot and custom AI agents. Australian Word automation experts since 2000.";
+  "Automate repetitive Word tasks and increase productivity. Custom automation solutions for Microsoft Word documents and templates.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const HERO_ALT = "Microsoft Word automation flow";

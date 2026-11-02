@@ -33,7 +33,7 @@ const PAGE_URL =
 const PAGE_TITLE = "Microsoft Office Upgrades & Migration Services";
 
 const PAGE_DESCRIPTION =
-  "Office upgrades and migration across Australia. We modernise legacy Word templates, Excel workbooks and Access databases for Microsoft 365, SQL Server and Azure.";
+  "Office upgrades and migration across Australia. We modernise legacy Word templates, Excel workbooks and Access databases for Microsoft 365 and Azure.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const HERO_ALT = "Upgrading Microsoft Office";
