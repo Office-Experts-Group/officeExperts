@@ -65,7 +65,7 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Custom Office Solutions",
+          name: "Custom Office Solutions | Office Experts",
           item: "https://www.officeexperts.com.au/services/custom-office-solutions",
         },
       ],

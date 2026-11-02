@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Office Experts Blog",
+  title: "Office Experts Blog | Microsoft Office Guides & Tips",
   description:
     "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
 
   // OpenGraph
   openGraph: {
-    title: "Office Experts Blog",
+    title: "Office Experts Blog | Microsoft Office Guides & Tips",
     description:
       "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
     url: "https://www.officeexperts.com.au/blog",
@@ -32,7 +32,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Office Experts Blog",
+    title: "Office Experts Blog | Microsoft Office Guides & Tips",
     description:
       "Explore in-depth tutorials, tips, and best practices for mastering advanced Microsoft software techniques, including Excel, Power BI, Word, and more.",
     images: ["/logo.png"],

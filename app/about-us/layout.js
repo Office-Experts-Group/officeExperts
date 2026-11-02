@@ -3,12 +3,12 @@ import React from "react";
 export const metadata = {
   title: "About Us - Office Experts Group",
   description:
-    "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and system integrations since 2000.",
+    "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.",
 
   openGraph: {
     title: "About Us - Office Experts Group",
     description:
-      "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and system integrations since 2000.",
+      "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.",
     url: "https://www.officeexperts.com.au/about-us",
     siteName: "Office Experts Group",
     images: [
@@ -30,7 +30,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "About Us",
     description:
-      "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and system integrations since 2000.",
+      "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.",
     images: ["/logo.png"],
   },
   alternates: {

@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Online Solutions",
+  title: "Microsoft Cloud & Online Solutions",
   description:
     "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Online Solutions",
+    title: "Microsoft Cloud & Online Solutions",
     description:
       "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
     url: "https://www.officeexperts.com.au/services/online-solutions",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Online Solutions",
+    title: "Microsoft Cloud & Online Solutions",
     description:
       "Custom online solutions using Microsoft 365, SharePoint, Power Platform and modern Web Development Frameworks to streamline your business.",
     images: ["/logo.png"],

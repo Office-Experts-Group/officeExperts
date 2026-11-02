@@ -16,7 +16,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-publisher",
       url: "https://www.officeexperts.com.au/services/microsoft-publisher",
-      name: "Microsoft Publisher Experts | Microsoft Publisher Consulting | Microsoft Publisher Designers | Office Experts Group",
+      name: "Microsoft Publisher Services | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

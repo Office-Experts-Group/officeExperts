@@ -37,7 +37,7 @@ const schema = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Office 365 Consultants",
+      name: "Microsoft Office 365 Services | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

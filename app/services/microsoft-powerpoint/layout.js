@@ -3,19 +3,11 @@
 // Metadata for the single consolidated PowerPoint page. The four child pages
 // (templates, redesign, VBA, training) now redirect here.
 export const metadata = {
-  title: "PowerPoint Consultants Australia | Templates, Design & Training",
+  title: "PowerPoint Consultants Australia | Templates & Design",
   description:
     "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
 
-  keywords: [
-    "Microsoft PowerPoint consultation",
-    "PowerPoint consultants Australia",
-    "PowerPoint template design",
-    "PowerPoint master slides",
-    "PowerPoint redesign",
-    "PowerPoint VBA automation",
-    "PowerPoint training",
-  ],
+  keywords: ["Microsoft PowerPoint consultation"],
 
   alternates: {
     canonical: "/services/microsoft-powerpoint",
@@ -23,7 +15,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "PowerPoint Consultants Australia | Templates, Design & Training",
+    title: "PowerPoint Consultants Australia | Templates & Design",
     description:
       "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint",
@@ -44,7 +36,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "PowerPoint Consultants Australia | Templates, Design & Training",
+    title: "PowerPoint Consultants Australia | Templates & Design",
     description:
       "Expert Microsoft PowerPoint consultants across Australia. Custom templates and master slides, presentation redesign, VBA automation, training and support.",
     images: ["/logo.png"],

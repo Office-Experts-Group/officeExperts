@@ -70,7 +70,7 @@ const schema = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft PowerPoint Consultants",
+      name: "PowerPoint Consultants Australia | Templates & Training",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

@@ -12,7 +12,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 
-// TODO: add these two images (see hand-off notes)
 import darwin from "@/public/pageHeros/darwin.webp";
 import darwinMob from "@/public/pageHeros/mob/darwinMob.webp";
 
@@ -37,7 +36,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Darwin",
+      name: "Microsoft Consultants Darwin NT",
       description: PAGE_DESCRIPTION,
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
@@ -71,7 +70,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Consultants Darwin",
+          name: "Microsoft Consultants Darwin NT",
         },
       ],
     },

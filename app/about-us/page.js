@@ -36,7 +36,7 @@ const schema = {
       datePublished: "2024-10-26T00:00:00+00:00",
       dateModified: "2026-07-02T00:00:00+00:00",
       description:
-        "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide consulting, support and system integration since 2000.",
+        "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.",
       breadcrumb: {
         "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
       },

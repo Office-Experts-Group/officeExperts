@@ -16,7 +16,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-dot-net",
       url: "https://www.officeexperts.com.au/services/microsoft-dot-net",
-      name: "Microsoft .NET Services | C# | VB.net | VSTO | Office Experts Group",
+      name: "Microsoft .NET Services | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
@@ -56,7 +56,7 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Microsoft .NET",
+          name: "Microsoft .NET Services | Office Experts",
         },
       ],
     },

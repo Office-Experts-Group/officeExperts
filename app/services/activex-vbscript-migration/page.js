@@ -37,7 +37,7 @@ const schema = {
       datePublished: "2026-07-29T00:00:00+00:00",
       dateModified: "2026-07-29T00:00:00+00:00",
       description:
-        "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
+        "Microsoft is disabling ActiveX and retiring VBScript across Office. We modernise your legacy macros and controls so nothing breaks.",
       breadcrumb: {
         "@id": `${PAGE_URL}#breadcrumb`,
       },

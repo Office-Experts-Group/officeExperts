@@ -274,7 +274,7 @@ const QUOTES = {
   rsweb: {
     text: "“Many users expect the converted document to look exactly like the PDF, but in practice the difference in formatting engines (fixed layouts in PDFs vs flowing, editable layout in Word) often means imperfections are inevitable.”",
     source: "RS Web Solutions",
-    href: "https://rswebsols.com",
+    href: "https://www.rswebsols.com",
   },
 };
 

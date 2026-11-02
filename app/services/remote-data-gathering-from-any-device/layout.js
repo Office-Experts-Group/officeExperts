@@ -4,7 +4,7 @@ import React from "react";
 export const metadata = {
   title: "Remote Data Gathering from Any Device | Office Experts",
   description:
-    "Collect data from field staff and remote sites in real time. We build Power Apps mobile forms, Power Automate API integrations, and Azure Logic Apps pipelines that connect your workforce to your systems automatically.",
+    "Collect data from field staff and remote sites in real time with Power Apps mobile forms, Power Automate and Azure Logic Apps, connected to your systems.",
 
   keywords: ["remote data gathering"],
 
@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: "Remote Data Gathering from Any Device | Office Experts",
     description:
-      "Collect data from field staff and remote sites in real time. We build Power Apps mobile forms, Power Automate API integrations, and Azure Logic Apps pipelines that connect your workforce to your systems automatically.",
+      "Collect data from field staff and remote sites in real time with Power Apps mobile forms, Power Automate and Azure Logic Apps, connected to your systems.",
     url: "https://www.officeexperts.com.au/services/remote-data-gathering-from-any-device",
     siteName: "Office Experts Group",
     images: [
