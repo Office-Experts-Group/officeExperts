@@ -42,7 +42,10 @@ const TemplateIntro = () => {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        {/* Text comes first in the HTML; the stylesheet moves the cards to the left on desktop */}
+        <div className={styles.cards}>
+          <TemplateCards images={images} />
+        </div>
+
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
           <div className={styles.content}>
             <span className={styles.eyebrow}>
@@ -73,10 +76,6 @@ const TemplateIntro = () => {
             </a>
           </div>
         </AnimateOnScroll>
-
-        <div className={styles.cards}>
-          <TemplateCards images={images} />
-        </div>
       </div>
     </section>
   );

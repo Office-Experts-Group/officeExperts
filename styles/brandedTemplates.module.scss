@@ -1,0 +1,68 @@
+// /styles/brandedTemplates.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  display: flex;
+  gap: 4rem;
+  margin: 8rem $gutter;
+
+  @include belowDesktop {
+    flex-direction: column;
+    margin: 6rem 4rem;
+  }
+  @include mobile {
+    margin: 3rem 1rem;
+  }
+}
+
+// Fan of template pages, tilted to match the rest of the template page
+.cards {
+  flex: 1;
+  z-index: 1;
+  height: fit-content;
+  margin-right: 2rem;
+  transform: rotate(-10deg);
+
+  // Cards are hidden below desktop, the text carries the section
+  @include belowDesktop {
+    display: none;
+  }
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  // Keeps the text above any of the fan that spills across
+  position: relative;
+  z-index: 2;
+
+  a {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
+.eyebrow {
+  color: $accent;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.heading {
+  @include heading-section($black);
+  margin: 2rem 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  color: $darkGrayText;
+  line-height: 2rem;
+  margin-top: 1rem;
+}

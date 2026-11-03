@@ -54,6 +54,10 @@ shots.mjs
 /.css-baseline/
 /.css-check/
 meeting-notes.md
+deleteUnusedImages.mjs
+findUnusedImages.mjs
+unused-images.csv
+scripts/_deleted-images/
 
 # Playwright
 /test-results/
@@ -61,3 +65,5 @@ meeting-notes.md
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+

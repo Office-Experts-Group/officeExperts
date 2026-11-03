@@ -7,6 +7,8 @@ $text-on-dark: rgba($white, 0.85);
 .section {
   background: $white;
   padding: 8rem;
+  display: flex;
+  flex-direction: column;
   // Clears the fixed header when linked to as #no-more-headaches
   scroll-margin-top: 150px;
 
@@ -29,10 +31,14 @@ $text-on-dark: rgba($white, 0.85);
 // ── Header ───────────────────────────────────
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem 5rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem 4rem;
   align-items: end;
   margin-bottom: 4rem;
+
+  > div {
+    margin-bottom: auto;
+  }
 
   @include belowDesktop {
     grid-template-columns: 1fr;

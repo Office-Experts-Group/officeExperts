@@ -16,31 +16,33 @@
 .inner {
   @include container;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  // minmax(0, ...) stops the fan's intrinsic width from stretching its column
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 4rem;
   align-items: center;
 
   @include belowDesktop {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
-// The cards follow the text in the HTML but sit on the left on desktop.
-// The tilt fans the pages out; z-index keeps any overhang behind the text.
 .cards {
-  order: -1;
   position: relative;
-  // z-index: -1;
   padding: 2rem 0;
-  transform: rotate(-10deg);
+  transform: rotate(-10deg) scale(0.8);
+  transform-origin: left center;
 
   @include belowDesktop {
-    order: 0;
-    transform: rotate(-6deg);
+    transform: rotate(-6deg) scale(0.9);
+    transform-origin: center;
   }
 }
 
 .content {
+  // Positioned so any overflow from the fan tucks behind the text
+  position: relative;
+  // Keeps lines readable no matter how wide the column gets
+  max-width: 36rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

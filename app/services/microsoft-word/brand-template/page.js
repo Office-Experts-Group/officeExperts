@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import ServiceHero from "@/components/ServiceHero";
-import PageSegmentMain from "./(components)/PageSegmentMain";
+import BrandedTemplates from "./(components)/BrandedTemplates";
 
 const Contact = dynamic(() => import("@/components/Contact"));
 const BlackSegment = dynamic(() => import("./(components)/BlackSegment"));
@@ -193,7 +193,7 @@ const Page = () => {
           altDesk={HERO_ALT_DESKTOP}
           altMob={HERO_ALT_MOBILE}
         />
-        <PageSegmentMain />
+        <BrandedTemplates />
         <PageSegment4 />
         <BlackSegment />
         <CompareContainer />
