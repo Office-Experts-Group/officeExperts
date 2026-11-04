@@ -1,6 +1,6 @@
-// app/test-page/(components)/HomeHero.jsx
+// app/(components)/HomeHero.jsx
 // Home page hero: three short frames (who we are, what we do, common questions)
-// that rotate beside one continuous illustration.
+// that rotate beside one continuous animated story (HeroStory).
 // Server component. All the copy lives here as plain JSX, so it is in the first
 // HTML response, indexable by Google and AI crawlers, and easy to edit.
 // HeroRotator (client) only switches between frames; it never touches the text.
@@ -15,8 +15,10 @@ import styles from "@/styles/homeHero.module.scss";
 // illustration's CSS reacts to
 import HeroRotator from "./HeroRotator";
 
-// Decorative illustration; its layout shifts with each frame using CSS only
-import { HeroStageSvg } from "../(svgs)/HeroStageSvg";
+// Animated story illustration (client). It plays one act per frame, so the
+// tab durations come from the same timeline to keep the two in step.
+import HeroStory from "./HeroStory";
+import { STORY_DURATIONS } from "../utils/heroStoryScene";
 import { ArrowIcon } from "../(svgs)/HeroIcons";
 
 const HomeHero = () => {
@@ -61,11 +63,12 @@ const HomeHero = () => {
 
   return (
     <section className={styles.hero} aria-labelledby="home-hero-heading">
-      {/* Frame order must match the labels order. durations are seconds per frame. */}
+      {/* Frame order must match the labels order. One duration (seconds) per frame,
+          set in utils/heroStoryScene.js so each frame matches its act of the story. */}
       <HeroRotator
         labels={["Who we are", "What we do", "Common questions"]}
-        durations={[7, 9, 12]}
-        visual={<HeroStageSvg />}
+        durations={STORY_DURATIONS}
+        visual={<HeroStory />}
       >
         {/* ── Frame 1: who we are (holds the page's only <h1>) ── */}
         <div

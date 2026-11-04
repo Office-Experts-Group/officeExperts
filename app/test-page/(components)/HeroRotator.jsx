@@ -1,23 +1,30 @@
 "use client";
-// app/test-page/(components)/HeroRotator.jsx
-// Client wrapper for the home hero. It only decides which frame is showing:
-//  - writes data-frame="0|1|2" on its root. CSS uses that to show the matching
-//    frame (by position) and to move the illustration into its matching layout.
+// app/(components)/HeroRotator.jsx
+// Client wrapper for the home hero. It decides which frame is showing and
+// shares that with the illustration:
+//  - writes data-frame="0|1|2" on its root. CSS uses that to show the matching frame.
 //  - renders the tabs. The active tab's progress bar is a CSS animation, and when
 //    it finishes it moves to the next frame, so there is no setInterval to manage.
+//  - provides HeroContext so HeroStory can play the matching act of the animation.
 // The frames come in as children, already rendered on the server by HomeHero,
 // so none of the copy is shipped in this component's JavaScript.
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-// SCSS module for the layout, frame visibility and tab controls
+// SCSS module for the layout, frame visibility and tab controls (unchanged)
 import styles from "@/styles/heroRotator.module.scss";
+// Shared frame/play state for the illustration
+import { HeroContext } from "./HeroContext";
 import { PauseIcon, PlayIcon } from "../(svgs)/HeroIcons";
 
 const HeroRotator = ({ labels, durations, visual, children }) => {
   const [active, setActive] = useState(0);
-  // true once the visitor picks a tab or presses pause; autoplay stays off
-  const [paused, setPaused] = useState(false);
+  // "auto": frames advance on their timers.
+  // "manual": the visitor picked a tab, so the frame stays put while its act plays once.
+  // "paused": the pause button froze both the slideshow and the animation.
+  const [mode, setMode] = useState("auto");
+  // Goes up on every tab click so the illustration replays the chosen act
+  const [restart, setRestart] = useState(0);
   const [onScreen, setOnScreen] = useState(true);
   const rootRef = useRef(null);
   const tabRefs = useRef([]);
@@ -43,7 +50,13 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
   // A tab choice means the visitor has taken control, so autoplay stops
   const selectFrame = (index) => {
     setActive(index);
-    setPaused(true);
+    setMode("manual");
+    setRestart((count) => count + 1);
+  };
+
+  // Pause freezes everything; play resumes the slideshow from where it is
+  const togglePlay = () => {
+    setMode((current) => (current === "auto" ? "paused" : "auto"));
   };
 
   // Arrow keys, Home and End move between tabs (WAI-ARIA tabs pattern)
@@ -62,72 +75,81 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
     tabRefs.current[targets[event.key]]?.focus();
   };
 
+  // Memoised so HeroStory only re-renders when something it uses changes
+  const story = useMemo(
+    () => ({ active, mode, onScreen, restart }),
+    [active, mode, onScreen, restart],
+  );
+  const playing = mode === "auto";
+
   return (
-    <div
-      ref={rootRef}
-      className={styles.rotator}
-      data-frame={active}
-      data-paused={paused}
-      data-onscreen={onScreen}
-    >
-      <div className={styles.copy}>
-        {/* All frames sit in one grid cell; CSS shows the one matching data-frame */}
-        <div className={styles.frames}>{children}</div>
+    <HeroContext value={story}>
+      <div
+        ref={rootRef}
+        className={styles.rotator}
+        data-frame={active}
+        data-paused={!playing}
+        data-onscreen={onScreen}
+      >
+        <div className={styles.copy}>
+          {/* All frames sit in one grid cell; CSS shows the one matching data-frame */}
+          <div className={styles.frames}>{children}</div>
 
-        <div className={styles.controls}>
-          <div
-            role="tablist"
-            aria-label="About Office Experts"
-            className={styles.tabs}
-            onKeyDown={handleKeyDown}
-          >
-            {labels.map((label, index) => {
-              const isActive = index === active;
-              return (
-                <button
-                  key={label}
-                  ref={(node) => {
-                    tabRefs.current[index] = node;
-                  }}
-                  type="button"
-                  role="tab"
-                  id={`hero-tab-${index}`}
-                  aria-controls={`hero-frame-${index}`}
-                  aria-selected={isActive}
-                  tabIndex={isActive ? 0 : -1}
-                  className={styles.tab}
-                  onClick={() => selectFrame(index)}
-                >
-                  <span className={styles.track}>
-                    {/* Mounted fresh each time a tab becomes active, which restarts the timer */}
-                    {isActive && (
-                      <span
-                        className={styles.fill}
-                        style={{ animationDuration: `${durations[index]}s` }}
-                        onAnimationEnd={showNext}
-                      />
-                    )}
-                  </span>
-                  {label}
-                </button>
-              );
-            })}
+          <div className={styles.controls}>
+            <div
+              role="tablist"
+              aria-label="About Office Experts"
+              className={styles.tabs}
+              onKeyDown={handleKeyDown}
+            >
+              {labels.map((label, index) => {
+                const isActive = index === active;
+                return (
+                  <button
+                    key={label}
+                    ref={(node) => {
+                      tabRefs.current[index] = node;
+                    }}
+                    type="button"
+                    role="tab"
+                    id={`hero-tab-${index}`}
+                    aria-controls={`hero-frame-${index}`}
+                    aria-selected={isActive}
+                    tabIndex={isActive ? 0 : -1}
+                    className={styles.tab}
+                    onClick={() => selectFrame(index)}
+                  >
+                    <span className={styles.track}>
+                      {/* Mounted fresh each time a tab becomes active, which restarts the timer */}
+                      {isActive && (
+                        <span
+                          className={styles.fill}
+                          style={{ animationDuration: `${durations[index]}s` }}
+                          onAnimationEnd={showNext}
+                        />
+                      )}
+                    </span>
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Required for auto-moving content (WCAG 2.2.2). Hidden for reduced motion, where nothing autoplays. */}
+            <button
+              type="button"
+              className={styles.toggle}
+              onClick={togglePlay}
+              aria-label={playing ? "Pause slideshow" : "Play slideshow"}
+            >
+              {playing ? <PauseIcon /> : <PlayIcon />}
+            </button>
           </div>
-
-          {/* Required for auto-moving content (WCAG 2.2.2). Hidden for reduced motion, where nothing autoplays. */}
-          <button
-            type="button"
-            className={styles.toggle}
-            onClick={() => setPaused((current) => !current)}
-            aria-label={paused ? "Play slideshow" : "Pause slideshow"}
-          >
-            {paused ? <PlayIcon /> : <PauseIcon />}
-          </button>
         </div>
-      </div>
 
-      <div className={styles.visual}>{visual}</div>
-    </div>
+        <div className={styles.visual}>{visual}</div>
+      </div>
+    </HeroContext>
   );
 };
 

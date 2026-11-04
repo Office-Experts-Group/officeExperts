@@ -1,0 +1,359 @@
+// styles/heroStory.module.scss
+// Colours and type for the home hero story (HeroStory.jsx).
+// Positions, sizes, opacity, transforms and dash offsets are written by
+// utils/heroStoryScene.js, so none of those properties are set here
+// (CSS would override the attributes the animation writes).
+@use "./globals" as *;
+
+.story {
+  display: grid;
+  gap: 1rem;
+}
+
+// ── Caption bar ─────────────────────────────────
+// Every caption sits in the same grid cell; the scene flags the current one
+.captions {
+  display: grid;
+}
+
+.caption {
+  grid-area: 1 / 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  border-radius: $radius-pill;
+  background: $white-08;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $white-88;
+  opacity: 0;
+  transform: translateY(0.4rem);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+
+  &[data-on="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tag {
+  @include label($white);
+  padding: 0.35rem 0.75rem;
+  border-radius: $radius-pill;
+  background: $accent;
+
+  .caption[data-tone="alert"] & {
+    background: $error;
+  }
+}
+
+// ── Stage ───────────────────────────────────────
+.stage {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// Small labels drop out on phones, where they would be too small to read
+.minor {
+  @include mobile {
+    display: none;
+  }
+}
+
+.dot {
+  fill: $white-18;
+}
+
+// Gradient stops
+.stopWhite {
+  stop-color: $white;
+}
+.stopAccent {
+  stop-color: $accent;
+}
+.stopBright {
+  stop-color: $accent-on-dark;
+}
+.stopError {
+  stop-color: $error;
+}
+.stopMid {
+  stop-color: $dark-mid;
+}
+.stopSurface {
+  stop-color: $dark-surface;
+}
+
+// ── Act 1 ───────────────────────────────────────
+.wire {
+  fill: none;
+  stroke: $white-35;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.wireBroken {
+  stroke: $error;
+  stroke-width: 2;
+}
+
+.wireTag {
+  fill: $dark-mid;
+  stroke: $white-12;
+}
+
+.wireTagText {
+  font-size: 11px;
+  font-style: italic;
+  fill: $white-65;
+}
+
+.warnDot {
+  fill: $error;
+}
+
+.warnText {
+  font-size: 13px;
+  font-weight: 800;
+  fill: $white;
+}
+
+.toast {
+  fill: $error;
+}
+
+.toastText {
+  font-size: 12px;
+  font-weight: 600;
+  fill: $white;
+}
+
+// ── Tiles ───────────────────────────────────────
+.card {
+  stroke: $white-12;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.cardFile {
+  font-size: 12px;
+  fill: $white-55;
+}
+
+.tileLabel {
+  font-size: 10px;
+  font-weight: 600;
+  fill: $white-65;
+}
+
+.glyph,
+.glyphAccent {
+  fill: none;
+  stroke: $white-88;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.glyphAccent {
+  stroke: $accent-on-dark;
+}
+
+.glyphFill {
+  fill: $accent-on-dark;
+}
+
+// ── Hub ─────────────────────────────────────────
+.hub {
+  fill: $dark-surface;
+  stroke: $white-12;
+}
+
+.hubEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  fill: $accent-on-dark;
+}
+
+.hubTitle {
+  font-size: 17px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.well {
+  fill: $dark-mid;
+}
+
+.wellTitle {
+  font-size: 13px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.wellText {
+  font-size: 11px;
+  fill: $white-55;
+}
+
+.wellLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  fill: $accent-on-dark;
+}
+
+.link {
+  fill: none;
+  stroke-width: 2;
+}
+
+.pulse {
+  fill: $accent-on-dark;
+}
+
+// ── Output panels ───────────────────────────────
+.panel {
+  fill: $dark-surface;
+  stroke: $white-12;
+}
+
+.panelTitle {
+  font-size: 14px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.live {
+  fill: $success;
+}
+
+.liveText {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  fill: $success;
+}
+
+.kpiLabel {
+  font-size: 11px;
+  fill: $white-55;
+}
+
+.kpiValue {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  fill: $white;
+}
+
+.bar {
+  fill: $accent;
+}
+
+.barLast {
+  fill: $accent-on-dark;
+}
+
+.axis,
+.track {
+  stroke: $white-18;
+  stroke-width: 2;
+}
+
+.trend,
+.trackLit {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.node,
+.client {
+  fill: $dark-mid;
+  stroke: $white-18;
+}
+
+.nodeLit {
+  fill: $accent;
+}
+
+.tick {
+  fill: none;
+  stroke: $white;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nodeLabel {
+  font-size: 11px;
+  fill: $white-65;
+}
+
+.ghost {
+  fill: none;
+  stroke: $white-18;
+  stroke-dasharray: 4 4;
+}
+
+.clientText {
+  font-size: 12px;
+  font-weight: 700;
+  fill: $white-75;
+}
+
+.clientRing {
+  fill: none;
+  stroke: $success;
+  stroke-width: 2;
+}
+
+.badge {
+  fill: $success;
+}
+
+.paper {
+  fill: $white;
+}
+
+.paperFold {
+  fill: $line;
+}
+
+.paperHead {
+  fill: $accent;
+}
+
+.paperLine {
+  fill: $line-strong;
+}
+
+.status {
+  font-size: 11px;
+  fill: $white-55;
+}
+
+// ── Effects ─────────────────────────────────────
+.scanLine {
+  stroke: $accent-on-dark;
+  stroke-width: 2;
+}
+
+.ring {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+}
