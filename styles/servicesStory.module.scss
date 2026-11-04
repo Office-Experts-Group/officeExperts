@@ -1,0 +1,325 @@
+// styles/servicesStory.module.scss
+// Colours and type for the home hero services story (ServicesStory.jsx).
+// Every position and opacity is set by utils/servicesStoryScene.js.
+@use "sass:list";
+@use "./globals" as *;
+
+// Platform tile colours. Hardcoded on purpose: they are the colour families
+// people associate with each product, not part of the site theme, and they
+// only appear here. Second value is the glyph colour.
+$tones: (
+  word: (#2b5fc4, $white),
+  excel: (#1e8449, $white),
+  powerpoint: (#d35b27, $white),
+  outlook: (#0e86c4, $white),
+  access: (#a33a3c, $white),
+  sqlserver: (#5b6b7c, $white),
+  sharepoint: (#0f8784, $white),
+  teams: (#5157c4, $white),
+  powerapps: (#9c3685, $white),
+  powerautomate: (#3d6ae0, $white),
+  powerbi: (#d08a10, $white),
+  powerpages: (#7f4bc9, $white),
+  python: (#306998, $white),
+  javascript: (#f0d64a, $ink),
+  vba: (#4a5d73, $white),
+  aiagents: (url(#ss-ai), $white),
+);
+
+.story {
+  display: grid;
+  gap: 1rem;
+}
+
+// ── Caption bar: every caption sits in one grid cell, the live one fades in ──
+.captions {
+  display: grid;
+  justify-items: center;
+}
+
+.caption {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.9rem 0.35rem 0.35rem;
+  border-radius: $radius-pill;
+  background: $white-08;
+  color: $white-88;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+
+  &[data-on="false"] {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  @include phone {
+    font-size: 0.8rem;
+  }
+}
+
+.tag {
+  padding: 0.2rem 0.65rem;
+  border-radius: $radius-pill;
+  background: $accent;
+  color: $white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.stage {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// Small SVG labels: unreadable once the drawing shrinks on a phone
+.minor {
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Gradient stops ──
+.dot {
+  fill: $white-12;
+}
+.stopWhite {
+  stop-color: $white;
+}
+.stopAccent {
+  stop-color: $accent;
+}
+.stopBright {
+  stop-color: $accent-on-dark;
+}
+.stopAiStart {
+  stop-color: #6d4bd8;
+}
+.stopAiEnd {
+  stop-color: #1f9bd6;
+}
+
+// ── Platform tiles ──
+.tile {
+  @each $name, $pair in $tones {
+    &[data-tone="#{$name}"] {
+      --tile: #{list.nth($pair, 1)};
+      color: list.nth($pair, 2);
+    }
+  }
+  // Python's prompt takes the yellow from its own colour pairing
+  &[data-tone="python"] {
+    --glyph-accent: #ffd43b;
+  }
+}
+
+.tileBg {
+  fill: var(--tile);
+}
+
+.glyph,
+.glyphAccent {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.glyphAccent {
+  stroke: var(--glyph-accent, currentColor);
+}
+.glyphFill {
+  fill: currentColor;
+}
+
+.tileLabel {
+  fill: $white-88;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.ping {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+}
+
+.badge {
+  fill: $accent;
+  stroke: $dark-bg;
+  stroke-width: 2;
+}
+
+.tick {
+  fill: none;
+  stroke: $white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+// ── Act 1 group names and service chips ──
+.groupLabel {
+  fill: $white-55;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.chip {
+  fill: $white-08;
+}
+
+.chipText {
+  fill: $white-90;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+// ── Act 2 discovery panel ──
+.panel {
+  fill: $dark-surface;
+  stroke: $white-08;
+}
+
+.panelTitle {
+  fill: $white;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.card {
+  fill: $white-08;
+}
+
+.cardLabel {
+  fill: $white-35;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.quote {
+  fill: $white-90;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.fix,
+.done {
+  fill: $accent;
+}
+
+.fixText {
+  fill: $white;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.doneText {
+  fill: $white-75;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.connector {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+}
+
+// ── Plan and hub ──
+.hubPlan {
+  fill: $white-08;
+  stroke: $white-35;
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+}
+
+.spokePlan {
+  stroke: $white-35;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+
+.hub {
+  fill: $dark-mid;
+  stroke: $white-12;
+}
+
+.hubEyebrow {
+  fill: $accent-on-dark;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.hubTitle {
+  fill: $white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hubText {
+  fill: $white-65;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.divider {
+  stroke: $white-12;
+}
+
+.barTrack {
+  fill: $white-12;
+}
+.barFill {
+  fill: $accent-on-dark;
+}
+
+.kpiValue {
+  fill: $white;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.live {
+  fill: $success;
+}
+.liveText {
+  fill: $white-65;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+// ── Act 3 connections ──
+.orbit {
+  fill: none;
+  stroke: $white-12;
+  stroke-width: 1.5;
+}
+
+.spoke {
+  stroke: $white-35;
+  stroke-width: 1.5;
+}
+
+.pulse {
+  fill: $accent-on-dark;
+}
+
+.ring {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+}

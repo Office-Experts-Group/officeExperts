@@ -1,0 +1,31 @@
+// styles/migrationStory.module.scss
+@use "./globals" as *;
+
+// Wrapper around the animation; the pause button is positioned against it
+.visual {
+  position: relative;
+  min-width: 0;
+}
+
+// Pause / play button, tucked into the bottom-right corner of the illustration
+.toggle {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid $white-18;
+  border-radius: 50%;
+  background: none;
+  color: $white;
+  cursor: pointer;
+}
+
+// Nothing autoplays under reduced motion, so the control isn't needed
+@media (prefers-reduced-motion: reduce) {
+  .toggle {
+    display: none;
+  }
+}

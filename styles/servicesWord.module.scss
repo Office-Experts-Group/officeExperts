@@ -3,6 +3,7 @@
 @use "./globals.scss" as *;
 
 .services {
+  position: relative;
   background: $white;
   padding: 8rem $gutter;
 

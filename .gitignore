@@ -58,6 +58,8 @@ deleteUnusedImages.mjs
 findUnusedImages.mjs
 unused-images.csv
 scripts/_deleted-images/
+hero-animation.md
+
 
 # Playwright
 /test-results/

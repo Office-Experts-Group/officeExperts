@@ -107,6 +107,7 @@ const pathsWithDifferentCanonicals = new Set([
   // other
   "/services/microsoft-office",
   "/test-page",
+  "/test-page-word",
   "/case-study-submission",
   "/services/microsoft-vbscript",
   "/services/office-and-sql-server-integration",

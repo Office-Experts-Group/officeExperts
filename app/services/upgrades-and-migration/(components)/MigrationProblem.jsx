@@ -147,6 +147,15 @@ const MigrationProblem = () => {
             cohesive unit.
           </p>
         </div>
+        <div className={styles.closerCta}>
+          <p className={styles.closerCtaText}>
+            Not sure where to start? We&rsquo;ll review your current systems and
+            show you what to keep, fix or replace.
+          </p>
+          <button type="button" className={styles.closerButton}>
+            Speak to an expert
+          </button>
+        </div>
       </div>
     </section>
   );

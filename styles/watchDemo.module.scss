@@ -1,0 +1,64 @@
+// styles/watchDemo.module.scss
+
+@use "./globals.scss" as *;
+
+.demo {
+  position: absolute;
+  top: 6rem;
+  right: $gutter;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 1.4rem 0.4rem 0.4rem;
+  background: $accent;
+  border: 1px solid $accent;
+  border-radius: $radius-pill;
+  color: $white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .icon {
+    border: 2px solid $white;
+  }
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.05);
+  }
+
+  @include phone {
+    top: 0.75rem;
+    right: 1.5rem;
+    gap: 0.5rem;
+    padding-right: 1rem;
+    font-size: 0.85rem;
+
+    .icon {
+      width: 2rem;
+    }
+  }
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+// Hidden until it goes full screen; display: none would block the Fullscreen API
+.video:not(:fullscreen) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

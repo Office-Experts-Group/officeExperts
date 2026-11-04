@@ -4,34 +4,12 @@
 
 @include kf-fade-up;
 
-@keyframes orbPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.18;
-  }
-  50% {
-    transform: scale(1.12);
-    opacity: 0.28;
-  }
-}
-
-@keyframes tagFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
 // ── Section shell ──────────────────────────────────────────
 .hero {
   position: relative;
   background: $dark-bg;
   overflow: hidden;
-  padding-bottom: 0;
+  padding-top: 8rem;
 }
 
 // ── Inner two-column layout ───────────────────────────────
@@ -155,106 +133,4 @@
     background: $white-12;
     border-color: $white-35;
   }
-}
-
-// ── Ecosystem tag cloud (right) ───────────────────────────
-.ecosystem {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  animation: fadeUp 0.7s ease 0.18s both;
-
-  @include tablet {
-    // Shown below content on smaller screens
-    padding-top: 1rem;
-  }
-
-  @include phone {
-    display: none; // reclaimed space on small phones
-  }
-}
-
-.ecosystemLabel {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: $white-35;
-}
-
-.tagGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-// Base tag
-.tag {
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: $radius-pill;
-  border: 1px solid;
-  letter-spacing: 0.2px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  }
-}
-
-// Tier tints
-.primary {
-  background: rgba(4, 105, 153, 0.22);
-  border-color: rgba(4, 105, 153, 0.55);
-  color: $accent-on-dark;
-  animation: tagFloat 5s ease-in-out infinite;
-}
-
-.secondary {
-  background: rgba(4, 105, 153, 0.1);
-  border-color: $accent-border;
-  color: $white-65;
-  animation: tagFloat 6s ease-in-out 0.8s infinite;
-}
-
-.tertiary {
-  background: $white-08;
-  border-color: $white-12;
-  color: $white-55;
-  animation: tagFloat 7s ease-in-out 1.6s infinite;
-}
-
-// Decorative glow orb behind tags
-.orb {
-  position: absolute;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(4, 105, 153, 0.35) 0%,
-    transparent 70%
-  );
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 0;
-  animation: orbPulse 6s ease-in-out infinite;
-
-  @include tablet {
-    display: none;
-  }
-}
-
-// Push tags above orb
-.tagGrid {
-  position: relative;
-  z-index: 1;
 }

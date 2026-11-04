@@ -172,10 +172,10 @@ $exit: 0.3s; // outgoing frame fades this fast before the next one starts
 
 // Hovering the copy or tabbing through its links holds the current frame.
 // Scrolled out of view freezes everything, illustration included.
-.copy:has(.frames:hover, .frames :focus-visible) .fill,
-.rotator[data-onscreen="false"] * {
-  animation-play-state: paused;
-}
+// .copy:has(.frames:hover, .frames :focus-visible) .fill,
+// .rotator[data-onscreen="false"] * {
+//   animation-play-state: paused;
+// }
 
 // Reduced motion: no autoplay at all, the tabs still switch frames
 @media (prefers-reduced-motion: reduce) {

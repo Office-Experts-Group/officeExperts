@@ -18,8 +18,10 @@ import HeroRotator from "./HeroRotator";
 // Animated story illustration (client). It plays one act per frame, so the
 // tab durations come from the same timeline to keep the two in step.
 import HeroStory from "./HeroStory";
-import { STORY_DURATIONS } from "../utils/heroStoryScene";
 import { ArrowIcon } from "../(svgs)/HeroIcons";
+
+import ServicesStory from "./ServicesStory";
+import { STORY_DURATIONS } from "../utils/servicesStoryScene";
 
 const HomeHero = () => {
   // Frame 2 cards
@@ -68,7 +70,7 @@ const HomeHero = () => {
       <HeroRotator
         labels={["Who we are", "What we do", "Common questions"]}
         durations={STORY_DURATIONS}
-        visual={<HeroStory />}
+        visual={<ServicesStory />}
       >
         {/* ── Frame 1: who we are (holds the page's only <h1>) ── */}
         <div

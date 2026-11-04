@@ -3,14 +3,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // ── Above the fold: normal imports so they render in the first HTML chunk ──
-import ServiceHero from "@/components/ServiceHero";
+// import ServiceHero from "@/components/ServiceHero";
 import MigrationHero from "./(components)/MigrationHero";
-
-// Hero images, statically imported so Next.js knows their dimensions
-import upgrades from "@/public/pageHeros/upgrades.webp";
-import upgradesMob from "@/public/pageHeros/mob/upgradesMob.webp";
-
-// Shared schema builders used across every service page
 
 // ── Below the fold: dynamic imports to split the JS bundle ──
 const MigrationProblem = dynamic(
@@ -36,7 +30,6 @@ const PAGE_DESCRIPTION =
   "Office upgrades and migration across Australia. We modernise legacy Word templates, Excel workbooks and Access databases for Microsoft 365 and Azure.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Upgrading Microsoft Office";
 
 const DATE_PUBLISHED = "2024-10-26T00:00:00+11:00";
 const DATE_MODIFIED = "2026-10-26T00:00:00+11:00";
@@ -225,13 +218,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Upgrades and Migration"
-        desktopImage={upgrades}
-        mobileImage={upgradesMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <MigrationHero />
       <MigrationProblem />

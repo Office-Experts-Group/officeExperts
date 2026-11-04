@@ -2,17 +2,7 @@
 
 import Link from "next/link";
 import styles from "@/styles/migrationHero.module.scss";
-const tools = [
-  { label: "Microsoft 365", tier: "primary" },
-  { label: "Power Apps", tier: "secondary" },
-  { label: "Power Automate", tier: "secondary" },
-  { label: "Power BI", tier: "secondary" },
-  { label: "Microsoft Fabric", tier: "tertiary" },
-  { label: "Azure", tier: "tertiary" },
-  { label: "SQL Server", tier: "tertiary" },
-  { label: "SharePoint", tier: "tertiary" },
-  { label: "Web Apps", tier: "tertiary" },
-];
+import MigrationStory from "./MigrationStory";
 
 const MigrationHero = () => {
   return (
@@ -22,11 +12,11 @@ const MigrationHero = () => {
         <div className={styles.content}>
           <p className={styles.eyebrow}>Upgrades &amp; Migration</p>
 
-          <h2 className={styles.heading}>
+          <h1 className={styles.heading}>
             Modernise Your <span className={styles.accent}>Microsoft</span>
             <br />
             Ecosystem
-          </h2>
+          </h1>
 
           <p className={styles.lead}>
             We help organisations move on from legacy Office files, ageing
@@ -53,22 +43,7 @@ const MigrationHero = () => {
             </Link>
           </div>
         </div>
-
-        {/* ── Right: ecosystem tag cloud ── */}
-        <div className={styles.ecosystem} aria-hidden="true">
-          <p className={styles.ecosystemLabel}>Fully integrated systems</p>
-          <div className={styles.tagGrid}>
-            {tools.map((tool) => (
-              <span
-                key={tool.label}
-                className={`${styles.tag} ${styles[tool.tier]}`}
-              >
-                {tool.label}
-              </span>
-            ))}
-          </div>
-          <div className={styles.orb} />
-        </div>
+        <MigrationStory />
       </div>
     </section>
   );

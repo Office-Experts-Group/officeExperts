@@ -104,28 +104,6 @@ const MigrationPaths = () => {
           </article>
         ))}
       </div>
-
-      {/* ── Choosing the right path closer ── */}
-      <div className={styles.closer}>
-        <div className={styles.closerText}>
-          <h3 className={styles.closerHeading}>
-            Some projects will <span>span</span> all three...
-          </h3>
-          <p>
-            You might upgrade part of your system, migrate the data, and
-            transform specific workflows all within the same engagement. We help
-            you work out the right mix based on cost, risk, and what
-            you&rsquo;re actually trying to achieve.
-          </p>
-          <p>
-            The goal isn&rsquo;t the most ambitious solution. It&rsquo;s the
-            right one for your specific use case.
-          </p>
-        </div>
-        <Link href="#contact" className={styles.closerCta}>
-          Get a free assessment
-        </Link>
-      </div>
     </section>
   );
 };

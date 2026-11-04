@@ -1,0 +1,133 @@
+// styles/wordHero.module.scss
+// Section background and frame typography for WordHero.
+// Kept separate from homeHero.module.scss so the two heroes can change independently.
+@use "./globals" as *;
+
+// Dark on purpose: the site header starts transparent with white links,
+// so the hero gives it a dark surface to sit on. Top padding clears the
+// top bar and header.
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: calc($header-offset + 4.5rem) 8rem 4.5rem;
+  background:
+    radial-gradient(circle at 78% 58%, $accent-dim, transparent 55%), $dark-bg;
+
+  @include tablet {
+    padding: calc($header-offset + 3rem) 4rem 5rem;
+  }
+  @include phoneLandscape {
+    padding: calc($header-offset + 2rem) 2rem 4rem;
+  }
+  @include phone {
+    padding: calc($header-offset + 1rem) 1.25rem 3.5rem;
+  }
+}
+
+// ── Frame content ───────────────────────────────
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow($accent-on-dark);
+}
+
+// Frame 1 <h1>, a step below the global main size so it fits beside the illustration
+.title {
+  @include heading-main($white);
+  font-size: clamp(2.3rem, 3.8vw, 3.3rem);
+}
+
+// Frame 2 and 3 <h2>s
+.heading {
+  @include heading-section($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lead {
+  @include lede($white-75);
+  font-size: 1.05rem;
+  max-width: 36rem;
+}
+
+// ── Frame 2 cards ───────────────────────────────
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2rem;
+  max-width: 38rem;
+  padding: 0;
+  list-style: none;
+
+  @include phone {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 1rem;
+  border-top: 1px solid $white-12;
+}
+
+// Card titles link to their service page
+.pointTitle {
+  @include card-title(sm, $white);
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-on-dark;
+  }
+}
+
+.pointText {
+  @include small-text($white-65);
+}
+
+// ── Frame 3 questions ───────────────────────────
+.faqs {
+  display: flex;
+  flex-direction: column;
+  max-width: 38rem;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid $white-12;
+}
+
+.question {
+  @include card-title(sm, $white);
+}
+
+// Internal links in answers: bold, light accent so they read on the dark background
+.answer {
+  @include small-text($white-65);
+  @include inline-link($accent-on-dark);
+}
+
+// ── CTA row ─────────────────────────────────────
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}

@@ -1,0 +1,456 @@
+// styles/wordHeroStory.module.scss
+// Colours and type for the Word hero story (WordHeroStory.jsx).
+// Positions, sizes, opacity, transforms and highlight widths are written by
+// utils/wordHeroScene.js, so none of those properties are set here
+// (CSS would override the attributes the animation writes).
+@use "./globals" as *;
+
+// Word's text highlight (no matching token in globals.scss)
+$word-highlight: #fff1a8;
+// Serif stand-in for an off-brand font in the messy template
+$off-brand-font: Georgia, "Times New Roman", serif;
+
+.story {
+  display: grid;
+  gap: 1rem;
+}
+
+// ── Caption bar ─────────────────────────────────
+// Every caption sits in the same grid cell; the scene flags the current one
+.captions {
+  display: grid;
+}
+
+.caption {
+  grid-area: 1 / 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  border-radius: $radius-pill;
+  background: $white-08;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $white-88;
+  opacity: 0;
+  transform: translateY(0.4rem);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+
+  &[data-on="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tag {
+  @include label($white);
+  white-space: nowrap;
+  padding: 0.35rem 0.75rem;
+  border-radius: $radius-pill;
+  background: $accent;
+
+  .caption[data-tone="alert"] & {
+    background: $error;
+  }
+}
+
+// ── Stage ───────────────────────────────────────
+.stage {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// Small labels drop out on phones, where they would be too small to read
+.minor {
+  @include mobile {
+    display: none;
+  }
+}
+
+.dot {
+  fill: $white-18;
+}
+
+.stopWhite {
+  stop-color: $white;
+}
+.stopAccent {
+  stop-color: $accent;
+}
+.stopBright {
+  stop-color: $accent-on-dark;
+}
+.stopError {
+  stop-color: $error;
+}
+
+// ── Word window ─────────────────────────────────
+.canvas {
+  fill: $dark-bg;
+}
+
+.titleBar {
+  fill: $dark-mid;
+}
+
+.ribbon {
+  fill: $dark-surface;
+}
+
+.windowEdge {
+  fill: none;
+  stroke: $white-12;
+}
+
+.chromeDot {
+  fill: $white-18;
+}
+
+.fileName {
+  font-size: 11.5px;
+  fill: $white-65;
+}
+
+.tab {
+  font-size: 11px;
+  fill: $white-55;
+}
+
+.tabCustom {
+  font-size: 11px;
+  font-weight: 700;
+  fill: $accent-on-dark;
+}
+
+.tabLine {
+  fill: $accent-on-dark;
+}
+
+.stockButton {
+  fill: $white-08;
+}
+
+.ribbonButton {
+  fill: $white-08;
+}
+
+.ribbonPress {
+  fill: $accent;
+}
+
+.buttonLabel {
+  font-size: 9px;
+  font-weight: 600;
+  fill: $white-75;
+}
+
+// ── Page ────────────────────────────────────────
+.paper {
+  fill: $white;
+}
+
+.grey {
+  fill: $grayText;
+}
+
+.red {
+  fill: $replace-x;
+}
+
+.dark {
+  fill: $gray;
+}
+
+.pale {
+  fill: $line-strong;
+}
+
+.brandMark {
+  fill: $accent;
+}
+
+.brandMarkInner {
+  fill: $white;
+}
+
+.oldLogo {
+  font-family: $off-brand-font;
+  font-size: 15px;
+  font-style: italic;
+  fill: $darkGrayText;
+}
+
+.brandLogo {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  fill: $ink;
+}
+
+.brandRule {
+  fill: $accent;
+}
+
+.titleOld {
+  font-family: $off-brand-font;
+  font-size: 25px;
+  font-style: italic;
+  fill: $gray;
+}
+
+.titleBrand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  fill: $accent;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  fill: $text-secondary;
+}
+
+.fieldValue {
+  font-size: 11px;
+  font-weight: 600;
+  fill: $text-primary;
+}
+
+.placeholder {
+  font-size: 11px;
+  fill: $darkGrayText;
+}
+
+.highlight {
+  fill: $word-highlight;
+}
+
+.control {
+  fill: $accent-tint;
+}
+
+.flash {
+  fill: $accent-on-dark;
+}
+
+.squiggle {
+  fill: none;
+  stroke: $error;
+  stroke-width: 1.2;
+}
+
+.textLine {
+  fill: $line-strong;
+}
+
+.listNumber {
+  font-size: 11px;
+  font-weight: 700;
+  fill: $text-primary;
+}
+
+.pasteHead {
+  font-family: $off-brand-font;
+  font-size: 12px;
+  font-weight: 700;
+  fill: $gray;
+}
+
+.pasteLine {
+  fill: $grayBGC;
+}
+
+.blockBack {
+  fill: $accent-tint;
+}
+
+.blockHead {
+  font-size: 10.5px;
+  font-weight: 700;
+  fill: $accent;
+}
+
+.signLine {
+  stroke: $darkGrayText;
+}
+
+.badge {
+  fill: $ink;
+}
+
+.badgeText {
+  font-size: 9.5px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.sweepLine {
+  stroke: $accent-on-dark;
+  stroke-width: 2;
+}
+
+// ── Act 1 ───────────────────────────────────────
+.miniLine {
+  fill: $line;
+}
+
+.miniFile {
+  font-size: 11px;
+  fill: $white-55;
+}
+
+.toast {
+  fill: $error;
+}
+
+.toastText {
+  font-size: 12px;
+  font-weight: 600;
+  fill: $white;
+}
+
+// ── Side panels ─────────────────────────────────
+.panel {
+  fill: $dark-surface;
+  stroke: $white-12;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.panelBrand {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  fill: $white;
+}
+
+.panelText {
+  font-size: 10.5px;
+  fill: $white-75;
+}
+
+.swatchAccent {
+  fill: $accent;
+}
+
+.swatchInk {
+  fill: $ink;
+  stroke: $white-18;
+}
+
+.swatchBright {
+  fill: $accent-on-dark;
+}
+
+.specimen {
+  font-size: 18px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.divider {
+  stroke: $white-12;
+}
+
+.formLabel {
+  font-size: 10px;
+  fill: $white-55;
+}
+
+.input {
+  fill: $dark-mid;
+  stroke: $white-18;
+}
+
+.formValue {
+  font-size: 10.5px;
+  fill: $white;
+}
+
+.formButton {
+  fill: $white-12;
+}
+
+.formButtonPress {
+  fill: $accent;
+}
+
+.formButtonText {
+  font-size: 10px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.partRow {
+  fill: $dark-mid;
+}
+
+.partOn {
+  fill: $accent;
+}
+
+.avatar {
+  fill: $dark-mid;
+  stroke: $white-18;
+}
+
+.avatarText {
+  font-size: 10px;
+  font-weight: 700;
+  fill: $white-75;
+}
+
+.sentRef {
+  font-size: 11px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.sentClient {
+  font-size: 9.5px;
+  fill: $white-55;
+}
+
+// ── Glyphs ──────────────────────────────────────
+.glyph,
+.glyphAccent {
+  fill: none;
+  stroke: $white-88;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.glyphAccent {
+  stroke: $accent-on-dark;
+}
+
+.glyphFill {
+  fill: $accent-on-dark;
+}
+
+.glyphText {
+  font-size: 13px;
+  font-weight: 700;
+  fill: $white;
+}
+
+.tickDot {
+  fill: $success;
+}
+
+.tickMark {
+  fill: none;
+  stroke: $white;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
