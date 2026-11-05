@@ -47,28 +47,20 @@ const BrandedTemplates = () => {
       <div className={styles.contentWrapper}>
         <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
           <div className={styles.content}>
-            <p className={styles.eyebrow}>Professional, Consistent, On-brand...</p>
-            <h2 className={styles.heading}>
+            <p className={styles.eyebrow}>
+              Professional, Consistent, On-brand...
+            </p>
+            <h1 className={styles.heading}>
               Microsoft Word Templates Tailored for{" "}
               <span className={styles.accent}>Your Business</span>
-            </h2>
+            </h1>
             <p className={styles.text}>
               Your brand is more than just a logo... It’s how you present
               yourself in every document. At Office Experts, we create Microsoft
-              Word brand templates that align perfectly with your business
-              identity. Whether you’re launching a new brand, updating your
-              existing designs, or standardising templates across teams, we’ll
-              ensure every document reflects your brand with precision and
-              professionalism.
-            </p>
-            <p className={styles.text}>
-              Our advanced Word Template Solutions with Formatting Tab allow
-              users to efficiently create corporate documents within your
-              branding guidelines. This ensures that external formatting, or
-              limited Word knowledge does not corrupt your{" "}
-              <Link href="/services/microsoft-word/corporate-identity">
-                corporate styles and functionality.
-              </Link>
+              Word brand templates that align with your business identity. If
+              you’re launching a new brand, updating your existing designs, or
+              standardising templates across teams, we’ll ensure every document
+              reflects your brand with precision and professionalism.
             </p>
           </div>
         </AnimateOnScroll>

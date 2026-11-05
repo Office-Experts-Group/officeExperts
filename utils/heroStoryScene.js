@@ -41,67 +41,17 @@ export const CARD = { w: 172, h: 56 };
 export const HUB = { x: 232, y: 88, w: 216, h: 388 };
 
 // Where a tile ends up once Office Experts has organised everything
-const source = (row) => ({
-  kind: "source",
-  row,
-  x: 70,
-  y: 96 + row * 76,
-  bg: 52,
-  icon: 1,
-  label: true,
-});
-const chip = (col, row) => ({
-  kind: "chip",
-  x: 270 + col * 70,
-  y: 266 + row * 78,
-  bg: 44,
-  icon: 0.8,
-  label: true,
-});
+const source = (row) => ({ kind: "source", row, x: 70, y: 96 + row * 76, bg: 52, icon: 1, label: true });
+const chip = (col, row) => ({ kind: "chip", x: 270 + col * 70, y: 266 + row * 78, bg: 44, icon: 0.8, label: true });
 const core = { kind: "core", x: 270, y: 188, bg: 44, icon: 0.8, label: false };
-const header = (y, panel) => ({
-  kind: "header",
-  x: 508,
-  y,
-  bg: 0,
-  icon: 0.72,
-  label: false,
-  panel,
-});
+const header = (y, panel) => ({ kind: "header", x: 508, y, bg: 0, icon: 0.72, label: false, panel });
 
 // Output panels on the right. hubY/linkY are where their connector leaves the
 // hub and meets the panel. `at` is when the panel slides in.
 export const PANELS = [
-  {
-    id: "dash",
-    x: 484,
-    y: 24,
-    w: 220,
-    h: 196,
-    at: 12.8,
-    hubY: 130,
-    linkY: 122,
-  },
-  {
-    id: "auto",
-    x: 484,
-    y: 236,
-    w: 220,
-    h: 112,
-    at: 13.1,
-    hubY: 292,
-    linkY: 292,
-  },
-  {
-    id: "docs",
-    x: 484,
-    y: 364,
-    w: 220,
-    h: 152,
-    at: 13.4,
-    hubY: 430,
-    linkY: 440,
-  },
+  { id: "dash", x: 484, y: 24, w: 220, h: 196, at: 12.8, hubY: 130, linkY: 122 },
+  { id: "auto", x: 484, y: 236, w: 220, h: 112, at: 13.1, hubY: 292, linkY: 292 },
+  { id: "docs", x: 484, y: 364, w: 220, h: 152, at: 13.4, hubY: 430, linkY: 440 },
 ];
 
 // ── Cast ────────────────────────────────────────────────────────────────────
@@ -110,132 +60,33 @@ export const PANELS = [
 // `fly` time for when they move into their organised place `to`.
 // Tools without `chaos` are brought in by Office Experts in act 2 (`at`).
 export const TILES = [
-  {
-    id: "excel",
-    name: "Excel",
-    file: "customers_v7.xlsx",
-    logo: "excel.svg",
-    chaos: { x: 360, y: 272, at: 0, drop: 16, tilt: -3 },
-    fly: 10.7,
-    to: source(0),
-  },
-  {
-    id: "website",
-    name: "Website",
-    file: "Contact form",
-    logo: null,
-    chaos: { x: 150, y: 150, at: 0.9, drop: 24, tilt: 5 },
-    fly: 10.94,
-    to: source(3),
-  },
-  {
-    id: "outlook",
-    name: "Outlook",
-    file: "Orders by email",
-    logo: "outlook.svg",
-    chaos: { x: 572, y: 168, at: 1.4, drop: 20, tilt: -6 },
-    fly: 10.86,
-    to: source(2),
-  },
-  {
-    id: "access",
-    name: "Access",
-    file: "jobs_2014.accdb",
-    logo: "access.svg",
-    chaos: { x: 186, y: 404, at: 1.9, drop: 28, tilt: 4 },
-    fly: 10.78,
-    to: source(1),
-  },
-  {
-    id: "crm",
-    name: "CRM",
-    file: "Third-party app",
-    logo: null,
-    chaos: { x: 548, y: 334, at: 2.5, drop: 22, tilt: 7 },
-    fly: 11.02,
-    to: source(4),
-  },
-  {
-    id: "accounting",
-    name: "Accounting",
-    file: "Xero or MYOB",
-    logo: null,
-    chaos: { x: 380, y: 452, at: 2.9, drop: 30, tilt: -5 },
-    fly: 11.1,
-    to: source(5),
-  },
-  {
-    id: "word",
-    name: "Word",
-    file: "quote_v3.docx",
-    logo: "word.svg",
-    chaos: { x: 360, y: 112, at: 3.3, drop: 26, tilt: 6 },
-    fly: 11.4,
-    to: header(390, "docs"),
-  },
-  {
-    id: "python",
-    name: "Python",
-    file: "sync_script.py",
-    logo: "python.svg",
-    chaos: { x: 590, y: 452, at: 3.7, drop: 18, tilt: -7 },
-    fly: 11.9,
-    to: chip(0, 1),
-  },
-  {
-    id: "javascript",
-    name: "JavaScript",
-    file: "form-widget.js",
-    logo: "javascript.svg",
-    chaos: { x: 128, y: 286, at: 4.1, drop: 24, tilt: 6 },
-    fly: 12.0,
-    to: chip(1, 1),
-  },
+  { id: "excel", name: "Excel", file: "customers_v7.xlsx", logo: "excel.svg",
+    chaos: { x: 360, y: 272, at: 0, drop: 16, tilt: -3 }, fly: 10.7, to: source(0) },
+  { id: "website", name: "Website", file: "Contact form", logo: null,
+    chaos: { x: 150, y: 150, at: 0.9, drop: 24, tilt: 5 }, fly: 10.94, to: source(3) },
+  { id: "outlook", name: "Outlook", file: "Orders by email", logo: "outlook.svg",
+    chaos: { x: 572, y: 168, at: 1.4, drop: 20, tilt: -6 }, fly: 10.86, to: source(2) },
+  { id: "access", name: "Access", file: "jobs_2014.accdb", logo: "access.svg",
+    chaos: { x: 186, y: 404, at: 1.9, drop: 28, tilt: 4 }, fly: 10.78, to: source(1) },
+  { id: "crm", name: "CRM", file: "Third-party app", logo: null,
+    chaos: { x: 548, y: 334, at: 2.5, drop: 22, tilt: 7 }, fly: 11.02, to: source(4) },
+  { id: "accounting", name: "Accounting", file: "Xero or MYOB", logo: null,
+    chaos: { x: 380, y: 452, at: 2.9, drop: 30, tilt: -5 }, fly: 11.1, to: source(5) },
+  { id: "word", name: "Word", file: "quote_v3.docx", logo: "word.svg",
+    chaos: { x: 360, y: 112, at: 3.3, drop: 26, tilt: 6 }, fly: 11.4, to: header(390, "docs") },
+  { id: "python", name: "Python", file: "sync_script.py", logo: "python.svg",
+    chaos: { x: 590, y: 452, at: 3.7, drop: 18, tilt: -7 }, fly: 11.9, to: chip(0, 1) },
+  { id: "javascript", name: "JavaScript", file: "form-widget.js", logo: "javascript.svg",
+    chaos: { x: 128, y: 286, at: 4.1, drop: 24, tilt: 6 }, fly: 12.0, to: chip(1, 1) },
 
-  {
-    id: "dataverse",
-    name: "Dataverse",
-    logo: "dataverse.svg",
-    at: 11.7,
-    to: core,
-  },
-  {
-    id: "powerapps",
-    name: "Power Apps",
-    logo: "powerapps.svg",
-    at: 12.0,
-    to: chip(0, 0),
-  },
-  {
-    id: "powerpages",
-    name: "Power Pages",
-    logo: "powerpages.svg",
-    at: 12.1,
-    to: chip(1, 0),
-  },
+  { id: "dataverse", name: "Dataverse", logo: "dataverse.svg", at: 11.7, to: core },
+  { id: "powerapps", name: "Power Apps", logo: "powerapps.svg", at: 12.0, to: chip(0, 0) },
+  { id: "powerpages", name: "Power Pages", logo: "powerpages.svg", at: 12.1, to: chip(1, 0) },
   // Generic glyph by default: our agents are often custom Python/JS, not only Copilot Studio
   { id: "aiagents", name: "AI agents", logo: null, at: 12.2, to: chip(2, 0) },
-  {
-    id: "sql",
-    name: "SQL Server",
-    logo: "sqlserver.svg",
-    at: 12.3,
-    to: chip(2, 1),
-  },
-  {
-    id: "powerbi",
-    name: "Power BI",
-    logo: "powerbi.svg",
-    at: 13.0,
-    to: header(52, "dash"),
-  },
-  {
-    id: "powerautomate",
-    name: "Power Automate",
-    logo: "powerautomate.svg",
-    at: 13.3,
-    to: header(262, "auto"),
-  },
+  { id: "sql", name: "SQL Server", logo: "sqlserver.svg", at: 12.3, to: chip(2, 1) },
+  { id: "powerbi", name: "Power BI", logo: "powerbi.svg", at: 13.0, to: header(52, "dash") },
+  { id: "powerautomate", name: "Power Automate", logo: "powerautomate.svg", at: 13.3, to: header(262, "auto") },
 ];
 
 // Act 1 workarounds between tools: drawn as each tool arrives, then they snap
@@ -258,85 +109,25 @@ export const TOASTS = [
   { tile: "python", text: "Sync failed", dy: -48, at: 5.7 },
   { tile: "website", text: "Form not sending", dy: -48, at: 6.0 },
   { tile: "word", text: "Template out of date", dy: -48, at: 6.3 },
-].map((toast) => ({
-  ...toast,
-  width: Math.round(toast.text.length * 6.6 + 28),
-}));
+].map((toast) => ({ ...toast, width: Math.round(toast.text.length * 6.6 + 28) }));
 
 // Caption bar above the drawing. tone: "alert" turns the tag red.
 export const CAPTIONS = [
-  {
-    start: 0,
-    end: 0.9,
-    tag: "Year 1",
-    text: "One spreadsheet runs the business",
-  },
-  {
-    start: 0.9,
-    end: 2.5,
-    tag: "Year 2",
-    text: "Add a website, an inbox, a database",
-  },
-  {
-    start: 2.5,
-    end: 4.9,
-    tag: "Year 3",
-    text: "Then a CRM, accounting and scripts",
-  },
-  {
-    start: 4.9,
-    end: 7.4,
-    tag: "Year 4",
-    text: "Nothing talks to anything",
-    tone: "alert",
-  },
-  {
-    start: 7.4,
-    end: 9.2,
-    tag: "Today",
-    text: "Sound familiar?",
-    tone: "alert",
-  },
-  {
-    start: 9.2,
-    end: 12.2,
-    tag: "Analyse",
-    text: "We map how it all fits together",
-  },
-  {
-    start: 12.2,
-    end: 15.0,
-    tag: "Connect",
-    text: "One source of truth for every system",
-  },
-  {
-    start: 15.0,
-    end: 19.2,
-    tag: "Report",
-    text: "Live dashboards, always current",
-  },
+  { start: 0, end: 0.9, tag: "Year 1", text: "One spreadsheet runs the business" },
+  { start: 0.9, end: 2.5, tag: "Year 3", text: "Add a website, an inbox, a database" },
+  { start: 2.5, end: 4.9, tag: "Year 6", text: "Then a CRM, accounting and scripts" },
+  { start: 4.9, end: 7.4, tag: "Year 9", text: "Nothing talks to anything", tone: "alert" },
+  { start: 7.4, end: 9.2, tag: "Today", text: "Sound familiar?", tone: "alert" },
+  { start: 9.2, end: 12.2, tag: "Analyse", text: "We map how it all fits together" },
+  { start: 12.2, end: 15.0, tag: "Connect", text: "One source of truth for every system" },
+  { start: 15.0, end: 19.2, tag: "Report", text: "Live dashboards, always current" },
   { start: 19.2, end: 23.5, tag: "Automate", text: "The busywork runs itself" },
-  {
-    start: 23.5,
-    end: 27.5,
-    tag: "Documents",
-    text: "Branded documents, sent automatically",
-  },
-  {
-    start: 27.5,
-    end: 99,
-    tag: "AI agents",
-    text: "Enquiries triaged before you look",
-  },
+  { start: 23.5, end: 27.5, tag: "Documents", text: "Branded documents, sent automatically" },
+  { start: 27.5, end: 99, tag: "AI agents", text: "Enquiries triaged before you look" },
 ];
 
 // Act 3 spotlight: the panel the caption talks about stays bright, the rest dim
-const SPOTS = {
-  dash: [15.0, 19.2],
-  auto: [19.2, 23.5],
-  docs: [23.5, 27.5],
-  agent: [27.5, 99],
-};
+const SPOTS = { dash: [15.0, 19.2], auto: [19.2, 23.5], docs: [23.5, 27.5], agent: [27.5, 99] };
 
 // Dashboard, workflow, documents and AI agent content
 export const BARS = [0.42, 0.58, 0.5, 0.72, 0.62, 0.86, 0.7, 0.8, 0.96];
@@ -354,11 +145,7 @@ export const CLIENTS = [
 export const CLIENT_Y = 437;
 export const DOC_HOME = [519, 437];
 export const DOC_LINES = [24, 26, 18];
-export const AGENT_MESSAGES = [
-  "Quote request → Sales",
-  "Invoice → Accounts",
-  "Fault report → Support",
-];
+export const AGENT_MESSAGES = ["Quote request → Sales", "Invoice → Accounts", "Fault report → Support"];
 
 const AUTO = { start: 14.6, period: 2.4 };
 const DOCS = { start: 15.2, period: 2.6 };
@@ -389,9 +176,7 @@ const easeBounce = (p) => {
 const cubic = (pts, p) => {
   const u = 1 - p;
   const w = [u * u * u, 3 * u * u * p, 3 * u * p * p, p * p * p];
-  return [0, 1].map((axis) =>
-    pts.reduce((sum, pt, i) => sum + pt[axis] * w[i], 0),
-  );
+  return [0, 1].map((axis) => pts.reduce((sum, pt, i) => sum + pt[axis] * w[i], 0));
 };
 // Smooth horizontal S-curve between two points
 const curve = (from, to) => {
@@ -406,26 +191,11 @@ export const LINKS = [
   ...TILES.filter((tile) => tile.to.kind === "source").map((tile) => {
     const { row } = tile.to;
     const pts = curve([tile.to.x + 30, tile.to.y], [HUB.x, 160 + row * 46]);
-    return {
-      id: tile.id,
-      pts,
-      d: toPath(pts),
-      at: 12.2 + row * 0.08,
-      period: 1.9,
-      offset: row * 0.13,
-    };
+    return { id: tile.id, pts, d: toPath(pts), at: 12.2 + row * 0.08, period: 1.9, offset: row * 0.13 };
   }),
   ...PANELS.map((panel, index) => {
     const pts = curve([HUB.x + HUB.w, panel.hubY], [panel.x, panel.linkY]);
-    return {
-      id: panel.id,
-      pts,
-      d: toPath(pts),
-      at: 13.3 + index * 0.15,
-      period: 1.3,
-      offset: index * 0.2,
-      panel: panel.id,
-    };
+    return { id: panel.id, pts, d: toPath(pts), at: 13.3 + index * 0.15, period: 1.3, offset: index * 0.2, panel: panel.id };
   }),
 ];
 
@@ -448,15 +218,7 @@ function tileState(tile, index, t) {
 
   if (!chaos) {
     const pop = prog(t, tile.at, 0.45);
-    return {
-      x: to.x,
-      y: to.y,
-      rot: 0,
-      scale: easeBack(pop),
-      opacity: prog(t, tile.at, 0.2),
-      morph: 1,
-      warn: 0,
-    };
+    return { x: to.x, y: to.y, rot: 0, scale: easeBack(pop), opacity: prog(t, tile.at, 0.2), morph: 1, warn: 0 };
   }
 
   const fix = repaired(chaos.x, t);
@@ -470,13 +232,9 @@ function tileState(tile, index, t) {
   const slump = easeBounce(prog(t, 6.1 + index * 0.07, 0.9)) * (1 - fix);
 
   let x = chaos.x + 2.8 * strain * Math.sin(t * 39 + index * 1.7);
-  let y =
-    chaos.y +
-    2.2 * strain * Math.cos(t * 45 + index * 2.3) +
-    chaos.drop * slump;
+  let y = chaos.y + 2.2 * strain * Math.cos(t * 45 + index * 2.3) + chaos.drop * slump;
   let rot = chaos.tilt * slump;
-  const opacity =
-    prog(t, chaos.at, 0.2) * (1 - 0.3 * prog(t, 6.3, 1.0) * (1 - fix));
+  const opacity = prog(t, chaos.at, 0.2) * (1 - 0.3 * prog(t, 6.3, 1.0) * (1 - fix));
   const warn = prog(t, 4.9 + index * 0.12, 0.25) * (1 - fix);
 
   // Fly into the organised layout, straightening as it goes
@@ -500,13 +258,7 @@ function writeTile(S, tile, s, t) {
     transform: `translate(${n(s.x)} ${n(s.y)}) rotate(${n(s.rot)}) scale(${n(s.scale)})`,
     opacity: n(s.opacity * dim),
   };
-  S[`${key}.card`] = {
-    x: n(-w / 2),
-    y: n(-h / 2),
-    width: n(w),
-    height: n(h),
-    opacity: n(to.bg ? 1 : 1 - m),
-  };
+  S[`${key}.card`] = { x: n(-w / 2), y: n(-h / 2), width: n(w), height: n(h), opacity: n(to.bg ? 1 : 1 - m) };
   // The icon counter-rotates, so a product icon is never shown tilted
   S[`${key}.icon`] = {
     transform: `translate(${n(lerp(-CARD.w / 2 + 30, 0, m))} 0) rotate(${n(-s.rot)}) scale(${n(lerp(1, to.icon, m))})`,
@@ -534,20 +286,15 @@ function writeWire(S, wire, i, t, placed) {
   const red = prog(t, 5.0 + i * 0.06, 0.5);
   const gap = 0.12 * easeOut(prog(t, 6.0 + i * 0.08, 0.35));
   const fix = repaired((A.x + B.x) / 2, t);
-  const flicker =
-    gap < 0.12 ? red * 0.35 * (0.5 + 0.5 * Math.sin(t * 47 + i * 3)) : 0;
-  const opacity =
-    (draw > 0 ? 1 : 0) * (1 - fix) * (0.9 - flicker) * (1 - 3 * gap);
+  const flicker = gap < 0.12 ? red * 0.35 * (0.5 + 0.5 * Math.sin(t * 47 + i * 3)) : 0;
+  const opacity = (draw > 0 ? 1 : 0) * (1 - fix) * (0.9 - flicker) * (1 - 3 * gap);
 
   // pathLength is 1: "1 1" with an offset draws the wire in; after that the
   // pattern opens a gap in the middle as it snaps
   const dash =
     draw < 1
       ? { strokeDasharray: "1 1", strokeDashoffset: n(1 - draw) }
-      : {
-          strokeDasharray: `${n(0.5 - gap)} ${n(2 * gap)} ${n(0.5 - gap)} 1`,
-          strokeDashoffset: 0,
-        };
+      : { strokeDasharray: `${n(0.5 - gap)} ${n(2 * gap)} ${n(0.5 - gap)} 1`, strokeDashoffset: 0 };
   const d = `M${n(A.x)} ${n(A.y)} Q${n(cx)} ${n(cy)} ${n(B.x)} ${n(B.y)}`;
 
   S[`wire.${i}`] = { d, ...dash, opacity: n(opacity) };
@@ -577,10 +324,7 @@ function writeLinks(S, t) {
   LINKS.forEach((link) => {
     const drawn = easeOut(prog(t, link.at, 0.7));
     const dim = link.panel ? spotDim(link.panel, t) : 1;
-    S[`link.${link.id}`] = {
-      strokeDashoffset: n(1 - drawn),
-      opacity: drawn > 0 ? n(dim) : 0,
-    };
+    S[`link.${link.id}`] = { strokeDashoffset: n(1 - drawn), opacity: drawn > 0 ? n(dim) : 0 };
 
     // Two data pulses per connector once it has finished drawing
     const start = link.at + 0.7;
@@ -614,15 +358,12 @@ function writePanels(S, t) {
       transform: `translate(${n(lerp(28, 0, shown))} 0)`,
       opacity: n(shown * spotDim(panel.id, t)),
     };
-    S[`panel.${panel.id}.glow`] = {
-      opacity: n(shown * spotWeight(panel.id, t)),
-    };
+    S[`panel.${panel.id}.glow`] = { opacity: n(shown * spotWeight(panel.id, t)) };
   });
 }
 
 // Completed workflow runs, shared by the workflow panel and the invoices KPI
-const runsDone = (t) =>
-  t < AUTO.start ? 0 : Math.floor((t - AUTO.start) / AUTO.period);
+const runsDone = (t) => (t < AUTO.start ? 0 : Math.floor((t - AUTO.start) / AUTO.period));
 
 function writeDashboard(S, t) {
   const rise = easeOut(prog(t, 14.2, 1.2));
@@ -633,20 +374,13 @@ function writeDashboard(S, t) {
 
   // Live trend line: ten points that drift over time
   const points = BARS.concat(0)
-    .map(
-      (_, i) =>
-        `${500 + i * 21},${n(150 - 14 * Math.sin(i * 0.75 + t * 0.9) - 8 * Math.sin(i * 1.9 + t * 0.5))}`,
-    )
+    .map((_, i) => `${500 + i * 21},${n(150 - 14 * Math.sin(i * 0.75 + t * 0.9) - 8 * Math.sin(i * 1.9 + t * 0.5))}`)
     .join(" ");
-  S["dash.trend"] = {
-    points,
-    strokeDashoffset: n(1 - easeOut(prog(t, 14.4, 1.3))),
-  };
+  S["dash.trend"] = { points, strokeDashoffset: n(1 - easeOut(prog(t, 14.4, 1.3))) };
 
   // KPIs count up, then keep ticking
   const count = easeOut(prog(t, 14.2, 1.4));
-  const orders =
-    t < 15.6 ? Math.round(1284 * count) : 1284 + Math.floor((t - 15.6) / 0.9);
+  const orders = t < 15.6 ? Math.round(1284 * count) : 1284 + Math.floor((t - 15.6) / 0.9);
   const invoices = t < 15.6 ? Math.round(312 * count) : 312 + runsDone(t);
   S["dash.orders"] = { text: commas(orders) };
   S["dash.invoices"] = { text: commas(invoices) };
@@ -659,14 +393,10 @@ function writeAutomation(S, t) {
   // Everything resets at the end of each run, ready for the next order
   const hold = running ? 1 - prog(ph, 0.9, 0.1) : 0;
   STEPS.forEach((_, k) => {
-    S[`auto.node.${k}`] = {
-      opacity: n(prog(ph, 0.08 + k * 0.27, 0.08) * hold),
-    };
+    S[`auto.node.${k}`] = { opacity: n(prog(ph, 0.08 + k * 0.27, 0.08) * hold) };
   });
   [0, 1].forEach((k) => {
-    S[`auto.track.${k}`] = {
-      strokeDashoffset: n(1 - prog(ph, 0.16 + k * 0.27, 0.19) * hold),
-    };
+    S[`auto.track.${k}`] = { strokeDashoffset: n(1 - prog(ph, 0.16 + k * 0.27, 0.19) * hold) };
   });
 }
 
@@ -681,24 +411,15 @@ function writeDocs(S, t) {
   const x = lerp(DOC_HOME[0], target.x, fly);
   const y = lerp(DOC_HOME[1], CLIENT_Y, fly) - 16 * Math.sin(Math.PI * fly);
   const opacity = running ? prog(ph, 0, 0.06) * (1 - prog(ph, 0.72, 0.1)) : 1;
-  S["doc.fly"] = {
-    transform: `translate(${n(x)} ${n(y)}) scale(${n(lerp(1, 0.4, fly))})`,
-    opacity: n(opacity),
-  };
+  S["doc.fly"] = { transform: `translate(${n(x)} ${n(y)}) scale(${n(lerp(1, 0.4, fly))})`, opacity: n(opacity) };
   DOC_LINES.forEach((width, i) => {
-    S[`doc.line.${i}`] = {
-      width: n(width * (running ? prog(ph, 0.04 + i * 0.07, 0.1) : 0)),
-    };
+    S[`doc.line.${i}`] = { width: n(width * (running ? prog(ph, 0.04 + i * 0.07, 0.1) : 0)) };
   });
 
   CLIENTS.forEach((client, i) => {
-    const ring =
-      running && cycle % CLIENTS.length === i ? prog(ph, 0.72, 0.28) : 0;
+    const ring = running && cycle % CLIENTS.length === i ? prog(ph, 0.72, 0.28) : 0;
     const delivered = running && (cycle > i || (cycle === i && ph >= 0.74));
-    S[`client.${i}.ring`] = {
-      r: n(14 + 14 * ring),
-      opacity: ring > 0 && ring < 1 ? n(0.9 * (1 - ring)) : 0,
-    };
+    S[`client.${i}.ring`] = { r: n(14 + 14 * ring), opacity: ring > 0 && ring < 1 ? n(0.9 * (1 - ring)) : 0 };
     S[`client.${i}.tick`] = { opacity: delivered ? 1 : 0 };
   });
 
@@ -719,10 +440,7 @@ function writeAgent(S, t) {
   AGENT_MESSAGES.forEach((_, i) => {
     const on = running && cycle % AGENT_MESSAGES.length === i;
     const o = on ? prog(ph, 0, 0.12) * (1 - prog(ph, 0.88, 0.12)) : 0;
-    S[`agent.msg.${i}`] = {
-      opacity: n(o),
-      transform: `translate(0 ${n((1 - o) * 6)})`,
-    };
+    S[`agent.msg.${i}`] = { opacity: n(o), transform: `translate(0 ${n((1 - o) * 6)})` };
   });
   S["agent.glow"] = { opacity: n(spotWeight("agent", t)) };
 }
@@ -731,16 +449,10 @@ function writeEffects(S, t) {
   // Red wash while it falls apart, calm accent glow once connected
   S["fx.alert"] = { opacity: n(prog(t, 5.0, 1.4) * (1 - prog(t, 9.3, 1.0))) };
   S["fx.calm"] = { opacity: n(prog(t, 10.0, 1.8)) };
-  S["fx.scan"] = {
-    transform: `translate(${n(scanX(t))} 0)`,
-    opacity: t > 9.25 && t < 10.75 ? 1 : 0,
-  };
+  S["fx.scan"] = { transform: `translate(${n(scanX(t))} 0)`, opacity: t > 9.25 && t < 10.75 ? 1 : 0 };
   // One ring pulses out from the hub as everything connects
   const ring = prog(t, 12.2, 1.3);
-  S["fx.ring"] = {
-    r: n(lerp(70, 320, easeOut(ring))),
-    opacity: ring > 0 && ring < 1 ? n(0.6 * (1 - ring)) : 0,
-  };
+  S["fx.ring"] = { r: n(lerp(70, 320, easeOut(ring))), opacity: ring > 0 && ring < 1 ? n(0.6 * (1 - ring)) : 0 };
 }
 
 // ── Public ──────────────────────────────────────────────────────────────────
@@ -764,9 +476,7 @@ export function sceneAt(t) {
   writeAgent(S, t);
   writeEffects(S, t);
   CAPTIONS.forEach((caption, i) => {
-    S[`caption.${i}`] = {
-      "data-on": t >= caption.start && t < caption.end ? "true" : "false",
-    };
+    S[`caption.${i}`] = { "data-on": t >= caption.start && t < caption.end ? "true" : "false" };
   });
 
   return S;

@@ -10,7 +10,7 @@ $exit: 0.3s; // outgoing frame fades this fast before the next one starts
 // ── Layout ──────────────────────────────────────
 .rotator {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   max-width: $container;

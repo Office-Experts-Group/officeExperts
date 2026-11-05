@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above the fold: imported normally so they render in the initial HTML without a separate chunk
-import ServiceHero from "@/components/ServiceHero";
 import TemplateIntro from "./(components)/TemplateIntro";
 
 // Below the fold: next/dynamic splits these into their own chunks (still server-rendered)
@@ -25,17 +24,12 @@ const TemplateWhyChoose = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import template from "@/public/pageHeros/template.webp";
-import templateMob from "@/public/pageHeros/mob/templateMob2.webp";
-
+const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation";
 const PAGE_TITLE = "Word Document Template Creation Services";
 const PAGE_DESCRIPTION =
   "Professional Microsoft Word template creation services. Custom document templates that maintain brand consistency and improve productivity.";
-
-const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Word document template design";
 
 const DATE_PUBLISHED = "2018-01-13T14:26:07+00:00";
 const DATE_MODIFIED = "2026-10-27T00:00:00+11:00";
@@ -184,13 +178,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Word Document Template Creation"
-        desktopImage={template}
-        mobileImage={templateMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <TemplateIntro />
       <TemplateDesignPrinciples />

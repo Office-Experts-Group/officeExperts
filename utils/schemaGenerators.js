@@ -149,74 +149,129 @@ const LOCATIONS = [
   },
 ];
 
-// Services offered — using valid schema.org Service type with serviceType string (not deprecated businessFunction URL)
-const SERVICES = [
-  // Excel
-  { name: "Excel Dashboard Creation", serviceType: "Excel Consulting" },
+const CATALOG_SITE_URL = "https://www.officeexperts.com.au";
+
+// Single source of truth for every service Office Experts Group offers.
+// Add or remove a name here and every page that outputs the business schema updates.
+// Items marked "new" were not in the original list, so prune any you don't offer.
+const SERVICE_CATEGORIES = [
   {
-    name: "Financial Modelling and Forecasting",
+    category: "Excel",
     serviceType: "Excel Consulting",
+    services: [
+      "Excel Dashboard Creation",
+      "Financial Modelling and Forecasting",
+      "Power Pivot & Power Query",
+      "VBA Macro Development",
+      "Formula Development",
+      "Data Manipulation",
+      "Pivot Tables & Reporting",
+      "Excel Support and Troubleshooting",
+      "Excel Upgrades & Migration",
+      "Excel Add-in Development", // new
+      "Custom Excel Tools and Calculators", // new
+    ],
   },
-  { name: "Power Pivot & Power Query", serviceType: "Excel Consulting" },
-  { name: "VBA Macro Development", serviceType: "Excel Consulting" },
-  { name: "Formula Development", serviceType: "Excel Consulting" },
-  { name: "Data Manipulation", serviceType: "Excel Consulting" },
-  { name: "Pivot Tables & Reporting", serviceType: "Excel Consulting" },
   {
-    name: "Excel Support and Troubleshooting",
-    serviceType: "Excel Consulting",
+    category: "Access and Databases",
+    serviceType: "Access Consulting",
+    services: [
+      "Access Database Development",
+      "Azure Cloud Integration",
+      "Database Migration",
+      "Third-party Integration",
+      "Access Technical Support",
+      "SQL Server Database Development", // new
+    ],
   },
-  { name: "Excel Upgrades & Migration", serviceType: "Excel Consulting" },
-  // Access
-  { name: "Access Database Development", serviceType: "Access Consulting" },
-  { name: "Azure Cloud Integration", serviceType: "Access Consulting" },
-  { name: "Database Migration", serviceType: "Access Consulting" },
-  { name: "Third-party Integration", serviceType: "Access Consulting" },
-  { name: "Access Technical Support", serviceType: "Access Consulting" },
-  // Word
-  { name: "Word Template Creation", serviceType: "Word Consulting" },
-  { name: "Template Conversion", serviceType: "Word Consulting" },
-  { name: "Accessibility Solutions", serviceType: "Word Consulting" },
-  { name: "Custom UI Development", serviceType: "Word Consulting" },
-  { name: "Form Development", serviceType: "Word Consulting" },
   {
-    name: "Government Documentation Solutions",
+    category: "Word",
     serviceType: "Word Consulting",
+    services: [
+      "Word Template Creation",
+      "Template Conversion",
+      "Accessibility Solutions",
+      "Custom UI Development",
+      "Form Development",
+      "Government Documentation Solutions",
+      "Word Document Automation", // new
+      "Word Troubleshooting and Document Repair", // new
+    ],
   },
-  // Power Platform
-  { name: "Power BI Solutions", serviceType: "Power Platform Consulting" },
-  { name: "Power Apps Development", serviceType: "Power Platform Consulting" },
-  { name: "Power Automate", serviceType: "Power Platform Consulting" },
-  { name: "Power Pages", serviceType: "Power Platform Consulting" },
-  // Office 365
-  { name: "Office 365 Migration", serviceType: "Microsoft Office Consulting" },
-  { name: "Process Automation", serviceType: "Microsoft Office Consulting" },
   {
-    name: "SharePoint & OneDrive Solutions",
+    category: "PowerPoint",
+    serviceType: "PowerPoint Consulting",
+    services: [
+      "PowerPoint Template Creation", // new
+      "PowerPoint Automation", // new
+    ],
+  },
+  {
+    category: "Power Platform",
+    serviceType: "Power Platform Consulting",
+    services: [
+      "Power BI Solutions",
+      "Power Apps Development",
+      "Power Automate",
+      "Power Pages",
+    ],
+  },
+  {
+    category: "Microsoft 365",
     serviceType: "Microsoft Office Consulting",
+    services: [
+      "Office 365 Migration",
+      "Process Automation",
+      "SharePoint & OneDrive Solutions",
+    ],
   },
-  { name: "Managed Services", serviceType: "Microsoft Office Consulting" },
   {
-    name: "Remote Consulting",
-    serviceType: "Australia-wide services",
+    category: "AI and Automation",
+    serviceType: "AI Consulting",
+    services: [
+      "AI Agent Development", // new
+      "Microsoft Copilot Implementation", // new
+      "AI Process Automation", // new
+    ],
   },
   {
-    name: "On-site Consulting",
-    serviceType: "In-house Microsoft Office consultation",
+    category: "Custom Software",
+    serviceType: "Software Development",
+    services: [
+      "Web App Development", // new
+      "Custom Software Development", // new
+    ],
+  },
+  {
+    category: "Consulting and Support",
+    serviceType: "Microsoft Office Consulting",
+    services: [
+      "Business Analysis", // new
+      "Managed Services",
+      "Remote Consulting (Australia-wide)",
+      "On-site Consulting",
+      "Microsoft Office Training and Support", // new
+    ],
   },
 ];
 
-// Builds an Offer node — no businessFunction, no provider
-// hasOfferCatalog is on Organization; individual Offer nodes just describe the service
-const buildOffers = () =>
-  SERVICES.map((s) => ({
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name: s.name,
-      serviceType: s.serviceType,
-    },
-  }));
+// Builds the full catalogue. Nested catalogues (one per category) hold the offers.
+// The @id lets any page reference the catalogue instead of repeating it
+export const generateOfferCatalogSchema = (siteUrl = CATALOG_SITE_URL) => ({
+  "@type": "OfferCatalog",
+  "@id": `${siteUrl}#services`,
+  name: "Microsoft consulting and development services",
+  itemListElement: SERVICE_CATEGORIES.map(
+    ({ category, serviceType, services }) => ({
+      "@type": "OfferCatalog",
+      name: `${category} services`,
+      itemListElement: services.map((name) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name, serviceType },
+      })),
+    }),
+  ),
+});
 
 // ProfessionalService schema — valid properties only
 // Note: areaServed and location are valid on LocalBusiness (ProfessionalService extends this)
@@ -232,11 +287,7 @@ export const generateProfessionalServiceSchema = () => ({
   email: "consult@officeexperts.com.au",
   areaServed: SERVICE_AREAS,
   location: LOCATIONS,
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Microsoft Office Consulting Services",
-    itemListElement: buildOffers(),
-  },
+  hasOfferCatalog: generateOfferCatalogSchema(),
 });
 
 // Organization schema — clean, no invalid nested properties
@@ -367,3 +418,116 @@ export const generateLocalBusinessSchema = ({
     ],
   };
 };
+
+import { testimonials } from "../testimonials";
+
+const DEFAULT_SITE_URL = "https://www.officeexperts.com.au";
+const DEFAULT_BUSINESS_NAME = "Office Experts Group";
+
+// Testimonials don't store a star rating, so every review is treated as 5/5
+const RATING = { best: 5, worst: 1, value: 5 };
+
+// Splits "Zoran Lozevski, CEO" or "Dr Janet Congues PhD - Evaluation Coordinator"
+// into a clean name plus an optional job title
+const parseAuthor = (rawName = "") => {
+  const [name, ...roleParts] = rawName.trim().split(/\s+-\s+|,\s+/);
+  const jobTitle = roleParts.join(", ");
+  return { name, ...(jobTitle && { jobTitle }) };
+};
+
+// The `contact` field is a mix of websites and company names (or blank).
+// Websites become an Organization url, plain text becomes the name.
+// LinkedIn links are personal profiles, not employers, so they are skipped.
+const parseEmployer = (contact = "") => {
+  const value = contact.trim();
+  if (!value || /linkedin\./i.test(value)) return null;
+
+  const looksLikeDomain = !/\s/.test(value) && /\.\w{2,}/.test(value);
+  if (!looksLikeDomain) return { "@type": "Organization", name: value };
+
+  try {
+    const { origin } = new URL(
+      /^https?:\/\//i.test(value) ? value : `https://${value}`,
+    );
+    return { "@type": "Organization", url: origin };
+  } catch {
+    return null; // malformed domain, leave the employer out
+  }
+};
+
+// One Review node. Nested inside the business node, so itemReviewed is implied
+const generateReviewNode = (testimonial, reviewId) => {
+  const employer = parseEmployer(testimonial.contact);
+
+  return {
+    "@type": "Review",
+    "@id": reviewId,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: RATING.value,
+      bestRating: RATING.best,
+      worstRating: RATING.worst,
+    },
+    author: {
+      "@type": "Person",
+      ...parseAuthor(testimonial.name),
+      ...(employer && { worksFor: employer }),
+    },
+    reviewBody: testimonial.content.trim(),
+    inLanguage: "en-AU",
+  };
+};
+
+/**
+ * Builds ONE graph node that carries the aggregateRating and reviews.
+ * It shares its @id with the main business node, so JSON-LD merges them
+ * into a single entity (no orphaned AggregateRating nodes).
+ *
+ * @param {object}  options
+ * @param {string}  options.siteUrl       Site origin, no trailing slash
+ * @param {string}  options.businessName  Name of the business being reviewed
+ * @param {string}  options.entityId      Must match the @id of your main Organization /
+ *                                        ProfessionalService node
+ * @param {string}  options.entityType    Schema type of that node
+ * @param {number}  options.limit         Reviews to output (default: all). The
+ *                                        aggregate always counts every testimonial
+ * @returns {object} node to spread into a page's "@graph"
+ */
+export const generateTestimonialSchema = ({
+  siteUrl = DEFAULT_SITE_URL,
+  businessName = DEFAULT_BUSINESS_NAME,
+  entityId = `${siteUrl}#organization`,
+  entityType = "Organization",
+  limit = testimonials.length,
+} = {}) => {
+  // Index comes from the full list so review @ids stay stable on every page
+  const reviews = testimonials
+    .slice(0, limit)
+    .map((testimonial, index) =>
+      generateReviewNode(testimonial, `${siteUrl}#review-${index + 1}`),
+    );
+
+  return {
+    "@type": entityType,
+    "@id": entityId,
+    name: businessName,
+    url: siteUrl,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: RATING.value,
+      bestRating: RATING.best,
+      worstRating: RATING.worst,
+      reviewCount: testimonials.length,
+    },
+    review: reviews,
+  };
+};
+
+// Usage in a page.js schema:
+//   "@graph": [
+//     generateOrganizationSchema(),
+//     generateProfessionalServiceSchema(),
+//     generateTestimonialSchema({ limit: 3 }),   // home / about
+//     generateTestimonialSchema(),               // dedicated testimonials page
+//     ...
+//   ]

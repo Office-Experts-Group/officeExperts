@@ -31,38 +31,26 @@ const PageSegmentMain = () => {
 
   return (
     <section className={styles.pageSegment} id="consistent-branding">
-      <div
-        className={styles.imgWrapper}
-        style={{
-          borderBottom: "none",
-          transform: "rotate(-10deg)",
-          marginRight: "2rem",
-        }}
-      >
+      <div className={styles.imgWrapper}>
         <TemplateCards images={images} />
       </div>
 
-      <div className={styles.contentWrapper}>
-        <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
-          <div
-            className={styles.content}
-            style={{ paddingTop: "2rem", marginLeft: "2rem" }}
-          >
-            <p>Advanced Corporate Template Solutions</p>
-            <h2>
-              Efficient and Consistent Branding for{" "}
-              <span className={styles.accent}>Your Documents</span>
-            </h2>
-            <p>
-              Office Experts Group have developed an advanced Corporate Word
-              Template Solution to enable users to effectively and efficiently
-              create corporate documents in house. These documents are created
-              under a controlled environment, therefore only allowing formatting
-              that is consistent to your branding guidelines.
-            </p>
-          </div>
-        </AnimateOnScroll>
-      </div>
+      <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
+        <div className={styles.content}>
+          <p>Advanced Corporate Template Solutions</p>
+          <h2>
+            Efficient and Consistent Branding for{" "}
+            <span className={styles.accent}>Your Documents</span>
+          </h2>
+          <p>
+            Office Experts Group have developed an advanced Corporate Word
+            Template Solution to enable users to effectively and efficiently
+            create corporate documents in house. These documents are created
+            under a controlled environment, therefore only allowing formatting
+            that is consistent to your branding guidelines.
+          </p>
+        </div>
+      </AnimateOnScroll>
     </section>
   );
 };

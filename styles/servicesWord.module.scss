@@ -3,9 +3,11 @@
 @use "./globals.scss" as *;
 
 .services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: relative;
   background: $white;
-  padding: 8rem $gutter;
+  padding: 8rem 0 8rem 8rem;
 
   @include phone {
     padding: 4rem 2rem 6rem;
@@ -40,45 +42,12 @@
 }
 
 .subBox p {
-  color: $accent;
-  font-weight: 700;
-  letter-spacing: 1px;
+  @include eyebrow;
 }
 
-.footer {
+.cardHolder {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 3rem;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.signature {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.portrait {
-  display: flex;
-  border-radius: 50%;
-  border: 2px solid $accent;
-  padding: 0.5rem;
-
-  img {
-    border-radius: 50%;
-  }
-}
-
-.ctaBtn {
-  @include btn;
-
-  // margin-right: 10vw;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 2rem;
-  }
+  justify-content: center;
+  transform: scale(0.8);
 }

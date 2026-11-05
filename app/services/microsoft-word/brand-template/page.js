@@ -1,7 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import BrandedTemplates from "./(components)/BrandedTemplates";
 
 const Contact = dynamic(() => import("@/components/Contact"));
@@ -16,9 +15,6 @@ const CompareContainer = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const BoxSegment = dynamic(() => import("./(components)/BoxSegment"));
 
-import brandTemplate from "@/public/pageHeros/brandTemplate.webp";
-import brandTemplateMob from "@/public/pageHeros/mob/brandTemplateMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/brand-template";
 const PAGE_TITLE = "Microsoft Word Brand Template Services | Office Experts";
@@ -26,8 +22,6 @@ const PAGE_DESCRIPTION =
   "Professional Microsoft Word brand template services. Custom document templates that ensure consistent branding and a professional appearance.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT_DESKTOP = "Microsoft Word Brand Template Services";
-const HERO_ALT_MOBILE = "Brand templates for Microsoft Word";
 
 const DATE_PUBLISHED = "2018-07-16T02:09:50+10:00";
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
@@ -186,13 +180,6 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <main>
-        <ServiceHero
-          title="Microsoft Word Brand Templates"
-          desktopImage={brandTemplate}
-          mobileImage={brandTemplateMob}
-          altDesk={HERO_ALT_DESKTOP}
-          altMob={HERO_ALT_MOBILE}
-        />
         <BrandedTemplates />
         <PageSegment4 />
         <BlackSegment />
@@ -202,7 +189,8 @@ const Page = () => {
         <RelatedLinks
           theme="dark"
           eyebrow="Case Studies"
-          heading="Microsoft Word projects we've delivered"
+          heading="Microsoft Word projects"
+          headingAccent="we've delivered"
           links={caseStudies}
         />
         <Contact />

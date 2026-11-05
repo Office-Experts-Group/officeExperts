@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Keep Hero static as it's above fold
-import Hero from "./(wordComponents)/Hero";
+import WordHero from "./(wordComponents)/WordHero";
 
 // Dynamically import everything else
 const Services = dynamic(() => import("./(wordComponents)/Services"));
@@ -116,7 +116,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Hero />
+      <WordHero />
       <Services />
       <OurTemplates />
       <CTAMain />

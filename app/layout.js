@@ -82,9 +82,6 @@ export const metadata = {
   keywords: [
     // Core Office services
     "Microsoft Office consulting",
-    "Microsoft Office solutions",
-    "Microsoft Office programmers",
-    "Microsoft Office Experts",
   ],
 
   // Twitter Card

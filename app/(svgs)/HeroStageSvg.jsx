@@ -1,4 +1,4 @@
-// app/(svgs)/HeroStageSvg.jsx
+// app/test-page/(svgs)/HeroStageSvg.jsx
 // Decorative home hero illustration: four everyday tools (documents, spreadsheets,
 // databases, AI) around "your business". One drawing tells the hero's story:
 //   frame 1: tools are scattered, tilted and flagged with problems

@@ -51,10 +51,10 @@ const TemplateIntro = () => {
             <span className={styles.eyebrow}>
               For a consistent and professional look
             </span>
-            <h2 className={styles.heading}>
+            <h1 className={styles.heading}>
               Custom Document and{" "}
               <span className={styles.accent}>Template Solutions</span>
-            </h2>
+            </h1>
             <p>
               We create Microsoft Word templates that are striking, refined and{" "}
               <strong>practical for everyday use.</strong> Every design blends

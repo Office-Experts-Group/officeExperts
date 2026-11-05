@@ -15,7 +15,7 @@
 import { useContext, useEffect, useRef } from "react";
 
 // Active frame, play mode, visibility and restart counter from HeroRotator
-import { HeroContext } from "../app/test-page/(components)/HeroContext";
+import { HeroContext } from "../app/(components)/HeroContext";
 
 const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;

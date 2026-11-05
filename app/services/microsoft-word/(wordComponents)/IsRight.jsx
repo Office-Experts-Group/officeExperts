@@ -17,7 +17,7 @@ const IsRight = () => {
             <span className={styles.accent}>Your Business</span>
           </h2>
           <p className={styles.text}>
-            At Word Experts we create sophisticated Microsoft Word solutions
+            At Office Experts we create sophisticated Microsoft Word solutions
             that protect, maintain your corporate identity, and streamline
             document creation. Our team of experienced consultants deliver
             professional templates with built-in automation, ensuring consistent

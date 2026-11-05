@@ -1,4 +1,4 @@
-// app/(svgs)/HeroIcons.jsx
+// app/test-page/(svgs)/HeroIcons.jsx
 // Small UI icons for the home hero: link arrow and the slideshow pause/play toggle.
 // Stroke and fill use currentColor, so they take the colour of their parent.
 

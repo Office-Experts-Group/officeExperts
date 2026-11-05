@@ -3,8 +3,8 @@
 
 .section {
   display: flex;
-  gap: 4rem;
-  margin: 8rem $gutter;
+  gap: 3rem;
+  @include heroPadding;
 
   @include belowDesktop {
     flex-direction: column;
@@ -20,8 +20,8 @@
   flex: 1;
   z-index: 1;
   height: fit-content;
-  margin-right: 2rem;
-  transform: rotate(-10deg);
+  transform: rotate(-10deg) scale(0.8);
+  transform-origin: left center;
 
   // Cards are hidden below desktop, the text carries the section
   @include belowDesktop {
@@ -47,13 +47,11 @@
 }
 
 .eyebrow {
-  color: $accent;
-  font-weight: 700;
-  letter-spacing: 1px;
+  @include eyebrow;
 }
 
 .heading {
-  @include heading-section($black);
+  @include heading-main;
   margin: 2rem 0;
 }
 

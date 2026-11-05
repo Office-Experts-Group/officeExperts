@@ -127,6 +127,10 @@ $gutter: 10vw;
 $header-offset: 130px; // measure the real header before changing
 $scroll-offset: 150px;
 
+@mixin heroPadding {
+  padding: 12rem $gutter 7rem $gutter;
+}
+
 // ── 4. BREAKPOINTS (belowDesktop, mobile already exist above) ───────────────
 @mixin belowDeskL {
   // the mobile nav covers everything below 1200px

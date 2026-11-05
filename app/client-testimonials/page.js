@@ -4,18 +4,16 @@ import Contact from "@/components/Contact";
 import TestimonialPage from "./(components)/TestimonialPage";
 import ServiceHero from "@/components/ServiceHero";
 
-import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
+import { generateTestimonialSchema } from "@/utils/schemaGenerators";
 import { testimonials } from "@/testimonials";
-import { filterAndSortTestimonials } from "@/utils/filterTestimonials";
-const serviceTestimonials =
-  filterAndSortTestimonials(testimonials, "office") || testimonials;
+
 import testimonialsPic from "@/public/pageHeros/testimonials.webp";
 import testimonialsMob from "@/public/pageHeros/mob/testimonialsMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(serviceTestimonials, "office")["@graph"],
+    generateTestimonialSchema(),
 
     {
       "@type": "WebPage",
@@ -75,7 +73,7 @@ const Page = () => {
         altDesk={"Wooden block with smiley face"}
         altMob={"five stars"}
       />
-      <TestimonialPage testimonials={serviceTestimonials} />
+      <TestimonialPage testimonials={testimonials} />
       <Contact />
     </>
   );

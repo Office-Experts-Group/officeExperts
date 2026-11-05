@@ -1,18 +1,21 @@
 @use "./globals.scss" as *;
 
 .pageSegment {
-  position: relative;
   scroll-margin-top: 150px;
-  display: flex;
+  // display: flex;
+  // align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin: 8rem $gutter;
-  @include mobile {
-    flex-direction: column;
-    margin: 3rem 1rem;
-  }
+
   @include tablet {
     flex-direction: column;
     margin: 6rem 4rem;
+  }
+  @include mobile {
+    flex-direction: column;
+    margin: 3rem 1rem;
   }
 }
 
@@ -20,8 +23,11 @@
   color: $accent;
 }
 
+// Flex: 1 gives the fan its own half of the row so it can't overlap the text.
+// Scale only shrinks visually, so the layout box stays full width.
 .imgWrapper {
-  position: relative;
+  flex: 1;
+  min-width: 0;
   padding: 2rem 0;
   transform: rotate(-10deg) scale(0.8);
   transform-origin: left center;
@@ -30,175 +36,27 @@
     transform: rotate(-6deg) scale(0.9);
     transform-origin: center;
   }
-
-  .cards {
-  }
-}
-
-.contentWrapper {
-  flex: 1;
-  display: flex;
-  align-items: center;
 }
 
 .content {
+  flex: 1;
   z-index: 2;
+
   h2 {
     @include heading-section($black);
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
-
+  // Eyebrow line
   p:first-child {
     color: $accent;
     font-weight: 700;
     letter-spacing: 1px;
   }
 
-  p:nth-of-type(2),
-  p:nth-of-type(3),
-  p:nth-of-type(4),
-  p:last-child {
+  p:not(:first-child) {
     color: $darkGrayText;
     line-height: 2rem;
-    margin-top: 1rem;
-  }
-
-  @media screen and (max-width: 450px) {
-    margin: 0 !important;
-  }
-}
-
-.points {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-
-  @include mobile {
-    margin-left: 1rem;
-  }
-}
-
-.pointsGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.point {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  p {
-    color: $darkGrayText;
-    margin: 0 !important;
-    line-height: 1.5rem;
-  }
-}
-
-.tick {
-  height: 30px;
-  width: 30px;
-  min-width: 30px;
-  border: 1px solid $success;
-  background-color: $success;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  svg {
-    stroke: $offWhite;
-    color: $offWhite;
-  }
-  &:hover {
-    transition: all 0.5s ease;
-    background-color: $offWhite;
-    svg {
-      stroke: $success;
-      color: $success;
-    }
-  }
-}
-
-.semi {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  filter: brightness(1.5);
-  transform: scaleX(-1);
-
-  @include phone {
-    width: 450px;
-    height: 450px;
-  }
-}
-
-.btn {
-  @include btn-on-accent;
-  margin-bottom: 0;
-  padding: 1.5rem 3rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: fit-content;
-}
-
-// Variations ***********************
-.withImg {
-  @include phone {
-    display: flex;
-    flex-direction: column-reverse;
-    .imgWrapper {
-      display: flex;
-      margin: 0 auto;
-      border: none;
-    }
-  }
-}
-
-.customMargin {
-  margin: 6rem $gutter;
-  @include tablet {
-    margin: 6rem 5vw;
-  }
-  @include phoneLandscape {
-    margin: 6rem 2vw;
-  }
-  @include phone {
-    margin: 6rem 1rem;
-  }
-}
-
-.locationBtn {
-  margin-top: 2rem;
-  max-width: 90vw;
-  display: inline-flex; // Changed to inline-flex
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-  padding: 1rem;
-  white-space: normal; // Forces text to wrap
-  overflow-wrap: break-word; // Breaks words when necessary
-  line-height: 1.2; // Helps with readability of wrapped text
-
-  svg {
-    flex: 0 0 auto; // Prevents svg from shrinking or growing
-    width: 1.5em;
-    height: 1.5em;
-  }
-}
-
-.imgMarginTop {
-  @media screen and (min-width: 700px) {
-    margin-top: 6rem;
   }
 }
 

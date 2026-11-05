@@ -1,92 +1,75 @@
+// app/page.js
 import React from "react";
 import dynamic from "next/dynamic";
 
-// Keep Hero static as it's above fold
-import Hero from "./(components)/Hero";
+// Above the fold: normal import so it is in the first chunk
+import HomeHero from "./(components)/HomeHero";
 
-// Dynamically import everything else
-const Services = dynamic(() => import("./(components)/Services"));
-const CTAMain = dynamic(() => import("./(components)/CTAMain"));
-const IsRight = dynamic(() => import("./(components)/IsRight"));
+// Below the fold: next/dynamic splits them into their own chunks.
+// They are still server rendered, so all their content is in the HTML.
+const HomeTrust = dynamic(() => import("./(components)/HomeTrust"));
 const SolutionsCarousel = dynamic(
   () => import("./(components)/SolutionsCarousel"),
 );
-const CTAFull = dynamic(() => import("./(components)/CTAFull"));
+const HomeProcess = dynamic(() => import("./(components)/HomeProcess"));
 const HomeTestimonials = dynamic(
   () => import("./(components)/HomeTestimonials"),
 );
-const Brands = dynamic(() => import("../components/Brands"));
-const Promo = dynamic(() => import("../components/Promo"));
-// const CaseStudyCarousel = dynamic(
-//   () => import("../components/CaseStudyCarousel"),
-// );
-const Contact = dynamic(() => import("../components/Contact"));
+const CaseStudyCarousel = dynamic(
+  () => import("@/components/CaseStudyCarousel"),
+);
+const HomeLocations = dynamic(() => import("./(components)/HomeLocations"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import { getHomePageSchema } from "../utils/testimonialSchemaGenerator";
-import { testimonials } from "../testimonials";
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "../utils/schemaGenerators";
+  generateTestimonialSchema,
+} from "@/utils/schemaGenerators";
+
+// Swap PAGE_URL for SITE_URL when this replaces the home page
+const PAGE_URL = "https://www.officeexperts.com.au";
+const PAGE_TITLE =
+  "Microsoft Consultants and Developers Australia | Office Experts";
+const PAGE_DESCRIPTION =
+  "Australian Microsoft consultants since 2000. Our team builds, fixes and supports the Word, Excel, Access, Power Platform and AI solutions your business relies on.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const DATE_PUBLISHED = "2018-07-16T02:07:45+10:00";
+const DATE_MODIFIED = "2026-11-05T00:00:00+11:00";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    // Review + AggregateRating nodes (3 reviews on home page)
-    ...getHomePageSchema(testimonials)["@graph"],
-
-    // LocalBusiness / ProfessionalService
+    generateTestimonialSchema(),
     generateProfessionalServiceSchema(),
-
-    // Organization (company identity, sameAs social links etc.)
     generateOrganizationSchema(),
-
-    // WebSite (same on every page — generated from shared utility)
     generateWebSiteSchema(
       "https://www.officeexperts.com.au",
       "Office Experts Group",
       "Your Microsoft Office Design, Development and Consulting Experts",
     ),
-
-    // WebPage — describes this specific page
     {
       "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/#webpage",
-      url: "https://www.officeexperts.com.au",
-      name: "Microsoft Office Consulting & Solutions",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
       about: {
-        "@id": "https://www.officeexperts.com.au#business",
+        "@id": `${SITE_URL}#organization`,
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-10-14T00:00:00+00:00",
-      description:
-        "Professional Microsoft Office consulting and support services across Australia. Custom solutions in Excel, Access, Word, Power Platform and Office 365. Call 1300 102 810.",
-      breadcrumb: {
-        "@id": "https://www.officeexperts.com.au#breadcrumb",
-      },
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au"],
-        },
-      ],
-    },
-
-    // BreadcrumbList
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au",
+          target: [PAGE_URL],
         },
       ],
     },
@@ -100,19 +83,17 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Hero />
-      <Services />
-      <CTAMain />
-      <IsRight />
-      <SolutionsCarousel />
-      <HomeTestimonials />
-      <Brands />
-      <CTAFull />
-      <Promo
-        h2="Automate & Innovate"
-        p="Reduce costs and boost productivity with custom Microsoft Office solutions. Our experts deliver tailored automation, reporting, and integration services across Australia."
-      />
-      <Contact />
+
+      <main>
+        <HomeHero />
+        <HomeTrust />
+        <SolutionsCarousel />
+        <HomeProcess />
+        <HomeTestimonials />
+        <CaseStudyCarousel />
+        <HomeLocations />
+        <Contact />
+      </main>
     </>
   );
 };
