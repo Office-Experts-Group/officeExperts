@@ -16,10 +16,10 @@ const ToolbarsIntro = () => (
       <AnimateOnScroll animation="fade-up" duration={0.6}>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Custom Built</p>
-          <h2 className={styles.heading}>
+          <h1 className={styles.heading}>
             Enhanced Toolbars &amp; Ribbons for{" "}
             <span className={styles.accent}>Seamless Document Control</span>
-          </h2>
+          </h1>
           <p className={styles.text}>
             Our team of Word design experts will deliver your{" "}
             <Link href="/services/microsoft-word/corporate-global-template-solution">

@@ -3,7 +3,6 @@
 // Migrated from wordexperts.com.au/accessibility. Metadata lives in ./layout.js.
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 // Below-the-fold sections loaded dynamically to keep the initial bundle lean
@@ -24,9 +23,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/accessibility";
 import faqSchema from "../wordFaqs/accessibilitySchema";
 
-import accessibility from "@/public/pageHeros/accessibility.webp";
-import accessibilityMob from "@/public/pageHeros/mob/accessibilityMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/accessibility";
 const PAGE_TITLE = "Microsoft Word Accessibility | Office Experts";
@@ -34,7 +30,6 @@ const PAGE_DESCRIPTION =
   "Accessible Word document creation and template services. WCAG-compliant documents, accessibility audits, and remediation services for government and enterprise.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "accessibility in word documents design";
 
 const DATE_PUBLISHED = "2018-07-16T02:14:28+10:00";
 
@@ -170,13 +165,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Accessibility & Compliance"
-        desktopImage={accessibility}
-        mobileImage={accessibilityMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <PageSegmentMain />
       <AccessibilityStandards />

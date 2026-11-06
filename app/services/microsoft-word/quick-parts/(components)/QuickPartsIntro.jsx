@@ -16,14 +16,14 @@ const stats = [
 ];
 
 const QuickPartsIntro = () => (
-  <section className={styles.section}>
+  <section className={styles.hero}>
     <div className={styles.grid}>
       <div>
         <p className={styles.eyebrow}>Word Quick Parts &amp; Building Blocks</p>
-        <h2 className={styles.heading}>
+        <h1 className={styles.heading}>
           Write it once,{" "}
           <span className={styles.accent}>insert it everywhere.</span>
-        </h2>
+        </h1>
 
         <div className={styles.body}>
           <p>

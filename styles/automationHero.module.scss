@@ -1,0 +1,80 @@
+// styles/automationHero.module.scss
+@use "./globals.scss" as *;
+
+// First section on the page, so heroPadding clears the fixed header.
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include tablet {
+    padding: calc(#{$header-offset} + 3rem) 4rem 5rem;
+  }
+  @include phoneLandscape {
+    padding: calc(#{$header-offset} + 2rem) 2rem 4rem;
+  }
+  @include phone {
+    padding: calc(#{$header-offset} + 1.5rem) 1.25rem 3.5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  max-width: 640px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1.25rem;
+
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+
+  @include heading-main($white);
+}
+
+// font-family: inherit keeps the span on the heading font;
+// $accent-on-dark keeps it readable on the dark background.
+.accent {
+  color: $accent-on-dark;
+  font-family: inherit;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $white-65;
+
+  & + & {
+    margin-top: 0.75rem;
+  }
+}
+
+.jumpLink {
+  margin-top: 2.25rem;
+
+  @include arrow-link($accent-on-dark);
+}
+
+.visual {
+  @include belowDesktop {
+    max-width: 480px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,333 @@
+// /styles/boxBentoSegment.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem $gutter;
+  background: $dark-bg;
+  scroll-margin-top: $scroll-offset;
+
+  // Accent glow, top left
+  &::before {
+    content: "";
+    position: absolute;
+    top: -18rem;
+    left: -14rem;
+    width: 46rem;
+    height: 46rem;
+    background: radial-gradient(circle, $accent-dim 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  @include belowDesktop {
+    padding: 6rem 4rem;
+  }
+  @include mobile {
+    padding: 4rem 1rem;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header: heading left, intro right ───────────────────────────────────────
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin-top: 1rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  @include lede($white-65);
+  max-width: 30rem;
+  text-align: center;
+}
+
+// ── Bento grid ──────────────────────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  @include desktopUp {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(13rem, auto);
+    gap: 1.25rem;
+  }
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+  padding: 2rem;
+  background: linear-gradient(160deg, $dark-mid 0%, $dark-surface 100%);
+  border: 1px solid $white-08;
+  border-radius: $radius;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  // Soft accent bloom in the corner, grows on hover
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6rem;
+    right: -6rem;
+    width: 14rem;
+    height: 14rem;
+    background: radial-gradient(circle, $accent-dim 0%, transparent 70%);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $accent-border;
+    box-shadow: $shadow-card-hover;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  // Keep content above the bloom
+  > * {
+    position: relative;
+  }
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+// Icon badge (swapped to a translucent white on the accent tiles below)
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  color: $accent-on-dark;
+  background: $accent-dim;
+  border-radius: 1rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.title {
+  @include card-title(md, $white);
+  line-height: 1.35;
+  letter-spacing: 0.5px;
+}
+
+.text {
+  @include small-text($white-65);
+}
+
+// ── Placement. Tablet: two columns. Desktop: 12-column bento. ───────────────
+.tileLaunch {
+  grid-column: span 2;
+
+  @include mobile {
+    grid-column: span 1;
+  }
+  @include desktopUp {
+    grid-column: 1 / 6;
+    grid-row: 1 / 3;
+  }
+}
+
+.tileStandardise {
+  @include desktopUp {
+    grid-column: 6 / 13;
+  }
+}
+
+.tilePresentation {
+  @include desktopUp {
+    grid-column: 6 / 10;
+  }
+}
+
+.tileTools {
+  @include desktopUp {
+    grid-column: 10 / 13;
+  }
+}
+
+.tileMerge {
+  @include desktopUp {
+    grid-column: 1 / 8;
+  }
+}
+
+.tileCta {
+  grid-column: span 2;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  @include mobile {
+    grid-column: span 1;
+  }
+  @include desktopUp {
+    grid-column: 8 / 13;
+  }
+}
+
+// ── Accent styling, shared by the featured tile and the CTA ─────────────────
+.tileAccent {
+  background: linear-gradient(145deg, $accent 0%, $accent-dark 100%);
+  border-color: transparent;
+
+  &::before {
+    background: radial-gradient(circle, $white-18 0%, transparent 70%);
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  .icon {
+    color: $white;
+    background: $white-18;
+  }
+
+  .text {
+    color: $white-88;
+  }
+}
+
+// Featured tile: larger type
+.tileLaunch {
+  .title {
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    max-width: 22rem;
+  }
+
+  .text {
+    @include lede($white-88);
+    max-width: 22rem;
+  }
+}
+
+.tileCta .title {
+  @include card-title(lg, $white);
+}
+
+// Stack of pages, only where the tile is tall enough to show them
+.pages {
+  display: none;
+
+  @include desktopUp {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    pointer-events: none;
+  }
+}
+
+.pageBack,
+.pageFront {
+  position: absolute;
+  width: 10rem;
+  height: 13rem;
+  border-radius: 0.75rem;
+}
+
+.pageBack {
+  right: 2rem;
+  bottom: -4rem;
+  background: $white-18;
+  transform: rotate(9deg);
+}
+
+.pageFront {
+  right: 6rem;
+  bottom: -5rem;
+  background: $white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transform: rotate(-6deg);
+
+  // Header bar, in the brand accent
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 40%;
+    height: 0.6rem;
+    background: $accent;
+    border-radius: 0.3rem;
+  }
+
+  // Lines of body text
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 2.6rem 1rem 1rem;
+    background: repeating-linear-gradient(
+      to bottom,
+      $line 0,
+      $line 5px,
+      transparent 5px,
+      transparent 12px
+    );
+  }
+}
+
+// ── Call to action ──────────────────────────────────────────────────────────
+.cta {
+  @include btn;
+  align-self: flex-start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tile::before {
+    transition: none;
+  }
+}

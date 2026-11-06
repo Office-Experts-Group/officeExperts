@@ -19,7 +19,7 @@ export default function BoxSegment() {
     <section
       className={`${styles.flipSection} ${styles.lightSection} ${styles.singleSection}`}
       id="no-more-headaches"
-      style={{ scrollMarginTop: "150px" }}
+      style={{ scrollMarginTop: "150px", backgroundColor: "#111820" }}
     >
       <div className={styles.cardWrapper}>
         <div className={styles.cardInner}>

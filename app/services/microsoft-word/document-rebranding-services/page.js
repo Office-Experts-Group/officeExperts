@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import RebrandingIntro from "./(components)/RebrandingIntro";
 
 // Everything below the first segment loads with next/dynamic
@@ -15,9 +14,6 @@ const RebrandingIncluded = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import rebrand from "@/public/pageHeros/rebrand.webp";
-import rebrandingMob from "@/public/pageHeros/mob/rebrandingMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/document-rebranding-services";
 const PAGE_TITLE = "Document Rebranding Services | Office Experts";
@@ -25,9 +21,6 @@ const PAGE_DESCRIPTION =
   "Update your existing Microsoft Word documents to reflect your new brand, including logos, colours, fonts, layouts and corporate styling.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-
-const HERO_ALT_DESKTOP = "Rebuild and Rebrand";
-const HERO_ALT_MOBILE = "alarm clock with time to rebranding";
 
 // Converted from the Word Experts UTC value (2025-04-30T15:51:37+00:00)
 const DATE_PUBLISHED = "2025-05-01T01:51:37+10:00";
@@ -163,13 +156,6 @@ const page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Document Rebranding Services"
-        desktopImage={rebrand}
-        mobileImage={rebrandingMob}
-        altDesk={HERO_ALT_DESKTOP}
-        altMob={HERO_ALT_MOBILE}
-      />
       <RebrandingIntro />
       <RebrandingWhat />
       <RebrandingWhy />
@@ -179,6 +165,7 @@ const page = () => {
         theme="dark"
         eyebrow="Case Studies"
         heading="Document rebranding projects we've delivered"
+        headingAccent="to happy clients"
         links={caseStudies}
       />
       <Contact />

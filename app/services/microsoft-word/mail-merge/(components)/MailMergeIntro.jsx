@@ -26,21 +26,20 @@ const MailMergeIntro = () => (
       <AnimateOnScroll animation="fade-up" duration={0.6}>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Save time, reduce errors</p>
-          <h2 className={styles.heading}>
+          <h1 className={styles.heading}>
             Mail merge that does the typing{" "}
             <span className={styles.accent}>so your team doesn't.</span>
-          </h2>
+          </h1>
           <p>
-            Mail merge is one of Microsoft Word's most useful and most
-            underused features. It takes a single Word template, connects it to
-            a list of people or records, and produces a personalised letter,
-            label, invoice or email for every row in that list. Hundreds of
-            documents in minutes, without anyone copying and pasting names.
+            Mail merge is one of Microsoft Word's most useful and most underused
+            features. It takes a single Word template, connects it to a list of
+            people or records, and produces a personalised letter, label,
+            invoice or email for every row in that list. Hundreds of documents
+            in minutes, without anyone copying and pasting names.
           </p>
           <p>
-            We set up, automate and repair mail merge for Australian
-            businesses, not-for-profits and government teams. Your merge is
-            built on your{" "}
+            We set up, automate and repair mail merge for Australian businesses,
+            not-for-profits and government teams. Your merge is built on your{" "}
             <Link href="/services/microsoft-word/word-document-template-creation">
               branded Word template
             </Link>

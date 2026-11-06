@@ -2,8 +2,8 @@
 @use "./globals.scss" as *;
 
 .section {
-  background: $white;
-  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+  background: $dark-bg;
+  @include heroPadding;
 }
 
 .inner {
@@ -31,24 +31,25 @@
 }
 
 .eyebrow {
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  @include heading-section;
+  @include heading-section-on-dark;
 }
 
+// $accent is too dark to read on $dark-bg, so use the on-dark variant
 .headingAccent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .lead {
   max-width: 56ch;
   font-size: 1.1rem;
   line-height: 1.85;
-  color: $text-secondary;
+  color: $white-65;
 
-  @include inline-link;
+  @include inline-link($accent-on-dark);
 }
 
 .ctaRow {
@@ -61,7 +62,7 @@
 
 .ctaNote {
   font-size: 0.85rem;
-  color: $text-muted;
+  color: $white-55;
 }
 
 .art {
@@ -80,7 +81,7 @@
 .jump {
   margin-top: 5rem;
   padding-top: 1.75rem;
-  border-top: 1px solid $border-strong;
+  border-top: 1px solid $white-12;
 
   @include phone {
     margin-top: 3.5rem;
@@ -93,7 +94,7 @@
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: $text-muted;
+  color: $white-55;
 }
 
 .jumpList {
@@ -117,13 +118,13 @@
   align-items: center;
   gap: 1rem;
   padding: 1.4rem 0;
-  border-bottom: 1px solid $border;
-  color: $text-primary;
+  border-bottom: 1px solid $white-08;
+  color: $white;
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: $accent;
+    color: $accent-on-dark;
 
     .arrow {
       transform: translateX(4px);
@@ -135,7 +136,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .jumpText {
@@ -150,7 +151,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: $text-muted;
+  color: $white-55;
 }
 
 .jumpTitle {
@@ -161,6 +162,6 @@
 
 .arrow {
   display: flex;
-  color: $accent;
+  color: $accent-on-dark;
   transition: transform 0.2s ease;
 }

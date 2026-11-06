@@ -4,16 +4,18 @@ import dynamic from "next/dynamic";
 import BrandedTemplates from "./(components)/BrandedTemplates";
 
 const Contact = dynamic(() => import("@/components/Contact"));
-const BlackSegment = dynamic(() => import("./(components)/BlackSegment"));
+const WhyChooseTemplates = dynamic(
+  () => import("./(components)/WhyChooseTemplates"),
+);
 const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
-const PageSegmentDropdowns = dynamic(
-  () => import("./(components)/PageSegmentDropdowns"),
+const BrandingServices = dynamic(
+  () => import("./(components)/BrandingServices"),
 );
 const CompareContainer = dynamic(
   () => import("./(components)/CompareContainer"),
 );
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
-const BoxSegment = dynamic(() => import("./(components)/BoxSegment"));
+const BoxBentoSegment = dynamic(() => import("./(components)/BoxBentoSegment"));
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/brand-template";
@@ -182,14 +184,14 @@ const Page = () => {
       <main>
         <BrandedTemplates />
         <PageSegment4 />
-        <BlackSegment />
+        <WhyChooseTemplates />
         <CompareContainer />
-        <BoxSegment />
-        <PageSegmentDropdowns />
+        <BoxBentoSegment />
+        <BrandingServices />
         <RelatedLinks
           theme="dark"
           eyebrow="Case Studies"
-          heading="Microsoft Word projects"
+          heading="Some Word template projects"
           headingAccent="we've delivered"
           links={caseStudies}
         />

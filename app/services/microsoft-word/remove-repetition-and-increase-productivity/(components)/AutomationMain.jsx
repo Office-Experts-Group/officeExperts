@@ -63,28 +63,17 @@ const capabilities = [
 
 const AutomationMain = () => {
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.intro}>
-        <div className={styles.introContent}>
-          <p className={styles.eyebrow}>Work Smart, Not Hard</p>
-          <h2 className={styles.heading}>
-            Stop Repeating Tasks.{" "}
-            <span className={styles.accent}>Start Automating.</span>
-          </h2>
-          <p className={styles.lead}>
-            Every hour you or your team spends reformatting headers,
-            re-inserting tables or fixing page layouts is an hour lost. Our Word
-            automation specialists build custom solutions using VBA macros,
-            Building Blocks and intelligent templates that handle the repetitive
-            tasks eating into your productivity.
-          </p>
-          <p className={styles.lead}>
-            Whether you need a single macro to automate a nightly report, or a
-            fully templated document system rolled out across a 200-person
-            organisation, we design solutions that fit into your current
-            workflow.
-          </p>
-        </div>
+    <section id="what-we-automate" className={styles.wrapper}>
+      <div className={styles.header}>
+        <p className={styles.eyebrow}>What We Automate</p>
+        <h2 className={styles.heading}>
+          Six Ways We Take The Busywork{" "}
+          <span className={styles.accent}>Out Of Word.</span>
+        </h2>
+        <p className={styles.lead}>
+          Each of these can be built on its own, or combined into a complete
+          document system for your whole team.
+        </p>
       </div>
 
       <div className={styles.list}>

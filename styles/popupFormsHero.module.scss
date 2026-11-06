@@ -2,12 +2,14 @@
 
 @use "./globals.scss" as *;
 
-.section {
-  background: $light-bg;
-  padding: 7rem $gutter;
+.hero {
+  background: $dark-bg;
+  @include heroPadding;
 
+  // Smaller bottom padding on phones; top still clears the fixed header
   @include phone {
-    padding: 4rem $gutter;
+    padding-top: calc(#{$header-offset} + 2rem);
+    padding-bottom: 4rem;
   }
 }
 
@@ -19,13 +21,13 @@
   margin: 0 auto;
   align-items: start;
 
-  @include tablet {
+  // Single column for everything below desktop (tablet, phone landscape, phone)
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
   @include phone {
-    grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
@@ -41,13 +43,11 @@
 }
 
 .heading {
-  color: $text-primary;
-
-  @include heading-main;
+  @include heading-main($white);
 }
 
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .ctaBtn {
@@ -56,7 +56,7 @@
 
 .body {
   margin-top: 1.5rem;
-  color: $text-secondary;
+  color: $white-65;
   font-size: 1.05rem;
   line-height: 1.7;
 
@@ -73,12 +73,19 @@
   flex-wrap: wrap;
 }
 
+// The class sits on the <a> itself, so style it directly
+// (inline-link only targets descendant <a> tags)
 .ctaSecondary {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  color: $accent-on-dark;
+  font-weight: 700;
+  text-decoration: none;
 
-  @include inline-link;
+  &:hover {
+    color: $white;
+  }
 }
 
 // ── Stat pills ───────────────────────────────────────────────────────────────
@@ -102,23 +109,24 @@
 .statNum {
   font-size: 1.5rem;
   font-weight: 700;
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .statLabel {
   font-size: 0.8rem;
-  color: $text-muted;
+  color: $white-55;
 }
 
 .statDivider {
   width: 1px;
   height: 32px;
-  background: $border;
+  background: $white-12;
 }
 
 // ── Right column — interactive capability list ────────────────────────────────
 .rightCol {
   position: relative;
+  margin-top: 4vw;
 }
 
 .capLabel {
@@ -126,7 +134,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: $text-muted;
+  color: $white-55;
   margin-bottom: 1rem;
 
   @include hide-on-phone;
@@ -135,7 +143,7 @@
 .capList {
   position: relative;
   list-style: none;
-  border-top: 1px solid $border;
+  border-top: 1px solid $white-12;
 }
 
 .trackLine {
@@ -143,14 +151,19 @@
   top: 0;
   left: 0;
   width: 2px;
-  background: $accent;
+  background: $accent-on-dark;
   transition: height 0.3s ease;
 }
 
 .capItem {
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $white-12;
   cursor: pointer;
   outline: none;
+
+  // Keyboard focus indicator (outline is removed above)
+  &:focus-visible {
+    box-shadow: inset 0 0 0 1px $accent-on-dark;
+  }
 }
 
 .capItemInner {
@@ -169,7 +182,7 @@
 
 .capNum {
   font-size: 0.85rem;
-  color: $text-muted;
+  color: $white-55;
   font-weight: 700;
 }
 
@@ -177,11 +190,11 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: $border;
+  background: $white-18;
 }
 
 .capItemActive .capDot {
-  background: $accent;
+  background: $accent-on-dark;
 }
 
 .capContent {
@@ -198,13 +211,13 @@
 
 .capTitle {
   font-size: 1.1rem;
-  color: $text-primary;
+  color: $white;
 }
 
 .capTag {
   font-size: 0.75rem;
-  color: $accent;
-  background: $accent-light;
+  color: $accent-on-dark;
+  background: $accent-dim;
   padding: 0.2rem 0.6rem;
   border-radius: $radius-pill;
   white-space: nowrap;
@@ -216,7 +229,7 @@
   transition: max-height 0.3s ease;
 
   p {
-    color: $text-secondary;
+    color: $white-65;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-top: 0.75rem;
@@ -228,21 +241,27 @@
   max-height: 12rem;
 }
 
+// Same as .ctaSecondary: class is on the <a> itself
 .capLink {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   margin-top: 0.6rem;
   font-size: 0.9rem;
+  color: $accent-on-dark;
+  font-weight: 700;
+  text-decoration: none;
 
-  @include inline-link;
+  &:hover {
+    color: $white;
+  }
 }
 
 .capArrow {
-  color: $text-muted;
+  color: $white-35;
   flex-shrink: 0;
 }
 
 .capItemActive .capArrow {
-  color: $accent;
+  color: $accent-on-dark;
 }

@@ -2,17 +2,19 @@
 @use "./globals.scss" as *;
 
 .section {
-  background: $white;
-  padding: 7rem 8rem;
+  background: $dark-bg;
+  @include heroPadding;
 
+  // Smaller screens keep their tighter side/bottom padding,
+  // but the top always clears the fixed header
   @include tablet {
-    padding: 6rem 4rem;
+    padding: calc(#{$header-offset} + 3rem) 4rem 6rem;
   }
   @include phoneLandscape {
-    padding: 5rem 1.5rem;
+    padding: calc(#{$header-offset} + 2rem) 1.5rem 5rem;
   }
   @include phone {
-    padding: 4.5rem 1.25rem;
+    padding: calc(#{$header-offset} + 2rem) 1.25rem 4.5rem;
   }
 }
 
@@ -44,29 +46,35 @@
 }
 
 .eyebrow {
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  @include heading-section;
+  @include heading-main($white);
 }
 
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .text {
   font-size: 1rem;
   line-height: 1.85;
-  color: $text-secondary;
+  color: $white-65;
 }
 
 // Internal links: accent colour, bold
 .link {
-  color: $accent;
+  color: $accent-on-dark;
   font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
 }
 
+// Light panel kept so the existing light-themed illustration stays legible
 .visual {
   background: $grayBGC;
   border-radius: $radius;
@@ -88,11 +96,11 @@
   flex-direction: column;
   gap: 1.75rem;
   padding-top: 2rem;
-  border-top: 2px solid $text-primary;
+  border-top: 2px solid $white-18;
 }
 
 .signsLabel {
-  @include label($text-muted);
+  @include label($white-55);
 }
 
 .signs {
@@ -118,11 +126,11 @@
 }
 
 .signTitle {
-  @include card-title(sm);
+  @include card-title(sm, $white);
 }
 
 .signText {
   font-size: 0.9rem;
   line-height: 1.75;
-  color: $text-secondary;
+  color: $white-65;
 }

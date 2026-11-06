@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import ToolbarsIntro from "./(components)/ToolbarsIntro";
 
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
@@ -26,9 +25,6 @@ const ToolbarsAutomation = dynamic(
 import faqs from "../wordFaqs/automation";
 import faqSchema from "../wordFaqs/customToolbarsSchema";
 
-import toolbars from "@/public/pageHeros/toolbars.webp";
-import toolbarsMob from "@/public/pageHeros/mob/toolbarsMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons";
 const PAGE_TITLE = "Custom Toolbars and Ribbons | Office Experts";
@@ -37,11 +33,8 @@ const PAGE_DESCRIPTION =
 
 const SITE_URL = "https://www.officeexperts.com.au";
 
-const HERO_ALT = "Custom toolbars and ribbons in Microsoft Word";
-
 // Converted from the WE value (2018-07-15T16:04:37+00:00) to AEST.
 const DATE_PUBLISHED = "2018-07-16T02:04:37+10:00";
-// Set by hand when real content changes. Never new Date().
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
 
 const caseStudies = [
@@ -141,13 +134,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Custom Toolbars and Ribbons"
-        desktopImage={toolbars}
-        mobileImage={toolbarsMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <ToolbarsIntro />
       <ToolbarsLifecycle />

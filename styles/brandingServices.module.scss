@@ -1,0 +1,276 @@
+// /styles/brandingServices.module.scss
+@use "./globals.scss" as *;
+
+// Rail geometry: the line runs through the centre of each node, which sits
+// level with the middle of its summary row.
+$row-height: 3.25rem;
+$node-size: 0.9rem;
+$rail-width: 2.25rem;
+$step-gap: 0.25rem;
+$rail-speed: 0.4s;
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch; // content column matches the visual's height
+  gap: 5rem;
+  margin-inline: auto;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    padding: 5rem 4rem;
+  }
+  @include mobile {
+    padding: 3rem 1rem;
+  }
+}
+
+// Flex column so the help block can sit at the bottom with margin-top: auto
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  @include eyebrow;
+  align-self: flex-start;
+}
+
+.heading {
+  @include heading-section;
+  margin: 1rem 0 1.25rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  max-width: 34rem;
+  margin-bottom: 2.5rem;
+}
+
+// ── Steps with progress rail ────────────────────────────────────────────────
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: $step-gap;
+  max-width: 36rem;
+  margin-bottom: 2.5rem; // minimum gap above .help when the column isn't taller
+}
+
+.step {
+  position: relative; // the rail pieces in the summary position against this
+  padding-left: $rail-width;
+
+  // Animate open/close where the browser supports it. Elsewhere it just snaps.
+  @supports selector(::details-content) {
+    interpolate-size: allow-keywords;
+
+    &::details-content {
+      block-size: 0;
+      overflow: clip;
+      transition:
+        block-size 0.4s ease,
+        content-visibility 0.4s allow-discrete;
+    }
+
+    &[open]::details-content {
+      block-size: auto;
+    }
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: $row-height;
+  list-style: none;
+  cursor: pointer;
+
+  // Hide the default disclosure triangle
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 4px;
+    border-radius: 0.25rem;
+  }
+}
+
+// Grey track from this node to the next. The fill runs over it in $accent.
+.segment {
+  position: absolute;
+  left: calc(#{$node-size} / 2 - 1px);
+  top: calc(#{$row-height} / 2);
+  width: 2px;
+  height: calc(100% + #{$step-gap});
+  background: $line-strong;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $accent;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform $rail-speed ease;
+  }
+}
+
+.node {
+  position: absolute;
+  left: 0;
+  top: calc(#{$row-height} / 2 - #{$node-size} / 2);
+  z-index: 1;
+  width: $node-size;
+  height: $node-size;
+  background: $line-strong;
+  border-radius: 50%;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+// Lit once this step, or any step after it, is open: the line has run
+// through it. Closing everything resets the rail.
+.step[open] .node,
+.step:has(~ .step[open]) .node {
+  background: $accent;
+}
+
+.step:has(~ .step[open]) .segment::after {
+  transform: scaleY(1);
+}
+
+// Halo marks the open item
+.step[open] .node {
+  box-shadow: 0 0 0 5px $accent-tint;
+}
+
+// ── Title and toggle ────────────────────────────────────────────────────────
+.title {
+  @include card-title(md, $text-primary);
+  transition: color 0.25s ease;
+}
+
+.summary:hover .title,
+.step[open] .title {
+  color: $accent;
+}
+
+// Plus that turns into a minus: the vertical bar rotates away
+.toggleIcon {
+  position: relative;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+    background: $text-secondary;
+    border-radius: 2px;
+    transition:
+      transform 0.3s ease,
+      background 0.25s ease;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.step[open] .toggleIcon {
+  &::before,
+  &::after {
+    background: $accent;
+  }
+
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+
+// ── Content ─────────────────────────────────────────────────────────────────
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0 2.5rem 0.75rem 0;
+  list-style: none;
+
+  li {
+    @include body-text;
+    line-height: 1.5;
+  }
+}
+
+// ── Help prompt, pinned to the bottom of the column ─────────────────────────
+.help {
+  margin-top: auto;
+  width: fit-content;
+  padding: 1.25rem 0 0 0;
+  border-top: 1px solid $line-strong;
+}
+
+.helpText {
+  @include card-title(sm, $text-primary);
+  margin: 0 0 0.35rem;
+}
+
+.helpLink {
+  font-weight: 700;
+  @include small-text($accent);
+
+  &::after {
+    content: "\2192"; // right arrow
+    display: inline-block;
+    margin-left: 0.4rem;
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    font-weight: 700;
+
+    &::after {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ── Right-hand visual ───────────────────────────────────────────────────────
+.visual {
+  align-self: start; // stays its natural height so sticky still works
+
+  @include desktopUp {
+    position: sticky;
+    top: $header-offset;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .segment::after,
+  .node,
+  .title,
+  .toggleIcon::before,
+  .toggleIcon::after,
+  .step::details-content {
+    transition: none;
+  }
+}

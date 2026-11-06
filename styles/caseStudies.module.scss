@@ -2,23 +2,39 @@
 @use "./globals.scss" as *;
 
 // ── Hero ──────────────────────────────────────
+// First thing on the page now (ServiceHero is gone), so the top padding has
+// to clear the fixed header — heroPadding handles that on desktop.
 .hero {
+  position: relative;
+  overflow: hidden;
   background: $dark-bg;
-  padding: 7rem 8rem;
+  @include heroPadding;
 
   @include tablet {
-    padding: 6rem 4rem 3rem;
+    padding: calc(#{$header-offset} + 3rem) 4rem 5rem;
   }
   @include phoneLandscape {
-    padding: 5rem 2rem 2.5rem;
+    padding: calc(#{$header-offset} + 2rem) 2rem 4rem;
   }
   @include phone {
-    padding: 4rem 1.25rem 2rem;
+    padding: calc(#{$header-offset} + 1.5rem) 1.25rem 3.5rem;
   }
 }
 
 .heroInner {
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.heroCopy {
+  max-width: 640px;
 }
 
 .eyebrow {
@@ -29,22 +45,77 @@
 }
 
 .heroTitle {
-  @include heading-section-on-dark;
+  @include heading-main($white);
 }
 
+// font-family: inherit stops the span picking up the body font instead of
+// the heading font. $accent-on-dark keeps it readable on the dark background.
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
+  font-family: inherit;
 }
 
 .heroSubtitle {
   font-size: 1.05rem;
   color: $white-65;
   line-height: 1.8;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+
+  & + & {
+    margin-top: 0.75rem;
+  }
+}
+
+// ── Hero stats ────────────────────────────────
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3.5rem;
+  margin-top: 2.5rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid $white-12;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statValue {
+  font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+  font-weight: $heading-weight;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.statSuffix {
+  color: $accent-on-dark;
+}
+
+.statLabel {
+  @include label($white-55);
+}
+
+.jumpLink {
+  margin-top: 2.25rem;
+
+  @include arrow-link($accent-on-dark);
+}
+
+.heroVisual {
+  @include belowDesktop {
+    max-width: 480px;
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 // ── Section wrapper ───────────────────────────
 .section {
+  scroll-margin-top: $scroll-offset;
   padding: 5rem 8rem 8rem;
   background: $light-bg;
 
@@ -101,8 +172,6 @@
     gap: 1.25rem;
   }
 }
-
-// styles/caseStudies.module.scss
 
 // Flips the image to the second grid column so rows alternate down the page.
 // Uses grid-column rather than order, so the DOM order (image first) is kept

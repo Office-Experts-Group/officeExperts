@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PopupFormsHero from "./(components)/PopupFormsHero";
 
 // Below-the-fold components loaded dynamically
@@ -25,9 +24,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/popup-forms";
 import faqSchema from "../wordFaqs/popupFormsSchema";
 
-import popupForm from "@/public/pageHeros/popup.webp";
-import popupFormMob from "@/public/pageHeros/mob/popupMob.webp";
-
 // ── Page values (keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with layout.js)
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL =
@@ -36,10 +32,6 @@ const PAGE_TITLE = "Word Popup Forms | Office Experts";
 const PAGE_DESCRIPTION =
   "Custom Microsoft Word popup forms with guided data entry, validation, conditional logic and direct document integration.";
 
-const HERO_ALT = "Popup form to document diagram";
-
-// Dates: datePublished converted from the Word Experts UTC value to AEDT
-// (+11:00, January). dateModified is set by hand when content really changes.
 const DATE_PUBLISHED = "2018-01-14T01:27:08+11:00";
 const DATE_MODIFIED = "2026-10-26T00:00:00+11:00";
 
@@ -190,13 +182,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Popup Forms in Word"
-        desktopImage={popupForm}
-        mobileImage={popupFormMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <PopupFormsHero />
       <PopupFormsProblem />

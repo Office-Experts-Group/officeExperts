@@ -3,15 +3,18 @@
 @use "./globals.scss" as *;
 
 .section {
-  padding: 6rem $gutter;
+  background: $dark-bg;
+
+  @include heroPadding;
 
   @include phone {
     padding: 3.5rem $gutter;
   }
 }
 
+// $accent is too dark to read on $dark-bg, so use the on-dark variant
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .inner {
@@ -34,7 +37,7 @@
 }
 
 .iconWrap {
-  color: $accent;
+  color: $accent-on-dark;
 
   svg {
     width: 100%;
@@ -49,10 +52,10 @@
 
 .content {
   p {
-    color: $text-secondary;
+    color: $white-65;
     line-height: 1.7;
 
-    @include inline-link;
+    @include inline-link($accent-on-dark);
   }
 
   p + p {
@@ -64,11 +67,11 @@
   display: block;
   margin-bottom: 0.75rem;
 
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
   margin-bottom: 1.25rem;
 
-  @include heading-section;
+  @include heading-section-on-dark;
 }

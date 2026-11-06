@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import GoogleMigrationIntro from "./(components)/GoogleMigrationIntro";
 
 const GoogleMigrationWhyWord = dynamic(
@@ -33,8 +32,6 @@ const PAGE_TITLE = "Google Docs to Word Migration Services";
 const PAGE_DESCRIPTION =
   "Migrate Google Docs to Microsoft Word with formatting intact. Nation-wide team of Word designers with over 25+ years of experience. Free initial consultation.";
 const SITE_URL = "https://www.officeexperts.com.au";
-
-const HERO_ALT = "Migrating birds in a flock";
 
 const DATE_PUBLISHED = "2025-08-15T02:07:45+10:00";
 const DATE_MODIFIED = "2026-10-24T00:00:00+11:00";
@@ -133,13 +130,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Google Docs to Microsoft Word Migration"
-        desktopImage={migration}
-        mobileImage={migrationMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <GoogleMigrationIntro />
       <GoogleMigrationWhyWord />

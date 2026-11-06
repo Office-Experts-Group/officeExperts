@@ -1,240 +1,475 @@
+// styles/automationImpact.module.scss
 @use "./globals" as *;
-
-// ── Pulse animation ────────────────────────────────────────────────────────
-// Not used in this file (see Bugs noticed).
-
-@keyframes ringPulse {
-  0% {
-    opacity: 0.06;
-    transform: scale(0.96);
-  }
-  50% {
-    opacity: 0.22;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0.06;
-    transform: scale(0.96);
-  }
-}
 
 // ── Section ────────────────────────────────────────────────────────────────
 
 .wrapper {
-  background: $dark-bg;
-  padding: 6rem 2rem 5rem;
-  overflow: hidden;
+  background: $light-bg;
+  padding: 6rem 2rem 6rem;
 
   @include tablet {
-    padding: 4.5rem 1.5rem 4rem;
+    padding: 4.5rem 1.5rem 4.5rem;
   }
-
+  @include phoneLandscape {
+    padding: 4rem 1.25rem;
+  }
   @include phone {
-    padding: 3.5rem 1rem 3rem;
+    padding: 3.5rem 1rem 3.5rem;
   }
 }
-
-// ── Top row: header left, SVG right ───────────────────────────────────────
 
 .inner {
-  max-width: 1100px;
-  margin: 0 auto 4rem;
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  align-items: center;
-  gap: 2rem;
-
-  @include tablet {
-    grid-template-columns: 1fr 160px;
-  }
-
-  @include phone {
-    grid-template-columns: 1fr;
-  }
+  max-width: $container;
+  margin-inline: auto;
 }
 
-// ── Eyebrow ────────────────────────────────────────────────────────────────
+// ── Header ─────────────────────────────────────────────────────────────────
+
+.header {
+  max-width: 820px;
+  margin-bottom: 3.5rem;
+
+  @include mobile {
+    margin-bottom: 2.5rem;
+  }
+}
 
 .eyebrow {
   display: block;
   margin-bottom: 1rem;
 
-  @include eyebrow-on-dark;
+  @include eyebrow;
 }
 
 .heading {
   margin-bottom: 1.25rem;
 
-  @include heading-section($white-90);
+  @include heading-section;
 }
 
 .accent {
   color: $accent;
+  font-family: inherit;
 }
 
 .subheading {
-  font-size: 0.97rem;
-  line-height: 1.85;
-  color: $white-65;
+  @include lede;
 }
 
-// ── Scenario list ─────────────────────────────────────────────────────────
+// ── Bento grid ─────────────────────────────────────────────────────────────
+//  Desktop          Tablet          Phones
+//  [ A ][  B   ]    [ A ][ B ]      [A]
+//  [ A ][C][ D ]    [ A ][ C ]      [B]
+//                   [   D    ]      [C]
+//                                   [D]
 
-.scenarioList {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.scenario {
+.bento {
   display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 0 2rem;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-template-areas:
+    "a b b"
+    "a c d";
+  gap: 1.25rem;
 
-  @include phone {
-    grid-template-columns: 36px 1fr;
-    gap: 0 1.25rem;
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "a c"
+      "d d";
+    gap: 1rem;
   }
 }
 
-// ── Spine — gradient line + number ────────────────────────────────────────
-
-.spine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1.75rem;
+.areaA {
+  grid-area: a;
+}
+.areaB {
+  grid-area: b;
+}
+.areaC {
+  grid-area: c;
+}
+.areaD {
+  grid-area: d;
 }
 
-.spineNumber {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-
-  // Gradient from accent to a deeper blue-teal as items progress
-  // Achieved via custom property set inline and background pulled from a gradient stop
-  background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
-  color: $white;
-  box-shadow: 0 0 0 4px $accent-dim;
-
-  @include phone {
-    width: 28px;
-    height: 28px;
-    font-size: 0.75rem;
-  }
-}
-
-.spineLine {
-  flex: 1;
-  width: 2px;
-  margin: 6px 0;
-  // Gradient fades from accent at top to near-invisible at bottom
-  background: linear-gradient(
-    to bottom,
-    rgba(4, 105, 153, 0.5) 0%,
-    rgba(4, 105, 153, 0.08) 100%
-  );
-  min-height: 2rem;
-}
-
-// ── Panels row ────────────────────────────────────────────────────────────
-
-.panels {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-
-  @include phone {
+// Phones: one column in DOM order (must come after the area classes)
+@include mobile {
+  .bento {
     grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+  .bento > * {
+    grid-area: auto;
   }
 }
 
-.beforePanel,
-.afterPanel {
-  padding: 1.75rem 2rem;
-  margin-bottom: 1rem;
+// ── Tile base ──────────────────────────────────────────────────────────────
 
-  @include phone {
-    padding: 1.25rem 1.25rem;
-  }
-}
-
-.beforePanel {
-  background: $dark-surface;
-  border-radius: $radius 0 0 $radius;
-
-  @include phone {
-    border-radius: $radius $radius 0 0;
-  }
-}
-
-.afterPanel {
-  background: $dark-mid;
-  border-left: 2px solid $accent;
-  border-radius: 0 $radius $radius 0;
+.tile {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.25rem;
+  border-radius: $radius;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
-  @include phone {
-    border-left: none;
-    border-top: 2px solid $accent;
-    border-radius: 0 0 $radius $radius;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card-hover;
+  }
+
+  @include mobile {
+    padding: 1.75rem 1.5rem;
+    gap: 1.25rem;
   }
 }
 
-// ── Labels & text ─────────────────────────────────────────────────────────
-
-.stateLabel {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.65rem;
-
-  &[data-type="before"] {
-    color: $white-35;
-  }
-
-  &[data-type="after"] {
-    color: $accent;
-  }
+.tileTitle {
+  position: relative;
+  @include card-title(lg);
 }
 
-.panelText {
-  font-size: 0.93rem;
-  line-height: 1.75;
+// Headline figure + optional bars. Auto margins split the spare height of a
+// tall tile so this block floats in the middle instead of leaving a gap.
+.highlight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: auto;
+}
+
+.compare {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.compareCaption {
+  @include label($white-35);
+}
+
+.compareRow {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr 4.5rem;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.compareLabel {
+  color: $white-55;
+}
+
+.compareValue {
+  color: $white-75;
+  text-align: right;
+}
+
+.compareTrack {
+  height: 8px;
+  border-radius: $radius-pill;
+  background: $white-08;
+  overflow: hidden;
+}
+
+.fillBefore,
+.fillAfter {
+  display: block;
+  height: 100%;
+  min-width: 8px;
+  border-radius: $radius-pill;
+}
+.fillBefore {
+  background: $white-35;
+}
+.fillAfter {
+  background: $accent-on-dark;
+}
+
+// Headline figure, e.g. "25 min → Seconds"
+.metric {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
   margin: 0;
-
-  .beforePanel & {
-    color: $white-65;
-  }
-
-  .afterPanel & {
-    color: $white-88;
-    font-weight: 500;
-  }
 }
 
-// ── Spacing between scenario rows ─────────────────────────────────────────
+.metricBefore {
+  font-size: 1.4rem;
+  font-weight: $heading-weight;
+  text-decoration-thickness: 2px;
+}
 
-.scenario + .scenario {
-  .panels {
+.metricAfter {
+  font-size: clamp(2.6rem, 4.2vw, 3.6rem);
+  font-weight: $heading-weight;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+// Before → After stack. margin-top: auto pins it to the bottom of tall tiles.
+.flow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+
+  // when a highlight block sits above, it already absorbs the spare space
+  .highlight + & {
     margin-top: 0;
   }
 }
 
-// ── Reduced motion ────────────────────────────────────────────────────────
+.state {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stateLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  @include label;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.beforeText {
+  margin: 0;
+
+  @include small-text;
+}
+
+.afterText {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  // short rule either side of a small arrow badge
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+    border-radius: 50%;
+  }
+}
+
+// Wide tile on desktop: before and after side by side
+@include desktopUp {
+  .areaB .flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+    gap: 1.75rem;
+  }
+  .areaB .divider {
+    align-self: stretch;
+    flex-direction: column;
+
+    &::before,
+    &::after {
+      width: 1px;
+      height: auto;
+    }
+
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+// ── Variant: light ─────────────────────────────────────────────────────────
+
+.tileLight {
+  background: $white;
+  border: 1px solid $border;
+
+  .tileTitle {
+    color: $text-primary;
+  }
+  .labelBefore {
+    color: $before-border;
+  }
+  .labelAfter {
+    color: $accent;
+  }
+  .beforeText {
+    color: $text-secondary;
+  }
+  .afterText {
+    color: $text-primary;
+  }
+  .divider {
+    &::before,
+    &::after {
+      background: $line;
+    }
+    svg {
+      color: $accent;
+      background: $accent-light;
+    }
+  }
+}
+
+// ── Variant: dark ──────────────────────────────────────────────────────────
+
+.tileDark {
+  background-color: $dark-bg;
+  // faint dot grid for texture
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    $white-08 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+
+  // soft accent glow in the top corner
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(4, 105, 153, 0.45),
+      transparent 65%
+    );
+    pointer-events: none;
+  }
+
+  .tileTitle {
+    color: $white;
+  }
+  .metricBefore {
+    color: $white-35;
+  }
+  .metricAfter {
+    color: $accent-on-dark;
+  }
+  .labelBefore {
+    color: $error-border;
+  }
+  .labelAfter {
+    color: $accent-on-dark;
+    --check-tick: #{$dark-bg};
+  }
+  .beforeText {
+    color: $white-55;
+  }
+  .afterText {
+    color: $white-90;
+  }
+  .divider {
+    &::before,
+    &::after {
+      background: $white-12;
+    }
+    svg {
+      color: $accent-on-dark;
+      background: $white-08;
+    }
+  }
+}
+
+// ── Variant: accent ────────────────────────────────────────────────────────
+
+.tileAccent {
+  background: linear-gradient(150deg, $accent 0%, $accent-dark 100%);
+
+  // decorative rings in the corner
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid $white-18;
+    pointer-events: none;
+  }
+  &::before {
+    width: 220px;
+    height: 220px;
+    top: -90px;
+    right: -90px;
+  }
+  &::after {
+    width: 140px;
+    height: 140px;
+    top: -50px;
+    right: -50px;
+  }
+
+  .tileTitle {
+    color: $white;
+  }
+  .metricAfter {
+    color: $white;
+  }
+  .labelBefore {
+    color: $white-65;
+  }
+  .labelAfter {
+    color: $white;
+    --check-tick: #{$accent};
+  }
+  .beforeText {
+    color: $white-75;
+  }
+  .afterText {
+    color: $white;
+  }
+  .divider {
+    &::before,
+    &::after {
+      background: $white-18;
+    }
+    svg {
+      color: $white;
+      background: $white-12;
+    }
+  }
+}
+
+// ── Reduced motion ─────────────────────────────────────────────────────────
 
 @media (prefers-reduced-motion: reduce) {
-  .ring {
-    animation: none;
-    opacity: 0.12;
+  .tile {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }

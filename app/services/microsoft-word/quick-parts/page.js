@@ -2,8 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// Above the fold — imported normally so they render in the initial HTML
-import ServiceHero from "@/components/ServiceHero";
 import QuickPartsIntro from "./(components)/QuickPartsIntro";
 
 // Below the fold — split into separate chunks with next/dynamic (still SSR)
@@ -25,10 +23,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "@/faqs/quick-parts";
 import faqSchema from "@/faqs/quickPartsSchema";
 
-// Hero images carried over from the Word Experts page
-import quickParts from "@/public/pageHeros/quickParts.webp";
-import quickPartsMob from "@/public/pageHeros/mob/quickPartsMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/quick-parts";
 const PAGE_TITLE = "Microsoft Word Quick Parts Services";
@@ -37,8 +31,6 @@ const PAGE_DESCRIPTION =
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const WORD_URL = `${SITE_URL}/services/microsoft-word`;
-const HERO_ALT = "Microsoft Word ribbon wth quick parts";
-const HERO_ALT_MOB = "Microsoft Word ribbon wth quick parts";
 
 // Original Word Experts publish date (13 Jan 2018 UTC), converted to AEDT
 const DATE_PUBLISHED = "2018-01-14T01:26:38+11:00";
@@ -191,13 +183,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Quick Parts"
-        desktopImage={quickParts}
-        mobileImage={quickPartsMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT_MOB}
       />
       <QuickPartsIntro />
       <QuickPartsGallery />

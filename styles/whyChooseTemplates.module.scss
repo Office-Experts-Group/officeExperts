@@ -1,0 +1,216 @@
+// /styles/whyChooseTemplates.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem $gutter;
+  background: $dark-surface;
+  border-top: 1px solid $white-08;
+  scroll-margin-top: $scroll-offset;
+
+  // Accent glow, top right
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20rem;
+    right: -12rem;
+    width: 50rem;
+    height: 50rem;
+    background: radial-gradient(circle, $accent-dim 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  // Softer glow, bottom left
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -22rem;
+    left: -14rem;
+    width: 46rem;
+    height: 46rem;
+    background: radial-gradient(circle, $accent-tint 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  @include belowDesktop {
+    padding: 6rem 4rem;
+  }
+  @include mobile {
+    padding: 4rem 1rem;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.text {
+  @include lede($white-65);
+  max-width: 38rem;
+
+  @include inline-link($accent-on-dark);
+}
+
+// ── Stats ───────────────────────────────────────────────────────────────────
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  margin: 2.5rem 0;
+  padding-top: 2rem;
+  border-top: 1px solid $white-12;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.stat {
+  padding-inline: 2rem;
+  border-left: 1px solid $white-12;
+
+  &:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  @include mobile {
+    padding-inline: 0;
+    border-left: none;
+  }
+}
+
+.statValue {
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: $heading-weight;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.statLabel {
+  @include small-text($white-55);
+  margin: 0.5rem 0 0;
+  max-width: 11rem;
+
+  @include mobile {
+    max-width: none;
+  }
+}
+
+// ── CTA ─────────────────────────────────────────────────────────────────────
+.cta {
+  @include btn;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  svg {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+}
+
+// ── Feature points ──────────────────────────────────────────────────────────
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+
+  // Stagger the second column for a little rhythm on wide screens
+  @include desktopUp {
+    padding-bottom: 2.5rem;
+
+    .point:nth-child(even) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.point {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 13rem;
+  padding: 1.75rem;
+  background: linear-gradient(160deg, $dark-mid 0%, $dark-surface 100%);
+  border: 1px solid $white-12;
+  border-radius: $radius;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $accent-border;
+    box-shadow: $shadow-card-hover;
+  }
+
+  @include mobile {
+    min-height: 0;
+  }
+}
+
+.pointNumber {
+  @include label($white-35);
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: $accent-dim;
+  border: 1px solid $accent-border;
+  border-radius: 1rem;
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+.pointText {
+  @include card-title(md, $white-88);
+  margin-top: auto;
+  line-height: 1.4;
+}

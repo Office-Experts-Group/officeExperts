@@ -1,7 +1,9 @@
+// styles/automationMain.module.scss
 @use "./globals" as *;
 
 .wrapper {
   @include container;
+  scroll-margin-top: $scroll-offset;
   padding: 5rem 2rem; // section gutter overrides the container's 1.5rem
 
   @include tablet {
@@ -13,45 +15,19 @@
   }
 }
 
-.link {
-  color: $accent;
-  font-weight: 700;
-}
+// ── Section header ─────────────────────────────────────────────────────────
 
-// ── Intro — two-column: SVG left, text right-aligned ──────────────────────
-
-.intro {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 3.5rem;
-  align-items: center;
-  margin-bottom: 5rem;
+.header {
+  max-width: 720px;
+  margin-bottom: 4rem;
 
   @include tablet {
-    grid-template-columns: 220px 1fr;
-    gap: 2.5rem;
-    margin-bottom: 4rem;
-  }
-
-  @include phone {
-    grid-template-columns: 1fr;
-    gap: 2rem;
     margin-bottom: 3rem;
   }
-}
-
-.introSvgWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $accent;
-
-  @include phone {
-    display: none;
+  @include mobile {
+    margin-bottom: 2rem;
   }
 }
-
-// ── Eyebrow — plain uppercase, no pill ────────────────────────────────────
 
 .eyebrow {
   display: block;
@@ -68,31 +44,46 @@
 
 .accent {
   color: $accent;
+  font-family: inherit;
 }
 
 .lead {
   font-size: 1.05rem;
   line-height: 1.8;
   color: $gray;
-  margin-bottom: 1rem;
-}
-
-.body {
-  font-size: 0.97rem;
-  line-height: 1.8;
-  color: $darkGrayText;
-  margin: 0;
 }
 
 // ── Two-column list ────────────────────────────────────────────────────────
+// Each .item is wrapped in an AnimateOnScroll element, so the grid's direct
+// children are the wrappers, not .item. The divider rules therefore target
+// `.list > *` — :nth-child on .item itself would always see "1st of 1".
 
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+
+  > * {
+    border-bottom: 1px solid $border;
+  }
+  > *:nth-child(even) {
+    border-left: 1px solid $border;
+  }
+  > *:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
 
   @include phone {
     grid-template-columns: 1fr;
+
+    > *:nth-child(even) {
+      border-left: none;
+    }
+    > *:nth-last-child(-n + 2) {
+      border-bottom: 1px solid $border;
+    }
+    > *:last-child {
+      border-bottom: none;
+    }
   }
 }
 
@@ -100,34 +91,14 @@
   display: flex;
   align-items: flex-start;
   gap: 1.75rem;
+  height: 100%;
   padding: 2.5rem 2.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  background: transparent;
-
-  &:nth-child(even) {
-    border-left: 1px solid rgba(0, 0, 0, 0.07);
-  }
-
-  &:nth-last-child(-n + 2) {
-    border-bottom: none;
-  }
-
-  @include phone {
-    padding: 2rem 0.25rem;
-    border-left: none !important; // beats &:nth-child(even)
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &:nth-last-child(-n + 2) {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    }
-  }
 
   @include tablet {
     padding: 2rem;
+  }
+  @include phone {
+    padding: 2rem 0.25rem;
   }
 }
 
@@ -169,4 +140,11 @@
   line-height: 1.75;
   color: $darkGrayText;
   margin: 0;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: $accent;
+  font-weight: 700;
 }

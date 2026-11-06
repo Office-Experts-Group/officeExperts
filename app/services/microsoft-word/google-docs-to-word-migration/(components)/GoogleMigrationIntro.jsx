@@ -38,10 +38,10 @@ const GoogleMigrationIntro = () => (
         <AnimateOnScroll animation="fade-up" duration={0.6}>
           <div className={styles.content}>
             <p className={styles.eyebrow}>Looking for more features?</p>
-            <h2 className={styles.heading}>
+            <h1 className={styles.heading}>
               Migrate to Word to{" "}
               <span className={styles.accent}>future-proof your business</span>
-            </h2>
+            </h1>
             <p className={styles.text}>
               Is your organisation experiencing the limitations of Google Docs?
               While Google’s collaborative platform works well for basic
@@ -63,20 +63,6 @@ const GoogleMigrationIntro = () => (
               </Link>
               , ensuring your transition is smooth, secure and tailored to your
               specific business requirements.
-            </p>
-            <p className={styles.text}>
-              Migration is more than moving files. A document that looks right
-              in Google Docs can fall apart when it is simply opened in Word:
-              styles collapse, numbering restarts and tables shift. We rebuild
-              the structure underneath through{" "}
-              <Link
-                href="/services/microsoft-word/word-template-conversions"
-                className={styles.link}
-              >
-                professional template conversion
-              </Link>
-              , so your content arrives clean and your brand rules arrive with
-              it.
             </p>
           </div>
         </AnimateOnScroll>

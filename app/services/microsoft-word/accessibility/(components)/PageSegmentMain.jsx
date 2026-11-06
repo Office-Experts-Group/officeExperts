@@ -8,7 +8,7 @@ import AccessibleDocumentSVG from "../(svgs)/AccessibleDocumentSVG";
 
 const PageSegmentMain = () => {
   return (
-    <section className={styles.pageSegment}>
+    <section className={styles.pageSegment} style={{ marginTop: "8rem" }}>
       <div className={styles.svg}>
         <AccessibleDocumentSVG />
       </div>

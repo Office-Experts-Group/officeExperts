@@ -1,0 +1,329 @@
+// styles/networkSolution.module.scss
+@use "./globals.scss" as *;
+
+// One loop: scattered (0–14%) → assemble (14–38%) → wire up + check (38–54%)
+// → data flows (54–80%) → unwire (80–86%) → drift apart (88–100%).
+// Resting styles below are the FINISHED state, so reduced-motion just turns
+// the animations off.
+$cycle: 12s;
+$ease: cubic-bezier(0.65, 0, 0.35, 1);
+
+.visual {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// ── Background ────────────────────────────────
+.gridDot {
+  fill: $white-12;
+}
+
+.glowStopInner {
+  stop-color: $accent;
+  stop-opacity: 0.35;
+}
+.glowStopOuter {
+  stop-color: $accent;
+  stop-opacity: 0;
+}
+
+.glow {
+  opacity: 1;
+  animation: glow $cycle $ease infinite both;
+}
+
+// ── Links ─────────────────────────────────────
+.link {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
+  animation: linkDraw $cycle $ease infinite both;
+  animation-delay: var(--delay, 0s);
+}
+
+.ring {
+  stroke: $white-18;
+}
+
+.packet {
+  fill: $white;
+  opacity: 0;
+  animation: packet $cycle linear infinite both;
+  animation-delay: var(--delay, 0s);
+}
+
+// ── Tiles ─────────────────────────────────────
+.node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeAssemble $cycle $ease infinite both;
+  animation-delay: var(--delay, 0s);
+}
+
+.tile {
+  fill: $dark-surface;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+  animation: tileState $cycle $ease infinite both;
+  animation-delay: var(--delay, 0s);
+}
+
+.glyph {
+  fill: none;
+  stroke: $white-75;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.label {
+  fill: $white-55;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.stub {
+  stroke: $error-border;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 5 4;
+  opacity: 0;
+  animation: stubFade $cycle $ease infinite both;
+  animation-delay: var(--delay, 0s);
+}
+
+// ── Hub ───────────────────────────────────────
+.hubRing {
+  fill: none;
+  stroke: $accent-on-dark;
+  stroke-width: 1.25;
+  stroke-dasharray: 4 7;
+  opacity: 0.55;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 24s linear infinite;
+}
+
+.hubCore {
+  fill: $accent;
+  stroke: $accent-on-dark;
+  stroke-width: 1.5;
+  animation: hubState $cycle $ease infinite both;
+}
+
+.hubAlert {
+  opacity: 0;
+  fill: $error-border;
+  stroke: $error-border;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  animation: alertFade $cycle $ease infinite both;
+}
+
+.check {
+  fill: none;
+  stroke: $white;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: checkDraw $cycle $ease infinite both;
+}
+
+// ── Keyframes ─────────────────────────────────
+@keyframes nodeAssemble {
+  0%,
+  14% {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0.55;
+  }
+  38%,
+  88% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0.55;
+  }
+}
+
+@keyframes tileState {
+  0%,
+  22% {
+    stroke: $white-18;
+  }
+  40%,
+  86% {
+    stroke: $accent-on-dark;
+  }
+  100% {
+    stroke: $white-18;
+  }
+}
+
+@keyframes stubFade {
+  0%,
+  14% {
+    opacity: 0.85;
+  }
+  26%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes linkDraw {
+  0%,
+  38% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  48%,
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  86%,
+  100% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+}
+
+@keyframes packet {
+  0%,
+  52% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  54% {
+    transform: translate(calc(var(--tx) * 0.2), calc(var(--ty) * 0.2));
+    opacity: 1;
+  }
+  64% {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+  65%,
+  66% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  68% {
+    transform: translate(calc(var(--tx) * 0.2), calc(var(--ty) * 0.2));
+    opacity: 1;
+  }
+  78% {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+  79%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes hubState {
+  0%,
+  40% {
+    fill: $dark-surface;
+    stroke: $white-18;
+  }
+  50%,
+  84% {
+    fill: $accent;
+    stroke: $accent-on-dark;
+  }
+  92%,
+  100% {
+    fill: $dark-surface;
+    stroke: $white-18;
+  }
+}
+
+@keyframes alertFade {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  40%,
+  88% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes checkDraw {
+  0%,
+  46% {
+    stroke-dashoffset: 1;
+  }
+  54%,
+  82% {
+    stroke-dashoffset: 0;
+  }
+  88%,
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes glow {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  52%,
+  82% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Show the finished, connected network with no movement
+@media (prefers-reduced-motion: reduce) {
+  .glow,
+  .link,
+  .packet,
+  .node,
+  .tile,
+  .stub,
+  .hubRing,
+  .hubCore,
+  .hubAlert,
+  .check {
+    animation: none;
+  }
+}

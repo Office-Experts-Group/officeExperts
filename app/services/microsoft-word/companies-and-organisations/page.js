@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import CompaniesIntro from "./(components)/CompaniesIntro";
 
 const CompaniesSolution = dynamic(
@@ -24,18 +23,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/companies-and-organisations";
 import faqSchema from "../wordFaqs/companiesSchema";
 
-import companies from "@/public/pageHeros/companies.webp";
-import companiesMob from "@/public/pageHeros/mob/companiesMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations";
 const PAGE_TITLE = "Word Template Designers | Office Experts";
 const PAGE_DESCRIPTION =
   "Professional Word template solutions for companies and organisations. Custom document templates that protect corporate identity.";
 const SITE_URL = "https://www.officeexperts.com.au";
-
-const HERO_ALT_DESKTOP = "word document templates design";
-const HERO_ALT_MOBILE = "word document templates design";
 
 const DATE_PUBLISHED = "2018-07-16T02:09:50+10:00";
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
@@ -181,13 +174,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Companies and Organisations"
-        desktopImage={companies}
-        mobileImage={companiesMob}
-        altMob={HERO_ALT_MOBILE}
-        altDesk={HERO_ALT_DESKTOP}
       />
       <CompaniesIntro />
       <CompaniesSolution />

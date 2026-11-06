@@ -3,8 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above the fold: imported normally so they render in the initial HTML without a separate chunk
-import ServiceHero from "@/components/ServiceHero";
-import AutomationMain from "./(components)/AutomationMain";
+import AutomationHero from "./(components)/AutomationHero";
 
 // Below the fold: next/dynamic splits these into their own chunks (still server-rendered)
 const AutomationImpact = dynamic(
@@ -17,10 +16,6 @@ const AutomationIntegration = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-// Static image imports give Next.js the dimensions and a blur placeholder at build time
-import repetition from "@/public/pageHeros/repetition.webp";
-import repetitionMob from "@/public/pageHeros/mob/repetitionMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity";
 const PAGE_TITLE = "Word Document Automation Services | Office Experts";
@@ -28,7 +23,6 @@ const PAGE_DESCRIPTION =
   "Automate repetitive Word tasks and increase productivity. Custom automation solutions for Microsoft Word documents and templates.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Microsoft Word automation flow";
 
 const DATE_PUBLISHED = "2018-07-16T02:11:12+10:00";
 const DATE_MODIFIED = "2026-10-26T00:00:00+11:00";
@@ -182,14 +176,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Word Document Automation"
-        desktopImage={repetition}
-        mobileImage={repetitionMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
-      />
-      <AutomationMain />
+      <AutomationHero />
       <AutomationImpact />
       <AutomationAi />
       <AutomationIntegration />

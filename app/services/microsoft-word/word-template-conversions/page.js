@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above the fold: imported normally
-import ServiceHero from "@/components/ServiceHero";
 import TemplateHero from "./(components)/TemplateHero";
 
 // Below the fold: split into separate chunks (still server rendered)
@@ -23,9 +22,6 @@ const ConversionCta = dynamic(() => import("./(components)/ConversionCta"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 import faqs from "../wordFaqs/wordTemplateConversions";
-
-import conversion from "@/public/pageHeros/conversion.webp";
-import conversionMob from "@/public/pageHeros/mob/conversionMob.webp";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-word/word-template-conversions`;
@@ -154,20 +150,13 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Word Template Conversions"
-        desktopImage={conversion}
-        mobileImage={conversionMob}
-        altMob="Word template conversions"
-        altDesk="Word template conversions"
-      />
       <TemplateHero />
       <ConversionBento />
       <ConversionProblem />
       <ConversionComparison />
       <ConversionProcess />
       <RelatedLinks
-        theme="light"
+        theme="dark"
         eyebrow="Case Studies"
         heading="Template conversion and document transfer"
         headingAccent="projects"

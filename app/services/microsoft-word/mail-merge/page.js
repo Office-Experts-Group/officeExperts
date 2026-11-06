@@ -2,8 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// Above the fold: imported normally so they render in the initial HTML without a split chunk
-import ServiceHero from "@/components/ServiceHero";
 import MailMergeIntro from "./(components)/MailMergeIntro";
 
 // Below the fold: code-split with next/dynamic (still server-rendered)
@@ -18,10 +16,6 @@ const MailMergeBeyond = dynamic(() => import("./(components)/MailMergeBeyond"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-// Hero images carried over from wordexperts.com.au (copy into this project's public/pageHeros)
-import mailMerge from "@/public/pageHeros/merge.webp";
-import mailMergeMob from "@/public/pageHeros/mob/mergeMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/mail-merge";
 const PAGE_TITLE = "Mail Merge Services for Word, Excel and Outlook";
@@ -29,7 +23,6 @@ const PAGE_DESCRIPTION =
   "Mail merge set-up, automation and repair. Personalised letters, invoices, labels and emails from Excel, Access or Outlook data.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Word documents being merged with a data list";
 
 // Original publish date carried over from the wordexperts.com.au page
 const DATE_PUBLISHED = "2025-11-20T00:00:00+11:00";
@@ -166,13 +159,6 @@ const Page = () => {
       />
 
       <main>
-        <ServiceHero
-          title="Mail Merge Services"
-          desktopImage={mailMerge}
-          mobileImage={mailMergeMob}
-          altDesk={HERO_ALT}
-          altMob={HERO_ALT}
-        />
         <MailMergeIntro />
         <MailMergeOutputs />
         <MailMergeServices />

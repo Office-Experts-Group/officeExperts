@@ -46,8 +46,9 @@ const BookSegment = () => {
           page17,
         ]}
         size="full"
-        scrollOffset={50} // px of scroll to trigger a page turn
-        animDuration={900} // ms for the flip animation
+        scrollOffset={140} // a bit more deliberate than 105
+        animDuration={1300}
+        scrollCooldown={1150} // the next page can lift just before the current one lands
       />
     </div>
   );

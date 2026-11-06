@@ -17,7 +17,7 @@ const PageSegment4 = () => {
     <div
       className="animate-wrapper"
       id="brand-template-info"
-      style={{ marginBottom: "-6rem" }}
+      style={{ padding: "6rem 0", marginBottom: "-4rem" }}
     >
       <div className={styles.pageSegment}>
         <AnimateOnScroll animation="slide-left" duration={1} delay={0}>

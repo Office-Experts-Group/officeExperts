@@ -2,13 +2,11 @@
 import { cookies } from "next/headers";
 import { caseStudies, getLatestDateModified, siteMeta } from "./caseStudies";
 import CaseStudyRow from "./(components)/CaseStudyRow";
+import NetworkSolution from "./(components)/NetworkSolution";
 
-import ServiceHero from "@/components/ServiceHero";
 import Contact from "@/components/Contact";
 
 import styles from "@/styles/caseStudies.module.scss";
-import caseStudiesPic from "@/public/pageHeros/caseStudies.webp";
-import caseStudiesPicMob from "@/public/pageHeros/mob/caseStudiesMob.webp";
 
 // The ?site= param only ever changes the ORDER case studies render in, never
 // which ones appear — so this stays one page as far as Google's concerned.
@@ -62,9 +60,12 @@ const schema = {
   ],
 };
 
-// Next 15's searchParams is async, same as `params` already is on the
-// [slug] route — has to be awaited before you can read `site` off it.
-// Next 16: searchParams and cookies() are both async and must be awaited.
+const stats = [
+  { value: "25", suffix: "+", label: "Years in business" },
+  { value: "2,500", suffix: "+", label: "Projects delivered" },
+];
+
+// searchParams and cookies() are both async and must be awaited.
 const CaseStudiesPage = async ({ searchParams }) => {
   const { site: siteParam } = await searchParams;
   const cookieSite = (await cookies()).get("oe-site")?.value;
@@ -87,29 +88,66 @@ const CaseStudiesPage = async ({ searchParams }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Case Studies"
-        desktopImage={caseStudiesPic}
-        mobileImage={caseStudiesPicMob}
-        altDesk={"Microsoft Logos"}
-        altMob={"Microsoft Logos"}
-      />
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <span className={styles.eyebrow}>Case Studies</span>
-          <h2 className={styles.heroTitle}>
-            Real problems. Real businesses.{" "}
-            <span className={styles.accent}>Real fixes.</span>
-          </h2>
-          <p className={styles.heroSubtitle}>
-            No hypotheticals here. Below is a small selection of the Microsoft
-            365 problems we&rsquo;ve actually walked into, what we built to fix
-            them, and the numbers that came out the other side.
-          </p>
+          <div className={styles.heroCopy}>
+            <span className={styles.eyebrow}>Case Studies</span>
+            <h1 className={styles.heroTitle}>
+              Real problems. Real businesses.{" "}
+              <span className={styles.accent}>Real fixes.</span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              In 25 years we&rsquo;ve delivered more than 2,500 Microsoft 365
+              projects for Australian businesses, from rescuing a single
+              overloaded spreadsheet to replacing whole paper-based processes
+              with Access databases and Power Platform apps.
+            </p>
+            <p className={styles.heroSubtitle}>
+              Here are a select few. No hypotheticals, just the problems we
+              actually walked into, what we built to fix them, and the numbers
+              that came out the other side.
+            </p>
+
+            <ul className={styles.stats}>
+              {stats.map((stat) => (
+                <li key={stat.label} className={styles.stat}>
+                  <span className={styles.statValue}>
+                    {stat.value}
+                    <span className={styles.statSuffix}>{stat.suffix}</span>
+                  </span>
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a href="#case-studies" className={styles.jumpLink}>
+              Browse the case studies
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div className={styles.heroVisual}>
+            <NetworkSolution />
+          </div>
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section id="case-studies" className={styles.section}>
         <div className={styles.rows}>
           {orderedCaseStudies.map((study, index) => (
             <CaseStudyRow

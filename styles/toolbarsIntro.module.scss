@@ -3,7 +3,7 @@
 
 .section {
   background: $white;
-  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem);
+  @include heroPadding;
 }
 
 .inner {

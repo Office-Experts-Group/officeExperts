@@ -2,17 +2,19 @@
 @use "./globals.scss" as *;
 
 .section {
-  background: $white;
-  padding: 7rem 8rem;
+  background: $dark-bg;
+  @include heroPadding;
 
+  // Smaller screens keep their tighter side/bottom padding,
+  // but the top always clears the fixed header
   @include tablet {
-    padding: 5rem 4rem;
+    padding: calc(#{$header-offset} + 3rem) 4rem 5rem;
   }
   @include phoneLandscape {
-    padding: 4.5rem 1.5rem;
+    padding: calc(#{$header-offset} + 2rem) 1.5rem 4.5rem;
   }
   @include phone {
-    padding: 4rem 1.25rem;
+    padding: calc(#{$header-offset} + 2rem) 1.25rem 4rem;
   }
 }
 
@@ -38,23 +40,23 @@
   p {
     font-size: 1.02rem;
     line-height: 1.85;
-    color: $text-secondary;
+    color: $white-65;
   }
 
-  @include inline-link;
+  @include inline-link($accent-on-dark);
 }
 
 // Specificity bump so the eyebrow isn't overridden by `.copy p`
 .copy .eyebrow {
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  @include heading-section;
+  @include heading-main($white);
 }
 
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 // ── Data source strip ──
@@ -65,7 +67,7 @@
   gap: 0.75rem 1.5rem;
   margin-top: 1rem;
   padding-top: 1.5rem;
-  border-top: 1px solid $border;
+  border-top: 1px solid $white-12;
 }
 
 .sourcesLabel {
@@ -73,7 +75,7 @@
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: $text-muted;
+  color: $white-55;
 }
 
 .sourceList {
@@ -85,7 +87,7 @@
   li {
     font-size: 0.92rem;
     font-weight: 600;
-    color: $text-primary;
+    color: $white-88;
   }
 }
 

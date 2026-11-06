@@ -2,17 +2,19 @@
 @use "./globals.scss" as *;
 
 .section {
-  background: $light-bg;
-  padding: 8rem;
+  background: $dark-bg;
+  @include heroPadding;
 
+  // Smaller screens keep their tighter side/bottom padding,
+  // but the top always clears the fixed header
   @include tablet {
-    padding: 6rem 4rem;
+    padding: calc(#{$header-offset} + 3rem) 4rem 6rem;
   }
   @include phoneLandscape {
-    padding: 5rem 1.5rem;
+    padding: calc(#{$header-offset} + 2rem) 1.5rem 5rem;
   }
   @include phone {
-    padding: 4.5rem 1.25rem;
+    padding: calc(#{$header-offset} + 2rem) 1.25rem 4.5rem;
   }
 }
 
@@ -40,15 +42,15 @@
 .eyebrow {
   align-self: flex-start;
 
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  @include heading-main;
+  @include heading-main($white);
 }
 
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .lead {
@@ -56,19 +58,24 @@
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.75;
-  color: $text-primary;
+  color: $white-88;
 }
 
 .body {
   max-width: 56ch;
   font-size: 0.98rem;
   line-height: 1.85;
-  color: $text-secondary;
+  color: $white-65;
 }
 
 .link {
-  color: $accent;
+  color: $accent-on-dark;
   font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .cta {

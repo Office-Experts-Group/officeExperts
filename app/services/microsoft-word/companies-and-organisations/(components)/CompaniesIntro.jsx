@@ -59,10 +59,10 @@ const CompaniesIntro = () => (
       <AnimateOnScroll animation="fade-up" duration={0.6}>
         <div className={styles.split}>
           <div className={styles.copy}>
-            <h2 className={styles.heading}>
+            <h1 className={styles.heading}>
               Company documents{" "}
               <span className={styles.headingAccent}>back under control</span>
-            </h2>
+            </h1>
             <p className={styles.lead}>
               Our team of Word design experts deliver versatile templates that
               meet the needs of any company or organisation. Our{" "}

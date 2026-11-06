@@ -9,9 +9,6 @@ import GovDeptIntro from "./(components)/GovDeptIntro";
 import faqs from "../wordFaqs/government-departments";
 import faqSchema from "../wordFaqs/govSchema";
 
-import government from "@/public/pageHeros/government.webp";
-import governmentMob from "@/public/pageHeros/mob/governmentMob.webp";
-
 const Contact = dynamic(() => import("@/components/Contact"));
 const GovDeptCompliance = dynamic(
   () => import("./(components)/GovDeptCompliance"),
@@ -34,7 +31,6 @@ const PAGE_DESCRIPTION =
   "Specialised Microsoft Word solutions for government departments. Accessible documents, compliant templates, and secure document management solutions.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Canberra Parliament house with word documents";
 
 const DATE_PUBLISHED = "2018-07-16T02:07:45+10:00";
 const DATE_MODIFIED = "2026-10-24T00:00:00+11:00";
@@ -143,13 +139,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Government Departments"
-        desktopImage={government}
-        mobileImage={governmentMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <GovDeptIntro />
       <GovDeptCompliance />

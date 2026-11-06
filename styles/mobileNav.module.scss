@@ -2,21 +2,12 @@
 
 .mobileNavContainer {
   position: relative;
-  margin-left: auto;
+  margin-left: 2vw;
 
   @include deskL {
     display: none;
   }
-  @include desktop {
-    display: flex;
-  }
-  @include tablet {
-    display: flex;
-  }
-  @include phone {
-    display: flex;
-  }
-  @include phoneLandscape {
+  @media screen and (max-width: 1300px) {
     display: flex;
   }
 }

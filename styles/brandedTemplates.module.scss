@@ -4,14 +4,16 @@
 .section {
   display: flex;
   gap: 3rem;
+  background: $dark-bg;
   @include heroPadding;
 
+  // Padding, not margin, so the dark background runs edge to edge
   @include belowDesktop {
     flex-direction: column;
-    margin: 6rem 4rem;
+    padding: calc(#{$header-offset} + 4rem) 4rem 6rem;
   }
   @include mobile {
-    margin: 3rem 1rem;
+    padding: calc(#{$header-offset} + 2rem) 1rem 3rem;
   }
 }
 
@@ -22,6 +24,24 @@
   height: fit-content;
   transform: rotate(-10deg) scale(0.8);
   transform-origin: left center;
+  position: relative;
+
+  // Soft accent glow behind the fan so the pages lift off the dark background.
+  // z-index: -1 stays inside .cards' own stacking context (created by the
+  // transform), so it sits behind the cards but above the section background.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    z-index: -1;
+    background: radial-gradient(
+      circle at center,
+      $accent-dim 0%,
+      $accent-tint 45%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
 
   // Cards are hidden below desktop, the text carries the section
   @include belowDesktop {
@@ -40,27 +60,25 @@
   position: relative;
   z-index: 2;
 
-  a {
-    color: $accent;
-    font-weight: 700;
-  }
+  @include inline-link($accent-on-dark);
 }
 
 .eyebrow {
-  @include eyebrow;
+  @include eyebrow-on-dark;
 }
 
 .heading {
-  @include heading-main;
+  @include heading-main($white);
   margin: 2rem 0;
 }
 
+// The base accent is too dark to read on $dark-bg
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 .text {
-  color: $darkGrayText;
+  color: $white-65;
   line-height: 2rem;
   margin-top: 1rem;
 }

@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 const FormFieldsAnatomy = dynamic(
@@ -21,9 +20,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/fill-in-forms";
 import faqSchema from "../wordFaqs/fillFormsSchema";
 
-import fillForm from "@/public/pageHeros/fillForm.webp";
-import fillFormMob from "@/public/pageHeros/mob/fillFormMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms";
 const PAGE_TITLE = "Expert Creation of Word Fill in Forms | Office Experts";
@@ -31,10 +27,6 @@ const PAGE_DESCRIPTION =
   "Professional Microsoft Word form creation services. Custom fillable forms with data validation and protection. Improve data entry efficiency and accuracy.";
 const SITE_URL = "https://www.officeexperts.com.au";
 
-const HERO_ALT = "Fill in forms with Microsoft Word";
-
-// datePublished: WE value 2018-01-13T14:30:12+00:00 converted to +10:00.
-// dateModified: set by hand (content reworded for the migration).
 const DATE_PUBLISHED = "2018-01-14T00:30:12+10:00";
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
 
@@ -141,13 +133,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="Fill In Forms"
-        desktopImage={fillForm}
-        mobileImage={fillFormMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <PageSegmentMain />
       <FormFieldsAnatomy />

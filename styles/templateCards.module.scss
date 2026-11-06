@@ -39,6 +39,7 @@ $easing-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   // Height uses calc with the CSS custom property directly
   height: calc(var(--card-width, 220px) / (210 / 297));
   overflow: visible;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 // =============================================================================

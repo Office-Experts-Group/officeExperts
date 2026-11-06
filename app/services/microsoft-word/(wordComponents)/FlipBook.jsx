@@ -1,20 +1,30 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Image from "next/image";
 import styles from "@/styles/flipBook.module.scss";
 
 /**
  * FlipBook
  *
- * A 3D page-flipping book component. Images only  no required text.
- * Navigation: scroll-triggered (non-locking) + prev/next click buttons.
+ * A 3D page-flipping book component. Images only — no required text.
+ * Navigation: scroll-triggered (non-locking), prev/next buttons, arrow keys, dots.
  *
  * Page model:
- *   images[0] = cover (right-hand page only, no left ghost)
+ *   images[0] = cover (right-hand page only)
  *   images[1] = back of sheet 0 (shows on left after first flip)
  *   images[2] = front of sheet 1 (right page of spread 1) ...etc.
- *   If the last sheet has no back image, the left side stays empty after the final flip.
+ *
+ * How stacking works:
+ *   Every sheet sits a tiny distance off the "table" (translateZ) based on how
+ *   close it is to the top of its pile. The browser's real 3D depth sorting then
+ *   always puts the most recent page on top. We don't rely on z-index here, because
+ *   browsers ignore it between elements in a shared preserve-3d context. That was
+ *   what made the first page show through on every flip.
+ *
+ *   Flips are queued and may overlap (one sheet can start lifting before the
+ *   previous one lands), which gives the "flicking through" feel on fast
+ *   scrolls or when jumping via the dots.
  *
  * Props:
  *   images         array of image src strings or Next.js static imports (required)
@@ -22,7 +32,18 @@ import styles from "@/styles/flipBook.module.scss";
  *   className      optional wrapper className
  *   scrollOffset   px of scroll needed to trigger a page turn (default: 120)
  *   animDuration   flip animation duration in ms (default: 900)
+ *   flipStagger    min ms between queued flips from buttons / keys / dots
+ *                  (default: 35% of animDuration). Set equal to animDuration
+ *                  to stop flips ever overlapping.
+ *   scrollCooldown ms after a scroll-triggered flip during which further scroll
+ *                  input is ignored (default: 80% of animDuration). This is
+ *                  the main control for "too many pages at once" on scroll.
+ *   scrollQueue    extra scroll flips allowed to queue up behind the current
+ *                  one (default: 0 = one page per scroll gesture/cooldown).
  */
+
+const DEPTH_GAP = 1; // px between stacked sheets
+const DEPTH_LEVELS = 4; // how many sheets per pile get a distinct depth
 
 export default function FlipBook({
   images = [],
@@ -30,132 +51,198 @@ export default function FlipBook({
   className = "",
   scrollOffset = 120,
   animDuration = 900,
+  flipStagger,
+  scrollCooldown,
+  scrollQueue = 0,
 }) {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [displayPage, setDisplayPage] = useState(0);
-  const [displayLeftPage, setDisplayLeftPage] = useState(0);
-  // Which sheet index is actively mid-flip — gets max z-index so it always renders on top
-  const [activeSheet, setActiveSheet] = useState(null);
-  const containerRef = useRef(null);
-  const accumulatedScroll = useRef(0);
-  const lastScrollY = useRef(0);
-
-  // Build sheets: each sheet has a front (right-side image) and back (left-side image).
-  // Sheet 0: front = images[0] (cover), back = images[1]
-  // Sheet 1: front = images[2], back = images[3] ... etc.
-  const totalSheets = Math.ceil(images.length / 2);
-  const sheets = Array.from({ length: totalSheets }, (_, i) => ({
-    front: images[i * 2] ?? null,
-    back: images[i * 2 + 1] ?? null,
-  }));
-
-  // currentPage:  0 = book closed (only cover visible on right)
-  //               1 = sheet 0 flipped (spread: images[1] left, images[2] right)
-  //               N = all sheets flipped
-  const maxPage = totalSheets;
-
-  const navigate = useCallback(
-    (delta) => {
-      if (isAnimating) return;
-      const next = Math.max(0, Math.min(maxPage, currentPage + delta));
-      if (next === currentPage) return;
-      const goingForward = next > currentPage;
-      // The sheet that will physically animate: going forward it's the sheet
-      // at currentPage (about to flip); going backward it's at next (unflipping)
-      const movingSheet = goingForward ? currentPage : next;
-      setIsAnimating(true);
-      setActiveSheet(movingSheet);
-      setCurrentPage(next);
-      if (goingForward) {
-        if (next === maxPage) {
-          setDisplayPage(next);
-        }
-        // displayLeftPage intentionally NOT touched here at all
-        setTimeout(() => {
-          setDisplayPage(next);
-          setDisplayLeftPage(next); // only update left AFTER sheet has landed
-          setIsAnimating(false);
-          setActiveSheet(null);
-        }, animDuration);
-      } else {
-        if (next === 0) {
-          setDisplayLeftPage(0);
-        }
-        setDisplayPage(next);
-        setTimeout(() => {
-          setDisplayLeftPage(next);
-          setIsAnimating(false);
-          setActiveSheet(null);
-        }, animDuration);
-      }
-    },
-    [isAnimating, currentPage, maxPage, animDuration],
+  const sheets = useMemo(
+    () =>
+      Array.from({ length: Math.ceil(images.length / 2) }, (_, i) => ({
+        front: images[i * 2] ?? null,
+        back: images[i * 2 + 1] ?? null,
+      })),
+    [images],
   );
 
-  const goNext = useCallback(() => navigate(1), [navigate]);
-  const goPrev = useCallback(() => navigate(-1), [navigate]);
+  const totalSheets = sheets.length;
+  // currentPage: 0 = closed (cover on right), N = number of sheets flipped
+  const maxPage = totalSheets;
+  const stagger = flipStagger ?? Math.round(animDuration * 0.35);
+  const scrollLock = scrollCooldown ?? Math.round(animDuration * 0.8);
 
-  // Scroll listener non-locking, accumulates delta while book is in view
+  const [currentPage, setCurrentPage] = useState(0);
+  // Sheets currently mid-flip: { [sheetIndex]: sequenceNumber }
+  const [moving, setMoving] = useState({});
+
+  const containerRef = useRef(null);
+  const pageRef = useRef(0); // source of truth for the queue (avoids stale closures)
+  const queueRef = useRef([]); // pending flip directions (1 | -1)
+  const nextFlipAt = useRef(0);
+  const pumpTimer = useRef(null);
+  const landTimers = useRef({});
+  const seqRef = useRef(0);
+  const accumulatedScroll = useRef(0);
+  const lastScrollY = useRef(0);
+  const scrollLockedUntil = useRef(0);
+
+  // ---------------------------------------------------------------------------
+  // Flip engine
+  // ---------------------------------------------------------------------------
+
+  const flipOnce = useCallback(
+    (dir) => {
+      const from = pageRef.current;
+      const to = Math.max(0, Math.min(maxPage, from + dir));
+      if (to === from) return false;
+
+      // Forward: the sheet at `from` turns over. Backward: the sheet at `to` turns back.
+      const sheet = dir > 0 ? from : to;
+      const seq = ++seqRef.current;
+
+      pageRef.current = to;
+      setCurrentPage(to);
+      setMoving((m) => ({ ...m, [sheet]: seq }));
+
+      clearTimeout(landTimers.current[sheet]);
+      landTimers.current[sheet] = setTimeout(() => {
+        delete landTimers.current[sheet];
+        setMoving((m) => {
+          if (m[sheet] !== seq) return m; // sheet was re-flipped since; leave it
+          const next = { ...m };
+          delete next[sheet];
+          return next;
+        });
+      }, animDuration);
+
+      return true;
+    },
+    [maxPage, animDuration],
+  );
+
+  const pump = useCallback(
+    function run() {
+      clearTimeout(pumpTimer.current);
+      pumpTimer.current = null;
+      const q = queueRef.current;
+      while (q.length) {
+        const wait = nextFlipAt.current - performance.now();
+        if (wait > 0) {
+          pumpTimer.current = setTimeout(run, wait);
+          return;
+        }
+        if (flipOnce(q.shift())) {
+          nextFlipAt.current = performance.now() + stagger;
+        } else {
+          q.length = 0; // hit the start/end of the book
+        }
+      }
+    },
+    [flipOnce, stagger],
+  );
+
+  const enqueue = useCallback(
+    (dir, steps = 1, maxQueued = Infinity) => {
+      const q = queueRef.current;
+      if (q.length && q[0] !== dir) q.length = 0; // direction change cancels pending flips
+      for (let i = 0; i < steps && q.length < maxQueued; i++) q.push(dir);
+      pump();
+    },
+    [pump],
+  );
+
+  const goNext = useCallback(() => enqueue(1), [enqueue]);
+  const goPrev = useCallback(() => enqueue(-1), [enqueue]);
+  const goTo = useCallback(
+    (target) => {
+      queueRef.current.length = 0;
+      const diff = target - pageRef.current;
+      if (diff) enqueue(Math.sign(diff), Math.abs(diff));
+    },
+    [enqueue],
+  );
+
+  // Clear timers on unmount
+  useEffect(() => {
+    const lands = landTimers.current;
+    return () => {
+      clearTimeout(pumpTimer.current);
+      Object.values(lands).forEach(clearTimeout);
+    };
+  }, []);
+
+  // ---------------------------------------------------------------------------
+  // Input
+  // ---------------------------------------------------------------------------
+
+  const isInView = useCallback(() => {
+    if (!containerRef.current) return false;
+    const rect = containerRef.current.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight * 0.7 &&
+      rect.bottom > window.innerHeight * 0.3
+    );
+  }, []);
+
+  // Scroll: non-locking, accumulates delta while the book is in view
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const inView =
-        rect.top < window.innerHeight * 0.7 &&
-        rect.bottom > window.innerHeight * 0.3;
+      const delta = window.scrollY - lastScrollY.current;
+      lastScrollY.current = window.scrollY;
 
-      if (!inView) {
+      if (!isInView()) {
         accumulatedScroll.current = 0;
-        lastScrollY.current = window.scrollY; // keep this in sync while out of view
         return;
       }
 
-      const delta = window.scrollY - lastScrollY.current;
-      lastScrollY.current = window.scrollY; // ← move this BEFORE the navigate check
-      accumulatedScroll.current += delta;
-
-      if (Math.abs(accumulatedScroll.current) >= scrollOffset) {
-        navigate(accumulatedScroll.current > 0 ? 1 : -1);
+      // During the cooldown, throw scroll away rather than banking it. Otherwise a
+      // fast wheel spin or trackpad momentum fires a burst of flips once it ends.
+      if (performance.now() < scrollLockedUntil.current) {
         accumulatedScroll.current = 0;
+        return;
+      }
+
+      accumulatedScroll.current += delta;
+      if (Math.abs(accumulatedScroll.current) >= scrollOffset) {
+        // +1 = the flip about to run; scrollQueue = extras allowed to wait behind it
+        enqueue(accumulatedScroll.current > 0 ? 1 : -1, 1, scrollQueue + 1);
+        accumulatedScroll.current = 0;
+        scrollLockedUntil.current = performance.now() + scrollLock;
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
     lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [navigate, scrollOffset]);
+  }, [enqueue, scrollOffset, scrollLock, scrollQueue, isInView]);
 
-  // Keyboard navigation
+  // Keyboard: left/right only, and only while the book is on screen.
+  // (Up/down would also scroll the page and double-trigger via the scroll listener.)
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === "ArrowRight" || e.key === "ArrowDown") goNext();
-      if (e.key === "ArrowLeft" || e.key === "ArrowUp") goPrev();
+      if (!isInView()) return;
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [goNext, goPrev]);
+  }, [goNext, goPrev, isInView]);
 
-  // What's currently visible on the LEFT background (behind flipped sheets)?
-  // Uses displayLeftPage so it only appears after the sheet has swept across on
-  // the first flip, and clears immediately when returning to page 0.
-  const leftBgImage =
-    displayLeftPage > 0 ? sheets[displayLeftPage - 1]?.back : null;
-  const showLeftBg = !!leftBgImage;
+  // ---------------------------------------------------------------------------
+  // Render helpers
+  // ---------------------------------------------------------------------------
 
-  // What's currently visible on the RIGHT background (beneath the current sheet stack)?
-  // Uses displayPage (not currentPage) so it only updates after the flip animation
-  // completes when going forward — preventing the next image from popping in early.
-  const rightBgImage = sheets[displayPage]?.front ?? null;
-  const showRightBg = !!rightBgImage;
+  // Distance from the table: top of each pile is highest, so it always wins depth sorting.
+  const sheetDepth = (i) => {
+    const rank = i < currentPage ? currentPage - 1 - i : i - currentPage;
+    return (DEPTH_LEVELS - Math.min(rank, DEPTH_LEVELS)) * DEPTH_GAP;
+  };
 
-  // Spine: only once the book is open (both sides have content)
+  // Mount a few sheets either side (so images are loaded before they're revealed),
+  // plus any sheet that's still mid-flight.
+  const isMounted = (i) =>
+    (i >= currentPage - 3 && i <= currentPage + 2) || moving[i] != null;
+
   const showSpine = currentPage > 0 && currentPage < maxPage;
-
-  // The scene is ALWAYS double-page width  this prevents any layout shift.
-  // On the cover (page 0), the right half shows the cover image and the left
-  // half is simply transparent (nothing rendered there). Same for the last page
-  // if it has no back image. The aspect-ratio never changes, so no reflow.
   const showPrev = currentPage > 0;
   const showNext = currentPage < maxPage;
 
@@ -168,100 +255,73 @@ export default function FlipBook({
       aria-label="Flip book"
     >
       <div className={styles.scene}>
-        {/* Spine  only visible mid-book */}
-        {showSpine && <div className={styles.spine} />}
+        {/* 3D stage: only the sheets (and spine) live in the preserve-3d context */}
+        <div className={styles.stage}>
+          {showSpine && <div className={styles.spine} />}
 
-        {/* LEFT background  only renders when there's actually a flipped page to show */}
-        {showLeftBg && (
-          <div className={styles.leftBg}>
-            <Image
-              src={leftBgImage}
-              alt=""
-              fill
-              className={styles.pageImg}
-              sizes="50vw"
-            />
-          </div>
-        )}
+          {sheets.map((sheet, i) => {
+            if (!isMounted(i)) return null;
+            const isFlipped = i < currentPage;
+            const isTurning = moving[i] != null;
 
-        {/* RIGHT background  only renders when there's a front-facing page.
-            Always half-width (right side of the double-page scene). */}
-        {showRightBg && (
-          <div className={styles.rightBg}>
-            <Image
-              src={rightBgImage}
-              alt=""
-              fill
-              className={styles.pageImg}
-              sizes="50vw"
-              priority={currentPage === 0}
-            />
-          </div>
-        )}
+            return (
+              <div
+                key={i}
+                className={[
+                  styles.sheet,
+                  isFlipped ? styles.flipped : "",
+                  isTurning ? styles.turning : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={{
+                  transform: `translateZ(${sheetDepth(i)}px) rotateY(${
+                    isFlipped ? -180 : 0
+                  }deg)`,
+                  "--anim-duration": `${animDuration}ms`,
+                }}
+              >
+                {/* Front face (right-side page) */}
+                <div className={styles.front}>
+                  {sheet.front && (
+                    <Image
+                      src={sheet.front}
+                      alt={`Page ${i * 2 + 1}`}
+                      fill
+                      className={styles.pageImg}
+                      sizes="50vw"
+                      priority={i <= 1}
+                    />
+                  )}
+                  <div className={styles.pageShadowFront} />
+                  <div className={styles.turnShade} />
+                </div>
 
-        {/* Sheets  only render those adjacent to current for performance */}
-        {sheets.map((sheet, i) => {
-          const isFlipped = i < currentPage;
-          const isRelevant =
-            Math.abs(i - currentPage) <= 1 || i === 0 || i === totalSheets - 1;
-          if (!isRelevant) return null;
-
-          return (
-            <div
-              key={i}
-              className={[styles.sheet, isFlipped ? styles.flipped : ""].join(
-                " ",
-              )}
-              style={{
-                zIndex:
-                  i === activeSheet
-                    ? 999
-                    : isFlipped
-                      ? i + 10
-                      : totalSheets - i + 10,
-                "--anim-duration": `${animDuration}ms`,
-              }}
-            >
-              {/* Front face (right-side page) */}
-              <div className={styles.front}>
-                {sheet.front && (
-                  <Image
-                    src={sheet.front}
-                    alt={`Page ${i * 2 + 1}`}
-                    fill
-                    className={styles.pageImg}
-                    sizes="50vw"
-                    priority={i === 0}
-                  />
-                )}
-                <div className={styles.pageShadowFront} />
+                {/* Back face (left-side page, visible after flip) */}
+                <div className={styles.back}>
+                  {sheet.back && (
+                    <Image
+                      src={sheet.back}
+                      alt={`Page ${i * 2 + 2}`}
+                      fill
+                      className={styles.pageImg}
+                      sizes="50vw"
+                    />
+                  )}
+                  <div className={styles.pageShadowBack} />
+                  <div className={styles.turnShade} />
+                </div>
               </div>
+            );
+          })}
+        </div>
 
-              {/* Back face (left-side page, visible after flip) */}
-              <div className={styles.back}>
-                {sheet.back && (
-                  <Image
-                    src={sheet.back}
-                    alt={`Page ${i * 2 + 2}`}
-                    fill
-                    className={styles.pageImg}
-                    sizes="50vw"
-                    priority={false}
-                  />
-                )}
-                <div className={styles.pageShadowBack} />
-              </div>
-            </div>
-          );
-        })}
-
-        {/* Navigation buttons */}
+        {/* Navigation buttons sit outside the 3D stage so pages never cover them */}
         {showPrev && (
           <button
             className={[styles.navBtn, styles.navPrev].join(" ")}
             onClick={goPrev}
             aria-label="Previous page"
-            disabled={isAnimating}
           >
             <span className={styles.navArrow} />
             <span className={styles.navLine} />
@@ -273,7 +333,6 @@ export default function FlipBook({
             className={[styles.navBtn, styles.navNext].join(" ")}
             onClick={goNext}
             aria-label="Next page"
-            disabled={isAnimating}
           >
             <span className={styles.navLine} />
             <span
@@ -283,19 +342,15 @@ export default function FlipBook({
         )}
       </div>
 
-      {/* Page indicator dots */}
+      {/* Page indicator dots — jumping several spreads riffles through each page */}
       <div className={styles.dots} aria-hidden="true">
         {Array.from({ length: maxPage + 1 }).map((_, i) => (
           <button
             key={i}
-            className={[
-              styles.dot,
-              i === currentPage ? styles.dotActive : "",
-            ].join(" ")}
-            onClick={() => {
-              if (isAnimating) return;
-              navigate(i - currentPage);
-            }}
+            className={[styles.dot, i === currentPage ? styles.dotActive : ""]
+              .filter(Boolean)
+              .join(" ")}
+            onClick={() => goTo(i)}
             aria-label={`Go to spread ${i + 1}`}
           />
         ))}

@@ -19,13 +19,7 @@
     letter-spacing: 1px;
   }
 
-  @include tablet {
-    display: none;
-  }
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
+  @media screen and (max-width: 1260px) {
     display: none;
   }
 }
@@ -42,7 +36,7 @@
     margin-bottom: -0.1rem;
   }
 
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 130px) {
     display: none;
   }
 }
@@ -287,35 +281,29 @@ $cycle-duration: 33s;
     height: 80px;
   }
 
-  @include tablet {
-    margin-top: 0;
-  }
-  @include phone {
-    margin-top: 0;
-  }
-  @include phoneLandscape {
-    margin-top: 0;
-  }
-
   li {
     list-style: none;
+  }
+
+  @media screen and (max-width: 1260px) {
+    margin-top: 0;
   }
 }
 
 .nav {
   margin: 0 auto;
   @include desktop {
-    display: none;
+    // display: none;
   }
-  @include tablet {
-    display: none;
-  }
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
-    display: none;
-  }
+  // @include tablet {
+  //   display: none;
+  // }
+  // @include phone {
+  //   display: none;
+  // }
+  // @include phoneLandscape {
+  //   display: none;
+  // }
 }
 
 .navList {
@@ -326,16 +314,7 @@ $cycle-duration: 33s;
   padding: 0;
   gap: 1rem;
 
-  @include desktop {
-    display: none;
-  }
-  @include tablet {
-    display: none;
-  }
-  @include phone {
-    display: none;
-  }
-  @include phoneLandscape {
+  @media screen and (max-width: 1300px) {
     display: none;
   }
 }
@@ -559,17 +538,20 @@ $cycle-duration: 33s;
     margin-left: 0.8rem;
   }
   @include desktop {
-    display: none;
+    // display: none;
   }
   @include tablet {
-    display: none;
+    // display: none;
   }
   @include phoneLandscape {
-    display: none;
+    scale: 0.8;
   }
   @include phone {
     scale: 0.8;
     margin-left: 3vw;
+  }
+  @media screen and (max-width: 390px) {
+    display: none;
   }
 }
 
@@ -621,12 +603,9 @@ $cycle-duration: 33s;
     margin-right: 1rem;
   }
   @media screen and (min-width: 1200px) and (max-width: 1262px) {
-    display: none;
+    margin-right: 1rem;
   }
-  @media screen and (min-width: 450px) and (max-width: 540px) {
-    display: none;
-  }
-  @include phone {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 }
@@ -642,7 +621,7 @@ $cycle-duration: 33s;
 }
 
 .logoImg {
-  @include phone {
+  @media screen and (max-width: 700px) {
     max-width: 135px;
     max-height: 58.5px;
     margin: 1rem 0;

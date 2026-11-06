@@ -46,18 +46,14 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 // =============================================================================
-// Scene  perspective container for the 3D effect
-// Always double-page aspect ratio  never changes, no layout shift.
-// The left half is simply empty on the cover page.
+// Scene — sizing box. Always double-page aspect ratio, no layout shift.
+// The 3D context lives on .stage (below) so the nav buttons can sit above it.
 // =============================================================================
 
 .scene {
   position: relative;
-  // Always two A4 portrait pages side by side: (595Ã—2) Ã— 842
+  // Always two A4 portrait pages side by side: (595 x 2) x 842
   aspect-ratio: 1190 / 842;
-  perspective: $perspective;
-  perspective-origin: center 45%;
-  transform-style: preserve-3d;
 
   // Drop shadow under the whole book
   &::after {
@@ -84,58 +80,17 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 // =============================================================================
-// Background pages only rendered when there is actual content
-// (conditionally mounted in JSX, never ghost/blank)
+// Stage — the preserve-3d context. Sheets are depth-sorted by real 3D position
+// (translateZ set inline per sheet), NOT z-index, which browsers ignore here.
 // =============================================================================
 
-.leftBg {
+.stage {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: $page-bg;
-  overflow: hidden;
+  inset: 0;
   z-index: 1;
-  border-radius: 3px 0 0 3px;
-
-  // Spine-side shadow
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.06), transparent);
-    z-index: 2;
-    pointer-events: none;
-  }
-}
-
-.rightBg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: $page-bg;
-  overflow: hidden;
-  z-index: 1;
-  border-radius: 0 3px 3px 0;
-
-  // Spine-side shadow
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.06), transparent);
-    z-index: 2;
-    pointer-events: none;
-  }
+  perspective: $perspective;
+  perspective-origin: center 45%;
+  transform-style: preserve-3d;
 }
 
 // =============================================================================
@@ -146,10 +101,10 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
+  // Lifted just above the top sheet of each pile (max sheet depth is 4px)
+  transform: translateX(-50%) translateZ(5px);
   width: 8px;
   height: 100%;
-  z-index: 100;
   pointer-events: none;
   background: linear-gradient(
     90deg,
@@ -181,6 +136,7 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 // =============================================================================
 // Sheets (the flipping pages)
+// transform (translateZ + rotateY) is set inline from the component.
 // =============================================================================
 
 .sheet {
@@ -192,11 +148,8 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   transform-origin: left center;
   transform-style: preserve-3d;
   transition: transform var(--anim-duration, 900ms) $easing;
+  will-change: transform;
   pointer-events: none;
-
-  &.flipped {
-    transform: rotateY(-180deg);
-  }
 
   // On mobile the scene is portrait (single page), so sheets go full width
   @media (max-width: 600px) {
@@ -216,6 +169,12 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-backface-visibility: hidden;
   overflow: hidden;
   background: $page-bg;
+  transition: box-shadow var(--anim-duration, 900ms) ease;
+
+  // Soft lift shadow while the page is in the air
+  .turning & {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .front {
@@ -235,22 +194,20 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 // =============================================================================
 
 .pageImg {
-  object-fit: cover;
   object-position: center;
-  // For portrait A4 images filling a landscape half-page slot,
+  // For portrait A4 images filling a half-page slot,
   // contain ensures the full image is always visible
   object-fit: contain !important;
 }
 
 // =============================================================================
-// Depth shadows  add realism to the turning page
+// Depth shadows — add realism to the turning page
 // =============================================================================
 
 .pageShadowFront {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  // Shadow that appears on the front face as it starts to turn
   background: linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, transparent 40%);
   z-index: 2;
   opacity: 0;
@@ -271,6 +228,58 @@ $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     transparent 40%
   );
   z-index: 2;
+}
+
+// Shading that darkens as the page turns edge-on to the viewer (peaks at 90deg),
+// then fades as it lands. Symmetric, so it works in both directions.
+.turnShade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+
+  // Outer edge (away from the spine) catches the most shadow
+  .front & {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
+  .back & {
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
+  .turning & {
+    animation: turnShade var(--anim-duration, 900ms) $easing both;
+  }
+}
+
+@keyframes turnShade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet {
+    transition-duration: 1ms;
+  }
+  .turnShade {
+    animation: none !important;
+  }
 }
 
 // =============================================================================

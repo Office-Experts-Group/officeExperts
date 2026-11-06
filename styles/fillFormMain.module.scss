@@ -2,65 +2,70 @@
 
 @use "./globals.scss" as *;
 
-.pageSegment {
+.hero {
+  background: $dark-bg;
+  @include heroPadding;
+
+  // Smaller bottom padding on phones; top still clears the fixed header
+  @include phone {
+    padding-top: calc(#{$header-offset} + 2rem);
+    padding-bottom: 4rem;
+  }
+}
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   gap: 4rem;
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 7rem $gutter;
 
-  @include tablet {
+  // Single column for everything below desktop (tablet, phone landscape, phone)
+  @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    padding: 5rem $gutter;
   }
 
   @include phone {
-    grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 4rem $gutter;
   }
 }
 
 .accent {
-  color: $accent;
+  color: $accent-on-dark;
 }
 
 // ── Content column ───────────────────────────────────────────────────────
-.contentWrapper {
-  order: 1;
+.eyebrow {
+  margin-bottom: 1rem;
+
+  @include eyebrow-on-dark;
 }
 
-.content {
-  p:first-child {
-    @include eyebrow;
-  }
+.heading {
+  @include heading-main($white);
+}
 
-  h2 {
-    margin-top: 1rem;
+.body {
+  margin-top: 1.5rem;
+  color: $white-65;
+  font-size: 1.05rem;
+  line-height: 1.7;
 
-    @include heading-section;
-  }
-
-  p {
+  p + p {
     margin-top: 1.25rem;
-    color: $text-secondary;
-    font-size: 1.05rem;
-    line-height: 1.7;
   }
 }
 
 // ── SVG column ───────────────────────────────────────────────────────────
 .svgWrapper {
-  order: 2;
-
   svg {
     width: 100%;
     height: auto;
   }
-  @media screen and (max-width: "700px") {
+
+  @include mobile {
     display: none;
   }
 }

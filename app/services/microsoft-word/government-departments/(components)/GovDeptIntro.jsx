@@ -22,10 +22,10 @@ const GovDeptIntro = () => {
             <span className={styles.eyebrow}>
               Public Sector Document Solutions
             </span>
-            <h2 className={styles.heading}>
-              How do Office Experts support{" "}
-              <span className={styles.accent}>government departments?</span>
-            </h2>
+            <h1 className={styles.heading}>
+              How we support{" "}
+              <span className={styles.accent}>government departments</span>
+            </h1>
             <p>
               Our team of Word programmers and designers have worked with state
               and federal government departments for over 25 years. We pride

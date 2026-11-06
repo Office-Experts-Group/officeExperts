@@ -9,6 +9,16 @@
   background: $white;
   padding: 8rem 0 8rem 8rem;
 
+  @media screen and (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 8rem 2rem;
+  }
+
   @include phone {
     padding: 4rem 2rem 6rem;
   }
@@ -50,4 +60,8 @@
   align-items: center;
   justify-content: center;
   transform: scale(0.8);
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 }
