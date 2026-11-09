@@ -1,0 +1,131 @@
+// styles/addInUseCases.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  @include lede;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  // Too detailed to read at phone widths
+  @include mobile {
+    display: none;
+  }
+}
+
+// ── Use case cards ──────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $white;
+  border-radius: $radius;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.tag {
+  font-size: 0.72rem;
+  color: $text-secondary;
+  background: $grayBGC;
+  padding: 0.2rem 0.7rem;
+  border-radius: $radius-pill;
+}
+
+.cardTitle {
+  @include card-title(lg);
+}
+
+.cardText {
+  @include small-text;
+  @include inline-link;
+}
+
+// The AI card spans two columns on the accent colour
+.featured {
+  grid-column: span 2;
+  background: $accent;
+
+  @include mobile {
+    grid-column: auto;
+  }
+
+  .tag {
+    color: $white;
+    background: $white-18;
+  }
+
+  .cardTitle {
+    color: $white;
+  }
+
+  .cardText {
+    color: $white-88;
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

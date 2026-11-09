@@ -1,11 +1,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PageSegmentIntro from "./(components)/PageSegmentIntro";
 
-// Below-the-fold components are split into separate chunks with next/dynamic.
-// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
 const MicrosoftSolutions = dynamic(
   () => import("./(components)/MicrosoftSolutions"),
 );
@@ -13,9 +10,6 @@ const WebCapabilities = dynamic(() => import("./(components)/Webcapabilities"));
 const HowWeWork = dynamic(() => import("./(components)/Howwework"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
-
-import onlineSolutions from "@/public/pageHeros/onlineSolutions.webp";
-import onlineSolutionsMob from "@/public/pageHeros/mob/onlineSolutionsMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
@@ -82,19 +76,13 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title={"Custom Online Solutions"}
-        desktopImage={onlineSolutions}
-        mobileImage={onlineSolutionsMob}
-        altDesk={"computer with microsoft technologies"}
-        altMob={"computer with microsoft technologies"}
-      />
       <PageSegmentIntro />
       <MicrosoftSolutions />
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Online solutions we've delivered"
+        heading="A couple of online solutions we"
+        headingAccent="built recently"
         links={[
           {
             href: "/case-studies/custom-quoting-tool",

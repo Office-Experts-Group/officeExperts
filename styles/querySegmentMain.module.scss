@@ -4,17 +4,15 @@
 // ── Section shell ─────────────────────────────────────────
 .section {
   background: $white;
-  padding: 7rem 8rem;
+  padding: 2rem $gutter 6rem $gutter;
 
-  @include tablet {
-    padding: 6rem 4rem;
+  @include belowDesktop {
+    padding: 2rem $mobGutter 6rem $mobGutter;
   }
-  @include phoneLandscape {
-    padding: 5rem 1.5rem;
-  }
-  @include phone {
-    padding: 4.5rem 1.25rem;
-  }
+}
+
+.heroPad {
+  @include lightHeroBlock;
 }
 
 // ── Two-col grid ──────────────────────────────────────────
@@ -49,7 +47,7 @@
 .headline {
   margin: 0 0 1.75rem;
 
-  @include heading-section;
+  @include heading-main;
 }
 
 .accent {
@@ -58,60 +56,14 @@
 
 .body {
   p {
-    font-size: 1rem;
     color: $text-secondary;
     line-height: 1.85;
     margin: 0 0 1rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
-}
 
-// ── Stat strip ────────────────────────────────────────────
-.statStrip {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin: 2.5rem 0;
-  padding: 1.75rem 0;
-  border-top: 1px solid $border;
-  border-bottom: 1px solid $border;
-
-  @include phone {
-    gap: 1.25rem;
-    padding: 1.25rem 0;
+  #contact {
+    margin-top: 1rem;
   }
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.statValue {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 700;
-  color: $text-primary;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.statLabel {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: $text-muted;
-  text-transform: uppercase;
-}
-
-.statDivider {
-  width: 1px;
-  height: 2.5rem;
-  background: $border-strong;
-  flex-shrink: 0;
 }
 
 // ── Right column ──────────────────────────────────────────

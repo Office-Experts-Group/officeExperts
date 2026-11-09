@@ -1,0 +1,60 @@
+// styles/locationsClosing.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// Centred, which also sets it apart from the two-column intro
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  @include heading-section-on-dark;
+  margin: 1rem 0 2rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.body {
+  margin-bottom: 2.5rem;
+
+  p {
+    @include lede($white-75);
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Internal links: bold and accent coloured (lighter accent for the dark background)
+  @include inline-link($accent-on-dark);
+}
+
+.btn {
+  @include btn;
+}

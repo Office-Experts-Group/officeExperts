@@ -17,11 +17,11 @@
 }
 
 .inner {
-  @include container;
   padding-inline: 0; // section already supplies the gutter
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
+  @include container;
 }
 
 .header {

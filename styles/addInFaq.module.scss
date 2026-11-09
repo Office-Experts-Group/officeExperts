@@ -1,0 +1,86 @@
+// styles/addInFaq.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Questions ───────────────────────────────────
+.item {
+  border-bottom: 1px solid $line;
+
+  &:first-child {
+    border-top: 1px solid $line;
+  }
+}
+
+.question {
+  @include card-title(md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  // Plus sign that turns into a minus when the answer is open
+  &::after {
+    content: "+";
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $accent;
+  }
+
+  .item[open] &::after {
+    content: "\2212";
+  }
+}
+
+.answer {
+  @include body-text;
+  padding-bottom: 1.5rem;
+  max-width: 46rem;
+}

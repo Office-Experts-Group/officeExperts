@@ -1,0 +1,227 @@
+// styles/powerPivotSigns.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Bento grid ───────────────────────────────
+// Desktop: 3 columns. Tile 1 is tall, tile 2 is wide, tile 5 spans the full width.
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-height: 15rem;
+  padding: 2rem;
+  border-radius: $radius;
+
+  &:nth-child(1) {
+    grid-row: span 2;
+  }
+  &:nth-child(2) {
+    grid-column: span 2;
+  }
+  &:nth-child(5) {
+    grid-column: span 3;
+  }
+
+  @include belowDesktop {
+    &:nth-child(1) {
+      grid-row: auto;
+      grid-column: span 2;
+    }
+    &:nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+  @include mobile {
+    min-height: 0;
+    padding: 1.75rem 1.5rem;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(5) {
+      grid-column: auto;
+    }
+  }
+}
+
+// ── Tile tones ───────────────────────────────
+.toneAccent {
+  background: $accent;
+  color: $white;
+}
+
+.toneDark {
+  background: $dark-bg;
+  color: $white;
+}
+
+.toneLight {
+  background: $light-bg;
+  color: $text-primary;
+}
+
+// ── Tile content ─────────────────────────────
+.motif {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.problem,
+.fix {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  @include label($text-muted);
+}
+
+.problem p {
+  @include small-text;
+  text-decoration: line-through;
+  text-decoration-color: $border-strong;
+}
+
+.fix p {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+// Light text on the accent and dark tiles
+.toneAccent,
+.toneDark {
+  .label {
+    color: $white-65;
+  }
+
+  .problem p {
+    color: $white-65;
+    text-decoration-color: $white-35;
+  }
+}
+
+.toneDark .label {
+  color: $accent-on-dark;
+}
+
+// ── Decorative motifs ────────────────────────
+.numeral {
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.numeralLabel {
+  @include label($white-65);
+}
+
+// The old way: a lookup formula, struck through
+.formula {
+  padding: 0.6rem 1rem;
+  background: $white;
+  border-radius: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  color: $text-secondary;
+  text-decoration: line-through;
+  text-decoration-color: $replace-x;
+}
+
+.chip {
+  padding: 0.4rem 0.9rem;
+  background: $accent;
+  color: $white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: $radius-pill;
+}
+
+.avatars {
+  display: flex;
+
+  i {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: $white;
+    border: 3px solid $accent;
+    border-radius: 50%;
+
+    & + i {
+      margin-left: -0.6rem;
+    }
+    &:nth-child(2) {
+      opacity: 0.75;
+    }
+    &:nth-child(3) {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// styles/locationsWhy.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $accent;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  @include heading-section-on-dark;
+  max-width: 20ch;
+  margin: 1rem 0 4rem;
+}
+
+.accent {
+  color: $white-75;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 5rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+// Thin white rule instead of a card, keeps it light on the accent background
+.reason {
+  padding-top: 1.5rem;
+  border-top: 1px solid $white-35;
+}
+
+.title {
+  @include card-title(lg, $white);
+  margin-bottom: 0.75rem;
+}
+
+.text {
+  @include body-text($white-75);
+}

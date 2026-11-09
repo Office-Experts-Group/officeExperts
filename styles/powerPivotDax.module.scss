@@ -1,0 +1,105 @@
+// styles/powerPivotDax.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @include lede;
+}
+
+// ── Code window ──────────────────────────────
+.window {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: $dark-bg;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+  overflow: hidden;
+}
+
+.windowLabel {
+  padding: 1rem 1.75rem;
+  background: $dark-surface;
+  @include label($white-55);
+}
+
+.measure {
+  padding: 1.5rem 1.75rem;
+
+  & + & {
+    border-top: 1px solid $white-08;
+  }
+}
+
+// <pre> needs its default browser margin removed; long lines scroll sideways on phones
+.pre {
+  margin: 0;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: $white-88;
+}
+
+.name {
+  color: $white;
+  font-weight: 700;
+}
+
+.fn {
+  color: $accent-on-dark;
+}
+
+.note {
+  margin-top: 0.75rem;
+  @include small-text($white-55);
+}

@@ -49,8 +49,10 @@
 }
 
 // ── Bento grid ────────────────────────────────────────────
-// Six columns on desktop: the wide tile takes four, the rest take two.
+// Six columns from 1200px: the wide tile takes four, the rest take two.
 // Row 1 = wide + one tile, row 2 = three tiles.
+// Below 1200px the tiles were too narrow to read, so it drops to two columns
+// (wide tile full width), then one column on mobile. Keep mobile LAST so it wins.
 .bento {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -59,12 +61,12 @@
   padding: 0;
   margin-bottom: 3.5rem;
 
-  @include mobile {
-    grid-template-columns: 1fr;
+  @include belowDeskL {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
+  @include mobile {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -87,12 +89,8 @@
     transform: translateY(-3px);
   }
 
-  @include tablet {
+  @include belowDeskL {
     grid-column: span 1;
-  }
-
-  @include mobile {
-    grid-column: auto;
   }
 
   @include phone {
@@ -100,25 +98,28 @@
   }
 }
 
+// Declared after .tile so it wins. The mobile reset matters: a span of 2 in a
+// one-column grid would create an implicit second column and squash the tiles.
 .wide {
   grid-column: span 4;
 
-  @include tablet {
+  @include belowDeskL {
     grid-column: span 2;
   }
 
-  .tileTitle {
-    font-size: 1.5rem;
+  @include mobile {
+    grid-column: auto;
   }
 
-  // Situation and resolution sit side by side on the wide tile
-  .body {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+  .tileTitle {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  }
 
-    @include mobile {
-      grid-template-columns: 1fr;
-    }
+  // Situation and resolution sit side by side while there is room (about
+  // 30rem inside the tile), and stack on their own when there isn't.
+  .body {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2.5rem;
   }
 }
 
@@ -161,11 +162,7 @@
 
 .label {
   margin-bottom: 0.4rem;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $text-muted;
+  @include label;
 }
 
 // Pinned to the bottom so links line up across a row
@@ -244,6 +241,11 @@
 .ctaEyebrow {
   margin-bottom: 1rem;
   @include eyebrow-on-dark;
+}
+
+// $accent is too dark to read on the dark band
+.ctaContent .accent {
+  color: $accent-on-dark;
 }
 
 .ctaHeading {

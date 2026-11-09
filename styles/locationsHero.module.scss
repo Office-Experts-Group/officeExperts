@@ -1,0 +1,81 @@
+// styles/locationsHero.module.scss
+@use "./globals.scss" as *;
+
+@include kf-fade-up(fadeUp);
+
+.section {
+  background: $dark-bg;
+
+  @include heroPadding;
+  @include belowDesktop {
+    padding-bottom: 5rem;
+  }
+  @include mobile {
+    padding: 9rem $mobGutter 4rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content {
+  animation: fadeUp 0.6s ease both;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  @include heading-main($white);
+  margin: 1rem 0 1.5rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  @include lede($white-75);
+  max-width: 54ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  @include btn;
+}
+
+.link {
+  @include arrow-link($white);
+}
+
+// Labels get too small to read on phones, so the map is tablet and up
+.map {
+  width: 100%;
+  max-width: 440px;
+  justify-self: end;
+  animation: fadeUp 0.8s ease 0.15s both;
+
+  @include belowDesktop {
+    justify-self: center;
+    max-width: 380px;
+  }
+  @include mobile {
+    display: none;
+  }
+}

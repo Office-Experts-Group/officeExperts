@@ -1,0 +1,125 @@
+// styles/addInTechnologies.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  @include lede;
+}
+
+// ── Comparison table ────────────────────────────
+.tableWrap {
+  border-radius: $radius;
+  background: $light-bg;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  th,
+  td {
+    vertical-align: top;
+    padding: 1.25rem 1.5rem;
+  }
+
+  // Header row sits on the accent colour
+  thead th {
+    @include label($white);
+    background: $accent;
+    vertical-align: middle;
+  }
+
+  tbody tr {
+    border-top: 1px solid $line;
+  }
+
+  tbody th {
+    @include card-title(sm);
+    width: 22%;
+  }
+
+  td {
+    @include small-text;
+  }
+
+  @include mobile {
+    // On phones each row becomes a stacked card, labelled by the data-label on every cell
+    &,
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+
+    thead {
+      @include visually-hidden;
+    }
+
+    tbody th {
+      width: auto;
+      padding-bottom: 0.25rem;
+    }
+
+    td {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      &::before {
+        @include label;
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+}
+
+// Screen readers only: describes the table without taking up space
+.caption {
+  @include visually-hidden;
+}
+
+.note {
+  @include body-text;
+  @include inline-link;
+  max-width: 52rem;
+}

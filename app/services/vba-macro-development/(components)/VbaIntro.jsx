@@ -57,21 +57,6 @@ const VbaIntro = () => (
               <VbaArrowSvg />
             </Link>
           </div>
-
-          <ul className={styles.stats}>
-            <li className={styles.stat}>
-              <span className={styles.statNum}>2000</span>
-              <span className={styles.statLabel}>Established</span>
-            </li>
-            <li className={styles.stat}>
-              <span className={styles.statNum}>25+</span>
-              <span className={styles.statLabel}>Consultants nationwide</span>
-            </li>
-            <li className={styles.stat}>
-              <span className={styles.statNum}>AU-wide</span>
-              <span className={styles.statLabel}>Remote and on-site</span>
-            </li>
-          </ul>
         </div>
 
         <div className={styles.visual} aria-hidden="true">

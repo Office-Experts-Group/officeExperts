@@ -1,0 +1,134 @@
+// styles/powerPivotServices.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 48rem;
+
+  p {
+    @include lede($white-65);
+    @include inline-link($accent-on-dark);
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $dark-surface;
+  border-radius: $radius;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 0.75rem;
+  background: $accent;
+  color: $white;
+  border-radius: 1rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.cardTitle {
+  @include card-title(md, $white);
+}
+
+.cardText {
+  @include small-text($white-65);
+  @include inline-link($accent-on-dark);
+}
+
+// Accent background with light text, as used on the other service pages' CTA cards
+.contactCard {
+  justify-content: space-between;
+  gap: 2rem;
+  background: $accent;
+
+  a:first-child {
+    background: $white;
+    color: $accent;
+
+    &:hover {
+      border: $white;
+    }
+  }
+}
+
+.contactTitle {
+  @include card-title(lg, $white);
+}
+
+.contactActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.phone {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,81 @@
+// styles/addInProcess.module.scss
+@use "./globals" as *;
+
+// The accent colour is the background here, with lighter text on top
+.section {
+  background: $accent;
+  padding: 7rem $gutter;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark($white-75);
+}
+
+// On the accent background the highlighted part switches to full white
+.accent {
+  color: $white;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+  background: $white-08;
+  border-radius: $radius;
+}
+
+.number {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $white-35;
+}
+
+.stepTitle {
+  @include card-title(md, $white);
+}
+
+.stepBody {
+  @include small-text($white-88);
+}

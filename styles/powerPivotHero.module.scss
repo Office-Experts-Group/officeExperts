@@ -1,0 +1,100 @@
+// styles/powerPivotHero.module.scss
+@use "./globals.scss" as *;
+
+// heroPadding clears the transparent site header
+.hero {
+  background: radial-gradient(ellipse at 85% 15%, $dark-mid, $dark-bg 65%);
+  @include heroPadding;
+
+  @include mobile {
+    padding: 9rem $mobGutter 4rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  max-width: 36rem;
+  @include lede($white-75);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ctaSecondary {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// <ul> needs its default browser indent removed
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 0.5rem;
+  padding: 1.75rem 0 0;
+  list-style: none;
+  border-top: 1px solid $white-12;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  strong {
+    font-size: 1.6rem;
+    color: $white;
+  }
+
+  span {
+    @include small-text($white-55);
+  }
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-inline: auto;
+}

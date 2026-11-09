@@ -18,6 +18,9 @@
 
 .inner {
   @include container;
+  @include phone {
+    padding-inline: 0;
+  }
 }
 
 .header {

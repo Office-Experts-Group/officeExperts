@@ -27,6 +27,7 @@
   @include belowDesktop {
     grid-template-columns: 1fr;
     gap: 3rem;
+    padding-inline: 0;
   }
 }
 

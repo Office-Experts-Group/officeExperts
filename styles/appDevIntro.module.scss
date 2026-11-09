@@ -4,6 +4,7 @@
 .section {
   background: $white;
   padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset; // target of the hero's "See how we can help" link
 
   @include tablet {
     padding: 6rem 4rem;
@@ -17,12 +18,12 @@
 }
 
 .inner {
-  @include container;
   padding-inline: 0; // section already supplies the gutter
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   align-items: start;
   gap: 4rem;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;
@@ -168,7 +169,7 @@
   color: $text-secondary;
   line-height: 1.6;
 
-  .dark,
+  .dark &,
   .accentTile & {
     color: $white-65;
   }

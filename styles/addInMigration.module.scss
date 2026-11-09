@@ -1,0 +1,101 @@
+// styles/addInMigration.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $white;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lead {
+  @include lede;
+}
+
+.body {
+  @include body-text;
+}
+
+.signsTitle {
+  @include label;
+  margin-top: 0.75rem;
+}
+
+.signs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+
+  li {
+    @include small-text($text-primary);
+    position: relative;
+    padding-left: 1.4rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: $replace-x;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.75rem;
+  margin-block: 0.5rem;
+}
+
+.link {
+  @include arrow-link;
+}
+
+.visual {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}

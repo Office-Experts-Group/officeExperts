@@ -16,8 +16,37 @@
   }
 }
 
+// styles/thirdPartyWorkedExample.module.scss
+
 .inner {
   @include container;
+}
+
+.layout {
+  display: grid;
+  // minmax(0, ...) lets the columns shrink below their content's minimum width
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 4rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+  @include phone {
+    gap: 2.5rem;
+  }
+}
+
+.imageContainer {
+  max-width: 350px;
+  margin: 0 auto 1.5rem auto;
+
+  // Overrides the fixed width/height attributes so the image scales with its container
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .header {
@@ -43,22 +72,6 @@
 
 .accent {
   color: $accent;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: start;
-
-  @include belowDesktop {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  @include phone {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
 }
 
 .projectTitle {
@@ -112,10 +125,6 @@
   color: $white-65;
   line-height: 1.8;
   margin-bottom: 1.75rem;
-}
-
-.imageContainer {
-  margin: 0 auto 1.5rem auto;
 }
 
 .stats {

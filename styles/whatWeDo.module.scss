@@ -1,0 +1,190 @@
+// /styles/whatWeDo.module.scss
+// Colours, type and motion for the Power Query "What we do" hub SVG (light theme).
+// Positions live in WhatWeDo.jsx; this file only styles and animates them.
+
+@use "./globals" as *;
+
+// Centre of the hub in SVG user units (matches HUB in WhatWeDo.jsx)
+$hub-origin: 360px 280px;
+
+.svg {
+  display: block;
+  font-family: inherit;
+}
+
+// ── Gradients and shadow ──
+.glowStop {
+  stop-color: $accent;
+}
+.coreA {
+  stop-color: $accent;
+}
+.coreB {
+  stop-color: $accent-dark;
+}
+.shadow {
+  flood-color: $accent;
+  flood-opacity: 0.14;
+}
+
+// ── Orbits ──
+.ringFaint {
+  fill: none;
+  stroke: $accent-border;
+}
+.ringDashed {
+  fill: none;
+  stroke: $accent;
+  stroke-opacity: 0.4;
+  stroke-dasharray: 2 8;
+  stroke-linecap: round;
+}
+.satellite {
+  fill: $accent;
+}
+.satelliteDim {
+  fill: $accent-border;
+}
+.orbitSlow,
+.orbitFast {
+  transform-box: view-box;
+  transform-origin: $hub-origin;
+}
+.orbitSlow {
+  animation: spin 60s linear infinite;
+}
+.orbitFast {
+  animation: spin 40s linear infinite reverse;
+}
+
+// ── Spokes and packets ──
+.spokeBase {
+  fill: none;
+  stroke: $accent-border;
+}
+.spoke {
+  fill: none;
+  stroke: $accent;
+  stroke-opacity: 0.55;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 3 7;
+  animation: flow 1.2s linear infinite;
+}
+.packet {
+  // Hidden until SMIL starts it, so packets never flash at the origin
+  opacity: 0;
+}
+.packetHalo {
+  fill: $accent;
+  opacity: 0.18;
+}
+.packetCore {
+  fill: $accent;
+  stroke: $white;
+  stroke-width: 1.5;
+}
+
+// ── Hub ──
+.pulse {
+  fill: none;
+  stroke: $accent;
+  stroke-width: 1.5;
+  transform-box: view-box;
+  transform-origin: $hub-origin;
+  animation: pulse 2.8s ease-out infinite;
+}
+.hubHalo {
+  fill: $accent-dim;
+  transform-box: view-box;
+  transform-origin: $hub-origin;
+  animation: breathe 3.2s ease-in-out infinite;
+}
+.hubCore {
+  stroke: $white;
+  stroke-width: 3;
+}
+.hubText {
+  fill: $white;
+  font-size: 21px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+// ── Capability cards ──
+.node {
+  // Simple staggered fade; --i is set inline per card. No movement, so text stays still.
+  animation: fade 0.6s ease-out backwards;
+  animation-delay: calc(0.2s + var(--i) * 0.1s);
+}
+.card {
+  fill: $white;
+  stroke: $accent-border;
+  transition:
+    fill 0.2s ease,
+    stroke 0.2s ease;
+}
+.node:hover .card {
+  fill: $accent-light;
+  stroke: $accent;
+}
+.badge {
+  fill: $accent-light;
+  stroke: $accent-border;
+}
+.glyph {
+  fill: none;
+  stroke: $accent;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.label {
+  fill: $text-primary;
+  font-size: 20px;
+  font-weight: 700;
+  dominant-baseline: central;
+}
+
+// ── Keyframes ──
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+@keyframes breathe {
+  50% {
+    transform: scale(1.08);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+// ── Reduced motion: a calm static diagram ──
+@media (prefers-reduced-motion: reduce) {
+  .svg * {
+    animation: none !important;
+  }
+  .packet {
+    display: none;
+  }
+}

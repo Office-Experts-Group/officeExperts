@@ -18,10 +18,10 @@ const MigrationHero = () => {
         <div className={styles.content}>
           <p className={styles.eyebrow}>ActiveX &amp; VBScript Migration</p>
 
-          <h2 className={styles.heading}>
+          <h1 className={styles.heading}>
             Your old macros are about to hit a{" "}
             <span className={styles.accent}>wall.</span>
-          </h2>
+          </h1>
 
           <p className={styles.lead}>
             Microsoft has disabled ActiveX controls by default across Word,

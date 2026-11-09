@@ -28,8 +28,8 @@
     gap: 3rem;
   }
   @include phone {
-    grid-template-columns: 1fr;
     gap: 2.5rem;
+    padding-inline: 0;
   }
 }
 

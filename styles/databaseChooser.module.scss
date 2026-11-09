@@ -22,6 +22,10 @@
   flex-direction: column;
   gap: 3rem;
   @include container;
+
+  @include phone {
+    padding-inline: 0;
+  }
 }
 
 .header {

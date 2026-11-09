@@ -10,6 +10,9 @@
   background: $dark-bg;
   overflow: hidden;
   padding-top: 8rem;
+  @media screen and (max-width: 700px) {
+    padding-top: 3rem;
+  }
 }
 
 // ── Inner two-column layout ───────────────────────────────
@@ -52,11 +55,7 @@
 
 .heading {
   margin: 0 0 1.75rem;
-  @include heading-section-on-dark;
-
-  @include phone {
-    font-size: clamp(2rem, 8vw, 2.6rem);
-  }
+  @include heading-main($white);
 }
 
 .accent {

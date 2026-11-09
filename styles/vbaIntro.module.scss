@@ -69,47 +69,6 @@
   @include arrow-link;
 }
 
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 2.5rem;
-  margin-top: 0.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid $border;
-  list-style: none;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.statNum {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: $accent;
-}
-
-.statLabel {
-  font-size: 0.8rem;
-  color: $text-muted;
-}
-
-.visual {
-  svg {
-    width: 100%;
-    height: auto;
-  }
-
-  @include belowDesktop {
-    max-width: 520px;
-    margin-inline: auto;
-  }
-  @include phone {
-    display: none;
-  }
-}
-
 // ── Jump links ──────────────────────────────────────────────────────────────
 .jump {
   display: flex;

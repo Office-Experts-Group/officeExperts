@@ -82,6 +82,9 @@ $shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
   max-width: $max;
   margin-inline: auto;
   padding-inline: 1.5rem;
+  @media screen and (max-width: 770px) {
+    padding-inline: 0;
+  }
 }
 
 @mixin belowDesktop {

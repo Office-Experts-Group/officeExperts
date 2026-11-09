@@ -13,6 +13,9 @@ $darkSurface: #18232e;
   @include tablet {
     padding: 6rem 4rem;
   }
+  @include phoneLandscape {
+    padding: 5rem 1.25rem;
+  }
   @include phone {
     padding: 5rem 1.25rem;
   }
@@ -48,7 +51,6 @@ $darkSurface: #18232e;
   font-size: 1.05rem;
   color: $darkGrayText;
   line-height: 1.8;
-  margin: 0;
   max-width: 520px;
 }
 
@@ -85,6 +87,9 @@ $darkSurface: #18232e;
     grid-template-columns: 1fr 260px;
   }
 
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
   @include phone {
     grid-template-columns: 1fr;
   }

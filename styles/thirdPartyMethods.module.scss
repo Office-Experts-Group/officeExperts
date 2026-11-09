@@ -28,6 +28,9 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
   flex-direction: column;
   gap: 4rem;
   @include container;
+  @include phone {
+    padding-inline: 0;
+  }
 }
 
 // Headline on the left, supporting copy on the right
@@ -47,7 +50,7 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
     max-width: 34rem;
   }
 
-  @include tablet {
+  @media screen and (max-width: 770px) {
     grid-template-columns: 1fr;
   }
 }
@@ -100,6 +103,14 @@ $tpm-hover: rgba(79, 179, 232, 0.06);
   }
 
   @include tablet {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+
+    .link {
+      grid-column: 2;
+    }
+  }
+
+  @include phoneLandscape {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
 
     .link {

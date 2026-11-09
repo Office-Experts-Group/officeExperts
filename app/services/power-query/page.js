@@ -3,7 +3,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import QuerySegmentMain from "./(components)/QuerySegmentMain";
 
 // Dynamic imports for components below the fold
@@ -12,9 +11,6 @@ const QueryComparison = dynamic(() => import("./(components)/QueryComparison"));
 const QueryProcess = dynamic(() => import("./(components)/QueryProcess"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
-
-import query from "@/public/pageHeros/query.webp";
-import queryMob from "@/public/pageHeros/mob/queryMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
@@ -79,13 +75,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Power Query Services"
-        desktopImage={query}
-        mobileImage={queryMob}
-        altDesk={"laptop with Power Query displayed"}
-        altMob={"laptop with Power Query displayed"}
       />
       <QuerySegmentMain />
       <QueryServices />

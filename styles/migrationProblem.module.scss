@@ -44,6 +44,11 @@
     margin-bottom: 4rem;
   }
 
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
   @include phone {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -245,7 +250,13 @@
     padding: 2.5rem 2.5rem 2.5rem 3rem;
   }
 
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem 2rem 2rem;
+    border-radius: 4px;
+  }
   @include phone {
+    grid-template-columns: 1fr;
     padding: 2rem 1.5rem 2rem 2rem;
     border-radius: 4px;
   }

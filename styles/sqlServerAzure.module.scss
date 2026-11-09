@@ -23,6 +23,10 @@
   gap: 3.5rem;
 
   @include container;
+
+  @include phone {
+    padding-inline: 0;
+  }
 }
 
 .header {

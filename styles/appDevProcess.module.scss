@@ -17,11 +17,11 @@
 }
 
 .inner {
-  @include container;
   padding-inline: 0; // section already supplies the gutter
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 4rem;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;

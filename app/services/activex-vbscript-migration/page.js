@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import MigrationHero from "./(components)/MigrationHero";
-import ServiceHero from "@/components/ServiceHero";
 
 const AffectedCheck = dynamic(() => import("./(components)/AffectedCheck"));
 const MigrationReplaces = dynamic(
@@ -13,9 +12,6 @@ const MigrationFaq = dynamic(() => import("./(components)/MigrationFaq"));
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const Promo = dynamic(() => import("@/components/Promo"));
 const Contact = dynamic(() => import("@/components/Contact"));
-
-import migrate from "@/public/pageHeros/migrate.webp";
-import migrateMob from "@/public/pageHeros/mob/migrateMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/activex-vbscript-migration";
@@ -83,23 +79,12 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Modernise Your Legacy ActiveX & VBScript Systems"
-        desktopImage={migrate}
-        mobileImage={migrateMob}
-        altDesk={"old computer evolving into newer model"}
-        altMob={"old computer evolving into newer model"}
-      />
       <MigrationHero />
       <AffectedCheck />
       <MigrationReplaces />
       <MigrationFaq />
 
       <ExpertsAwait />
-      <Promo
-        h2="Stop Waiting For Something To Break"
-        p="Get ahead of the ActiveX and VBScript changes before they cost you downtime. Our consultants will audit your systems and map out exactly what needs attention."
-      />
       <Contact />
     </>
   );

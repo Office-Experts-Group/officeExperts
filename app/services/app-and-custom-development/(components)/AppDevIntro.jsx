@@ -41,21 +41,19 @@ const languages = [
 
 const AppDevIntro = () => {
   return (
-    <section className={styles.section}>
+    // id is the target of the hero's "See how we can help" link
+    <section id="how-we-can-help" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <span className={styles.eyebrow}>Custom app development</span>
+          <span className={styles.eyebrow}>What we fix</span>
           <h2 className={styles.heading}>
-            Stuck with a site, system or app that{" "}
-            <span className={styles.accent}>no longer fits?</span>
+            The problems we are asked to{" "}
+            <span className={styles.accent}>fix most often.</span>
           </h2>
           <p className={styles.text}>
-            Most people come to us when something is already costing them time
-            or customers. We start by working out why it is under-performing,
-            then build the fix: a new application, a rebuilt website or a
-            smarter connection between the systems you already own. Since 2000
-            we have done this for Australian organisations, with developers
-            across the Microsoft suite, modern web frameworks and AI.
+            Whether the issue is speed, visibility, disconnected data or teams
+            working without the right tools, we can often fix it by building on
+            the systems you already own.
           </p>
 
           <ul className={styles.problems}>

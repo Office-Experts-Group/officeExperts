@@ -2,8 +2,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import AppDevIntro from "./(components)/AppDevIntro";
+import AppDevHero from "./(components)/AppDevHero";
 
 // Below-the-fold components loaded dynamically
 const AppDevStack = dynamic(() => import("./(components)/AppDevStack"));
@@ -15,9 +15,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import faqs from "@/faqs/app-and-custom-development";
 import faqSchema from "@/faqs/appAndCustomDevelopmentSchema";
-
-import customDev from "@/public/pageHeros/custom-development.webp";
-import customDevMob from "@/public/pageHeros/mob/custom-development.webp";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/app-and-custom-development`;
@@ -195,13 +192,7 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <ServiceHero
-        title="App and Custom Development"
-        desktopImage={customDev}
-        mobileImage={customDevMob}
-        altDesk={"Custom application development"}
-        altMob={"Custom application development"}
-      />
+      <AppDevHero />
       <AppDevIntro />
       <AppDevStack />
       <AppDevPortals />

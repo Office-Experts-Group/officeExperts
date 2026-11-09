@@ -1,0 +1,142 @@
+// styles/addInPlatforms.module.scss
+@use "./globals" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include mobile {
+    padding: 4.5rem $mobGutter;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 4rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// Left column stays in view while the platform rows scroll on wide screens
+.intro {
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lead {
+  @include lede($white-65);
+}
+
+// ── Lists ───────────────────────────────────────
+// One counter runs through both lists, so the rows are numbered 01 to 14
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  counter-reset: platform;
+}
+
+.groupTitle {
+  @include label($white-55);
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.5rem 2.75rem 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid $white-12;
+  counter-increment: platform;
+
+  &::before {
+    @include label($white-35);
+    content: counter(platform, decimal-leading-zero);
+    padding-top: 0.45rem;
+  }
+
+  @include mobile {
+    grid-template-columns: 2.75rem 1fr;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.icon {
+  color: $accent-on-dark;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.rowBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rowHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+}
+
+.rowTitle {
+  @include card-title(md, $white);
+}
+
+.chip {
+  font-size: 0.72rem;
+  color: $white-75;
+  background: $white-08;
+  padding: 0.2rem 0.7rem;
+  border-radius: $radius-pill;
+}
+
+.text {
+  @include small-text($white-65);
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}

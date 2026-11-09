@@ -11,11 +11,11 @@
 }
 
 .inner {
-  @include container(1000px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 3rem;
+  @include container(1000px);
 
   @include belowDesktop {
     grid-template-columns: 1fr;
@@ -47,8 +47,8 @@
 }
 
 .text {
-  @include lede($white-75);
   max-width: 34rem;
+  @include lede($white-75);
 }
 
 .illustration {

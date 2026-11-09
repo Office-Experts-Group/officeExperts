@@ -1,0 +1,112 @@
+// styles/appDevHero.module.scss
+@use "./globals.scss" as *;
+
+.hero {
+  background: linear-gradient(160deg, $dark-surface, $dark-bg);
+  @include heroPadding;
+
+  @include mobile {
+    padding-inline: $mobGutter;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding-top: 8rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.text {
+  @include lede($white-75);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+.ctaSecondary {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ── Proof points ──
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  align-self: stretch;
+  margin-top: 0.5rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid $white-12;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNum {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $white;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: $white-65;
+}
+
+// ── Illustration: hidden below desktop to keep the hero compact ──
+.visual {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    display: none;
+  }
+}

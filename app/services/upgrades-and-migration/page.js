@@ -229,7 +229,8 @@ const Page = () => {
       <RelatedLinks
         theme="light"
         eyebrow="Case studies"
-        heading="Upgrades and migrations we've delivered"
+        heading="Some Recent Upgrades and migrations"
+        headingAccent="in action"
         text="From Access 2000 databases on a locked VM to entire Word document sets moved into a new Master Template, here's what modernisation looks like in practice."
         links={relatedLinks}
       />

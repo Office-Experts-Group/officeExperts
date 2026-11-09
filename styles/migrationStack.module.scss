@@ -74,6 +74,9 @@ $pillar-colors: (
     grid-template-columns: 1fr 1fr;
   }
 
+  @include phoneLandscape {
+    grid-template-columns: 1fr;
+  }
   @include phone {
     grid-template-columns: 1fr;
   }

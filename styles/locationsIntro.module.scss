@@ -1,127 +1,47 @@
 // styles/locationsIntro.module.scss
 @use "./globals.scss" as *;
 
-.intro {
-  @include container(1400px);
-  padding-block: 6rem;
-}
+.section {
+  background: $white;
+  padding: 6rem 8rem 4rem;
 
-.container {
-  display: grid;
-  gap: 3rem;
-
-  @media (min-width: 900px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
+  @include tablet {
+    padding: 5rem 4rem 3rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem 3rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem 3rem;
   }
 }
 
-.heading {
+// Headline left, lede right on desktop; stacked below
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: end;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.headline {
   @include heading-section;
+  margin-top: 1rem;
 }
 
 .accent {
   color: $accent;
 }
 
-.lead {
-  max-width: 70ch;
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.body {
-  max-width: 70ch;
-  margin-top: 1rem;
-  line-height: 1.7;
-}
-
-// Eyebrow label, matches the "What we do" style used across the site
-.jumpTitle {
-  @include eyebrow($text-muted);
-}
-
-.jumpList {
-  margin: 1.5rem 0 2.5rem;
-  list-style: none;
-
-  li {
-    border-bottom: 1px solid #ddd;
-  }
-}
-
-.jumpLink {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  color: $text-primary;
-
-  &:hover {
-    color: $accent;
-  }
-}
-
-.jumpIndex {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  width: 1.5rem;
-}
-
-.jumpNumber {
-  color: #888;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.jumpDot {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: #888;
-}
-
-.jumpName {
-  flex: 1;
-  font-family: var(--font-garamond), serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.jumpArrow {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #888;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  list-style: none;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.statValue {
-  color: $accent;
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.statLabel {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.lede {
+  @include lede;
 }
