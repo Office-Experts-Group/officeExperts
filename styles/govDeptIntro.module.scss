@@ -4,11 +4,16 @@
 
 .section {
   background: $dark-bg;
+  padding: 15rem $gutter 6rem $gutter;
 
-  @include heroPadding;
-
+  @include tablet {
+    padding: 12rem $mobGutter 6rem $mobGutter;
+  }
+  @include phoneLandscape {
+    padding: 10rem $mobGutter 6rem $mobGutter;
+  }
   @include phone {
-    padding: 3.5rem $gutter;
+    padding: 10rem $mobGutter 6rem $mobGutter;
   }
 }
 
@@ -25,14 +30,10 @@
   max-width: 1300px;
   margin: 0 auto;
 
-  @include tablet {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  @include phone {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  @include belowDesktop {
+    display: flex;
+    max-width: none;
+    margin: 0;
   }
 }
 
@@ -45,7 +46,7 @@
     height: auto;
   }
 
-  @include phone {
+  @include belowDesktop {
     display: none;
   }
 }
@@ -61,6 +62,7 @@
   p + p {
     margin-top: 1rem;
   }
+  margin-left: 0;
 }
 
 .eyebrow {

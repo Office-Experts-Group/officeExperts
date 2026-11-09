@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 
 import ToolbarsIntro from "./(components)/ToolbarsIntro";
 
-const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
@@ -142,12 +141,12 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Word ribbon projects we've delivered"
+        heading="A few Word ribbon projects"
+        headingAccent={"we built recently"}
         links={caseStudies}
       />
       <ToolbarsLayout />
       <ToolbarsAutomation />
-      <ExpertsAwait />
       <div style={{ marginTop: "6rem" }}>
         <FAQSection faqs={faqs} />
       </div>

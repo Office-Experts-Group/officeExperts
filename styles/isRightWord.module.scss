@@ -47,8 +47,8 @@
 
 .sub {
   p {
-    @include eyebrow;
     margin-bottom: -0.5rem;
+    @include eyebrow;
   }
 }
 

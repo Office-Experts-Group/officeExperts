@@ -1,0 +1,250 @@
+// styles/corporateIdentityBento.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section($text-primary);
+  margin: 1rem 0 0 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 1.25rem 0 0 0;
+  @include lede($text-secondary);
+}
+
+// ── Bento grid ─────────────────────────────────────────
+// 12 columns. Desktop layout:
+//   row 1:  [ 1 · 7 cols ] [ 2 · 5 cols ]
+//   row 2:  [ 3 · 5 cols ] [ 4 · 7 cols ]
+//   row 3:  [ 5 · full width            ]
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: $container;
+  margin: 0 auto;
+
+  // Placement targets direct children so it works with or without a wrapper
+  // element from AnimateOnScroll.
+  > * {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 6;
+    min-width: 0;
+  }
+  > *:nth-child(1) {
+    grid-column: span 7;
+  }
+  > *:nth-child(2) {
+    grid-column: span 5;
+  }
+  > *:nth-child(3) {
+    grid-column: span 5;
+  }
+  > *:nth-child(4) {
+    grid-column: span 7;
+  }
+  > *:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  @include belowDesktop {
+    gap: 1rem;
+
+    > *:nth-child(n) {
+      grid-column: span 6;
+    }
+    > *:nth-child(5) {
+      grid-column: 1 / -1;
+    }
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+
+    > *:nth-child(n) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// ── Tile ───────────────────────────────────────────────
+.tile {
+  position: relative;
+  display: flex;
+  flex: 1; // fills the grid cell, whether or not AnimateOnScroll adds a wrapper
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-card-hover;
+  }
+
+  @include phone {
+    padding: 1.5rem;
+  }
+}
+
+.copy {
+  max-width: 32rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.title {
+  margin: 1.1rem 0 0.6rem 0;
+}
+
+.body {
+  margin: 0;
+}
+
+.illustration {
+  margin-top: auto;
+  padding-top: 2rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 230px;
+  }
+}
+
+// ── Tones ──────────────────────────────────────────────
+.tile.toneAccent {
+  background: linear-gradient(150deg, $accent 0%, $accent-dark 100%);
+  color: $white-35; // tints the SVG guide lines (currentColor)
+
+  .badge {
+    background: $white-12;
+    border: 1px solid $white-18;
+    color: $white;
+  }
+  .title {
+    @include card-title(lg, $white);
+  }
+  .body {
+    @include body-text($white-75);
+  }
+}
+
+.tile.toneLight {
+  background: $white;
+  border-color: $line;
+
+  .badge {
+    background: $accent-dim;
+    border: 1px solid $accent-border;
+    color: $accent;
+  }
+  .title {
+    @include card-title(lg, $text-primary);
+  }
+  .body {
+    @include body-text($text-secondary);
+  }
+}
+
+.tile.toneTint {
+  background: $accent-light;
+  border-color: $accent-border;
+
+  .badge {
+    background: $accent;
+    color: $white;
+  }
+  .title {
+    @include card-title(lg, $text-primary);
+  }
+  .body {
+    @include body-text($text-secondary);
+  }
+}
+
+.tile.toneDark {
+  background: $dark-surface;
+  border-color: $white-08;
+
+  .badge {
+    background: $accent-dim;
+    border: 1px solid $accent-border;
+    color: $accent-on-dark;
+  }
+  .title {
+    @include card-title(lg, $white-88);
+  }
+  .body {
+    @include body-text($white-55);
+  }
+}
+
+// ── Full-width tile: copy left, illustration right ─────
+.tile.wide {
+  @include desktopUp {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+    .copy {
+      flex: 0 0 36%;
+    }
+    .illustration {
+      flex: 1;
+      min-width: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

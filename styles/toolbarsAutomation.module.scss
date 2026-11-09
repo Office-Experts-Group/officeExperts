@@ -38,7 +38,7 @@
 }
 
 .heading {
-  @include heading-main($white-90);
+  @include heading-section($white-90);
 }
 
 .accent {

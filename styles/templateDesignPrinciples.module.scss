@@ -60,6 +60,10 @@
   @media (min-width: 1025px) {
     margin: -6rem 0 -3rem;
   }
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
 }
 
 // Three plain columns split by hairlines, so they read differently to the card grids elsewhere

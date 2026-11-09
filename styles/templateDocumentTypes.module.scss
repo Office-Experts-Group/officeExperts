@@ -226,4 +226,7 @@
 
 .showcase {
   margin-bottom: 3rem;
+  @media screen and (max-width: 1130px) {
+    display: none;
+  }
 }

@@ -2,10 +2,6 @@
 import React from "react";
 import Link from "next/link";
 
-// Scroll-in animation wrapper used across the redesigned pages
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
-// Custom illustration lives in this route's (svgs) folder
 import { CompaniesDocumentSvg } from "../(svgs)/CompaniesDocumentSvg";
 
 import styles from "@/styles/companiesIntro.module.scss";
@@ -56,61 +52,57 @@ const Arrow = () => (
 const CompaniesIntro = () => (
   <section className={styles.section}>
     <div className={styles.inner}>
-      <AnimateOnScroll animation="fade-up" duration={0.6}>
-        <div className={styles.split}>
-          <div className={styles.copy}>
-            <h1 className={styles.heading}>
-              Company documents{" "}
-              <span className={styles.headingAccent}>back under control</span>
-            </h1>
-            <p className={styles.lead}>
-              Our team of Word design experts deliver versatile templates that
-              meet the needs of any company or organisation. Our{" "}
-              <Link href="/meet-the-team">experienced Word designers</Link> will
-              ensure your corporate identity is protected and can cut your costs
-              through setting you up to produce your own in-house reports.
-            </p>
-            <div className={styles.ctaRow}>
-              <a href="#contact" className="btn">
-                Talk to our Word experts
-              </a>
-              <span className={styles.ctaNote}>
-                Word template specialists since 2000
-              </span>
-            </div>
-          </div>
-
-          <div className={styles.art}>
-            <CompaniesDocumentSvg />
+      <div className={styles.split}>
+        <div className={styles.copy}>
+          <h1 className={styles.heading}>
+            Company documents{" "}
+            <span className={styles.headingAccent}>back under control</span>
+          </h1>
+          <p className={styles.lead}>
+            Our team of Word design experts deliver versatile templates that
+            meet the needs of any company or organisation. Our{" "}
+            <Link href="/meet-the-team">experienced Word designers</Link> will
+            ensure your corporate identity is protected and can cut your costs
+            through setting you up to produce your own in-house reports.
+          </p>
+          <div className={styles.ctaRow}>
+            <a href="#contact" className="btn">
+              Talk to our Word experts
+            </a>
+            <span className={styles.ctaNote}>
+              Word template specialists since 2000
+            </span>
           </div>
         </div>
-      </AnimateOnScroll>
+
+        <div className={styles.art}>
+          <CompaniesDocumentSvg />
+        </div>
+      </div>
 
       {/* ── Jump links ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.05}>
-        <nav className={styles.jump} aria-label="On this page">
-          <p className={styles.jumpLabel}>On this page</p>
-          <ul className={styles.jumpList}>
-            {jumpLinks.map((link, i) => (
-              <li key={link.href}>
-                <a href={link.href} className={styles.jumpLink}>
-                  {/* Visual index only; these are not sequential steps */}
-                  <span className={styles.num} aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className={styles.jumpText}>
-                    <span className={styles.jumpKicker}>{link.kicker}</span>
-                    <span className={styles.jumpTitle}>{link.title}</span>
-                  </span>
-                  <span className={styles.arrow} aria-hidden="true">
-                    <Arrow />
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </AnimateOnScroll>
+      <nav className={styles.jump} aria-label="On this page">
+        <p className={styles.jumpLabel}>On this page</p>
+        <ul className={styles.jumpList}>
+          {jumpLinks.map((link, i) => (
+            <li key={link.href}>
+              <a href={link.href} className={styles.jumpLink}>
+                {/* Visual index only; these are not sequential steps */}
+                <span className={styles.num} aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className={styles.jumpText}>
+                  <span className={styles.jumpKicker}>{link.kicker}</span>
+                  <span className={styles.jumpTitle}>{link.title}</span>
+                </span>
+                <span className={styles.arrow} aria-hidden="true">
+                  <Arrow />
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   </section>
 );

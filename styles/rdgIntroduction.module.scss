@@ -4,18 +4,19 @@
 // ── Section shell ─────────────────────────────
 .section {
   background: $dark-bg;
-  padding: 9rem 8rem 6rem;
-  position: relative;
-  overflow: hidden;
+  // position: relative;
+  // overflow: hidden;
+  @include heroPadding;
+  padding-bottom: 0rem;
 
   @include tablet {
-    padding: 7rem 4rem 5rem;
+    padding: 12rem $mobGutter 3rem $mobGutter;
   }
   @include phoneLandscape {
-    padding: 6rem 2rem 4rem;
+    padding: 10rem $mobGutter 3rem $mobGutter;
   }
   @include phone {
-    padding: 5rem 1.25rem 3.5rem;
+    padding: 10rem $mobGutter 3rem $mobGutter;
   }
 }
 

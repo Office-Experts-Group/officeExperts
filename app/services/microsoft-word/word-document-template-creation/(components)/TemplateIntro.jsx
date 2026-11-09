@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 
-// Fades content in as it scrolls into view
-import AnimateOnScroll from "@/components/AnimateOnScroll";
 // Fanned showcase of finished template pages
 import TemplateCards from "../../(wordComponents)/TemplateCards";
 
@@ -40,13 +38,14 @@ const images = [
 
 const TemplateIntro = () => {
   return (
-    <section className={styles.section}>
-      <div className={styles.inner}>
-        <div className={styles.cards}>
-          <TemplateCards images={images} />
-        </div>
+    <>
+      <div className={styles.lightHero}></div>
+      <section className={styles.section}>
+        <div className={styles.inner}>
+          <div className={styles.cards}>
+            <TemplateCards images={images} />
+          </div>
 
-        <AnimateOnScroll animation="fade-up" duration={1} delay={0.2}>
           <div className={styles.content}>
             <span className={styles.eyebrow}>
               For a consistent and professional look
@@ -75,9 +74,9 @@ const TemplateIntro = () => {
               Discuss your templates
             </a>
           </div>
-        </AnimateOnScroll>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

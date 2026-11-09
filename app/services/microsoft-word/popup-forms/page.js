@@ -3,11 +3,9 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import PopupFormsHero from "./(components)/PopupFormsHero";
+import PopupFormsProblem from "./(components)/PopupFormsProblem";
 
 // Below-the-fold components loaded dynamically
-const PopupFormsProblem = dynamic(
-  () => import("./(components)/PopupFormsProblem"),
-);
 const PopupFormsServices = dynamic(
   () => import("./(components)/PopupFormsServices"),
 );

@@ -4,11 +4,9 @@
 import dynamic from "next/dynamic";
 
 import PageSegmentMain from "./(components)/PageSegmentMain";
+import AccessibilityStandards from "./(components)/AccessibilityStandards";
 
 // Below-the-fold sections loaded dynamically to keep the initial bundle lean
-const AccessibilityStandards = dynamic(
-  () => import("./(components)/AccessibilityStandards"),
-);
 const AccessibilityChecklist = dynamic(
   () => import("./(components)/AccessibilityChecklist"),
 );

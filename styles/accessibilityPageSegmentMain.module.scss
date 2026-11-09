@@ -7,13 +7,20 @@
   grid-template-columns: 40% 1fr;
   gap: 3rem;
   align-items: center;
-  max-width: 1180px;
+  max-width: $container;
   margin: 0 auto;
-  padding: 6rem 1.5rem;
+  padding: 2rem 0 6rem 0;
 
+  @media screen and (max-width: 1260px) {
+    padding: 2rem $mobGutter 6rem $mobGutter;
+  }
   @include belowDesktop {
     grid-template-columns: 1fr;
   }
+}
+
+.lightHero {
+  @include lightHeroBlock;
 }
 
 .imgWrapper {
@@ -22,7 +29,7 @@
     width: 100%;
     height: auto;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
@@ -32,16 +39,10 @@
 }
 
 .content {
-  p:first-child {
-    margin-bottom: 0.5rem;
-
-    @include eyebrow;
-  }
-
-  h2 {
+  h1 {
     margin-bottom: 1.25rem;
 
-    @include heading-section;
+    @include heading-main;
   }
 
   p {
@@ -60,6 +61,7 @@
 }
 
 .ctaBtn {
+  margin-top: 1rem;
   &:hover {
     border: 1px solid $accent;
     color: $accent;

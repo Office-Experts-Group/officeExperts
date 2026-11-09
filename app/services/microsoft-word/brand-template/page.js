@@ -2,12 +2,12 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import BrandedTemplates from "./(components)/BrandedTemplates";
+import PageSegment4 from "./(components)/PageSegment4";
 
 const Contact = dynamic(() => import("@/components/Contact"));
 const WhyChooseTemplates = dynamic(
   () => import("./(components)/WhyChooseTemplates"),
 );
-const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
 const BrandingServices = dynamic(
   () => import("./(components)/BrandingServices"),
 );
@@ -26,7 +26,7 @@ const PAGE_DESCRIPTION =
 const SITE_URL = "https://www.officeexperts.com.au";
 
 const DATE_PUBLISHED = "2018-07-16T02:09:50+10:00";
-const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
+const DATE_MODIFIED = "2026-11-08T00:00:00+11:00";
 
 const caseStudies = [
   {

@@ -16,15 +16,15 @@ const ToolbarsLifecycle = () => (
         <header className={styles.header}>
           <p className={styles.eyebrow}>Document lifecycle</p>
           <h2 className={styles.heading}>
-            Custom Document Components for{" "}
-            <span className={styles.accent}>Tailored Solutions</span>
+            Custom Components built for{" "}
+            <span className={styles.accent}>any situation</span>
           </h2>
           <p className={styles.text}>
-            Our custom components streamline the entire document lifecycle,
-            from drafting and editing through to approval and publishing.
-            Automated features such as pre-populated templates, standardised
-            headers and footers, and context-sensitive toolbars mean your staff
-            can create polished, professional documents.
+            Our custom components streamline the entire document lifecycle, from
+            drafting and editing through to approval and publishing. Automated
+            features such as pre-populated templates, standardised headers and
+            footers, and context-sensitive toolbars mean your staff can create
+            polished, professional documents.
           </p>
         </header>
       </AnimateOnScroll>

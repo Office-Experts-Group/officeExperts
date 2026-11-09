@@ -2,16 +2,19 @@
 @use "./globals" as *;
 
 .section {
-  padding: 7rem $gutter 5rem;
   background: $white;
   scroll-margin-top: $scroll-offset;
-
+  padding: 2rem $gutter 3rem $gutter;
   @include belowDesktop {
     padding-inline: 6vw;
   }
   @include mobile {
-    padding: 4rem 1.25rem 3rem;
+    padding: 2rem 1.25rem 3rem;
   }
+}
+
+.lightHero {
+  @include lightHeroBlock;
 }
 
 .inner {
@@ -40,7 +43,7 @@
 }
 
 .heading {
-  @include heading-section;
+  @include heading-main;
 }
 
 .accent {

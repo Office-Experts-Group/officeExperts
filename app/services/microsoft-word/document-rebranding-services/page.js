@@ -3,9 +3,9 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import RebrandingIntro from "./(components)/RebrandingIntro";
+import RebrandingWhat from "./(components)/RebrandingWhat";
 
 // Everything below the first segment loads with next/dynamic
-const RebrandingWhat = dynamic(() => import("./(components)/RebrandingWhat"));
 const RebrandingWhy = dynamic(() => import("./(components)/RebrandingWhy"));
 const RebrandingWho = dynamic(() => import("./(components)/RebrandingWho"));
 const RebrandingIncluded = dynamic(
@@ -164,8 +164,8 @@ const page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Document rebranding projects we've delivered"
-        headingAccent="to happy clients"
+        heading="Document rebranding projects we've"
+        headingAccent="delivered recently"
         links={caseStudies}
       />
       <Contact />

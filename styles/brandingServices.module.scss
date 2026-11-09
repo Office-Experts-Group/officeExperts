@@ -34,13 +34,13 @@ $rail-speed: 0.4s;
 }
 
 .eyebrow {
-  @include eyebrow;
   align-self: flex-start;
+  @include eyebrow;
 }
 
 .heading {
-  @include heading-section;
   margin: 1rem 0 1.25rem;
+  @include heading-section;
 }
 
 .accent {

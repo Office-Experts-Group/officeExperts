@@ -29,81 +29,75 @@ const Introduction = () => (
     <div className={styles.inner}>
       {/* ── Top: headline block ── */}
       <div className={styles.topBlock}>
-        <AnimateOnScroll animation="fade-up" duration={0.6} delay={0}>
-          <div className={styles.headlineCol}>
-            <span className={styles.eyebrow}>
-              Microsoft 365 · Remote Data Collection
-            </span>
+        <div className={styles.headlineCol}>
+          <span className={styles.eyebrow}>
+            Microsoft 365 · Remote Data Collection
+          </span>
 
-            <h2 className={styles.headline}>
-              Collect data from anywhere.{" "}
-              <span className={styles.accent}>Act on it immediately.</span>
-            </h2>
+          <h1 className={styles.headline}>
+            Collect data from anywhere.{" "}
+            <span className={styles.accent}>Act on it immediately.</span>
+          </h1>
 
-            <p className={styles.lead}>
-              Paper forms, emailed spreadsheets, and manual data entry are old
-              news when we deploy a custom form to any device in minutes. Field
-              staff, remote offices, and third-party contractors all feed live
-              structured data directly into your Microsoft 365 environment the
-              moment a form is submitted.
-            </p>
+          <p className={styles.lead}>
+            Paper forms, emailed spreadsheets, and manual data entry are old
+            news when we deploy a custom form to any device in minutes. Field
+            staff, remote offices, and third-party contractors all feed live
+            structured data directly into your Microsoft 365 environment the
+            moment a form is submitted.
+          </p>
 
-            <div className={styles.ctaRow}>
-              <Link
-                href="#contact"
-                className="btn"
-                style={{ textTransform: "capitalize" }}
+          <div className={styles.ctaRow}>
+            <Link
+              href="#contact"
+              className="btn"
+              style={{ textTransform: "capitalize" }}
+            >
+              <span>Talk to our team</span>
+            </Link>
+            <Link href="#how-it-works" className={styles.ghostLink}>
+              See how it works
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
               >
-                <span>Talk to our team</span>
-              </Link>
-              <Link href="#how-it-works" className={styles.ghostLink}>
-                See how it works
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M8 3v10M4 9l4 4 4-4"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-            </div>
+                <path
+                  d="M8 3v10M4 9l4 4 4-4"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
           </div>
-        </AnimateOnScroll>
+        </div>
 
         {/* ── Right: animated diagram ── */}
-        <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
-          <div className={styles.diagramCol}>
-            <div className={styles.diagramWrap}>
-              <ConnectionDiagram />
-            </div>
+        <div className={styles.diagramCol}>
+          <div className={styles.diagramWrap}>
+            <ConnectionDiagram />
           </div>
-        </AnimateOnScroll>
+        </div>
       </div>
 
       {/* ── Stat strip ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.2}>
-        <div className={styles.statStrip}>
-          {stats.map((s, i) => (
-            <React.Fragment key={s.label}>
-              <div className={styles.stat}>
-                <span className={styles.statValue}>{s.value}</span>
-                <span className={styles.statLabel}>{s.label}</span>
-              </div>
-              {i < stats.length - 1 && (
-                <div className={styles.statDivider} aria-hidden="true" />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </AnimateOnScroll>
+      <div className={styles.statStrip}>
+        {stats.map((s, i) => (
+          <React.Fragment key={s.label}>
+            <div className={styles.stat}>
+              <span className={styles.statValue}>{s.value}</span>
+              <span className={styles.statLabel}>{s.label}</span>
+            </div>
+            {i < stats.length - 1 && (
+              <div className={styles.statDivider} aria-hidden="true" />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
 
       {/* ── Capability tags strip ── */}
       <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.28}>

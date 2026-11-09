@@ -1,7 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 const IFrame = dynamic(() => import("../(wordComponents)/IFrame"));
@@ -16,18 +15,12 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 import faqs from "../wordFaqs/corporate-solutions";
 import faqSchema from "../wordFaqs/corporateSolutionsSchema";
 
-import templates from "@/public/pageHeros/templates.webp";
-import templateMob from "@/public/pageHeros/mob/templateMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/corporate-global-template-solution";
 const PAGE_TITLE = "Corporate Global Template Solution - Microsoft Word";
 const PAGE_DESCRIPTION =
   "Advanced Corporate Word Template Solutions enabling efficient creation of corporate documents, brand consistency and document integrity.";
 const SITE_URL = "https://www.officeexperts.com.au";
-
-const HERO_ALT_DESKTOP = "word templates";
-const HERO_ALT_MOBILE = "word templates";
 
 // Converted from the WE value 2018-07-15T15:50:26+00:00
 const DATE_PUBLISHED = "2018-07-16T01:50:26+10:00";
@@ -166,13 +159,6 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Contents />
-      <ServiceHero
-        title="Corporate Global Template Solution"
-        desktopImage={templates}
-        mobileImage={templateMob}
-        altDesk={HERO_ALT_DESKTOP}
-        altMob={HERO_ALT_MOBILE}
-      />
       <PageSegmentMain />
       <IFrame />
       <div style={{ marginTop: "9rem" }}>

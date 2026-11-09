@@ -3,8 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above the fold: loaded normally
-import ServiceHero from "@/components/ServiceHero";
-import Contents from "./(components)/Contents";
 import VbaIntro from "./(components)/VbaIntro";
 
 // Below the fold: loaded on demand
@@ -20,10 +18,6 @@ const VbaFaq = dynamic(() => import("./(components)/VbaFaq"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-// Hero images are shared with the previous version of this page
-import longDesk from "@/public/pageHeros/longDesk.webp";
-import codingMob from "@/public/pageHeros/mob/codingMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/vba-macro-development";
 const PAGE_TITLE = "VBA Macro Development for Excel, Word, Access & Outlook";
@@ -31,8 +25,6 @@ const PAGE_DESCRIPTION =
   "Custom VBA macros, forms and add-ins for Excel, Word, Access, PowerPoint and Outlook. Australian VBA developers, plus 64-bit and Office upgrade fixes.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Long desk in an office";
-const HERO_ALT_MOBILE = "Computer code on a screen";
 
 const DATE_PUBLISHED = "2024-10-26T00:00:00+11:00";
 const DATE_MODIFIED = "2026-10-30T00:00:00+11:00";
@@ -160,14 +152,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <Contents />
-      <ServiceHero
-        title="VBA Macro Development"
-        desktopImage={longDesk}
-        mobileImage={codingMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT_MOBILE}
       />
       <VbaIntro />
       <VbaApps />

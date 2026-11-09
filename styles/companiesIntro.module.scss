@@ -4,6 +4,9 @@
 .section {
   background: $dark-bg;
   @include heroPadding;
+  @media screen and (max-width: 700px) {
+    padding-top: 8rem;
+  }
 }
 
 .inner {
@@ -35,7 +38,7 @@
 }
 
 .heading {
-  @include heading-section-on-dark;
+  @include heading-main($white);
 }
 
 // $accent is too dark to read on $dark-bg, so use the on-dark variant
@@ -74,6 +77,10 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 }
 

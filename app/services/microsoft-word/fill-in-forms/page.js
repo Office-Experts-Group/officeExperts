@@ -3,10 +3,8 @@
 import dynamic from "next/dynamic";
 
 import PageSegmentMain from "./(components)/PageSegmentMain";
+import FormFieldsAnatomy from "./(components)/FormFieldsAnatomy";
 
-const FormFieldsAnatomy = dynamic(
-  () => import("./(components)/FormFieldsAnatomy"),
-);
 const FormProtectionExplainer = dynamic(
   () => import("./(components)/FormProtectionExplainer"),
 );

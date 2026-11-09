@@ -1,9 +1,9 @@
 // /services/microsoft-word/corporate-identity/page.js
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-const CorporateIdentityAnatomy = dynamic(
-  () => import("./(components)/CorporateIdentityAnatomy"),
+import CorporateIdentityHero from "./(components)/CorporateIdentityHero";
+const CorporateIdentityBento = dynamic(
+  () => import("./(components)/CorporateIdentityBento"),
 );
 const CorporateIdentityDrift = dynamic(
   () => import("./(components)/CorporateIdentityDrift"),
@@ -19,9 +19,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/corporate-identity";
 import faqSchema from "../wordFaqs/corporateSchema";
 
-import identity from "@/public/pageHeros/identity.webp";
-import identityMob from "@/public/pageHeros/mob/identityMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/corporate-identity";
 const PAGE_TITLE = "Word Document Corporate Identity";
@@ -29,7 +26,6 @@ const PAGE_DESCRIPTION =
   "Professional corporate identity protection by expert Microsoft Word designers. Ensure brand consistency and document compliance across your organisation.";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const HERO_ALT = "Design palette for documents";
 const DATE_PUBLISHED = "2018-07-16T01:51:37+10:00";
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
 
@@ -141,14 +137,8 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <ServiceHero
-        title="Corporate Identity"
-        desktopImage={identity}
-        mobileImage={identityMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
-      />
-      <CorporateIdentityAnatomy />
+      <CorporateIdentityHero />
+      <CorporateIdentityBento />
       <CorporateIdentityDrift />
       <RelatedLinks
         theme="dark"

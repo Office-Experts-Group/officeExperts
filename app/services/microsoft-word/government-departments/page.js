@@ -3,16 +3,13 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import GovDeptIntro from "./(components)/GovDeptIntro";
+import GovDeptCompliance from "./(components)/GovDeptCompliance";
 
 import faqs from "../wordFaqs/government-departments";
 import faqSchema from "../wordFaqs/govSchema";
 
 const Contact = dynamic(() => import("@/components/Contact"));
-const GovDeptCompliance = dynamic(
-  () => import("./(components)/GovDeptCompliance"),
-);
 const GovDeptTemplateSystem = dynamic(
   () => import("./(components)/GovDeptTemplateSystem"),
 );

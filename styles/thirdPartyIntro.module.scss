@@ -3,17 +3,17 @@
 
 .section {
   background: $white;
-  padding: 6rem 8rem;
+  padding: 2rem $gutter 3rem $gutter;
+  @include belowDesktop {
+    padding-inline: 6vw;
+  }
+  @include mobile {
+    padding: 2rem 1.25rem 3rem;
+  }
+}
 
-  @include tablet {
-    padding: 5rem 4rem;
-  }
-  @include phoneLandscape {
-    padding: 4.5rem 2rem;
-  }
-  @include phone {
-    padding: 4.5rem 1.25rem;
-  }
+.lightHero {
+  @include lightHeroBlock;
 }
 
 .inner {
@@ -38,15 +38,13 @@
   flex-direction: column;
   gap: 1.5rem;
 
-  h2 {
+  h1 {
     @include heading-section($text-primary);
   }
 
   p {
     @include lede($text-secondary);
   }
-
-  @include inline-link;
 }
 
 .eyebrow {
@@ -57,13 +55,24 @@
   color: $accent;
 }
 
+.inlineLink {
+  @include inline-link;
+}
+
+// Stops the button stretching to the full column width
+.cta {
+  align-self: flex-start;
+  margin: 1rem 0;
+}
+
 // ── Stat points ─────────────────────────────────
 .stats {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   list-style: none;
-  padding: 0;
+  padding-block: 1.5rem;
+  border-block: 1px solid $border;
 }
 
 .stat {

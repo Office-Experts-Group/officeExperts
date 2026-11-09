@@ -3,17 +3,17 @@
 
 .section {
   background: $white;
-  padding: 7rem 8rem;
-
-  @include tablet {
-    padding: 6rem 4rem;
-  }
+  padding: 2rem $gutter 6rem $gutter;
   @include phoneLandscape {
-    padding: 5rem 2rem;
+    padding: 2rem $mobGutter;
   }
   @include phone {
-    padding: 5rem 1.25rem;
+    padding: 2rem $mobGutter;
   }
+}
+
+.lightHero {
+  @include lightHeroBlock;
 }
 
 .inner {
@@ -51,7 +51,7 @@
 }
 
 .heading {
-  @include heading-section;
+  @include heading-main;
 }
 
 .accent {
@@ -87,6 +87,7 @@
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: 1.5rem;
+  padding-top: 3rem;
 
   @include belowDesktop {
     grid-template-columns: 1fr;

@@ -91,7 +91,7 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 }
 
 .heading {
-  @include heading-main;
+  @include heading-section;
 }
 
 .accent {

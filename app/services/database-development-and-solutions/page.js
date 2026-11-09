@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import DatabaseIntro from "./(components)/DatabaseIntro";
 
 const AccessDatabases = dynamic(() => import("./(components)/AccessDatabases"));
@@ -16,9 +15,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import faqs from "@/faqs/database-development-and-solutions";
 import faqSchema from "@/faqs/databaseDevelopmentSchema";
-
-import databases from "@/public/pageHeros/databases.webp";
-import databasesMob from "@/public/pageHeros/mob/databasesMob.webp";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/database-development-and-solutions`;
@@ -159,14 +155,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      <ServiceHero
-        title="Database Development and Solutions"
-        desktopImage={databases}
-        mobileImage={databasesMob}
-        altDesk={"Databases solutions"}
-        altMob={"Databases solutions"}
       />
       <DatabaseIntro />
       <AccessDatabases />

@@ -1,8 +1,6 @@
 // app/services/3rd-party-application-or-office-integration/page.js
 import dynamic from "next/dynamic";
 
-// Shared components (unchanged)
-import ServiceHero from "@/components/ServiceHero";
 import ThirdPartyIntro from "./(components)/ThirdPartyIntro";
 
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
@@ -19,9 +17,7 @@ const ThirdPartyMethodComparison = dynamic(
 const ThirdPartyWorkedExample = dynamic(
   () => import("./(components)/ThirdPartyWorkedExample"),
 );
-const ThirdPartyCaseStudies = dynamic(
-  () => import("./(components)/ThirdPartyCaseStudies"),
-);
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const ThirdPartyAiIntegration = dynamic(
   () => import("./(components)/ThirdPartyAiIntegration"),
 );
@@ -36,8 +32,34 @@ const ThirdPartyFaq = dynamic(() => import("./(components)/ThirdPartyFaq"));
 // FAQ data is also used below to generate FAQPage schema
 import { thirdPartyFaqs } from "@/faqs/thirdPartyFaqs";
 
-import thirdParty from "@/public/pageHeros/thirdParty.webp";
-import thirdPartyMob from "@/public/pageHeros/mob/thirdPartyMob.webp";
+const RELATED_CASE_STUDIES = [
+  {
+    href: "/case-studies/manufacturing-project-setup-automation",
+    title:
+      "Turning a new project email into a fully built job folder in seconds",
+    description:
+      "A Power Automate flow reads the project details from a notification email and builds the job folders across three SharePoint sites.",
+    image: "/case-studies/manufacturing-project-setupLg.webp",
+    linkText: "See our automated project folder setup",
+  },
+  {
+    href: "/case-studies/film-crew-booking-system-access-nextjs-rebuild",
+    title:
+      "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
+    description:
+      "An Azure SQL Server back end shared by the Access system and a Next.js website through a direct database connection.",
+    image: "/case-studies/film-crew-booking-system-rebuildLg.png",
+    linkText: "See our Access to Azure migration",
+  },
+  {
+    href: "/case-studies/healthcare-patient-form-followup-automation",
+    title: "Removing manual form chasing for around 1,000 active patients",
+    description:
+      "Two scheduled Power Automate flows reading the client's Microsoft Fabric data warehouse. Streamlining patient follow-up and escalation.",
+    image: "/case-studies/healthcare-form-followupLg.webp",
+    linkText: "Explore our patient form follow-up flows",
+  },
+];
 
 const pageUrl =
   "https://www.officeexperts.com.au/services/3rd-party-application-or-office-integration";
@@ -107,22 +129,21 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="3rd Party App Integration"
-        desktopImage={thirdParty}
-        mobileImage={thirdPartyMob}
-        altDesk={"Microsoft Integrations design"}
-        altMob={"Microsoft Integrations design"}
-      />
       <ThirdPartyIntro />
       <ThirdPartyPlatforms />
       <ThirdPartyMethods />
       <ThirdPartyMethodComparison />
       <ThirdPartyWorkedExample />
-      <ThirdPartyCaseStudies />
       <ThirdPartyAiIntegration />
       <ThirdPartySecurity />
       <ThirdPartyProcess />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Recent projects"
+        heading="Connected systems we have"
+        headingAccent={"already created"}
+        links={RELATED_CASE_STUDIES}
+      />
       <ThirdPartyFaq />
       <ExpertsAwait />
       <Contact />

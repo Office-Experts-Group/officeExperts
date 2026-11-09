@@ -124,11 +124,25 @@ $shadow-panel: 0 20px 50px rgba(13, 27, 42, 0.06);
 // ── 3. LAYOUT ───────────────────────────────────────────────────────────────
 $container: 1200px;
 $gutter: 10vw;
+$mobGutter: 4vw;
 $header-offset: 130px; // measure the real header before changing
 $scroll-offset: 150px;
 
 @mixin heroPadding {
   padding: 12rem $gutter 7rem $gutter;
+}
+
+@mixin lightHeroBlock {
+  background-color: #1a1c1e;
+  width: 100vw;
+  height: 11rem;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 1260px) {
+    height: 8.5rem;
+  }
+  @media screen and (max-width: 700px) {
+    height: 6rem;
+  }
 }
 
 // ── 4. BREAKPOINTS (belowDesktop, mobile already exist above) ───────────────
@@ -302,7 +316,7 @@ $eyebrow-tracking: 0.06rem;
     font-weight: 700;
     text-decoration: none;
     &:hover {
-      text-decoration: underline;
+      transform: scale(1.05);
     }
   }
 }

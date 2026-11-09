@@ -1,10 +1,5 @@
 // /services/microsoft-word/word-document-template-creation/(components)/BrandedTemplates.jsx
 
-import Link from "next/link";
-
-// Fades content in as it scrolls into view
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-// Fanned showcase of finished template pages
 import TemplateCards from "../../(wordComponents)/TemplateCards";
 
 import styles from "@/styles/brandedTemplates.module.scss";
@@ -45,25 +40,23 @@ const BrandedTemplates = () => {
       </div>
 
       <div className={styles.contentWrapper}>
-        <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
-          <div className={styles.content}>
-            <p className={styles.eyebrow}>
-              Professional, Consistent, On-brand...
-            </p>
-            <h1 className={styles.heading}>
-              Microsoft Word Templates Tailored for{" "}
-              <span className={styles.accent}>Your Business</span>
-            </h1>
-            <p className={styles.text}>
-              Your brand is more than just a logo... It’s how you present
-              yourself in every document. At Office Experts, we create Microsoft
-              Word brand templates that align with your business identity. If
-              you’re launching a new brand, updating your existing designs, or
-              standardising templates across teams, we’ll ensure every document
-              reflects your brand with precision and professionalism.
-            </p>
-          </div>
-        </AnimateOnScroll>
+        <div className={styles.content}>
+          <p className={styles.eyebrow}>
+            Professional, Consistent, On-brand...
+          </p>
+          <h1 className={styles.heading}>
+            Microsoft Word Templates Tailored for{" "}
+            <span className={styles.accent}>Your Business</span>
+          </h1>
+          <p className={styles.text}>
+            Your brand is more than just a logo... It’s how you present yourself
+            in every document. At Office Experts, we create Microsoft Word brand
+            templates that align with your business identity. If you’re
+            launching a new brand, updating your existing designs, or
+            standardising templates across teams, we’ll ensure every document
+            reflects your brand with precision and professionalism.
+          </p>
+        </div>
       </div>
     </section>
   );

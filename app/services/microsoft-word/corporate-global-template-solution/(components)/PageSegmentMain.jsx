@@ -1,7 +1,7 @@
 // /services/microsoft-word/corporate-global-template-solution/(components)/PageSegmentMain.jsx
 import React from "react";
+import Link from "next/link";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
 import TemplateCards from "../../(wordComponents)/TemplateCards";
 
 import styles from "@/styles/newPageSegment.module.scss";
@@ -15,6 +15,13 @@ import page6 from "@/public/books/community/page6.webp";
 import page7 from "@/public/books/community/page7.webp";
 import page8 from "@/public/books/community/page8.webp";
 import page9 from "@/public/books/community/page9.webp";
+
+// Stats shown in the bar beneath the section
+const STATS = [
+  { value: "25+", label: "Years experience" },
+  { value: "2500+", label: "Projects delivered" },
+  { value: "Australia wide", label: "Support" },
+];
 
 const PageSegmentMain = () => {
   const images = [
@@ -30,18 +37,19 @@ const PageSegmentMain = () => {
   ];
 
   return (
-    <section className={styles.pageSegment} id="consistent-branding">
-      <div className={styles.imgWrapper}>
-        <TemplateCards images={images} />
-      </div>
+    <>
+      <div className={styles.lightHero}></div>
+      <section className={styles.pageSegment} id="consistent-branding">
+        <div className={styles.imgWrapper}>
+          <TemplateCards images={images} />
+        </div>
 
-      <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
         <div className={styles.content}>
           <p>Advanced Corporate Template Solutions</p>
-          <h2>
+          <h1>
             Efficient and Consistent Branding for{" "}
             <span className={styles.accent}>Your Documents</span>
-          </h2>
+          </h1>
           <p>
             Office Experts Group have developed an advanced Corporate Word
             Template Solution to enable users to effectively and efficiently
@@ -49,9 +57,21 @@ const PageSegmentMain = () => {
             under a controlled environment, therefore only allowing formatting
             that is consistent to your branding guidelines.
           </p>
+          <Link href="/contact" className={`btn ${styles.cta}`}>
+            Enquire About Templates
+          </Link>
+          {/* Spans both columns of the section grid */}
+          <ul className={styles.stats}>
+            {STATS.map(({ value, label }) => (
+              <li key={label}>
+                <strong>{value}</strong>
+                <span>{label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </AnimateOnScroll>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -11,6 +11,10 @@
   flex-direction: column;
   gap: 3.5rem;
   @include container;
+
+  @media screen and (max-width: 770px) {
+    padding: 0;
+  }
 }
 
 .header {
@@ -25,7 +29,7 @@
 }
 
 .heading {
-  @include heading-main;
+  @include heading-section;
 }
 
 .accent {
@@ -44,7 +48,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 
-  @include belowDesktop {
+  @media screen and (max-width: 1260px) {
     grid-template-columns: 1fr;
   }
 }
@@ -56,6 +60,7 @@
   padding: 2.5rem;
   background: $white;
   border-radius: $radius;
+  max-width: 95vw;
 
   @include phone {
     padding: 1.5rem;
@@ -93,7 +98,6 @@
 .image {
   display: block;
   width: 100%;
-  min-width: 420px;
   height: auto;
 }
 

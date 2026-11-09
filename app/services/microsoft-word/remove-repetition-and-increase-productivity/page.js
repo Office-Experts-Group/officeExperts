@@ -4,11 +4,9 @@ import dynamic from "next/dynamic";
 
 // Above the fold: imported normally so they render in the initial HTML without a separate chunk
 import AutomationHero from "./(components)/AutomationHero";
+import AutomationImpact from "./(components)/AutomationImpact";
 
 // Below the fold: next/dynamic splits these into their own chunks (still server-rendered)
-const AutomationImpact = dynamic(
-  () => import("./(components)/AutomationImpact"),
-);
 const AutomationAi = dynamic(() => import("./(components)/AutomationAi"));
 const AutomationIntegration = dynamic(
   () => import("./(components)/AutomationIntegration"),

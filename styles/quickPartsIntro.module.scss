@@ -6,10 +6,8 @@
   background: $dark-bg;
   @include heroPadding;
 
-  // Smaller bottom padding on phones; top still clears the fixed header
-  @include phone {
-    padding-top: calc(#{$header-offset} + 2rem);
-    padding-bottom: 4rem;
+  @media screen and (max-width: 700px) {
+    padding: 8rem $mobGutter;
   }
 }
 
@@ -82,7 +80,7 @@
   border-top: 1px solid $white-12;
 
   @include phone {
-    gap: 1.5rem;
+    display: none;
   }
 }
 

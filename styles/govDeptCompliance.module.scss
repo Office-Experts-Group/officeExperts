@@ -22,14 +22,9 @@
   max-width: 1300px;
   margin: 0 auto;
 
-  @include tablet {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  @include phone {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 }
 

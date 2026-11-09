@@ -2,16 +2,12 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import Introduction from "./(components)/Introduction";
 
 const Contact = dynamic(() => import("@/components/Contact"));
 const RDGCapabilities = dynamic(() => import("./(components)/RDGCapabilities"));
 const RDGUseCases = dynamic(() => import("./(components)/RDGUseCases"));
 const RDGHowItWorks = dynamic(() => import("./(components)/RDGHowItWorks"));
-
-import remote from "@/public/pageHeros/remote.webp";
-import remoteMob from "@/public/pageHeros/mob/remoteMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
@@ -74,13 +70,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Remote Data Gathering from Any Device"
-        desktopImage={remote}
-        mobileImage={remoteMob}
-        altDesk={"remote data access with microsoft"}
-        altMob={"remote data access with microsoft"}
       />
       <Introduction />
       <RDGCapabilities />

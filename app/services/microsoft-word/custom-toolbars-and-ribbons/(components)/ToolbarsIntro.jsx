@@ -1,19 +1,17 @@
 // /services/microsoft-word/custom-toolbars-and-ribbons/(components)/ToolbarsIntro.jsx
 import Link from "next/link";
 
-// Fade-up on scroll, shared across the site group
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
 // Word window illustration with a custom Formatting tab
 import { RibbonSVG } from "../(svgs)/RibbonSVG";
 
 import styles from "@/styles/toolbarsIntro.module.scss";
 
 const ToolbarsIntro = () => (
-  <section className={styles.section}>
-    <div className={styles.inner}>
-      {/* ── Copy ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6}>
+  <>
+    <div className={styles.lightHero}></div>
+    <section className={styles.section}>
+      <div className={styles.inner}>
+        {/* ── Copy ── */}
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Custom Built</p>
           <h1 className={styles.heading}>
@@ -34,16 +32,14 @@ const ToolbarsIntro = () => (
             Discuss your Word ribbon
           </a>
         </div>
-      </AnimateOnScroll>
 
-      {/* ── Illustration ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.1}>
+        {/* ── Illustration ── */}
         <div className={styles.visual}>
           <RibbonSVG />
         </div>
-      </AnimateOnScroll>
-    </div>
-  </section>
+      </div>
+    </section>
+  </>
 );
 
 export default ToolbarsIntro;
