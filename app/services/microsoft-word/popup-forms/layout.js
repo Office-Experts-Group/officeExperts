@@ -4,7 +4,7 @@
 // (no shared config file).
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/popup-forms";
-const PAGE_TITLE = "Word Popup Forms | Office Experts";
+const PAGE_TITLE = "Microsoft Word Popup Forms | Office Experts Group";
 
 const PAGE_DESCRIPTION =
   "Custom Microsoft Word popup forms with guided data entry, validation, conditional logic and direct document integration.";

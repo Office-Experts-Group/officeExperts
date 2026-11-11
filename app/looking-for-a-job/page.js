@@ -18,7 +18,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/looking-for-a-job",
       url: "https://www.officeexperts.com.au/looking-for-a-job",
-      name: "Looking for a job?",
+      name: "Microsoft Consultant Jobs in Australia | Office Experts",
       description:
         "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
       isPartOf: {

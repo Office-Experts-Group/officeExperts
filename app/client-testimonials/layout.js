@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Client Testimonials | Office Experts Group",
+  title: "Client Testimonials & Reviews | Office Experts Group",
   description:
     "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
 

@@ -5,11 +5,11 @@ const DESCRIPTION =
   "Microsoft consultants backed by a national team of 25+ specialists. 25+ years helping FNQ businesses streamline operations with sturdy software solutions.";
 
 export const metadata = {
-  title: "Microsoft Consultants Cairns QLD",
+  title: "Microsoft Consultants Cairns QLD | Office Experts",
   description: DESCRIPTION,
 
   openGraph: {
-    title: "Microsoft Consultants Cairns QLD",
+    title: "Microsoft Consultants Cairns QLD | Office Experts",
     description: DESCRIPTION,
     url: "https://www.officeexperts.com.au/microsoft-consultants-cairns",
     siteName: "Office Experts Group",
@@ -25,12 +25,12 @@ export const metadata = {
     type: "website",
   },
 
-  keywords: ["Microsoft Consultants Cairns QLD"],
+  keywords: ["Microsoft Consultants Cairns QLD | Office Experts"],
 
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Consultants Cairns QLD",
+    title: "Microsoft Consultants Cairns QLD | Office Experts",
     description: DESCRIPTION,
     images: ["/logo.png"],
   },

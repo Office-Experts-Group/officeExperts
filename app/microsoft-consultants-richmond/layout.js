@@ -1,7 +1,7 @@
 // app/microsoft-consultants-richmond/layout.js
 import React from "react";
 
-const TITLE = "Microsoft Consultants Richmond";
+const TITLE = "Microsoft Consultants Richmond | Office Experts Group";
 const DESCRIPTION =
   "Bringing Richmond businesses tailored Excel and Access development, Power Platform apps and AI solutions for over 25 years.";
 

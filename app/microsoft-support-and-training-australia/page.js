@@ -15,8 +15,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-support-and-training-australia";
-const PAGE_TITLE =
-  "Microsoft Support and Training Australia | Office Experts Group";
+const PAGE_TITLE = "Microsoft Support and Training Australia | Office Experts";
 const PAGE_DESCRIPTION =
   "Professional Microsoft support and training services across Australia. Our local experts provide customised training, technical support and troubleshooting.";
 

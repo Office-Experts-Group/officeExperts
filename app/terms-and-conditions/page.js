@@ -14,7 +14,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/terms-and-conditions",
       url: "https://www.officeexperts.com.au/terms-and-conditions",
-      name: "Office Experts Group's Term and Conditions | Office Experts Group",
+      name: "Terms and Conditions | Office Experts Group Australia",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

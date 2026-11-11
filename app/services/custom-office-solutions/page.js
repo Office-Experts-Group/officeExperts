@@ -22,7 +22,7 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/custom-office-solutions",
       url: "https://www.officeexperts.com.au/services/custom-office-solutions",
-      name: "Custom Office Solutions | Office Expert Australia",
+      name: "Custom Office Solutions | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

@@ -2,7 +2,7 @@
 // Title is unchanged because the page is performing well in search; only the description is refreshed.
 import React from "react";
 
-const TITLE = "Dashboard Experts | Office Experts Group";
+const TITLE = "Power BI & Excel Dashboard Services | Office Experts";
 const DESCRIPTION =
   "Power BI, Excel and web dashboards that bring all your data into one view, with AI that flags changes and answers questions in plain English.";
 const PAGE_URL = "https://www.officeexperts.com.au/services/dashboards";

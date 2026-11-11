@@ -23,7 +23,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/case-studies",
       url: "https://www.officeexperts.com.au/case-studies",
-      name: "Case Studies | Office Experts Group",
+      name: "Microsoft Office Case Studies | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

@@ -36,7 +36,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-melbourne",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-melbourne",
-      name: "Microsoft Support and Training Melbourne",
+      name: "Microsoft Support and Training Melbourne | Office Experts",
       description:
         "Professional Microsoft support and training services in Melbourne. Our experts provide customised training, technical support and troubleshooting.",
       isPartOf: {
@@ -72,7 +72,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Support and Training Melbourne",
+          name: "Microsoft Support and Training Melbourne | Office Experts",
         },
       ],
     },

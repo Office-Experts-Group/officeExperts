@@ -4,13 +4,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Case Studies | Office Experts Group",
+  title: "Microsoft Office Case Studies | Office Experts Group",
   description:
     "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
 
   // OpenGraph
   openGraph: {
-    title: "Case Studies | Office Experts Group",
+    title: "Microsoft Office Case Studies | Office Experts Group",
     description:
       "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
     url: "https://www.officeexperts.com.au/case-studies",
@@ -34,7 +34,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Case Studies | Office Experts Group",
+    title: "Microsoft Office Case Studies | Office Experts Group",
     description:
       "Real case studies from Australian businesses we've helped with Microsoft Office, Excel, Access, Word and Power Platform solutions.",
     images: ["/logo.png"],

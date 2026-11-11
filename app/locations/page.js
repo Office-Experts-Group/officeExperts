@@ -14,12 +14,6 @@ const ConsultantsProcess = dynamic(
 const ConsultantsCta = dynamic(() => import("./(components)/ConsultantsCta"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-// Schema generators shared across all pages
-import {
-  generateProfessionalServiceSchema,
-  generateOrganizationSchema,
-} from "@/utils/schemaGenerators";
-
 // Location images
 import sydney from "@/public/pageHeros/sydney.webp";
 import melbourne from "@/public/pageHeros/mob/melbourneMob.webp";
@@ -36,7 +30,7 @@ import goldCoast from "@/public/pageHeros/mob/goldCoastMob.webp";
 import cairns from "@/public/pageHeros/mob/cairnsColourMob.webp";
 
 const PAGE_URL = "https://www.officeexperts.com.au/locations";
-const PAGE_TITLE = "Microsoft Consultants Australia | Office Experts Group Locations";
+const PAGE_TITLE = "Microsoft Consultants Across Australia | Office Experts";
 const PAGE_DESCRIPTION =
   "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in all major cities.";
 
@@ -302,8 +296,6 @@ const sections = locationData.map(({ id, abbr, sectionTitle, locations }) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateProfessionalServiceSchema(),
-    generateOrganizationSchema(),
     {
       "@type": ["WebPage", "CollectionPage"],
       "@id": PAGE_URL,

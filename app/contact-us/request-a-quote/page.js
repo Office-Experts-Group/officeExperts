@@ -14,7 +14,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/contact-us/request-a-quote",
       url: "https://www.officeexperts.com.au/contact-us/request-a-quote",
-      name: "Request a Quote | Get a Quote | Office Experts Group",
+      name: "Request a Quote for Microsoft Office Solutions",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

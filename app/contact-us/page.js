@@ -15,7 +15,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/contact-us",
       url: "https://www.officeexperts.com.au/contact-us",
-      name: "Contact | Microsoft Excel | Microsoft Access | Power BI | MS Office",
+      name: "Contact Our Microsoft Office Consultants | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

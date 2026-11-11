@@ -3,7 +3,7 @@
 // Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/google-docs-to-word-migration";
-const PAGE_TITLE = "Google Docs to Word Migration Services";
+const PAGE_TITLE = "Google Docs to Word Migration Services | Office Experts";
 const PAGE_DESCRIPTION =
   "Migrate Google Docs to Microsoft Word with formatting intact. Nation-wide team of Word designers with over 25+ years of experience. Free initial consultation.";
 

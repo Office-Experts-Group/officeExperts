@@ -37,7 +37,7 @@ const schemaData = {
       url: PAGE_URL,
       name: "Microsoft Consultants Canberra | Office Experts Group",
       description:
-        "Canberra businesses supported by an Australia-wide Microsoft consulting team. Over 25 years experience improving workflows, reporting, document systems and business efficiency.",
+        "Microsoft consultants supporting Canberra businesses. 25+ years improving workflows, reporting, document systems and efficiency with an Australia-wide team.",
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",

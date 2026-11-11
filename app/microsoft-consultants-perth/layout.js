@@ -4,12 +4,12 @@ import React from "react";
 export const metadata = {
   title: "Microsoft Consultants Perth | Office Experts Group",
   description:
-    "Australia's leading Microsoft consultants with a local Perth team. For over 25 years we have provided software solutions across the entire Microsoft suite. Contact us for a free consultation.",
+    "Leading Microsoft consultants with a local Perth team. 25+ years delivering software solutions across the entire Microsoft suite. Book a free consultation.",
 
   openGraph: {
     title: "Microsoft Consultants Perth | Office Experts Group",
     description:
-      "Australia's leading Microsoft consultants with a local Perth team. For over 25 years we have provided software solutions across the entire Microsoft suite. Contact us for a free consultation.",
+      "Leading Microsoft consultants with a local Perth team. 25+ years delivering software solutions across the entire Microsoft suite. Book a free consultation.",
     url: "https://www.officeexperts.com.au/microsoft-consultants-perth",
     siteName: "Office Experts Group",
     images: [
@@ -31,7 +31,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Microsoft Consultants Perth | Office Experts Group",
     description:
-      "Australia's leading Microsoft consultants with a local Perth team. For over 25 years we have provided software solutions across the entire Microsoft suite. Contact us for a free consultation.",
+      "Leading Microsoft consultants with a local Perth team. 25+ years delivering software solutions across the entire Microsoft suite. Book a free consultation.",
     images: ["/logo.png"],
   },
 

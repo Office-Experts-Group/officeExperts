@@ -35,7 +35,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-canberra",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-canberra",
-      name: "Microsoft Support and Training Canberra | Office Experts Group",
+      name: "Microsoft Support and Training Canberra | Office Experts",
       description:
         "Professional Microsoft support and training services in Canberra. Our local experts provide customised training, technical support and troubleshooting.",
       isPartOf: {

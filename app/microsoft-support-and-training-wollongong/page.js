@@ -35,7 +35,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-wollongong",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-wollongong",
-      name: "Microsoft Support and Training Wollongong",
+      name: "Microsoft Support and Training Wollongong | Office Experts",
       description:
         "Professional Microsoft support and training services in Wollongong. Our experts provide customised training, technical support and troubleshooting.",
       isPartOf: {
@@ -71,7 +71,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Support and Training Wollongong",
+          name: "Microsoft Support and Training Wollongong | Office Experts",
         },
       ],
     },

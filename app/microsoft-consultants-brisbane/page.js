@@ -35,9 +35,9 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Brisbane",
+      name: "Microsoft Consultants Brisbane | Office Experts Group",
       description:
-        "Nation-wide Microsoft consulting organisation with a local Brisbane team. Over 25yrs of experience helping Australian businesses with software solutions. Contact us for a free assessment today.",
+        "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today.",
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",

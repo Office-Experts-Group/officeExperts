@@ -35,7 +35,7 @@ const schemaData = {
       "@id":
         "https://www.officeexperts.com.au/microsoft-support-and-training-brisbane",
       url: "https://www.officeexperts.com.au/microsoft-support-and-training-brisbane",
-      name: "Microsoft Support and Training Brisbane | Office Experts Group",
+      name: "Microsoft Support and Training Brisbane | Office Experts",
       description:
         "Professional Microsoft support and training services in Brisbane. Our local experts provide customised training, technical support and troubleshooting.",
       isPartOf: {

@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Power Query | Office Experts Group",
+  title: "Power Query Consultants & Automation | Office Experts",
   description:
     "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
 
@@ -14,7 +14,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Power Query | Office Experts Group",
+    title: "Power Query Consultants & Automation | Office Experts",
     description:
       "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
     url: "https://www.officeexperts.com.au/services/power-query",
@@ -35,7 +35,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Power Query | Office Experts Group",
+    title: "Power Query Consultants & Automation | Office Experts",
     description:
       "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
     images: ["/logo.png"],

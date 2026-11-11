@@ -38,7 +38,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Melbourne",
+      name: "Microsoft Consultants Melbourne | Office Experts Group",
       description:
         "Australian Microsoft consultancy with specialists serving Melbourne and all major cities. Remote and on-site support. Get a free assessment today..",
       about: { "@id": `${PAGE_URL}#localbusiness` },
@@ -73,7 +73,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Consultants Melbourne",
+          name: "Microsoft Consultants Melbourne | Office Experts Group",
         },
       ],
     },
@@ -90,7 +90,7 @@ const Page = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Consultants Melbourne"
+          title="Microsoft Consultants Melbourne | Office Experts Group"
           desktopImage={melbourne}
           mobileImage={melbourneMob}
           altDesk="Melbourne skyline"

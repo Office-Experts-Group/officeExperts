@@ -25,7 +25,7 @@ import faqs from "../wordFaqs/wordTemplateConversions";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-word/word-template-conversions`;
-const PAGE_TITLE = "Word Template Conversions | Office Experts";
+const PAGE_TITLE = "Word Template Conversions | Office Experts Group";
 const PAGE_DESCRIPTION =
   "We convert Adobe, InDesign and PDF files into fully functional, on-brand Word templates, and build fillable PDF forms from Word. Australia-wide.";
 

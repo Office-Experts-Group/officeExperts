@@ -2,7 +2,7 @@
 import React from "react";
 
 export const metadata = {
-  title: "Privacy Policy | Office Experts Group",
+  title: "Privacy Policy | Office Experts Group Australia",
   description:
     "Read the privacy policy for Office Experts, detailing how we collect, use, and protect your personal information.",
   url: "https://www.officeexperts.com.au/privacy-policy",
@@ -14,7 +14,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Privacy Policy | Office Experts Group",
+    title: "Privacy Policy | Office Experts Group Australia",
     description:
       "Read the privacy policy for Office Experts, detailing how we collect, use, and protect your personal information.",
     url: "https://www.officeexperts.com.au/privacy-policy",

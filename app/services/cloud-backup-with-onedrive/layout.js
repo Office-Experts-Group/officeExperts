@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "OneDrive Cloud Backup | Office Experts Group",
+  title: "OneDrive Cloud Backup for Businesses | Office Experts",
   description:
     "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "OneDrive Cloud Backup | Office Experts Group",
+    title: "OneDrive Cloud Backup for Businesses | Office Experts",
     description:
       "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
     url: "https://www.officeexperts.com.au/services/cloud-backup-with-onedrive",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "OneDrive Cloud Backup | Office Experts Group",
+    title: "OneDrive Cloud Backup for Businesses | Office Experts",
     description:
       "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
     images: ["/logo.png"],

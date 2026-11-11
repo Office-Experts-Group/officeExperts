@@ -1,7 +1,7 @@
 // /services/microsoft-word/companies-and-organisations/layout.js
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations";
-const PAGE_TITLE = "Word Template Designers | Office Experts";
+const PAGE_TITLE = "Word Template Designers for Companies | Office Experts";
 const PAGE_DESCRIPTION =
   "Professional Word template solutions for companies and organisations. Custom document templates that protect corporate identity.";
 

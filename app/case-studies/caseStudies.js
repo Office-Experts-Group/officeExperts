@@ -1077,7 +1077,7 @@ export const caseStudies = [
     ],
     image: "/case-studies/government-health-editable-pdf-formsLg.webp",
     featured: false,
-    metaTitle: "Editable PDF Forms Built on a Brand Template",
+    metaTitle: "Editable PDF Forms Built on a Brand Template | Case Study",
     metaDescription:
       "Two internal staff forms built into a health department's master template, converted to editable PDFs and handed over with training.",
     truncatedDescription:
@@ -1157,7 +1157,7 @@ export const caseStudies = [
     ],
     image: "/case-studies/professional-services-sharepoint-foundationLg.png",
     featured: false,
-    metaTitle: "SharePoint Foundation Workshops | Case Study",
+    metaTitle: "Professional Services SharePoint Setup | Case Study",
     metaDescription:
       "Live workshops that moved a team off shared logins onto a structured SharePoint site, a proper access model and a plan to retire shared accounts.",
     truncatedDescription:
@@ -2558,7 +2558,7 @@ export const caseStudies = [
     ],
     image: "/case-studies/legal-firm-template-formatting-tabLg.png",
     featured: false,
-    metaTitle: "Law Firm Word Templates and Formatting Tab",
+    metaTitle: "Law Firm Word Templates and Formatting Tab | Case Study",
     metaDescription:
       "A full document suite built from a law firm's style guide, plus a custom Formatting tab for legal numbering lists and locked-down formatting.",
     truncatedDescription:
@@ -2638,7 +2638,7 @@ export const caseStudies = [
     ],
     image: "/case-studies/theme-swap-sample.webp",
     featured: false,
-    metaTitle: "Multi-Brand Word Template with Colour Themes",
+    metaTitle: "Multi-Brand Word Template with Colour Themes | Case Study",
     metaDescription:
       "One Word Master Template with a colour theme for every discipline, so covers, styles, numbering and tables pick up the right brand colours.",
     truncatedDescription:
@@ -2723,7 +2723,7 @@ export const caseStudies = [
     ],
     image: "/case-studies/research-kanban-planner-boardLg.webp",
     featured: false,
-    metaTitle: "Kanban Planner Built Inside Microsoft Access",
+    metaTitle: "Kanban Planner Built Inside Microsoft Access | Case Study",
     metaDescription:
       "A four-column Kanban planner form with drag and drop, due date highlighting and task details, built inside the client's existing Access database.",
     truncatedDescription:

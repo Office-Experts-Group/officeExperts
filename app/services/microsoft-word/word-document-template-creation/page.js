@@ -27,7 +27,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation";
-const PAGE_TITLE = "Word Document Template Creation Services";
+const PAGE_TITLE = "Word Document Template Creation Services | Office Experts";
 const PAGE_DESCRIPTION =
   "Professional Microsoft Word template creation services. Custom document templates that maintain brand consistency and improve productivity.";
 

@@ -33,7 +33,7 @@ import { sqlFaqs } from "./(data)/sqlFaqData";
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/sql-server-and-access-integration`;
 const PAGE_TITLE =
-  "SQL Server Integration for Access and Office | Office Experts";
+  "SQL Server Integration for Access & Office | Office Experts";
 const PAGE_DESCRIPTION =
   "Upgrade Access to a SQL Server backend, or connect Excel, Word, PowerPoint and Visual Studio to your SQL Server data. Australia-wide experts since 2000.";
 

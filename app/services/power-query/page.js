@@ -19,7 +19,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/power-query",
       url: "https://www.officeexperts.com.au/services/power-query",
-      name: "Power Query | Office Experts Group",
+      name: "Power Query Consultants & Automation | Office Experts",
       description:
         "Power Query experts helping businesses automate data imports, clean messy datasets and build reliable reporting workflows that save time.",
       isPartOf: {

@@ -26,7 +26,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/about-us#webpage",
       url: "https://www.officeexperts.com.au/about-us",
-      name: "About Us | Office Experts Group",
+      name: "About Us | Microsoft Office Consultants Since 2000",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

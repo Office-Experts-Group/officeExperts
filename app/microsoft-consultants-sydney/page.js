@@ -37,7 +37,7 @@ const schemaData = {
       url: PAGE_URL,
       name: "Microsoft Consultants Sydney NSW",
       description:
-        "Microsoft Office specialists operating nationally since 2000. Office Experts Group has local consultants in Sydney delivering expert solutions across the entire Microsoft suite.",
+        "Microsoft Office specialists operating nationally since 2000, with local Sydney consultants delivering expert solutions across the entire Microsoft suite.",
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",

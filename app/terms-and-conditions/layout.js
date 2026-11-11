@@ -1,7 +1,7 @@
 import React from "react";
 
 export const metadata = {
-  title: "Terms and Conditions - Office Experts Group",
+  title: "Terms and Conditions | Office Experts Group Australia",
   description:
     "Read our terms and conditions for using Office Experts. We ensure fair and transparent practices for all users.",
 
@@ -11,7 +11,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Terms and Conditions - Office Experts Group",
+    title: "Terms and Conditions | Office Experts Group Australia",
     description:
       "Read our terms and conditions for using Office Experts. We ensure fair and transparent practices for all users.",
     url: "https://www.officeexperts.com.au/terms-and-conditions",

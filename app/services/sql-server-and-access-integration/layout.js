@@ -4,7 +4,7 @@ import React from "react";
 
 // Merged metadata for the combined page. Covers both former topics:
 // Access to SQL Server migration, and Office (Excel, Word, PowerPoint) to SQL Server.
-const title = "SQL Server Integration for Access and Office | Office Experts";
+const title = "SQL Server Integration for Access & Office | Office Experts";
 const description =
   "Upgrade Access to a SQL Server backend, or connect Excel, Word, PowerPoint and Visual Studio to your SQL Server data. Australia-wide experts since 2000.";
 

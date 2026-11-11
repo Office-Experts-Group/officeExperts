@@ -19,7 +19,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/client-testimonials",
       url: "https://www.officeexperts.com.au/client-testimonials",
-      name: "Client Testimonials | Client Referrals | Office Experts Group",
+      name: "Client Testimonials & Reviews | Office Experts Group",
       description:
         "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
       isPartOf: {

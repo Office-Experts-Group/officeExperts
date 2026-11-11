@@ -5,13 +5,13 @@ export const metadata = {
   // Basic metadata
   title: "Migrate Legacy ActiveX & VBScript Solutions",
   description:
-    "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
+    "Microsoft is disabling ActiveX and retiring VBScript in Word, Excel, PowerPoint and Access. We modernise your legacy macros and controls so nothing breaks.",
 
   // OpenGraph
   openGraph: {
     title: "Migrate Legacy ActiveX & VBScript Solutions",
     description:
-      "Microsoft is disabling ActiveX and retiring VBScript across Word, Excel, PowerPoint and Access. Our consultants modernise your legacy macros and controls so nothing breaks.",
+      "Microsoft is disabling ActiveX and retiring VBScript in Word, Excel, PowerPoint and Access. We modernise your legacy macros and controls so nothing breaks.",
     url: "https://www.officeexperts.com.au/services/activex-vbscript-migration",
     siteName: "Office Experts Group",
     images: [
@@ -35,7 +35,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Migrate Legacy ActiveX & VBScript Solutions",
     description:
-      "Microsoft is disabling ActiveX and retiring VBScript across Office. We modernise your legacy macros and controls so nothing breaks.",
+      "Microsoft is disabling ActiveX and retiring VBScript in Word, Excel, PowerPoint and Access. We modernise your legacy macros and controls so nothing breaks..",
     images: ["/logo.png"],
   },
 

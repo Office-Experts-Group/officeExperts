@@ -40,7 +40,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Central Coast NSW",
+      name: "Microsoft Consultants Central Coast NSW | Office Experts",
       description: PAGE_DESCRIPTION,
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {

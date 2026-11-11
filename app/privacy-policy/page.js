@@ -10,7 +10,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/privacy-policy",
       url: "https://www.officeexperts.com.au/privacy-policy",
-      name: "Office Experts Group's Privacy Policy | Office Experts Group",
+      name: "Privacy Policy | Office Experts Group Australia",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

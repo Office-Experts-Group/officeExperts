@@ -14,7 +14,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/refund-policy",
       url: "https://www.officeexperts.com.au/refund-policy",
-      name: "Refund Policy | Office Experts Group",
+      name: "Refund Policy | Office Experts Group Australia",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

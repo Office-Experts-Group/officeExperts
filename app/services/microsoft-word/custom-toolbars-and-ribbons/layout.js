@@ -2,7 +2,7 @@
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons";
-const PAGE_TITLE = "Custom Toolbars and Ribbons | Office Experts";
+const PAGE_TITLE = "Custom Word Toolbars and Ribbons | Office Experts Group";
 const PAGE_DESCRIPTION =
   "Expert Microsoft Word toolbar and ribbon customisation services. Improve productivity with custom Word toolbars.";
 

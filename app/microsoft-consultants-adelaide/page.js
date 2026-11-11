@@ -38,7 +38,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Adelaide",
+      name: "Microsoft Consultants Adelaide | Office Experts Group",
       description: PAGE_DESCRIPTION,
       about: { "@id": `${PAGE_URL}#localbusiness` },
       isPartOf: {

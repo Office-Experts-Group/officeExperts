@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Support and Training Melbourne",
+  title: "Microsoft Support and Training Melbourne | Office Experts",
   description:
     "Professional Microsoft support and training services in Melbourne. Our experts provide customised training, technical support and troubleshooting.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Support and Training Melbourne",
+    title: "Microsoft Support and Training Melbourne | Office Experts",
     description:
       "Professional Microsoft support and training services in Melbourne. Our experts provide customised training, technical support and troubleshooting.",
     url: "https://www.officeexperts.com.au/microsoft-support-and-training-melbourne",
@@ -36,7 +36,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Support and Training Melbourne",
+    title: "Microsoft Support and Training Melbourne | Office Experts",
     description:
       "Professional Microsoft support and training services in Melbourne. Our experts provide customised training, technical support and troubleshooting.",
     images: ["/logo.png"],

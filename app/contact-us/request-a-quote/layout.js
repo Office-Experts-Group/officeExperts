@@ -1,12 +1,12 @@
 import React from "react";
 
 export const metadata = {
-  title: "Request a Quote | Office Experts Group",
+  title: "Request a Quote for Microsoft Office Solutions",
   description:
     "Request a personalised quote for professional Microsoft Office consulting services and solutions from Office Experts Group.",
   keywords: ["Office experts request a quote"],
   openGraph: {
-    title: "Request a Quote | Office Experts Group",
+    title: "Request a Quote for Microsoft Office Solutions",
     description:
       "Request a personalised quote for professional Microsoft Office consulting services and solutions from Office Experts Group.",
     url: "https://www.officeexperts.com.au/contact-us/request-a-quote",

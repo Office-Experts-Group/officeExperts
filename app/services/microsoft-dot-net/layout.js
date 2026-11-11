@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft .NET Services | Office Experts",
+  title: "Microsoft .NET Development Services | Office Experts",
   description:
     "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
 
@@ -17,7 +17,7 @@ export const metadata = {
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft .NET Services | Office Experts",
+    title: "Microsoft .NET Development Services | Office Experts",
     description:
       "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
     url: "https://www.officeexperts.com.au/services/microsoft-dot-net",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft .NET Services | Office Experts Group",
+    title: "Microsoft .NET Development Services | Office Experts Group",
     description:
       "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
     images: ["/logo.png"],

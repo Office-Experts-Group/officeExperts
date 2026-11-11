@@ -36,7 +36,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": PAGE_URL,
       url: PAGE_URL,
-      name: "Microsoft Consultants Cairns",
+      name: "Microsoft Consultants Cairns QLD | Office Experts",
       description:
         "Microsoft consultants backed by a national team of 25+ specialists. 25+ years helping FNQ businesses streamline operations with sturdy software solutions.",
       about: { "@id": `${PAGE_URL}#localbusiness` },
@@ -71,7 +71,7 @@ const schemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Microsoft Consultants Cairns",
+          name: "Microsoft Consultants Cairns QLD | Office Experts",
         },
       ],
     },
@@ -88,7 +88,7 @@ const Page = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Consultants Cairns"
+          title="Microsoft Consultants Cairns QLD | Office Experts"
           desktopImage={cairns}
           mobileImage={cairnsMob}
           altDesk="Cairns beaches, Far North Queensland"

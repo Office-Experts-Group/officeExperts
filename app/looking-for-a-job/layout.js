@@ -2,13 +2,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Looking for a job? | Office Experts Group",
+  title: "Microsoft Consultant Jobs in Australia | Office Expertsp",
   description:
     "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
 
   // OpenGraph
   openGraph: {
-    title: "Looking for a job? | Office Experts Group",
+    title: "Microsoft Consultant Jobs in Australia | Office Experts",
     description:
       "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
     url: "https://www.officeexperts.com.au/looking-for-a-job",

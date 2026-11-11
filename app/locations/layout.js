@@ -1,6 +1,6 @@
 // app/locations/layout.js
 const PAGE_URL = "https://www.officeexperts.com.au/locations";
-const PAGE_TITLE = "Microsoft Consultants Australia | Office Experts Group Locations";
+const PAGE_TITLE = "Microsoft Consultants Across Australia | Office Experts";
 const PAGE_DESCRIPTION =
   "Microsoft Office consulting services available across Australia. Remote support and on-site consultants in all major cities.";
 

@@ -1,6 +1,6 @@
 // /app/services/layout.js
 const pageMeta = {
-  title: "Microsoft Office, Power Platform and AI Services",
+  title: "Microsoft Word Consultants & Designers | Office Experts",
   description:
     "Word, Excel, Access, PowerPoint, Power Platform, Microsoft 365 and AI agent development from Australia's Microsoft Office specialists since 2000.",
   path: "/services",

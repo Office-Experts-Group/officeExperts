@@ -18,7 +18,7 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/online-solutions",
       url: "https://www.officeexperts.com.au/services/online-solutions",
-      name: "Microsoft Cloud & Online Solutions",
+      name: "Microsoft Cloud & Online Solutions | Office Experts Group",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
