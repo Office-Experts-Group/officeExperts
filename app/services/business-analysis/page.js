@@ -2,13 +2,10 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import BusinessAnalysisHero from "./(components)/BusinessAnalysisHero";
+import BusinessAnalysisProblem from "./(components)/BusinessAnalysisProblem";
 
 // Below-the-fold page sections
-const BusinessAnalysisProblem = dynamic(
-  () => import("./(components)/BusinessAnalysisProblem"),
-);
 const BusinessAnalysisValue = dynamic(
   () => import("./(components)/BusinessAnalysisValue"),
 );
@@ -32,11 +29,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 // FAQ content and matching FAQPage schema (schema is generated from the content)
 import faqs from "@/faqs/business-analysis";
 import faqSchema from "@/faqs/businessAnalysisSchema";
-
-import ba from "@/public/pageHeros/business-analysis.webp";
-import baMob from "@/public/pageHeros/mob/business-analysisMob.webp";
-
-// Shared schema builders used across the group's sites
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/business-analysis`;
@@ -163,13 +155,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title={`Business Analysis & Solution Design`}
-        desktopImage={ba}
-        mobileImage={baMob}
-        altDesk="Business Analysis & Solution Design"
-        altMob="Business Analysis & Solution Design"
       />
       <BusinessAnalysisHero />
       <BusinessAnalysisProblem />

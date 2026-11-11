@@ -1,31 +1,26 @@
+// app/services/microsoft-365/(components)/PageSegmentMain.jsx
 import React from "react";
-import Image from "next/image";
-
-import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/pageSegment.module.scss";
-import office from "@/public/cloudOffice.webp";
+// Custom ecosystem illustration stored with the route (replaces the cloudOffice.webp stock photo)
+import { Microsoft365Svg } from "../(svgs)/Microsoft365Svg";
 
 const PageSegmentMain = () => {
   return (
-    <section className={styles.pageSegment}>
-      <div className={styles.imgWrapper} style={{ height: "fit-content" }}>
-        <AnimateOnScroll animation="slide-left" duration={1} delay={0}>
-          <Image
-            src={office}
-            alt="People sitting in an office environment"
-            width={600}
-            height={400}
-            priority
-          />
-        </AnimateOnScroll>
-      </div>
+    <>
+      <div className={styles.lightHeroBlock}></div>
+      <section className={styles.pageSegment}>
+        <div className={styles.imgWrapper} style={{ borderBottom: "none" }}>
+          <Microsoft365Svg />
+        </div>
 
-      <div className={styles.contentWrapper}>
-        <AnimateOnScroll animation="fade-up" duration={1} delay={0.3}>
+        <div className={styles.contentWrapper}>
           <div className={styles.content}>
             <p>Our Expertise</p>
-            <h2>Unlock the Power of Office 365</h2>
+            <h1>
+              Unlock the Power of
+              <span className={styles.accent}> Office 365</span>
+            </h1>
             <p>
               Most businesses are using a fraction of what Office 365 can do.
               Behind the familiar icons of Word, Excel and Outlook lies a
@@ -41,9 +36,9 @@ const PageSegmentMain = () => {
               customisation.
             </p>
           </div>
-        </AnimateOnScroll>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -1,51 +1,47 @@
-import React from "react";
+// app/services/microsoft-publisher/layout.js
+const PAGE_URL = "https://www.officeexperts.com.au/services/microsoft-publisher";
+const PAGE_TITLE = "Microsoft Publisher Migration and .pub File Conversion";
+const PAGE_DESCRIPTION =
+  "Microsoft Publisher has retired. We convert your .pub files and rebuild newsletters, brochures and forms as branded Word and PowerPoint templates.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Microsoft Publisher Services | Office Experts",
-  description:
-    "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
-
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   keywords: [
-    // Core Publisher services
-    "Microsoft Publisher templates",
-    "Microsoft Publisher design services",
+    "Microsoft Publisher migration",
+    "Microsoft Publisher retirement",
+    "convert Publisher to Word",
+    "convert pub to PDF",
+    "open pub files",
+    "Publisher file conversion",
+    "Microsoft Publisher alternative",
+    "Publisher templates in Word",
   ],
-
-  alternates: {
-    canonical: "/services/microsoft-publisher",
-  },
-
-  // OpenGraph
   openGraph: {
-    title: "Microsoft Publisher Services | Office Experts",
-    description:
-      "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
-    url: "https://www.officeexperts.com.au/services/microsoft-publisher",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft Publisher Services | Office Experts",
-    description:
-      "Expert Microsoft Publisher design, template creation, and consulting services. Professional layout, branding, and corporate publishing solutions.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

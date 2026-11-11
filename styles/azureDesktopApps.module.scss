@@ -1,0 +1,102 @@
+// styles/azureDesktopApps.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// Illustration drops below the copy on smaller screens
+.visual {
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include belowDesktop {
+    order: 2;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  @include lede;
+}
+
+// ── Feature grid: hairline dividers instead of boxed cards ──
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  padding: 1.25rem 0;
+  border-top: 1px solid $line;
+
+  h3 {
+    margin-bottom: 0.35rem;
+    @include card-title(sm);
+  }
+
+  p {
+    @include small-text;
+  }
+}
+
+.arrowLink {
+  margin-top: 0.5rem;
+  @include arrow-link;
+}

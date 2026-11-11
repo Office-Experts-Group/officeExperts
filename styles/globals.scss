@@ -135,6 +135,20 @@ $scroll-offset: 150px;
   padding: 12rem $gutter 7rem $gutter;
 }
 
+@mixin heroPaddingWhite {
+  padding: 2rem $gutter 6rem $gutter;
+
+  @include tablet {
+    padding: 2rem $mobGutter 6rem $mobGutter;
+  }
+  @include phoneLandscape {
+    padding: 2rem $mobGutter 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 1rem 1rem 6rem 1rem;
+  }
+}
+
 @mixin lightHeroBlock {
   background-color: #1a1c1e;
   width: 100vw;

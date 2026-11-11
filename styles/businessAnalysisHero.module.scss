@@ -3,17 +3,12 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 7rem;
+  margin-top: -2rem;
+  @include heroPaddingWhite;
+}
 
-  @include tablet {
-    padding: 6rem 4rem;
-  }
-  @include phoneLandscape {
-    padding: 5rem 2rem;
-  }
-  @include phone {
-    padding: 4rem 1.25rem;
-  }
+.lightHeroBlock {
+  @include lightHeroBlock;
 }
 
 .inner {
@@ -37,7 +32,7 @@
 }
 
 .heading {
-  @include heading-section;
+  @include heading-main;
 }
 
 .accent {

@@ -14,7 +14,7 @@ const AiTemplatesRealitySvg = () => {
         rx="12"
         fill="#fff"
         stroke="#d5dee6"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
 
       <rect
@@ -24,8 +24,8 @@ const AiTemplatesRealitySvg = () => {
         height="20"
         rx="4"
         stroke="#d9534f"
-        stroke-width="1.5"
-        stroke-dasharray="5 4"
+        strokeWidth="1.5"
+        strokeDasharray="5 4"
       />
 
       <rect x="120" y="84" width="110" height="8" rx="4" fill="#1f2a3a" />
@@ -39,8 +39,8 @@ const AiTemplatesRealitySvg = () => {
         height="14"
         rx="3"
         stroke="#0f6a99"
-        stroke-width="1.25"
-        stroke-dasharray="4 3"
+        strokeWidth="1.25"
+        strokeDasharray="4 3"
       />
       <rect
         x="198"
@@ -49,8 +49,8 @@ const AiTemplatesRealitySvg = () => {
         height="14"
         rx="3"
         stroke="#0f6a99"
-        stroke-width="1.25"
-        stroke-dasharray="4 3"
+        strokeWidth="1.25"
+        strokeDasharray="4 3"
       />
 
       <rect
@@ -93,7 +93,7 @@ const AiTemplatesRealitySvg = () => {
         height="20"
         fill="#fff"
         stroke="#d9534f"
-        stroke-width="1.25"
+        strokeWidth="1.25"
         transform="rotate(9 240 202) translate(10 6)"
       />
 
@@ -137,7 +137,7 @@ const AiTemplatesRealitySvg = () => {
         rx="12"
         fill="#fff"
         stroke="#d5dee6"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         transform="translate(306 114) scale(0.55)"
@@ -192,15 +192,15 @@ const AiTemplatesRealitySvg = () => {
         rx="17"
         fill="#fff"
         stroke="#d5dee6"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <circle cx="58" cy="215" r="9" fill="#0f6a99" />
       <path
         d="M53.5 215l3 3 6-6"
         stroke="#fff"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <rect
         x="74"

@@ -19,6 +19,19 @@
     margin: 6rem 4rem;
   }
 }
+.heroSegment {
+  display: grid;
+  gap: 4rem;
+  @include heroPaddingWhite;
+}
+
+.lightHeroBlock {
+  @include lightHeroBlock;
+}
+
+.accent {
+  color: $accent;
+}
 
 .imgWrapper {
   z-index: 2;
@@ -59,6 +72,10 @@
 
 .content {
   z-index: 2;
+
+  h1 {
+    @include heading-main;
+  }
   h2 {
     color: $black;
     font-size: 2.5rem;
@@ -72,9 +89,8 @@
   }
 
   p:first-child {
-    color: $accent;
-    font-weight: 700;
-    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    @include eyebrow;
   }
 
   p:nth-of-type(2) {

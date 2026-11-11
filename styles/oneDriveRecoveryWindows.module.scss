@@ -1,0 +1,155 @@
+// styles/oneDriveRecoveryWindows.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark($white-90);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  @include lede($white-65);
+}
+
+.scale {
+  margin-bottom: 1rem;
+  @include label($white-35);
+}
+
+// ── Rows ─────────────────────────────────────
+.list {
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $white-12;
+}
+
+// Name | bar and fix | reach. Stacks on tablet and below.
+.row {
+  display: grid;
+  grid-template-columns: 13rem 1fr 14rem;
+  align-items: start;
+  gap: 1rem 2.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid $white-12;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.name {
+  @include card-title(md, $white-90);
+}
+
+.who {
+  @include label($white-55);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 0.45rem;
+}
+
+.track {
+  position: relative;
+  height: 0.5rem;
+  background: $white-08;
+  border-radius: $radius-pill;
+  overflow: hidden;
+}
+
+// Width comes from the --w custom property set inline; rows without one fill the track
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--w, 100%);
+  background: $accent-on-dark;
+  border-radius: inherit;
+}
+
+// Version history: no time limit, it travels with each file
+.dotted {
+  background: repeating-linear-gradient(
+    90deg,
+    $accent-on-dark 0 6px,
+    transparent 6px 12px
+  );
+}
+
+// Retention: as long as the policy says, so the bar fades rather than ends
+.fade {
+  background: linear-gradient(90deg, $accent-on-dark, transparent);
+}
+
+.fixes {
+  @include body-text($white-65);
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.value {
+  font-size: 1.6rem;
+  font-weight: $heading-weight;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.note {
+  @include small-text($white-55);
+}
+
+.footer {
+  max-width: 50rem;
+  @include small-text($white-65);
+
+  @include inline-link($white-90);
+}

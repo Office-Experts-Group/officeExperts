@@ -1,78 +1,151 @@
+// app/services/cloud-based-solutions-with-azure/page.js
+import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-import PageSegmentMain2 from "./(components)/PageSegmentMain2";
+// Static import — above the fold (holds the H1)
+import AzureIntro from "./(components)/AzureIntro";
 
-// Below-the-fold components are split into separate chunks with next/dynamic.
-// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
-const PageSegment3 = dynamic(() => import("./(components)/PageSegment3"));
-const PageSegment4New = dynamic(() => import("./(components)/PageSegment4New"));
-const PageSegment4 = dynamic(() => import("./(components)/PageSegment4"));
-const PageSegment5 = dynamic(() => import("./(components)/PageSegment5"));
-const PageSegment7 = dynamic(() => import("./(components)/PageSegment7"));
+// Dynamically imported — below the fold. dynamic() keeps SSR on by default, so crawlers still get the full HTML.
+const AccessOnAzure = dynamic(() => import("./(components)/AccessOnAzure"));
+const AzureDesktopApps = dynamic(() => import("./(components)/AzureDesktopApps"));
+const AzureIntegratedSolutions = dynamic(
+  () => import("./(components)/AzureIntegratedSolutions"),
+);
+const AzureSharePoint = dynamic(() => import("./(components)/AzureSharePoint"));
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
+const AzureProcess = dynamic(() => import("./(components)/AzureProcess"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
-const Promo = dynamic(() => import("@/components/Promo"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import graphic from "@/public/pageHeros/graphic.webp";
-import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
+// Schema generators shared across all pages
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure";
+const PAGE_TITLE = "Microsoft Cloud Based Solutions with Azure | Office Experts";
+const PAGE_DESCRIPTION =
+  "Cloud based solutions on Microsoft Azure for Australian businesses: Access with Azure SQL, .NET desktop apps, web and mobile integration and SharePoint.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const DATE_PUBLISHED = "2024-10-26T00:00:00+11:00";
+const DATE_MODIFIED = "2026-11-11T00:00:00+11:00";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
-      url: "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
-      name: "Microsoft Cloud Based Solutions | Office Expert Australia",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-10-21T00:00:00+00:00",
-      description:
-        "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
-          ],
+          target: [PAGE_URL],
         },
       ],
     },
     {
       // "By business solution" 301 redirects to /services, so it's left out of the trail
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services",
+          item: `${SITE_URL}/services`,
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Microsoft Cloud Based Solutions",
-          item: "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
+          item: PAGE_URL,
         },
       ],
+    },
+    {
+      // One Offer per cloud option covered on the page
+      "@type": "Service",
+      "@id": `${PAGE_URL}#service`,
+      name: "Microsoft Azure Cloud Solutions",
+      serviceType: "Cloud computing consulting and development",
+      description: PAGE_DESCRIPTION,
+      url: PAGE_URL,
+      provider: {
+        "@type": "Organization",
+        name: "Office Experts Group",
+        url: SITE_URL,
+        telephone: "1300102810",
+        email: "consult@officeexperts.com.au",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Australia",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Azure Cloud Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Microsoft Access with an Azure SQL Database back end",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: ".NET desktop applications on Azure SQL Database",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Web, mobile and database integration on Azure",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "SharePoint and Microsoft 365 solutions",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Azure hosting, migration and support",
+            },
+          },
+        ],
+      },
     },
   ],
 };
@@ -84,54 +157,47 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title="Cloud Based Solutions with Office, Azure and SharePoint"
-        desktopImage={graphic}
-        mobileImage={graphTableMob}
-        altDesk={"digital graphic"}
-        altMob={"graphs on a table"}
-      />
-      <PageSegmentMain2 />
-      <PageSegment3 />
-      <PageSegment4New />
-      <PageSegment5 />
-      <ExpertsAwait />
-      <PageSegment4 />
-      <PageSegment7 />
-      <RelatedLinks
-        theme="dark"
-        eyebrow="Case Studies"
-        heading="Azure cloud projects we've delivered"
-        links={[
-          {
-            href: "/case-studies/film-crew-booking-system-access-nextjs-rebuild",
-            linkText: "See the Azure SQL migration",
-            title:
-              "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
-            description:
-              "The client's entire crew booking operation ran on a native Access 2000 database that would only work inside a virtual machine, with no way for its website to connect to it. We moved the data onto Azure SQL Server, rebuilt the Access front end on the OEG Access framework, and rewrote the WordPress website in Next.js with a direct connection to the cloud database. The new site loads 10x faster.",
-            image: "/case-studies/film-crew-booking-system-rebuildLg.png",
-            imageAlt:
-              "Access booking system and Next.js website on Azure SQL Server for a freelance film and screen crew agency",
-          },
-          {
-            href: "/case-studies/internal-ai-proposal-assistant-azure-migration",
-            linkText: "Explore the tenant migration",
-            title:
-              "Turning call notes and a rate card into a first-pass proposal inside the real Word template",
-            description:
-              "The client's proposal-writing process relied on reps re-reading transcripts and briefs, then copy-pasting fee figures and consultant details from the last similar proposal. We built a conversational AI assistant that drafts a first-pass proposal straight into the real Word template, with fee tables and a consultant roster pulled from the current rate card. The tool was then migrated fully inside the client's Microsoft and Azure tenant, using Azure SQL, Azure App Service, Entra ID single sign-on and Microsoft Foundry.",
-            image: "/case-studies/internal-ai-proposal-assistant.png",
-            imageAlt:
-              "AI proposal assistant drafting into a Word template, migrated into an Azure tenant",
-          },
-        ]}
-      />
-      <Promo
-        h2="Take Your Business to the Cloud with Microsoft Azure"
-        p="Leverage the power of Azure for cost-effective, secure, and scalable cloud solutions. From Access front ends to fully integrated mobile, web, and database applications, our experts will help transform your workflows and enhance accessibility."
-      />
-      <Contact />
+
+      <main>
+        <AzureIntro />
+        <AccessOnAzure />
+        <AzureDesktopApps />
+        <AzureIntegratedSolutions />
+        <AzureSharePoint />
+        <ExpertsAwait />
+        <AzureProcess />
+        <RelatedLinks
+          theme="dark"
+          eyebrow="Case Studies"
+          heading="Azure cloud projects"
+          headingAccent="we've delivered"
+          links={[
+            {
+              href: "/case-studies/film-crew-booking-system-access-nextjs-rebuild",
+              linkText: "See the Azure SQL migration",
+              title:
+                "Migrating a VM-locked Access 2000 database to Azure with a 10x faster Next.js website",
+              description:
+                "The client's entire crew booking operation ran on a native Access 2000 database that would only work inside a virtual machine, with no way for its website to connect to it. We moved the data onto Azure SQL Server, rebuilt the Access front end on the OEG Access framework, and rewrote the WordPress website in Next.js with a direct connection to the cloud database. The new site loads 10x faster.",
+              image: "/case-studies/film-crew-booking-system-rebuildLg.png",
+              imageAlt:
+                "Access booking system and Next.js website on Azure SQL Server for a freelance film and screen crew agency",
+            },
+            {
+              href: "/case-studies/internal-ai-proposal-assistant-azure-migration",
+              linkText: "Explore the tenant migration",
+              title:
+                "Turning call notes and a rate card into a first-pass proposal inside the real Word template",
+              description:
+                "The client's proposal-writing process relied on reps re-reading transcripts and briefs, then copy-pasting fee figures and consultant details from the last similar proposal. We built a conversational AI assistant that drafts a first-pass proposal straight into the real Word template, with fee tables and a consultant roster pulled from the current rate card. The tool was then migrated fully inside the client's Microsoft and Azure tenant, using Azure SQL, Azure App Service, Entra ID single sign-on and Microsoft Foundry.",
+              image: "/case-studies/internal-ai-proposal-assistant.png",
+              imageAlt:
+                "AI proposal assistant drafting into a Word template, migrated into an Azure tenant",
+            },
+          ]}
+        />
+        <Contact />
+      </main>
     </>
   );
 };

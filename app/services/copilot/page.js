@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Static imports — above the fold
-import ServiceHero from "@/components/ServiceHero";
 import CopilotIntro from "./(components)/CopilotIntro";
 
 // Dynamically imported — below the fold
@@ -16,12 +15,6 @@ const CopilotLicensing = dynamic(
 const CopilotCta = dynamic(() => import("./(components)/CopilotCta"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
-
-// Schema generators shared across all pages
-
-// Hero images
-import copilotDesk from "@/public/pageHeros/copilot.webp";
-import copilotMob from "@/public/pageHeros/mob/copilotMob.webp";
 
 const PAGE_URL = "https://www.officeexperts.com.au/services/copilot";
 
@@ -145,13 +138,6 @@ const Page = () => {
       />
 
       <main>
-        <ServiceHero
-          title="Microsoft 365 Copilot Consulting and Deployment"
-          desktopImage={copilotDesk}
-          mobileImage={copilotMob}
-          altDesk="Microsoft 365 Copilot integrations"
-          altMob="Microsoft 365 Copilot integrations"
-        />
         <CopilotIntro />
         <CopilotApps />
         <CopilotValue />

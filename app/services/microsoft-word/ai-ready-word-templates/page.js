@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Above the fold: loaded statically
-import ServiceHero from "@/components/ServiceHero";
 import AiTemplatesHero from "./(components)/AiTemplatesHero";
 
 // Below-the-fold components loaded dynamically (still server-rendered)
@@ -32,17 +31,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/ai-ready-word-templates";
 import faqSchema from "../wordFaqs/aiReadyWordTemplatesSchema";
 
-import AiWord from "@/public/pageHeros/AiWord.webp";
-import AiWordMob from "@/public/pageHeros/mob/AiWordMob.webp";
-
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/ai-ready-word-templates";
 const PAGE_TITLE = "Copilot & AI-Ready Word Templates | Office Experts";
 const PAGE_DESCRIPTION =
   "Make Copilot work properly in Word. Australian Word specialists building AI-ready templates and custom AI agents that keep your formatting and data in line.";
 const SITE_URL = "https://www.officeexperts.com.au";
-
-const HERO_ALT = "AI in Word documents";
 
 const DATE_PUBLISHED = "2026-09-28T10:00:00+10:00";
 const DATE_MODIFIED = "2026-10-23T00:00:00+11:00";
@@ -179,13 +173,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="AI Integration in Word"
-        desktopImage={AiWord}
-        mobileImage={AiWordMob}
-        altDesk={HERO_ALT}
-        altMob={HERO_ALT}
       />
       <AiTemplatesHero />
       <AiTemplatesReality />

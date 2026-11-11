@@ -3,18 +3,12 @@
 
 .section {
   background: $light-bg;
-  // Extra top padding clears the fixed site header (no ServiceHero on this page)
-  padding: 8rem 7rem;
+  margin-top: -2rem;
+  @include heroPaddingWhite;
+}
 
-  @include tablet {
-    padding: 9rem 4rem 6rem;
-  }
-  @include phoneLandscape {
-    padding: 8rem 2rem 5rem;
-  }
-  @include phone {
-    padding: 7rem 1.25rem 4rem;
-  }
+.lightHeroBlock {
+  @include lightHeroBlock;
 }
 
 .inner {

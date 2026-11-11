@@ -1,0 +1,151 @@
+// styles/azureIntegratedSolutions.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    gap: 3rem;
+  }
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark($white-90);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  @include lede($white-65);
+}
+
+.footer {
+  @include small-text($white-65);
+  @include inline-link($accent-on-dark);
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  margin: 0 auto;
+}
+
+// Spokes in AzureHubSvg (marked data-flow) show data moving out from the hub
+.visual [data-flow] {
+  stroke-dasharray: 4 8;
+  animation: flow 1.8s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+// ── Layer cards ───────────────────────────────
+.layers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.75rem;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: $radius;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: $dark-mid;
+  }
+
+  h3 {
+    @include card-title(md, $white);
+  }
+
+  p {
+    @include small-text($white-65);
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.2rem 0.65rem;
+  border: 1px solid $white-18;
+  border-radius: $radius-pill;
+  color: $white-88;
+  font-size: 0.75rem;
+}
+
+// Pushed to the bottom of the card so links line up across the row
+.layerLink {
+  margin-top: auto;
+  @include arrow-link($accent-on-dark);
+}

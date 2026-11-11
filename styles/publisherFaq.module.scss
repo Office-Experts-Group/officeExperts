@@ -1,0 +1,89 @@
+// styles/publisherFaq.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// Heading left, questions right on desktop
+.inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Accordion ────────────────────────────────
+.item {
+  border-top: 1px solid $line;
+
+  &:last-child {
+    border-bottom: 1px solid $line;
+  }
+
+  &[open] .question svg {
+    transform: rotate(45deg);
+  }
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  list-style: none;
+  @include card-title;
+
+  // Hide the default disclosure triangle in WebKit
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: $accent;
+    transition: transform 0.2s ease;
+  }
+}
+
+.answer {
+  padding: 0 2.5rem 1.5rem 0;
+  @include body-text;
+}

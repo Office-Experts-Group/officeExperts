@@ -1,50 +1,46 @@
-import React from "react";
+// app/services/cloud-backup-with-onedrive/layout.js
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/cloud-backup-with-onedrive";
+const PAGE_TITLE = "OneDrive Cloud Backup & Recovery for Businesses";
+const PAGE_DESCRIPTION =
+  "OneDrive setup, Microsoft 365 Backup, migration and file recovery for Australian businesses. Protect files from deletion, ransomware and staff turnover.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "OneDrive Cloud Backup for Businesses | Office Experts",
-  description:
-    "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
-
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   keywords: [
-    // Core OneDrive services
-    "OneDrive cloud storage",
+    "OneDrive cloud backup",
+    "OneDrive backup for business",
+    "Microsoft 365 Backup",
+    "OneDrive migration",
+    "OneDrive Known Folder Move",
+    "unlicensed OneDrive accounts",
   ],
-
-  alternates: {
-    canonical: "/services/cloud-backup-with-onedrive",
-  },
-
-  // OpenGraph
   openGraph: {
-    title: "OneDrive Cloud Backup for Businesses | Office Experts",
-    description:
-      "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
-    url: "https://www.officeexperts.com.au/services/cloud-backup-with-onedrive",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "OneDrive Cloud Backup for Businesses | Office Experts",
-    description:
-      "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

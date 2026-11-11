@@ -1,0 +1,111 @@
+// styles/oneDriveCopilot.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark($white-90);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @include lede($white-65);
+}
+
+// ── Points ───────────────────────────────────
+.points {
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $white-12;
+}
+
+.point {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.4rem 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid $white-12;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pointTitle {
+  @include card-title(sm, $white-90);
+}
+
+.pointText {
+  @include small-text($white-65);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-inline: auto;
+}

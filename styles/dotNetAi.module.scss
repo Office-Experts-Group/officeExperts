@@ -1,0 +1,115 @@
+// styles/dotNetAi.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// Header and illustration left, use cases right
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: start;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  @include lede;
+  @include inline-link;
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+// ── Use cases ─────────────────────────────────
+.uses {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  // Sits alongside the header copy on desktop rather than the eyebrow
+  @include desktopUp {
+    margin-top: 3rem;
+  }
+}
+
+.use {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.75rem 2rem;
+  background: $light-bg;
+  border-radius: $radius;
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+
+  @include phone {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.useTag {
+  @include label($accent);
+}
+
+.useTitle {
+  @include card-title(md);
+}
+
+.useText {
+  @include small-text;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 1rem;
+}

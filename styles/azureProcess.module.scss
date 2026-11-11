@@ -1,0 +1,138 @@
+// styles/azureProcess.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    @include lede;
+    @include inline-link;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Steps ─────────────────────────────────────
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  // Connector from this badge to the next one, so the line stops at the last step.
+  // Horizontal across the row on desktop, vertical down the stack below that.
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: calc(1.5rem - 1px);
+    left: 3.75rem;
+    right: -0.75rem;
+    height: 2px;
+    background: $line-strong;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    @include card-title(lg);
+  }
+
+  p {
+    @include small-text;
+  }
+
+  // Stacked layout: badge on the left, text beside it
+  @include belowDesktop {
+    padding-left: 4.5rem;
+
+    &:not(:last-child)::before {
+      top: 3.75rem;
+      bottom: -1.25rem;
+      left: calc(1.5rem - 1px);
+      right: auto;
+      width: 2px;
+      height: auto;
+    }
+
+    h3 {
+      margin-top: 0.6rem;
+    }
+  }
+}
+
+.stepNum {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: $accent;
+  border-radius: 50%;
+  color: $white;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  @include belowDesktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+
+  p {
+    @include body-text;
+    @include inline-link;
+  }
+}

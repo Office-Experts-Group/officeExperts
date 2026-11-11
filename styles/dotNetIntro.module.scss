@@ -1,0 +1,235 @@
+// styles/dotNetIntro.module.scss
+@use "./globals.scss" as *;
+
+.lightHero {
+  @include lightHeroBlock;
+}
+
+.section {
+  background: $white;
+  padding: 2rem $gutter 6rem;
+
+  @include mobile {
+    padding: 2rem $mobGutter 5rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    gap: 3rem;
+  }
+}
+
+// ── Top row ───────────────────────────────────
+.top {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-main;
+}
+
+.accent {
+  color: $accent;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.visual {
+  width: 100%;
+  max-width: 480px;
+  justify-self: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ── Bottom row ────────────────────────────────
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Jump list ─────────────────────────────────
+// A pipe runs down the left with a dot beside each link; hover or focus lights the dot and text.
+.toc {
+  padding: 2.25rem;
+  background: $dark-bg;
+  border-radius: $radius;
+
+  ol {
+    position: relative;
+    list-style: none;
+    margin-top: 1.25rem;
+    padding-left: 1.75rem;
+
+    // The pipe, inset so it starts and ends at the first and last dots
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      left: 0.35rem;
+      width: 2px;
+      background: $white-18;
+    }
+  }
+
+  li + li a {
+    border-top: 1px solid $white-12;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    color: $white-88;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    // The dot, centred on the pipe
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(-1.75rem + 1px);
+      width: 0.7rem;
+      height: 0.7rem;
+      background: $white-35;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: background 0.2s ease;
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: $white-35;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        background: $accent-on-dark;
+      }
+
+      .tocText {
+        color: $accent-on-dark;
+      }
+
+      svg {
+        color: $accent-on-dark;
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  @include phone {
+    padding: 1.75rem;
+  }
+}
+
+.tocText {
+  transition: color 0.2s ease;
+}
+
+.tocLabel {
+  @include label($white-55);
+}
+
+// ── Deadline notice ───────────────────────────
+// Accent background with light text, the preferred alternative to tinted panels
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: $accent;
+  border-radius: $radius;
+
+  p {
+    color: $white-88;
+    line-height: 1.8;
+  }
+
+  @include phone {
+    padding: 1.75rem;
+  }
+}
+
+.noticeTag {
+  padding: 0.3rem 0.8rem;
+  background: $white-18;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.noticeHeading {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.25;
+  color: $white;
+}
+
+// White on the accent background, as the standard accent link colour would disappear here
+.noticeLink {
+  color: $white;
+  font-weight: 700;
+}
+
+.noticeArrow {
+  margin-top: auto;
+  @include arrow-link($white);
+}

@@ -1,0 +1,109 @@
+// styles/publisherConversion.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 48rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Comparison table ──────────────────────────
+.scroller {
+  overflow-x: auto;
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: 1.1rem 1.25rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  thead th {
+    padding: 1.5rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: $text-primary;
+  }
+
+  tbody tr {
+    border-top: 1px solid $border;
+  }
+
+  tbody th {
+    width: 9.5rem;
+    @include label;
+  }
+
+  td {
+    color: $text-secondary;
+  }
+
+  // Our column: accent background, light text, top to bottom
+  thead .ours {
+    color: $white;
+    background: $accent;
+  }
+
+  tbody td:last-child {
+    color: $white-90;
+    background: $accent;
+  }
+}
+
+.note {
+  max-width: 48rem;
+  @include body-text;
+  @include inline-link;
+}

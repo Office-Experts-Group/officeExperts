@@ -2,11 +2,10 @@
 import dynamic from "next/dynamic";
 
 // Above the fold: import directly
-import ServiceHero from "@/components/ServiceHero";
 import AiAgentsHero from "./(components)/AiAgentsHero";
+import AiAgentsProblem from "./(components)/AiAgentsProblem";
 
 // Below the fold: code-split with next/dynamic (still server-rendered)
-const AiAgentsProblem = dynamic(() => import("./(components)/AiAgentsProblem"));
 const AiAgentsUseCases = dynamic(
   () => import("./(components)/AiAgentsUseCases"),
 );
@@ -29,10 +28,6 @@ const ProposalAssistantDemo = dynamic(
 // FAQ content (also used to build the FAQPage schema below)
 import faqs from "@/faqs/ai-agent-development";
 import faqSchema from "@/faqs/aiAgentDevelopmentSchema";
-
-// Placeholder hero images so the page compiles. Swap for the real artwork.
-import agents from "@/public/pageHeros/agents.webp";
-import agentsMob from "@/public/pageHeros/mob/agentsMob.webp";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-agent-development`;
@@ -104,14 +99,6 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ServiceHero owns the page <h1> */}
-      <ServiceHero
-        title="AI Agent Development"
-        desktopImage={agents}
-        mobileImage={agentsMob}
-        altDesk="Custom AI agents working across Microsoft 365"
-        altMob="Custom AI agents working across Microsoft 365"
-      />
       <AiAgentsHero />
       <AiAgentsProblem />
       <ProposalAssistantDemo />

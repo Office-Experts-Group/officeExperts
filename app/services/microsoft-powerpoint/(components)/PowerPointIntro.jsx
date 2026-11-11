@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 
-// Client-side wrapper that fades each block in as it enters the viewport
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
 // Compiled from styles/powerPointIntro.module.scss
 import styles from "@/styles/powerPointIntro.module.scss";
 
@@ -50,27 +47,28 @@ const sections = [
 const facts = ["Established 2000", "25+ consultants", "Onsite or remote"];
 
 const PowerPointIntro = () => (
-  <section className={styles.section}>
-    <div className={styles.inner}>
-      {/* ── Copy ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6}>
+  <>
+    <div className={styles.lightHeroBlock}></div>
+    <section className={styles.section}>
+      <div className={styles.inner}>
+        {/* ── Copy ── */}
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Presentation design and development</p>
-          <h2 className={styles.heading}>
+          <h1 className={styles.heading}>
             PowerPoint experts who make presentations{" "}
             <span className={styles.accent}>easier to build.</span>
-          </h2>
+          </h1>
           <p className={styles.lead}>
             When it comes to Microsoft PowerPoint, our Australia-wide,
             cross-industry consultants deliver a prompt, quality service with
             competitive pricing.
           </p>
           <p className={styles.body}>
-            Our PowerPoint experts specialise in presentation templates,
-            design, customisation, automation, integration, training and
-            support. Whether you need one branded template, an existing deck
-            brought into line, or a report that builds itself every month, we
-            work with your team to get it right.
+            Our PowerPoint experts specialise in presentation templates, design,
+            customisation, automation, integration, training and support.
+            Whether you need one branded template, an existing deck brought into
+            line, or a report that builds itself every month, we work with your
+            team to get it right.
           </p>
           <div className={styles.ctaRow}>
             <Link href="#contact" className="btn">
@@ -83,10 +81,7 @@ const PowerPointIntro = () => (
             </ul>
           </div>
         </div>
-      </AnimateOnScroll>
 
-      {/* ── Jump links ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.1}>
         <nav aria-label="PowerPoint services">
           <p className={styles.navTitle}>What we do</p>
           <ul className={styles.nav}>
@@ -108,9 +103,9 @@ const PowerPointIntro = () => (
             ))}
           </ul>
         </nav>
-      </AnimateOnScroll>
-    </div>
-  </section>
+      </div>
+    </section>
+  </>
 );
 
 export default PowerPointIntro;

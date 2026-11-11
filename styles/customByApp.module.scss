@@ -1,0 +1,136 @@
+// styles/customByApp.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Cards ─────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $white;
+  border-radius: $radius;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-3px);
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+// Accent tile holding the app glyph; glyph colour comes through currentColor
+.icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  background: $accent;
+  color: $white;
+  border-radius: 0.9rem;
+}
+
+.cardTitle {
+  @include card-title(lg);
+}
+
+.summary {
+  @include body-text;
+}
+
+// Dot bullets drawn in CSS so the list stays a plain <ul>
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem 0 0.5rem;
+  border-top: 1px solid $line;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1rem;
+    @include small-text;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background: $accent;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Pushed to the bottom so links line up across a row
+.cardLink {
+  margin-top: auto;
+  @include arrow-link;
+}

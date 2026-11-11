@@ -1,17 +1,9 @@
 // app/services/sql-server-and-access-integration/page.js
 
 import React from "react";
-
-// next/dynamic splits each below-the-fold section into its own chunk.
-// SSR stays on by default, so the content is still in the initial HTML for crawlers.
 import dynamic from "next/dynamic";
 
-// Hero is above the fold, so it is imported normally
-import ServiceHero from "@/components/ServiceHero";
 import SqlHero from "./(components)/SqlHero";
-
-import sql from "@/public/pageHeros/sql.webp";
-import sqlMob from "@/public/pageHeros/mob/sqlMob.webp";
 
 // Shared site components
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
@@ -170,14 +162,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-
-      <ServiceHero
-        title="SQL Server Integration for Access and Microsoft Office"
-        desktopImage={sql}
-        mobileImage={sqlMob}
-        altDesk="random computer code"
-        altMob="SQL digital design"
       />
       <SqlHero />
       <SqlBenefits />

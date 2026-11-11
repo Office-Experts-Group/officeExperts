@@ -50,11 +50,7 @@
 }
 
 .heading {
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: $white;
+  @include heading-section($white);
 }
 
 .muted {
@@ -113,6 +109,19 @@
 }
 
 // ── Stats ────────────────────────────────────
+.imgContainer {
+  margin: 0 auto;
+  max-width: 97vw;
+  @include phone {
+    transform: scale(0.8);
+  }
+  img {
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.815);
+    max-width: 97vw;
+    height: auto;
+  }
+}
+
 .stats {
   display: flex;
   flex-direction: column;

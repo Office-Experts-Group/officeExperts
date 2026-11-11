@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -9,7 +8,7 @@ const stats = [
   { value: "1B+", label: "Microsoft 365 users worldwide" },
   { value: "25+", label: "Expert consultants across Australia" },
   { value: "25+", label: "Years delivering Microsoft solutions" },
-  { value: "1000+", label: "Projects successfully delivered" },
+  { value: "2500+", label: "Projects successfully delivered" },
 ];
 
 const capabilities = [
@@ -172,7 +171,8 @@ const PageSegmentFinal = () => {
           <div className={styles.header}>
             <p className={styles.eyebrow}>The Full Picture</p>
             <h2 className={styles.heading}>
-              Your Entire Business, Powered by Microsoft 365
+              Your Entire Business, Powered by
+              <span className={styles.accent}> Microsoft 365</span>
             </h2>
             <p className={styles.subheading}>
               Office 365 is no longer just productivity software. In 2026 it is

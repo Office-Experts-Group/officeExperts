@@ -3,17 +3,11 @@
 
 .section {
   background: $white;
-  padding: 8rem 6rem;
+  @include heroPaddingWhite;
+}
 
-  @include tablet {
-    padding: 6rem 4rem 5rem;
-  }
-  @include phoneLandscape {
-    padding: 5rem 2rem 4rem;
-  }
-  @include phone {
-    padding: 4.5rem 1.25rem 4rem;
-  }
+.lightHeroBlock {
+  @include lightHeroBlock;
 }
 
 .inner {

@@ -1,0 +1,101 @@
+// styles/publisherHero.module.scss
+@use "./globals.scss" as *;
+
+// Dark hero, top padding clears the transparent header
+.hero {
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include tablet {
+    padding: 10rem 4rem 6rem;
+  }
+  @include mobile {
+    padding: 9rem 1.25rem 5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @include lede($white-65);
+  @include inline-link($accent-on-dark);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.ctaSecondary {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $accent-on-dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ── Proof points ──────────────────────────────
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1rem;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid $white-12;
+  list-style: none;
+
+  strong {
+    display: block;
+    font-size: 1.6rem;
+    color: $white;
+    letter-spacing: -0.02em;
+  }
+
+  span {
+    @include label($white-55);
+  }
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

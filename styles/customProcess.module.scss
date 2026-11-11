@@ -1,0 +1,112 @@
+// styles/customProcess.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+// Header left, steps right
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// Sticks below the site header while the steps scroll past (desktop only)
+.header {
+  position: sticky;
+  top: $header-offset;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+
+  p {
+    margin-bottom: 0.75rem;
+    @include lede;
+  }
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Steps ─────────────────────────────────────
+// <ol> keeps the order meaningful; the visible numbers are decorative
+.steps {
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid $line;
+
+  &:last-child {
+    border-bottom: 1px solid $line;
+  }
+
+  @include phone {
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+  }
+}
+
+.stepNum {
+  font-size: 2.5rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: $line-strong;
+
+  @include phone {
+    font-size: 1.75rem;
+  }
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+
+  h3 {
+    @include card-title(lg);
+  }
+
+  p {
+    @include body-text;
+  }
+}

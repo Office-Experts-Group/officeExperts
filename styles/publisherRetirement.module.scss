@@ -1,0 +1,137 @@
+// styles/publisherRetirement.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    @include lede;
+    @include inline-link;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Timeline: a grey rail with a dot per date ──
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0 0 2rem;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 0.35rem;
+    width: 2px;
+    background: $line;
+  }
+}
+
+.event {
+  position: relative;
+
+  // Dot sits on the rail
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: -2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: $accent;
+    border: 3px solid $white;
+    border-radius: 50%;
+  }
+
+  // The two October 2026 dates are the ones that matter now
+  &:nth-last-child(-n + 2) .date {
+    color: $white;
+    background: $accent;
+  }
+
+  p {
+    margin-top: 0.6rem;
+    @include body-text;
+  }
+}
+
+.date {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: $grayBGC;
+  border-radius: $radius-pill;
+  @include label($text-primary);
+}
+
+// ── Licence situation cards ──
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.75rem 2rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  p {
+    margin-top: 0.6rem;
+    @include body-text;
+  }
+}
+
+.cardTitle {
+  @include card-title;
+}

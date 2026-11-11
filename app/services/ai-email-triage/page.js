@@ -1,9 +1,6 @@
 // app/services/ai-email-triage/page.js
 import dynamic from "next/dynamic";
 
-// ServiceHero (carries the page's <h1>) and the first section are above the
-// fold, so they're imported directly
-import ServiceHero from "@/components/ServiceHero";
 import EmailTriageHero from "./(components)/EmailTriageHero";
 
 // Below-the-fold components loaded dynamically. All are server components,
@@ -34,12 +31,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 // FAQ content: rendered by FAQSection and mapped into FAQPage schema below
 import faqs from "@/faqs/ai-email-triage";
-
-// Temporary hero image until the final artwork is ready (used for both sizes)
-import emailTriage from "@/public/pageHeros/emailTriage.webp";
-import emailTriageMob from "@/public/pageHeros/mob/emailTriageMob.webp";
-
-// Shared schema builders (organisation, professional service, website)
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;
@@ -157,13 +148,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceHero
-        title="AI Email Triage"
-        desktopImage={emailTriage}
-        mobileImage={emailTriageMob}
-        altDesk="AI sorting incoming emails into priority categories"
-        altMob="AI sorting incoming emails into priority categories"
       />
       <EmailTriageHero />
       <EmailTriageIntro />

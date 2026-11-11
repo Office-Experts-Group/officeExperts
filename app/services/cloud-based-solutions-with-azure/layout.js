@@ -1,48 +1,45 @@
-import React from "react";
+// app/services/cloud-based-solutions-with-azure/layout.js
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure";
+const PAGE_TITLE = "Microsoft Cloud Based Solutions with Azure | Office Experts";
+const PAGE_DESCRIPTION =
+  "Cloud based solutions on Microsoft Azure for Australian businesses: Access with Azure SQL, .NET desktop apps, web and mobile integration and SharePoint.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Microsoft Cloud Based Solutions | Office Experts Group",
-  description:
-    "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    "Microsoft cloud solutions with Azure",
+    "Azure SQL database Access",
+    "Access database in the cloud",
+    "Azure consultants Australia",
+    "SharePoint solutions",
+  ],
   openGraph: {
-    title: "Microsoft Cloud Based Solutions | Office Experts Group",
-    description:
-      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
-    url: "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Microsoft cloud solutions with Azure"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft Cloud Based Solutions | Office Experts Group",
-    description:
-      "We create and support a wide variety of cloud based solutions including Azure databases, SharePoint integration, and mobile solutions.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
-
-  alternates: {
-    canonical: "/services/cloud-based-solutions-with-azure",
-  },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

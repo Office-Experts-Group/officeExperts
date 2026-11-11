@@ -3,7 +3,7 @@
 
 .section {
   background: $light-bg;
-  padding: 7rem 8rem;
+  padding: 7rem $gutter;
   scroll-margin-top: 4rem;
 
   @include tablet {
@@ -64,7 +64,6 @@
   aspect-ratio: 16 / 9;
   margin-bottom: 0.75rem;
   background: $dark-bg;
-  border-radius: $radius;
   overflow: hidden;
 
   iframe {

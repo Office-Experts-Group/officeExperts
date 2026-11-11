@@ -1,0 +1,208 @@
+// styles/dotNetSupport.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+// ── Header and callout ────────────────────────
+.top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: end;
+  gap: 4rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark($white-90);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  @include lede($white-65);
+}
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: $dark-surface;
+  border-radius: $radius;
+
+  p {
+    @include small-text($white-65);
+  }
+}
+
+.calloutTitle {
+  @include card-title(sm, $white-90);
+}
+
+// ── Version table ─────────────────────────────
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: 1.2rem 1.25rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  thead th {
+    @include label($white-55);
+  }
+
+  tbody tr {
+    border-top: 1px solid $white-12;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $white-08;
+    }
+  }
+
+  tbody th {
+    width: 15rem;
+  }
+
+  td {
+    color: $white-65;
+  }
+
+  // Phones: each row becomes a card, with the column name drawn from data-label
+  @include mobile {
+    thead {
+      @include visually-hidden;
+    }
+
+    tbody tr {
+      display: block;
+      padding: 1.25rem 0;
+    }
+
+    tbody th,
+    td {
+      display: block;
+      width: auto;
+      padding: 0.35rem 0;
+    }
+
+    td::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.15rem;
+      @include label($white-55);
+    }
+  }
+}
+
+.version {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: $white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.date {
+  font-weight: 700;
+
+  // Overrides the default td colour so the date reads first in each row
+  .table & {
+    color: $white-90;
+  }
+}
+
+// ── Status chips ──────────────────────────────
+.status {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: $radius-pill;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.recommended {
+  background: $accent;
+  color: $white;
+}
+
+.supported {
+  background: $white-12;
+  color: $white-88;
+}
+
+.ending {
+  border: 1px solid $white-35;
+  color: $white-88;
+}
+
+.ended {
+  background: $error-bg;
+  color: $error;
+}
+
+// ── Footer ────────────────────────────────────
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $white-12;
+
+  p {
+    flex: 1 1 28rem;
+    @include body-text($white-65);
+    @include inline-link($accent-on-dark);
+  }
+}
+
+.srOnly {
+  @include visually-hidden;
+}

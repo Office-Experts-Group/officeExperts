@@ -3,7 +3,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PowerPointIntro from "./(components)/PowerPointIntro";
 
 const PowerPointTemplates = dynamic(
@@ -25,9 +24,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
 import { testimonials } from "@/testimonials";
-
-import powerpoint from "@/public/pageHeros/powerpoint.webp";
-import powerpointMob from "@/public/pageHeros/mob/powerpointMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-powerpoint";
@@ -148,13 +144,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <ServiceHero
-        title="Microsoft PowerPoint"
-        desktopImage={powerpoint}
-        mobileImage={powerpointMob}
-        altDesk="PowerPoint presentations and templates"
-        altMob="PowerPoint presentations and templates"
       />
       <PowerPointIntro />
       <PowerPointTemplates />

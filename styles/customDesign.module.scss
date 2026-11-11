@@ -1,0 +1,131 @@
+// styles/customDesign.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    gap: 3rem;
+  }
+}
+
+// ── Top: content left, illustration right ─────
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  p {
+    @include lede;
+    @include inline-link;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// InDesign conversion callout on a soft panel
+.convert {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 1.75rem 2rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  h3 {
+    @include card-title(md);
+  }
+
+  p {
+    @include body-text;
+  }
+
+  @include phone {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.visual {
+  max-width: 480px;
+  width: 100%;
+  justify-self: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ── Features ──────────────────────────────────
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid $line-strong;
+
+  h3 {
+    @include card-title(sm);
+  }
+
+  p {
+    @include small-text;
+  }
+}

@@ -1,7 +1,6 @@
 // app/services/microsoft-office-365/page.js
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 
 // Dynamically imported below the fold
@@ -21,9 +20,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
 import { testimonials } from "@/testimonials";
-
-import longDesk from "@/public/pageHeros/longDesk.webp";
-import graphTableMob from "@/public/pageHeros/mob/graphTableMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-office-365";
@@ -93,13 +89,6 @@ const Page = () => {
       />
 
       <main>
-        <ServiceHero
-          title="Microsoft Office 365"
-          desktopImage={longDesk}
-          mobileImage={graphTableMob}
-          altDesk="desk in an office environment"
-          altMob="graphs on a table"
-        />
         <PageSegmentMain />
         <PageSegment4 />
         <Quote />
@@ -111,7 +100,8 @@ const Page = () => {
         <RelatedLinks
           theme="dark"
           eyebrow="Case Studies"
-          heading="Office 365 solutions we have delivered"
+          heading="Office 365 solutions we have"
+          headingAccent="completed recently"
           links={[
             {
               href: "/case-studies/professional-services-sharepoint-foundation-workshops",

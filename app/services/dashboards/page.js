@@ -2,8 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// ServiceHero and the first section are above the fold, so they're imported directly
-import ServiceHero from "@/components/ServiceHero";
 import DashboardsIntro from "./(components)/DashboardsIntro";
 
 // Below-the-fold sections are split into separate chunks (still server rendered)
@@ -16,18 +14,13 @@ const DashboardsDataSources = dynamic(
 const DashboardsAi = dynamic(() => import("./(components)/DashboardsAi"));
 const DashboardsDemos = dynamic(() => import("./(components)/DashboardsDemos"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+// const InternalLinks = dynamic(() => import("@/components/InternalLinks"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 // FAQ content and the FAQPage schema built from it
 import faqs from "@/faqs/dashboards";
 import faqSchema from "@/faqs/dashboardsSchema";
-
-// Hero images (unchanged from the previous version of the page)
-import dashboards from "@/public/pageHeros/dashboards.webp";
-import dashboardsMob from "@/public/pageHeros/mob/dashboardsMob.webp";
-
-// Shared schema builders used across the site
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/dashboards`;
@@ -163,13 +156,6 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <ServiceHero
-        title="Dashboards and Reporting Solutions"
-        desktopImage={dashboards}
-        mobileImage={dashboardsMob}
-        altDesk="Power Platform and excel dashboards"
-        altMob="Power Platform and excel dashboards"
-      />
       <DashboardsIntro />
       <DashboardsPlatforms />
       <DashboardsDataSources />
@@ -178,9 +164,21 @@ const Page = () => {
       <RelatedLinks
         theme="dark"
         eyebrow="Case Studies"
-        heading="Dashboard and reporting projects we've delivered"
+        heading="Some recent dashboard and reporting"
+        headingAccent={"projects"}
         links={caseStudies}
       />
+      {/* <InternalLinks
+        heading="Explore more Microsoft Word services"
+        text="Looking for something similar? These pages cover related Word solutions."
+        links={[
+          {
+            text: "Word Template Design",
+            href: "/services/microsoft-word/templates",
+          },
+          { text: "Word Training", href: "/services/microsoft-word/training" },
+        ]}
+      /> */}
       <div style={{ marginTop: "6rem" }}>
         <FAQSection faqs={faqs} />
       </div>

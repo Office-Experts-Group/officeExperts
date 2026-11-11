@@ -1,0 +1,106 @@
+// styles/oneDriveUpdates.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  @include lede;
+}
+
+// ── Change list ──────────────────────────────
+.list {
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid $border;
+}
+
+// Date | change | action. Stacks on tablet and below.
+.item {
+  display: grid;
+  grid-template-columns: 10rem 1fr 17rem;
+  align-items: start;
+  gap: 1rem 2.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid $border;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.date {
+  padding-top: 0.35rem;
+  @include label($accent);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.itemTitle {
+  @include card-title(lg);
+}
+
+.itemBody {
+  @include body-text;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.25rem 1.5rem;
+  background: $light-bg;
+  border-radius: $radius;
+}
+
+.actionLabel {
+  @include label;
+}
+
+.actionText {
+  font-weight: 600;
+  @include small-text($text-primary);
+}

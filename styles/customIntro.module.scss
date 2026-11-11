@@ -1,0 +1,127 @@
+// styles/customIntro.module.scss
+@use "./globals.scss" as *;
+
+// Dark block behind the transparent header (replaces ServiceHero)
+.lightHero {
+  @include lightHeroBlock;
+}
+
+.section {
+  background: $white;
+  padding: 2rem $gutter 6rem;
+
+  @include mobile {
+    padding: 2rem $mobGutter 5rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    gap: 3rem;
+  }
+}
+
+// ── Top row ───────────────────────────────────
+.top {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  p {
+    @include lede;
+    @include inline-link;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-main;
+}
+
+.accent {
+  color: $accent;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.textLink {
+  @include arrow-link;
+}
+
+.visual {
+  max-width: 460px;
+  width: 100%;
+  justify-self: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ── Fact row ──────────────────────────────────
+// Four columns split by thin rules; drops to two columns below desktop
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid $line;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.75rem 1.5rem 0;
+  border-left: 1px solid $line;
+
+  &:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  dt {
+    font-size: 1.4rem;
+    font-weight: $heading-weight;
+    color: $ink;
+  }
+
+  dd {
+    @include small-text;
+  }
+
+  @include belowDesktop {
+    padding: 1.5rem 1.25rem 0 0;
+    border-left: none;
+  }
+}

@@ -11,15 +11,7 @@ const PAGE_URL = "https://www.officeexperts.com.au/services/business-analysis";
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: [
-    "business analysis services",
-    "business analysis consulting australia",
-    "business requirements analysis",
-    "business process analysis",
-    "solution design",
-    "workflow mapping",
-    "ai implementation consulting",
-  ],
+  keywords: ["business analysis services"],
   openGraph: {
     title: OG_TITLE,
     description: OG_DESCRIPTION,

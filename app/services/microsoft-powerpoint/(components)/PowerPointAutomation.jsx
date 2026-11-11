@@ -1,12 +1,15 @@
 // app/services/microsoft-powerpoint/(components)/PowerPointAutomation.jsx
 
 import Link from "next/link";
+import Image from "next/image";
 
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/powerPointAutomation.module.scss";
 
 import { ArrowIcon } from "../(svgs)/ArrowIcon";
+
+import caseStudy from "@/public/case-studies/retail-analytics-deck-generatorLg.png";
 
 // Headline figures from the retail analytics review deck case study
 const stats = [
@@ -48,7 +51,10 @@ const PowerPointAutomation = () => (
             >
               Read the review deck case study
             </Link>
-            <Link href="/services/vba-macro-development" className={styles.link}>
+            <Link
+              href="/services/vba-macro-development"
+              className={styles.link}
+            >
               Explore our VBA macro development service
               <ArrowIcon />
             </Link>
@@ -58,6 +64,14 @@ const PowerPointAutomation = () => (
 
       <AnimateOnScroll animation="fade-up" duration={0.6} delay={0.1}>
         <ul className={styles.stats}>
+          <div className={styles.imgContainer}>
+            <Image
+              src={caseStudy}
+              alt="Screenshot of a Retail Analytics Review Deck by Office Experts"
+              width={350}
+              height={225}
+            />
+          </div>
           {stats.map((stat) => (
             <li key={stat.figure} className={styles.stat}>
               <strong className={styles.figure}>{stat.figure}</strong>

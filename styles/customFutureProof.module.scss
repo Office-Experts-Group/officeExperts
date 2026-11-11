@@ -1,0 +1,104 @@
+// styles/customFutureProof.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+  scroll-margin-top: 4rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 46rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Accent cards with light text ──────────────
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2.25rem 2rem;
+  background: $accent;
+  border-radius: $radius;
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.cardLabel {
+  @include label($white-65);
+}
+
+.cardTitle {
+  @include card-title(lg, $white);
+}
+
+// White links, as the standard accent link would disappear on this background
+.cardText {
+  @include body-text($white-88);
+  @include inline-link($white);
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// ── CTA row ───────────────────────────────────
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+
+  p {
+    max-width: 34rem;
+    @include body-text;
+  }
+}

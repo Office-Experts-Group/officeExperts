@@ -1,50 +1,49 @@
-import React from "react";
+// app/services/microsoft-dot-net/layout.js
+const PAGE_URL = "https://www.officeexperts.com.au/services/microsoft-dot-net";
+const PAGE_TITLE = "Microsoft .NET Development Services Australia | Office Experts";
+const PAGE_DESCRIPTION =
+  "C#, VB.NET and ASP.NET Core developers across Australia. We build, support and migrate .NET apps, including .NET Framework to .NET 10 upgrades and VSTO add-ins.";
+
+const OG_IMAGE = {
+  url: "/logo.png",
+  width: 1200,
+  height: 630,
+  alt: "Office Experts logo",
+};
 
 export const metadata = {
-  // Basic metadata
-  title: "Microsoft .NET Development Services | Office Experts",
-  description:
-    "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
-
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   keywords: [
-    // Core .NET services
-    "NET developers",
+    ".NET developers",
+    ".NET development services",
+    "C# developers Australia",
+    "VB.NET developers",
+    "ASP.NET Core development",
+    ".NET Framework migration",
+    "upgrade to .NET 10",
+    ".NET 8 end of support",
+    "VSTO add-in development",
+    "Blazor development",
   ],
-
-  alternates: {
-    canonical: "/services/microsoft-dot-net",
-  },
-
-  // OpenGraph
   openGraph: {
-    title: "Microsoft .NET Development Services | Office Experts",
-    description:
-      "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
-    url: "https://www.officeexperts.com.au/services/microsoft-dot-net",
-    siteName: "Office Experts Group",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Office Experts",
+    images: [OG_IMAGE],
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Microsoft .NET Development Services | Office Experts Group",
-    description:
-      "Our .NET developers are highly experienced across the .NET platform, providing expert C#, VB.NET, and VSTO development services across Australia.",
-    images: ["/logo.png"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

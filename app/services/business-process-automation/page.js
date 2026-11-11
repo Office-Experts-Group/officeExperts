@@ -1,7 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import BPAIntro from "./(components)/BPAIntro";
 
 const BPADocProcessing = dynamic(
@@ -14,9 +13,6 @@ const BPAProcess = dynamic(() => import("./(components)/BPAProcess"));
 const BPAFaq = dynamic(() => import("./(components)/BPAFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
-
-import party from "@/public/pageHeros/3rdParty.webp";
-import coffeeMob from "@/public/pageHeros/mob/coffeeMob.webp";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/business-process-automation";
@@ -136,17 +132,6 @@ const Page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-
-      {/* FAQPage JSON-LD is injected by BPAFaq.jsx */}
-
-      {/* ── Hero ── */}
-      <ServiceHero
-        title="Business Process Automation & AI Workflows"
-        desktopImage={party}
-        mobileImage={coffeeMob}
-        altDesk={"lady in an office environment"}
-        altMob={"coffee on a desk"}
       />
       <BPAIntro />
       <BPADocProcessing />

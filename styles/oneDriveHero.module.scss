@@ -1,0 +1,103 @@
+// styles/oneDriveHero.module.scss
+@use "./globals.scss" as *;
+
+// Dark hero. heroPadding's 12rem top clears the transparent header and top bar.
+.hero {
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem 4rem 5rem;
+  }
+  @include mobile {
+    padding: 9rem $mobGutter 4.5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  max-width: 36rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.secondary {
+  @include arrow-link($accent-on-dark);
+}
+
+.proof {
+  @include small-text($white-55);
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+// ── Quick links ──────────────────────────────
+// Spans both grid columns so it sits under the copy and the illustration
+.jump {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid $white-12;
+}
+
+.jumpLabel {
+  @include label($white-35);
+}
+
+.jumpLink {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $white-88;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent-on-dark;
+  }
+}

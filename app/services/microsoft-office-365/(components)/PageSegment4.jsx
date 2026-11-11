@@ -25,7 +25,9 @@ const WhatIs365 = () => {
             >
               The Platform
             </p>
-            <h2 style={{ marginBottom: "1rem" }}>What Is Office 365?</h2>
+            <h2 style={{ marginBottom: "1rem" }}>
+              What Is<span className={styles.accent}> Office 365?</span>
+            </h2>
             <p>
               Microsoft Office 365 has evolved into a monolithic tool that in
               2026, can form the backbone of your entire business operations.

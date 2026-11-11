@@ -1,0 +1,122 @@
+// styles/publisherProcess.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 2rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 48rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 4rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Numbered steps ────────────────────────────
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid $line;
+
+  p {
+    margin-top: 0.4rem;
+    @include body-text;
+    @include inline-link;
+  }
+}
+
+.number {
+  flex-shrink: 0;
+  min-width: 2.4rem; // keeps step text aligned whatever the digit widths
+  font-variant-numeric: tabular-nums;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: $accent;
+}
+
+.stepTitle {
+  @include card-title;
+}
+
+// ── Illustration and Copilot callout ──────────
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include desktopUp {
+    position: sticky;
+    top: $scroll-offset;
+  }
+}
+
+.visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Accent background with light text, rather than a tinted box
+.callout {
+  padding: 1.5rem 1.75rem;
+  background: $accent;
+  border-radius: $radius;
+  @include small-text($white-88);
+  @include inline-link($white);
+}

@@ -423,7 +423,7 @@ export const navigationData = {
             href: `/services/microsoft-dot-net`,
           },
           {
-            label: "Outlook",
+            label: "Custom Office Solutions",
             href: `/services/custom-office-solutions`,
           },
           {

@@ -153,13 +153,7 @@
 }
 
 .infoLabel {
-  //   display: inline-block;
-  //   padding: 0.3rem 1rem;
-  //   border-radius: 5px;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  //   text-transform: uppercase;
+  @include heading-section;
   margin-bottom: 1.25rem;
   padding: 0 1rem 0.3rem 0;
   width: fit-content;

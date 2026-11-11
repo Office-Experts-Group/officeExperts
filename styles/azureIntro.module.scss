@@ -1,0 +1,250 @@
+// styles/azureIntro.module.scss
+@use "./globals.scss" as *;
+
+.lightHero {
+  @include lightHeroBlock;
+}
+
+.section {
+  background: $white;
+  padding: 2rem $gutter 6rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include mobile {
+    padding: 2rem $mobGutter 5rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include container;
+
+  @include belowDesktop {
+    gap: 3rem;
+    padding-inline: 0;
+  }
+}
+
+// ── Top row ───────────────────────────────────
+.top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  p {
+    @include lede;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-main;
+}
+
+.accent {
+  color: $accent;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.visual {
+  width: 100%;
+  max-width: 500px;
+  justify-self: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Data packets travelling along the connectors in AzureCloudSvg (paths marked data-flow)
+.visual [data-flow] {
+  stroke-dasharray: 4 8;
+  animation: flow 1.6s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+// ── Bottom row ────────────────────────────────
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Numbered jump list ────────────────────────
+// Flex column so the list spreads to fill the panel when the Why Azure panel beside it is taller
+.toc {
+  display: flex;
+  flex-direction: column;
+  padding: 2.25rem;
+  background: $dark-bg;
+  border-radius: $radius;
+
+  ol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 1rem;
+  }
+
+  li + li {
+    border-top: 1px solid $white-12;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    color: $white-88;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    svg {
+      color: $white-35;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .tocNum,
+      svg {
+        color: $accent-on-dark;
+      }
+
+      .tocText {
+        color: $white;
+      }
+
+      svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.tocLabel {
+  @include label($white-55);
+}
+
+.tocNum {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: $white-35;
+  transition: color 0.2s ease;
+}
+
+.tocText {
+  transition: color 0.2s ease;
+}
+
+// ── Why Azure panel ───────────────────────────
+.why {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: $accent;
+  border-radius: $radius;
+
+  p {
+    color: $white-88;
+    line-height: 1.8;
+  }
+
+  @include phone {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.whyLabel {
+  @include label;
+
+  // Overrides the .why p colour so the label reads on the accent background
+  .why & {
+    color: $white-75;
+  }
+}
+
+.whyHeading {
+  @include card-title(lg, $white);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $white-35;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fact {
+  dt {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $white;
+  }
+
+  dd {
+    margin-top: 0.3rem;
+    @include small-text($white-75);
+  }
+}

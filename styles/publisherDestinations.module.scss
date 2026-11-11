@@ -1,0 +1,102 @@
+// styles/publisherDestinations.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $dark-bg;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.inner {
+  @include container;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 44rem;
+  margin-bottom: 3.5rem;
+
+  p {
+    @include lede($white-55);
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+// ── Cards: three across, two on tablet, one on mobile ──
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+  border-radius: $radius;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background: $dark-mid;
+    transform: translateY(-2px);
+  }
+}
+
+// App pill: which Microsoft app the job moves to
+.app {
+  align-self: flex-start;
+  margin-bottom: 1.25rem;
+  padding: 0.25rem 0.7rem;
+  background: $accent;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem;
+  @include card-title(md, $white-90);
+}
+
+.cardBody {
+  flex: 1;
+  @include small-text($white-55);
+}
+
+.cardLink {
+  margin-top: 1.5rem;
+  @include arrow-link($accent-on-dark);
+}

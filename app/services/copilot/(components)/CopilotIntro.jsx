@@ -2,8 +2,6 @@
 import React from "react";
 import Link from "next/link";
 
-import AnimateOnScroll from "@/components/AnimateOnScroll";
-
 // Import compiled CSS module (not the .scss source)
 import styles from "@/styles/copilotIntro.module.scss";
 // The five Office apps Copilot integrates with —
@@ -17,20 +15,21 @@ const apps = [
 ];
 
 const CopilotIntro = () => (
-  <section className={styles.section}>
-    <div className={styles.grid}>
-      {/* ── Left: headline + body copy ── */}
-      <div className={styles.left}>
-        <AnimateOnScroll animation="fade-up" duration={0.6} delay={0}>
+  <>
+    <div className={styles.lightHeroBlock}></div>
+    <section className={styles.section}>
+      <div className={styles.grid}>
+        {/* ── Left: headline + body copy ── */}
+        <div className={styles.left}>
           <div className={styles.content}>
-            <span className={styles.eyebrow}>365 Copilot</span>
+            <span className={styles.eyebrow}>Microsoft 365 Copilot</span>
 
-            <h2 className={styles.headline}>
+            <h1 className={styles.headline}>
               Forget the Ai Hype...<br></br>
               <span className={styles.accent}>
                 See real productivity gains.
               </span>
-            </h2>
+            </h1>
 
             <div className={styles.body}>
               <p>
@@ -40,16 +39,6 @@ const CopilotIntro = () => (
                 your emails, files, and dashboards. It is designed with security
                 at the forefront, enabling organisations to allow AI deep into
                 their systems without giving away all their data.
-              </p>
-
-              <p>
-                But rolling out Copilot isn&rsquo;t as simple as switching on a
-                licence. Your data governance has to be in shape, SharePoint
-                permissions need to be sorted, and your team needs to know how
-                to ask Copilot the right questions. If you don't lay down the
-                ground rules, you risk unleashing a beast that hallucinates on
-                the wrong information or just simply delivers disappointing
-                results.
               </p>
 
               <p>
@@ -69,11 +58,9 @@ const CopilotIntro = () => (
               Get a Free Assessment
             </Link>
           </div>
-        </AnimateOnScroll>
-      </div>
+        </div>
 
-      {/* ── Right: app integration panel ── */}
-      <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
+        {/* ── Right: app integration panel ── */}
         <div className={styles.right}>
           <div className={styles.panel}>
             <span className={styles.panelLabel}>Copilot works inside</span>
@@ -118,9 +105,9 @@ const CopilotIntro = () => (
             </div>
           </div>
         </div>
-      </AnimateOnScroll>
-    </div>
-  </section>
+      </div>
+    </section>
+  </>
 );
 
 export default CopilotIntro;
