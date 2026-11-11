@@ -68,13 +68,10 @@ const AddInUseCases = () => {
               An add-in can send content to an AI model, or to one of our custom{" "}
               <Link href="/services/ai-agent-development">AI agents</Link>, and
               show the result inside Word, Excel or Outlook. People can
-              summarise, draft, extract or sort content without switching
-              tools. The agent can run inside your Microsoft tenant if your data
-              rules require it, but it does not have to. We also help teams
-              get more from{" "}
-              <Link href="/services/microsoft-office-365/copilot">
-                Microsoft Copilot
-              </Link>{" "}
+              summarise, draft, extract or sort content without switching tools.
+              The agent can run inside your Microsoft tenant if your data rules
+              require it, but it does not have to. We also help teams get more
+              from <Link href="/services/copilot">Microsoft Copilot</Link>{" "}
               alongside a custom add-in.
             </p>
           </li>

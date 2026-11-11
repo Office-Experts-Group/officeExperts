@@ -44,7 +44,7 @@ const garamond = EB_Garamond({
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultants and Developers Australia | Office Experts",
+  title: "Microsoft Consultants and Developers | Office Experts",
   description:
     "Leading Microsoft Office consulting and solutions provider in Australia. Specialising in comprehensive Office solutions, integration, and business automation.",
   alternates: {

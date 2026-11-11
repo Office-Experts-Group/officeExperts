@@ -30,8 +30,7 @@ import {
 
 // Swap PAGE_URL for SITE_URL when this replaces the home page
 const PAGE_URL = "https://www.officeexperts.com.au";
-const PAGE_TITLE =
-  "Microsoft Consultants and Developers Australia | Office Experts";
+const PAGE_TITLE = "Microsoft Consultants and Developers | Office Experts";
 const PAGE_DESCRIPTION =
   "Australian Microsoft consultants since 2000. Our team builds, fixes and supports the Word, Excel, Access, Power Platform and AI solutions your business relies on.";
 

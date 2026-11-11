@@ -16,7 +16,7 @@ const schema = {
       "@id":
         "https://www.officeexperts.com.au/services/cloud-backup-with-onedrive",
       url: "https://www.officeexperts.com.au/services/cloud-backup-with-onedrive",
-      name: "Help OneDrive for Business | OneDrive Support | Microsoft Office 365",
+      name: "OneDrive Cloud Backup for Businesses | Office Experts",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },
