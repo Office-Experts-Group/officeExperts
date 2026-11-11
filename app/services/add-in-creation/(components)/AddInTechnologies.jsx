@@ -80,8 +80,8 @@ const AddInTechnologies = () => {
         <div className={styles.tableWrap}>
           <table className={styles.table}>
             <caption className={styles.caption}>
-              Add-in technologies compared by where they run, what they suit
-              and what to watch for
+              Add-in technologies compared by where they run, what they suit and
+              what to watch for
             </caption>
             <thead>
               <tr>
@@ -114,7 +114,7 @@ const AddInTechnologies = () => {
             3rd party app integration
           </Link>{" "}
           and{" "}
-          <Link href="/microsoft-365-api-integration">
+          <Link href="/services/microsoft-365-api-integration">
             Microsoft 365 API integration
           </Link>{" "}
           services. Microsoft changes add-in support from time to time, so we

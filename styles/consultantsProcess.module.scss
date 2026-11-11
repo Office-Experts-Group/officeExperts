@@ -1,0 +1,84 @@
+// styles/consultantsProcess.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 8rem;
+
+  @include tablet {
+    padding: 6rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 5rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.headline {
+  @include heading-section;
+  margin: 1rem 0 1.5rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  @include lede;
+  margin-bottom: 1rem;
+
+  @include inline-link;
+}
+
+.illustration {
+  max-width: 440px;
+  margin-top: 2.5rem;
+}
+
+// ── Steps ───────────────────────────────────
+.steps {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid $line;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid $line;
+}
+
+.number {
+  @include label($accent);
+  flex-shrink: 0;
+  min-width: 2rem;
+  padding-top: 0.3rem;
+}
+
+.title {
+  @include card-title(lg);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  @include body-text;
+}

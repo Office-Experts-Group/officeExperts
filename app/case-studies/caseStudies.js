@@ -1218,9 +1218,6 @@ export const caseStudies = [
       },
     ],
   },
-  // New case study object — copy this into the caseStudies array in caseStudies.js
-  // Suggested placement: add as a new entry before the closing "];" of the array
-
   {
     slug: "automated-proposal-generation-in-microsoft",
     client: "Windowline",

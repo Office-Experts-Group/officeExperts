@@ -82,7 +82,7 @@ const BrandingServices = () => {
         <div className={styles.help}>
           <p className={styles.helpText}>Need more help with your brand?</p>
           <Link
-            href="/services/microsoft-word/brand-identity"
+            href="/services/microsoft-word/corporate-identity"
             className={styles.helpLink}
           >
             Read about how we can shape your brand identity

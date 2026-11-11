@@ -1,0 +1,134 @@
+// styles/consultantsQuickLinks.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $white;
+  padding: 6rem 8rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.header {
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.headline {
+  @include heading-section;
+  margin-top: 1rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+// ── Tiles ───────────────────────────────────
+.grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.75rem;
+  background: $light-bg;
+  border-radius: $radius;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background: $accent;
+    transform: translateY(-4px);
+  }
+}
+
+.abbr {
+  font-size: 2.4rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: $accent;
+  margin-bottom: 1rem;
+  transition: color 0.25s ease;
+
+  .tile:hover & {
+    color: $white;
+  }
+}
+
+.name {
+  @include card-title;
+  margin-bottom: 0.5rem;
+  transition: color 0.25s ease;
+
+  .tile:hover & {
+    color: $white;
+  }
+}
+
+.cities {
+  @include small-text;
+  margin-bottom: 1.5rem;
+  transition: color 0.25s ease;
+
+  .tile:hover & {
+    color: $white-75;
+  }
+}
+
+// Pushed to the bottom so the count lines up across a row of tiles
+.count {
+  @include arrow-link;
+  margin-top: auto;
+  transition: color 0.25s ease;
+
+  .tile:hover & {
+    color: $white;
+  }
+  .tile:hover & svg {
+    transform: translateX(3px);
+  }
+}
+
+// Last tile: dark by default, same hover as the rest
+.remote {
+  background: $dark-bg;
+
+  .abbr,
+  .name {
+    color: $white;
+  }
+  .cities {
+    color: $white-75;
+  }
+  .count {
+    color: $white;
+  }
+}

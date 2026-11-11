@@ -13,7 +13,7 @@ const cities = [
   {
     id: "northern-rivers",
     label: "Northern Rivers NSW",
-    href: "/microsoft-consultants-northern-nsw",
+    href: "/microsoft-consultants-northern-rivers-nsw",
     x: HQ.x,
     y: HQ.y,
     type: "hq",

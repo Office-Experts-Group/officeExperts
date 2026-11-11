@@ -7,7 +7,7 @@ import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
 import { faqs } from "./northernNswData";
 
 export const PAGE_URL =
-  "https://www.officeexperts.com.au/microsoft-consultants-northern-nsw";
+  "https://www.officeexperts.com.au/microsoft-consultants-northern-rivers-nsw";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const DESCRIPTION =

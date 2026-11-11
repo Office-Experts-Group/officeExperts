@@ -57,7 +57,7 @@ const PageSegmentMain = () => {
             under a controlled environment, therefore only allowing formatting
             that is consistent to your branding guidelines.
           </p>
-          <Link href="/contact" className={`btn ${styles.cta}`}>
+          <Link href="#contact" className={`btn ${styles.cta}`}>
             Enquire About Templates
           </Link>
           {/* Spans both columns of the section grid */}

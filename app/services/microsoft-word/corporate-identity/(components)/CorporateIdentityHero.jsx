@@ -41,7 +41,7 @@ const CorporateIdentityHero = () => {
           </ul>
 
           <div className={styles.actions}>
-            <Link href="/contact" className={styles.cta}>
+            <Link href="#contact" className={styles.cta}>
               Book a free consultation
             </Link>
             <a href="#anatomy" className={styles.secondary}>

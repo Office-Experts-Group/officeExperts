@@ -1,0 +1,83 @@
+// styles/consultantsCta.module.scss
+@use "./globals.scss" as *;
+
+.section {
+  background: $accent;
+  padding: 6rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  @include heading-section-on-dark;
+  margin: 1rem 0 1.25rem;
+}
+
+.body {
+  @include lede($white-75);
+  max-width: 48ch;
+  margin-bottom: 2.25rem;
+}
+
+.btn {
+  @include btn;
+}
+
+// ── Contact panel ───────────────────────────
+.panel {
+  background: $white-08;
+  border-radius: $radius;
+  padding: 0.5rem 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.5rem 0;
+  text-decoration: none;
+
+  & + & {
+    border-top: 1px solid $white-18;
+  }
+}
+
+.rowLabel {
+  @include label($white-65);
+}
+
+.rowValue {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: $heading-weight;
+  color: $white;
+  overflow-wrap: anywhere;
+  transition: transform 0.2s ease;
+
+  .row:hover & {
+    transform: translateX(4px);
+  }
+}

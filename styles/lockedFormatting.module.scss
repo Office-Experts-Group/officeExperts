@@ -21,8 +21,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  @include container;
   padding-inline: 0;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;
