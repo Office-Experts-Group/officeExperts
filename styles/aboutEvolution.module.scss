@@ -1,0 +1,139 @@
+// styles/aboutEvolution.module.scss
+@use "./globals.scss" as *;
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $light-bg;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header ──────────────────────────────────
+.header {
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin-bottom: 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  @include lede;
+}
+
+// ── Cards ───────────────────────────────────
+.cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.25rem 2rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-4px);
+  }
+}
+
+// Stage label with a leading dot in the current text colour
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  @include label($accent);
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem;
+  @include card-title(lg);
+}
+
+.cardText {
+  margin-bottom: 1.75rem;
+  @include body-text;
+}
+
+// margin-top: auto pins the link list to the bottom so all three cards line up
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid $line;
+}
+
+.link {
+  @include arrow-link;
+}
+
+// ── Featured (AI) card ──────────────────────
+.featured {
+  background: $accent;
+  border-color: transparent;
+
+  .stage,
+  .cardText {
+    color: $white-75;
+  }
+
+  .cardTitle,
+  .link {
+    color: $white;
+  }
+
+  .links {
+    border-color: $white-18;
+  }
+}

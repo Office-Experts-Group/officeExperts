@@ -1,50 +1,76 @@
+// /about-us/page.js
 import React from "react";
+import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-import AboutUsMain from "./(components)/AboutUsMain";
-import Testimonials from "../(components)/Testimonials";
-import WhyChooseUs from "./(components)/WhyChooseUs";
-import GoodToKnow from "./(components)/GoodToKnow";
-import MeetTheTeamSlider from "./(components)/MeetTheTeamSlider";
-import Contact from "@/components/Contact";
-import Promo from "@/components/Promo";
-import ExpertsAwait from "@/components/ExpertsAwait";
+// Static imports — above the fold (hero + first content section)
+import AboutHero from "./(components)/AboutHero";
+import AboutStory from "./(components)/AboutStory";
 
-import { getAboutPageSchema } from "@/utils/testimonialSchemaGenerator";
+// Shared schema generators (ProfessionalService, Organization, WebSite nodes)
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
+// Testimonials data, passed into the shared Testimonials carousel
 import { testimonials } from "@/testimonials";
 
-import aboutUs from "@/public/pageHeros/aboutUs.webp";
-import aboutUsMob from "@/public/pageHeros/mob/aboutUsMob.webp";
+// FAQ content — rendered in AboutWhyUs and reused below for the FAQPage schema
+import faqs from "@/faqs/about-us";
+
+// Dynamically imported — below the fold, each split into its own chunk
+const Testimonials = dynamic(() => import("../(components)/Testimonials"));
+const AboutEvolution = dynamic(() => import("./(components)/AboutEvolution"));
+const GoodToKnow = dynamic(() => import("./(components)/GoodToKnow"));
+const AboutWhyUs = dynamic(() => import("./(components)/AboutWhyUs"));
+const MeetTheTeamSlider = dynamic(
+  () => import("./(components)/MeetTheTeamSlider"),
+);
+const AboutCta = dynamic(() => import("./(components)/AboutCta"));
+const Contact = dynamic(() => import("@/components/Contact"));
+
+// Page-level constants — keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with layout.js
+const PAGE_URL = "https://www.officeexperts.com.au/about-us";
+const PAGE_TITLE = "About Us | Microsoft Office Consultants Since 2000";
+const PAGE_DESCRIPTION =
+  "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+
+const DATE_PUBLISHED = "2024-10-26T00:00:00+00:00";
+const DATE_MODIFIED = "2026-11-12T00:00:00+11:00";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    // Review + AggregateRating nodes (3 reviews on about page)
-    ...getAboutPageSchema(testimonials)["@graph"],
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
 
+    // AboutPage is the schema.org subtype of WebPage built for exactly this page
     {
-      "@type": "WebPage",
-      "@id": "https://www.officeexperts.com.au/about-us#webpage",
-      url: "https://www.officeexperts.com.au/about-us",
-      name: "About Us | Microsoft Office Consultants Since 2000",
+      "@type": "AboutPage",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: PAGE_TITLE,
       isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
+        "@id": `${SITE_URL}#website`,
       },
       about: {
-        "@id": "https://www.officeexperts.com.au#business",
+        "@id": `${SITE_URL}#business`,
       },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2026-07-02T00:00:00+00:00",
-      description:
-        "Microsoft Office consultants specialising in Excel, Access, Outlook, Word and PowerPoint. Australia-wide development, support and integrations since 2000.",
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
+      description: PAGE_DESCRIPTION,
       breadcrumb: {
-        "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
+        "@id": `${PAGE_URL}#breadcrumb`,
       },
       inLanguage: "en-AU",
       potentialAction: [
         {
           "@type": "ReadAction",
-          target: ["https://www.officeexperts.com.au/about-us"],
+          target: [PAGE_URL],
         },
       ],
     },
@@ -52,21 +78,36 @@ const schema = {
     // BreadcrumbList — item URL required on all positions including current page
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.officeexperts.com.au/about-us#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.officeexperts.com.au",
+          item: SITE_URL,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "About Us",
-          item: "https://www.officeexperts.com.au/about-us",
+          item: PAGE_URL,
         },
       ],
+    },
+
+    // FAQPage — built from the same faqs array AboutWhyUs renders, so the two never drift.
+    // Assumes each answer is a plain string (JSX answers would need a text-only copy here).
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      })),
     },
   ],
 };
@@ -78,26 +119,18 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <ServiceHero
-        title={"About Us"}
-        desktopImage={aboutUs}
-        mobileImage={aboutUsMob}
-        altDesk={"Hands pointing in a circle"}
-        altMob={"About Us"}
-      />
-      <AboutUsMain />
-      <Testimonials testimonials={testimonials} />
-      <GoodToKnow />
-      <WhyChooseUs />
-      <MeetTheTeamSlider />
-      <ExpertsAwait />
-      <Promo
-        h2={"Let's Do This!"}
-        p={
-          "Once you have decided to take advantage of our services, we will carefully customise those services to match your requirements, keeping you informed every step of the way. We realise that our success is hinged on our ability to ensure your own"
-        }
-      />
-      <Contact />
+
+      <main>
+        <AboutHero />
+        <AboutStory />
+        <Testimonials testimonials={testimonials} />
+        <AboutEvolution />
+        <GoodToKnow />
+        <AboutWhyUs />
+        <MeetTheTeamSlider />
+        <AboutCta />
+        <Contact />
+      </main>
     </>
   );
 };

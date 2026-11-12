@@ -7,9 +7,18 @@ import Contact from "@/components/Contact";
 import handShake from "@/public/pageHeros/handShake.webp";
 import handShakeMob from "@/public/pageHeros/mob/handShakeMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/meet-the-team",

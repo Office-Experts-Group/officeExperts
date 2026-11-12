@@ -383,6 +383,7 @@ export const caseStudies = [
     ],
   },
   {
+    // On LinkedIn
     slug: "food-manufacturer-excel-costing-workbook",
     client: "the client",
     author: "Paul M",

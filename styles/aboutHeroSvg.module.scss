@@ -1,0 +1,224 @@
+// styles/aboutHeroSvg.module.scss
+@use "./globals.scss" as *;
+
+// Office Experts logo colours, sampled from the logo file (not in globals.scss)
+$logo-red: #ed1d26;
+$logo-yellow: #fff200;
+$logo-green: #9dce65;
+$logo-blue: #00aff2;
+$logo-cursor: #383836;
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// ── Orbit rings ─────────────────────────────
+// fill-box + center rotates each ring around its own centre
+.orbit,
+.orbitOuter {
+  stroke: $white-18;
+  stroke-dasharray: 2 10;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 80s linear infinite;
+}
+
+.orbitOuter {
+  stroke: $white-12;
+  animation-duration: 120s;
+  animation-direction: reverse;
+}
+
+// ── Connectors + pulses ─────────────────────
+.line {
+  stroke: $white-12;
+}
+
+// A 10-unit dash on a 200-unit cycle travels from each line's start to its end
+.pulse {
+  stroke: $accent-on-dark;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 10 190;
+  animation: pulse 4s linear infinite;
+}
+
+// ── Hub ─────────────────────────────────────
+// Dark disc so the logo colours pop; the accent halo expands out from behind it
+.hub {
+  fill: $dark-bg;
+  stroke: $white-18;
+}
+
+.halo {
+  fill: $accent;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: halo 3.2s ease-out infinite;
+}
+
+// ── Logo mark ───────────────────────────────
+// Base ring is a touch thinner than the segments so no white fringe shows at the edges
+.ringBase {
+  stroke: $white;
+  stroke-width: 17;
+}
+
+.ringSegment {
+  stroke-width: 18;
+}
+
+.red {
+  stroke: $logo-red;
+}
+
+.yellow {
+  stroke: $logo-yellow;
+}
+
+.green {
+  stroke: $logo-green;
+}
+
+.blue {
+  stroke: $logo-blue;
+}
+
+// Stroke width is in the cursor's scaled units (x2.9 ≈ 1.9px)
+.cursor {
+  fill: $logo-cursor;
+  stroke: $white;
+  stroke-width: 0.65;
+  stroke-linejoin: round;
+}
+
+// Origin 0 0 is the cursor tip, so the press shrinks towards the point
+.cursorClick {
+  transform-box: fill-box;
+  transform-origin: 0 0;
+  animation: click 4s ease-in-out infinite;
+}
+
+.clickRipple {
+  stroke: $white;
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ripple 4s ease-out infinite;
+}
+
+// ── Nodes ───────────────────────────────────
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.nodeInner {
+  fill: $dark-surface;
+  stroke: $white-18;
+}
+
+.nodeOuter {
+  fill: $dark-mid;
+  stroke: $white-12;
+}
+
+.nodeAi {
+  fill: $accent;
+}
+
+.glyph {
+  fill: $accent-on-dark;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.glyphSmall {
+  font-size: 13px;
+}
+
+.glyphOnAccent {
+  fill: $white;
+}
+
+.label {
+  fill: $white-55;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+// ── Motion ──────────────────────────────────
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+@keyframes halo {
+  from {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+// Cursor presses at ~85% of each 4s cycle; the ripple fires at the same moment
+@keyframes click {
+  0%,
+  80%,
+  92%,
+  100% {
+    transform: scale(1);
+  }
+  86% {
+    transform: scale(0.85);
+  }
+}
+
+@keyframes ripple {
+  0%,
+  85% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  87% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .orbitOuter,
+  .halo,
+  .float,
+  .cursorClick,
+  .clickRipple {
+    animation: none;
+  }
+
+  .pulse {
+    display: none;
+  }
+}

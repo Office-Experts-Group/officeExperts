@@ -1,0 +1,140 @@
+// styles/aboutHero.module.scss
+@use "./globals.scss" as *;
+
+// ── Section ─────────────────────────────────
+// Dark band with a soft accent glow behind the illustration.
+// heroPadding clears the transparent site header.
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 48%, $accent-dim, transparent 55%),
+    $dark-bg;
+  @include heroPadding;
+
+  @include mobile {
+    padding: 9rem $mobGutter 5rem;
+  }
+
+  // Faint grid, masked so it only shows around the illustration
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient($white-08 1px, transparent 1px),
+      linear-gradient(90deg, $white-08 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle at 76% 48%, #000, transparent 60%);
+    pointer-events: none;
+  }
+}
+
+// ── Two-column grid ─────────────────────────
+// position: relative lifts it above the ::before grid
+.grid {
+  position: relative;
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ────────────────────────────────────
+.eyebrow {
+  display: block;
+  margin-bottom: 1.25rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  max-width: 560px;
+  margin-bottom: 2.25rem;
+  @include lede($white-75);
+}
+
+// ── CTAs ────────────────────────────────────
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent-on-dark;
+  }
+}
+
+// ── Stats ───────────────────────────────────
+// Three columns at every width; on phones the labels wrap instead of the stats
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 3rem;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $white-12;
+
+  @include mobile {
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+}
+
+// column-reverse puts the <dd> value above its <dt> label;
+// flex-end (the top, when reversed) keeps values aligned when labels wrap
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.statValue {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1;
+  color: $white;
+}
+
+.statLabel {
+  @include label($white-55);
+}
+
+// ── Illustration ────────────────────────────
+.visual {
+  width: 100%;
+  max-width: 520px;
+  justify-self: center;
+
+  @include belowDesktop {
+    max-width: 420px;
+  }
+}

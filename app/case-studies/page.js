@@ -8,6 +8,12 @@ import Contact from "@/components/Contact";
 
 import styles from "@/styles/caseStudies.module.scss";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 // The ?site= param only ever changes the ORDER case studies render in, never
 // which ones appear — so this stays one page as far as Google's concerned.
 // Canonicalising to the bare URL makes that explicit, rather than leaving
@@ -19,6 +25,9 @@ export const metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/case-studies",

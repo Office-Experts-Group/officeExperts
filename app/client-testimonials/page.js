@@ -4,17 +4,23 @@ import Contact from "@/components/Contact";
 import TestimonialPage from "./(components)/TestimonialPage";
 import ServiceHero from "@/components/ServiceHero";
 
-import { generateTestimonialSchema } from "@/utils/schemaGenerators";
 import { testimonials } from "@/testimonials";
 
 import testimonialsPic from "@/public/pageHeros/testimonials.webp";
 import testimonialsMob from "@/public/pageHeros/mob/testimonialsMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    generateTestimonialSchema(),
-
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/client-testimonials",

@@ -25,10 +25,10 @@ const DashboardsIntro = () => {
             <span className={styles.eyebrow}>
               A Picture can paint 1000 words
             </span>
-            <h2 className={styles.heading}>
+            <h1 className={styles.heading}>
               Your numbers in one place,{" "}
               <span className={styles.accent}>always up to date.</span>
-            </h2>
+            </h1>
 
             <div className={styles.body}>
               <p>

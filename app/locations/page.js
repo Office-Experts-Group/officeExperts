@@ -29,6 +29,12 @@ import centralCoast from "@/public/pageHeros/mob/centralCoastMob.webp";
 import goldCoast from "@/public/pageHeros/mob/goldCoastMob.webp";
 import cairns from "@/public/pageHeros/mob/cairnsColourMob.webp";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL = "https://www.officeexperts.com.au/locations";
 const PAGE_TITLE = "Microsoft Consultants Across Australia | Office Experts";
 const PAGE_DESCRIPTION =
@@ -296,6 +302,9 @@ const sections = locationData.map(({ id, abbr, sectionTitle, locations }) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
     {
       "@type": ["WebPage", "CollectionPage"],
       "@id": PAGE_URL,

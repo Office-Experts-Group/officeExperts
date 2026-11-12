@@ -1,0 +1,79 @@
+// styles/aboutVennSvg.module.scss
+@use "./globals.scss" as *;
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// ── Circles ─────────────────────────────────
+// multiply darkens where circles overlap, so the centre reads deepest
+.dev,
+.design,
+.biz {
+  mix-blend-mode: multiply;
+}
+
+.dev {
+  fill: $accent;
+  fill-opacity: 0.16;
+}
+
+.design {
+  fill: $accent-on-dark;
+  fill-opacity: 0.3;
+}
+
+.biz {
+  fill: $accent-dark;
+  fill-opacity: 0.14;
+}
+
+// ── Labels ──────────────────────────────────
+.title {
+  fill: $text-primary;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sub {
+  fill: $text-secondary;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+// ── Centre ──────────────────────────────────
+.core,
+.ring {
+  fill: $accent;
+}
+
+.ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ripple 2.8s ease-out infinite;
+}
+
+.coreText {
+  fill: $white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+  }
+}

@@ -11,9 +11,18 @@ import styles from "@/styles/blog.module.scss";
 
 import { blogPosts } from "./blogPosts";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
     // WebPage — describes this specific blog listing page
     {
       "@type": "WebPage",

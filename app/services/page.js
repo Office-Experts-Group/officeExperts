@@ -4,7 +4,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
 import GroupIntro from "./(components)/GroupIntro";
 // Small helper that builds the schema.org ItemList entries
 import { toListItems } from "./servicesHelpers";
@@ -32,9 +31,11 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const ServicesFaq = dynamic(() => import("./(components)/ServicesFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-// Hero images
-import servicesHero from "@/public/pageHeros/services.webp";
-import servicesHeroMob from "@/public/pageHeros/mob/servicesMob.webp";
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
 
 const PAGE_URL = "https://www.officeexperts.com.au/services";
 const PAGE_TITLE = "Microsoft Office, Power Platform and AI Services";
@@ -46,6 +47,9 @@ const SITE_URL = "https://www.officeexperts.com.au";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateOrganizationSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
@@ -106,16 +110,6 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-
-      <ServiceHero
-        title="Microsoft Consulting and Development Services"
-        desktopImage={servicesHero}
-        mobileImage={servicesHeroMob}
-        altDesk="Microsoft Office, Power Platform and AI services"
-        altMob="Microsoft Office, Power Platform and AI services"
-        darker={true}
-      />
-
       <GroupIntro />
       <AiAutomationSection />
       <PowerPlatformSection />
@@ -125,8 +119,6 @@ const Page = () => {
       <PowerPointSection />
       <CustomDevSection />
       <Microsoft365Section />
-
-      {/* RelatedLinks is a shared component, so this is the one section that takes props */}
       <RelatedLinks
         eyebrow="Proven results"
         heading="A few of the Results our"

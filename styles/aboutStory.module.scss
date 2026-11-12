@@ -1,0 +1,75 @@
+// styles/aboutStory.module.scss
+@use "./globals.scss" as *;
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Two-column grid ─────────────────────────
+.grid {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 5rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ────────────────────────────────────
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  @include inline-link;
+
+  p {
+    margin-bottom: 1rem;
+    @include lede;
+  }
+}
+
+.link {
+  margin-top: 1rem;
+  @include arrow-link;
+}
+
+// ── Diagram ─────────────────────────────────
+.visual {
+  max-width: 440px;
+  margin-inline: auto;
+}
+
+.caption {
+  margin-top: 1rem;
+  text-align: center;
+  @include small-text($text-muted);
+}

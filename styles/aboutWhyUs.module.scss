@@ -1,0 +1,128 @@
+// styles/aboutWhyUs.module.scss
+@use "./globals.scss" as *;
+
+// ── Section ─────────────────────────────────
+.section {
+  background: $white;
+  padding: 7rem 8rem;
+
+  @include tablet {
+    padding: 5rem 4rem;
+  }
+  @include phoneLandscape {
+    padding: 4rem 1.5rem;
+  }
+  @include phone {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+// ── Two-column grid ─────────────────────────
+.grid {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Intro ───────────────────────────────────
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin-bottom: 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  max-width: 460px;
+  margin-bottom: 2rem;
+  @include lede;
+}
+
+// ── Accordion ───────────────────────────────
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  background: $light-bg;
+  border-radius: $radius;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &[open] {
+    background: $white;
+    box-shadow: $shadow-panel;
+  }
+
+  // Open state turns the plus into a minus
+  &[open] .icon::after {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 1.75rem;
+  cursor: pointer;
+  list-style: none;
+  @include card-title(sm);
+
+  // Hide the default disclosure triangle in Safari
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+// Plus icon drawn with two pseudo bars on an accent circle
+.icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $accent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 2px;
+    background: $white;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.answer {
+  padding: 0 1.75rem 1.5rem;
+  @include body-text;
+}
