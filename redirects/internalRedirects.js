@@ -34,7 +34,7 @@ module.exports = [
   ),
   permanent(
     "/services/office-and-sql-server-integration",
-    "/services/by-business-solution/sql-server-and-access-integration",
+    "/services/sql-server-and-access-integration",
   ),
   permanent(
     "/services/by-business-solution/office-and-sql-server-integration",

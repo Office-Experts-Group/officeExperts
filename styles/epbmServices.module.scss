@@ -1,0 +1,277 @@
+// /styles/excelToPowerBiMigration/epbmServices.module.scss
+// EpbmServices: bento grid of the five migration services.
+
+@use "./globals" as *;
+
+.epbmServices {
+  padding: 7rem $gutter;
+  background: $grayBGC;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 4rem;
+  align-items: end;
+  margin-bottom: 3.5rem;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.title {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+// ── Bento ───────────────────────────────────────────────────────────────────
+.bento {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: $radius;
+  border: 1px solid transparent;
+
+  @include phone {
+    padding: 1.5rem;
+  }
+}
+
+// placement
+.feature {
+  grid-column: span 3;
+  grid-row: span 2;
+  // art sits at the bottom of the tall tile
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.half {
+  grid-column: span 3;
+}
+.narrow {
+  grid-column: span 2;
+}
+.wide {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+
+  .cardArt {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+
+@include belowDesktop {
+  .feature {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .half,
+  .narrow,
+  .wide {
+    grid-column: span 1;
+  }
+  .wide {
+    display: flex;
+
+    .cardArt {
+      order: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@include mobile {
+  .feature,
+  .half,
+  .narrow,
+  .wide {
+    grid-column: auto;
+  }
+}
+
+// tile colours
+.lightTile {
+  background: $white;
+  border-color: $line;
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .cardTitle {
+    color: $white;
+    font-size: 1.4rem;
+  }
+  .cardText {
+    color: $white-75;
+    font-size: 0.95rem;
+  }
+}
+
+.accentTile {
+  background: $accent;
+
+  .cardTitle {
+    color: $white;
+  }
+  .cardText {
+    color: $white-88;
+  }
+  .cardLink {
+    color: $white;
+  }
+}
+
+// content
+.cardArt {
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+  }
+}
+
+.feature .cardArt {
+  margin-bottom: 0;
+
+  svg {
+    max-width: 100%;
+  }
+}
+
+.wide .cardArt svg {
+  max-width: 20rem;
+  margin-left: auto;
+
+  @include belowDesktop {
+    margin-left: 0;
+  }
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.feature .cardBody {
+  flex: 0;
+}
+
+.cardTitle {
+  margin: 0 0 0.65rem;
+  @include card-title(md);
+}
+
+.cardText {
+  margin: 0;
+  @include small-text;
+}
+
+.cardLink {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  @include arrow-link;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+// "What we review" list in the dark feature tile
+.checksTitle {
+  margin: 1.75rem 0 0.85rem;
+  @include label($accent-on-dark);
+}
+
+.checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    @include small-text($white-88);
+    line-height: 1.45;
+  }
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+    color: $accent-on-dark;
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,129 @@
+// /styles/excelToPowerBiMigration/epbmHero.module.scss
+// EpbmHero: dark hero for the Excel to Power BI Migration page.
+
+@use "./globals" as *;
+
+@keyframes epbmHeroDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes epbmHeroLive {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.epbmHero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  color: $white;
+  border-bottom: 1px solid $white-08;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 5rem;
+  }
+  @include mobile {
+    padding: 7.5rem 1.25rem 4rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.title {
+  margin: 0 0 1.5rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0 0 2.25rem;
+  max-width: 34rem;
+  @include lede($white-75);
+  font-size: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.secondaryLink {
+  @include arrow-link($accent-on-dark);
+  font-size: 0.95rem;
+}
+
+.trust {
+  list-style: none;
+  margin: 2.75rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid $white-12;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @include small-text($white-65);
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: $accent-on-dark;
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    justify-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: epbmHeroDash 1.2s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: epbmHeroLive 2s ease-out infinite;
+  }
+}

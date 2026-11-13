@@ -1,0 +1,112 @@
+// /styles/excelToPowerBiMigration/epbmApproach.module.scss
+// EpbmApproach: Office Experts Group explainer and the three ways to move.
+
+@use "./globals" as *;
+
+.epbmApproach {
+  padding: 7rem $gutter;
+  background: $light-bg;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text p {
+  margin: 0 0 1.1rem;
+  @include body-text;
+}
+
+.link {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  @include arrow-link;
+}
+
+.optionsTitle {
+  margin: 0 0 1rem;
+  @include label;
+}
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $line-strong;
+}
+
+.option {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $line-strong;
+
+  @include phone {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
+  }
+}
+
+.optionArt {
+  display: block;
+  padding: 0.6rem;
+  border-radius: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.accentTile {
+  background: $accent;
+}
+
+.darkTile {
+  background: $dark-bg;
+}
+
+.optionTitle {
+  margin: 0 0 0.35rem;
+  @include card-title(md);
+}
+
+.optionText {
+  margin: 0;
+  @include small-text;
+}
