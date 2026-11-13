@@ -1,0 +1,214 @@
+// /styles/spcdProcess.module.scss
+@use "./globals" as *;
+
+.spcdProcess {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 4.5fr) minmax(0, 7.5fr);
+  gap: 4.5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Pinned column ──
+.pinned {
+  position: sticky;
+  top: $header-offset;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  margin: 0;
+}
+
+.route {
+  margin-top: 2.5rem;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    padding-bottom: 0.9rem;
+
+    // connector between route stops
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 40px;
+      bottom: 4px;
+      width: 2px;
+      background: $accent-border;
+    }
+  }
+
+  @include belowDesktop {
+    display: none;
+  }
+}
+
+.routeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: $text-primary;
+  text-decoration: none;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:hover span,
+  &:focus-visible span {
+    color: $accent;
+  }
+}
+
+// ── Phases ──
+.phases {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.phase {
+  scroll-margin-top: $scroll-offset;
+  padding: 2.25rem;
+  border-radius: $radius;
+  background: $white;
+  border: 1px solid $line;
+
+  @include phone {
+    padding: 1.5rem;
+  }
+}
+
+.phaseHead {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.phaseLabel {
+  @include card-title(lg);
+  margin: 0 0 0.2rem;
+}
+
+.phaseSummary {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: $accent;
+}
+
+.phaseBody {
+  @include body-text;
+  margin: 0 0 1.5rem;
+}
+
+.outputs {
+  padding: 1.25rem 1.4rem;
+  border-radius: calc(#{$radius} - 0.5rem);
+  background: $light-bg;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem 1.5rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $text-primary;
+  }
+}
+
+.outputsLabel {
+  display: block;
+  margin-bottom: 0.85rem;
+  @include label;
+}
+
+.check {
+  flex-shrink: 0;
+  margin-top: 0.12rem;
+  color: $accent;
+}
+
+.phaseNote {
+  margin: 1.25rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  font-style: italic;
+  color: $text-secondary;
+}
+
+.phaseLink {
+  @include arrow-link;
+  margin-top: 1rem;
+}

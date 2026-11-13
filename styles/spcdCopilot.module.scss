@@ -1,0 +1,200 @@
+// /styles/spcdCopilot.module.scss
+@use "./globals" as *;
+
+.spcdCopilot {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header ──
+.header {
+  max-width: 46rem;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  @include lede($white-75);
+  margin: 0;
+}
+
+// ── Diagram + blockers ──
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.figure {
+  margin: 0;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.diagramInner {
+  min-width: 500px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.colLabel {
+  margin: 0 0 1.5rem;
+  @include label($accent-on-dark);
+}
+
+.blockers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.blocker {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+
+  svg {
+    display: block;
+  }
+}
+
+.blockerLabel {
+  @include card-title(md, $white);
+  margin: 0.2rem 0 0.4rem;
+}
+
+.blockerDetail {
+  @include small-text($white-75);
+  margin: 0;
+}
+
+// ── Tools ──
+.toolsLabel {
+  margin: 5rem 0 1.5rem;
+  @include label($accent-on-dark);
+
+  @include belowDesktop {
+    margin-top: 3.5rem;
+  }
+}
+
+.tools {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.75rem;
+  border-radius: $radius;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+
+  svg {
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  @include phone {
+    padding: 1.4rem;
+  }
+}
+
+.accentTile {
+  background: $accent;
+  border-color: transparent;
+
+  @include belowDesktop {
+    grid-column: 1 / -1;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.toolTitle {
+  @include card-title(md, $white);
+  margin: 0 0 0.5rem;
+}
+
+.toolBody {
+  @include small-text($white-75);
+  margin: 0;
+
+  .accentTile & {
+    color: $white-88;
+  }
+}
+
+.toolCta {
+  margin-top: 1.5rem;
+}
+
+.footnote {
+  margin: 2.5rem 0 0;
+  @include small-text($white-65);
+  @include inline-link($accent-on-dark);
+}

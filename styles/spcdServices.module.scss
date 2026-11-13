@@ -1,0 +1,305 @@
+// /styles/spcdServices.module.scss
+@use "./globals" as *;
+
+.spcdServices {
+  background: $light-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header ──
+.header {
+  max-width: 44rem;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0 0 1rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.sub {
+  @include lede;
+  margin: 0;
+}
+
+// ── Bento ──
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  padding: 1.75rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include phone {
+    padding: 1.4rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+.tile_migration {
+  grid-column: span 7;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: 1.75rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-column: 1 / -1;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.tile_implementation {
+  grid-column: span 5;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+}
+
+// Tile palettes
+.lightTile {
+  background: $white;
+  border: 1px solid $line;
+}
+
+.accentTile {
+  background: $accent;
+  color: $white;
+}
+
+.darkTile {
+  background: $dark-bg;
+  color: $white;
+}
+
+// ── Tile contents ──
+.art {
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .tile_migration & {
+    margin-bottom: 0;
+    padding: 0.5rem;
+    border-radius: calc(#{$radius} - 0.5rem);
+    background: rgba(0, 0, 0, 0.14);
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .tile_migration & {
+    align-self: stretch;
+
+    @include mobile {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.keyDate {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: calc(#{$radius} - 0.5rem);
+  background: $accent-dark;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: $white-88;
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: $white;
+  }
+}
+
+.keyDateLabel {
+  display: block;
+  margin-bottom: 0.6rem;
+  @include label($accent-on-dark);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tag {
+  align-self: flex-start;
+  margin-bottom: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: $radius-pill;
+  background: $accent-tint;
+  @include label($accent);
+  font-size: 0.64rem;
+
+  .accentTile & {
+    background: $white;
+    color: $accent;
+  }
+  .darkTile & {
+    background: $white-12;
+    color: $accent-on-dark;
+  }
+}
+
+.title {
+  @include card-title(lg);
+  margin: 0 0 0.6rem;
+
+  .accentTile &,
+  .darkTile & {
+    color: $white;
+  }
+}
+
+.intro {
+  @include small-text;
+  margin: 0 0 1.25rem;
+
+  .accentTile & {
+    color: $white-88;
+  }
+  .darkTile & {
+    color: $white-75;
+  }
+}
+
+.points {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  .accentTile & li,
+  .darkTile & li {
+    color: $white;
+  }
+}
+
+.check {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: $accent;
+
+  .accentTile & {
+    color: $white;
+  }
+  .darkTile & {
+    color: $accent-on-dark;
+  }
+}
+
+.note {
+  margin: auto 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid $line;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  font-style: italic;
+  color: $text-secondary;
+
+  .accentTile & {
+    border-top-color: $white-18;
+    color: $white-88;
+  }
+  .darkTile & {
+    border-top-color: $white-12;
+    color: $white-65;
+  }
+}
+
+.link {
+  @include arrow-link;
+  margin-top: 1.1rem;
+
+  .accentTile & {
+    color: $white;
+  }
+  .darkTile & {
+    color: $accent-on-dark;
+  }
+}

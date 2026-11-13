@@ -1,0 +1,132 @@
+// /styles/spcdFaq.module.scss
+@use "./globals" as *;
+
+.spcdFaq {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 40rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0 0 1rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.sub {
+  @include lede;
+  margin: 0;
+  @include inline-link;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  border-radius: $radius;
+  background: $white;
+  border: 1px solid $line;
+  transition: border-color 0.2s ease;
+
+  &[open] {
+    border-color: $accent-border;
+  }
+}
+
+.question {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: $text-primary;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+    border-radius: $radius;
+  }
+
+  @include phone {
+    padding: 1.15rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.25s ease;
+  }
+
+  .item[open] & {
+    transform: rotate(45deg);
+    background: $accent;
+    color: $white;
+  }
+}
+
+.answer {
+  margin: 0;
+  padding: 0 1.5rem 1.5rem;
+  @include body-text;
+
+  @include phone {
+    padding: 0 1.25rem 1.25rem;
+  }
+}

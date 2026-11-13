@@ -1,0 +1,151 @@
+// /styles/spcdHero.module.scss
+@use "./globals" as *;
+
+.spcdHero {
+  background: $white;
+  overflow: hidden;
+}
+
+.headerBlock {
+  @include lightHeroBlock;
+}
+
+// ── Split: copy left, illustration right ──
+.inner {
+  @include heroPaddingWhite;
+  max-width: calc(#{$container} + 2 * #{$gutter});
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ──
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  @include heading-main;
+  margin: 0 0 1.5rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  font-size: 1.05rem;
+  max-width: 36rem;
+  margin: 0 0 2.25rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+.cta {
+  @include btn-on-accent;
+}
+
+.secondary {
+  @include arrow-link;
+  font-size: 0.95rem;
+}
+
+.trust {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  li {
+    @include small-text($text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 0.95rem;
+    border-radius: $radius-pill;
+    background: $light-bg;
+    border: 1px solid $line;
+  }
+}
+
+// ── Illustration ──
+.art {
+  padding: 1.75rem;
+  border-radius: $radius;
+  background: $light-bg;
+  border: 1px solid $line;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    width: 100%;
+    max-width: 38rem;
+  }
+  @include phone {
+    padding: 1rem;
+  }
+}
+
+// ── Motion ──
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    stroke-dasharray: 6 8;
+    animation: spcdHeroFlow 1.4s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spcdHeroPulse 2.2s ease-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow {
+    stroke-dasharray: 6 8;
+  }
+  .live {
+    opacity: 0;
+  }
+}
+
+@keyframes spcdHeroFlow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes spcdHeroPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
