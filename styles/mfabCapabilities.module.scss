@@ -1,0 +1,255 @@
+// /styles/mfabCapabilities.module.scss
+@use "./globals" as *;
+
+.mfabCapabilities {
+  background: $grayBGC;
+  padding: 7rem $gutter;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  @include lede;
+  margin: 0;
+}
+
+// Desktop hub: three cards left, OneLake in the middle, three cards right.
+// Rows are 1fr with an indefinite container height, so all three rows take
+// the height of the tallest one and the spoke lines (y = 1/6, 1/2, 5/6) meet
+// the centre of every card.
+.hubLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 300px) minmax(0, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "l1 hub r1"
+    "l2 hub r2"
+    "l3 hub r3";
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.hub {
+  grid-area: hub;
+  position: relative;
+}
+
+.spokes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hubCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  transform: translate(-50%, -50%);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.slot {
+  padding-block: 0.6rem;
+
+  &:nth-of-type(1) {
+    grid-area: l1;
+  }
+  &:nth-of-type(2) {
+    grid-area: l2;
+  }
+  &:nth-of-type(3) {
+    grid-area: l3;
+  }
+  &:nth-of-type(4) {
+    grid-area: r1;
+  }
+  &:nth-of-type(5) {
+    grid-area: r2;
+  }
+  &:nth-of-type(6) {
+    grid-area: r3;
+  }
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  // Dot where the spoke line meets the card
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    border-radius: 50%;
+    background: $accent;
+    box-shadow: 0 0 0 3px $grayBGC;
+  }
+}
+
+// Left column cards: dot on the right edge. Right column: on the left edge.
+.slot:nth-of-type(-n + 3) .card::after {
+  right: -5px;
+}
+.slot:nth-of-type(n + 4) .card::after {
+  left: -5px;
+}
+
+.art {
+  display: block;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cardTitle {
+  @include card-title;
+  margin: 0 0 0.2rem;
+
+  a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cardDescription {
+  @include label($accent);
+  margin: 0 0 0.6rem;
+}
+
+.cardDetail {
+  @include small-text;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+@include belowDesktop {
+  .mfabCapabilities {
+    padding: 5rem $mobGutter;
+  }
+
+  .hubLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-template-areas: none;
+    gap: 1.25rem;
+  }
+
+  .hub {
+    grid-area: auto;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .spokes {
+    display: none;
+  }
+
+  .hubCircle {
+    position: static;
+    width: 220px;
+    transform: none;
+  }
+
+  .slot {
+    padding-block: 0;
+
+    &:nth-of-type(n) {
+      grid-area: auto;
+    }
+  }
+
+  .slot .card::after {
+    display: none;
+  }
+}
+
+@include mobile {
+  .mfabCapabilities {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+
+  .hubLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hub {
+    justify-content: flex-start;
+  }
+
+  .hubCircle {
+    width: 180px;
+  }
+
+  .card {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    padding: 1.25rem;
+  }
+}

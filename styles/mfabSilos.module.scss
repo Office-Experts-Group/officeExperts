@@ -1,0 +1,183 @@
+// /styles/mfabSilos.module.scss
+@use "./globals" as *;
+
+.mfabSilos {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 0;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  p {
+    @include lede($white-75);
+    margin: 0 0 1rem;
+  }
+
+  @include inline-link($accent-on-dark);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: $radius;
+}
+
+.beforePanel {
+  background: $dark-surface;
+  border: 1px solid $white-08;
+}
+
+.afterPanel {
+  background: $accent;
+}
+
+.panelLabel {
+  margin: 0 0 0.35rem;
+  @include label($white-65);
+}
+
+.panelTitle {
+  @include card-title(lg, $white);
+  margin: 0 0 1.25rem;
+}
+
+.art {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.panelList {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid $white-18;
+  display: grid;
+  gap: 0.5rem;
+
+  li {
+    @include small-text($white-88);
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 0.9rem;
+      height: 2px;
+      background: currentColor;
+      opacity: 0.6;
+      transform: translateY(-0.25rem);
+    }
+  }
+}
+
+.benefits {
+  list-style: none;
+  margin: 3rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  strong {
+    display: block;
+    @include card-title(sm, $white);
+    margin-bottom: 0.3rem;
+  }
+}
+
+.benefitArt {
+  flex-shrink: 0;
+  width: 3.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.benefitText {
+  display: block;
+  @include small-text($white-65);
+}
+
+@include belowDesktop {
+  .mfabSilos {
+    padding: 5rem $mobGutter;
+  }
+
+  .header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include mobile {
+  .mfabSilos {
+    padding: 4rem 1.25rem;
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panel {
+    padding: 1.5rem;
+  }
+
+  .benefits {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

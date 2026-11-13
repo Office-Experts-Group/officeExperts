@@ -1,0 +1,235 @@
+// /styles/mfabServices.module.scss
+@use "./globals" as *;
+
+.mfabServices {
+  background: $light-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  @include lede;
+  margin: 0;
+}
+
+// 12-column bento: a wide dark feature tile and a tall-ish light tile on
+// the first row, three equal tiles (one accent) on the second.
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.tile {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: $radius;
+}
+
+.assessment {
+  grid-column: span 7;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.implementation {
+  grid-column: span 5;
+}
+
+.lightTile {
+  background: $white;
+  border: 1px solid $line;
+
+  .tileTitle {
+    @include card-title(lg);
+  }
+
+  .tileText {
+    @include small-text;
+    @include inline-link;
+  }
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .tileTitle {
+    @include card-title(lg, $white);
+  }
+
+  .tileText {
+    @include small-text($white-75);
+  }
+}
+
+.accentTile {
+  background: $accent;
+
+  .tileTitle {
+    @include card-title(lg, $white);
+  }
+
+  .tileText {
+    @include small-text($white-88);
+  }
+}
+
+.tileTitle {
+  margin: 0 0 0.75rem;
+}
+
+.tileText {
+  margin: 0;
+}
+
+.tileArt {
+  width: 9rem;
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.assessmentCopy {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.assessmentArt {
+  flex: 0 0 11rem;
+  display: flex;
+  align-items: flex-end;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.reviewLabel {
+  @include label($accent-on-dark);
+  margin: 1.5rem 0 0.75rem;
+}
+
+.reviewList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+
+  li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    @include small-text($white-88);
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: $accent-on-dark;
+  }
+}
+
+.tileCta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+// Keep the CTA off the text when the tile is short
+.accentTile .tileText {
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lightTile {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+@include belowDesktop {
+  .mfabServices {
+    padding: 5rem $mobGutter;
+  }
+
+  .header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tile,
+  .implementation {
+    grid-column: span 1;
+  }
+
+  .assessment {
+    grid-column: 1 / -1;
+  }
+}
+
+@include mobile {
+  .mfabServices {
+    padding: 4rem 1.25rem;
+  }
+
+  .bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tile {
+    padding: 1.5rem;
+  }
+
+  .assessment {
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+  }
+
+  .assessmentArt {
+    flex-basis: auto;
+    width: 9rem;
+  }
+}

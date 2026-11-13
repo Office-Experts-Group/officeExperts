@@ -1,0 +1,198 @@
+// /styles/mfabUseCases.module.scss
+@use "./globals" as *;
+
+$mfab-industry-count: 5;
+
+.mfabUseCases {
+  background: $white;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  @include lede;
+  margin: 0;
+}
+
+// Radio inputs stay in the DOM for keyboard and screen reader use
+.radio {
+  @include visually-hidden;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid $line-strong;
+  border-radius: $radius-pill;
+  background: $white;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+}
+
+.panel {
+  display: none;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+@for $i from 1 through $mfab-industry-count {
+  .radio:nth-of-type(#{$i}):checked ~ .tabList .tab:nth-child(#{$i}) {
+    background: $accent;
+    border-color: $accent;
+    color: $white;
+  }
+
+  .radio:nth-of-type(#{$i}):focus-visible ~ .tabList .tab:nth-child(#{$i}) {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+  }
+
+  .radio:nth-of-type(#{$i}):checked ~ .panels .panel:nth-child(#{$i}) {
+    display: grid;
+  }
+}
+
+.art {
+  padding: 1.25rem;
+  background: $accent-light;
+  border-radius: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.panelTitle {
+  @include card-title(lg);
+  margin: 0 0 0.5rem;
+}
+
+.panelDescription {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: $accent;
+}
+
+.panelDetail {
+  @include body-text;
+  margin: 0 0 1.5rem;
+}
+
+.chipsLabel {
+  @include label;
+  margin: 0 0 0.6rem;
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 0.35rem 0.8rem;
+    border-radius: $radius-pill;
+    background: $white;
+    border: 1px solid $accent-border;
+    color: $accent-dark;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+}
+
+.panelLink {
+  @include arrow-link;
+  margin-top: 1.5rem;
+}
+
+@include belowDesktop {
+  .mfabUseCases {
+    padding: 5rem $mobGutter;
+  }
+
+  .header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .art {
+    max-width: 520px;
+  }
+}
+
+@include mobile {
+  .mfabUseCases {
+    padding: 4rem 1.25rem;
+  }
+
+  .tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .panel {
+    padding: 1.25rem;
+  }
+
+  .art {
+    padding: 0.75rem;
+  }
+}

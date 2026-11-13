@@ -1,0 +1,161 @@
+// /styles/mfabFitCheck.module.scss
+@use "./globals" as *;
+
+.mfabFitCheck {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: stretch;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 0 0 1.25rem;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.text {
+  @include lede($white-75);
+  max-width: 560px;
+  margin: 0 0 2.5rem;
+}
+
+.signs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2.25rem;
+}
+
+.sign {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  p {
+    @include small-text($white-65);
+    margin: 0;
+  }
+
+  strong {
+    display: block;
+    @include card-title(sm, $white);
+    margin-bottom: 0.3rem;
+  }
+}
+
+.signArt {
+  flex-shrink: 0;
+  width: 4rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.notYet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.25rem;
+  background: $accent;
+  border-radius: $radius;
+}
+
+.notYetTitle {
+  @include card-title(lg, $white);
+  margin: 0 0 1.25rem;
+}
+
+.notYetList {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+
+  li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    @include small-text($white-88);
+  }
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+    color: $white;
+  }
+}
+
+.alternatives {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 0;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid $white-18;
+  border-bottom: 1px solid $white-18;
+  align-self: stretch;
+}
+
+.altLink {
+  @include arrow-link($white);
+  font-size: 0.95rem;
+}
+
+.honest {
+  @include small-text($white-88);
+  margin: auto 0 1rem;
+}
+
+.ctaBtn {
+  background: $white;
+  color: $accent;
+}
+@include belowDesktop {
+  .mfabFitCheck {
+    padding: 5rem $mobGutter;
+  }
+
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@include mobile {
+  .mfabFitCheck {
+    padding: 4rem 1.25rem;
+  }
+
+  .signs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .signArt {
+    width: 3.25rem;
+  }
+
+  .notYet {
+    padding: 1.5rem;
+  }
+}

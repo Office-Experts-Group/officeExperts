@@ -1,0 +1,122 @@
+// /styles/mfabIntro.module.scss
+@use "./globals" as *;
+
+.mfabIntro {
+  background: $white;
+  padding: 7rem $gutter;
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4.5rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0 0 1.5rem;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  @include lede;
+  margin: 0 0 1.25rem;
+  @include inline-link;
+}
+
+.terms {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  dl {
+    margin: 0;
+    display: grid;
+    gap: 1.1rem;
+  }
+}
+
+.termsLabel {
+  margin: 0 0 1rem;
+  @include label($accent);
+}
+
+.term {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+
+  dt {
+    @include card-title(sm);
+  }
+
+  dd {
+    margin: 0;
+    @include small-text;
+  }
+}
+
+.diagram {
+  margin: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.caption {
+  @include small-text($text-muted);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@include belowDesktop {
+  .mfabIntro {
+    padding: 5rem $mobGutter;
+  }
+
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .diagram {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+@include mobile {
+  .mfabIntro {
+    padding: 4rem 1.25rem;
+  }
+
+  .terms {
+    padding: 1.25rem;
+  }
+
+  .term {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+}

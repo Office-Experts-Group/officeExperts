@@ -1,0 +1,149 @@
+// /styles/mfabFaq.module.scss
+@use "./globals" as *;
+
+.mfabFaq {
+  background: $white;
+  padding: 7rem $gutter;
+}
+
+.inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.list {
+  border-top: 1px solid $line;
+}
+
+.item {
+  border-bottom: 1px solid $line;
+
+  &[open] .icon {
+    background: $accent;
+    color: $white;
+    transform: rotate(45deg);
+  }
+}
+
+.question {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  @include card-title;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    color: $accent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 4px;
+    border-radius: 0.25rem;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+}
+
+.answer {
+  @include body-text;
+  margin: 0;
+  padding: 0 3.75rem 1.5rem 0;
+}
+
+.strip {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.stripArt {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: auto;
+}
+
+.stripText {
+  flex: 1;
+  margin: 0;
+  @include card-title(sm);
+}
+
+.stripCta {
+  @include btn-on-accent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .icon {
+    transition:
+      transform 0.25s ease,
+      background-color 0.25s ease,
+      color 0.25s ease;
+  }
+}
+
+@include belowDesktop {
+  .mfabFaq {
+    padding: 5rem $mobGutter;
+  }
+}
+
+@include mobile {
+  .mfabFaq {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .answer {
+    padding-right: 0;
+  }
+
+  .strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
