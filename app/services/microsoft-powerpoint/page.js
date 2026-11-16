@@ -26,7 +26,7 @@ import {
   generateWebSiteSchema,
   generateOrganizationSchema,
   generateProfessionalServiceSchema,
-} from "@/utils/testimonialSchemaGenerator";
+} from "@/utils/schemaGenerators";
 
 import { testimonials } from "@/testimonials";
 
