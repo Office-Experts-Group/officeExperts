@@ -1,0 +1,251 @@
+// /styles/pbsvServices.module.scss
+@use "./globals" as *;
+
+.pbsvServices {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    max-width: 52rem;
+    margin: 0 0 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow;
+  }
+
+  .heading {
+    @include heading-section;
+    margin: 0;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > * {
+      min-width: 0;
+    }
+
+    @include belowDesktop {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: $radius;
+    padding: 2rem;
+  }
+
+  // grid placement: dashboards is tall on the left, the rest fill around it
+  .dashboards {
+    grid-column: span 3;
+    grid-row: span 2;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .model,
+  .live {
+    grid-column: span 3;
+  }
+  .security {
+    grid-column: span 4;
+    flex-direction: row;
+    align-items: center;
+  }
+  .review {
+    grid-column: span 2;
+  }
+  .training {
+    grid-column: span 6;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include belowDesktop {
+    .dashboards,
+    .security,
+    .review,
+    .training {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+    .model,
+    .live {
+      grid-column: span 1;
+    }
+  }
+  @include mobile {
+    .dashboards,
+    .model,
+    .live,
+    .security,
+    .review,
+    .training {
+      grid-column: span 1;
+    }
+    .security,
+    .training {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  // tile colour variants (named by look, never by role)
+  .darkTile {
+    background: $dark-bg;
+  }
+  .surfaceTile {
+    background: $dark-surface;
+  }
+  .lightTile {
+    background: $light-bg;
+    border: 1px solid $line;
+  }
+  .tintTile {
+    background: $accent-light;
+  }
+  .accentTile {
+    background: $accent;
+  }
+
+  .art {
+    flex-shrink: 0;
+    width: 10rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .dashboards .art {
+    order: 2;
+    width: 100%;
+    max-width: 26rem;
+    margin-top: auto;
+  }
+  .security .art,
+  .training .art {
+    width: 11rem;
+  }
+  @include mobile {
+    .security .art,
+    .training .art {
+      width: 9rem;
+    }
+  }
+
+  .body {
+    min-width: 0;
+  }
+
+  .title {
+    @include card-title(lg);
+    margin: 0 0 0.75rem;
+  }
+  .text {
+    @include body-text;
+    margin: 0;
+  }
+
+  .darkTile,
+  .surfaceTile {
+    .title {
+      color: $white;
+    }
+    .text {
+      color: $white-75;
+    }
+  }
+  .accentTile {
+    .title {
+      color: $white;
+    }
+    .text {
+      color: $white-88;
+    }
+  }
+
+  .points {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid $white-12;
+
+    ul {
+      display: grid;
+      gap: 0.6rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      @include small-text($white-88);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    svg {
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+      color: $accent-on-dark;
+    }
+  }
+
+  .pointsLabel {
+    @include label($white-55);
+    margin: 0 0 0.85rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .link {
+    @include arrow-link;
+  }
+  .darkTile .link,
+  .surfaceTile .link {
+    color: $accent-on-dark;
+  }
+  .accentTile .link {
+    color: $white;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pbsvServices .tile {
+    transition: box-shadow 0.25s ease;
+
+    &:hover {
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}

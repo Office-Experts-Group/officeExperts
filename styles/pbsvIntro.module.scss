@@ -1,0 +1,119 @@
+// /styles/pbsvIntro.module.scss
+@use "./globals" as *;
+
+.pbsvIntro {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    align-items: start;
+
+    > * {
+      min-width: 0;
+    }
+
+    @include belowDesktop {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow;
+  }
+
+  .heading {
+    @include heading-section;
+    margin: 0 0 1.5rem;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  .lede {
+    @include lede;
+    margin: 0 0 1.25rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  // the right-hand column sits lower, so the grid reads as two staggered rows
+  .card:nth-child(even) {
+    @include tabletUp {
+      transform: translateY(2.5rem);
+    }
+  }
+
+  .card {
+    background: $white;
+    border: 1px solid $line;
+    border-radius: $radius;
+    padding: 1.75rem;
+  }
+
+  .cardArt {
+    width: 4.75rem;
+    margin-bottom: 1.25rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .cardTitle {
+    @include card-title;
+    margin: 0 0 0.6rem;
+  }
+
+  .cardText {
+    @include small-text;
+    margin: 0;
+  }
+
+  // keep the staggered column from colliding with the next section
+  .inner {
+    padding-bottom: 2.5rem;
+
+    @include belowDesktop {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pbsvIntro .card {
+    transition:
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+
+    &:hover {
+      border-color: $accent-border;
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}

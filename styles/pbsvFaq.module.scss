@@ -1,0 +1,124 @@
+// /styles/pbsvFaq.module.scss
+@use "./globals" as *;
+
+.pbsvFaq {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 4rem;
+    align-items: start;
+
+    > * {
+      min-width: 0;
+    }
+
+    @include belowDesktop {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  // sticky intro beside the accordion
+  .intro {
+    @include desktopUp {
+      position: sticky;
+      top: $scroll-offset;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow;
+  }
+
+  .heading {
+    @include heading-section;
+    margin: 0 0 1.25rem;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  .lede {
+    @include lede;
+    margin: 0 0 1.5rem;
+  }
+
+  .arrowLink {
+    @include arrow-link;
+  }
+
+  .list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .item {
+    background: $white;
+    border: 1px solid $line;
+    border-radius: $radius;
+    padding: 0 1.75rem;
+
+    &[open] {
+      border-color: $accent-border;
+    }
+  }
+
+  .summary {
+    @include card-title;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.4rem 0;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  .toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: $accent-light;
+    color: $accent;
+  }
+
+  .item[open] .toggle {
+    background: $accent;
+    color: $white;
+    transform: rotate(45deg);
+  }
+
+  .answer {
+    @include body-text;
+    margin: 0;
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pbsvFaq .toggle {
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+}

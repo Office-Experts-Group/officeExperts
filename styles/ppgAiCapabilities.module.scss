@@ -1,0 +1,169 @@
+// /styles/ppgAiCapabilities.module.scss
+@use "./globals" as *;
+
+.ppgAi {
+  padding: 7rem $gutter;
+  background: $light-bg;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 48rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.headline {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 0;
+  @include lede;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 1.25rem 1.5rem;
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+.lightRow {
+  background: $white;
+}
+
+.darkRow {
+  background: $dark-bg;
+}
+
+.art {
+  display: block;
+  width: 96px;
+  height: 96px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include belowDesktop {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.rowTitle {
+  margin: 0 0 0.6rem;
+  @include card-title(lg);
+}
+
+.rowBody {
+  margin: 0;
+  @include body-text;
+}
+
+.darkRow {
+  .rowTitle {
+    color: $white;
+  }
+  .rowBody {
+    color: $white-75;
+  }
+}
+
+.honest {
+  padding: 1.25rem 1.4rem;
+  background: $accent-tint;
+  border-radius: 1rem;
+
+  @include belowDesktop {
+    grid-column: 1 / -1;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.darkRow .honest {
+  background: $white-08;
+}
+
+.honestTag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.7rem;
+  background: $accent;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.honestText {
+  margin: 0;
+  @include small-text($text-primary);
+  font-weight: 600;
+}
+
+.darkRow .honestText {
+  color: $white-88;
+}
+
+.after {
+  margin: 0 0 1rem;
+  @include small-text;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.arrowLink {
+  @include arrow-link;
+}

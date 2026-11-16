@@ -1,0 +1,198 @@
+// /styles/ppgVisualisation.module.scss
+@use "./globals" as *;
+
+.ppgVisuals {
+  padding: 7rem $gutter;
+  background: $white;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.headline {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 0;
+  @include lede;
+}
+
+// ── CSS-only tabs ───────────────────────────────────────────────────────────
+.tabs {
+  min-width: 0;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  @include visually-hidden;
+}
+
+.radio {
+  @include visually-hidden;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.4rem;
+  background: $light-bg;
+  border-radius: $radius-pill;
+
+  @include mobile {
+    width: 100%;
+    border-radius: 1.25rem;
+  }
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border-radius: $radius-pill;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $text-secondary;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    color: $accent;
+  }
+
+  @include mobile {
+    flex: 1 1 auto;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+}
+
+.radio_powerbi:checked ~ .tabList .tab_powerbi,
+.radio_native:checked ~ .tabList .tab_native,
+.radio_custom:checked ~ .tabList .tab_custom {
+  background: $accent;
+  color: $white;
+}
+
+.radio_powerbi:focus-visible ~ .tabList .tab_powerbi,
+.radio_native:focus-visible ~ .tabList .tab_native,
+.radio_custom:focus-visible ~ .tabList .tab_custom {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+.panel {
+  display: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.radio_powerbi:checked ~ .panels .panel_powerbi,
+.radio_native:checked ~ .panels .panel_native,
+.radio_custom:checked ~ .panels .panel_custom {
+  display: grid;
+}
+
+.panelHeading {
+  margin: 0 0 1rem;
+  @include card-title(lg);
+}
+
+.panelBody {
+  margin: 0 0 1rem;
+  @include lede;
+}
+
+.panelDetail {
+  margin: 0 0 1.5rem;
+  @include small-text;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 0.4rem 0.9rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $accent;
+}
+
+.panelVisual {
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
+.after {
+  margin: 2rem 0 0;
+  @include small-text;
+  @include inline-link;
+}
+
+.inlineLink {
+  color: $accent;
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -1,0 +1,125 @@
+// /styles/ppgHero.module.scss
+@use "./globals" as *;
+
+.ppgHero {
+  background: $white;
+  overflow-x: clip;
+}
+
+.headerBlock {
+  @include lightHeroBlock;
+}
+
+.inner {
+  @include heroPaddingWhite;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1600px;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  @include heading-main;
+  margin: 0 0 1.5rem;
+}
+
+.accent {
+  display: block;
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  max-width: 38rem;
+  margin: 0 0 2rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.cta {
+  @include btn-on-accent;
+}
+
+.arrowLink {
+  @include arrow-link;
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  @include small-text($text-secondary);
+  font-weight: 600;
+
+  svg {
+    flex-shrink: 0;
+    color: $accent;
+  }
+}
+
+.visual {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: ppgFlow 1.6s linear infinite;
+  }
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ppgPulse 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes ppgFlow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes ppgPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2.2);
+    opacity: 0.35;
+  }
+}

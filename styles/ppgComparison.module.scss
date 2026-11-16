@@ -1,0 +1,216 @@
+// /styles/ppgComparison.module.scss
+@use "./globals" as *;
+
+.ppgComparison {
+  padding: 7rem $gutter;
+  background: $white;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow;
+}
+
+.headline {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 0;
+  @include lede;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.panelAccent,
+.panelLight {
+  padding: 2.25rem;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.panelAccent {
+  background: $accent;
+  color: $white;
+}
+
+.panelLight {
+  background: $light-bg;
+}
+
+.panelTitle {
+  margin: 0 0 1.5rem;
+  @include card-title(lg);
+}
+
+.panelAccent .panelTitle {
+  color: $white;
+}
+
+.or {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: $dark-bg;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $white;
+
+  @include belowDesktop {
+    justify-self: center;
+  }
+}
+
+.criteria {
+  display: grid;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.criterion {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+.panelAccent .icon {
+  background: $white-18;
+  color: $white;
+}
+
+.panelLight .icon {
+  background: $white;
+  color: $accent;
+}
+
+.criterionTitle {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.criterionBody {
+  margin: 0;
+  @include small-text;
+}
+
+.panelAccent {
+  .criterionTitle {
+    color: $white;
+  }
+  .criterionBody {
+    color: $white-88;
+  }
+}
+
+.note {
+  margin: 1.75rem 0 2.5rem;
+  @include body-text;
+}
+
+.inlineLink {
+  @include inline-link;
+}
+
+.band {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2.25rem;
+  background: $dark-bg;
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+.bandArt {
+  display: block;
+  width: 160px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.bandTitle {
+  margin: 0 0 0.6rem;
+  @include card-title(lg, $white);
+}
+
+.bandBody {
+  max-width: 46rem;
+  margin: 0;
+  @include body-text($white-75);
+}

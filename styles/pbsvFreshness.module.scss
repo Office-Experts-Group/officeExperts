@@ -1,0 +1,199 @@
+// /styles/pbsvFreshness.module.scss
+@use "./globals" as *;
+
+.pbsvFreshness {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    max-width: 54rem;
+    margin: 0 0 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow;
+  }
+
+  .heading {
+    @include heading-section;
+    margin: 0 0 1.25rem;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  .lede {
+    @include lede;
+    margin: 0;
+  }
+
+  .tableWrap {
+    background: $white;
+    border: 1px solid $line;
+    border-radius: $radius;
+    overflow: hidden;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead th {
+      @include label($text-secondary);
+      padding: 1.1rem 1.75rem;
+      background: $accent-light;
+      text-align: left;
+    }
+
+    tbody tr + tr {
+      border-top: 1px solid $line;
+    }
+
+    td,
+    .rowHead {
+      padding: 1.75rem;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    td {
+      @include small-text;
+      width: 28%;
+    }
+
+    .rowHead {
+      width: 44%;
+      font-weight: 400;
+    }
+  }
+
+  .caption {
+    @include visually-hidden;
+  }
+
+  .rowArt {
+    float: left;
+    width: 3.5rem;
+    margin-right: 1.25rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .rowName {
+    @include card-title;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .rowHow {
+    @include small-text;
+    display: block;
+  }
+
+  .sources {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3.5rem;
+
+    > * {
+      min-width: 0;
+    }
+
+    @include belowDesktop {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .sourcesTitle {
+    @include card-title(lg);
+    margin: 0 0 0.75rem;
+  }
+
+  .sourcesText {
+    @include body-text;
+    margin: 0 0 1.25rem;
+  }
+
+  .arrowLink {
+    @include arrow-link;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .chip {
+    @include small-text($text-primary);
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    background: $white;
+    border: 1px solid $line-strong;
+    border-radius: $radius-pill;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a.chip {
+    color: $accent;
+    border-color: $accent-border;
+  }
+
+  // one semantic table at every width: below 767px each row stacks and the
+  // column names come from data-label
+  @include mobile {
+    .table {
+      thead {
+        @include visually-hidden;
+      }
+
+      tbody,
+      tr,
+      td,
+      .rowHead {
+        display: block;
+        width: 100%;
+      }
+
+      td,
+      .rowHead {
+        padding: 0.35rem 1.25rem;
+      }
+
+      .rowHead {
+        padding-top: 1.5rem;
+      }
+
+      tbody tr {
+        padding-bottom: 1.25rem;
+      }
+
+      td::before {
+        @include label($accent);
+        display: block;
+        margin-bottom: 0.2rem;
+        content: attr(data-label);
+      }
+    }
+  }
+}

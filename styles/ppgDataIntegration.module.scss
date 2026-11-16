@@ -1,0 +1,249 @@
+// /styles/ppgDataIntegration.module.scss
+@use "./globals" as *;
+
+.ppgData {
+  padding: 7rem $gutter;
+  background: $dark-bg;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  margin: 0;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.prose {
+  p {
+    margin: 0 0 1.1rem;
+    @include lede($white-75);
+  }
+
+  a:not(.cta) {
+    color: $accent-on-dark;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.cta {
+  margin-top: 0.75rem;
+}
+
+// ── Bento: 12 columns, mixed spans ─────────────────────────────────────────
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 2rem;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.tileDirect {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+.tileVirtual {
+  grid-column: span 6;
+}
+.tileAutomate {
+  grid-column: span 3;
+}
+.tilePermissions {
+  grid-column: span 3;
+}
+
+@include belowDesktop {
+  .tileDirect,
+  .tileVirtual {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .tileAutomate,
+  .tilePermissions {
+    grid-column: span 1;
+  }
+}
+
+@include mobile {
+  .tileDirect,
+  .tileVirtual,
+  .tileAutomate,
+  .tilePermissions {
+    grid-column: auto;
+  }
+}
+
+// Tile palettes (named for what they are, not for "accent")
+.accentTile {
+  background: $accent;
+}
+.darkTile {
+  background: $dark-surface;
+}
+.lightTile {
+  background: $white;
+}
+.midTile {
+  background: $dark-mid;
+}
+
+.art {
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
+}
+
+.artWide {
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+  }
+}
+
+.tileTitle {
+  margin: 0 0 0.3rem;
+  @include card-title(lg, $white);
+}
+
+.tileSub {
+  margin: 0 0 1rem;
+  @include label($accent-on-dark);
+}
+
+.tileBody {
+  margin: 0;
+  @include body-text($white-75);
+}
+
+.accentTile {
+  .tileSub {
+    color: $white-75;
+  }
+  .tileBody {
+    color: $white-88;
+  }
+}
+
+.lightTile {
+  .tileTitle {
+    color: $text-primary;
+  }
+  .tileSub {
+    color: $accent;
+  }
+  .tileBody {
+    color: $text-secondary;
+  }
+}
+
+.setup {
+  margin-top: auto;
+  padding-top: 1.75rem;
+}
+
+.setupLabel {
+  margin: 0 0 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $white-18;
+  @include label($white-75);
+}
+
+.setupList {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    @include small-text($white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.8em;
+      left: 0;
+      width: 0.8rem;
+      height: 2px;
+      border-radius: 1px;
+      background: $white-65;
+    }
+  }
+}
+
+.after {
+  margin: 2rem 0 0;
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+}

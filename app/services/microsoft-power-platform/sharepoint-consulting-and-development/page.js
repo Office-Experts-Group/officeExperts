@@ -160,9 +160,7 @@ const Page = () => {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <SpcdHero />
       <SpcdIntro />

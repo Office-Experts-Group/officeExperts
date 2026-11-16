@@ -5,16 +5,6 @@ export const metadata = {
   description:
     "We specialise in applications that efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
 
-  alternates: {
-    canonical:
-      "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
-    alternate: [
-      {
-        url: "https://www.officeeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
-      },
-    ],
-  },
-
   // OpenGraph
   openGraph: {
     title: "Microsoft Power Platform Services | Office Experts Group",

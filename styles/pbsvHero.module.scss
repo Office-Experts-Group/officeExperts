@@ -1,0 +1,132 @@
+// /styles/pbsvHero.module.scss
+@use "./globals" as *;
+
+.pbsvHero {
+  background: $white;
+  overflow-x: clip;
+
+  .band {
+    @include lightHeroBlock;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .inner {
+    @include heroPaddingWhite;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3rem;
+
+    @include belowDesktop {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  .copy {
+    text-align: left;
+  }
+
+  .heading {
+    @include heading-main;
+    margin: 0 0 1.5rem;
+  }
+
+  .accent {
+    color: $accent;
+  }
+
+  .lede {
+    @include lede;
+    max-width: 38rem;
+    margin: 0 0 2rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta {
+    @include btn-on-accent;
+  }
+
+  .arrowLink {
+    @include arrow-link;
+  }
+
+  .trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      @include small-text($text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: $accent;
+    }
+  }
+
+  .art {
+    min-width: 0;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 34rem;
+      margin-inline: auto;
+    }
+
+    @include belowDesktop {
+      svg {
+        max-width: 30rem;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    stroke-dasharray: 7 9;
+    animation: pbsvHeroFlow 1.6s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pbsvHeroPulse 2.2s ease-out infinite;
+  }
+}
+
+@keyframes pbsvHeroFlow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes pbsvHeroPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

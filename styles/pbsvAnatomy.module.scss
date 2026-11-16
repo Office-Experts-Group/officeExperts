@@ -1,0 +1,114 @@
+// /styles/pbsvAnatomy.module.scss
+@use "./globals" as *;
+
+// Standout section: the diagram runs the full width of the page, with the
+// callouts drawn into it. The notes underneath explain each part in plain text.
+.pbsvAnatomy {
+  background: $dark-bg;
+  padding: 7rem 0;
+  overflow-x: clip;
+
+  @include belowDesktop {
+    padding: 5rem 0;
+  }
+  @include mobile {
+    padding: 4rem 0;
+  }
+
+  .header {
+    max-width: 54rem;
+    margin: 0 $gutter 3rem;
+
+    @include belowDesktop {
+      margin: 0 $mobGutter 2.5rem;
+    }
+    @include mobile {
+      margin: 0 1.25rem 2rem;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow-on-dark;
+  }
+
+  .heading {
+    @include heading-section-on-dark;
+    margin: 0 0 1.25rem;
+  }
+
+  .accent {
+    color: $accent-on-dark;
+  }
+
+  .lede {
+    @include lede($white-75);
+    margin: 0;
+  }
+
+  .figure {
+    max-width: 1600px;
+    min-width: 0;
+    margin: 0 auto;
+  }
+
+  .diagramScroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .diagramInner {
+    min-width: 960px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 3.5rem $gutter 0;
+    padding: 2.5rem 0 0;
+    border-top: 1px solid $white-12;
+    list-style: none;
+
+    @include belowDesktop {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 3rem $mobGutter 0;
+    }
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+      margin: 2.5rem 1.25rem 0;
+    }
+  }
+
+  .note {
+    padding-right: 0.75rem;
+  }
+
+  .noteTerm {
+    @include card-title(sm, $white);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.5rem;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: $accent-on-dark;
+    }
+  }
+
+  .noteText {
+    @include small-text($white-75);
+    margin: 0;
+  }
+}

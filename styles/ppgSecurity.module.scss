@@ -1,0 +1,214 @@
+// /styles/ppgSecurity.module.scss
+@use "./globals" as *;
+
+// Standout section: a full-bleed journey band (the diagram) runs edge to edge
+// between a padded header and a staircase of four detail cards.
+
+.ppgSecurity {
+  padding: 7rem 0;
+  background: $ink;
+  overflow-x: clip;
+
+  @include belowDesktop {
+    padding: 5rem 0;
+  }
+  @include mobile {
+    padding: 4rem 0;
+  }
+}
+
+.head,
+.body {
+  max-width: calc(#{$container} + 2 * #{$gutter});
+  margin-inline: auto;
+  padding-inline: $gutter;
+
+  @include belowDesktop {
+    padding-inline: $mobGutter;
+  }
+  @include mobile {
+    padding-inline: 1.25rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  max-width: 36rem;
+  margin: 0 0 1.25rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  max-width: 44rem;
+  margin: 0 0 1.75rem;
+  @include lede($white-75);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 0.45rem 1rem;
+  background: $white-08;
+  border-radius: $radius-pill;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $white-88;
+}
+
+// ── Full-bleed band ─────────────────────────────────────────────────────────
+.band {
+  margin: 3.5rem 0 4rem;
+  padding: 3rem $gutter 2rem;
+  background: $dark-bg;
+
+  @include belowDesktop {
+    padding: 2.5rem $mobGutter 1.75rem;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.diagramInner {
+  min-width: 720px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.caption {
+  max-width: 1400px;
+  margin: 1.25rem auto 0;
+  @include small-text($white-65);
+}
+
+// ── Staircase of cards ──────────────────────────────────────────────────────
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 2rem;
+  }
+}
+
+.card {
+  padding: 1.75rem;
+  background: $dark-surface;
+  border-radius: $radius;
+  height: 100%;
+}
+
+@include desktopUp {
+  .card:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+  .card:nth-child(3) {
+    margin-top: 3rem;
+  }
+  .card:nth-child(4) {
+    margin-top: 4.5rem;
+  }
+}
+
+.cardArt {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cardTitle {
+  margin: 0 0 0.35rem;
+  @include card-title(md, $white);
+}
+
+.cardShort {
+  margin: 0 0 0.9rem;
+  @include small-text($accent-on-dark);
+  font-weight: 700;
+}
+
+.cardDetail {
+  margin: 0;
+  @include small-text($white-75);
+}
+
+// ── Governance tile ─────────────────────────────────────────────────────────
+.gov {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding: 2rem 2.25rem;
+  background: $accent;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+.govIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: $white-18;
+  border-radius: 50%;
+  color: $white;
+}
+
+.govTitle {
+  margin: 0 0 0.4rem;
+  @include card-title(md, $white);
+}
+
+.govBody {
+  max-width: 48rem;
+  margin: 0;
+  @include body-text($white-88);
+}

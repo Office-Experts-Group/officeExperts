@@ -1,0 +1,122 @@
+// /styles/pbsvProcess.module.scss
+@use "./globals" as *;
+
+// Horizontal track: scroll-snap below 1400px, five equal columns above.
+.pbsvProcess {
+  background: $dark-bg;
+  padding: 7rem 0;
+  overflow-x: clip;
+
+  @include belowDesktop {
+    padding: 5rem 0;
+  }
+  @include mobile {
+    padding: 4rem 0;
+  }
+
+  .header {
+    max-width: 52rem;
+    margin: 0 $gutter 3rem;
+
+    @include belowDesktop {
+      margin: 0 $mobGutter 2.5rem;
+    }
+    @include mobile {
+      margin: 0 1.25rem 2rem;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    @include eyebrow-on-dark;
+  }
+
+  .heading {
+    @include heading-section-on-dark;
+    margin: 0 0 1.25rem;
+  }
+
+  .accent {
+    color: $accent-on-dark;
+  }
+
+  .lede {
+    @include lede($white-75);
+    margin: 0;
+  }
+
+  .track {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0 $gutter 1.25rem;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: $gutter;
+    -webkit-overflow-scrolling: touch;
+
+    @include belowDesktop {
+      padding-inline: $mobGutter;
+      scroll-padding-inline: $mobGutter;
+    }
+    @include mobile {
+      padding-inline: 1.25rem;
+      scroll-padding-inline: 1.25rem;
+    }
+
+    @media (min-width: 1400px) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      padding: 0 $gutter;
+      overflow: visible;
+    }
+  }
+
+  .stage {
+    position: relative;
+    flex: 0 0 min(17rem, 78vw);
+    scroll-snap-align: start;
+    background: $dark-surface;
+    border: 1px solid $white-08;
+    border-radius: $radius;
+    padding: 1.75rem 1.5rem;
+
+    @media (min-width: 1400px) {
+      flex: none;
+    }
+  }
+
+  // dashed connector from one stage's art to the next, when all five fit (1400px and up)
+  .stage:not(:last-child)::after {
+    @media (min-width: 1400px) {
+      content: "";
+      position: absolute;
+      top: 4rem;
+      left: 100%;
+      width: 1.25rem;
+      border-top: 2px dashed $accent;
+    }
+  }
+
+  .stageArt {
+    width: 5.5rem;
+    margin-bottom: 1.25rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .stageTitle {
+    @include card-title(md, $white);
+    margin: 0 0 0.6rem;
+  }
+
+  .stageText {
+    @include small-text($white-75);
+    margin: 0;
+  }
+}

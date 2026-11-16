@@ -1,0 +1,149 @@
+// /styles/ppgHowWeWork.module.scss
+@use "./globals" as *;
+
+.ppgHowWeWork {
+  padding: 7rem $gutter;
+  background: $dark-bg;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark;
+}
+
+.headline {
+  margin: 0 0 1.25rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  margin: 0;
+  @include lede($white-75);
+}
+
+.inlineLink {
+  color: $accent-on-dark;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.tileFixed {
+  grid-column: span 7;
+}
+.tileHourly {
+  grid-column: span 5;
+}
+.tileSupport {
+  grid-column: span 5;
+}
+.tileTraining {
+  grid-column: span 7;
+}
+
+@include belowDesktop {
+  .tileFixed,
+  .tileHourly,
+  .tileSupport,
+  .tileTraining {
+    grid-column: auto;
+  }
+}
+
+.accentTile {
+  background: $accent;
+}
+.darkTile {
+  background: $dark-surface;
+}
+.lightTile {
+  background: $white;
+}
+.midTile {
+  background: $dark-mid;
+}
+
+.art {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 1.25rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tileTitle {
+  margin: 0 0 0.6rem;
+  @include card-title(lg, $white);
+}
+
+.tileBody {
+  max-width: 34rem;
+  margin: 0;
+  @include body-text($white-88);
+}
+
+.lightTile {
+  .tileTitle {
+    color: $text-primary;
+  }
+  .tileBody {
+    color: $text-secondary;
+  }
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+}
