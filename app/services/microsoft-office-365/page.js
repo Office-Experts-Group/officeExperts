@@ -22,7 +22,8 @@ import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
-} from "@/utils/testimonialSchemaGenerator";
+} from "@/utils/schemaGenerators";
+
 import { testimonials } from "@/testimonials";
 
 const PAGE_URL =
