@@ -1,0 +1,94 @@
+// /styles/pbdiIntro.module.scss
+@use "./globals" as *;
+
+.pbdiIntro {
+  background: $light-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 2rem 4rem;
+  margin-bottom: 3.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.copy {
+  @include inline-link;
+
+  p {
+    margin: 0;
+    @include lede;
+  }
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.figure {
+  margin: 0;
+  padding: 1.75rem;
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 640px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.caption {
+  margin: 1.25rem 0 0;
+  @include small-text;
+}

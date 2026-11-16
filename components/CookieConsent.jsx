@@ -1,58 +1,38 @@
+// /components/CookieConsent.jsx
 "use client";
 import React, { useEffect, useState } from "react";
-import Script from "next/script";
 import styles from "@/styles/cookieConsent.module.scss";
-// Google Analytics ID for Office Experts
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PPD9KDBZCN";
-// Google Ads Conversion ID and Label (same across all sites)
-const GADS_CONVERSION_ID = "AW-1062762865";
-const GADS_CONVERSION_LABEL = "ZqwXCP_M6MYaEPHy4foD";
 
-// Receives the per-request nonce from layout.js (read there via
-// next/headers, since this is a client component and can't read it itself).
-const CookieConsent = ({ nonce }) => {
+// Tracking no longer depends on this banner. Google Tag Manager and the
+// conversion hooks load from layout.js on every page. This component only
+// records the visitor's choice in localStorage.
+const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    // A choice already exists (accepted or declined): never show again
+    if (localStorage.getItem("cookieConsent")) return;
 
-    // Check if consent already exists
-    const consentChoice = localStorage.getItem("cookieConsent");
-    if (consentChoice === "accepted") {
-      setShowAnalytics(true);
-      return;
-    }
+    const show = () => setIsVisible(true);
 
-    // Add scroll listener for better UX
     const handleScroll = () => {
-      if (!hasScrolled && window.scrollY > 100) {
-        setHasScrolled(true);
-        setIsVisible(true);
+      if (window.scrollY > 100) {
+        show();
         window.removeEventListener("scroll", handleScroll);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Show consent after slight delay if no choice made and no scroll yet
-    const timer = setTimeout(() => {
-      if (!localStorage.getItem("cookieConsent") && !hasScrolled) {
-        setIsVisible(true);
-      }
-    }, 2000);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    const timer = setTimeout(show, 2000);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timer);
     };
-  }, [hasScrolled]);
+  }, []);
 
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "accepted");
-    setShowAnalytics(true);
     setIsVisible(false);
   };
 
@@ -61,145 +41,43 @@ const CookieConsent = ({ nonce }) => {
     setIsVisible(false);
   };
 
+  if (!isVisible) return null;
+
   return (
-    <>
-      {showAnalytics && (
-        <>
-          {/* Google Analytics script - gtag.js. The nonce attribute is what
-              satisfies CSP's script-src-elem 'nonce-...' directive. */}
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-            nonce={nonce}
-          />
-          <Script
-            id="google-analytics"
-            strategy="afterInteractive"
-            nonce={nonce}
-          >
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_ID}');
-              gtag('config', '${GADS_CONVERSION_ID}', {
-                'send_page_view': false,
-                'linker': {
-                  'domains': ['excelexperts.com.au', 'officeexperts.com.au', 'accessexperts.com.au', 'wordexperts.com.au', 'powerplatformexperts.com.au']
-                }
-              });
-
-              // Single definition of conversion tracking function
-              window.gtag_report_conversion = function(url) {
-                try {
-                  var callback = function () {
-                    if (typeof(url) != 'undefined') {
-                      window.location = url;
-                    }
-                  };
-
-                  if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', {
-                      'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}',
-                      'event_callback': callback
-                    });
-                  } else {
-                    console.log("Google Analytics not available yet, no conversion tracked");
-                    if (typeof callback === 'function') {
-                      callback();
-                    }
-                  }
-                  return false;
-                } catch (error) {
-                  console.error("Error in conversion tracking:", error);
-                  if (typeof(url) != 'undefined') {
-                    window.location = url;
-                  }
-                  return false;
-                }
-              };
-            `}
-          </Script>
-
-          {/* Enhanced conversion tracking with GA4 events */}
-          <Script
-            id="conversion-tracking-auto"
-            strategy="afterInteractive"
-            nonce={nonce}
-          >
-            {`
-    window.addEventListener('load', function() {
-      document.addEventListener('click', function(e) {
-        if (e.target.closest('.contact_submitBtn__e1DBC')) {
-          var contactTimer = setInterval(function() {
-            if (document.querySelectorAll('.contact_successMessage__LYjcy').length > 0) {
-              // Google Ads conversion (only counts if from ad click)
-              if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {'send_to': '${GADS_CONVERSION_ID}/${GADS_CONVERSION_LABEL}'});
-
-                // Google Analytics event (tracks ALL form submissions)
-                gtag('event', 'form_submit', {
-                  'event_category': 'Contact',
-                  'event_label': 'Contact Form Submission',
-                  'value': 1,
-                  'custom_parameters': {
-                    'form_type': 'contact',
-                    'page_location': window.location.href
-                  }
-                });
-              }
-              clearInterval(contactTimer);
-            }
-          }, 1000);
-        }
-      });
-    });
-  `}
-          </Script>
-        </>
-      )}
-
-      {isClient && isVisible && (
-        <div className={styles.container}>
-          <div className={styles.alert}>
-            <h2 className={styles.title}>Cookie Consent</h2>
-            <div className={styles.description}>
-              <p className={styles.message}>
-                We use cookies to analyze our traffic and improve your
-                experience.
-              </p>
-              <div className={styles.buttonGroup}>
-                <button onClick={handleAccept} className={styles.acceptButton}>
-                  Accept All
-                </button>
-                <button
-                  onClick={handleDecline}
-                  className={styles.declineButton}
-                >
-                  Decline
-                </button>
-              </div>
-            </div>
-            <button
-              onClick={handleDecline}
-              className={styles.closeButton}
-              aria-label="Close"
-            >
-              <span className={styles.srOnly}>Close</span>
-              <svg
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
+    <div className={styles.container}>
+      <div className={styles.alert}>
+        <h2 className={styles.title}>Cookie Consent</h2>
+        <div className={styles.description}>
+          <p className={styles.message}>
+            We use cookies to analyze our traffic and improve your experience.
+          </p>
+          <div className={styles.buttonGroup}>
+            <button onClick={handleAccept} className={styles.acceptButton}>
+              Accept All
+            </button>
+            <button onClick={handleDecline} className={styles.declineButton}>
+              Decline
             </button>
           </div>
         </div>
-      )}
-    </>
+        <button
+          onClick={handleDecline}
+          className={styles.closeButton}
+          aria-label="Close"
+        >
+          <span className={styles.srOnly}>Close</span>
+          <svg
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
   );
 };
 

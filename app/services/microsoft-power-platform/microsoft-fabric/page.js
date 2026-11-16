@@ -94,7 +94,13 @@ const schema = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Microsoft Fabric",
+          name: "Microsoft Power Platform",
+          item: `${SITE_URL}/services/microsoft-power-platform`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: PAGE_NAME,
           item: PAGE_URL,
         },
       ],

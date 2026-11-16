@@ -1,0 +1,232 @@
+// /styles/pbdiCustom.module.scss
+@use "./globals" as *;
+
+.pbdiCustom {
+  background: $white;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem 4rem;
+  margin-bottom: 4.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 3rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.copy {
+  p:not(.eyebrow) {
+    margin: 0;
+    @include lede;
+  }
+  p:not(.eyebrow) + p {
+    margin-top: 1rem;
+  }
+}
+
+.review {
+  padding: 2rem;
+  background: $dark-bg;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.reviewLabel {
+  margin: 0 0 1.25rem;
+  @include label($accent-on-dark);
+}
+
+.reviewList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+
+  @include phone {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.reviewItem {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  background: $dark-surface;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $white;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// Three tiles that step up in height and in effort
+.stairs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.75rem;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.lightTile {
+  background: $light-bg;
+}
+
+.paleTile {
+  background: $accent-light;
+}
+
+.accentTile {
+  background: $accent;
+}
+
+.art {
+  width: 100%;
+  margin-bottom: 1.25rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.builtinArt {
+  height: 5.5rem;
+}
+
+.pipelineArt {
+  height: 7.5rem;
+}
+
+.customArt {
+  height: 9.5rem;
+}
+
+.stepTitle {
+  margin: 0 0 0.6rem;
+  @include card-title(lg);
+}
+
+.stepText {
+  margin: 0 0 1rem;
+  @include body-text;
+  @include inline-link;
+}
+
+.bestFor {
+  margin: 0 0 1.25rem;
+  @include small-text($text-primary);
+}
+
+.bestLabel {
+  display: block;
+  margin-bottom: 0.2rem;
+  @include label($accent);
+}
+
+.stepLink {
+  margin-top: auto;
+  @include arrow-link;
+}
+
+.accentTile {
+  .stepTitle {
+    color: $white;
+  }
+  .stepText {
+    @include body-text($white-88);
+    @include inline-link($white);
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+  .bestFor {
+    color: $white-88;
+  }
+  .bestLabel {
+    color: $accent-light;
+  }
+  .stepLink {
+    color: $white;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .step {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}

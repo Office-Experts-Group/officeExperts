@@ -1,0 +1,134 @@
+// /styles/pbdiTools.module.scss
+@use "./globals" as *;
+
+.pbdiTools {
+  background: $accent-light;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+// The orbit sits on the left and spans the header and the list
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  grid-template-areas:
+    "orbit header"
+    "orbit tools";
+  align-items: start;
+  gap: 2.5rem 4rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "orbit"
+      "tools";
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}
+
+.orbit {
+  grid-area: orbit;
+  margin: 0;
+  padding: 1rem;
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+// Below 600px the labels would be too small to read, so only the icons stay
+.orbitLabel {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.tools {
+  grid-area: tools;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tool {
+  padding: 1.1rem 1.25rem;
+  background: $white;
+  border-radius: 1rem;
+
+  &:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+
+    @include mobile {
+      grid-column: auto;
+    }
+  }
+}
+
+.toolName {
+  margin: 0 0 0.35rem;
+  @include card-title(sm);
+  color: $accent;
+  font-family: var(--font-aptos);
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.toolText {
+  margin: 0;
+  @include small-text;
+}
