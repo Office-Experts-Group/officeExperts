@@ -1,0 +1,1097 @@
+// /styles/powerAppsWithSqlDatabaseBlog.module.scss
+@use "./globals" as *;
+
+$rail: 1400px; // contents list becomes a sticky side rail from here
+$article-width: 820px;
+$prose-size: 1.02rem;
+
+.srOnly {
+  @include visually-hidden;
+}
+
+.page {
+  background: $white;
+}
+
+// ── Hero ────────────────────────────────────────────────────────────────────
+.hero {
+  background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+  padding: 14rem 3rem 9rem 6rem;
+
+  @include belowDesktop {
+    padding: 12rem 2rem 8rem 2rem;
+  }
+  @include mobile {
+    padding: 6.5rem 1.25rem 6rem 1.25rem;
+  }
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: 1280px;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.heroTitle {
+  @include heading-main($white);
+  margin: 0 0 1.25rem;
+}
+
+.heroAccent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  @include lede($white-75);
+  font-size: 1.05rem;
+  max-width: 38rem;
+  margin: 0;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.avatar,
+.avatarLarge {
+  flex-shrink: 0;
+  display: block;
+  border-radius: 50%;
+  border: 4px solid $accent;
+  overflow: hidden;
+  background: $dark-surface;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.avatarLarge {
+  width: 56px;
+  height: 56px;
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0;
+}
+
+.authorName {
+  font-weight: 700;
+  color: $white;
+}
+
+.authorSub {
+  @include small-text($white-65);
+}
+
+.heroSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    max-width: 520px;
+    margin-inline: 0;
+  }
+}
+
+// ── At a glance ─────────────────────────────────────────────────────────────
+.glance {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: $container;
+  margin: -5rem auto 0;
+  padding-inline: 1.5rem;
+
+  @include belowDesktop {
+    margin-top: -4rem;
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+    margin-top: -3.5rem;
+    padding-inline: 1.25rem;
+  }
+}
+
+.glanceCard {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+  padding: 1.5rem;
+}
+
+.glanceValue {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  color: $accent;
+}
+
+.glanceLabel {
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  color: $text-primary;
+}
+
+.glanceText {
+  @include small-text;
+  margin: 0.7rem 0 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glanceCard,
+  .reasonCard,
+  .mistakeCard {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+// ── Layout: contents list and article ───────────────────────────────────────
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  max-width: calc(#{$article-width} + 3rem);
+  margin-inline: auto;
+  padding: 4.5rem 1.5rem 2rem;
+
+  @include mobile {
+    padding: 3.5rem 1.25rem 1rem;
+  }
+
+  @media (min-width: $rail) {
+    grid-template-columns: minmax(0, 1fr) $article-width minmax(0, 1fr);
+    max-width: none;
+    padding-inline: 2rem;
+  }
+}
+
+.toc {
+  background: $light-bg;
+  border: 1px solid $line;
+  padding: 1.5rem 1.75rem;
+
+  @media (min-width: $rail) {
+    grid-column: 1;
+    position: sticky;
+    top: $scroll-offset;
+    justify-self: end;
+    width: 210px;
+    max-height: calc(100vh - #{$scroll-offset} - 2rem);
+    margin-right: 1.5rem;
+    padding: 0;
+    overflow-y: auto;
+    background: transparent;
+    border: 0;
+  }
+}
+
+.tocTitle {
+  @include label($accent);
+  margin: 0 0 0.9rem;
+}
+
+.tocList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.15rem 1.75rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @media (min-width: $rail) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  a {
+    display: block;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $accent;
+    }
+  }
+}
+
+.article {
+  min-width: 0;
+
+  @media (min-width: $rail) {
+    grid-column: 2;
+  }
+}
+
+// ── Article sections ────────────────────────────────────────────────────────
+.section {
+  scroll-margin-top: $scroll-offset;
+  margin-bottom: 4.5rem;
+
+  > h2 {
+    @include heading-section;
+    margin: 0 0 1.25rem;
+  }
+
+  > h3 {
+    @include card-title(lg);
+    margin: 2.5rem 0 1rem;
+  }
+
+  > p:not([class]) {
+    @include body-text;
+    font-size: $prose-size;
+    margin: 0 0 1.25rem;
+    @include inline-link;
+  }
+
+  > ul:not([class]),
+  > ol:not([class]) {
+    @include body-text;
+    font-size: $prose-size;
+    margin: 0 0 1.5rem;
+    padding-left: 1.4rem;
+    @include inline-link;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  code {
+    padding: 0.1rem 0.4rem;
+    border-radius: 6px;
+    background: $accent-light;
+    color: $accent-dark;
+    font-size: 0.9em;
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.note {
+  @include small-text;
+  margin: 0 0 1.25rem;
+}
+
+// ── Reason cards ────────────────────────────────────────────────────────────
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0 0;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.reasonCard {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-row;
+  padding: 1.5rem;
+}
+
+.badge {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.reasonTitle {
+  @include card-title;
+  margin: 1rem 0 0.4rem;
+}
+
+.reasonText {
+  @include body-text;
+  margin: 0;
+}
+
+// ── Two lists ───────────────────────────────────────────────────────────────
+.twoLists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0 0;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.listPanel {
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+  padding: 1.4rem 1.5rem;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @include body-text;
+    position: relative;
+    margin-bottom: 0.6rem;
+    padding-left: 1.3rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $accent;
+    }
+  }
+
+  &:nth-child(2) li::before {
+    background: $text-muted;
+  }
+}
+
+.listTitle {
+  @include label($accent);
+  margin: 0 0 0.9rem;
+
+  .listPanel:nth-child(2) & {
+    color: $text-secondary;
+  }
+}
+
+// ── Diagrams ────────────────────────────────────────────────────────────────
+.diagram {
+  margin: 2rem 0;
+  padding: 1.25rem 1.25rem 0.9rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 720px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.diagramCaption {
+  @include small-text;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+// ── Comparison table ────────────────────────────────────────────────────────
+.tableWrap {
+  overflow-x: auto;
+  margin: 1.75rem 0 1rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.compare {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.55;
+
+  thead th {
+    padding: 0.95rem 1.1rem;
+    background: $dark-bg;
+    color: $white;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  tbody th {
+    padding: 0.95rem 1.1rem;
+    background: $light-bg;
+    color: $text-primary;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 0.95rem 1.1rem;
+    color: $text-secondary;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) td {
+    background: $light-bg;
+  }
+
+  tbody tr:not(:last-child) th,
+  tbody tr:not(:last-child) td {
+    border-bottom: 1px solid $line;
+  }
+}
+
+// ── Code blocks ─────────────────────────────────────────────────────────────
+.code {
+  margin: 1.5rem 0;
+  border-radius: $radius;
+  overflow: hidden;
+  background: $dark-bg;
+  border: 1px solid $dark-mid;
+
+  pre {
+    margin: 0;
+    padding: 1.25rem 1.4rem;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.84rem;
+    line-height: 1.7;
+    color: $white-88;
+
+    &:focus-visible {
+      outline: 2px solid $accent-on-dark;
+      outline-offset: -2px;
+    }
+  }
+}
+
+.codeHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.1rem;
+  background: $dark-surface;
+}
+
+.codeDots {
+  display: inline-flex;
+  gap: 6px;
+
+  i {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $white-18;
+  }
+}
+
+.codeLang {
+  @include label($white-55);
+}
+
+// ── Step timeline ───────────────────────────────────────────────────────────
+.steps {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 1.1rem;
+
+  // connector from this badge down to the next one
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 40px;
+    bottom: -1.35rem;
+    width: 2px;
+    background: $accent-border;
+  }
+}
+
+.stepBadge {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $accent;
+  box-shadow: 0 0 0 4px $white;
+  color: $white;
+  font-weight: 700;
+}
+
+.stepBody {
+  padding-top: 0.35rem;
+}
+
+.stepTitle {
+  @include card-title(sm);
+  margin: 0 0 0.25rem;
+}
+
+.stepText {
+  @include body-text;
+  margin: 0;
+}
+
+.tip {
+  @include small-text($text-primary);
+  margin: 0.8rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: $accent-tint;
+}
+
+.tipLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.55rem;
+  font-weight: 700;
+  color: $accent;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// ── Callout ─────────────────────────────────────────────────────────────────
+.callout {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid $accent-border;
+  border-radius: $radius;
+  background: linear-gradient(135deg, $accent-light 0%, $white 75%);
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -46px;
+    top: -46px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid $accent-border;
+    box-shadow:
+      0 0 0 22px rgba(4, 105, 153, 0.05),
+      0 0 0 44px rgba(4, 105, 153, 0.03);
+    pointer-events: none;
+  }
+}
+
+.calloutIcon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.calloutBody {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.callout .calloutLabel {
+  @include label($accent);
+  margin: 0 0 0.35rem;
+}
+
+.callout .calloutText {
+  @include body-text;
+  margin: 0;
+  @include inline-link;
+}
+
+// ── Video ───────────────────────────────────────────────────────────────────
+.videoWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 1.5rem 0 0;
+  border-radius: $radius;
+  overflow: hidden;
+  background: $dark-bg;
+  box-shadow: $shadow-panel;
+}
+
+.videoEmbed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+// ── Mistakes ────────────────────────────────────────────────────────────────
+.mistakes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0 2.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.mistakeCard {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  padding: 1.5rem;
+}
+
+.mistakeNum {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 3rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px $accent;
+}
+
+.mistakeTitle {
+  @include card-title(lg);
+  margin: 0 0 0.4rem;
+}
+
+.mistakeWhy {
+  @include body-text;
+  margin: 0;
+}
+
+.sketch {
+  width: 100%;
+  max-width: 420px;
+  margin: 1.1rem auto;
+  padding: 0.4rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 12px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.instead {
+  @include body-text($text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: auto 0 0;
+}
+
+.insteadPill {
+  @include label($white);
+  flex-shrink: 0;
+  padding: 0.3rem 0.65rem;
+  border-radius: $radius-pill;
+  background: $accent;
+}
+
+// ── Checklist ───────────────────────────────────────────────────────────────
+.checklist {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  li {
+    @include body-text($text-primary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.checkChip {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// ── Beyond the basics (rows) ────────────────────────────────────────────────
+.featureList {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  border: 1px solid $line;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+.featureRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.25rem 1.5rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $line;
+  }
+
+  > div {
+    min-width: 0;
+  }
+}
+
+.featureTitle {
+  @include card-title;
+  margin: 0 0 0.25rem;
+}
+
+.featureText {
+  @include body-text;
+  margin: 0;
+}
+
+// ── Key takeaways ───────────────────────────────────────────────────────────
+.takeaways {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0.5rem 1.75rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    padding: 1.25rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $line;
+    }
+
+    > div {
+      min-width: 0;
+    }
+  }
+
+  @include mobile {
+    padding-inline: 1.25rem;
+  }
+}
+
+.takeIcon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.takeTitle {
+  @include card-title;
+  margin: 0 0 0.25rem;
+}
+
+.takeText {
+  @include body-text;
+  margin: 0;
+}
+
+// ── CTA band ────────────────────────────────────────────────────────────────
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem;
+  border-radius: $radius;
+  background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    bottom: -70px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid $white-12;
+    box-shadow:
+      0 0 0 30px $white-08,
+      0 0 0 60px rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+  }
+
+  h2 {
+    @include heading-section-on-dark;
+    margin: 0 0 1rem;
+  }
+
+  @include mobile {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.ctaAccent {
+  color: $accent-on-dark;
+}
+
+.ctaText {
+  @include lede($white-75);
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+}
+
+.ctaButton {
+  margin-bottom: 2rem;
+}
+
+.ctaLinks {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  a {
+    @include arrow-link($accent-on-dark);
+  }
+}
+
+// ── FAQ ─────────────────────────────────────────────────────────────────────
+.faq {
+  details {
+    margin-bottom: 0.75rem;
+    background: $white;
+    border: 1px solid $line;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &[open] {
+      border-color: $accent-border;
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.4rem;
+    font-weight: 700;
+    color: $text-primary;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $accent;
+      outline-offset: -2px;
+    }
+  }
+
+  p {
+    @include body-text;
+    margin: 0;
+    padding: 0 1.4rem 1.25rem;
+  }
+
+  details[open] .faqIcon {
+    transform: rotate(45deg);
+  }
+}
+
+.faqIcon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faqIcon {
+    transition: transform 0.2s ease;
+  }
+}
+
+// ── Author box ──────────────────────────────────────────────────────────────
+.authorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  @include mobile {
+    flex-direction: column;
+    padding: 1.4rem;
+  }
+}
+
+.authorBoxText {
+  min-width: 0;
+}
+
+.authorBoxName {
+  @include label($accent);
+  margin: 0 0 0.5rem;
+}
+
+.authorBoxBio {
+  @include small-text;
+  margin: 0 0 0.9rem;
+  @include inline-link;
+}
+
+.authorLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+
+  a {
+    @include arrow-link;
+  }
+}

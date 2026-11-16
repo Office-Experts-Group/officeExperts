@@ -1,49 +1,51 @@
-import React from "react";
+// /app/blog/power-apps-with-sql-database/layout.js
+// Metadata only. Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/power-apps-with-sql-database";
+const PAGE_TITLE = "Power Apps and SQL Database: Get Started | Office Experts";
+const PAGE_DESCRIPTION =
+  "Connect Power Apps to a Microsoft SQL database: set up Azure SQL, build linked tables, use stored procedures and Power Automate for an inventory app.";
+const PAGE_KEYWORDS = ["Power Apps SQL Database"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png"; // confirm it exists in OE /public
+const OG_IMAGE_ALT = "Office Experts Group logo";
+const AUTHOR_NAME = "Marcello Brocchi";
 
 export const metadata = {
-  // Basic metadata
-  title: "Getting Started with Power Apps and Microsoft SQL Database",
-  description:
-    "Learn how to set up an Azure SQL database, create tables and relationships, connect Power Apps and build a simple inventory management application.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  authors: [{ name: AUTHOR_NAME }],
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "Getting Started with Power Apps and Microsoft SQL Database",
-    description:
-      "Learn how to set up an Azure SQL database, create tables and relationships, connect Power Apps and build a simple inventory management application.",
-    url: "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
-    siteName: "Office Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: OG_IMAGE_ALT,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Power Apps SQL Database"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Getting Started with Power Apps and Microsoft SQL Database",
-    description:
-      "Learn how to set up an Azure SQL database, create tables and relationships, connect Power Apps and build a simple inventory management application.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical:
-      "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function BlogLayout({ children }) {
   return <>{children}</>;
 }

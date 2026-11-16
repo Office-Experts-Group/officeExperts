@@ -1,49 +1,49 @@
+// /app/blog/power-apps-pdf-function/layout.js
 import React from "react";
 
-export const metadata = {
-  // Basic metadata
-  title: "Power Apps PDF Function - The Best Way to Export to PDF?",
-  description:
-    "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/power-apps-pdf-function";
+const PAGE_TITLE = "Power Apps PDF Function: Export to PDF | Office Experts";
+const PAGE_DESCRIPTION =
+  "How the Power Apps PDF function works: turn it on, save PDFs to SharePoint, set page size and margins, and avoid the pitfalls that catch most makers out.";
+const PAGE_KEYWORDS = ["Power Apps PDF Function"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png"; // confirm this exists in the Office Experts /public folder
 
-  // OpenGraph
+export const metadata = {
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "Power Apps PDF Function - The Best Way to Export to PDF?",
-    description:
-      "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
-    url: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
-    siteName: "Power Platform Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: `${SITE_NAME} logo`,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Power Apps PDF Function"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Power Apps PDF Function - The Best Way to Export to PDF?",
-    description:
-      "The PDF function is a powerful tool that allows you to easily generate high-quality PDF documents from your Power Apps.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical:
-      "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function BlogLayout({ children }) {
   return <>{children}</>;
 }
