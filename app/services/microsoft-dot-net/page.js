@@ -12,6 +12,12 @@ const DotNetAi = dynamic(() => import("./(components)/DotNetAi"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL = "https://www.officeexperts.com.au/services/microsoft-dot-net";
 const PAGE_TITLE =
   "Microsoft .NET Development Services Australia | Office Experts";
@@ -26,6 +32,9 @@ const DATE_MODIFIED = "2026-11-11T00:00:00+11:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

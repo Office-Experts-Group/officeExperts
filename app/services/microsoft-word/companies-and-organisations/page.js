@@ -23,6 +23,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/companies-and-organisations";
 import faqSchema from "../wordFaqs/companiesSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/companies-and-organisations";
 const PAGE_TITLE = "Word Template Designers for Companies | Office Experts";
@@ -70,6 +76,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

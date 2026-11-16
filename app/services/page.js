@@ -1,6 +1,4 @@
 // /app/services/page.js
-// Server component: composes the /services hub from its section components.
-// Each section component holds its own content.
 import React from "react";
 import dynamic from "next/dynamic";
 

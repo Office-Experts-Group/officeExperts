@@ -18,6 +18,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/fill-in-forms";
 import faqSchema from "../wordFaqs/fillFormsSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/fill-in-forms";
 const PAGE_TITLE = "Expert Creation of Word Fill in Forms | Office Experts";
@@ -56,6 +62,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

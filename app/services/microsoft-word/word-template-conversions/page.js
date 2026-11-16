@@ -23,6 +23,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 
 import faqs from "../wordFaqs/wordTemplateConversions";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/microsoft-word/word-template-conversions`;
 const PAGE_TITLE = "Word Template Conversions | Office Experts Group";
@@ -73,6 +79,9 @@ const buildService = (slug, name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

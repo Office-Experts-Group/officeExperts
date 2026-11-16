@@ -6,12 +6,21 @@ import Contact from "@/components/Contact";
 import PageSegmentMain from "./(components)/PageSegmentMain";
 import Segment4Repeat from "./(components)/Segment4Repeat";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 import desk from "@/public/pageHeros/desk.webp";
 import seatMob from "@/public/pageHeros/mob/seatMob.webp";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/services/microsoft-vbscript",

@@ -14,6 +14,12 @@ const AutomationIntegration = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/remove-repetition-and-increase-productivity";
 const PAGE_TITLE = "Word Document Automation Services | Office Experts";
@@ -38,6 +44,9 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

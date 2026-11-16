@@ -6,16 +6,10 @@ const PAGE_URL =
 const PAGE_TITLE = "Power BI for Financial Services | Office Experts";
 const PAGE_DESCRIPTION =
   "How banks, wealth managers and insurers use Power BI for compliance reporting, risk and customer insight, and how to start without a big-bang rollout.";
-const PAGE_KEYWORDS = [
-  "power bi financial services",
-  "power bi for banks",
-  "power bi for insurers",
-  "power bi compliance reporting",
-  "power bi wealth management",
-];
+const PAGE_KEYWORDS = ["power bi financial services"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
-const OG_IMAGE = "/logo.png"; // confirm this file exists in the OE /public folder
+const OG_IMAGE = "/logo.png";
 const OG_IMAGE_ALT = "Office Experts logo";
 
 export const metadata = {

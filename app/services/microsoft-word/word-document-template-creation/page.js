@@ -24,6 +24,12 @@ const TemplateWhyChoose = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/word-document-template-creation";
@@ -47,6 +53,9 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

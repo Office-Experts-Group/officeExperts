@@ -21,6 +21,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/accessibility";
 import faqSchema from "../wordFaqs/accessibilitySchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/accessibility";
 const PAGE_TITLE = "Microsoft Word Accessibility | Office Experts";
@@ -34,6 +40,9 @@ const DATE_PUBLISHED = "2018-07-16T02:14:28+10:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

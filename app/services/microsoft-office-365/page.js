@@ -18,7 +18,11 @@ const PageSegmentFinal = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/testimonialSchemaGenerator";
 import { testimonials } from "@/testimonials";
 
 const PAGE_URL =
@@ -27,8 +31,9 @@ const PAGE_URL =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials)["@graph"],
-
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

@@ -22,7 +22,12 @@ const Testimonials = dynamic(() => import("../../(components)/Testimonials"));
 const ExpertsAwait = dynamic(() => import("@/components/ExpertsAwait"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { getTestimonialsPageSchema } from "@/utils/testimonialSchemaGenerator";
+import {
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/testimonialSchemaGenerator";
+
 import { testimonials } from "@/testimonials";
 
 const PAGE_URL =
@@ -60,7 +65,9 @@ const caseStudyLinks = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    ...getTestimonialsPageSchema(testimonials)["@graph"],
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
 
     {
       "@type": "WebPage",

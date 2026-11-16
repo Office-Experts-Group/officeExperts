@@ -19,6 +19,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/corporate-identity";
 import faqSchema from "../wordFaqs/corporateSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/corporate-identity";
 const PAGE_TITLE = "Word Document Corporate Identity | Office Experts Group";
@@ -56,6 +62,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

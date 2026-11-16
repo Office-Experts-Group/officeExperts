@@ -19,7 +19,12 @@ const SqlOffice = dynamic(() => import("./(components)/SqlOffice"));
 const SqlProcess = dynamic(() => import("./(components)/SqlProcess"));
 const SqlFaq = dynamic(() => import("./(components)/SqlFaq"));
 
-// FAQ copy shared with SqlFaq.jsx, so the schema matches what visitors see
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 import { sqlFaqs } from "./(data)/sqlFaqData";
 
 const SITE_URL = "https://www.officeexperts.com.au";
@@ -38,6 +43,9 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

@@ -15,6 +15,12 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 import faqs from "../wordFaqs/corporate-solutions";
 import faqSchema from "../wordFaqs/corporateSolutionsSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/corporate-global-template-solution";
 const PAGE_TITLE = "Corporate Global Template Solution - Microsoft Word";
@@ -54,6 +60,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

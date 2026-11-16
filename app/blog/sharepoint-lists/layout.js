@@ -1,48 +1,49 @@
-import React from "react";
+// /app/blog/sharepoint-lists/layout.js
+// Keep PAGE_URL, PAGE_TITLE, PAGE_DESCRIPTION and AUTHOR_NAME in sync with page.js
+
+const PAGE_URL = "https://www.officeexperts.com.au/blog/sharepoint-lists";
+const PAGE_TITLE = "SharePoint Lists as a Relational Database | Office Experts";
+const PAGE_DESCRIPTION =
+  "Use SharePoint lists like a relational database in Power Apps. Link parent and child lists with an ID, filter related records and avoid common mistakes.";
+const PAGE_KEYWORDS = ["sharepoint lists"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png";
+const AUTHOR_NAME = "Marcello Brocchi";
 
 export const metadata = {
-  // Basic metadata
-  title: "Use SharePoint Lists just like a Relational Database in Power Apps",
-  description:
-    "Learn how to use SharePoint lists as a data source in Power Apps and how they may work as a Relational Database.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  authors: [{ name: AUTHOR_NAME }],
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "Use SharePoint Lists just like a Relational Database in Power Apps",
-    description:
-      "Learn how to use SharePoint lists as a data source in Power Apps and how they may work as a Relational Database.",
-    url: "https://www.powerplatformexperts.com.au/blog/sharepoint-lists",
-    siteName: "Office Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: `${SITE_NAME} logo`,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["sharepoint lists"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Use SharePoint Lists just like a Relational Database in Power Apps",
-    description:
-      "Learn how to use SharePoint lists as a data source in Power Apps and how they may work as a Relational Database.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical: "https://www.powerplatformexperts.com.au/blog/sharepoint-lists",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function SharePointListsBlogLayout({ children }) {
   return <>{children}</>;
 }

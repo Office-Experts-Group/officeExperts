@@ -2,8 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// ── Above the fold: normal imports so they render in the first HTML chunk ──
-// import ServiceHero from "@/components/ServiceHero";
 import MigrationHero from "./(components)/MigrationHero";
 
 // ── Below the fold: dynamic imports to split the JS bundle ──
@@ -21,6 +19,12 @@ const MigrationScenarios = dynamic(
 );
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
+
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/upgrades-and-migration";
@@ -120,6 +124,9 @@ const SERVICE_OFFERS = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

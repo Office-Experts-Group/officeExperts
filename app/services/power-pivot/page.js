@@ -22,6 +22,12 @@ const PowerPivotCaseStudy = dynamic(
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 // FAQ copy and its matching FAQPage schema
 import faqs from "@/faqs/pivot";
 import faqSchema from "@/faqs/pivotSchema";
@@ -39,6 +45,9 @@ const DATE_MODIFIED = "2026-11-09T00:00:00+11:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

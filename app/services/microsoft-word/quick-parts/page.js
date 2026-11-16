@@ -23,6 +23,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "@/faqs/quick-parts";
 import faqSchema from "@/faqs/quickPartsSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/quick-parts";
 const PAGE_TITLE = "Microsoft Word Quick Parts Services";
@@ -45,6 +51,9 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

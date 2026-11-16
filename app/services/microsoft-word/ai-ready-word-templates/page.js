@@ -31,6 +31,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/ai-ready-word-templates";
 import faqSchema from "../wordFaqs/aiReadyWordTemplatesSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/ai-ready-word-templates";
 const PAGE_TITLE = "Copilot & AI-Ready Word Templates | Office Experts";
@@ -65,6 +71,9 @@ const offers = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

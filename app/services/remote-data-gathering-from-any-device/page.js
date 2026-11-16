@@ -10,6 +10,12 @@ const RDGUseCases = dynamic(() => import("./(components)/RDGUseCases"));
 const RDGHowItWorks = dynamic(() => import("./(components)/RDGHowItWorks"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const RELATED_CASE_STUDIES = [
   {
     href: "/case-studies/building-consultants-inspection-crm",
@@ -45,6 +51,9 @@ const RELATED_CASE_STUDIES = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id":

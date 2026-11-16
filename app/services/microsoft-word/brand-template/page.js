@@ -17,6 +17,12 @@ const CompareContainer = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const BoxBentoSegment = dynamic(() => import("./(components)/BoxBentoSegment"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/brand-template";
 const PAGE_TITLE = "Microsoft Word Brand Template Services | Office Experts";
@@ -53,6 +59,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

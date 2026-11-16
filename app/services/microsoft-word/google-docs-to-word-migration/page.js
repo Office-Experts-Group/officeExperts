@@ -22,8 +22,11 @@ const GoogleMigrationCta = dynamic(
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import migration from "@/public/pageHeros/migration.webp";
-import migrationMob from "@/public/pageHeros/mob/migrationMob.webp";
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
 
 // Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with layout.js.
 const PAGE_URL =
@@ -59,6 +62,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

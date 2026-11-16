@@ -22,6 +22,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "../wordFaqs/popup-forms";
 import faqSchema from "../wordFaqs/popupFormsSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 // ── Page values (keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with layout.js)
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL =
@@ -61,6 +67,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

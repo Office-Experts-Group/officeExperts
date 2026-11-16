@@ -20,6 +20,12 @@ const GovDeptProcess = dynamic(() => import("./(components)/GovDeptProcess"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 // PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION must match layout.js.
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/government-departments";
@@ -71,6 +77,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

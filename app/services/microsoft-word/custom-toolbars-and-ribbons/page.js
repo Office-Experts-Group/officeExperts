@@ -24,6 +24,12 @@ const ToolbarsAutomation = dynamic(
 import faqs from "../wordFaqs/automation";
 import faqSchema from "../wordFaqs/customToolbarsSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-word/custom-toolbars-and-ribbons";
 const PAGE_TITLE = "Custom Word Toolbars and Ribbons | Office Experts Group";
@@ -74,6 +80,9 @@ const caseStudies = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
