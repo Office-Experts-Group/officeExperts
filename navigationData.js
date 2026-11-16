@@ -320,43 +320,35 @@ export const navigationData = {
         items: [
           {
             label: "AI Integrations",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/ai-integrations`,
+            href: `/services/microsoft-power-platform/ai-with-power-platform`,
           },
           {
             label: "App Development with Power Apps",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-apps`,
+            href: `/services/microsoft-power-platform/power-apps`,
           },
           {
             label: "Automation with Power Automate",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-automate`,
+            href: `/services/microsoft-power-platform/power-automate`,
           },
           {
             label: "Data Visualisation with Power BI",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-bi`,
+            href: `/services/microsoft-power-platform/power-bi`,
           },
           {
             label: "Websites with Power Pages",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/microsoft-power-pages`,
+            href: `/services/microsoft-power-platform/power-pages`,
           },
           {
             label: "Data Analytics with Microsoft Fabric",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/microsoft-fabric`,
-          },
-          {
-            label: "Power Bi Support",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-support`,
-          },
-          {
-            label: "Power Apps Support",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/power-apps-support`,
+            href: `/services/microsoft-power-platform/microsoft-fabric`,
           },
           {
             label: "Data Integration",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/power-bi-data-integration`,
+            href: `/services/microsoft-power-platform/power-bi-data-integration`,
           },
           {
             label: "Excel to Power BI Migration",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/excel-to-power-bi-migration`,
+            href: `/services/microsoft-power-platform/excel-to-power-bi-migration`,
           },
         ],
       },
@@ -378,7 +370,7 @@ export const navigationData = {
           },
           {
             label: "Power Platform AI Integrations",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/services/microsoft-power-platform/ai-integrations`,
+            href: `/services/microsoft-power-platform/ai-integrations`,
           },
           {
             label: "AI Templates In Word",
@@ -400,7 +392,7 @@ export const navigationData = {
           },
           {
             label: "SharePoint",
-            href: `${POWER_PLATFORM_EXPERTS_URL}/sharepoint-consulting-and-development`,
+            href: `/services/microsoft-power-platform/sharepoint-consulting-and-development`,
           },
           {
             label: "Business Process Automation",

@@ -4,7 +4,7 @@ export const blogPosts = [
     title: "Export to PDF in Power Apps - The Best Way to Do It!",
     description:
       "Learn how to export data from Power Apps to PDF using Power Automate. This tutorial shows the easiest and most effective way to generate professional PDF documents directly from your Power Apps.",
-    slug: "https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps",
+    slug: "/blog/export-to-pdf-in-power-apps",
     date: "April 11, 2025",
     author: "Marcello Brocchi",
     readingTime: "6 min",
@@ -18,7 +18,7 @@ export const blogPosts = [
     title: "Getting Started with Power Apps and Microsoft SQL Database",
     description:
       "Learn how to evolve your Power Apps development by connecting to Microsoft SQL databases. This comprehensive guide covers setting up an Azure SQL database and building applications.",
-    slug: "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
+    slug: "/blog/power-apps-with-sql-database",
     date: "April 11, 2025",
     author: "Marcello Brocchi",
     readingTime: "8 min",
@@ -32,7 +32,7 @@ export const blogPosts = [
     title: "Power Apps PDF Function - The Best Way to Export to PDF?",
     description:
       "Discover how to use the new experimental PDF function in Power Apps to generate PDF documents directly from your applications without complex workarounds.",
-    slug: "https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function",
+    slug: "/blog/power-apps-pdf-function",
     date: "April 11, 2025",
     author: "Marcello Brocchi",
     readingTime: "4 min",
@@ -46,7 +46,7 @@ export const blogPosts = [
     title: "File Attachments in Power Apps - The Best Way to Do Them",
     description:
       "Learn the best approach to implement file attachments in Power Apps using the new Power Automate action that makes uploading documents to SharePoint document libraries simple and efficient.",
-    slug: "https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps",
+    slug: "/blog/file-attachments-in-power-apps",
     date: "April 11, 2025",
     author: "Marcello Brocchi",
     readingTime: "5 min",
@@ -202,7 +202,7 @@ export const blogPosts = [
     title: "Power BI for Financial Services",
     description:
       "Discover how Power BI empowers financial organisations to turn raw data into actionable insights for compliance, risk management, and business growth.",
-    slug: "https://www.powerplatformexperts.com.au/blog/power-bi-for-financial-services",
+    slug: "/blog/power-bi-for-financial-services",
     date: "October 1, 2025",
     author: "Power Platform Team",
     readingTime: "10 min",
@@ -230,7 +230,7 @@ export const blogPosts = [
     title: "Power BI in Healthcare Analytics: Transforming Patient Outcomes",
     description:
       "Discover how Power BI is revolutionising healthcare analytics with real-time dashboards that improve patient outcomes, reduce readmissions, and optimise hospital operations.",
-    slug: "https://www.powerplatformexperts.com.au/blog/power-bi-in-healthcare-analytics",
+    slug: "/blog/power-bi-in-healthcare-analytics",
     date: "October 3, 2025",
     author: "Scott Robinson",
     readingTime: "8 min",
@@ -273,7 +273,7 @@ export const blogPosts = [
       "Power BI Licensing Costs Spiraling? The Hidden Expenses Killing Your ROI",
     description:
       "Discover why 40% of businesses overpay for Power BI licenses. Learn the hidden costs, break-even points, and smart licensing strategies that could save your business $20,000-80,000 per year.",
-    slug: "https://www.powerplatformexperts.com.au/blog/power-bi-licensing-costs",
+    slug: "/blog/power-bi-licensing-costs",
     date: "December 04, 2025",
     author: "Scott Robinson",
     readingTime: "12 min",
@@ -287,7 +287,7 @@ export const blogPosts = [
     title: "Use SharePoint Lists just like a Relational Database in Power Apps",
     description:
       "In this tutorial, Marcello gives you a quick introduction into how to use SharePoint lists as a data source in Power Apps and how they may work as a Relational Database.",
-    slug: "https://www.powerplatformexperts.com.au/blog/sharepoint-lists",
+    slug: "/blog/sharepoint-lists",
     date: "April 20, 2025",
     author: "Marcello Brocchi",
     readingTime: "5 min",
@@ -302,7 +302,7 @@ export const blogPosts = [
       "How to Get Live MYOB & Xero Data into Power BI — No More Manual Exports",
     description:
       "Tired of CSV exports and stale reports? Learn how to connect live MYOB and Xero data into Power BI using modern OData feeds like OdataLink, plus implementation strategies from Power Platform Experts.",
-    slug: "https://www.powerplatformexperts.com.au/blog/xero-to-power-bi",
+    slug: "/blog/xero-to-power-bi",
     date: "November 20, 2025",
     author: "Scott Robinson",
     readingTime: "10 min",

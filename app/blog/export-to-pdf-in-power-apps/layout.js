@@ -1,49 +1,58 @@
+// /app/blog/export-to-pdf-in-power-apps/layout.js
 import React from "react";
 
-export const metadata = {
-  // Basic metadata
-  title: "Export to PDF in Power Apps",
-  description:
-    "Learn how to export data from Power Apps to PDF using Power Automate. Generate professional PDF documents directly from your Power Apps.",
+// Keep these three constants in sync with page.js
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/export-to-pdf-in-power-apps";
+const PAGE_TITLE = "Export to PDF in Power Apps | Office Experts";
+const PAGE_DESCRIPTION =
+  "Learn how to export to PDF in Power Apps with Power Automate. Build the HTML, add images, convert the file and link the PDF to your SharePoint record.";
 
-  // OpenGraph
+const PAGE_KEYWORDS = [
+  "Power Apps Export to PDF",
+  "export to PDF in Power Apps",
+  "Power Automate HTML to PDF",
+  "Power Apps PDF export",
+  "Power Automate convert file to PDF",
+  "SharePoint PDF from list item",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png"; // confirm this exists in the OE /public folder
+
+export const metadata = {
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  authors: [{ name: "Marcello Brocchi" }],
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "Export to PDF in Power Apps - The Best Way to Do It!",
-    description:
-      "Learn how to export data from Power Apps to PDF using Power Automate. Generate professional PDF documents directly from your Power Apps.",
-    url: "https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps",
-    siteName: "Office Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: `${SITE_NAME} logo`,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Power Apps Export to PDF"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Export to PDF in Power Apps - The Best Way to Do It!",
-    description:
-      "Learn how to export data from Power Apps to PDF using Power Automate. Generate professional PDF documents directly from your Power Apps.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical:
-      "https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function BlogLayout({ children }) {
   return <>{children}</>;
 }

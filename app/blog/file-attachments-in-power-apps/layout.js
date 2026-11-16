@@ -1,49 +1,40 @@
-import React from "react";
+// /app/blog/file-attachments-in-power-apps/layout.js
+
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/file-attachments-in-power-apps";
+const PAGE_TITLE = "File Attachments in Power Apps: Best Way | Office Experts";
+const PAGE_DESCRIPTION =
+  "Learn how to upload multiple files from Power Apps straight into a SharePoint document library using the Power Apps V2 trigger in Power Automate.";
+const PAGE_KEYWORDS = ["File Attachments in Power Apps"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png"; // confirm this exists in the OE /public folder
+const OG_IMAGE_ALT = "Office Experts Group logo";
 
 export const metadata = {
-  // Basic metadata
-  title: "File Attachments in Power Apps - The best way to do them",
-  description:
-    "In this tutorial, Marcello shows you how to upload files directly to a SharePoint Document Library using the new Power Apps V2 trigger.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "File Attachments in Power Apps - The best way to do them",
-    description:
-      "In this tutorial, Marcello shows you how to upload files directly to a SharePoint Document Library using the new Power Apps V2 trigger.",
-    url: "https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps",
-    siteName: "Office Experts",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Experts Group Logo",
-      },
-    ],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: OG_IMAGE_ALT }],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["File Attachments in Power Apps"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "File Attachments in Power Apps - The best way to do them",
-    description:
-      "In this tutorial, Marcello shows you how to upload files directly to a SharePoint Document Library using the new Power Apps V2 trigger.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    canonical:
-      "https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function FileAttachmentsBlogLayout({ children }) {
   return <>{children}</>;
 }
