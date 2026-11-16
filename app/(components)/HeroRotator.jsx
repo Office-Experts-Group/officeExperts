@@ -1,23 +1,42 @@
 "use client";
 // app/(components)/HeroRotator.jsx
-// Client wrapper for the home hero. It decides which frame is showing and
-// shares that with the illustration:
+// Client wrapper for the animated heroes (home page, Power Platform hub). It
+// decides which frame is showing and shares that with the illustration:
 //  - writes data-frame="0|1|2" on its root. CSS uses that to show the matching frame.
+//    data-mode ("auto" | "manual" | "paused"), data-paused and data-onscreen are
+//    there for the tab progress bars.
 //  - renders the tabs. The active tab's progress bar is a CSS animation, and when
 //    it finishes it moves to the next frame, so there is no setInterval to manage.
-//  - provides HeroContext so HeroStory can play the matching act of the animation.
-// The frames come in as children, already rendered on the server by HomeHero,
-// so none of the copy is shipped in this component's JavaScript.
+//  - provides HeroContext so the story (HeroStory, PphHeroStory...) plays the
+//    matching act of the animation.
+// The frames come in as children, already rendered on the server, so none of the
+// copy is shipped in this component's JavaScript.
+//
+// Optional props for reuse (the home hero passes none of them):
+//   label     aria-label for the tab list
+//   idPrefix  prefix for the tab and panel ids ("hero" → hero-tab-0 / hero-frame-0)
+//   classes   a CSS module to style the rotator instead of heroRotator.module.scss.
+//             It needs: rotator, copy, frames, controls, tabs, tab, track, fill,
+//             toggle, visual.
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-// SCSS module for the layout, frame visibility and tab controls (unchanged)
-import styles from "@/styles/heroRotator.module.scss";
+// Default look (home hero), unchanged
+import defaultStyles from "@/styles/heroRotator.module.scss";
 // Shared frame/play state for the illustration
 import { HeroContext } from "./HeroContext";
 import { PauseIcon, PlayIcon } from "../(svgs)/HeroIcons";
 
-const HeroRotator = ({ labels, durations, visual, children }) => {
+const HeroRotator = ({
+  labels,
+  durations,
+  visual,
+  children,
+  label = "About Office Experts",
+  idPrefix = "hero",
+  classes = defaultStyles,
+}) => {
+  const styles = classes;
   const [active, setActive] = useState(0);
   // "auto": frames advance on their timers.
   // "manual": the visitor picked a tab, so the frame stays put while its act plays once.
@@ -75,7 +94,7 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
     tabRefs.current[targets[event.key]]?.focus();
   };
 
-  // Memoised so HeroStory only re-renders when something it uses changes
+  // Memoised so the story only re-renders when something it uses changes
   const story = useMemo(
     () => ({ active, mode, onScreen, restart }),
     [active, mode, onScreen, restart],
@@ -88,6 +107,7 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
         ref={rootRef}
         className={styles.rotator}
         data-frame={active}
+        data-mode={mode}
         data-paused={!playing}
         data-onscreen={onScreen}
       >
@@ -98,22 +118,22 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
           <div className={styles.controls}>
             <div
               role="tablist"
-              aria-label="About Office Experts"
+              aria-label={label}
               className={styles.tabs}
               onKeyDown={handleKeyDown}
             >
-              {labels.map((label, index) => {
+              {labels.map((tabLabel, index) => {
                 const isActive = index === active;
                 return (
                   <button
-                    key={label}
+                    key={tabLabel}
                     ref={(node) => {
                       tabRefs.current[index] = node;
                     }}
                     type="button"
                     role="tab"
-                    id={`hero-tab-${index}`}
-                    aria-controls={`hero-frame-${index}`}
+                    id={`${idPrefix}-tab-${index}`}
+                    aria-controls={`${idPrefix}-frame-${index}`}
                     aria-selected={isActive}
                     tabIndex={isActive ? 0 : -1}
                     className={styles.tab}
@@ -129,7 +149,7 @@ const HeroRotator = ({ labels, durations, visual, children }) => {
                         />
                       )}
                     </span>
-                    {label}
+                    {tabLabel}
                   </button>
                 );
               })}

@@ -1,0 +1,143 @@
+// /styles/pphFaq.module.scss
+@use "./globals" as *;
+
+.pphFaq {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 3rem 5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  position: sticky;
+  top: 7rem;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 1rem 0 1.5rem;
+  @include lede;
+}
+
+.arrowLink {
+  @include arrow-link;
+  display: flex;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  &[open] {
+    background: $white;
+    border-color: $accent;
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  @include card-title(sm);
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+    border-radius: $radius;
+  }
+}
+
+.toggle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .toggle {
+    transition: transform 0.2s ease;
+  }
+}
+
+.item[open] .toggle {
+  transform: rotate(45deg);
+}
+
+.answer {
+  padding: 0 1.5rem 1.5rem;
+
+  p {
+    margin: 0 0 1rem;
+    @include body-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @include inline-link;
+  }
+}

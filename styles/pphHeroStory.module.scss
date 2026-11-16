@@ -1,0 +1,74 @@
+// /styles/pphHeroStory.module.scss
+// Power Platform hero story: caption bar and stage sizing.
+// Every colour inside the SVG is set inline (see PphHeroStory.jsx), and every
+// position, opacity and transform comes from pphHeroScene.js, so nothing here
+// may set opacity, transform or fill on an animated SVG node.
+@use "./globals" as *;
+
+.pphHeroStory {
+  position: relative;
+  width: 100%;
+}
+
+// All captions share one grid cell; the scene flips data-show on the current one
+.captions {
+  display: grid;
+  min-height: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.caption {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $white-88;
+  visibility: hidden;
+  opacity: 0;
+
+  &[data-show="true"] {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &[data-tone="warn"] .tag {
+    background: $error;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(6px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      visibility 0s linear 0.35s;
+
+    &[data-show="true"] {
+      transform: none;
+      transition-delay: 0s;
+    }
+  }
+
+  @include mobile {
+    font-size: 0.85rem;
+  }
+}
+
+.tag {
+  @include label($white);
+  flex: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: $radius-pill;
+  background: $accent;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.stage {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}

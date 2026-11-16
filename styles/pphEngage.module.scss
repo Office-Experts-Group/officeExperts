@@ -1,0 +1,130 @@
+// /styles/pphEngage.module.scss
+@use "./globals" as *;
+
+.pphEngage {
+  background: $accent;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 3.5rem 5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  max-width: 32rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $white;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $accent-on-dark;
+}
+
+.lede {
+  margin: 1.25rem 0 2rem;
+  @include lede($white-88);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $white;
+  color: $accent;
+}
+
+.quoteLink {
+  @include arrow-link($white);
+  font-size: 0.95rem;
+}
+
+.ways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.way {
+  padding: 1.5rem;
+  background: $dark-bg;
+  border-radius: $radius;
+}
+
+.wayArt {
+  width: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.wayTitle {
+  margin: 0 0 0.5rem;
+  @include card-title(md, $white);
+}
+
+.wayText {
+  margin: 0;
+  @include body-text($white-75);
+}
+
+.reach {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 2rem;
+  border-top: 1px solid $white-12;
+  @include body-text($white-88);
+}
+
+.reachLink {
+  color: $white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

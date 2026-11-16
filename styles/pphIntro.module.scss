@@ -1,0 +1,67 @@
+// /styles/pphIntro.module.scss
+@use "./globals" as *;
+
+.pphIntro {
+  background: $light-bg;
+  padding: 7rem $gutter 2rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter 2rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem 5rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  p {
+    margin: 0 0 1.25rem;
+    @include lede;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.caption {
+  margin-top: 1rem;
+  @include small-text;
+}

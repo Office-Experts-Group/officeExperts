@@ -1,0 +1,94 @@
+// /styles/pphLifecycle.module.scss
+@use "./globals" as *;
+
+.pphLifecycle {
+  background: $light-bg;
+  padding: 0 1rem 6rem 1rem;
+
+  @include belowDesktop {
+    padding: 0 1rem 2rem 1rem;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.inner {
+  margin-inline: auto;
+}
+
+.track {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x proximity;
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 4px;
+  }
+}
+
+.stages {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stage {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stage {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.stageArt {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  background: $accent-light;
+  border-radius: calc(#{$radius} - 4px);
+}
+
+.stageTitle {
+  margin: 0 0 0.5rem;
+  @include card-title(md);
+}
+
+.stageText {
+  margin: 0;
+  @include body-text;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.footText {
+  margin: 0;
+  max-width: 36rem;
+  @include body-text;
+}
+
+.btn {
+  @include btn-on-accent;
+}

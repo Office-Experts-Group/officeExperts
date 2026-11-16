@@ -5,15 +5,11 @@
   background: $white;
   padding: 7rem 8rem;
 
-  @include tablet {
-    padding: 5.5rem 4rem;
-  }
-  @include phoneLandscape {
-    padding: 4.5rem 1.5rem;
-  }
-  @include phone {
-    padding: 4rem 1.25rem;
-  }
+  @include heroPaddingWhite;
+}
+
+.lightHero {
+  @include lightHeroBlock;
 }
 
 .inner {
@@ -23,6 +19,10 @@
   gap: 2rem;
   align-items: center;
   overflow: visible;
+
+  a {
+    margin-top: 1.5rem;
+  }
 
   @include tablet {
     grid-template-columns: 1fr;
@@ -40,6 +40,7 @@
 
 .eyebrow {
   margin-bottom: 1.25rem;
+  font-family: var(--font-aptos);
   @include eyebrow;
 }
 
@@ -84,5 +85,12 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  @include phoneLandscape {
+    display: none;
+  }
+  @include phone {
+    display: none;
   }
 }

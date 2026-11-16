@@ -1,0 +1,448 @@
+// /styles/pphHero.module.scss
+// Power Platform hub hero: dark split layout. Also styles the shared HeroRotator
+// (passed in as `classes`): rotator, copy, frames, controls, tabs, tab, track,
+// fill, toggle, visual. HeroRotator writes data-frame, data-mode, data-paused and
+// data-onscreen on .rotator; the frame visibility and progress bars key off those.
+@use "./globals" as *;
+
+$frames: 3;
+$fade: 0.45s;
+
+.pphHero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  color: $white;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 8rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: 1320px;
+  margin-inline: auto;
+}
+
+// ── Rotator layout ──────────────────────────────────────────────────────────
+
+.rotator {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 3.5rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  // Phones and tablets: copy, then the story, then the tabs under it
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @include belowDesktop {
+    display: contents;
+  }
+}
+
+.visual {
+  @include belowDesktop {
+    order: 2;
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+// ── Frames: all in one grid cell, CSS shows the one matching data-frame ─────
+
+.frames {
+  display: grid;
+
+  @include belowDesktop {
+    order: 1;
+  }
+}
+
+.frame {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  visibility: hidden;
+  opacity: 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      opacity $fade ease,
+      visibility 0s linear $fade;
+  }
+}
+
+@for $i from 0 to $frames {
+  .rotator[data-frame="#{$i}"] .frame:nth-child(#{$i + 1}) {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+}
+
+// ── Frame copy ──────────────────────────────────────────────────────────────
+
+.heading {
+  margin: 0;
+  @include heading-main($white);
+}
+
+.frameHeading {
+  margin: 0;
+  max-width: 32rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  @include eyebrow-on-dark;
+}
+
+.sub {
+  margin: 1.1rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $white-88;
+}
+
+.lede {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 1.75rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}
+
+// ── Sub-service links ───────────────────────────────────────────────────────
+
+.explore {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $white-12;
+}
+
+.exploreLabel {
+  margin: 0 0 0.9rem;
+  @include label($white-55);
+}
+
+.subLinks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // An odd one out takes the full row instead of leaving a hole
+  > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+.subLink {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 0.85rem 0.9rem 0.85rem 0.85rem;
+  border: 1px solid $white-12;
+  border-radius: 1rem;
+  background: $white-08;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $white-35;
+    background: $white-12;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover .subArrow {
+      transform: translateX(3px);
+    }
+  }
+
+  @include phone {
+    gap: 0.65rem;
+    padding: 0.7rem;
+  }
+}
+
+.subIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.75rem;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  @include phone {
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      width: 1.15rem;
+      height: 1.15rem;
+    }
+  }
+}
+
+.subCopy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.subName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  @include phone {
+    font-size: 0.85rem;
+  }
+}
+
+.subText {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: $white-65;
+
+  // Names only on small phones, so the frame stays short
+  @include phone {
+    display: none;
+  }
+}
+
+.subArrow {
+  display: grid;
+  flex: none;
+  color: $accent-on-dark;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.2s ease;
+  }
+}
+
+// ── Tabs and pause ──────────────────────────────────────────────────────────
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    order: 3;
+  }
+}
+
+.tabs {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(#{$frames}, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0 0 0.2rem;
+  border: 0;
+  background: none;
+  color: $white-55;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover,
+  &[aria-selected="true"] {
+    color: $white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @include phone {
+    font-size: 0.8rem;
+  }
+}
+
+.track {
+  display: block;
+  height: 3px;
+  overflow: hidden;
+  border-radius: $radius-pill;
+  background: $white-18;
+}
+
+// Full bar by default (reduced motion, manual mode); animated for autoplay
+.fill {
+  display: block;
+  height: 100%;
+  background: $accent-on-dark;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes pphHeroFill {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .fill {
+    animation: pphHeroFill linear forwards;
+  }
+
+  .rotator[data-paused="true"] .fill,
+  .rotator[data-onscreen="false"] .fill {
+    animation-play-state: paused;
+  }
+
+  // A tab click stops autoplay: show the chosen tab as fully selected
+  .rotator[data-mode="manual"] .fill {
+    animation: none;
+  }
+}
+
+.toggle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid $white-18;
+  border-radius: 50%;
+  background: transparent;
+  color: $white;
+  cursor: pointer;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover {
+    background: $white-08;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 3px;
+  }
+
+  // Nothing autoplays with reduced motion, so there is nothing to pause
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
+}
+
+// ── Trust row ───────────────────────────────────────────────────────────────
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  margin: 3.5rem 0 0;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid $white-12;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    @include small-text($white-75);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.trustIcon {
+  display: inline-grid;
+  flex: none;
+  color: $accent-on-dark;
+
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+}

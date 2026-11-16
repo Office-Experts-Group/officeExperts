@@ -16,6 +16,12 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import faqs from "@/faqs/database-development-and-solutions";
 import faqSchema from "@/faqs/databaseDevelopmentSchema";
 
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/services/database-development-and-solutions`;
 
@@ -33,6 +39,9 @@ const offer = (name, description) => ({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     // WebPage
     {
       "@type": "WebPage",

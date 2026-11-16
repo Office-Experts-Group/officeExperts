@@ -29,6 +29,7 @@
   &:hover {
     filter: grayscale(0%);
   }
+  mix-blend-mode: multiply;
 }
 
 .name {

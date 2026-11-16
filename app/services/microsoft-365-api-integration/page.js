@@ -2,13 +2,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-// ── Above the fold: normal imports so they render in the first paint ──
-import ServiceHero from "@/components/ServiceHero";
 import ApiIntro from "./(components)/ApiIntro";
+import ApiByProduct from "./(components)/ApiByProduct";
 
-// ── Below the fold: next/dynamic splits each into its own chunk.
-// They are still server-rendered (no ssr: false), so all content is in the HTML. ──
-const ApiByProduct = dynamic(() => import("./(components)/ApiByProduct"));
 const ApiAgents = dynamic(() => import("./(components)/ApiAgents"));
 const ApiSurfaces = dynamic(() => import("./(components)/ApiSurfaces"));
 const ApiUseCases = dynamic(() => import("./(components)/ApiUseCases"));
@@ -20,12 +16,13 @@ const Contact = dynamic(() => import("@/components/Contact"));
 // Case study data (single source of truth for every case study card and page)
 import { getCaseStudyBySlug } from "@/app/case-studies/caseStudies";
 
-// FAQ content, shared with ApiFaq.jsx so the schema matches what's on screen
 import { apiFaqs } from "./(components)/apiFaqData";
 
-// Hero images (kept from the previous version of this page)
-import api from "@/public/pageHeros/api.webp";
-import apiMob from "@/public/pageHeros/mob/apiMob.webp";
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/microsoft-365-api-integration";
@@ -119,6 +116,9 @@ const offers = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
@@ -217,13 +217,6 @@ const Page = () => {
       />
 
       <main>
-        <ServiceHero
-          title="Microsoft 365 API Integration"
-          desktopImage={api}
-          mobileImage={apiMob}
-          altDesk={HERO_ALT}
-          altMob={HERO_ALT}
-        />
         <ApiIntro />
         <ApiByProduct />
         <ApiAgents />

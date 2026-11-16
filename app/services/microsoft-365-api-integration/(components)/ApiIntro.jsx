@@ -1,9 +1,7 @@
 // app/services/microsoft-365-api-integration/(components)/ApiIntro.jsx
-// Above the fold: imported normally in page.js (not next/dynamic) so it's in the first paint.
-
-import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 // Hub diagram (custom SVG component, no image request)
+import Link from "next/link";
 import { ApiHubSvg } from "../(svgs)/ApiHubSvg";
 
 import styles from "@/styles/apiIntro.module.scss";
@@ -20,11 +18,12 @@ const apis = [
 ];
 
 const ApiIntro = () => (
-  <section className={styles.section}>
-    <div className={styles.inner}>
-      <AnimateOnScroll animation="fade-up" duration={0.6}>
+  <>
+    <div className={styles.lightHero}></div>
+    <section className={styles.section}>
+      <div className={styles.inner}>
         <div>
-          <p className={styles.eyebrow}>Microsoft 365 API integration</p>
+          <h1 className={styles.eyebrow}>Microsoft 365 API integration</h1>
           <h2 className={styles.heading}>
             Your Microsoft apps already hold the data.{" "}
             <span className={styles.accent}>We get them talking.</span>
@@ -37,13 +36,10 @@ const ApiIntro = () => (
             figure entered once flows into the spreadsheet, the report, the
             email and the dashboard without anyone copying it across.
           </p>
-          <p className={styles.text}>
-            Office Experts Group has built Microsoft solutions for Australian
-            businesses since 2000. This page brings our Word, Excel, Power
-            Platform and Access integration work together in one place, and sets
-            out what the Microsoft APIs can realistically do in 2026, including
-            the newer AI agent and Model Context Protocol (MCP) options.
-          </p>
+
+          <Link href="#contact" className="btn">
+            Get a free assessment
+          </Link>
 
           <ul className={styles.chips} aria-label="APIs we work with">
             {apis.map((api) => (
@@ -53,13 +49,13 @@ const ApiIntro = () => (
             ))}
           </ul>
         </div>
-      </AnimateOnScroll>
 
-      <div className={styles.visual}>
-        <ApiHubSvg />
+        <div className={styles.visual}>
+          <ApiHubSvg />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </>
 );
 
 export default ApiIntro;

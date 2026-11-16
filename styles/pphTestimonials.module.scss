@@ -1,0 +1,110 @@
+// /styles/pphTestimonials.module.scss
+@use "./globals" as *;
+
+.pphTestimonials {
+  background: $white;
+  padding: 7rem 0;
+  overflow: hidden;
+
+  @include belowDesktop {
+    padding: 5rem 0;
+  }
+  @include mobile {
+    padding: 4rem 0;
+  }
+}
+
+.header {
+  max-width: calc(#{$container} + 2 * #{$gutter});
+  margin: 0 auto 3rem;
+  padding-inline: $gutter;
+
+  @include belowDesktop {
+    padding-inline: $mobGutter;
+  }
+  @include mobile {
+    padding-inline: 1.25rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.wrapper {
+  --slide: 22rem;
+  --gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+
+  @include mobile {
+    --slide: 17.5rem;
+    --gap: 1rem;
+  }
+}
+
+.track {
+  display: flex;
+  gap: var(--gap);
+  width: max-content;
+  padding-inline: $gutter;
+
+  @include belowDesktop {
+    padding-inline: $mobGutter;
+  }
+}
+
+.slide {
+  flex: 0 0 var(--slide);
+  width: var(--slide);
+  display: flex;
+
+  > * {
+    width: 100%;
+  }
+}
+
+@keyframes pphMarquee {
+  to {
+    transform: translateX(
+      calc((var(--slide) + var(--gap)) * var(--pph-count) * -1)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  .track {
+    animation: pphMarquee calc(var(--pph-count) * 6s) linear infinite;
+    padding-inline: 0;
+  }
+
+  .wrapper:hover .track,
+  .wrapper:focus-within .track {
+    animation-play-state: paused;
+  }
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  padding-inline: 1.25rem;
+}
+
+.btn {
+  @include btn-on-accent;
+}
