@@ -4,8 +4,12 @@ import dynamic from "next/dynamic";
 
 import AddInHero from "./(components)/AddInHero";
 
-// Below-the-fold components are split into separate chunks with next/dynamic.
-// They are still server rendered (dynamic() keeps SSR on by default), so crawlers get the full HTML.
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const AddInPlatforms = dynamic(() => import("./(components)/AddInPlatforms"));
 const AddInTechnologies = dynamic(
   () => import("./(components)/AddInTechnologies"),
@@ -30,6 +34,9 @@ const DATE_MODIFIED = "2026-11-09T00:00:00+11:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

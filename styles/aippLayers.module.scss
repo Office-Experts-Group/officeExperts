@@ -1,0 +1,190 @@
+// /styles/aippLayers.module.scss
+@use "./globals" as *;
+
+.aippLayers {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark();
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark();
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+// ── bento: agents tile is tall (left), flows and data stack on the right ──
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  border-radius: $radius;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tileAgents {
+  grid-column: span 3;
+  grid-row: span 2;
+
+  @include belowDesktop {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.tileFlows,
+.tileData {
+  grid-column: span 3;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.art {
+  margin-bottom: 1.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+}
+
+.tileAgents .art svg {
+  max-width: 400px;
+}
+
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: $radius-pill;
+  @include label($white-88);
+  background: $white-12;
+}
+
+.tileHeading {
+  margin: 0 0 0.8rem;
+  @include card-title(lg, $white);
+}
+
+.tileBody {
+  margin: 0;
+  @include body-text($white-88);
+}
+
+.points {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    @include small-text($white-88);
+
+    svg {
+      flex-shrink: 0;
+      margin-top: 0.35rem;
+      color: $white;
+    }
+  }
+}
+
+.tileLink {
+  margin-top: auto;
+  padding-top: 1.6rem;
+  @include arrow-link($white);
+  line-height: 1.5;
+}
+
+.accentTile {
+  background: $accent;
+}
+
+.darkTile {
+  background: $dark-surface;
+
+  .tag {
+    color: $accent-on-dark;
+  }
+  .tileLink {
+    color: $accent-on-dark;
+  }
+}
+
+.lightTile {
+  background: $white;
+
+  .tag {
+    background: $accent-tint;
+    color: $accent;
+  }
+  .tileHeading {
+    color: $text-primary;
+  }
+  .tileBody {
+    color: $text-secondary;
+  }
+  .tileLink {
+    color: $accent;
+  }
+}
+
+.pointsLabel {
+  @include label($white-75);
+  margin: 1.8rem 0 0;
+}

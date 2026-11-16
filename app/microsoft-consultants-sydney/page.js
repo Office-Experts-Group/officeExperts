@@ -12,7 +12,11 @@ const SydneyContext = dynamic(() => import("./(components)/SydneyContext"));
 const SydneyWhy = dynamic(() => import("./(components)/SydneyWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import sydney from "@/public/pageHeros/sydney.webp";
 import sydneyMob from "@/public/pageHeros/mob/sydneyMob.webp";
@@ -29,6 +33,8 @@ const schemaData = {
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

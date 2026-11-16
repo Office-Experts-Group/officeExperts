@@ -31,6 +31,11 @@ const ThirdPartyFaq = dynamic(() => import("./(components)/ThirdPartyFaq"));
 
 // FAQ data is also used below to generate FAQPage schema
 import { thirdPartyFaqs } from "@/faqs/thirdPartyFaqs";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 const RELATED_CASE_STUDIES = [
   {
@@ -70,6 +75,9 @@ const description =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": pageUrl,

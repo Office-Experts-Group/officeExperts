@@ -12,7 +12,11 @@ const CanberraContext = dynamic(() => import("./(components)/CanberraContext"));
 const CanberraWhy = dynamic(() => import("./(components)/CanberraWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import canberra from "@/public/pageHeros/canberra.webp";
 import canberraMob from "@/public/pageHeros/mob/canberraMob.webp";
@@ -29,6 +33,8 @@ const schemaData = {
       regionCode: "ACT",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

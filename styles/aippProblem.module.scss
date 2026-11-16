@@ -1,0 +1,167 @@
+// /styles/aippProblem.module.scss
+@use "./globals" as *;
+
+.aippProblem {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow();
+}
+
+.heading {
+  margin: 0 0 1.2rem;
+  @include heading-section();
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  margin: 0;
+  @include lede();
+}
+
+// ── bento: tall dark feature tile on the left, two shorter tiles stacked ──
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  border-radius: $radius;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tile_disconnected {
+  grid-column: span 3;
+  grid-row: span 2;
+
+  @include belowDesktop {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.tile_security,
+.tile_expertise {
+  grid-column: span 3;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+.art {
+  margin-bottom: 1.4rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+  }
+}
+
+.tile_disconnected .art svg {
+  max-width: 340px;
+}
+
+.tileHeading {
+  margin: 0 0 0.7rem;
+  @include card-title(lg);
+}
+
+.tileBody {
+  margin: 0;
+  @include body-text();
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .tileHeading {
+    color: $white;
+  }
+  .tileBody {
+    color: $white-75;
+  }
+}
+
+.lightTile {
+  background: $white;
+  box-shadow: $shadow-panel;
+}
+
+.accentTile {
+  background: $accent;
+
+  .tileHeading {
+    color: $white;
+  }
+  .tileBody {
+    color: $white-88;
+  }
+}
+
+.symptoms {
+  list-style: none;
+  margin: 1.8rem 0 0;
+  padding: 1.4rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+  border-top: 1px solid $white-12;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    @include small-text($white-88);
+
+    svg {
+      flex-shrink: 0;
+      color: $accent-on-dark;
+    }
+  }
+}

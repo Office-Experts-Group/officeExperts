@@ -14,7 +14,11 @@ const CentralCoastContext = dynamic(
 const CentralCoastFaq = dynamic(() => import("./(components)/CentralCoastFaq"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import centralCoast from "@/public/pageHeros/centralCoast.webp";
 import centralCoastMob from "@/public/pageHeros/mob/centralCoastMob.webp";
@@ -34,6 +38,8 @@ const schemaData = {
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

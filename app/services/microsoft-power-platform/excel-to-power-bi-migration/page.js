@@ -164,9 +164,7 @@ const ExcelToPowerBiMigration = () => {
           text="A few of the reporting problems we’ve solved for Australian businesses, from oversized workbooks to secure, shared Power BI reports."
           links={epbmCaseStudyLinks}
         />
-        <div id="contact">
-          <Contact />
-        </div>
+        <Contact />
       </main>
     </>
   );

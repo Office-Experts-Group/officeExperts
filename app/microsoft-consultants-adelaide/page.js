@@ -12,7 +12,11 @@ const AdelaideContext = dynamic(() => import("./(components)/AdelaideContext"));
 const AdelaideWhy = dynamic(() => import("./(components)/AdelaideWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import adelaide from "@/public/pageHeros/adelaide.webp";
 import adelaideMob from "@/public/pageHeros/mob/adelaideMob.webp";
@@ -32,6 +36,8 @@ const schemaData = {
       regionCode: "SA",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

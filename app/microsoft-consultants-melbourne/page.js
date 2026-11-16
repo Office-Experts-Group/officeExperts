@@ -15,7 +15,11 @@ const MelbourneContext = dynamic(
 const MelbourneWhy = dynamic(() => import("./(components)/MelbourneWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import melbourne from "@/public/pageHeros/melbourne.webp";
 import melbourneMob from "@/public/pageHeros/mob/melbourneMob.webp";
@@ -32,6 +36,8 @@ const schemaData = {
       regionCode: "VIC",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

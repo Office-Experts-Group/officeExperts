@@ -13,7 +13,11 @@ const CairnsApproach = dynamic(() => import("./(components)/CairnsApproach"));
 const CairnsWhy = dynamic(() => import("./(components)/CairnsWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import cairns from "@/public/pageHeros/cairns.webp";
 import cairnsMob from "@/public/pageHeros/mob/cairnsMob.webp";
@@ -30,6 +34,8 @@ const schemaData = {
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

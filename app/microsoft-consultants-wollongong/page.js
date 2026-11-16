@@ -16,7 +16,11 @@ const WollongongWhy = dynamic(() => import("./(components)/WollongongWhy"));
 const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import { faqs } from "./(data)/wollongongFaqs";
 
@@ -69,6 +73,8 @@ const schemaData = {
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

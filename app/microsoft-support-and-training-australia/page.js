@@ -6,6 +6,12 @@ import dynamic from "next/dynamic";
 import LocationsHero from "./(components)/LocationsHero";
 import LocationsGrid from "./(components)/LocationsGrid";
 
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
+
 // Dynamic imports: below the fold, split into their own chunks
 const LocationsWhy = dynamic(() => import("./(components)/LocationsWhy"));
 const LocationsClosing = dynamic(
@@ -27,6 +33,9 @@ const DATE_MODIFIED = "2026-11-09T00:00:00+11:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

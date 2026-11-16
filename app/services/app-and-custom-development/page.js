@@ -5,6 +5,12 @@ import dynamic from "next/dynamic";
 import AppDevIntro from "./(components)/AppDevIntro";
 import AppDevHero from "./(components)/AppDevHero";
 
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
+
 // Below-the-fold components loaded dynamically
 const AppDevStack = dynamic(() => import("./(components)/AppDevStack"));
 const AppDevPortals = dynamic(() => import("./(components)/AppDevPortals"));
@@ -103,6 +109,9 @@ const offerings = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

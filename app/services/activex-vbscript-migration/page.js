@@ -4,6 +4,12 @@ import dynamic from "next/dynamic";
 
 import MigrationHero from "./(components)/MigrationHero";
 
+import {
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/utils/schemaGenerators";
+
 const AffectedCheck = dynamic(() => import("./(components)/AffectedCheck"));
 const MigrationReplaces = dynamic(
   () => import("./(components)/MigrationReplaces"),
@@ -19,6 +25,9 @@ const PAGE_URL =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

@@ -12,9 +12,12 @@ const RichmondContext = dynamic(() => import("./(components)/RichmondContext"));
 const RichmondWhy = dynamic(() => import("./(components)/RichmondWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
-// TODO: add these two images (see hand-off notes)
 import richmond from "@/public/pageHeros/richmond.webp";
 import richmondMob from "@/public/pageHeros/mob/richmondMob.webp";
 
@@ -33,6 +36,8 @@ const schemaData = {
       regionCode: "VIC",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

@@ -1,0 +1,139 @@
+// /styles/aippHero.module.scss
+@use "./globals" as *;
+
+.aippHero {
+  background: $dark-bg;
+  overflow: hidden;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 8rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+.copy {
+  text-align: left;
+}
+
+.heading {
+  margin: 0 0 1.4rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0 0 2rem;
+  max-width: 34rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-bottom: 2.2rem;
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+  font-size: 0.95rem;
+}
+
+.trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.6rem;
+
+  li {
+    @include small-text($white-65);
+    position: relative;
+    font-size: 0.85rem;
+
+    + li::before {
+      content: "";
+      position: absolute;
+      left: -0.9rem;
+      top: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $accent-on-dark;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include phone {
+    display: none;
+  }
+}
+
+// Animation classes are passed into AippHeroSvg as props.
+@keyframes aippFlow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes aippPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: aippFlow 1.6s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: aippPulse 2.4s ease-in-out infinite;
+  }
+}

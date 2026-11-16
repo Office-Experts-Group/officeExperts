@@ -10,7 +10,11 @@ const PerthContext = dynamic(() => import("./(components)/PerthContext"));
 const PerthWhy = dynamic(() => import("./(components)/PerthWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import perth from "@/public/pageHeros/perth.webp";
 import perthMob from "@/public/pageHeros/mob/perthMob.webp";
@@ -26,6 +30,8 @@ const schemaData = {
       regionCode: "WA",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────────────────────────────────
     {

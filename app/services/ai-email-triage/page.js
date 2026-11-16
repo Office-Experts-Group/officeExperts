@@ -3,8 +3,12 @@ import dynamic from "next/dynamic";
 
 import EmailTriageHero from "./(components)/EmailTriageHero";
 
-// Below-the-fold components loaded dynamically. All are server components,
-// so they still render on the server; this only splits the JS bundle.
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
+
 const EmailTriageIntro = dynamic(
   () => import("./(components)/EmailTriageIntro"),
 );
@@ -39,6 +43,9 @@ const PAGE_URL = `${SITE_URL}/services/ai-email-triage`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

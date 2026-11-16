@@ -179,9 +179,7 @@ const Page = () => {
         headingAccent="in practice"
         links={spcdCaseStudyLinks}
       />
-      <div id="contact">
-        <Contact />
-      </div>
+      <Contact />
     </>
   );
 };

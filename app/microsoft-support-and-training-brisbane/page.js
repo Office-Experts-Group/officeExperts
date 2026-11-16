@@ -14,7 +14,11 @@ import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
 import askExpert from "@/public/askExpert540x480.webp";
 import support from "@/public/support.webp";
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/microsoft-support-and-training-brisbane";
@@ -29,6 +33,8 @@ const schemaData = {
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     {
       "@type": "WebPage",

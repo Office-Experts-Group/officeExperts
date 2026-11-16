@@ -1,0 +1,138 @@
+// /styles/aippWhy.module.scss
+@use "./globals" as *;
+
+.aippWhy {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+.copy {
+  text-align: left;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow();
+}
+
+.heading {
+  margin: 0 0 1.4rem;
+  @include heading-section();
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  margin: 0 0 1.6rem;
+  @include lede();
+}
+
+.aboutLink {
+  @include arrow-link();
+  font-size: 0.95rem;
+}
+
+// 2 x 2 stat tiles with mixed colours
+.stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    gap: 0.8rem;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 11rem;
+  padding: 1.6rem;
+  border-radius: $radius;
+
+  @include mobile {
+    min-height: 8.5rem;
+    padding: 1.2rem;
+  }
+}
+
+.statValue {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: $heading-weight;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.statLabel {
+  margin-top: 0.4rem;
+  @include small-text();
+}
+
+.accentTile {
+  background: $accent;
+
+  .statValue {
+    color: $white;
+  }
+  .statLabel {
+    color: $white-88;
+  }
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .statValue {
+    color: $accent-on-dark;
+  }
+  .statLabel {
+    color: $white-75;
+  }
+}
+
+.lightTile {
+  background: $light-bg;
+
+  .statValue {
+    color: $accent;
+  }
+  .statLabel {
+    color: $text-secondary;
+  }
+}

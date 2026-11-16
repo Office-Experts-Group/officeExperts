@@ -1,0 +1,261 @@
+// /styles/aippScenarios.module.scss
+@use "./globals" as *;
+
+// Standout section: sticky split scroll. The diagram column is pinned below
+// the fixed header on desktop while the scenario cards scroll past.
+
+.aippScenarios {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow();
+}
+
+.heading {
+  margin: 0 0 1.2rem;
+  @include heading-section();
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 0;
+  @include lede();
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3.5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.pinCol {
+  align-self: start;
+
+  @include desktopUp {
+    position: sticky;
+    top: $header-offset;
+  }
+}
+
+.pin {
+  margin: 0;
+  background: $dark-bg;
+  border-radius: $radius;
+  padding: 2rem;
+
+  @include mobile {
+    padding: 1.25rem;
+  }
+}
+
+.stack svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pinCaption {
+  margin-top: 1.25rem;
+  font-family: var(--font-aptos);
+  @include small-text($white-75);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: $light-bg;
+  border-radius: $radius;
+  scroll-margin-top: $scroll-offset;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: $radius;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 0.9rem 1rem;
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 56px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.summaryText {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  justify-items: start;
+  gap: 0.55rem;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: $radius-pill;
+  background: $accent-tint;
+  @include label($accent);
+}
+
+.cardTitle {
+  margin: 0;
+  @include card-title();
+}
+
+.toggle {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: $accent;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.toggleLess {
+  display: none;
+}
+
+.toggleIcon {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.card[open] {
+  .toggleMore {
+    display: none;
+  }
+  .toggleLess {
+    display: inline;
+  }
+  .toggleIcon {
+    transform: rotate(45deg);
+  }
+}
+
+.body {
+  margin: 0 2rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid $border;
+
+  @include mobile {
+    margin: 0 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.block {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.label {
+  @include label($text-muted);
+}
+
+.blockBuild .label {
+  color: $accent;
+}
+
+.text {
+  margin: 0;
+  @include body-text();
+  @include inline-link;
+}
+
+.blockBuild .text {
+  color: $text-primary;
+}
+
+.divider {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.9rem 0;
+  color: $accent;
+}
+
+.foot {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+}
+
+.footNote {
+  margin: 0;
+  max-width: 40rem;
+  @include body-text();
+}
+
+.footCta {
+  @include btn-on-accent;
+}
+
+.item {
+  min-width: 0;
+}

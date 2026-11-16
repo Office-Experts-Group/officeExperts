@@ -10,7 +10,11 @@ const DarwinContext = dynamic(() => import("./(components)/DarwinContext"));
 const DarwinWhy = dynamic(() => import("./(components)/DarwinWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import darwin from "@/public/pageHeros/darwin.webp";
 import darwinMob from "@/public/pageHeros/mob/darwinMob.webp";
@@ -30,6 +34,8 @@ const schemaData = {
       regionCode: "NT",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

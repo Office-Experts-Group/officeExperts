@@ -14,7 +14,11 @@ const GoldCoastContext = dynamic(
 const GoldCoastWhy = dynamic(() => import("./(components)/GoldCoastWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import goldCoast from "@/public/pageHeros/goldCoast.webp";
 import goldCoastMob from "@/public/pageHeros/mob/goldCoastMob.webp";
@@ -34,6 +38,8 @@ const schemaData = {
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

@@ -1,0 +1,147 @@
+// /styles/pappsHero.module.scss
+@use "./globals" as *;
+
+.headerBlock {
+  @include lightHeroBlock;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.pappsHero {
+  @include heroPaddingWhite;
+  background: $light-bg;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-top: 4.5rem;
+  overflow: hidden;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    padding: 3rem $mobGutter 4rem $mobGutter;
+  }
+  @include phone {
+    padding: 2.5rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.title {
+  @include heading-main;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  margin: 0;
+  max-width: 34rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+
+.cta {
+  @include btn-on-accent;
+}
+
+.moreLink {
+  @include arrow-link;
+  font-size: 0.95rem;
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include small-text($text-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+.trustIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.art {
+  min-width: 0;
+  max-width: 40rem;
+  width: 100%;
+  justify-self: center;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.flow {
+  stroke-dasharray: 6 7;
+}
+
+.live {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.5;
+}
+
+@keyframes pappsHeroFlow {
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+@keyframes pappsHeroPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: pappsHeroFlow 1.4s linear infinite;
+  }
+  .live {
+    animation: pappsHeroPulse 2s ease-out infinite;
+  }
+}

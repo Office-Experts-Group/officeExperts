@@ -1,0 +1,101 @@
+// /styles/pappsMobility.module.scss
+@use "./globals" as *;
+
+.pappsMobility {
+  background: $accent-dark;
+  padding: 6rem $gutter;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 3rem;
+  align-items: center;
+  overflow: hidden;
+  scroll-margin-top: $scroll-offset;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 5rem $mobGutter;
+    gap: 2.5rem;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 0;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  @include lede($white-88);
+  margin: 0;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.point {
+  @include small-text($white-90);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.pointIcon {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: $white-18;
+  color: $white;
+
+  svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.cta {
+  margin-top: 0.5rem;
+}
+
+// The illustration always scales to fit its column.
+.art {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -2,7 +2,11 @@
 // Structured data for the Northern NSW hub, kept out of page.js so the page stays readable.
 // Organization and ProfessionalService come from the shared generators. There is no
 // LocalBusiness node because no street address has been confirmed for this region.
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import { faqs } from "./northernNswData";
 
@@ -49,6 +53,8 @@ const schema = {
       regionCode: "NSW",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

@@ -159,9 +159,7 @@ const PowerBiDataIntegration = () => (
         text="Real projects where we pulled scattered data into one place and made it ready to report on."
         links={pbdiCaseStudyLinks}
       />
-      <div id="contact">
-        <Contact />
-      </div>
+      <Contact />
     </main>
   </>
 );

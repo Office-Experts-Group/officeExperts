@@ -1,0 +1,123 @@
+// /styles/aippProcess.module.scss
+@use "./globals" as *;
+
+.aippProcess {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 44rem;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow-on-dark();
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark();
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+// Horizontal track on desktop, vertical on smaller screens. The connector
+// line sits behind the icon plates.
+.track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: $white-18;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+
+    &::before {
+      top: 36px;
+      bottom: 36px;
+      left: 35px;
+      right: auto;
+      width: 2px;
+      height: auto;
+    }
+  }
+}
+
+.step {
+  position: relative;
+  text-align: center;
+
+  @include belowDesktop {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    text-align: left;
+  }
+}
+
+.stepArt {
+  width: 72px;
+  margin-inline: auto;
+  margin-bottom: 1.4rem;
+  position: relative;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    margin: 0;
+  }
+}
+
+.stepHeading {
+  margin: 0 0 0.6rem;
+  @include card-title(md, $white);
+}
+
+.stepBody {
+  margin: 0;
+  @include small-text($white-75);
+}
+
+.stepText {
+  min-width: 0;
+}

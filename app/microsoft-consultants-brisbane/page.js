@@ -12,7 +12,11 @@ const BrisbaneContext = dynamic(() => import("./(components)/BrisbaneContext"));
 const BrisbaneWhy = dynamic(() => import("./(components)/BrisbaneWhy"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 import brisbane from "@/public/pageHeros/brisbane.webp";
 import brisbaneMob from "@/public/pageHeros/mob/brisbaneMob.webp";
@@ -29,6 +33,8 @@ const schemaData = {
       regionCode: "QLD",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     // ── WebPage ──────────────────────────────
     {

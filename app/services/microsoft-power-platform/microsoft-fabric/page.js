@@ -182,9 +182,7 @@ const Page = () => {
           text="Real work on Microsoft Fabric, Power BI and data consolidation for Australian organisations."
           links={mfabCaseStudyLinks}
         />
-        <div id="contact">
-          <Contact />
-        </div>
+        <Contact />
       </main>
     </>
   );

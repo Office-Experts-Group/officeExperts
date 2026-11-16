@@ -10,9 +10,18 @@ import Contact from "@/components/Contact";
 import faq from "@/public/pageHeros/faq.webp";
 import faqMob from "@/public/pageHeros/mob/faqMob.webp";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
       "@id": "https://www.officeexperts.com.au/faq",

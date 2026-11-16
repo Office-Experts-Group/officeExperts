@@ -15,7 +15,11 @@ import melbourneMob from "@/public/pageHeros/mob/melbourneMob.webp";
 import askExpert from "@/public/askExpert540x480.webp";
 import support from "@/public/support.webp";
 
-import { generateLocalBusinessSchema } from "@/utils/schemaGenerators";
+import {
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/microsoft-support-and-training-melbourne`;
@@ -30,6 +34,8 @@ const schemaData = {
       regionCode: "VIC",
       nearbyAreas: [], // optional
     }),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
 
     {
       "@type": "WebPage",

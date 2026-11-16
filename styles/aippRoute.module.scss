@@ -1,0 +1,191 @@
+// /styles/aippRoute.module.scss
+@use "./globals" as *;
+
+.aippRoute {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.9rem;
+  @include eyebrow();
+}
+
+.heading {
+  margin: 0 0 1.2rem;
+  @include heading-section();
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  margin: 0;
+  @include lede();
+}
+
+.visuallyHidden {
+  @include visually-hidden;
+}
+
+.tableWrap {
+  background: $white;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  thead th {
+    padding: 1.1rem 1.6rem;
+    background: $dark-bg;
+    @include label($white-75);
+  }
+
+  tbody th,
+  tbody td {
+    padding: 1.5rem 1.6rem;
+    vertical-align: middle;
+    border-bottom: 1px solid $line;
+    @include body-text();
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  // column widths on desktop
+  th:nth-child(1) {
+    width: 40%;
+  }
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 26%;
+  }
+}
+
+.goalCell {
+  font-weight: 700;
+  color: $text-primary;
+  text-align: left;
+  display: table-cell;
+}
+
+.rowIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 52px;
+  margin-right: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.goalText {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: calc(100% - 72px);
+  @include card-title(sm);
+  line-height: 1.4;
+}
+
+.startLink {
+  @include arrow-link();
+  font-size: 0.95rem;
+}
+
+.here {
+  font-weight: 700;
+  color: $accent-dark;
+}
+
+.currentRow {
+  th,
+  td {
+    background: $accent-light;
+  }
+}
+
+// ── stacked rows below 767px: one table, column names from data-label ──
+@include mobile {
+  .table {
+    thead {
+      @include visually-hidden;
+    }
+
+    tbody tr {
+      display: block;
+      padding: 1.25rem 1.25rem 0.5rem;
+      border-bottom: 1px solid $line;
+    }
+
+    tbody tr:last-child {
+      border-bottom: 0;
+    }
+
+    tbody th,
+    tbody td {
+      display: block;
+      width: auto;
+      padding: 0 0 0.9rem;
+      border-bottom: 0;
+    }
+
+    th:nth-child(1),
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: auto;
+    }
+
+    tbody td::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.2rem;
+      @include label($text-muted);
+    }
+
+    .goalText {
+      max-width: calc(100% - 72px);
+    }
+  }
+
+  .currentRow {
+    background: $accent-light;
+
+    th,
+    td {
+      background: transparent;
+    }
+  }
+}
+
+.startCell {
+  font-size: 0.95rem;
+}

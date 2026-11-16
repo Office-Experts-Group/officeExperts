@@ -1,0 +1,273 @@
+// /styles/pappsApps.module.scss
+// Standout section: CSS-only tabs. Radio inputs come first so `:checked ~`
+// can switch the tab labels and the panels without any client JavaScript.
+@use "./globals" as *;
+
+$tab-count: 5;
+
+.pappsApps {
+  background: $light-bg;
+  padding: 7rem $gutter;
+  scroll-margin-top: $scroll-offset;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.5rem 4rem;
+  align-items: end;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.heading {
+  @include heading-section;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  @include lede;
+  margin: 0;
+}
+
+.srOnly {
+  @include visually-hidden;
+}
+
+.tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  grid-template-areas: "list panels";
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "list"
+      "panels";
+    gap: 1.25rem;
+  }
+}
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+}
+
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  @include belowDesktop {
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0.4rem;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: $radius;
+  background: $white;
+  border: 1px solid $line;
+  color: $text-primary;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  cursor: pointer;
+
+  @include belowDesktop {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+}
+
+.tabIcon {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+.tabText {
+  min-width: 0;
+}
+
+.panels {
+  grid-area: panels;
+}
+
+.panel {
+  display: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 2rem;
+  align-items: center;
+  background: $white;
+  border-radius: $radius;
+  padding: 2rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.5rem;
+  }
+  @include phone {
+    padding: 1.25rem;
+  }
+}
+
+@for $i from 1 through $tab-count {
+  .radio:nth-of-type(#{$i}):checked ~ .list .tab:nth-of-type(#{$i}) {
+    background: $accent;
+    border-color: $accent;
+    color: $white;
+
+    .tabIcon {
+      background: $white-18;
+      color: $white;
+    }
+  }
+
+  .radio:nth-of-type(#{$i}):focus-visible ~ .list .tab:nth-of-type(#{$i}) {
+    outline: 3px solid $accent-on-dark;
+    outline-offset: 2px;
+  }
+
+  .radio:nth-of-type(#{$i}):checked ~ .panels .panel:nth-of-type(#{$i}) {
+    display: grid;
+  }
+}
+
+.panelCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panelTitle {
+  @include card-title(lg);
+  margin: 0;
+}
+
+.panelText {
+  @include body-text;
+  margin: 0;
+}
+
+.chipGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chipLabel {
+  @include label;
+  margin: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip,
+.chipAccent {
+  @include small-text($text-primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: $radius-pill;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.chip {
+  background: $light-bg;
+  border: 1px solid $line;
+}
+
+.chipAccent {
+  background: $accent-light;
+  color: $accent-dark;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.arrowLink {
+  @include arrow-link;
+}
+
+.scene {
+  background: $accent-light;
+  border-radius: $radius;
+  padding: 1.25rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

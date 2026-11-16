@@ -5,6 +5,12 @@ import dynamic from "next/dynamic";
 import AiAgentsHero from "./(components)/AiAgentsHero";
 import AiAgentsProblem from "./(components)/AiAgentsProblem";
 
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+} from "@/utils/schemaGenerators";
+
 // Below the fold: code-split with next/dynamic (still server-rendered)
 const AiAgentsUseCases = dynamic(
   () => import("./(components)/AiAgentsUseCases"),
@@ -36,7 +42,9 @@ const PAGE_URL = `${SITE_URL}/services/ai-agent-development`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    // WebPage
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,
