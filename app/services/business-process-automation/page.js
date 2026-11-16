@@ -3,6 +3,12 @@ import dynamic from "next/dynamic";
 
 import BPAIntro from "./(components)/BPAIntro";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 const BPADocProcessing = dynamic(
   () => import("./(components)/BPADocProcessing"),
 );
@@ -22,6 +28,9 @@ const DESCRIPTION =
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     // ── WebPage ──────────────────────────────
     {
       "@type": "WebPage",

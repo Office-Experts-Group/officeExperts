@@ -4,6 +4,12 @@ import dynamic from "next/dynamic";
 
 import DashboardsIntro from "./(components)/DashboardsIntro";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 // Below-the-fold sections are split into separate chunks (still server rendered)
 const DashboardsPlatforms = dynamic(
   () => import("./(components)/DashboardsPlatforms"),
@@ -60,6 +66,9 @@ const videos = [
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

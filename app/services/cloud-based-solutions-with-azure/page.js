@@ -7,7 +7,9 @@ import AzureIntro from "./(components)/AzureIntro";
 
 // Dynamically imported — below the fold. dynamic() keeps SSR on by default, so crawlers still get the full HTML.
 const AccessOnAzure = dynamic(() => import("./(components)/AccessOnAzure"));
-const AzureDesktopApps = dynamic(() => import("./(components)/AzureDesktopApps"));
+const AzureDesktopApps = dynamic(
+  () => import("./(components)/AzureDesktopApps"),
+);
 const AzureIntegratedSolutions = dynamic(
   () => import("./(components)/AzureIntegratedSolutions"),
 );
@@ -21,11 +23,13 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "@/utils/schemaGenerators";
 
 const PAGE_URL =
   "https://www.officeexperts.com.au/services/cloud-based-solutions-with-azure";
-const PAGE_TITLE = "Microsoft Cloud Based Solutions with Azure | Office Experts";
+const PAGE_TITLE =
+  "Microsoft Cloud Based Solutions with Azure | Office Experts";
 const PAGE_DESCRIPTION =
   "Cloud based solutions on Microsoft Azure for Australian businesses: Access with Azure SQL, .NET desktop apps, web and mobile integration and SharePoint.";
 
@@ -38,6 +42,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     generateOrganizationSchema(),
     {
       "@type": "WebPage",

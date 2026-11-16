@@ -31,6 +31,7 @@ const ThirdPartyFaq = dynamic(() => import("./(components)/ThirdPartyFaq"));
 
 // FAQ data is also used below to generate FAQPage schema
 import { thirdPartyFaqs } from "@/faqs/thirdPartyFaqs";
+
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,

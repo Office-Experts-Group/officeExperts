@@ -5,6 +5,12 @@ import dynamic from "next/dynamic";
 // Static imports — above the fold
 import CopilotIntro from "./(components)/CopilotIntro";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 // Dynamically imported — below the fold
 const CopilotApps = dynamic(() => import("./(components)/CopilotApps"));
 const CopilotValue = dynamic(() => import("./(components)/CopilotValue"));
@@ -21,6 +27,9 @@ const PAGE_URL = "https://www.officeexperts.com.au/services/copilot";
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     // ── Service ──────────────────────────────
     {
       "@type": "Service",

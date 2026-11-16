@@ -1,0 +1,253 @@
+// /styles/pautoApproach.module.scss
+@use "./globals" as *;
+
+.pautoApproach {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.top {
+  @include container(1300px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  gap: 4rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.introText {
+  @include lede;
+  margin: 0;
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+.cta {
+  @include btn-on-accent;
+  align-self: flex-start;
+}
+
+.diffGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diff {
+  border-radius: $radius;
+  padding: 1.75rem;
+  background: $accent-light;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &:nth-child(1),
+  &:nth-child(4) {
+    background: $dark-bg;
+  }
+  &:nth-child(1) .diffHeading,
+  &:nth-child(4) .diffHeading {
+    color: $white;
+  }
+  &:nth-child(1) .diffBody,
+  &:nth-child(4) .diffBody {
+    color: $white-75;
+  }
+}
+
+.diffIcon {
+  width: 56px;
+  height: 56px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.diffHeading {
+  @include card-title(md);
+  margin: 0;
+}
+
+.diffBody {
+  @include small-text;
+  margin: 0;
+}
+
+.process {
+  @include container(1100px);
+  margin-top: 6rem;
+
+  @include mobile {
+    margin-top: 4rem;
+  }
+}
+
+.processHeader {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+}
+
+.processTitle {
+  @include heading-section;
+  margin: 0 0 0.75rem;
+}
+
+.processSub {
+  @include lede;
+  margin: 0;
+}
+
+// Zig-zag timeline: centre line with dot nodes
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-1px);
+    background: $line-strong;
+  }
+
+  @include belowDesktop {
+    &::before {
+      left: 14px;
+    }
+  }
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: $accent;
+    border: 4px solid $white;
+    box-shadow: 0 0 0 2px $accent;
+    transform: translate(-50%, -50%);
+  }
+
+  &:nth-child(even) .stepArt {
+    order: 2;
+  }
+  &:nth-child(even) .stepText {
+    order: 1;
+    text-align: right;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 3rem;
+
+    &::before {
+      top: 1.5rem;
+      left: 14px;
+    }
+    &:nth-child(even) .stepArt,
+    &:nth-child(even) .stepText {
+      order: 0;
+      text-align: left;
+    }
+  }
+}
+
+.stepArt {
+  background: $light-bg;
+  border-radius: $radius;
+  padding: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stepLabel {
+  @include card-title(lg);
+  margin: 0;
+}
+
+.stepDetail {
+  @include body-text;
+  margin: 0;
+}

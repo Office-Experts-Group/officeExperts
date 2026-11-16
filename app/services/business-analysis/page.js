@@ -5,6 +5,12 @@ import dynamic from "next/dynamic";
 import BusinessAnalysisHero from "./(components)/BusinessAnalysisHero";
 import BusinessAnalysisProblem from "./(components)/BusinessAnalysisProblem";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 // Below-the-fold page sections
 const BusinessAnalysisValue = dynamic(
   () => import("./(components)/BusinessAnalysisValue"),
@@ -37,6 +43,9 @@ const PAGE_URL = `${SITE_URL}/services/business-analysis`;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

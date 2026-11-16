@@ -26,6 +26,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 import {
   generateProfessionalServiceSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from "@/utils/schemaGenerators";
 
 const PAGE_URL =
@@ -43,6 +44,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     generateOrganizationSchema(),
     {
       "@type": "WebPage",

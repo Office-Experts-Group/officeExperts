@@ -1,0 +1,198 @@
+// /styles/pautoDocuments.module.scss
+@use "./globals" as *;
+
+.pautoDocuments {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.header {
+  @include container(1300px);
+  > * {
+    max-width: 54rem;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  @include heading-section-on-dark;
+  margin: 0;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.subtitle {
+  @include lede($white-75);
+  margin: 0;
+}
+
+.tabs {
+  @include container(1300px);
+  position: relative;
+}
+
+.radio {
+  @include visually-hidden;
+}
+
+.tabList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1rem 1.25rem;
+  border-radius: $radius;
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: $accent-on-dark;
+  }
+}
+
+.tabName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.tabSub {
+  font-size: 0.85rem;
+  color: $white-65;
+}
+
+.panels {
+  position: relative;
+}
+
+.panel {
+  display: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: center;
+  background: $dark-surface;
+  border-radius: $radius;
+  padding: 2.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.panelCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panelEyebrow {
+  @include label($accent-on-dark);
+}
+
+.panelHeading {
+  @include card-title(lg, $white);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  margin: 0;
+}
+
+.panelBody {
+  @include body-text($white-88);
+  margin: 0;
+}
+
+.panelDetail {
+  @include small-text($white-65);
+  margin: 0;
+}
+
+.tags {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $white-88;
+    padding: 0.3rem 0.8rem;
+    border-radius: $radius-pill;
+    background: $white-08;
+    border: 1px solid $white-18;
+  }
+}
+
+.extraLink {
+  @include arrow-link($accent-on-dark);
+  margin-top: 0.5rem;
+}
+
+.stage {
+  background: $white;
+  border-radius: $radius;
+  padding: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Tab switching: radio N checked shows panel N and marks label N
+@for $i from 1 through 3 {
+  .radio:nth-of-type(#{$i}):checked ~ .panels .panel:nth-child(#{$i}) {
+    display: grid;
+  }
+  .radio:nth-of-type(#{$i}):checked ~ .tabList .tabLabel:nth-child(#{$i}) {
+    background: $accent;
+    border-color: $accent;
+  }
+  .radio:nth-of-type(#{$i}):focus-visible
+    ~ .tabList
+    .tabLabel:nth-child(#{$i}) {
+    outline: 3px solid $accent-on-dark;
+    outline-offset: 3px;
+  }
+}

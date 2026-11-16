@@ -6,6 +6,12 @@ import dynamic from "next/dynamic";
 import OneDriveHero from "./(components)/OneDriveHero";
 import OneDriveSyncVsBackup from "./(components)/OneDriveSyncVsBackup";
 
+import {
+  generateOrganizationSchema,
+  generateProfessionalServiceSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+
 // Dynamically imported — below the fold
 const OneDriveRecoveryWindows = dynamic(
   () => import("./(components)/OneDriveRecoveryWindows"),
@@ -36,6 +42,9 @@ const DATE_MODIFIED = "2026-11-11T00:00:00+11:00";
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
+    generateOrganizationSchema(),
     {
       "@type": "WebPage",
       "@id": PAGE_URL,

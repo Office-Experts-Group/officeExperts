@@ -163,13 +163,14 @@ export default function MicrosoftPowerAppsPage() {
       <PappsMobility />
       <PappsLicences />
       <PappsWhy />
-      <PappsFaq />
       <RelatedLinks
-        theme="light"
+        theme="dark"
         eyebrow="Case Studies"
-        heading="Power Apps projects in practice"
+        heading="Power Apps projects"
+        headingAccent="in practice"
         links={pappsCaseStudyLinks}
       />
+      <PappsFaq />
       <Contact />
     </>
   );
