@@ -5,17 +5,7 @@ const PAGE_URL =
 const PAGE_TITLE = "SharePoint Consulting & Development | Office Experts"; // 52 characters
 const PAGE_DESCRIPTION =
   "Australian SharePoint consultants for new builds, migration off SharePoint 2016 and 2019, intranets, custom development and Copilot readiness. Free assessment."; // 159 characters
-const PAGE_KEYWORDS = [
-  "SharePoint consulting",
-  "SharePoint consultants",
-  "SharePoint development",
-  "SharePoint migration",
-  "SharePoint Online migration",
-  "SharePoint 2016 end of support",
-  "SharePoint intranet design",
-  "SharePoint governance",
-  "Copilot readiness",
-];
+const PAGE_KEYWORDS = ["SharePoint consulting"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
 const OG_IMAGE = "/logo.png"; // confirm it exists in OE /public
@@ -50,6 +40,7 @@ export const metadata = {
     description: PAGE_DESCRIPTION,
     images: [OG_IMAGE],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
 export default function SpcdLayout({ children }) {

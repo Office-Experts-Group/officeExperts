@@ -45,6 +45,7 @@ export const metadata = {
     creator: TWITTER_HANDLE,
     images: [OG_IMAGE],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
 export default function PowerBiLayout({ children }) {

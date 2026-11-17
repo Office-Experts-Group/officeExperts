@@ -58,6 +58,7 @@ export const metadata = {
     description: PAGE_DESCRIPTION,
     images: [OG_IMAGE],
   },
+  alternates: { canonical: PAGE_URL },
 };
 
 // ── Schema ──────────────────────────────────────────────────────────────────
