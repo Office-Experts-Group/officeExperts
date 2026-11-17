@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsLicences.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsLicences.jsx
 import Link from "next/link";
 
 import { PappsCheckIcon } from "../(svgs)/PappsIcons";

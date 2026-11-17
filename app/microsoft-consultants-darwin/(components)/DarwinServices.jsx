@@ -29,7 +29,7 @@ const services = [
     description:
       "Power Apps for site inspections, safety checklists and field reports that work on a phone or tablet and can capture data offline, then sync when the connection returns. Power Automate for approvals and notifications, and Power BI for reporting back to head office.",
     points: ["Power Apps", "Offline capture", "Power Automate", "Power BI"],
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
   },
   {

@@ -54,7 +54,7 @@ const MFAB_WORKLOADS = [
     description: "Business intelligence and reporting",
     detail:
       "Create interactive reports and dashboards that read directly from every Fabric workload, then share them securely across your organisation.",
-    href: "/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
   },
 ];
 

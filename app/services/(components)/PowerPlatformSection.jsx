@@ -12,74 +12,50 @@ const tiles = [
   {
     name: "Power Apps",
     Icon: PowerAppsIcon,
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
     description: "Business apps for the way your team really works.",
-    support: {
-      name: "Power Apps support",
-      href: "https://www.powerplatformexperts.com.au/power-apps-support",
-    },
   },
   {
     name: "Power Automate",
     Icon: PowerAutomateIcon,
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     description:
       "Flows that move data and approvals without anyone chasing them.",
-    support: {
-      name: "Power Automate support",
-      href: "https://www.powerplatformexperts.com.au/power-automate-support",
-    },
   },
   {
     name: "Power BI",
     Icon: PowerBiIcon,
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
     description: "Reports and dashboards your people will actually open.",
-    support: {
-      name: "Power BI support",
-      href: "https://www.powerplatformexperts.com.au/power-bi-support",
-    },
   },
   {
     name: "Power Pages",
     Icon: PowerPagesIcon,
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+    href: "/services/microsoft-power-platform/power-pages",
     description: "Secure portals for customers, partners and suppliers.",
-    support: {
-      name: "Power Pages support",
-      href: "https://www.powerplatformexperts.com.au/power-pages-support",
-    },
   },
 ];
 
 const more = [
   {
     name: "Power Platform overview",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform",
-  },
-  {
-    name: "Power Platform assessment",
-    href: "https://www.powerplatformexperts.com.au/power-platform-assessment",
-  },
-  {
-    name: "Power Platform support",
-    href: "https://www.powerplatformexperts.com.au/power-platform-support",
+    href: "/services/microsoft-power-platform",
   },
   {
     name: "Microsoft Fabric",
-    href: "https://www.powerplatformexperts.com.au/microsoft-fabric",
+    href: "/microsoft-fabric",
   },
   {
     name: "SharePoint consulting and development",
-    href: "https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development",
+    href: "/sharepoint-consulting-and-development",
   },
   {
     name: "Power BI data integration",
-    href: "https://www.powerplatformexperts.com.au/power-bi-data-integration",
+    href: "/power-bi-data-integration",
   },
   {
     name: "Excel to Power BI migration",
-    href: "https://www.powerplatformexperts.com.au/excel-to-power-bi-migration",
+    href: "/excel-to-power-bi-migration",
   },
   { name: "Power Query", href: "/services/power-query" },
   { name: "Power Pivot", href: "/services/power-pivot" },

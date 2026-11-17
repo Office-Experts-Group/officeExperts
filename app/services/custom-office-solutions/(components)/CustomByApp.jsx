@@ -92,14 +92,20 @@ const apps = [
       "Power BI reports and dashboards",
       "SharePoint lists and Teams integration",
     ],
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform consulting",
   },
 ];
 
 // Small right chevron for the card links, coloured through currentColor
 const ChevronRight = () => (
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 16 16"
+    fill="none"
+    aria-hidden="true"
+  >
     <path
       d="M6 3l5 5-5 5"
       stroke="currentColor"

@@ -1021,7 +1021,7 @@ const PowerBIHealthcareBlogPost = () => (
             </ol>
             <p>
               If you’d like a hand, our{" "}
-              <A href="/services/microsoft-power-platform/microsoft-power-bi">
+              <A href="/services/microsoft-power-platform/power-bi">
                 Power BI consulting
               </A>{" "}
               team and <A href="/services/dashboards">dashboard development</A>{" "}
@@ -1097,7 +1097,7 @@ const PowerBIHealthcareBlogPost = () => (
               explaining reports, may also help non-technical users get answers
               faster. Availability and licensing vary, so test any AI feature on
               de-identified data and agree your governance rules first. Our{" "}
-              <A href="/services/microsoft-power-platform/ai-integrations">
+              <A href="/services/microsoft-power-platform/ai-with-power-platform">
                 AI integration work
               </A>{" "}
               covers how we approach that.
@@ -1142,7 +1142,7 @@ const PowerBIHealthcareBlogPost = () => (
                   Talk to our team
                 </a>
                 <Link
-                  href="/services/microsoft-power-platform/microsoft-power-bi"
+                  href="/services/microsoft-power-platform/power-bi"
                   className={styles.bandLink}
                 >
                   See our Power BI services <ArrowIcon />

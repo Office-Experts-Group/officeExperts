@@ -75,7 +75,7 @@ const EmailTriageSuite = () => {
             aria-label="Related automation services"
           >
             <a
-              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform"
+              href="/services/microsoft-power-platform"
               className={styles.link}
             >
               Power Platform services

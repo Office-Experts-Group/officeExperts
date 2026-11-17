@@ -105,7 +105,7 @@ const cloudApps = [
     tag: "SharePoint Framework",
     text: "Custom web parts and extensions that give modern SharePoint sites and pages the behaviour your business needs.",
     Icon: SharePointAddInIcon,
-    href: "https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development",
+    href: "/services/microsoft-power-platform/sharepoint-consulting-and-development",
     linkText: "SharePoint consulting",
   },
   {
@@ -121,7 +121,7 @@ const cloudApps = [
     tag: "Custom connectors · code components",
     text: "Custom connectors that link Power Apps and Power Automate to your own systems, and code components that extend Power Apps.",
     Icon: PowerPlatformAddInIcon,
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform services",
   },
   {

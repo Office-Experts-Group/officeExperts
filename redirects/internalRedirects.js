@@ -30,7 +30,7 @@ module.exports = [
   // /services/sql-server-and-access-integration, and add the NEW rows from Appendix A1.
   permanent(
     "/services/microsoft-office/services/by-business-solution/database-development-and-solutions",
-    "/services/by-business-solution/database-development-and-solutions",
+    "/services/database-development-and-solutions",
   ),
   permanent(
     "/services/office-and-sql-server-integration",

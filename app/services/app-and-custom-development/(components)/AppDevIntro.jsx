@@ -22,7 +22,7 @@ const problems = [
   {
     title: "Getting your business mobile and in the cloud",
     body: "We turn the processes you already run into a mobile app, allowing realtime connectivity between teams in the field.",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+    href: "/services/microsoft-power-platform/power-bi",
     linkText: "Explore Power Pages",
   },
 ];

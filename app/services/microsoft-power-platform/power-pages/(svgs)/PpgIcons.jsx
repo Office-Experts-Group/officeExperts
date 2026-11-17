@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgIcons.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgIcons.jsx
 // Small UI icons. Strokes use currentColor so each SCSS module sets the colour
 // (tokens used there: $accent, $white, $accent-on-dark).
 

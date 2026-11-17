@@ -20,7 +20,7 @@ const capabilities = [
         AI profiles your source data, suggests measures and relationships,
         drafts the DAX and Power Query steps and lays out first-draft report
         pages in Power BI or{" "}
-        <Link href="https://www.powerplatformexperts.com.au/microsoft-fabric">
+        <Link href="/services/microsoft-power-platform/microsoft-fabric">
           Microsoft Fabric
         </Link>
         . Our developers then check and finish the work, which shortens the

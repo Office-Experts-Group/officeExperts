@@ -909,7 +909,7 @@ export default function FileAttachmentsInPowerAppsPage() {
                   <h4 className={styles.h4}>Create the flow</h4>
                   <p>
                     In Power Automate, create a new{" "}
-                    <Link href="/services/microsoft-power-platform/microsoft-power-automate">
+                    <Link href="/services/microsoft-power-platform/power-automate">
                       Power Automate
                     </Link>{" "}
                     flow with these steps:
@@ -1181,7 +1181,7 @@ export default function FileAttachmentsInPowerAppsPage() {
                   Talk to our Power Platform team
                 </Link>
                 <Link
-                  href="/services/microsoft-power-platform/microsoft-power-apps"
+                  href="/services/microsoft-power-platform/power-apps"
                   className={styles.ctaLink}
                 >
                   See our Power Apps services <IconArrow />

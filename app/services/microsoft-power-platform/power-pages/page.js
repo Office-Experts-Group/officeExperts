@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/page.js
+// /app/services/microsoft-power-platform/power-pages/page.js
 
 import dynamic from "next/dynamic";
 import {
@@ -27,7 +27,7 @@ const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const PAGE_URL = `${SITE_URL}/services/microsoft-power-platform/microsoft-power-pages`;
+const PAGE_URL = `${SITE_URL}/services/microsoft-power-platform/power-pages`;
 const PAGE_TITLE = "Microsoft Power Pages Services | Office Experts";
 const PAGE_DESCRIPTION =
   "Build secure customer, supplier and partner portals with Microsoft Power Pages. Australian experts in Dataverse, Power BI and custom development. Get a quote.";

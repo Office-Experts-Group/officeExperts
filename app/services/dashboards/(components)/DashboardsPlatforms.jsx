@@ -6,7 +6,7 @@ import styles from "@/styles/dashboardsPlatforms.module.scss";
 const platforms = [
   {
     name: "Power BI",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
     linkText: "Power BI consulting",
   },
   {

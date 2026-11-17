@@ -47,7 +47,7 @@ const EPBM_SERVICES = [
     title: "Report and dashboard development",
     text: "We design clear, interactive Power BI dashboards that replace endless spreadsheet scrolling with charts, filters and drill-downs your team and stakeholders can actually use.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-bi",
+      href: "/services/microsoft-power-platform/power-bi",
       text: "Explore our Power BI services",
     },
   },
@@ -69,7 +69,7 @@ const EPBM_SERVICES = [
     title: "Ongoing support and optimisation",
     text: "As your business changes, so will your reports. We stay on hand for support, performance tuning and new dashboards, and can automate the manual steps around your reporting with Power Automate.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       text: "See Power Automate",
     },
   },

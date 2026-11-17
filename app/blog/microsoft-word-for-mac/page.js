@@ -115,7 +115,7 @@ const DIFFERENCES = [
     workaround: (
       <>
         Use AppleScript,{" "}
-        <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate">
+        <Link href="/services/microsoft-power-platform/power-automate">
           Power Automate
         </Link>
         , or run Windows virtually
@@ -329,7 +329,7 @@ const METHODS = [
     text: (
       <>
         Cloud services such as{" "}
-        <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate">
+        <Link href="/services/microsoft-power-platform/power-automate">
           Power Automate
         </Link>{" "}
         handle automation tasks that don’t require local VBA macros.

@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvIcons.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvIcons.jsx
 // Small UI icons. Colour comes from currentColor, so they follow the text colour.
 
 export function PbsvArrowIcon() {

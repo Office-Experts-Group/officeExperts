@@ -47,7 +47,7 @@ const services = [
     category: "Automation & Intelligence",
     description:
       "Power Automate workflows that replace the email chains and manual handoffs between teams. Power BI dashboards connected to departmental data sources for real-time reporting. Power Apps that give field staff or internal teams a proper interface instead of a shared spreadsheet. This is where the most significant efficiency gains are available to Canberra organisations right now.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
   },
   {

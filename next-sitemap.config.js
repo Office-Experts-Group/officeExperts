@@ -45,11 +45,11 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/microsoft-access/is-access-right-for-your-company",
   "/services/microsoft-access/upgrades-and-migration",
   // power platform
-  "/services/microsoft-power-platform",
-  "/services/microsoft-power-platform/microsoft-power-apps",
-  "/services/microsoft-power-platform/microsoft-power-automate",
-  "/services/microsoft-power-platform/microsoft-power-bi",
-  "/services/microsoft-power-platform/microsoft-power-pages",
+  // "/services/microsoft-power-platform",
+  // "/services/microsoft-power-platform/microsoft-power-apps",
+  // "/services/microsoft-power-platform/microsoft-power-automate",
+  // "/services/microsoft-power-platform/microsoft-power-bi",
+  // "/services/microsoft-power-platform/microsoft-power-pages",
   // powerpoint
   "/services/microsoft-powerpoint/automate-presentations-with-vba",
   "/services/microsoft-powerpoint/custom-powerpoint-templates-and-presentations",

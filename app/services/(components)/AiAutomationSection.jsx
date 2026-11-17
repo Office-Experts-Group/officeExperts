@@ -24,7 +24,7 @@ const items = [
   },
   {
     name: "AI integrations",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+    href: "/services/microsoft-power-platform/ai-with-power-platform",
     description: "Add AI to your Power Apps and Power Automate solutions.",
   },
   {
@@ -34,7 +34,7 @@ const items = [
       "Replace repetitive manual steps with workflows that run on their own.",
     also: {
       name: "Power Automate",
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
     },
   },
   {

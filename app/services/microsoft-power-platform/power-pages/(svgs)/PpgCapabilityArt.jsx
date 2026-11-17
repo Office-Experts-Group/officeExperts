@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgCapabilityArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgCapabilityArt.jsx
 // Spot illustrations for the intro capability strip (white tiles).
 // Hex values and tokens: #046999 $accent, #e8f4fa $accent-light,
 // #6fc3e8 $accent-on-dark, #034e72 $accent-dark, #d4d6d9 $line-strong,

@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgDataArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgDataArt.jsx
 // Spot illustrations for the data integration bento. Each is drawn for the
 // tile it sits on: Direct (accent tile), Virtual (dark tile),
 // Automate (white tile), Permissions (dark mid tile).

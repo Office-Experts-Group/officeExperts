@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/page.js
+// /app/services/microsoft-power-platform/power-bi/page.js
 import dynamic from "next/dynamic";
 
 import PbsvHero from "./(components)/PbsvHero";
@@ -21,7 +21,7 @@ import {
 } from "@/utils/schemaGenerators";
 
 const SITE_URL = "https://www.officeexperts.com.au";
-const PAGE_URL = `${SITE_URL}/services/microsoft-power-platform/microsoft-power-bi`;
+const PAGE_URL = `${SITE_URL}/services/microsoft-power-platform/power-bi`;
 const PAGE_NAME = "Microsoft Power BI Services";
 const PAGE_TITLE = "Microsoft Power BI Services | Office Experts";
 const PAGE_DESCRIPTION =

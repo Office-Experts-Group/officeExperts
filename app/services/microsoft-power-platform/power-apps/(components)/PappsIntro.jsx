@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsIntro.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsIntro.jsx
 import Link from "next/link";
 
 import PappsIntroSvg from "../(svgs)/PappsIntroSvg";
@@ -59,7 +59,7 @@ const PappsIntro = () => {
               Simple screens mean fewer mistakes, and quick access to current
               records helps your team make timely decisions. When a step needs
               to happen automatically, we pair the app with{" "}
-              <Link href="/services/microsoft-power-platform/microsoft-power-automate">
+              <Link href="/services/microsoft-power-platform/power-automate">
                 Power Automate
               </Link>{" "}
               or wider{" "}

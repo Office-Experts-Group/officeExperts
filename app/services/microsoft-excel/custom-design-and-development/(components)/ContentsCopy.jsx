@@ -78,7 +78,7 @@ const ContentsCopy = () => {
               <p>Microsoft Access</p>
             </div>
           </Link>
-          <Link href="/services/microsoft-power-bi" onClick={handleLinkClick}>
+          <Link href="/services/power-bi" onClick={handleLinkClick}>
             <div className={styles.contentLink}>
               <p>Power BI</p>
             </div>

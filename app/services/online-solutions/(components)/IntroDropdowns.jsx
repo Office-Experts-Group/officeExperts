@@ -16,7 +16,7 @@ const services = [
     label: "Power Apps & Power Automate",
     desc: "Stop rebuilding the same manual process every week. We turn repetitive tasks into automated workflows and build custom apps without the price tag of enterprise software.",
     tag: "Automation",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
   },
   {
     id: "03",
@@ -37,7 +37,7 @@ const services = [
     label: "Reporting & Data Automation",
     desc: "If critical decisions are still being made from a spreadsheet, there's a better way. We build live dashboards and cloud-based reporting with Power BI, so you always know what's actually happening.",
     tag: "Intelligence",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
   },
 ];
 

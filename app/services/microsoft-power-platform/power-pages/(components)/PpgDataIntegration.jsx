@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgDataIntegration.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgDataIntegration.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgDataIntegration.module.scss";
@@ -49,7 +49,7 @@ const PpgDataIntegration = () => {
             <p>
               You can also bring in data from other systems using virtual tables
               or{" "}
-              <Link href="/services/microsoft-power-platform/microsoft-power-automate">
+              <Link href="/services/microsoft-power-platform/power-automate">
                 Power Automate integrations
               </Link>
               .

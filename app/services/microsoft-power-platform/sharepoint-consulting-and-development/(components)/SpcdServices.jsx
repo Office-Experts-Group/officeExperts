@@ -64,7 +64,7 @@ export const SPCD_SERVICES = [
     ],
     note: "A well-designed intranet gets used. If staff don’t use it, it doesn’t matter how well it’s built.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-bi",
+      href: "/services/microsoft-power-platform/power-bi",
       label: "Power BI dashboards",
     },
   },
@@ -84,7 +84,7 @@ export const SPCD_SERVICES = [
     ],
     note: "Custom work scoped well upfront avoids the cost of rebuilding an under-specified first attempt.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-apps",
+      href: "/services/microsoft-power-platform/power-apps",
       label: "Power Apps in SharePoint",
     },
   },

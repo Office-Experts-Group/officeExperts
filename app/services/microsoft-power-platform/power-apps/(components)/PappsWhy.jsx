@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsWhy.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsWhy.jsx
 import Link from "next/link";
 
 import {
@@ -57,7 +57,7 @@ const PAPPS_NEIGHBOURS = [
     text: "A fully custom application",
   },
   {
-    href: "/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     text: "Automated flows with Power Automate",
   },
   { href: "/services/copilot", text: "Copilot and AI assistants" },

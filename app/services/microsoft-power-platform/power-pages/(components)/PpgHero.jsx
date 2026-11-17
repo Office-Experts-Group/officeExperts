@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgHero.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgHero.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgHero.module.scss";

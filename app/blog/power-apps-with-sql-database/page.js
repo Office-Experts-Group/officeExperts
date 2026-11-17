@@ -38,8 +38,7 @@ import {
 // Keep these in sync with layout.js
 const SITE_URL = "https://www.officeexperts.com.au";
 const PAGE_URL = `${SITE_URL}/blog/power-apps-with-sql-database`;
-const PAGE_TITLE =
-  "Power Apps and SQL Database: Get Started | Office Experts";
+const PAGE_TITLE = "Power Apps and SQL Database: Get Started | Office Experts";
 const PAGE_DESCRIPTION =
   "Connect Power Apps to a Microsoft SQL database: set up Azure SQL, build linked tables, use stored procedures and Power Automate for an inventory app.";
 
@@ -432,7 +431,7 @@ const helpLinks = [
     label: "SQL Server and Access integration",
   },
   {
-    href: "/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
     label: "Power Apps development",
   },
   {

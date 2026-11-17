@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(components)/PbsvFreshness.jsx
+// /app/services/microsoft-power-platform/power-bi/(components)/PbsvFreshness.jsx
 import Link from "next/link";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import styles from "@/styles/pbsvFreshness.module.scss";

@@ -36,7 +36,7 @@ const pillars = [
       },
       {
         name: "Power Platform support",
-        href: "https://www.powerplatformexperts.com.au/power-platform-support",
+        href: "/microsoft-support-and-training-australia",
       },
     ],
   },

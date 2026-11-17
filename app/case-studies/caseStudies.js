@@ -115,7 +115,7 @@ export const caseStudies = [
       },
       {
         label: "AI-powered workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+        href: "/services/microsoft-power-platform/ai-with-power-platform",
       },
     ],
   },
@@ -200,7 +200,7 @@ export const caseStudies = [
     services: [
       {
         label: "AI-powered workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+        href: "/services/microsoft-power-platform/ai-with-power-platform",
       },
       {
         label: "Azure Cloud Solutions",
@@ -534,7 +534,7 @@ export const caseStudies = [
     services: [
       {
         label: "Power Apps and Power Automate solutions",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        href: "/services/microsoft-power-platform/power-apps",
       },
       {
         label: "Business process automation",
@@ -621,11 +621,11 @@ export const caseStudies = [
     services: [
       {
         label: "Power BI Row-Level Security",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+        href: "/services/microsoft-power-platform/power-bi",
       },
       {
-        label: "Power BI reporting services",
-        href: "https://www.powerplatformexperts.com.au/power-bi-support",
+        label: "Data Integration with Power BI",
+        href: "/services/microsoft-power-platform/power-bi-data-integration",
       },
     ],
   },
@@ -700,7 +700,7 @@ export const caseStudies = [
     services: [
       {
         label: "Microsoft Power Automate",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        href: "/services/microsoft-power-platform/power-automate",
       },
       {
         label: "Business process automation",
@@ -1051,7 +1051,7 @@ export const caseStudies = [
     services: [
       {
         label: "Microsoft Power Automate",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        href: "/services/microsoft-power-platform/power-automate",
       },
       {
         label: "Business process automation",
@@ -1635,11 +1635,11 @@ export const caseStudies = [
     services: [
       {
         label: "AI-powered workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+        href: "/services/microsoft-power-platform/ai-with-power-platform",
       },
       {
         label: "Power BI reporting services",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+        href: "/services/microsoft-power-platform/power-bi",
       },
     ],
   },
@@ -1793,7 +1793,7 @@ export const caseStudies = [
       },
       {
         label: "Power BI reporting services",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+        href: "/services/microsoft-power-platform/power-bi",
       },
     ],
   },
@@ -2112,11 +2112,11 @@ export const caseStudies = [
     services: [
       {
         label: "AI-powered workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+        href: "/services/microsoft-power-platform/ai-with-power-platform",
       },
       {
         label: "Power Apps and Power Automate solutions",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        href: "/services/microsoft-power-platform/power-apps",
       },
     ],
   },
@@ -2283,11 +2283,11 @@ export const caseStudies = [
     services: [
       {
         label: "Power Automate workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        href: "/services/microsoft-power-platform/power-automate",
       },
       {
         label: "Power BI reporting services",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+        href: "/services/microsoft-power-platform/power-bi",
       },
     ],
   },
@@ -2532,7 +2532,7 @@ export const caseStudies = [
     services: [
       {
         label: "AI-powered workflows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations",
+        href: "/services/microsoft-power-platform/ai-with-power-platform",
       },
       {
         label: "Business process automation",
@@ -2907,7 +2907,7 @@ export const siteMeta = {
   },
   powerplatform: {
     name: "Power Platform Experts",
-    domain: "https://www.powerplatformexperts.com.au",
+    domain: "/services/microsoft-power-platform",
   },
   access: {
     name: "Access Experts",

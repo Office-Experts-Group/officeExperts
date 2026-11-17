@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsAppsArt.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsAppsArt.jsx
 // Five app scenes for the tabbed "apps we build" section, plus five tab icons.
 // Scenes are drawn straight onto the $accent-light panel from the module.
 // Hex values and the tokens they match:

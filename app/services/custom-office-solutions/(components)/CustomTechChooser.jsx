@@ -13,7 +13,7 @@ const tools = [
   { name: "VBA macros", href: "/services/vba-macro-development" },
   {
     name: "Office Scripts + Power Automate",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
   },
   {
     name: "Office Add-ins (JavaScript)",
@@ -64,7 +64,13 @@ const rows = [
 
 // Small right chevron for the footer link, coloured through currentColor
 const ChevronRight = () => (
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 16 16"
+    fill="none"
+    aria-hidden="true"
+  >
     <path
       d="M6 3l5 5-5 5"
       stroke="currentColor"

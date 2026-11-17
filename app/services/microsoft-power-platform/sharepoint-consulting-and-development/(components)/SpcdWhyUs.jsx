@@ -13,7 +13,7 @@ const SPCD_DIFFERENTIATORS = [
     heading: "We understand the connections.",
     body: "SharePoint doesn’t exist in isolation, and neither does our work on it. It connects to Teams, Power Automate, Power Apps, Power BI and Azure, and decisions made in SharePoint affect how those tools behave. With developers working across the whole Microsoft suite, we have the connections covered.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       label: "Power Automate services",
     },
   },
@@ -43,15 +43,15 @@ const SPCD_DIFFERENTIATORS = [
 const SPCD_RELATED = [
   {
     label: "Power Apps embedded in SharePoint",
-    href: "/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
   },
   {
     label: "Power BI dashboards in SharePoint",
-    href: "/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
   },
   {
     label: "Power Automate workflow automation",
-    href: "/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
   },
   {
     label: "Business process automation",

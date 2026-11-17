@@ -10,10 +10,8 @@ const LINKS = {
   excelVba: "https://www.excelexperts.com.au",
   wordContentControls: "/services/microsoft-word",
   access: "https://www.accessexperts.com.au",
-  powerApps:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
-  powerAutomate:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+  powerApps: "/services/microsoft-power-platform/power-apps",
+  powerAutomate: "/services/microsoft-power-platform/power-automate",
 };
 
 // Category filtering has been removed — the list is short enough that

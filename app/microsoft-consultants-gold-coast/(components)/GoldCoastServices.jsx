@@ -64,7 +64,7 @@ const groups = [
         description:
           "Power Apps for forms, inspections and bookings that work on a phone, Power Automate for approvals and hand-offs, and Power BI for reporting that people actually open.",
         chips: ["Power Apps", "Power Automate", "Power BI"],
-        href: "https://www.powerplatformexperts.com.au",
+        href: "/services/microsoft-power-platform",
         linkText: "Power Platform Experts",
       },
       {

@@ -44,7 +44,7 @@ const services = [
     category: "Automation & Intelligence",
     description:
       "Power BI dashboards connected to your live data, Power Automate workflows that eliminate the manual handoffs your team carries every day, and Power Apps that replace spreadsheet-based processes with proper applications. This is where the most meaningful operational gains are found.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform",
   },
   {

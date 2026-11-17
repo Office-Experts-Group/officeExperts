@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgVisualisation.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgVisualisation.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgVisualisation.module.scss";

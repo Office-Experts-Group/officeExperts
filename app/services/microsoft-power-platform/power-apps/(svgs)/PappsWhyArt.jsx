@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsWhyArt.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsWhyArt.jsx
 // Spot illustrations for the three ways to work with us. Decorative, one per
 // card, drawn for the card colour (white, accent, dark).
 // Hex values and the tokens they match:

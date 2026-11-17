@@ -36,7 +36,7 @@ const methods = [
   {
     title: "Power Automate and connectors",
     text: "Low-code flows that move data between your apps and Microsoft 365 on a schedule or when something happens, using your existing licences where possible.",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     linkText: "Power Automate services",
   },
   {

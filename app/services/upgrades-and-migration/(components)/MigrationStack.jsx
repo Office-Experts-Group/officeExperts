@@ -32,7 +32,7 @@ const pillars = [
       "Power Pages - external-facing portals for customers and partners",
     ],
     link: {
-      href: "https://www.powerplatformexperts.com.au",
+      href: "/services/microsoft-power-platform",
       label: "Power Platform services",
     },
   },

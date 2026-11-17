@@ -56,7 +56,7 @@ const services = [
     category: "Automation & Insight",
     description:
       "Power Apps for the forms and tools your team actually needs, Power Automate for the approvals and hand-offs that currently live in email, and Power BI to show how it is all going. Together they pull scattered data into one place the whole business can use from any device.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
   },
   {

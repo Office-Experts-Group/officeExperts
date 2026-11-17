@@ -28,7 +28,7 @@ const services = [
     description:
       "Power Apps for forms and checklists that suit a phone or tablet (including offline capture for sites with patchy coverage), Power Automate for approvals and hand-offs, and Power BI for reporting leaders actually read.",
     chips: ["Power Apps", "Power Automate", "Power BI", "Dataverse"],
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
   },
   {

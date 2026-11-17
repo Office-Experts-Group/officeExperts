@@ -69,7 +69,7 @@ const MfabSilos = () => {
               Microsoft Fabric rethinks how organisations work with data. At its
               heart is OneLake, one store that removes the need for multiple
               storage systems and for moving data between them. Native{" "}
-              <Link href="/services/microsoft-power-platform/microsoft-power-bi">
+              <Link href="/services/microsoft-power-platform/power-bi">
                 Power BI
               </Link>{" "}
               integration means your reports read straight from that data, while

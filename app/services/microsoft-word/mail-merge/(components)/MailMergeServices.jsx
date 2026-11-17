@@ -130,13 +130,13 @@ const services = [
     capabilities: [
       <>
         Templates stored centrally in{" "}
-        <Link href="https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development">
+        <Link href="/services/microsoft-power-platform/sharepoint-consulting-and-development">
           SharePoint
         </Link>{" "}
         so nobody merges from an old copy
       </>,
       <>
-        <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate">
+        <Link href="/services/microsoft-power-platform/power-automate">
           Power Automate
         </Link>{" "}
         flows that create documents when a form or list item is submitted

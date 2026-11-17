@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(components)/PbsvHero.jsx
+// /app/services/microsoft-power-platform/power-bi/(components)/PbsvHero.jsx
 import styles from "@/styles/pbsvHero.module.scss";
 import PbsvHeroSvg from "../(svgs)/PbsvHeroSvg";
 import { PbsvArrowIcon, PbsvCheckIcon } from "../(svgs)/PbsvIcons";

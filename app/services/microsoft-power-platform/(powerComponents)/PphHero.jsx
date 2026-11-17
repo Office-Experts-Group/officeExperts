@@ -43,13 +43,13 @@ const PPH_HERO_TABS = ["Build apps", "Automate work", "See results"];
 // Frame 1 links: apps and portals
 const PPH_BUILD_LINKS = [
   {
-    href: `${BASE}/microsoft-power-apps`,
+    href: `${BASE}/power-apps`,
     name: "Power Apps",
     text: "Apps for the office, the site and the phone",
     Icon: PphAppsIcon,
   },
   {
-    href: `${BASE}/microsoft-power-pages`,
+    href: `${BASE}/power-pages`,
     name: "Power Pages",
     text: "Secure websites for customers and partners",
     Icon: PphPagesIcon,
@@ -65,7 +65,7 @@ const PPH_BUILD_LINKS = [
 // Frame 2 links: automation and AI
 const PPH_AUTOMATE_LINKS = [
   {
-    href: `${BASE}/microsoft-power-automate`,
+    href: `${BASE}/power-automate`,
     name: "Power Automate",
     text: "Flows, approvals and documents that run themselves",
     Icon: PphFlowIcon,
@@ -87,7 +87,7 @@ const PPH_AUTOMATE_LINKS = [
 // Frame 3 links: reporting and support
 const PPH_RESULTS_LINKS = [
   {
-    href: `${BASE}/microsoft-power-bi`,
+    href: `${BASE}/power-bi`,
     name: "Power BI",
     text: "Reports and dashboards your team can check any time",
     Icon: PphReportIcon,
@@ -105,7 +105,7 @@ const PPH_RESULTS_LINKS = [
     Icon: PphMergeIcon,
   },
   {
-    href: `${BASE}/power-platform-support`,
+    href: `/microsoft-support-and-training-australia`,
     name: "Power Platform support",
     text: "Fixes and changes to what you already have",
     Icon: PphSupportIcon,

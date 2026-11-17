@@ -38,8 +38,8 @@ const AzureSharePoint = () => {
           <p className={styles.intro}>
             SharePoint comes with most Microsoft 365 business plans, yet many
             organisations only use it as a shared drive. Set up properly, it
-            captures who changed a document, which version is current and what it
-            relates to, then automates the business processes around it.
+            captures who changed a document, which version is current and what
+            it relates to, then automates the business processes around it.
           </p>
 
           <dl className={styles.capabilities}>
@@ -52,14 +52,14 @@ const AzureSharePoint = () => {
           </dl>
 
           <p className={styles.closing}>
-            Still running files from a local server? We can move your business to
-            Microsoft 365 for a truly mobile office, with the cost depending on
-            your requirements. Our{" "}
-            <Link href="https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development">
+            Still running files from a local server? We can move your business
+            to Microsoft 365 for a truly mobile office, with the cost depending
+            on your requirements. Our{" "}
+            <Link href="/services/microsoft-power-platform/sharepoint-consulting-and-development">
               SharePoint consulting and development
             </Link>{" "}
             team and{" "}
-            <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps">
+            <Link href="/services/microsoft-power-platform/power-apps">
               Power Apps developers
             </Link>{" "}
             handle the build.

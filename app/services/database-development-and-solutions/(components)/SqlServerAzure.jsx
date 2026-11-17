@@ -118,7 +118,7 @@ const SqlServerAzure = () => {
               <p>
                 Once the data lives in SQL Server it can feed{" "}
                 <Link
-                  href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi"
+                  href="/services/microsoft-power-platform/power-bi"
                   className={styles.link}
                 >
                   Power BI reports

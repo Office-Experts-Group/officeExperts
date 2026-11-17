@@ -20,14 +20,14 @@ const PPH_NEEDS = [
     id: "app",
     want: "Replace spreadsheets and email chains with a proper business app",
     tool: "Power Apps development",
-    href: "/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
     Art: PphNeedAppArt,
   },
   {
     id: "bi",
     want: "See my sales, finance or operations figures clearly in one dashboard",
     tool: "Power BI consulting",
-    href: "/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
     Art: PphNeedBiArt,
   },
   {
@@ -41,21 +41,21 @@ const PPH_NEEDS = [
     id: "connect",
     want: "Stop re-keying data and chasing approvals between systems",
     tool: "Power Automate workflows",
-    href: "/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     Art: PphNeedConnectArt,
   },
   {
     id: "portal",
     want: "Give customers or partners a secure place to sign in and self-serve",
     tool: "Power Pages portals",
-    href: "/services/microsoft-power-platform/microsoft-power-pages",
+    href: "/services/microsoft-power-platform/power-pages",
     Art: PphNeedPortalArt,
   },
   {
     id: "ai",
     want: "Add AI to a business process without losing control of our data",
     tool: "AI with Power Platform",
-    href: "/services/microsoft-power-platform/ai-integrations",
+    href: "/services/microsoft-power-platform/ai-with-power-platform",
     Art: PphNeedAiArt,
   },
 ];
@@ -108,7 +108,7 @@ const PphNeeds = () => (
 
       <p className={styles.note}>
         Already have a solution that needs attention? Our{" "}
-        <Link href="/services/microsoft-power-platform/power-platform-support">
+        <Link href="/microsoft-support-and-training-australia">
           Power Platform support
         </Link>{" "}
         team can fix, extend or take over what you have, or{" "}

@@ -10,7 +10,7 @@ export const metadata = {
     title: "Microsoft Power Platform Services | Office Experts Group",
     description:
       "We specialise in applications that efficiently perform daily tasks such as managing customer information, automating approvals and sending notifications.",
-    url: "https://www.powerplatformexperts.com.au",
+    url: "/services/microsoft-power-platform",
     siteName: "Office Experts Group",
     images: [
       {

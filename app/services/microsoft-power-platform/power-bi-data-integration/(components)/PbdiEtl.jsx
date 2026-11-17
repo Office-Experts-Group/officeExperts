@@ -29,7 +29,7 @@ const PBDI_ETL_STEPS = [
         between your tables with{" "}
         <Link href="/services/power-pivot">Power Pivot data modelling</Link> and
         set up scheduled refresh, with{" "}
-        <Link href="/services/microsoft-power-platform/microsoft-power-automate">
+        <Link href="/services/microsoft-power-platform/power-automate">
           Power Automate
         </Link>{" "}
         handling what happens next.

@@ -1181,7 +1181,7 @@ const PowerBIFinancialServicesBlogPost = () => {
                   Talk to our Power BI team
                 </a>
                 <Link
-                  href="/services/microsoft-power-platform/microsoft-power-bi"
+                  href="/services/microsoft-power-platform/power-bi"
                   className={styles.ctaLink}
                 >
                   See our Power BI services <IconArrow />

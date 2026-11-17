@@ -34,7 +34,7 @@ const cards = [
     },
     Visual: PowerAppsVisual,
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+      href: "/services/microsoft-power-platform/power-apps",
       text: "Power Apps services",
     },
   },
@@ -88,7 +88,7 @@ const cards = [
     },
     Visual: LogicAppsVisual,
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       text: "Power Automate and Logic Apps",
     },
   },

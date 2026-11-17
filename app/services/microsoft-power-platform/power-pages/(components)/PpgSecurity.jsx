@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgSecurity.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgSecurity.jsx
 
 import styles from "@/styles/ppgSecurity.module.scss";
 import PpgSecuritySvg from "../(svgs)/PpgSecuritySvg";

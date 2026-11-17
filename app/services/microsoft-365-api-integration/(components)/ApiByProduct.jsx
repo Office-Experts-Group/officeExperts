@@ -82,7 +82,7 @@ const products = [
       "Metadata, lists and permissions managed from your apps",
       "Field apps that sync back to SharePoint",
     ],
-    href: "https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development",
+    href: "/services/microsoft-power-platform/sharepoint-consulting-and-development",
     linkText: "SharePoint development",
   },
   {
@@ -96,7 +96,7 @@ const products = [
       "Query Power BI semantic models from any app",
       "Power Pages portals for customers and suppliers",
     ],
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     linkText: "Power Automate solutions",
   },
   {

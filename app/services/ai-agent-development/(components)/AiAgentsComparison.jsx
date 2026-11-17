@@ -130,21 +130,21 @@ const AiAgentsComparison = () => {
         <p className={styles.footnote}>
           Our Microsoft-native agents build on{" "}
           <a
-            href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate"
+            href="/services/microsoft-power-platform/power-automate"
             className={styles.link}
           >
             Power Automate
           </a>
           ,{" "}
           <a
-            href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps"
+            href="/services/microsoft-power-platform/power-apps"
             className={styles.link}
           >
             Power Apps
           </a>{" "}
           and{" "}
           <a
-            href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations"
+            href="/services/microsoft-power-platform/ai-with-power-platform"
             className={styles.link}
           >
             Power Platform AI integrations

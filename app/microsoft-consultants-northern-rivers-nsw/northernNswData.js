@@ -16,7 +16,7 @@
 const EXCEL = "https://www.excelexperts.com.au";
 const WORD = "/services/microsoft-word";
 const ACCESS = "https://www.accessexperts.com.au";
-const POWER = "https://www.powerplatformexperts.com.au";
+const POWER = "/services/microsoft-power-platform";
 
 // ── Intro: how we work in the region ────────────────────────────────────────
 export const ways = [
@@ -180,15 +180,15 @@ export const platforms = [
     links: [
       {
         label: "Power Apps development",
-        href: `${POWER}/services/microsoft-power-platform/microsoft-power-apps`,
+        href: `/services/microsoft-power-platform/power-apps`,
       },
       {
         label: "Power Automate consulting",
-        href: `${POWER}/services/microsoft-power-platform/microsoft-power-automate`,
+        href: `/services/microsoft-power-platform/power-automate`,
       },
       {
         label: "Power BI consulting",
-        href: `${POWER}/services/microsoft-power-platform/microsoft-power-bi`,
+        href: `/services/microsoft-power-platform/power-bi`,
       },
     ],
   },
@@ -216,7 +216,7 @@ export const platforms = [
     links: [
       {
         label: "SharePoint consulting",
-        href: `${POWER}/sharepoint-consulting-and-development`,
+        href: `/services/microsoft-power-platform/sharepoint-consulting-and-development`,
       },
       {
         label: "Cloud backup with OneDrive",

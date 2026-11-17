@@ -31,7 +31,7 @@ const apps = [
     color: "#742774",
     description:
       "Power Apps, Power Pages and Power Virtual Agents sit at the heart of the Power Platform. They enable custom applications, external portals and intelligent chatbots built directly on your Microsoft 365 data. This means you can rapidly digitise processes, replace spreadsheets or legacy tools and create tailored business solutions without the cost or delays of traditional development cycles, all while maintaining full control over your data.",
-    link: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform",
+    link: "/services/microsoft-power-platform",
     linkLabel: "Explore Power Platform",
   },
   {
@@ -40,7 +40,7 @@ const apps = [
     color: "#0066FF",
     description:
       "Eliminate repetitive manual tasks by automating workflows across your entire Microsoft ecosystem and beyond. From approval processes and data entry to complex multi-system integrations, Power Automate handles it. Whether you are connecting SharePoint, Outlook, third-party platforms or legacy systems, it ensures your processes run consistently in the background, freeing up your team to focus on higher value work instead of routine administration.",
-    link: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+    link: "/services/microsoft-power-platform/power-automate",
     linkLabel: "Explore Power Automate",
   },
   {
@@ -68,7 +68,7 @@ const apps = [
     textColor: "#1a1a1a",
     description:
       "Transform your business data into real-time dashboards, interactive reports and predictive analytics with Power BI. Connect to virtually any data source and give your leadership team the visibility to make faster, better decisions. By consolidating data from across your organisation into a single source of truth, Power BI enables deeper insights, clearer reporting and the ability to identify trends, risks and opportunities as they happen.",
-    link: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+    link: "/services/microsoft-power-platform/power-bi",
     linkLabel: "Explore Power BI",
   },
   {

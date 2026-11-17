@@ -43,7 +43,7 @@ const apps = [
       "Copilot across Power BI, Power Apps, and Power Automate dramatically accelerates development and reduces build time more then any legacy application could. Teams can generate workflows, build dashboards, create applications, and connect data sources using conversational prompts instead of traditional coding methods. Long hours of coding and debugging are replaced now with a few easy prompts and a few clicks.",
     highlight:
       "Letting Copilot loose on your data without the right preparation is like putting a bull in a China shop. With great power comes great responsibility. Our Power Platform team ensure that Copilot is used in a way that is both effective and safe.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform experts",
   },
   {

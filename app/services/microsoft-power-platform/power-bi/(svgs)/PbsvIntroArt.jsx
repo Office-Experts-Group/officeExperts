@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvIntroArt.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvIntroArt.jsx
 // Spot illustrations for the four intro cards (light cards).
 // Hex values and the tokens they match:
 //   #ffffff $white · #e8f4fa $accent-light · #046999 $accent · #034e72 $accent-dark

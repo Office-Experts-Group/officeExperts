@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsSigns.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsSigns.jsx
 import {
   PappsSpreadsheetArt,
   PappsPaperArt,

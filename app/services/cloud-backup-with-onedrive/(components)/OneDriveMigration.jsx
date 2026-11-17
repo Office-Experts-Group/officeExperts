@@ -39,7 +39,7 @@ const destinations = [
       <>
         Client folders, projects, templates and policies that outlive any one
         staff member. We design these with our{" "}
-        <Link href="https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development">
+        <Link href="/services/microsoft-power-platform/sharepoint-consulting-and-development">
           SharePoint consulting
         </Link>{" "}
         team so the structure still makes sense in five years.
@@ -86,11 +86,11 @@ const OneDriveMigration = () => {
             <div className={styles.body}>
               <p>
                 Plenty of businesses still run a file server in the comms
-                cupboard, or a Dropbox account someone set up years ago. We
-                move it all into Microsoft 365 using Microsoft&rsquo;s Migration
+                cupboard, or a Dropbox account someone set up years ago. We move
+                it all into Microsoft 365 using Microsoft&rsquo;s Migration
                 Manager, which now handles file shares, Google Drive, Dropbox,
-                Box and Egnyte. When version history and complex sharing need
-                to come across intact, we use specialist tools instead.
+                Box and Egnyte. When version history and complex sharing need to
+                come across intact, we use specialist tools instead.
               </p>
               <p>
                 Migration is one part of our wider{" "}

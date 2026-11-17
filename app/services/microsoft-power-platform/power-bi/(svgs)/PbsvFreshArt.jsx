@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvFreshArt.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvFreshArt.jsx
 // Row icons for the "how fresh does your data need to be" table (light section).
 // Hex values and the tokens they match:
 //   #ffffff $white · #e8f4fa $accent-light · #046999 $accent · #034e72 $accent-dark

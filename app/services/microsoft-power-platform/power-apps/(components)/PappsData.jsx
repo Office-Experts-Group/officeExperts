@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsData.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsData.jsx
 import Link from "next/link";
 
 import PappsDataSvg from "../(svgs)/PappsDataSvg";
@@ -14,7 +14,7 @@ const PAPPS_DATA_POINTS = [
 
 const PAPPS_DATA_LINKS = [
   {
-    href: "/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
     text: "Report on the same data with Power BI",
   },
   {

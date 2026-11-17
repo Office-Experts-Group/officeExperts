@@ -1148,7 +1148,7 @@ const PowerAppsPDFBlogPost = () => {
                       Talk to our team
                     </a>
                     <Link
-                      href="/services/microsoft-power-platform/microsoft-power-apps"
+                      href="/services/microsoft-power-platform/power-apps"
                       className={styles.ctaLink}
                     >
                       Power Apps services <IconArrow />

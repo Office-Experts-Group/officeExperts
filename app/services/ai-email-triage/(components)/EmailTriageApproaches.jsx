@@ -50,7 +50,7 @@ const approaches = [
       "Licensed through Power Automate rather than a Copilot licence for every user",
     ],
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       label: "Power Automate and AI Builder consulting",
       external: true,
     },

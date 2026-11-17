@@ -39,11 +39,11 @@ const areas = [
       },
       {
         label: "Excel to Power BI migration",
-        href: "https://www.powerplatformexperts.com.au/excel-to-power-bi-migration",
+        href: "/services/microsoft-power-platform/excel-to-power-bi-migration",
       },
       {
         label: "Microsoft Fabric",
-        href: "https://www.powerplatformexperts.com.au/microsoft-fabric",
+        href: "/services/microsoft-power-platform/microsoft-fabric",
       },
     ],
   },
@@ -61,7 +61,7 @@ const areas = [
       },
       {
         label: "Power Apps",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        href: "/services/microsoft-power-platform/power-apps",
       },
     ],
   },
@@ -75,11 +75,11 @@ const areas = [
       },
       {
         label: "Power Automate",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        href: "/services/microsoft-power-platform/power-automate",
       },
       {
         label: "SharePoint",
-        href: "https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development",
+        href: "/services/microsoft-power-platform/sharepoint-consulting-and-development",
       },
     ],
   },
@@ -90,7 +90,7 @@ const areas = [
       { label: "AI email triage", href: "/services/ai-email-triage" },
       {
         label: "Power Pages",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages",
+        href: "/services/microsoft-power-platform/power-pages",
       },
       {
         label: "Online solutions",

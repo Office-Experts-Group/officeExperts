@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsIcons.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsIcons.jsx
 // Small UI icons for the Power Apps page. All use currentColor so the
 // parent module sets the colour.
 

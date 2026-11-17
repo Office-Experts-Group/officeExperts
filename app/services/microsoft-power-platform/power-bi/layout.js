@@ -1,7 +1,7 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/layout.js
+// /app/services/microsoft-power-platform/power-bi/layout.js
 
 const PAGE_URL =
-  "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-bi";
+  "https://www.officeexperts.com.au/services/microsoft-power-platform/power-bi";
 const PAGE_TITLE = "Microsoft Power BI Services | Office Experts";
 const PAGE_DESCRIPTION =
   "Power BI consultants across Australia. Custom dashboards, data modelling, security and training, with fixed quotes or hourly rates and support after launch.";

@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsHeroSvg.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsHeroSvg.jsx
 // Animated hero illustration: a paper form becomes a phone app, the data lands
 // in a shared list, a job card shows on a tablet and an approval card appears.
 // Drawn straight onto the hero background (no panel).

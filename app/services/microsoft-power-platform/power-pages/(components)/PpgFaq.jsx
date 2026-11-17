@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgFaq.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgFaq.jsx
 
 import styles from "@/styles/ppgFaq.module.scss";
 import { PlusIcon } from "../(svgs)/PpgIcons";

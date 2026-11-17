@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvProcessArt.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvProcessArt.jsx
 // Spot illustrations for the five process stages (dark cards, $dark-surface).
 // Hex values and the tokens they match:
 //   #223647 (raised surface on $dark-surface) · #33475b (line on dark)

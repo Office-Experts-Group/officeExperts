@@ -1234,7 +1234,7 @@ export default function ExportToPdfInPowerAppsPage() {
                   </a>
                   <Link
                     className={styles.ctaLink}
-                    href="/services/microsoft-power-platform/microsoft-power-apps"
+                    href="/services/microsoft-power-platform/power-apps"
                   >
                     Power Apps services <IconArrow />
                   </Link>

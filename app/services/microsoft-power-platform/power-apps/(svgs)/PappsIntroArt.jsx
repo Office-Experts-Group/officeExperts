@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsIntroArt.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsIntroArt.jsx
 // Spot illustrations for the four intro outcomes. Decorative, light palette.
 // Hex values and the tokens they match:
 //   #046999 $accent, #e8f4fa $accent-light, #0d1b2a $text-primary,

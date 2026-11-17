@@ -31,7 +31,7 @@ const services = [
     description:
       "Power Apps for job sheets and site checklists that work on a phone, Power Automate for approvals and notifications that no longer depend on someone remembering, and Power BI to show how it is all tracking. A strong fit for teams who are rarely all in one place.",
     chips: ["Power Apps", "Power Automate", "Power BI"],
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
   },
   {

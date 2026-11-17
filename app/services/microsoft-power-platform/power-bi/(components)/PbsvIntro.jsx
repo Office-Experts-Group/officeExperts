@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(components)/PbsvIntro.jsx
+// /app/services/microsoft-power-platform/power-bi/(components)/PbsvIntro.jsx
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import styles from "@/styles/pbsvIntro.module.scss";
 import {

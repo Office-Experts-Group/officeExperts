@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgSecurityArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgSecurityArt.jsx
 // Spot illustrations for the four security cards (dark surface tiles).
 // Hex values and tokens: #6fc3e8 $accent-on-dark, #046999 $accent,
 // #18232e $dark-surface, #111820 $dark-bg, #ffffff $white.

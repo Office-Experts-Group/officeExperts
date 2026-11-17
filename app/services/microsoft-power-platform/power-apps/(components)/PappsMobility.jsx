@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsMobility.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsMobility.jsx
 import PappsMobilitySvg from "../(svgs)/PappsMobilitySvg";
 import { PappsCheckIcon } from "../(svgs)/PappsIcons";
 

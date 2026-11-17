@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(components)/PbsvAnatomy.jsx
+// /app/services/microsoft-power-platform/power-bi/(components)/PbsvAnatomy.jsx
 import styles from "@/styles/pbsvAnatomy.module.scss";
 import PbsvAnatomySvg from "../(svgs)/PbsvAnatomySvg";
 

@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvEngageArt.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvEngageArt.jsx
 // Spot illustrations for the three ways to work with us. Drawn per tile tone:
 // "accent" ($accent tile), "dark" ($dark-bg tile), "light" ($accent-light tile).
 // Hex values and the tokens they match:

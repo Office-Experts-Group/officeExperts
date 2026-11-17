@@ -52,7 +52,7 @@ const scenarios = [
       "We map the process and build it in Power Automate. Approvals become workflows and data moves without anyone touching it.",
     tag: "Power Automate",
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       label: "Power Automate services",
     },
   },
@@ -65,7 +65,7 @@ const scenarios = [
       "We centralise the data in Azure or SQL Server and build Power BI dashboards from a single source, adding Microsoft Fabric where the volume warrants it.",
     tag: "Power BI · Azure",
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+      href: "/services/microsoft-power-platform/power-bi",
       label: "Power BI reporting services",
     },
   },

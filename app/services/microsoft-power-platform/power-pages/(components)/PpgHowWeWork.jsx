@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgHowWeWork.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgHowWeWork.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgHowWeWork.module.scss";

@@ -83,7 +83,7 @@ const MfabFitCheck = () => {
 
           <div className={styles.alternatives}>
             <Link
-              href="/services/microsoft-power-platform/microsoft-power-bi"
+              href="/services/microsoft-power-platform/power-bi"
               className={styles.altLink}
             >
               Start with Power BI <MfabArrowIcon />

@@ -66,7 +66,7 @@ const PBDI_FAQS = [
     answer:
       "Yes. We provide ongoing Power BI support, including fixes, changes, new data sources and training for your team, so your reporting keeps pace as the business changes.",
     more: {
-      href: "/services/microsoft-power-platform/power-bi-support",
+      href: "/microsoft-support-and-training-australia",
       text: "Power BI support",
     },
   },

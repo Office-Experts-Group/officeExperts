@@ -7,7 +7,7 @@ import PbdiOrbitDiagram from "../(svgs)/PbdiOrbitArt";
 const PBDI_TOOLS = [
   {
     name: "Microsoft Power BI",
-    href: "/services/microsoft-power-platform/microsoft-power-bi",
+    href: "/services/microsoft-power-platform/power-bi",
     text: "The foundation of your analytics and reporting environment.",
   },
   {
@@ -27,7 +27,7 @@ const PBDI_TOOLS = [
   },
   {
     name: "Power Automate",
-    href: "/services/microsoft-power-platform/microsoft-power-automate",
+    href: "/services/microsoft-power-platform/power-automate",
     text: "Workflow automation that connects Power BI with your broader business processes.",
   },
   {

@@ -94,7 +94,7 @@ const Services = () => {
                 "Effortlessly drill down into your data.",
                 "Graphs, charts and other visual solutions to easily monitor the data that matters.",
               ]}
-              link={"https://www.powerplatformexperts.com.au"}
+              link={"/services/microsoft-power-platform"}
               linkText={"Power Platform"}
             />
           </CardIntersectionWrapper>

@@ -27,7 +27,7 @@ const BPAIntro = () => {
                 We map your end-to-end processes and build automated solutions
                 that fills those gaps. With tools like{" "}
                 <Link
-                  href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate"
+                  href="/services/microsoft-power-platform/power-automate"
                   className={styles.bodyLink}
                 >
                   Power Automate

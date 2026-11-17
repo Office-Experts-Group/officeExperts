@@ -419,11 +419,7 @@ End Sub`;
                   instantly clears all merged formatting so you can reshape the
                   data into something usable. It's a lifesaver for data cleanup
                   and importing into databases or{" "}
-                  <Link
-                    href={
-                      "https://www.powerplatform.com.au/services/microsoft-power-bi"
-                    }
-                  >
+                  <Link href={"/services/microsoft-power-platform/power-bi"}>
                     Power BI
                   </Link>
                   .

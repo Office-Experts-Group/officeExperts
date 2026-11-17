@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(components)/PbsvFaq.jsx
+// /app/services/microsoft-power-platform/power-bi/(components)/PbsvFaq.jsx
 import Link from "next/link";
 import styles from "@/styles/pbsvFaq.module.scss";
 import { PbsvArrowIcon, PbsvPlusIcon } from "../(svgs)/PbsvIcons";

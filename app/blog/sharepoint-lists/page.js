@@ -402,7 +402,7 @@ const FAQS = [
         <p>
           If you’d like an outside opinion, our team can{" "}
           <Link
-            href="/services/microsoft-power-platform/microsoft-power-apps"
+            href="/services/microsoft-power-platform/power-apps"
             className={styles.inlineLink}
           >
             review your Power Apps design
@@ -650,7 +650,7 @@ const SharePointListsBlogPost = () => {
               <p>
                 The same pattern sits behind many of the{" "}
                 <Link
-                  href="/services/microsoft-power-platform/microsoft-power-apps"
+                  href="/services/microsoft-power-platform/power-apps"
                   className={styles.inlineLink}
                 >
                   Power Apps solutions

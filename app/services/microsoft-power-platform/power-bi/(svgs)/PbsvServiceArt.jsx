@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvServiceArt.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvServiceArt.jsx
 // Spot illustrations for the six service tiles. Each takes a `tone` so it is
 // drawn for the tile it sits on: "light" (white or $accent-light tiles),
 // "dark" ($dark-bg or $dark-surface tiles) or "accent" ($accent tiles).

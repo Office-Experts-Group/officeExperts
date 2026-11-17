@@ -24,7 +24,7 @@ const services = [
     category: "Automation & Intelligence",
     description:
       "Power Apps, Power Automate and Power BI give Perth businesses a powerful toolkit that slots right into their existing Microsoft 365 setup. We build automated approval workflows, mobile-ready data collection apps for field teams, and live Power BI dashboards that pull from your existing systems. Particularly useful for organisations managing remote sites or FIFO operations.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform",
   },
   {

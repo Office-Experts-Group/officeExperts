@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsHero.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsHero.jsx
 import Link from "next/link";
 
 import PappsHeroSvg from "../(svgs)/PappsHeroSvg";

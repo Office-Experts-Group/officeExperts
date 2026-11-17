@@ -79,11 +79,11 @@ const solutions = [
     body: "Put a Power Apps front end or a Power Automate workflow on the same SQL Server data, for access from a browser or phone.",
     links: [
       {
-        href: "https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database",
+        href: "/blog/power-apps-with-sql-database",
         text: "Power Apps with a SQL database",
       },
       {
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        href: "/services/microsoft-power-platform/power-apps",
         text: "Power Apps development",
       },
     ],

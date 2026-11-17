@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsIntroSvg.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsIntroSvg.jsx
 // Informative diagram for the intro: paper forms, spreadsheets with flagged
 // cells and emailed copies are replaced by one app, which reads and writes the
 // existing data and runs approvals and alerts behind the scenes.

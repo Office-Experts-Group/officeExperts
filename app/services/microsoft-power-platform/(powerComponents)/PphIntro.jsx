@@ -29,10 +29,10 @@ const PphIntro = () => (
             </p>
             <p>
               We start with a
-              <Link href="/business-analysis"> business analysis</Link>. We look
-              at how your team works today, where time is being lost and what
-              you already have in place. Then we design a solution using
-              Microsoft’s Power Platform that suits your budget and the
+              <Link href="/services/business-analysis"> business analysis</Link>
+              . We look at how your team works today, where time is being lost
+              and what you already have in place. Then we design a solution
+              using Microsoft’s Power Platform that suits your budget and the
               complexity of your business, whether that’s a single app, an
               automated workflow or a full system that connects them all.
             </p>

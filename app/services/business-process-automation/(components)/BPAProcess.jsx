@@ -57,7 +57,7 @@ You sign off on the architecture before we write a single line of Power Automate
     links: [
       {
         label: "Power Automate flows",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+        href: "/services/microsoft-power-platform/power-automate",
       },
       {
         label: "SharePoint audit logging",
@@ -81,7 +81,7 @@ Testing covers the happy path, edge cases, exception scenarios, and deliberate f
     links: [
       {
         label: "Power Apps integration",
-        href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+        href: "/services/microsoft-power-platform/power-apps",
       },
       // {
       //   label: "Microsoft Teams notifications",

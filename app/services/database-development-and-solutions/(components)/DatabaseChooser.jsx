@@ -15,7 +15,7 @@ const platforms = [
   },
   {
     name: "SharePoint, Dataverse + Power Apps",
-    href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+    href: "/services/microsoft-power-platform/power-apps",
   },
   {
     name: "Web database + custom app",
@@ -82,7 +82,7 @@ const DatabaseChooser = () => {
             to and who looks after it afterwards. Here is how the options we
             build on compare. If your team already lives in Microsoft 365,{" "}
             <Link
-              href="https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development"
+              href="/services/microsoft-power-platform/sharepoint-consulting-and-development"
               className={styles.link}
             >
               SharePoint lists and Power Apps

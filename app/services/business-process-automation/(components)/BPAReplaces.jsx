@@ -6,18 +6,15 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import styles from "@/styles/bpaReplaces.module.scss";
 const LINKS = {
-  powerAutomate:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
-  powerApps:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps",
+  powerAutomate: "/services/microsoft-power-platform/power-automate",
+  powerApps: "/services/microsoft-power-platform/power-apps",
   sharePoint: "/services/online-solutions",
   aiBuilder: "/services/business-process-automation#document-processing",
 
   // dynamics: null, ***************************************************************
 
   dynamics: "/services/business-process-automation#document-processing",
-  powerBI:
-    "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi",
+  powerBI: "/services/microsoft-power-platform/power-bi",
   apiIntegrations: "/services/microsoft-365-api-integration",
   onboarding: "/microsoft-support-and-training-australia",
   emailTriage: "/services/business-process-automation#email-triage",

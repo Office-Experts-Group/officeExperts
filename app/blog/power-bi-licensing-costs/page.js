@@ -292,7 +292,7 @@ const STRATEGIES = [
         Microsoft 365, so many organisations have no extra licence to buy.
         Analysts can build their own data models locally and publish summary
         information to{" "}
-        <InlineLink href="/services/microsoft-power-platform/microsoft-power-bi">
+        <InlineLink href="/services/microsoft-power-platform/power-bi">
           Power BI
         </InlineLink>
         , reducing the number of Pro licences needed.
@@ -510,7 +510,7 @@ const PowerBILicensingBlogPost = () => {
                 suffice. Others try to make Pro work when they genuinely need
                 Premium, creating frustration and workarounds that cost far more
                 than the licence difference.{" "}
-                <InlineLink href="/services/microsoft-power-platform/power-bi-support">
+                <InlineLink href="/microsoft-support-and-training-australia">
                   The key is understanding which situation you’re actually in
                   before you commit
                 </InlineLink>
@@ -1013,7 +1013,7 @@ const PowerBILicensingBlogPost = () => {
               </p>
               <p>
                 A healthcare provider in Brisbane engaged{" "}
-                <InlineLink href="/services/microsoft-power-platform/power-platform-support">
+                <InlineLink href="/microsoft-support-and-training-australia">
                   professional help
                 </InlineLink>{" "}
                 for a licensing audit after their Power BI costs seemed
@@ -1037,7 +1037,7 @@ const PowerBILicensingBlogPost = () => {
                     Book a licensing review
                   </Link>
                   <Link
-                    href="/services/microsoft-power-platform/power-bi-support"
+                    href="/microsoft-support-and-training-australia"
                     className={styles.ctaLink}
                   >
                     Explore Power BI support <IconArrow />

@@ -70,19 +70,19 @@ const DATE_MODIFIED = "2026-11-16T00:00:00+11:00";
 const PPH_OFFERS = [
   {
     name: "Microsoft Power Apps development",
-    url: `${PAGE_URL}/microsoft-power-apps`,
+    url: `${PAGE_URL}/power-apps`,
   },
   {
     name: "Microsoft Power BI consulting",
-    url: `${PAGE_URL}/microsoft-power-bi`,
+    url: `${PAGE_URL}/power-bi`,
   },
   {
     name: "Microsoft Power Automate workflows",
-    url: `${PAGE_URL}/microsoft-power-automate`,
+    url: `${PAGE_URL}/power-automate`,
   },
   {
     name: "Microsoft Power Pages development",
-    url: `${PAGE_URL}/microsoft-power-pages`,
+    url: `${PAGE_URL}/power-pages`,
   },
 ];
 

@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgAiCapabilities.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgAiCapabilities.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgAiCapabilities.module.scss";

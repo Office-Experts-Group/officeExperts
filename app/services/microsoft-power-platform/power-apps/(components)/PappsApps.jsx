@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsApps.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsApps.jsx
 import Link from "next/link";
 
 import {
@@ -76,7 +76,7 @@ const PAPPS_APPS = [
     replaces: ["Folder trees nobody trusts", "Links in old emails"],
     connects: ["Power BI reports", "SharePoint", "Teams"],
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-bi",
+      href: "/services/microsoft-power-platform/power-bi",
       text: "Add Power BI reporting",
     },
   },

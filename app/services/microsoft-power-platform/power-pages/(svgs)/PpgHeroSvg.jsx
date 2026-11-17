@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgHeroSvg.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgHeroSvg.jsx
 // Hero illustration. Drawn straight onto the hero background (no panel).
 // Animated through the classes passed in: flowClass (dashed data flow) and
 // liveClass (pulsing live dot).

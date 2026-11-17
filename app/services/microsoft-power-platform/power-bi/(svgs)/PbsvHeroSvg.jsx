@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvHeroSvg.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvHeroSvg.jsx
 // Hero illustration: a report coming together, drawn straight onto the hero
 // background (no enclosing panel). flowClass animates the lines (dash offset),
 // liveClass pulses the "refreshed" dot. Both come from the hero module.

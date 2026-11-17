@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsSignArt.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsSignArt.jsx
 // Spot illustrations for the "signs" tiles. Decorative, one per tile, each drawn
 // for the tile colour it sits on (light, dark, accent, deep).
 // Hex values and the tokens they match:

@@ -189,8 +189,8 @@ const access = productRedirects(DOMAINS.access, {
 // ── powerplatformexperts.com.au: REMOVE OR REPOINT IN THE POWER PLATFORM WAVE ──
 const powerPlatform = [
   permanent(
-    "/services/microsoft-power-bi",
-    `${DOMAINS.powerPlatform}/services/microsoft-power-platform/microsoft-power-bi`,
+    "/services/power-bi",
+    `${DOMAINS.powerPlatform}/services/microsoft-power-platform/power-bi`,
   ),
 ];
 

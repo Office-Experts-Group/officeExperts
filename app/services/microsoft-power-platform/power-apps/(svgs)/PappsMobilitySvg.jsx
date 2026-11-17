@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsMobilitySvg.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsMobilitySvg.jsx
 // Informative illustration for the mobility band (drawn for $accent-dark):
 // one cloud, three devices, the same job list on each.
 // Hex values and the tokens they match:

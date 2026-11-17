@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgVisualArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgVisualArt.jsx
 // Three mockups for the visualisation tabs, drawn on a light panel.
 // Hex values and tokens: #046999 $accent, #e8f4fa $accent-light,
 // #6fc3e8 $accent-on-dark, #034e72 $accent-dark, #0d1b2a $text-primary,

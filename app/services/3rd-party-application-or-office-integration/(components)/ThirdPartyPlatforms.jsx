@@ -16,7 +16,7 @@ const groups = [
       {
         name: "Xero integration",
         text: "Pull invoices, bills, bank transactions and reports from Xero into Excel for budgets, cashflow and board packs, or post validated invoices and journals back into Xero.",
-        href: "https://www.powerplatformexperts.com.au/blog/xero-to-power-bi",
+        href: "/blog/xero-to-power-bi",
         linkText: "Xero to Power BI",
       },
       {
@@ -28,7 +28,7 @@ const groups = [
       {
         name: "Pronto and other ERPs",
         text: "Extract Pronto ERP data for reporting in Excel and Power BI, and load clean data back in, without relying on manual exports.",
-        href: "https://www.powerplatformexperts.com.au/power-bi-data-integration",
+        href: "/services/microsoft-power-platform/power-bi-data-integration",
         linkText: "Power BI data integration",
       },
     ],

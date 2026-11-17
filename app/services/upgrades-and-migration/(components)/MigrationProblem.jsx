@@ -28,7 +28,7 @@ const signs = [
     title: "Manual work that should have been automated years ago",
     body: "Staff copying data between systems, chasing email approvals, running the same reports by hand every week.",
     link: {
-      href: "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       label: "Power Automate Solutions",
     },
   },

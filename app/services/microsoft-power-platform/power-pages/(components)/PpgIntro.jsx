@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgIntro.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgIntro.jsx
 
 import styles from "@/styles/ppgIntro.module.scss";
 import {

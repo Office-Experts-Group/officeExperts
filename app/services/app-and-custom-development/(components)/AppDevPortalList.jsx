@@ -7,8 +7,7 @@ import Link from "next/link";
 // Compiled CSS module (source: styles/appDevPortalList.module.scss)
 import styles from "@/styles/appDevPortalList.module.scss";
 // Power Platform pages live on powerplatformexperts.com.au, so those links are absolute
-const PLATFORM_URL =
-  "https://www.powerplatformexperts.com.au/services/microsoft-power-platform";
+const PLATFORM_URL = "/services/microsoft-power-platform";
 
 // Expandable list: the headline is always visible, the description opens on hover or click
 const items = [
@@ -37,14 +36,14 @@ const items = [
     title: "SharePoint sites",
     tag: "Intranets",
     desc: "Branded intranets, team sites and document libraries with custom web parts, structured permissions and lists that feed your apps and automations.",
-    href: "https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development",
+    href: "/services/microsoft-power-platform/sharepoint-consulting-and-development",
     linkText: "SharePoint consulting and development",
   },
   {
     title: "Internal messaging and Teams automation",
     tag: "Collaboration",
     desc: "Custom internal messaging, alerts and approvals, built as Microsoft Teams automations with Power Automate or as a chat feature inside your own application.",
-    href: `${PLATFORM_URL}/microsoft-power-automate`,
+    href: `/services/microsoft-power-platform/power-automate`,
     linkText: "Explore Power Automate",
   },
   {

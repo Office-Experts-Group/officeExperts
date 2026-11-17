@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(components)/PpgComparison.jsx
+// /app/services/microsoft-power-platform/power-pages/(components)/PpgComparison.jsx
 
 import Link from "next/link";
 import styles from "@/styles/ppgComparison.module.scss";

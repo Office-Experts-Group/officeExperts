@@ -42,7 +42,7 @@ const SegmentMainCopy = () => {
             <p>Microsoft Access</p>
           </div>
         </Link>
-        <Link href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi">
+        <Link href="/services/microsoft-power-platform/power-bi">
           <div className={styles.contentLink}>
             <p>Power BI</p>
           </div>

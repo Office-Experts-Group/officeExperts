@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgAiArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgAiArt.jsx
 // Spot illustrations for the three Copilot feature rows. Design and Bot sit
 // on white tiles, Forms sits on the dark tile.
 // Hex values and tokens: #046999 $accent, #e8f4fa $accent-light,

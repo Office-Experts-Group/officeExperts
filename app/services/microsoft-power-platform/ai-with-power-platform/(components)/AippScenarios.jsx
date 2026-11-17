@@ -42,7 +42,7 @@ const AIPP_SCENARIOS = [
     resolution: (
       <>
         A{" "}
-        <Link href="/services/microsoft-power-platform/microsoft-power-automate">
+        <Link href="/services/microsoft-power-platform/power-automate">
           Power Automate
         </Link>{" "}
         flow with an AI step that reads the incoming document, extracts the
@@ -77,9 +77,7 @@ const AIPP_SCENARIOS = [
     resolution: (
       <>
         An agent connected to the underlying{" "}
-        <Link href="/services/microsoft-power-platform/microsoft-power-bi">
-          Power BI
-        </Link>{" "}
+        <Link href="/services/microsoft-power-platform/power-bi">Power BI</Link>{" "}
         dataset so staff can ask a plain-English question, such as what refunds
         looked like last quarter in Victoria, and get an answer instead of a
         request to learn the report.

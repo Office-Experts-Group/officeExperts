@@ -50,7 +50,7 @@ const MfabIntro = () => {
             science, real-time analytics and business intelligence under one
             banner, all working from one store called OneLake. Power BI is now
             part of Fabric, so if your team already builds{" "}
-            <Link href="/services/microsoft-power-platform/microsoft-power-bi">
+            <Link href="/services/microsoft-power-platform/power-bi">
               Power BI reports
             </Link>
             , you’re closer than you think. Microsoft’s own{" "}

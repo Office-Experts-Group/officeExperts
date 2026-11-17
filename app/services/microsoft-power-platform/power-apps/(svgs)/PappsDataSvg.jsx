@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(svgs)/PappsDataSvg.jsx
+// /app/services/microsoft-power-platform/power-apps/(svgs)/PappsDataSvg.jsx
 // Informative diagram for the data section (drawn for the dark background):
 // five kinds of existing data feed through connectors into one app, which
 // produces alerts, reports and documents.

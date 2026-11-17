@@ -15,7 +15,7 @@ const services = [
     tag: "Automation & Intelligence",
     description:
       "Power BI for real-time business intelligence and visual data representations, Power Automate for eliminating repetitive handoffs, and Power Apps for replacing spreadsheet-based processes with proper applications. This is where we see businesses achieving their biggest operational improvements with automation and integrations into the rest of the Microsoft ecosystem.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Integrations",
     featured: true,
   },

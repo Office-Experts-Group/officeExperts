@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgSecuritySvg.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgSecuritySvg.jsx
 // Full-width security journey: a request from an external user passes four
 // checks, in order, before it reaches their own data.
 // Hex values and tokens: #046999 $accent, #e8f4fa $accent-light,

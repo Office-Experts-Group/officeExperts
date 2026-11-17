@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-bi/(svgs)/PbsvAnatomySvg.jsx
+// /app/services/microsoft-power-platform/power-bi/(svgs)/PbsvAnatomySvg.jsx
 // Annotated report diagram for the "anatomy" section. Sits on a dark section.
 // Hex values and the tokens they match:
 //   #ffffff $white · #f7f8f9 $light-bg · #e3e8ec $line · #d4d6d9 $line-strong

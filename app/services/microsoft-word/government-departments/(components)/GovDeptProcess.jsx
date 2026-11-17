@@ -52,7 +52,7 @@ const GovDeptProcess = () => {
             ,{" "}
             <Link href="https://www.excelexperts.com.au">Excel reporting</Link>{" "}
             or{" "}
-            <Link href="https://www.powerplatformexperts.com.au">
+            <Link href="/services/microsoft-power-platform">
               Power Platform
             </Link>{" "}
             when a project extends beyond Word documents alone.

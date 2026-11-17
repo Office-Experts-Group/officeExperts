@@ -23,7 +23,7 @@ const services = [
     category: "Automation & Intelligence",
     description:
       "With Power Apps, Power Automate and Power BI, we set up automated workflows and easy-to-read dashboards. Power Platform can become the heart of your business, pulling data from a huge variety of sources into one system your team can access from anywhere.",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform",
   },
   {

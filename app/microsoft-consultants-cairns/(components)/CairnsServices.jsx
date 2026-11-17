@@ -56,7 +56,7 @@ const services = [
     id: "power-platform",
     title: "Power Platform",
     category: "Automation & Intelligence",
-    href: "https://www.powerplatformexperts.com.au",
+    href: "/services/microsoft-power-platform",
     linkText: "Power Platform Experts",
     description:
       "Power BI dashboards connected to your live data, Power Automate workflows that cut manual handoffs, and Power Apps that turn spreadsheet-based processes into proper applications your whole team can use.",

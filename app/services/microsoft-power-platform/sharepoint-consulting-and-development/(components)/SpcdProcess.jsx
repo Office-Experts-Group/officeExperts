@@ -47,7 +47,7 @@ const SPCD_PHASES = [
       "Branded sites and library setup",
     ],
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       label: "Power Automate workflow services",
     },
   },

@@ -370,7 +370,7 @@ export const navigationData = {
           },
           {
             label: "Power Platform AI Integrations",
-            href: `/services/microsoft-power-platform/ai-integrations`,
+            href: `/services/microsoft-power-platform/ai-with-power-platform`,
           },
           {
             label: "AI Templates In Word",

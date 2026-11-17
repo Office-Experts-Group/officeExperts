@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgComparisonArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgComparisonArt.jsx
 // Small criterion icons for the comparison panels (stroke uses currentColor,
 // so the SCSS sets $white on the accent panel and $accent on the light panel),
 // plus a balance illustration for the trade-off band.

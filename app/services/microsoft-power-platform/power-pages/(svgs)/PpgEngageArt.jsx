@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/(svgs)/PpgEngageArt.jsx
+// /app/services/microsoft-power-platform/power-pages/(svgs)/PpgEngageArt.jsx
 // Spot illustrations for the four ways to work with us, each drawn for its
 // tile: Fixed on the accent tile, Hourly on the dark surface tile, Support on
 // the white tile, Training on the dark mid tile.

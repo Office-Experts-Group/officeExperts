@@ -1,7 +1,7 @@
-// /app/services/microsoft-power-platform/microsoft-power-pages/layout.js
+// /app/services/microsoft-power-platform/power-bi/layout.js
 
 const PAGE_URL =
-  "https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-power-pages";
+  "https://www.officeexperts.com.au/services/microsoft-power-platform/power-bi";
 const PAGE_TITLE = "Microsoft Power Pages Services | Office Experts";
 const PAGE_DESCRIPTION =
   "Build secure customer, supplier and partner portals with Microsoft Power Pages. Australian experts in Dataverse, Power BI and custom development. Get a quote.";

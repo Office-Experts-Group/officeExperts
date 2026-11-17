@@ -6,7 +6,7 @@ const teams = [
   { label: "Word", href: "/services/microsoft-word" },
   { label: "Excel", href: "https://www.excelexperts.com.au" },
   { label: "Access & SQL Server", href: "https://www.accessexperts.com.au" },
-  { label: "Power Platform", href: "https://www.powerplatformexperts.com.au" },
+  { label: "Power Platform", href: "/services/microsoft-power-platform" },
   { label: "Microsoft 365, Azure & custom development", href: "/services" },
 ];
 
@@ -104,7 +104,7 @@ const BusinessAnalysisValue = () => {
               We design where AI belongs in your workflow, and where it
               doesn&apos;t. That might be{" "}
               <Link href="/services/copilot">Copilot</Link>, an agent built in{" "}
-              <a href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations">
+              <a href="/services/microsoft-power-platform/ai-with-power-platform">
                 Power Platform
               </a>
               , or a fully custom agent in Python or JavaScript that runs

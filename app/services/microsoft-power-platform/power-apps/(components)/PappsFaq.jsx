@@ -1,4 +1,4 @@
-// /app/services/microsoft-power-platform/microsoft-power-apps/(components)/PappsFaq.jsx
+// /app/services/microsoft-power-platform/power-apps/(components)/PappsFaq.jsx
 import Link from "next/link";
 
 import { PappsPlusIcon } from "../(svgs)/PappsIcons";
@@ -51,7 +51,7 @@ const PAPPS_FAQS = [
     answer:
       "Power Apps is what your team sees and uses: the screens, forms and buttons. Power Automate runs behind the scenes, moving data and sending approvals or alerts. Many projects use both together.",
     link: {
-      href: "/services/microsoft-power-platform/microsoft-power-automate",
+      href: "/services/microsoft-power-platform/power-automate",
       text: "See our Power Automate service",
     },
   },

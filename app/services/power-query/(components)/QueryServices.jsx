@@ -95,7 +95,7 @@ const QueryServices = () => {
             and{" "}
             <Link
               style={{ color: "#046999", fontWeight: "700" }}
-              href="https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi"
+              href="/services/microsoft-power-platform/power-bi"
             >
               Power BI dataflows
             </Link>
