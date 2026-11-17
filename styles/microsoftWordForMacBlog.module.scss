@@ -175,11 +175,11 @@ $shadow-lift:
 // At a glance
 // ---------------------------------------------------------------------------
 .glance {
-  @include container;
   position: relative;
   z-index: 2;
   margin-top: -3.5rem;
   margin-bottom: 2rem;
+  @include container;
 }
 
 .glanceGrid {
@@ -230,8 +230,8 @@ $shadow-lift:
 // Layout and contents list
 // ---------------------------------------------------------------------------
 .layout {
-  @include container;
   padding-block: 2rem 4rem;
+  @include container;
 
   // Wide screens: contents rail on the left, article stays centred.
   @media (min-width: 1400px) {

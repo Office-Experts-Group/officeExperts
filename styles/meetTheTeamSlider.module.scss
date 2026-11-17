@@ -6,11 +6,11 @@
 @use "./globals.scss" as *;
 
 .teamSlider {
-  @include container;
   width: 100%;
   margin: 4rem auto 6rem auto;
   padding: 2rem 0;
   overflow: hidden;
+  @include container;
   @include belowDeskL {
     padding: 2rem;
   }

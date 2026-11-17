@@ -14,14 +14,15 @@
 }
 
 .header {
-  @include container(1300px);
-  > * {
-    max-width: 54rem;
-  }
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 3rem;
+  > * {
+    max-width: 54rem;
+  }
+
+  @include container(1300px);
 }
 
 .eyebrow {
@@ -29,8 +30,8 @@
 }
 
 .heading {
-  @include heading-section-on-dark;
   margin: 0;
+  @include heading-section-on-dark;
 }
 
 .accent {
@@ -38,13 +39,13 @@
 }
 
 .subtitle {
-  @include lede($white-75);
   margin: 0;
+  @include lede($white-75);
 }
 
 .tabs {
-  @include container(1300px);
   position: relative;
+  @include container(1300px);
 }
 
 .radio {

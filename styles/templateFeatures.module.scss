@@ -11,7 +11,6 @@
 }
 
 .inner {
-  @include container;
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 2rem;
@@ -21,6 +20,7 @@
     display: flex;
   }
 
+  @include container;
   @include belowDesktop {
     grid-template-columns: 1fr;
   }

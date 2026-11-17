@@ -86,12 +86,12 @@ const pathsWithDifferentCanonicals = new Set([
   "/blog/20-advanced-excel-shortcuts",
   // "/blog/convert-canva-to-word",
   "/blog/convert-custom-excel-shortcuts-with-macros",
-  "/blog/export-to-pdf-in-power-apps",
+  // "/blog/export-to-pdf-in-power-apps",
   // "/blog/fields-and-repeating-data-in-word",
-  "/blog/file-attachments-in-power-apps",
-  "/blog/power-apps-pdf-function",
-  "/blog/power-apps-with-sql-database",
-  "/blog/sharepoint-lists",
+  // "/blog/file-attachments-in-power-apps",
+  // "/blog/power-apps-pdf-function",
+  // "/blog/power-apps-with-sql-database",
+  // "/blog/sharepoint-lists",
   "/blog/spreadsheet-errors-in-excel",
   // "/blog/ultimate-guide-to-word-templates",
   // "/blog/word-templates-for-legal-firms",
@@ -112,6 +112,7 @@ const pathsWithDifferentCanonicals = new Set([
   "/services/microsoft-vbscript",
   "/services/office-and-sql-server-integration",
   "/services/microsoft-word/video-portal",
+  "/contact-us/request-a-quote",
 ]);
 
 /** @type {import('next-sitemap').IConfig} */

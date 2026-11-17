@@ -96,7 +96,7 @@ const Page = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Consultants Melbourne | Office Experts Group"
+          title="Microsoft Consultants Melbourne"
           desktopImage={melbourne}
           mobileImage={melbourneMob}
           altDesk="Melbourne skyline"

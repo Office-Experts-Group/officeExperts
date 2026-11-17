@@ -94,7 +94,7 @@ const Page = () => {
 
       <main>
         <ServiceHero
-          title="Microsoft Consultants Cairns QLD | Office Experts"
+          title="Microsoft Consultants Cairns QLD"
           desktopImage={cairns}
           mobileImage={cairnsMob}
           altDesk="Cairns beaches, Far North Queensland"

@@ -16,7 +16,7 @@ const AiAgentsCta = () => {
         </h2>
 
         <div className={styles.actions}>
-          <Link href="/contact-us/request-a-quote" className={styles.primary}>
+          <Link href="/contact-us" className={styles.primary}>
             Request a quote
           </Link>
           {/* Phone clicks are picked up by the site-wide GTM tag */}

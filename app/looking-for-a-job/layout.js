@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultant Jobs in Australia | Office Expertsp",
+  title: "Microsoft Consultant Jobs in Australia | Office Experts",
   description:
     "Are you skilled in Microsoft technologies? We are looking for talented Australian consultants proficient in developing solutions with Microsoft technologies.",
 

@@ -159,16 +159,16 @@ $side-padding: clamp(1.25rem, 7vw, 8rem);
 .indicators {
   display: flex;
   gap: 1rem;
-  @include container;
   margin: 3.5rem auto 0;
   padding: 0 $side-padding;
+  @include container;
 }
 
 .indicator {
-  @include label($text-secondary);
   position: relative;
   flex: 0 0 8rem;
   padding-top: 1rem;
+  @include label($text-secondary);
 
   @include phone {
     flex: 1;

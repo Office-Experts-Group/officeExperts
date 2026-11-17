@@ -19,8 +19,7 @@ import {
 } from "@/utils/schemaGenerators";
 
 const PAGE_URL = "https://www.officeexperts.com.au/services/microsoft-dot-net";
-const PAGE_TITLE =
-  "Microsoft .NET Development Services Australia | Office Experts";
+const PAGE_TITLE = "Microsoft .NET Development Australia | Office Experts";
 const PAGE_DESCRIPTION =
   "C#, VB.NET and ASP.NET Core developers across Australia. We build, support and migrate .NET apps, including .NET Framework to .NET 10 upgrades and VSTO add-ins.";
 

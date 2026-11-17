@@ -33,7 +33,7 @@ import { testimonials } from "@/testimonials";
 import faqSchema from "./wordFaqs/homeSchema";
 
 const DESCRIPTION =
-  "Our Word Experts team has Australia's leading Microsoft Word Designers & Developers. Australia-wide senior consultants with 25+yrs experience";
+  "Our Word Experts team has Australia's leading Microsoft Word designers and developers. Australia-wide senior consultants with 25+ years of experience.";
 const TITLE = "Microsoft Word Consultants & Designers | Office Experts";
 
 const BASE = "https://www.officeexperts.com.au";

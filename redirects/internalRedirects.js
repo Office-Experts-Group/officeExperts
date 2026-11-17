@@ -149,4 +149,5 @@ module.exports = [
     "/microsoft-365-api-integration",
     "/services/microsoft-365-api-integration",
   ),
+  permanent("/contact-us/request-a-quote", "/contact-us"),
 ];

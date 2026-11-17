@@ -79,9 +79,12 @@ $shadow-row: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
 
 @mixin container($max: $container) {
-  max-width: $max;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
+  & {
+    max-width: $max;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
   @media screen and (max-width: 770px) {
     padding-inline: 0;
   }
@@ -136,7 +139,9 @@ $scroll-offset: 150px;
 }
 
 @mixin heroPaddingWhite {
-  padding: 2rem $gutter 6rem $gutter;
+  & {
+    padding: 2rem $gutter 6rem $gutter;
+  }
 
   @include tablet {
     padding: 2rem $mobGutter 6rem $mobGutter;
@@ -150,10 +155,12 @@ $scroll-offset: 150px;
 }
 
 @mixin lightHeroBlock {
-  background-color: #1a1c1e;
-  width: 100vw;
-  height: 11rem;
-  margin-bottom: 2rem;
+  & {
+    background-color: #1a1c1e;
+    width: 100vw;
+    height: 11rem;
+    margin-bottom: 2rem;
+  }
   @media screen and (max-width: 1260px) {
     height: 8.5rem;
   }

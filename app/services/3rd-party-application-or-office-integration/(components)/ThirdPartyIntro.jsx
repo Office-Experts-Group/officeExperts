@@ -65,10 +65,7 @@ const ThirdPartyIntro = () => {
             </p>
 
             {/* Primary call to action, sits under the body copy */}
-            <Link
-              href="/contact-us/request-a-quote"
-              className={`btn ${styles.cta}`}
-            >
+            <Link href="/contact-us" className={`btn ${styles.cta}`}>
               Discuss your requirements
             </Link>
 

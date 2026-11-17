@@ -71,7 +71,7 @@ const Page = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <ServiceHero
-        title="Contact Us"
+        title="Contact Our Microsoft Office Consultants"
         desktopImage={contactUs}
         mobileImage={contactUsMob}
         altDesk={"contact method icons on wooden blocks"}

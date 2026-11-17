@@ -40,7 +40,7 @@ const faqs = [
     q: "How much does a VBA project cost?",
     a: "Every project is different, so we scope and quote after a short conversation about what you need, with no mid-project surprises. Contact us for a free consultation.",
     link: {
-      href: "/contact-us/request-a-quote",
+      href: "/contact-us",
       label: "Request a quote",
     },
   },
@@ -77,8 +77,9 @@ const VbaFaq = () => (
           Can&apos;t see your question here? Call us on{" "}
           <a href="tel:1300102810" className={styles.phone}>
             1300 102 810
-          </a> or tell us about your
-          project and we&apos;ll point you in the right direction.
+          </a>{" "}
+          or tell us about your project and we&apos;ll point you in the right
+          direction.
         </p>
       </div>
 

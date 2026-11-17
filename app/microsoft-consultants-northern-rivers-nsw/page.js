@@ -42,7 +42,7 @@ const Page = () => {
       />
 
       <ServiceHero
-        title="Microsoft Consultants in Northern NSW"
+        title="Microsoft Consultants in Northern Rivers NSW"
         desktopImage={northernNsw}
         mobileImage={northernNswMob}
         altDesk="Microsoft consulting for Northern NSW businesses"

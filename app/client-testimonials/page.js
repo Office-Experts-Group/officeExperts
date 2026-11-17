@@ -27,7 +27,7 @@ const schema = {
       url: "https://www.officeexperts.com.au/client-testimonials",
       name: "Client Testimonials & Reviews | Office Experts Group",
       description:
-        "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
+        " Read testimonials from Australian businesses we've helped with Microsoft Word, Excel, Access, Power Platform and AI solutions. Honest client reviews.",
       isPartOf: {
         "@id": "https://www.officeexperts.com.au#website",
       },

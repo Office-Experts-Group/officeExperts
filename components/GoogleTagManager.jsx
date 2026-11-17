@@ -3,7 +3,7 @@ import Script from "next/script";
 
 // Google Tag Manager container for Office Experts.
 // Loads on every page, independent of the cookie banner.
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PGD2FFPK";
+const GTM_ID = "GTM-PGD2FFPK";
 
 // Goes anywhere in the layout. Both scripts are async and injected after
 // hydration, so they never block rendering. The nonce satisfies the CSP

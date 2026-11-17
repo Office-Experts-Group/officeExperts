@@ -20,8 +20,8 @@
 
 // Dark strip that sits behind the fixed header, then the light hero below it
 .headerBlock {
-  @include lightHeroBlock;
   width: 100%;
+  @include lightHeroBlock;
 }
 
 .pbdiHero {

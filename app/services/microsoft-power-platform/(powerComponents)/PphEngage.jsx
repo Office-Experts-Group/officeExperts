@@ -60,10 +60,7 @@ const PphEngage = () => (
             <a href="tel:1300102810" className={`btn ${styles.phone}`}>
               <PphPhoneIcon /> 1300 102 810
             </a>
-            <Link
-              href="/contact-us/request-a-quote"
-              className={styles.quoteLink}
-            >
+            <Link href="/contact-us" className={styles.quoteLink}>
               Request a quote <PphArrowIcon />
             </Link>
           </div>

@@ -42,11 +42,11 @@ $slate: #6b7480;
 }
 
 .heroInner {
-  @include container;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;
@@ -120,13 +120,13 @@ $slate: #6b7480;
 /* ---------- at a glance ---------- */
 
 .glance {
-  @include container;
   position: relative;
   z-index: 2;
   margin-top: -4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  @include container;
 
   @include mobile {
     grid-template-columns: 1fr;

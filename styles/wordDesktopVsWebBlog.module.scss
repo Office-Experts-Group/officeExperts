@@ -159,13 +159,13 @@ $article-width: 820px;
 
 // ---------- at a glance ----------
 .glance {
-  @include container;
   position: relative;
   z-index: 2;
   margin-top: -3.6rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;
@@ -203,8 +203,8 @@ $article-width: 820px;
 
 // ---------- layout and contents ----------
 .layout {
-  @include container;
   padding-block: 4rem 2rem;
+  @include container;
 
   @media (min-width: 1400px) {
     max-width: none;

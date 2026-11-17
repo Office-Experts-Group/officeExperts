@@ -11,10 +11,10 @@
 }
 
 .inner {
-  @include container;
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  @include container;
 }
 
 // Heading on the left, copy on the right

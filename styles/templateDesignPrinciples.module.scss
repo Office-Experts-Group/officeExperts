@@ -11,10 +11,10 @@
 }
 
 .inner {
-  @include container;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  @include container;
 }
 
 .top {

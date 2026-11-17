@@ -6,13 +6,13 @@ export const metadata = {
   // Basic metadata
   title: TITLE,
   description:
-    "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today..",
+    "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today.",
 
   // OpenGraph
   openGraph: {
     title: TITLE,
     description:
-      "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today..",
+      "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today.",
     url: "https://www.officeexperts.com.au/microsoft-consultants-brisbane",
     siteName: "Office Experts Group",
     images: [
@@ -36,7 +36,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: TITLE,
     description:
-      "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today..",
+      "Nationwide Microsoft consultants with a local Brisbane team. 25+ years helping Australian businesses with software solutions. Get a free assessment today.",
     images: ["/logo.png"],
   },
 

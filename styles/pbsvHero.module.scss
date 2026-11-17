@@ -6,17 +6,17 @@
   overflow-x: clip;
 
   .band {
-    @include lightHeroBlock;
     width: 100%;
     margin-bottom: 0;
+    @include lightHeroBlock;
   }
 
   .inner {
-    @include heroPaddingWhite;
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     align-items: center;
     gap: 3rem;
+    @include heroPaddingWhite;
 
     @include belowDesktop {
       grid-template-columns: minmax(0, 1fr);

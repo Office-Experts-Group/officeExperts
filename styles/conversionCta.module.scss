@@ -6,7 +6,6 @@
 }
 
 .inner {
-  @include container;
   position: relative;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -17,6 +16,7 @@
   color: $white-88;
   overflow: hidden;
   line-height: 1.7;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;

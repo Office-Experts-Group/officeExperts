@@ -43,19 +43,19 @@ const more = [
   },
   {
     name: "Microsoft Fabric",
-    href: "/microsoft-fabric",
+    href: "/services/microsoft-power-platform/microsoft-fabric",
   },
   {
     name: "SharePoint consulting and development",
-    href: "/sharepoint-consulting-and-development",
+    href: "/services/microsoft-power-platform/sharepoint-consulting-and-development",
   },
   {
     name: "Power BI data integration",
-    href: "/power-bi-data-integration",
+    href: "/services/microsoft-power-platform/power-bi-data-integration",
   },
   {
     name: "Excel to Power BI migration",
-    href: "/excel-to-power-bi-migration",
+    href: "/services/microsoft-power-platform/excel-to-power-bi-migration",
   },
   { name: "Power Query", href: "/services/power-query" },
   { name: "Power Pivot", href: "/services/power-pivot" },
@@ -99,9 +99,11 @@ const PowerPlatformSection = () => (
               </ServiceLink>
             </h3>
             <p className={styles.tileText}>{description}</p>
-            <ServiceLink href={support.href} className={styles.support}>
-              {support.name}
-            </ServiceLink>
+            {support && (
+              <ServiceLink href={support.href} className={styles.support}>
+                {support.name}
+              </ServiceLink>
+            )}
           </article>
         ))}
       </div>

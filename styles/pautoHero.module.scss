@@ -10,8 +10,6 @@
 }
 
 .inner {
-  @include heroPaddingWhite;
-  @include container(1400px);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   gap: 3rem;
@@ -20,6 +18,8 @@
   > * {
     min-width: 0;
   }
+  @include heroPaddingWhite;
+  @include container(1400px);
 
   @include belowDesktop {
     grid-template-columns: 1fr;

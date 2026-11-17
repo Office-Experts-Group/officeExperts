@@ -1,6 +1,5 @@
 // /app/layout.js
 import dynamic from "next/dynamic";
-import { headers } from "next/headers";
 
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
@@ -121,9 +120,6 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  // Per-request CSP nonce set by the proxy/middleware (header name assumed: x-nonce)
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
-
   return (
     <html lang="en-AU">
       <body className={`${aptos.variable} ${garamond.variable}`}>
@@ -133,8 +129,8 @@ export default async function RootLayout({ children }) {
         {children}
         <Footer />
         <Copyright />
-        <GoogleTagManager nonce={nonce} />
-        <ConversionTracking nonce={nonce} />
+        <GoogleTagManager />
+        <ConversionTracking />
       </body>
     </html>
   );

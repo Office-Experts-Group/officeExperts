@@ -3,13 +3,13 @@ import React from "react";
 
 export const metadata = {
   // Basic metadata
-  title: "Microsoft Consultants Sydney NSW",
+  title: "Microsoft Consultants Sydney NSW | Office Experts Group",
   description:
     "Microsoft Office specialists operating nationally since 2000, with local Sydney consultants delivering expert solutions across the entire Microsoft suite.",
 
   // OpenGraph
   openGraph: {
-    title: "Microsoft Consultants Sydney NSW",
+    title: "Microsoft Consultants Sydney NSW | Office Experts Group",
     description:
       "Microsoft Office specialists operating nationally since 2000, with local Sydney consultants delivering expert solutions across the entire Microsoft suite.",
     url: "https://www.officeexperts.com.au/microsoft-consultants-sydney",
@@ -27,13 +27,13 @@ export const metadata = {
   },
 
   // Keywords
-  keywords: ["Microsoft Consultants Sydney NSW"],
+  keywords: ["Microsoft Consultants Sydney"],
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
-    title: "Microsoft Consultants Sydney NSW",
+    title: "Microsoft Consultants Sydney NSW | Office Experts Group",
     description:
       "Microsoft Office specialists operating nationally since 2000, with local Sydney consultants delivering expert solutions across the entire Microsoft suite.",
     images: ["/logo.png"],

@@ -11,12 +11,12 @@
 }
 
 .inner {
-  @include container;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
   padding: 0rem;
+  @include container;
 
   @include belowDesktop {
     grid-template-columns: 1fr;

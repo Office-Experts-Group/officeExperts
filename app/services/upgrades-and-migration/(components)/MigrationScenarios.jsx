@@ -168,10 +168,7 @@ const MigrationScenarios = () => {
           </p>
         </div>
         <div className={styles.ctaActions}>
-          <Link
-            href="/contact-us/request-a-quote"
-            className={styles.ctaPrimary}
-          >
+          <Link href="/contact-us" className={styles.ctaPrimary}>
             Get a free assessment
           </Link>
           <Link href="#contact" className={styles.ctaSecondary}>

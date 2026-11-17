@@ -92,10 +92,10 @@ const GroupIntro = () => (
           {/* ── Left: what we offer ── */}
           <div className={styles.copy}>
             <span className={styles.eyebrow}>Office Experts</span>
-            <h2 id="group-intro-heading" className={styles.heading}>
+            <h1 id="group-intro-heading" className={styles.heading}>
               Microsoft Consulting and Custom Software Solutions{" "}
               <span className={styles.accent}>for Your Business</span>
-            </h2>
+            </h1>
             <p className={styles.text}>
               Whether it is a spreadsheet that keeps breaking, a document
               process that eats hours, or a system that no longer talks to the

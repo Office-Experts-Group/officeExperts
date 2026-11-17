@@ -138,10 +138,10 @@ $card-shadow-hover: 0 16px 36px rgba(13, 27, 42, 0.12);
 /* ---------- At a glance ---------- */
 
 .glance {
-  @include container;
   position: relative;
   z-index: 2;
   margin-top: -3.5rem;
+  @include container;
 }
 
 .glanceGrid {
@@ -192,8 +192,8 @@ $card-shadow-hover: 0 16px 36px rgba(13, 27, 42, 0.12);
 /* ---------- Layout + contents ---------- */
 
 .layout {
-  @include container;
   padding-block: 4rem 3rem;
+  @include container;
 
   @media (min-width: 1400px) {
     max-width: none;

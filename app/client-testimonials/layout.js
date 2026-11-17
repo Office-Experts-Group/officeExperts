@@ -4,13 +4,13 @@ export const metadata = {
   // Basic metadata
   title: "Client Testimonials & Reviews | Office Experts Group",
   description:
-    "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
+    " Read testimonials from Australian businesses we've helped with Microsoft Word, Excel, Access, Power Platform and AI solutions. Honest client reviews.",
 
   // OpenGraph
   openGraph: {
     title: "Office Experts Group Client Testimonials",
     description:
-      "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
+      " Read testimonials from Australian businesses we've helped with Microsoft Word, Excel, Access, Power Platform and AI solutions. Honest client reviews.",
     url: "https://www.officeexperts.com.au/client-testimonials",
     siteName: "Office Experts Group",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
     site: "@OfficeExpertsG1",
     title: "Office Experts Group Client Testimonials",
     description:
-      "Read testimonials from our satisfied clients across Australia. Honest reviews from Australian businesses.",
+      " Read testimonials from Australian businesses we've helped with Microsoft Word, Excel, Access, Power Platform and AI solutions. Honest client reviews.",
     images: ["/logo.png"],
   },
   alternates: {

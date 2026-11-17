@@ -8,10 +8,10 @@
 
 // Dark panel sitting inside the light section
 .panel {
-  @include container;
   padding: clamp(1.75rem, 5vw, 4.5rem);
   background: $dark-bg;
   border-radius: $radius;
+  @include container;
 }
 
 .header {
