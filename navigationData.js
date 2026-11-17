@@ -316,7 +316,7 @@ export const navigationData = {
       },
       {
         label: "Microsoft Power Platform",
-        href: POWER_PLATFORM_EXPERTS_URL,
+        href: "/services/microsoft-power-platform",
         items: [
           {
             label: "AI Integrations",
