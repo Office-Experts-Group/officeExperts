@@ -1,13 +1,17 @@
+// /app/layout.js
 import dynamic from "next/dynamic";
+import { headers } from "next/headers";
 
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
 
 import HeadTop from "../components/HeadTop";
 import Header from "./(components)/Header";
-import ScrollIndicator from "../components/ScrollIndicator";
 
-import ClientOnlyWidgets from "../components/ClientOnlyWidgets";
+import GoogleTagManager, {
+  GoogleTagManagerNoScript,
+} from "../components/GoogleTagManager";
+import ConversionTracking from "../components/ConversionTracking";
 
 const Footer = dynamic(() => import("./(components)/Footer"));
 const Copyright = dynamic(() => import("../components/Copyright"));
@@ -116,17 +120,21 @@ export const metadata = {
   ),
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // Per-request CSP nonce set by the proxy/middleware (header name assumed: x-nonce)
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
+
   return (
     <html lang="en-AU">
       <body className={`${aptos.variable} ${garamond.variable}`}>
+        <GoogleTagManagerNoScript />
         <HeadTop />
         <Header />
         {children}
         <Footer />
         <Copyright />
-        <ClientOnlyWidgets />
-        <ScrollIndicator />
+        <GoogleTagManager nonce={nonce} />
+        <ConversionTracking nonce={nonce} />
       </body>
     </html>
   );
