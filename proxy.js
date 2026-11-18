@@ -10,11 +10,18 @@ import { goneUrls } from "./redirects/goneUrls";
 const isDev = process.env.NODE_ENV !== "production";
 
 // Host groups shared between the standard and payment policies
+// googleadservices.com serves the Google Ads conversion tag/pixel
 const GOOGLE_HOSTS =
-  "*.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.doubleclick.net googleads.g.doubleclick.net";
+  "*.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.doubleclick.net googleads.g.doubleclick.net *.googleadservices.com";
 const AHREFS_HOSTS = "*.ahrefs.com analytics.ahrefs.com";
 const VIDEO_SCRIPT_HOSTS = "*.vimeo.com *.youtube.com *.ytimg.com";
 const BPOINT_HOSTS = "*.bpoint.com.au";
+// Gurulytics lead tracking (ConversionTracking posts leads here)
+const GURULYTICS_HOSTS = "seo.gurulytics.app";
+// OpenAI Ads measurement pixel (ChatGPT ads conversion tracking).
+// The SDK loads from bzrcdn.openai.com; events are sent to bzr.openai.com.
+const OPENAI_SCRIPT_HOSTS = "https://bzrcdn.openai.com";
+const OPENAI_CONNECT_HOSTS = "https://bzr.openai.com https://bzrcdn.openai.com";
 // Remembers which platform section the visitor is browsing, so the
 // /case-studies page can list that platform's studies first (see page.js).
 const SITE_COOKIE = "oe-site";
@@ -52,16 +59,18 @@ const PAYMENT_CSP = [
   `connect-src 'self' ${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
-// All other pages: adds YouTube and Vimeo embeds
+// All other pages: adds YouTube and Vimeo embeds and Gurulytics lead tracking
 const STANDARD_CSP = [
   "default-src 'self'",
-  ...scriptDirectives(`${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS}`),
+  ...scriptDirectives(
+    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS}`,
+  ),
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
   "img-src 'self' data: https:",
   "font-src 'self' fonts.gstatic.com",
   "frame-src 'self' *.vimeo.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.doubleclick.net",
   "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.googlevideo.com",
-  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} *.officeexperts.com.au`,
+  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${GURULYTICS_HOSTS} ${OPENAI_CONNECT_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
 export function proxy(request) {
