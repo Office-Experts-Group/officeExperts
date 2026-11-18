@@ -1,0 +1,124 @@
+// /styles/pivotHero.module.scss
+@use "./globals" as *;
+
+.pivotHero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 9rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 8rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lead {
+  max-width: 34rem;
+  margin: 0 0 2rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $white-75;
+
+  svg {
+    flex-shrink: 0;
+    color: $accent-on-dark;
+  }
+}
+
+.visual {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Only the hero illustration moves
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: pivotHeroFlow 1.4s linear infinite;
+  }
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pivotHeroPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pivotHeroFlow {
+    to {
+      stroke-dashoffset: -16;
+    }
+  }
+  @keyframes pivotHeroPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.6);
+    }
+  }
+}

@@ -1,0 +1,339 @@
+// /styles/pivotServices.module.scss
+@use "./globals" as *;
+
+// One theme per tile colour. Declarations first, nested rules after.
+@mixin tile-theme(
+  $bg,
+  $border,
+  $title,
+  $text,
+  $chip-bg,
+  $chip-fg,
+  $chip-border,
+  $link
+) {
+  background: $bg;
+  border: 1px solid $border;
+
+  .tileHeading {
+    color: $title;
+  }
+  .tileDesc {
+    color: $text;
+  }
+  .chip {
+    background: $chip-bg;
+    color: $chip-fg;
+    border: 1px solid $chip-border;
+  }
+  .learnMore {
+    @include arrow-link($link);
+  }
+}
+
+.pivotServices {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header ──
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 1.5rem 4rem;
+  margin-bottom: 3rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 2.25rem;
+  }
+}
+
+.headerMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.headerAside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.intro {
+  margin: 0;
+  @include lede;
+}
+
+.cta {
+  @include btn-on-accent;
+}
+
+// ── Bento grid ──
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: $radius;
+  scroll-margin-top: $scroll-offset;
+}
+
+.narrow {
+  grid-column: span 2;
+}
+.half {
+  grid-column: span 3;
+}
+.wide {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: stretch;
+
+  .art {
+    order: 2;
+    display: flex;
+    align-items: center;
+    max-height: none;
+    padding: 1rem 1.25rem 1rem 0;
+  }
+  .text {
+    justify-content: center;
+  }
+}
+.flip {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+.flip .art {
+  order: 0;
+  padding: 1rem 0 1rem 1.25rem;
+}
+
+@include belowDesktop {
+  .narrow,
+  .half {
+    grid-column: span 1;
+  }
+  .wide {
+    grid-column: span 2;
+  }
+}
+
+@include mobile {
+  .narrow,
+  .half,
+  .wide {
+    grid-column: span 1;
+  }
+  .wide {
+    display: flex;
+
+    .art,
+    &.flip .art {
+      order: 0;
+      height: auto;
+      padding: 1.5rem 1.5rem 0;
+    }
+  }
+}
+
+// ── Art + text ──
+.art {
+  flex-shrink: 0;
+  max-height: 14rem;
+  padding: 1.5rem 1.5rem 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: inherit;
+  }
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1.5rem 2rem 2rem;
+}
+
+.wide .text {
+  padding: 2.25rem 2rem 2.25rem 2.25rem;
+}
+.flip .text {
+  padding: 2.25rem 2.25rem 2.25rem 2rem;
+}
+
+.tileHeading {
+  margin: 0;
+  @include card-title(lg);
+}
+
+.tileDesc {
+  margin: 0;
+  @include body-text;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 0.3rem 0.8rem;
+  border-radius: $radius-pill;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.learnMore {
+  margin-top: auto;
+}
+
+// ── Tile colours ──
+.accentTile {
+  @include tile-theme(
+    $accent,
+    $accent,
+    $white,
+    $white-88,
+    $white-12,
+    $white,
+    $white-35,
+    $white
+  );
+}
+.darkTile {
+  @include tile-theme(
+    $dark-bg,
+    $white-12,
+    $white,
+    $white-75,
+    $white-08,
+    $white-88,
+    $white-18,
+    $accent-on-dark
+  );
+}
+.lightTile {
+  @include tile-theme(
+    $white,
+    $line,
+    $text-primary,
+    $text-secondary,
+    $accent-tint,
+    $accent,
+    $accent-border,
+    $accent
+  );
+}
+.surfaceTile {
+  @include tile-theme(
+    $dark-surface,
+    $white-12,
+    $white,
+    $white-75,
+    $white-08,
+    $white-88,
+    $white-18,
+    $accent-on-dark
+  );
+}
+.tintTile {
+  @include tile-theme(
+    $accent-light,
+    $accent-border,
+    $ink,
+    $text-secondary,
+    $white,
+    $accent,
+    $accent-border,
+    $accent
+  );
+}
+.deepTile {
+  @include tile-theme(
+    $accent-dark,
+    $accent-dark,
+    $white,
+    $white-88,
+    $white-12,
+    $white,
+    $white-35,
+    $white
+  );
+}
+
+// ── Motion: hover lift only ──
+@media (prefers-reduced-motion: no-preference) {
+  .tile {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
