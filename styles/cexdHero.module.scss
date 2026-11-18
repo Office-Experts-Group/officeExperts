@@ -1,0 +1,233 @@
+// /styles/cexdHero.module.scss
+@use "./globals" as *;
+
+.cexdHero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 9rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: grid;
+  gap: 3.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include desktopUp {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+}
+
+// ── Copy column ─────────────────────────────────────────────
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heading {
+  @include heading-main($white-90);
+  margin: 0;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  p {
+    @include lede($white-75);
+    margin: 0;
+  }
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.ctaSecondary {
+  @include arrow-link($white-75);
+
+  &:hover {
+    color: $accent-on-dark;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+  margin: 0.5rem 0 0;
+  padding: 1.25rem 1.5rem;
+  background: $white-08;
+  border: 1px solid $white-12;
+  border-radius: $radius;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.3rem;
+  margin: 0;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  color: $white;
+}
+
+.statLabel {
+  @include label($white-55);
+}
+
+// ── Services list (native details, no client JS) ────────────
+.listWrap {
+  min-width: 0;
+  margin-top: 3.5rem;
+
+  @include belowDesktop {
+    margin-top: 0;
+  }
+}
+
+.listLabel {
+  @include label($white-55);
+  margin: 0 0 1rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  border-bottom: 1px solid $white-12;
+
+  &:first-child {
+    border-top: 1px solid $white-12;
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0.75rem;
+  border-radius: $radius;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: -2px;
+  }
+}
+
+.details[open] > .svg {
+  transform: scale(1.2);
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: $accent-on-dark;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.itemHead {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+}
+
+.itemTitle {
+  @include card-title(sm, $white-88);
+}
+
+.itemTag {
+  @include label($accent-on-dark);
+}
+
+.toggle {
+  flex-shrink: 0;
+  display: flex;
+  color: $white-55;
+}
+
+.details[open] .toggle {
+  color: $accent-on-dark;
+  transform: rotate(90deg);
+}
+
+.panel {
+  padding: 0.25rem 0.75rem 1.25rem 4.25rem;
+
+  p {
+    @include small-text($white-75);
+    margin: 0 0 0.75rem;
+  }
+
+  @include mobile {
+    padding-left: 0.75rem;
+  }
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .summary {
+    transition: background 0.2s ease;
+  }
+
+  .toggle {
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .ctaSecondary {
+    transition: color 0.2s ease;
+  }
+}

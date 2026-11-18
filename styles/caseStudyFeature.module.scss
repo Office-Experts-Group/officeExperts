@@ -1,0 +1,216 @@
+// /styles/caseStudyFeature.module.scss
+@use "./globals" as *;
+
+// Three tones, set as custom properties so the rules below are written once.
+.light {
+  --cs-bg: #{$white};
+  --cs-border: #{$border};
+  --cs-title: #{$text-primary};
+  --cs-text: #{$text-secondary};
+  --cs-label: #{$accent};
+  --cs-stat-bg: #{$grayBGC};
+  --cs-stat-value: #{$text-primary};
+  --cs-stat-label: #{$text-secondary};
+  --cs-icon: #{$accent};
+}
+
+.dark {
+  --cs-bg: #{$dark-bg};
+  --cs-border: #{$white-08};
+  --cs-title: #{$white};
+  --cs-text: #{$white-75};
+  --cs-label: #{$accent-on-dark};
+  --cs-stat-bg: #{$white-08};
+  --cs-stat-value: #{$white};
+  --cs-stat-label: #{$white-55};
+  --cs-icon: #{$accent-on-dark};
+}
+
+.accentDark {
+  --cs-bg: #{$accent-dark};
+  --cs-border: #{$white-12};
+  --cs-title: #{$white};
+  --cs-text: #{$white-88};
+  --cs-label: #{$white-75};
+  --cs-stat-bg: #{$white-12};
+  --cs-stat-value: #{$white};
+  --cs-stat-label: #{$white-65};
+  --cs-icon: #{$accent-on-dark};
+}
+
+.feature {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  padding: 3rem;
+  background: var(--cs-bg);
+  border: 1px solid var(--cs-border);
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    padding: 2rem;
+  }
+  @include mobile {
+    padding: 1.5rem;
+  }
+  @include desktopUp {
+    grid-template-columns: 5fr 6fr;
+    gap: 3.5rem;
+  }
+}
+
+.reverse .media {
+  @include desktopUp {
+    order: 2;
+  }
+}
+
+.media {
+  margin: 0;
+
+  // Keeps the image in view while the longer copy scrolls past.
+  @include desktopUp {
+    position: sticky;
+    top: $scroll-offset;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: $radius;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.tag {
+  @include label(var(--cs-label));
+  margin: 0;
+}
+
+.title {
+  @include card-title(lg, var(--cs-title));
+  margin: 0;
+}
+
+.summary {
+  @include body-text(var(--cs-text));
+  margin: 0;
+}
+
+// ── Stats ───────────────────────────────────────────────────
+.stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 1rem;
+  background: var(--cs-stat-bg);
+  border-radius: $radius;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: $heading-weight;
+  line-height: 1.1;
+  color: var(--cs-stat-value);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--cs-stat-label);
+}
+
+// ── What we built ───────────────────────────────────────────
+.build {
+  width: 100%;
+}
+
+.buildLabel {
+  @include label(var(--cs-label));
+  margin: 0 0 0.75rem;
+}
+
+.buildList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.buildItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  @include small-text(var(--cs-text));
+}
+
+.buildIcon {
+  flex-shrink: 0;
+  display: flex;
+  margin-top: 0.15rem;
+  color: var(--cs-icon);
+}
+
+// ── Quote ───────────────────────────────────────────────────
+.quote {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--cs-stat-bg);
+  border-radius: $radius;
+
+  p {
+    @include body-text(var(--cs-title));
+    margin: 0 0 0.75rem;
+    font-style: italic;
+  }
+
+  footer {
+    @include label(var(--cs-label));
+  }
+}
+
+// ── Links ───────────────────────────────────────────────────
+// The button mixins use nowrap, so long link text is allowed to wrap here.
+.cta {
+  margin-top: 0.25rem;
+}
+
+.ctaLight {
+  margin-top: 0.25rem;
+  @include btn-on-accent;
+}
+
+.feature .cta,
+.feature .ctaLight {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.3;
+}

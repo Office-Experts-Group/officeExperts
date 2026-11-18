@@ -9,16 +9,58 @@
 <url><loc>https://www.officeexperts.com.au/blog</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/convert-canva-to-word</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/document-rebranding</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/export-to-pdf-in-power-apps</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/fields-and-repeating-data-in-word</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/file-attachments-in-power-apps</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/google-docs-vs-microsoft-word</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/microsoft-word-for-mac</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/pdf-to-word-conversion</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/power-apps-pdf-function</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/power-apps-with-sql-database</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/power-bi-for-financial-services</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/power-bi-in-healthcare-analytics</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/power-bi-licensing-costs</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/sharepoint-lists</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/ultimate-guide-to-word-templates</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/word-desktop-vs-web</loc></url>
 <url><loc>https://www.officeexperts.com.au/blog/word-templates-for-legal-firms</loc></url>
+<url><loc>https://www.officeexperts.com.au/blog/xero-to-power-bi</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/advisory-branding-template-rollout</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/automated-proposal-generation-in-microsoft</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/biochar-ai-go-to-market-analysis-uk</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/building-consultants-inspection-crm</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/committee-report-master-template-pdf-merge</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/community-services-excel-consolidation-rebuild</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/corporate-group-multi-entity-master-template-suite</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/custom-quoting-tool</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/environmental-consultancy-word-template-rebuild</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/film-crew-booking-system-access-nextjs-rebuild</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/financial-planning-word-document-builder</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/financial-services-ai-risk-compliance-automation</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/food-manufacturer-excel-costing-workbook</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/golf-supplier-sales-data-consolidation</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/government-department-enterprise-office-template-suite</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/government-health-department-editable-pdf-forms</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/government-health-master-template-document-transfer</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/government-workplace-safety-interactive-word-forms</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/healthcare-patient-form-followup-automation</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/insurance-word-quoting-report-popup-form</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/internal-ai-proposal-assistant-azure-migration</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/legal-firm-template-suite-formatting-tab</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/legal-firm-word-training-workshop</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/life-insurance-real-time-competitive-intelligence</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/manufacturing-project-setup-automation</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/private-client-cashflow-forecasting-tool</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/professional-services-sharepoint-foundation-workshops</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/rdao-application-ai-review-workflow</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/research-organisation-access-kanban-planner</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/retail-analytics-automated-review-deck-generator</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/retail-power-bi-partner-reporting-security</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/sporting-goods-agentic-ai-customer-service</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/sporting-organisation-multi-brand-word-template</loc></url>
+<url><loc>https://www.officeexperts.com.au/case-studies/water-education-program-word-powerpoint-templates</loc></url>
 <url><loc>https://www.officeexperts.com.au/client-testimonials</loc></url>
 <url><loc>https://www.officeexperts.com.au/contact-us</loc></url>
-<url><loc>https://www.officeexperts.com.au/contact-us/request-a-quote</loc></url>
 <url><loc>https://www.officeexperts.com.au/faq</loc></url>
 <url><loc>https://www.officeexperts.com.au/locations</loc></url>
 <url><loc>https://www.officeexperts.com.au/looking-for-a-job</loc></url>
@@ -69,6 +111,16 @@
 <url><loc>https://www.officeexperts.com.au/services/microsoft-365-api-integration</loc></url>
 <url><loc>https://www.officeexperts.com.au/services/microsoft-dot-net</loc></url>
 <url><loc>https://www.officeexperts.com.au/services/microsoft-office-365</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/ai-with-power-platform</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/excel-to-power-bi-migration</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/microsoft-fabric</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/power-apps</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/power-automate</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/power-bi</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/power-bi-data-integration</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/power-pages</loc></url>
+<url><loc>https://www.officeexperts.com.au/services/microsoft-power-platform/sharepoint-consulting-and-development</loc></url>
 <url><loc>https://www.officeexperts.com.au/services/microsoft-powerpoint</loc></url>
 <url><loc>https://www.officeexperts.com.au/services/microsoft-publisher</loc></url>
 <url><loc>https://www.officeexperts.com.au/services/microsoft-word</loc></url>
@@ -99,206 +151,6 @@
 <url><loc>https://www.officeexperts.com.au/terms-and-conditions</loc></url>
 <url><loc>https://www.officeexperts.com.au/case-studies</loc></url>
 </urlset>
-
-## Case studies
-
-https://www.officeexperts.com.au/case-studies
-
-https://www.officeexperts.com.au/case-studies/advisory-branding-template-rollout
-
-> Rebuilt Red Fox Advisory's template suite from a single Master Template with a locked-down Formatting tab and branded Quick Parts so the new brand stays consistent.
-
-https://www.officeexperts.com.au/case-studies/biochar-ai-go-to-market-analysis-uk
-
-> Used AI research agents and a SharePoint knowledge base to turn 10,000+ documents into a 70-page UK BioChar go-to-market report in 4 weeks instead of 3 months.
-
-https://www.officeexperts.com.au/case-studies/building-consultants-inspection-crm
-
-> Replaced manual building inspection enquiry handling with an automated SharePoint, Power Apps and Power Automate pipeline that generates quotes ready to email.
-
-https://www.officeexperts.com.au/case-studies/committee-report-master-template-pdf-merge
-
-> Turned multi-author committee reports into one consistently formatted Master Template document and merged it with supporting PDFs into a single submission-ready file over a weekend.
-
-https://www.officeexperts.com.au/case-studies/community-services-excel-consolidation-rebuild
-
-> Replaced a 400MB linked spreadsheet across four locations with a row-based template and a one-click Power Query refresh.
-
-https://www.officeexperts.com.au/case-studies/corporate-group-multi-entity-master-template-suite
-
-> Built Master Templates for four related entities from one shared Global Common template, plus a Formatting tab with a copy/paste macro that strips foreign formatting.
-
-https://www.officeexperts.com.au/case-studies/custom-quoting-tool
-
-> Built a React-based tax depreciation calculator embedded in WordPress that gives property investors an instant emailed estimate instead of a manual quote.
-
-https://www.officeexperts.com.au/case-studies/film-crew-booking-system-access-nextjs-rebuild
-
-> Migrated a VM-locked Access 2000 crew booking database to Azure SQL Server and rebuilt the website in Next.js for 10x faster load times.
-
-https://www.officeexperts.com.au/case-studies/financial-services-ai-risk-compliance-automation
-
-> Modernised an FCA-regulated firm's spreadsheet-based compliance workflow with a live SharePoint risk register, AI risk-mapping agents and a real-time dashboard, cutting monthly review time from 6 hours to 1.
-
-https://www.officeexperts.com.au/case-studies/food-manufacturer-excel-costing-workbook
-
-> Merged an array of disconnected Excel workbooks into one automated costing system with forms, state-based margins and Admin-only data protection.
-
-https://www.officeexperts.com.au/case-studies/golf-supplier-sales-data-consolidation
-
-> Used Power Query and Power Pivot to consolidate dozens of supplier sales files into one automated summary with year-on-year comparisons.
-
-https://www.officeexperts.com.au/case-studies/government-department-enterprise-office-template-suite
-
-> Redesigned 17 enterprise Word templates and built a custom Formatting Control ribbon and PowerPoint framework so a state transport department's documents stay on-brand.
-
-https://www.officeexperts.com.au/case-studies/government-health-department-editable-pdf-forms
-
-> Built two internal staff forms into an existing branded master template and converted them to editable PDFs, then trained the team to maintain them.
-
-https://www.officeexperts.com.au/case-studies/government-health-master-template-document-transfer
-
-> Built a rebranded Master Template for a state health department and transferred its entire existing document set into the new format without corrupting content.
-
-https://www.officeexperts.com.au/case-studies/government-workplace-safety-interactive-word-forms
-
-> Rebuilt a workplace safety authority's static Word forms into guided, tamper-proof documents using content controls and document protection.
-
-https://www.officeexperts.com.au/case-studies/healthcare-patient-form-followup-automation
-
-> Built two scheduled Power Automate flows against a Microsoft Fabric warehouse to automatically remind, escalate and close off patient forms for around 1,000 active patients.
-
-https://www.officeexperts.com.au/case-studies/internal-ai-proposal-assistant-azure-migration
-
-> Built a conversational AI assistant that drafts proposals into the real Word template from call notes and a live rate card, then migrated it fully inside the Azure tenant.
-
-https://www.officeexperts.com.au/case-studies/legal-firm-template-suite-formatting-tab
-
-> Rebuilt a law firm's document suite around its style guide and added a custom Formatting tab with locked-down controls and one-click legal numbering.
-
-https://www.officeexperts.com.au/case-studies/legal-firm-word-training-workshop
-
-> Delivered a live 90-minute Teams Word training session built around a legal firm's own documents for around 29 staff.
-
-https://www.officeexperts.com.au/case-studies/life-insurance-real-time-competitive-intelligence
-
-> Built an AI competitive intelligence system on a bank's Microsoft 365 tenancy that detects and scores competitor changes, cutting response time from two weeks to twelve minutes.
-
-https://www.officeexperts.com.au/case-studies/manufacturing-project-setup-automation
-
-> Built a Power Automate flow that reads a new project email and builds the full SharePoint job folder structure in under a minute instead of 30.
-
-https://www.officeexperts.com.au/case-studies/private-client-cashflow-forecasting-tool
-
-> Built a private cash flow planning tool that smooths uneven investment income against steady commitments and calculates the monthly income needed.
-
-https://www.officeexperts.com.au/case-studies/professional-services-sharepoint-foundation-workshops
-
-> Ran live SharePoint Foundation Workshops to move a team off shared logins onto a proper site structure and Owners, Members and Visitors access model.
-
-https://www.officeexperts.com.au/case-studies/rdao-application-ai-review-workflow
-
-> Built an AI agentic workflow that cut an investor's application review from 6-7 days to around 90 minutes with fully traceable findings.
-
-https://www.officeexperts.com.au/case-studies/retail-analytics-automated-review-deck-generator
-
-> Built a Python tool that queries Power BI and assembles a branded ~660-slide retailer review deck in under five minutes.
-
-https://www.officeexperts.com.au/case-studies/retail-power-bi-partner-reporting-security
-
-> Locked down partner-facing Power BI reports with Row-Level Security and verified with a real external account that partners could never see each other's data.
-
-https://www.officeexperts.com.au/case-studies/sporting-goods-agentic-ai-customer-service
-
-> Built a chained agentic AI customer service system on Power Automate and Power Apps that cut ticket resolution time from 48 hours to 3.
-
-https://www.officeexperts.com.au/case-studies/sporting-organisation-multi-brand-word-template
-
-> Built one Word Master Template with a colour theme for each discipline so a national sporting organisation's sub-brands stay consistent.
-
-https://www.officeexperts.com.au/case-studies/water-education-program-word-powerpoint-templates
-
-> Translated an InDesign lesson design into working Word and PowerPoint templates with Quick Parts and a Slide Master system for educators.
-
-https://www.officeexperts.com.au/case-studies/automated-proposal-generation-in-microsoft
-
-> Replaced hand-built 50-page proposals with an Access (later SQL Server) database that generates the full Word document from selected sections.
-
-https://www.officeexperts.com.au/case-studies/environmental-consultancy-word-template-rebuild
-
-> Rebuilt an environmental consultancy's beautifully designed but structurally fragile Word templates on proper foundations without changing the approved design.
-
-https://www.officeexperts.com.au/case-studies/insurance-word-quoting-report-popup-form
-https://www.officeexperts.com.au/case-studies/financial-planning-word-document-builder
-https://www.officeexperts.com.au/case-studies/research-organisation-access-kanban-planner
-
-# Power Platform Experts – All Site URLs
-
-## Main pages
-
-https://www.powerplatformexperts.com.au
-https://www.powerplatformexperts.com.au/about-us
-https://www.powerplatformexperts.com.au/meet-the-team
-https://www.powerplatformexperts.com.au/client-testimonials
-https://www.powerplatformexperts.com.au/blog
-https://www.powerplatformexperts.com.au/locations
-https://www.powerplatformexperts.com.au/contact-us
-https://www.powerplatformexperts.com.au/contact-us/request-a-quote
-https://www.powerplatformexperts.com.au/test-page
-https://www.powerplatformexperts.com.au/video-sitemap.xml
-
-## Services
-
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-apps
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-bi
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-pages
-https://www.powerplatformexperts.com.au/services/microsoft-power-platform/ai-integrations
-
-## Support and solution pages
-
-https://www.powerplatformexperts.com.au/power-platform-support
-https://www.powerplatformexperts.com.au/power-platform-assessment
-https://www.powerplatformexperts.com.au/power-apps-support
-https://www.powerplatformexperts.com.au/power-automate-support
-https://www.powerplatformexperts.com.au/power-bi-support
-https://www.powerplatformexperts.com.au/power-pages-support
-https://www.powerplatformexperts.com.au/power-bi-data-integration
-https://www.powerplatformexperts.com.au/excel-to-power-bi-migration
-https://www.powerplatformexperts.com.au/microsoft-fabric
-https://www.powerplatformexperts.com.au/sharepoint-consulting-and-development
-
-## Location pages
-
-https://www.powerplatformexperts.com.au/power-bi-brisbane
-https://www.powerplatformexperts.com.au/power-bi-melbourne
-https://www.powerplatformexperts.com.au/power-bi-sydney
-https://www.powerplatformexperts.com.au/power-platform-consultants-adelaide
-https://www.powerplatformexperts.com.au/power-platform-consultants-brisbane
-https://www.powerplatformexperts.com.au/power-platform-consultants-canberra
-https://www.powerplatformexperts.com.au/power-platform-consultants-central-coast-nsw
-https://www.powerplatformexperts.com.au/power-platform-consultants-darwin
-https://www.powerplatformexperts.com.au/power-platform-consultants-gold-coast
-https://www.powerplatformexperts.com.au/power-platform-consultants-melbourne
-https://www.powerplatformexperts.com.au/power-platform-consultants-northern-rivers-nsw
-https://www.powerplatformexperts.com.au/power-platform-consultants-perth
-https://www.powerplatformexperts.com.au/power-platform-consultants-richmond
-https://www.powerplatformexperts.com.au/power-platform-consultants-sydney
-https://www.powerplatformexperts.com.au/power-platform-consultants-wollongong
-
-## Blog posts
-
-https://www.powerplatformexperts.com.au/blog/export-to-pdf-in-power-apps
-https://www.powerplatformexperts.com.au/blog/file-attachments-in-power-apps
-https://www.powerplatformexperts.com.au/blog/power-apps-pdf-function
-https://www.powerplatformexperts.com.au/blog/power-apps-with-sql-database
-https://www.powerplatformexperts.com.au/blog/power-bi-for-financial-services
-https://www.powerplatformexperts.com.au/blog/power-bi-in-healthcare-analytics
-https://www.powerplatformexperts.com.au/blog/power-bi-licensing-costs
-https://www.powerplatformexperts.com.au/blog/sharepoint-lists
-https://www.powerplatformexperts.com.au/blog/xero-to-power-bi
-
 # Access
 
 https://www.accessexperts.com.au/access-azure-cloud-based-solutions

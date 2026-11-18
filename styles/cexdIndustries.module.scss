@@ -1,0 +1,205 @@
+// /styles/cexdIndustries.module.scss
+@use "./globals" as *;
+
+.cexdIndustries {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+// ── Header ──────────────────────────────────────────────────
+.header {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include desktopUp {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+  @include mobile {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.heading {
+  @include heading-section;
+  margin: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.headerBody {
+  @include lede;
+  margin: 0;
+}
+
+// ── Cards ───────────────────────────────────────────────────
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktopUp {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  height: 100%;
+  padding: 1.75rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+
+  &:hover {
+    border-color: $accent-border;
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cardIcon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: $accent;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardTag {
+  @include label($accent);
+}
+
+.cardIndustry {
+  @include card-title(sm);
+  margin: 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.blockLabel {
+  @include label;
+  margin: 0;
+}
+
+.blockText {
+  @include small-text;
+  margin: 0;
+}
+
+// The "how we can help" half sits on a tinted panel instead of a side border.
+.solution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding: 1.1rem 1.25rem;
+  background: $accent-tint;
+  border-radius: $radius;
+}
+
+.solutionLabel {
+  @include label($accent);
+  margin: 0;
+}
+
+// ── Footer strip ────────────────────────────────────────────
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  padding: 1.75rem 2rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.footerText {
+  @include body-text;
+  flex: 1;
+  min-width: 15rem;
+  margin: 0;
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+.footerLink {
+  @include arrow-link;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+}
