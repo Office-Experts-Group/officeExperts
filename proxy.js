@@ -19,7 +19,10 @@ const BPOINT_HOSTS = "*.bpoint.com.au";
 // Gurulytics lead tracking (ConversionTracking posts leads here)
 const GURULYTICS_HOSTS = "seo.gurulytics.app";
 // Remembers which platform section the visitor is browsing, so the
-// /case-studies page can list that platform's studies first (see page.js).
+// /case-studies page can list that platform's studies first (see page.js)
+// // next to GURULYTICS_HOSTS
+const OPENAI_SCRIPT_HOSTS = "https://bzrcdn.openai.com";
+const OPENAI_CONNECT_HOSTS = "https://bzr.openai.com https://bzrcdn.openai.com";
 const SITE_COOKIE = "oe-site";
 // Maps /services/microsoft-{platform} to the `site` key in caseStudies.js.
 // Kept local so the large case study array isn't bundled into the proxy.
@@ -47,7 +50,10 @@ function scriptDirectives(hosts) {
 // Payment page: allows BPoint scripts, frames and connections
 const PAYMENT_CSP = [
   "default-src 'self'",
-  ...scriptDirectives(`${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS}`),
+  // STANDARD_CSP: add to the script directives
+  ...scriptDirectives(
+    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS}`,
+  ),
   `style-src 'self' 'unsafe-inline' ${BPOINT_HOSTS} fonts.googleapis.com`,
   `img-src 'self' data: https:`,
   `font-src 'self' ${BPOINT_HOSTS} fonts.gstatic.com`,
@@ -64,7 +70,7 @@ const STANDARD_CSP = [
   "font-src 'self' fonts.gstatic.com",
   "frame-src 'self' *.vimeo.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.doubleclick.net",
   "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.googlevideo.com",
-  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${GURULYTICS_HOSTS} *.officeexperts.com.au`,
+  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${GURULYTICS_HOSTS} ${OPENAI_CONNECT_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
 export function proxy(request) {
