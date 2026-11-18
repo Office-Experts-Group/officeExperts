@@ -1,0 +1,915 @@
+// /styles/customExcelShortcutsBlog.module.scss
+@use "./globals" as *;
+
+$rail: 1400px;
+$article-width: 820px;
+$radius-sm: 0.65rem;
+
+.page {
+  background: $white;
+}
+
+// ── Hero ────────────────────────────────────────────────────────────────────
+.hero {
+  background: linear-gradient(180deg, $dark-bg 0%, $dark-mid 100%);
+  color: $white;
+  padding: 12rem $gutter 9rem $gutter;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 8rem $mobGutter;
+  }
+
+  @include mobile {
+    padding: 7rem 1.25rem 7rem 1.25rem;
+  }
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent;
+}
+
+.title .accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  max-width: 34rem;
+  margin: 0 0 2rem;
+  @include lede($white-75);
+  font-size: 1.1rem;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.avatar,
+.avatarLarge {
+  flex-shrink: 0;
+  display: block;
+  border: 4px solid $accent;
+  border-radius: 50%;
+  overflow: hidden;
+  background: $white;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.avatarLarge {
+  width: 56px;
+  height: 56px;
+}
+
+.authorMeta {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.authorName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.authorDate {
+  font-size: 0.85rem;
+  color: $white-65;
+}
+
+.heroArt {
+  min-width: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    max-width: 34rem;
+  }
+}
+
+.flow,
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: flowDash 1.4s linear infinite;
+  }
+
+  .pulse {
+    animation: pulseDot 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.7);
+  }
+}
+
+// ── At a glance ─────────────────────────────────────────────────────────────
+.glance {
+  position: relative;
+  z-index: 2;
+  margin-top: -5rem;
+  padding: 0 $gutter;
+
+  @include belowDesktop {
+    padding: 0 $mobGutter;
+  }
+
+  @include mobile {
+    margin-top: -4rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.glanceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+.glanceCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.glanceChip,
+.chip,
+.noteChip {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: $accent-tint;
+  color: $accent;
+  border-radius: 50%;
+
+  svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+.glanceValue {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: $heading-weight;
+  line-height: 1;
+  color: $accent;
+}
+
+.glanceLabel {
+  display: block;
+  margin: 0.4rem 0 0.25rem;
+  @include card-title(sm);
+}
+
+.glanceText {
+  display: block;
+  @include small-text;
+}
+
+// ── Layout: contents rail plus centred article ──────────────────────────────
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  max-width: calc(#{$article-width} + 3rem);
+  margin-inline: auto;
+  padding: 4rem 1.5rem 2rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    padding: 3rem 1.25rem 1.5rem;
+  }
+
+  @media (min-width: $rail) {
+    grid-template-columns: minmax(0, 1fr) $article-width minmax(0, 1fr);
+    max-width: none;
+    padding: 5rem 2rem 3rem;
+  }
+}
+
+.toc {
+  background: $light-bg;
+  border-radius: $radius;
+  padding: 1.5rem 1.4rem;
+
+  ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    @media (min-width: $rail) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.1rem;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.35rem 0.5rem;
+    border-radius: $radius-sm;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: $accent-tint;
+      color: $accent;
+    }
+  }
+
+  @media (min-width: $rail) {
+    grid-column: 1;
+    justify-self: end;
+    width: 210px;
+    margin-right: 1.5rem;
+    position: sticky;
+    top: $scroll-offset;
+    max-height: calc(100vh - #{$scroll-offset} - 2rem);
+    overflow-y: auto;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+.tocTitle {
+  display: block;
+  @include label($accent);
+}
+
+.article {
+  min-width: 0;
+
+  @media (min-width: $rail) {
+    grid-column: 2;
+  }
+
+  p {
+    margin: 0 0 1.15rem;
+    @include body-text;
+    font-size: 1.02rem;
+  }
+
+  strong {
+    color: $text-primary;
+  }
+
+  h3 {
+    margin: 2rem 0 1rem;
+    @include card-title(lg);
+  }
+}
+
+.section {
+  margin-bottom: 4.5rem;
+  scroll-margin-top: $scroll-offset;
+
+  h2 {
+    margin: 0 0 1.4rem;
+    @include heading-section;
+  }
+
+  @include mobile {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.article .inlineLink {
+  color: $accent;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ── Callouts and notes (full boxes, no coloured edge) ───────────────────────
+.callout {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  margin: 1.25rem 0;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(135deg, $accent-light 0%, $white 100%);
+  border: 1px solid $accent-border;
+  border-radius: $radius;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2.2rem;
+    right: -2.2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 1rem rgba(4, 105, 153, 0.05),
+      0 0 0 2rem rgba(4, 105, 153, 0.035);
+    pointer-events: none;
+  }
+}
+
+.calloutLabel {
+  display: block;
+  margin-bottom: 0.3rem;
+  @include label($accent);
+}
+
+.calloutText {
+  @include small-text;
+  font-size: 0.95rem;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin: 1.5rem 0 0;
+  padding: 1.1rem 1.3rem;
+  background: $accent-light;
+  border: 1px solid $accent-border;
+  border-radius: $radius;
+}
+
+.noteWarn {
+  background: $light-bg;
+  border-color: $border-strong;
+
+  .noteChip {
+    background: $white;
+    color: $text-secondary;
+    box-shadow: inset 0 0 0 1px $border-strong;
+  }
+
+  .noteLabel {
+    color: $text-secondary;
+  }
+}
+
+.noteChip {
+  width: 2.2rem;
+  height: 2.2rem;
+
+  svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+.noteLabel {
+  display: block;
+  margin-bottom: 0.2rem;
+  @include label($accent);
+}
+
+.noteText {
+  display: block;
+  @include small-text;
+  font-size: 0.95rem;
+}
+
+// ── Steps timeline ──────────────────────────────────────────────────────────
+.steps {
+  list-style: none;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    bottom: 0.2rem;
+    left: calc(1.2rem - 1px);
+    width: 2px;
+    background: $accent-border;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.stepBadge {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: $accent;
+  color: $white;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.stepTitle {
+  display: block;
+  margin: 0.25rem 0 0.2rem;
+  @include card-title(sm);
+}
+
+.stepText {
+  display: block;
+  @include small-text;
+  font-size: 0.97rem;
+}
+
+// ── Shortcut blocks ─────────────────────────────────────────────────────────
+.shortcutTop {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.shortcutText p:last-child {
+  margin-bottom: 0;
+}
+
+.keysPanel {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.1rem 1.25rem 1.25rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+  justify-items: start;
+}
+
+.keysLabel {
+  @include label($text-secondary);
+}
+
+.keyRow,
+.pcRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pcRow {
+  margin-top: 0.1rem;
+}
+
+.keyRow {
+  margin-bottom: 0.7rem;
+}
+
+.keyCap {
+  display: block;
+  width: auto;
+  height: 3.4rem;
+
+  @include mobile {
+    height: 3rem;
+  }
+}
+
+.plus {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $text-muted;
+}
+
+.kbd {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background: $white;
+  border: 1px solid $border-strong;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 0 $line-strong;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+// ── Tables ──────────────────────────────────────────────────────────────────
+.tableWrap {
+  margin: 1.25rem 0 1.5rem;
+  border: 1px solid $border;
+  border-radius: $radius;
+  overflow-x: auto;
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  thead th {
+    padding: 0.9rem 1.1rem;
+    background: $dark-bg;
+    color: $white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  tbody th,
+  tbody td {
+    padding: 0.9rem 1.1rem;
+    text-align: left;
+    vertical-align: top;
+    color: $text-secondary;
+  }
+
+  tbody th {
+    color: $text-primary;
+    font-weight: 700;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $light-bg;
+  }
+}
+
+// ── Diagrams ────────────────────────────────────────────────────────────────
+.diagram {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    margin-top: 0.9rem;
+    @include small-text;
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: 0.9rem;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 480px;
+}
+
+// ── Mistake cards ───────────────────────────────────────────────────────────
+.mistakeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  > * {
+    min-width: 0;
+  }
+
+  .mistake:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.mistake {
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  h3 {
+    margin: 0.4rem 0 1rem;
+    @include card-title(md);
+  }
+}
+
+.mistakeNum {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px $accent;
+}
+
+.sketch {
+  margin-bottom: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
+.instead {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.8rem;
+  background: $accent-tint;
+  border-radius: $radius-pill;
+  @include label($accent);
+}
+
+.mistakeFix {
+  display: block;
+  @include small-text;
+}
+
+// ── CTA band ────────────────────────────────────────────────────────────────
+.cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, $dark-bg 0%, $dark-mid 100%);
+  border-radius: $radius;
+  color: $white;
+
+  > * {
+    min-width: 0;
+  }
+
+  h2 {
+    @include heading-section-on-dark;
+  }
+
+  p {
+    margin: 0;
+    @include body-text($white-75);
+  }
+
+  .accent {
+    color: $accent-on-dark;
+  }
+
+  .inlineLink {
+    color: $accent-on-dark;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.ctaActions {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.ctaLink {
+  @include arrow-link($accent-on-dark);
+}
+
+// ── FAQ ─────────────────────────────────────────────────────────────────────
+.faq {
+  display: grid;
+  gap: 0.75rem;
+
+  details {
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: $text-primary;
+    cursor: pointer;
+    list-style: none;
+
+    svg {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      color: $accent;
+      transition: transform 0.2s ease;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $accent;
+      outline-offset: -2px;
+    }
+  }
+
+  details[open] summary svg {
+    transform: rotate(180deg);
+  }
+}
+
+.faqAnswer {
+  padding: 0 1.3rem 0.4rem;
+}
+
+// ── Author box ──────────────────────────────────────────────────────────────
+.authorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: $light-bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+
+  p {
+    margin: 0;
+    @include small-text;
+  }
+}
+
+.authorBoxTitle {
+  display: block;
+  margin-bottom: 0.3rem;
+  @include label($accent);
+}
+
+// ── Related reading ─────────────────────────────────────────────────────────
+.related {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.4rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  text-decoration: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+.relatedTitle {
+  @include card-title(md);
+}
+
+.relatedText {
+  flex: 1;
+  @include small-text;
+}
+
+.relatedMore {
+  @include arrow-link;
+}

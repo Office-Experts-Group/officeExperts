@@ -1,54 +1,55 @@
-import React from "react";
+// /app/blog/custom-excel-shortcuts-with-macros/layout.js
+
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/custom-excel-shortcuts-with-macros";
+const PAGE_TITLE = "10 Custom Excel Shortcuts Using Macros | Office Experts";
+const PAGE_DESCRIPTION =
+  "Learn how to create your own Excel shortcuts using macros. 10 copy-and-paste VBA macros for Mac and Windows, each with a practical use case.";
+const PAGE_KEYWORDS = [
+  "Excel custom shortcuts",
+  "Excel macros",
+  "VBA shortcuts",
+  "Excel automation",
+  "Excel keyboard shortcuts",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png";
+const OG_IMAGE_ALT = "Office Experts Group Logo";
 
 export const metadata = {
-  // Basic metadata
-  title: "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
-  description:
-    "Learn how to create your own Excel shortcuts using macros. 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
-    description:
-      "Learn how to create your own Excel shortcuts using macros. 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-    url: "https://www.officeexperts.com.au/blog/custom-excel-shortcuts-with-macros",
-    siteName: "Office Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: OG_IMAGE_ALT,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Excel custom shortcuts"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "10 Custom Excel Shortcuts Using Macros (With Practical Use Cases)",
-    description:
-      "Learn how to create your own Excel shortcuts using macros. 10 practical custom shortcuts that will supercharge your productivity and save you hours of work.",
-    images: ["/logo.png"],
-  },
-
-  alternates: {
-    alternate: [
-      {
-        url: "https://www.officeexperts.com.au/blog/custom-excel-shortcuts-with-macros",
-      },
-    ],
-    canonical:
-      "https://www.excelexperts.com.au/blog/custom-excel-shortcuts-with-macros",
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({ children }) {
+export default function CustomExcelShortcutsLayout({ children }) {
   return <>{children}</>;
 }
