@@ -18,11 +18,12 @@ const VIDEO_SCRIPT_HOSTS = "*.vimeo.com *.youtube.com *.ytimg.com";
 const BPOINT_HOSTS = "*.bpoint.com.au";
 // Gurulytics lead tracking (ConversionTracking posts leads here)
 const GURULYTICS_HOSTS = "seo.gurulytics.app";
-// Remembers which platform section the visitor is browsing, so the
-// /case-studies page can list that platform's studies first (see page.js)
-// // next to GURULYTICS_HOSTS
+// OpenAI Ads measurement pixel (ChatGPT ads conversion tracking).
+// The SDK loads from bzrcdn.openai.com; events are sent to bzr.openai.com.
 const OPENAI_SCRIPT_HOSTS = "https://bzrcdn.openai.com";
 const OPENAI_CONNECT_HOSTS = "https://bzr.openai.com https://bzrcdn.openai.com";
+// Remembers which platform section the visitor is browsing, so the
+// /case-studies page can list that platform's studies first (see page.js).
 const SITE_COOKIE = "oe-site";
 // Maps /services/microsoft-{platform} to the `site` key in caseStudies.js.
 // Kept local so the large case study array isn't bundled into the proxy.
@@ -50,10 +51,7 @@ function scriptDirectives(hosts) {
 // Payment page: allows BPoint scripts, frames and connections
 const PAYMENT_CSP = [
   "default-src 'self'",
-  // STANDARD_CSP: add to the script directives
-  ...scriptDirectives(
-    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS}`,
-  ),
+  ...scriptDirectives(`${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS}`),
   `style-src 'self' 'unsafe-inline' ${BPOINT_HOSTS} fonts.googleapis.com`,
   `img-src 'self' data: https:`,
   `font-src 'self' ${BPOINT_HOSTS} fonts.gstatic.com`,
@@ -64,7 +62,9 @@ const PAYMENT_CSP = [
 // All other pages: adds YouTube and Vimeo embeds and Gurulytics lead tracking
 const STANDARD_CSP = [
   "default-src 'self'",
-  ...scriptDirectives(`${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS}`),
+  ...scriptDirectives(
+    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS}`,
+  ),
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
   "img-src 'self' data: https:",
   "font-src 'self' fonts.gstatic.com",
