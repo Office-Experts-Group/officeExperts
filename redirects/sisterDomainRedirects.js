@@ -64,4 +64,4 @@ const access = productRedirects(DOMAINS.access, {
   ],
 });
 
-module.exports = [...word, ...access];
+module.exports = [...access];
