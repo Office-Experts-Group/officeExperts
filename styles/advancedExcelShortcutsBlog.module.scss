@@ -1,0 +1,767 @@
+// /styles/advancedExcelShortcutsBlog.module.scss
+@use "./globals" as *;
+
+$rail: 1400px;
+$article-width: 820px;
+$key-height: 3rem;
+
+.page {
+  background: $white;
+}
+
+// ── Hero ────────────────────────────────────────────────────────────────────
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+  color: $white;
+  padding: 14rem 4vw 8rem 6rem;
+
+  @include belowDesktop {
+    padding: 10rem 2rem 7rem 2rem;
+  }
+
+  @include mobile {
+    padding: 6.5rem 1.25rem 5rem 1.25rem;
+  }
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1300px;
+  margin-inline: auto;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent;
+}
+
+.hero .accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0 0 1.75rem;
+  max-width: 38rem;
+  @include lede($white-88);
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.avatar,
+.avatarLarge {
+  display: inline-flex;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 4px solid $accent;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.avatarLarge {
+  width: 56px;
+  height: 56px;
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.authorName {
+  font-weight: 700;
+  color: $white;
+}
+
+.authorDetail {
+  @include small-text($white-65);
+}
+
+.heroArt {
+  width: 100%;
+  max-width: 34rem;
+  justify-self: center;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ── At a glance ─────────────────────────────────────────────────────────────
+.glance {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: -3.5rem auto 0;
+  padding: 0 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: -2.5rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.glanceCard {
+  padding: 1.4rem 1.6rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  p {
+    margin: 0.35rem 0 0;
+    @include small-text;
+  }
+}
+
+.glanceValue {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $accent;
+}
+
+.glanceLabel {
+  display: block;
+  margin-top: 0.4rem;
+  @include label($text-primary);
+}
+
+// ── Layout and contents ─────────────────────────────────────────────────────
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  max-width: calc(#{$article-width} + 3rem);
+  margin-inline: auto;
+  padding: 4rem 1.5rem 2rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    padding: 3rem 1.25rem 1.5rem;
+  }
+
+  @media (min-width: $rail) {
+    grid-template-columns: minmax(0, 1fr) $article-width minmax(0, 1fr);
+    max-width: none;
+    padding: 5rem 2rem 3rem;
+  }
+}
+
+.toc {
+  background: $light-bg;
+  border-radius: $radius;
+  padding: 1.5rem 1.4rem;
+
+  ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: $accent-tint;
+      color: $accent;
+    }
+  }
+
+  @media (min-width: $rail) {
+    grid-column: 1;
+    justify-self: end;
+    width: 210px;
+    margin-right: 1.5rem;
+    position: sticky;
+    top: $scroll-offset;
+    max-height: calc(100vh - #{$scroll-offset} - 2rem);
+    overflow-y: auto;
+    padding: 0;
+    background: transparent;
+
+    ul {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.1rem;
+    }
+  }
+}
+
+.tocTitle {
+  display: block;
+  @include label($accent);
+}
+
+.article {
+  min-width: 0;
+
+  p {
+    margin: 0 0 1.1rem;
+    @include lede;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    @include heading-section;
+  }
+
+  h3 {
+    margin: 0 0 0.4rem;
+    @include card-title(md);
+  }
+
+  @media (min-width: $rail) {
+    grid-column: 2;
+  }
+}
+
+.section {
+  padding-top: 3.5rem;
+  scroll-margin-top: $scroll-offset;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.article .inlineLink {
+  color: $accent;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ── Callout ─────────────────────────────────────────────────────────────────
+.callout {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem 1.25rem;
+  align-items: start;
+  margin: 1.75rem 0 0;
+  padding: 1.5rem 1.6rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, $accent-light 0%, $white 100%);
+  border: 1px solid $accent-border;
+  border-radius: $radius;
+}
+
+.calloutRings {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  color: $accent;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.calloutIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.calloutBody {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+
+  p {
+    margin: 0;
+    @include small-text($text-primary);
+  }
+}
+
+.calloutLabel {
+  display: block;
+  margin: 0 0 0.35rem;
+  @include label($accent);
+}
+
+// ── Diagrams ────────────────────────────────────────────────────────────────
+.diagram {
+  margin: 2rem 0 0;
+
+  figcaption {
+    margin-top: 0.75rem;
+    @include small-text($text-muted);
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.diagramInner {
+  min-width: 520px;
+  padding: 1rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ── Shortcut cards ──────────────────────────────────────────────────────────
+.shortcutList {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.shortcut {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  gap: 1.25rem 1.75rem;
+  align-items: start;
+  padding: 1.4rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-row;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.2rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+.shortcutKeys {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.platformLabel {
+  @include label($text-muted);
+}
+
+.keyCombo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.keyCap {
+  display: block;
+  width: auto;
+  height: $key-height;
+}
+
+.plus {
+  font-weight: 700;
+  color: $text-muted;
+}
+
+.pcVersion {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.6rem;
+  padding: 0.4rem 0.85rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius-pill;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.shortcutBody {
+  min-width: 0;
+
+  p {
+    margin: 0;
+    @include body-text;
+  }
+}
+
+.proTip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  padding: 0.7rem 0.9rem;
+  background: $accent-tint;
+  border-radius: 0.75rem;
+  @include small-text($text-primary);
+
+  svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2rem;
+    color: $accent;
+  }
+
+  strong {
+    color: $accent;
+  }
+}
+
+// ── Mistakes ────────────────────────────────────────────────────────────────
+.mistakes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.mistake {
+  padding: 1.5rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  p {
+    margin: 0;
+    @include body-text;
+  }
+}
+
+.mistakeIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.9rem;
+  border-radius: 0.75rem;
+  background: $accent-light;
+  color: $accent;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// ── Practice plan ───────────────────────────────────────────────────────────
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: 1.75rem 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 19px;
+    width: 2px;
+    background: $accent-border;
+  }
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.stepBadge {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $accent;
+  font-weight: 700;
+  color: $white;
+}
+
+.stepBody {
+  min-width: 0;
+
+  p {
+    margin: 0;
+    @include body-text;
+  }
+}
+
+// ── CTA band ────────────────────────────────────────────────────────────────
+.ctaBand {
+  padding: 2.5rem;
+  background: linear-gradient(160deg, $dark-bg 0%, $dark-mid 100%);
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.75rem 1.4rem;
+  }
+}
+
+.article .ctaTitle {
+  margin: 0 0 0.9rem;
+  @include heading-section-on-dark;
+
+  .accent {
+    color: $accent-on-dark;
+  }
+}
+
+.article .ctaText {
+  margin: 0 0 1.5rem;
+  @include lede($white-75);
+}
+
+.article .ctaInlineLink {
+  color: $accent-on-dark;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.ctaButton {
+  @include btn;
+}
+
+.ctaLink {
+  @include arrow-link($accent-on-dark);
+}
+
+// ── FAQ ─────────────────────────────────────────────────────────────────────
+.faq {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.faqItem {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  &[open] {
+    border-color: $accent-border;
+
+    .faqChevron {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: $text-primary;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.faqChevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: $accent;
+}
+
+.faqAnswer {
+  padding: 0 1.4rem 1.2rem;
+
+  p {
+    margin: 0;
+    @include body-text;
+  }
+}
+
+// ── Author box ──────────────────────────────────────────────────────────────
+.authorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  h4 {
+    margin: 0 0 0.4rem;
+    @include card-title(sm);
+  }
+
+  p {
+    margin: 0;
+    @include small-text;
+  }
+
+  @include mobile {
+    padding: 1.4rem;
+  }
+}
+
+// ── Related reading ─────────────────────────────────────────────────────────
+.related {
+  max-width: calc(#{$article-width} + 3rem);
+  margin-inline: auto;
+  padding: 2rem 1.5rem 5rem;
+
+  h2 {
+    margin: 0 0 1.5rem;
+    @include heading-section;
+  }
+
+  @include mobile {
+    padding: 1.5rem 1.25rem 4rem;
+  }
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  text-decoration: none;
+
+  h3 {
+    margin: 0;
+    @include card-title(md);
+  }
+
+  p {
+    margin: 0;
+    @include body-text;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+.relatedMore {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  @include arrow-link;
+}

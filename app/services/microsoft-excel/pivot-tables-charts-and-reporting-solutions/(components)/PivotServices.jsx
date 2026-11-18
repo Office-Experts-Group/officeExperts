@@ -118,15 +118,6 @@ const PivotServices = () => (
             The full reporting <span className={styles.accent}>toolkit.</span>
           </h2>
         </div>
-        {/* <div className={styles.headerAside}>
-          <p className={styles.intro}>
-            From a single pivot table through to an automated reporting
-            pipeline, we find the tool to solve your problem.
-          </p>
-          <Link href="#contact" className={styles.cta}>
-            Discuss your project
-          </Link>
-        </div> */}
       </header>
 
       <ul className={styles.grid}>

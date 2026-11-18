@@ -1,49 +1,50 @@
-import React from "react";
+// /app/blog/20-advanced-excel-shortcuts/layout.js
+// Keep PAGE_URL, PAGE_TITLE and PAGE_DESCRIPTION in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/20-advanced-excel-shortcuts";
+const PAGE_TITLE = "20 Advanced Excel Shortcuts to Save Time | Office Experts";
+const PAGE_DESCRIPTION =
+  "Learn 20 advanced Excel shortcuts for Mac and Windows, from filters and AutoSum to Paste Special, and save hours on everyday spreadsheet work.";
+const PAGE_KEYWORDS = ["Excel keyboard shortcuts"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png";
 
 export const metadata = {
-  // Basic metadata
-  title: "20 Advanced Excel Shortcuts That Will Supercharge Your Workflow",
-  description:
-    "Master 20 advanced Excel shortcuts that will transform your productivity. These keyboard shortcuts will save you hours and impress your team.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "20 Advanced Excel Shortcuts That Will Supercharge Your Workflow",
-    description:
-      "Master 20 advanced Excel shortcuts that will transform your productivity. These keyboard shortcuts will save you hours and impress your team.",
-    url: "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
-    siteName: "Excel Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: "Office Experts Group logo",
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["Excel shortcuts"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "20 Advanced Excel Shortcuts That Will Supercharge Your Workflow",
-    description:
-      "Master 20 advanced Excel shortcuts that will transform your productivity. These keyboard shortcuts will save you hours and impress your team.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
-
   alternates: {
-    canonical:
-      "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
+    canonical: PAGE_URL,
   },
 };
 
-export default function RootLayout({ children }) {
+export default function ExcelShortcutsBlogLayout({ children }) {
   return <>{children}</>;
 }
