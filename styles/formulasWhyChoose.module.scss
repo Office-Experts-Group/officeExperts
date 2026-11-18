@@ -1,0 +1,215 @@
+// /styles/formulasWhyChoose.module.scss
+@use "./globals" as *;
+
+.formulasWhyChoose {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 8rem;
+  align-items: start;
+  max-width: $container;
+  margin-inline: auto;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+.leftCol {
+  position: sticky;
+  top: $scroll-offset;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0 0 1.5rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.intro {
+  margin: 0 0 1.1rem;
+  @include lede;
+}
+
+.closing {
+  margin: 0;
+  @include lede($text-primary);
+}
+
+// Local helper: styles a part of a row while that row is open. A row is open
+// on hover or keyboard focus, and the first row is open until the list is
+// used. $part is appended straight on ("::before") or with a leading space
+// (" .itemTitle").
+@mixin whenOpen($part: "") {
+  .item:hover#{$part},
+  .item:focus-within#{$part},
+  .list:not(:hover):not(:focus-within) .item:first-child#{$part} {
+    @content;
+  }
+}
+
+$dot-size: 0.9rem;
+$dot-centre: 1.82rem; // distance from the top of a row to the middle of its dot
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Each row starts with a dot sitting on a vertical line. The grey line joins
+// each dot to the next. On hover or focus the accent line runs down from the
+// top and stops at that row's dot, which fills in, and the answer opens.
+.item {
+  position: relative;
+  padding: 1.1rem 0 1.1rem 2.1rem;
+  outline: none;
+
+  // The dot
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: $dot-centre - 0.45rem;
+    left: 0;
+    width: $dot-size;
+    height: $dot-size;
+    box-sizing: border-box;
+    background: $white;
+    border: 2px solid $line-strong;
+    border-radius: 50%;
+  }
+
+  // The line from this dot down to the next one
+  &::after {
+    content: "";
+    position: absolute;
+    top: $dot-centre;
+    bottom: -$dot-centre;
+    left: calc(#{$dot-size} / 2 - 1px);
+    width: 2px;
+    background: $line;
+    background-image: linear-gradient($accent, $accent);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  // Lines before the open row are filled, so the accent runs down to its dot
+  &:has(~ .item:hover)::after,
+  &:has(~ .item:focus-within)::after {
+    background-size: 100% 100%;
+  }
+
+  &:has(~ .item:hover)::before,
+  &:has(~ .item:focus-within)::before {
+    border-color: $accent;
+  }
+}
+
+@include whenOpen("::before") {
+  background: $accent;
+  border-color: $accent;
+}
+
+.itemTitle {
+  margin: 0;
+  @include card-title(md);
+}
+
+@include whenOpen(" .itemTitle") {
+  color: $accent;
+}
+
+.reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+@include whenOpen(" .reveal") {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.revealInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.answer {
+  margin: 0.6rem 0 0.25rem;
+  @include body-text;
+}
+
+// Touch screens have no hover, so every answer stays open and the whole line
+// is filled.
+@media (hover: none), (max-width: 766px) {
+  .reveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .item::before {
+    background: $accent;
+    border-color: $accent;
+  }
+
+  .item::after {
+    background-size: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .item::before {
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .item::after {
+    transition: background-size 0.4s ease;
+  }
+
+  .reveal {
+    transition:
+      grid-template-rows 0.35s ease,
+      opacity 0.3s ease;
+  }
+
+  .itemTitle {
+    transition: color 0.2s ease;
+  }
+}

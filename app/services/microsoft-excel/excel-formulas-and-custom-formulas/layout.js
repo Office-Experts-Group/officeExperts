@@ -1,26 +1,30 @@
-import React from "react";
+// /app/services/microsoft-excel/excel-formulas-and-custom-formulas/layout.js
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-excel/excel-formulas-and-custom-formulas";
+const PAGE_TITLE = "Excel Formulas and Custom Formulas | Office Experts";
+const PAGE_DESCRIPTION =
+  "Expert help with Excel formulas, custom functions and VBA. We simplify complex workbooks, fix formula errors and build custom formulas. Remote or onsite.";
+const PAGE_KEYWORDS = ["excel custom formula development"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png";
 
 export const metadata = {
-  // Basic metadata
-  title: "Excel Formulas and Custom Formulas | Office Experts Group",
-  description:
-    "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
-
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
   alternates: {
-    canonical:
-      "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+    canonical: PAGE_URL,
   },
-
-  // OpenGraph
   openGraph: {
-    title: "Excel Formulas and Custom Formulas | Office Experts Group",
-    description:
-      "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
-    url: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
-    siteName: "Office Experts Group",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Office Experts Group Logo",
@@ -29,18 +33,19 @@ export const metadata = {
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Excel Formulas and Custom Formulas | Office Experts Group",
-    description:
-      "Expert assistance with Excel formulas and custom formula development. Our specialists help optimise formula usage and create custom solutions for complex requirements.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+
+  alternates: {
+    canonical: PAGE_URL,
   },
 };
 
-export default function RootLayout({ children }) {
-  return <>{children}</>;
+export default function ExcelFormulasLayout({ children }) {
+  return children;
 }

@@ -1,0 +1,125 @@
+// /styles/dataManipulationHero.module.scss
+@use "./globals" as *;
+
+// ── Section shell: dark hero, clears the fixed header ──────
+.dataManipulationHero {
+  background: $dark-bg;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 9rem $mobGutter 5rem $mobGutter;
+  }
+
+  @include phone {
+    padding: 8rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Copy ───────────────────────────────────────────────────
+.heading {
+  margin: 0 0 1.5rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0 0 2rem;
+  max-width: 52ch;
+  @include lede($white-75);
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.secondary {
+  @include arrow-link($accent-on-dark);
+}
+
+.trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $accent-on-dark;
+  @include small-text($white-65);
+
+  svg {
+    flex-shrink: 0;
+    color: $accent-on-dark;
+  }
+}
+
+// ── Illustration sits straight on the hero background ──────
+.art {
+  min-width: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 580px;
+    margin-inline: auto;
+  }
+}
+
+// ── Motion: hero SVG only ──────────────────────────────────
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: dmhFlow 1.6s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: dmhPulse 2s ease-out infinite;
+  }
+
+  @keyframes dmhFlow {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
+
+  @keyframes dmhPulse {
+    from {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(3.5);
+      opacity: 0;
+    }
+  }
+}

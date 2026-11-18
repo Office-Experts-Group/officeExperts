@@ -1,0 +1,252 @@
+// /styles/dataManipulationCapabilities.module.scss
+@use "./globals" as *;
+
+// ── Section shell ──────────────────────────────────────────
+.dataManipulationCapabilities {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+// ── Left column ────────────────────────────────────────────
+.leftCol {
+  position: sticky;
+  top: $header-offset;
+  padding-bottom: 2rem;
+
+  @include belowDesktop {
+    position: static;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin: 0 0 1.25rem;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0 0 1.75rem;
+  @include heading-section;
+}
+
+.accent {
+  position: relative;
+  display: inline;
+  color: $accent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: $accent;
+  }
+}
+
+.body {
+  p {
+    margin: 0 0 1rem;
+    @include lede;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+
+.secondary {
+  @include arrow-link;
+}
+
+// ── Right column: capability list ──────────────────────────
+.rightCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.capLabel {
+  margin: 0 0 1rem;
+  padding-left: 2.25rem;
+  @include label;
+}
+
+.capList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.capItemInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.4rem 0;
+  transition: padding 0.25s ease;
+}
+
+.capLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 20px;
+  padding-top: 2px;
+}
+
+.capNum {
+  line-height: 1;
+  transition: all 0.2s ease-in-out;
+  @include label;
+}
+
+.capDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $line-strong;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.capContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.capHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.capTitle {
+  margin: 0;
+  transition: color 0.2s;
+  @include card-title(sm);
+}
+
+// Tag pill: slides in when the item is open
+.capTag {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.2rem 0.6rem;
+  border-radius: $radius-pill;
+  background: $accent-light;
+  opacity: 0;
+  transform: translateX(6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  @include label($accent);
+}
+
+// Description: collapsed until hover or keyboard focus
+.capDesc {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease 0.06s;
+
+  p {
+    margin: 0.7rem 0 0.6rem;
+    @include body-text;
+  }
+}
+
+.capLink {
+  padding-bottom: 0.4rem;
+  @include arrow-link;
+}
+
+.capItem {
+  cursor: pointer;
+  outline: none;
+  border-bottom: 1px solid $line;
+
+  &:first-child {
+    border-top: 1px solid $line;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-border;
+    outline-offset: -2px;
+  }
+
+  &:hover,
+  &:focus-within {
+    .capItemInner {
+      padding: 1.7rem 0;
+    }
+    .capNum {
+      color: $accent;
+      letter-spacing: 3px;
+    }
+    .capDot {
+      background: $accent;
+      transform: scale(1.4);
+    }
+    .capTitle {
+      color: $accent;
+    }
+    .capTag {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .capDesc {
+      max-height: 240px;
+      opacity: 1;
+    }
+  }
+
+  // Touch screens have no hover, so keep every item open
+  @include mobile {
+    .capDesc {
+      max-height: none;
+      opacity: 1;
+    }
+    .capTag {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,261 @@
+// /styles/dataManipulationProblem.module.scss
+@use "./globals" as *;
+
+// ── Section shell ──────────────────────────────────────────
+.dataManipulationProblem {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+// ── Header: heading left, intro right ──────────────────────
+.header {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2rem 5rem;
+  align-items: end;
+  margin-bottom: 2.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin: 0 0 1rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.intro {
+  margin: 0;
+  max-width: 54ch;
+  @include lede($white-65);
+}
+
+// ── Bento grid: 6 tracks (3 columns of 2), 2 columns below 1024px, 1 below 767px ──
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// ── Tile base ──────────────────────────────────────────────
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  padding: 1.75rem;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  overflow: hidden;
+
+  @include mobile {
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+}
+
+.art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+
+  svg {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 190px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  @include card-title(md);
+}
+
+.description {
+  margin: 0;
+  @include small-text;
+}
+
+// ── Tile sizes ─────────────────────────────────────────────
+// Top row: three tiles, art above the text
+.tileThird {
+  grid-column: span 2;
+
+  @include belowDesktop {
+    grid-column: span 1;
+
+    // the odd third tile spans the row in the 2-column layout
+    &:nth-child(3) {
+      grid-column: span 2;
+    }
+  }
+
+  @include tablet {
+    &:nth-child(3) {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      .art {
+        flex: 0 0 40%;
+      }
+    }
+  }
+
+  @include mobile {
+    grid-column: auto;
+
+    &:nth-child(3) {
+      grid-column: auto;
+    }
+  }
+}
+
+// Bottom row: two tiles, art beside the text from tablet up
+.tileHalfRow {
+  grid-column: span 3;
+
+  @include belowDesktop {
+    grid-column: span 2;
+  }
+
+  @include tabletUp {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    .art {
+      flex: 0 0 42%;
+
+      svg {
+        max-height: 190px;
+      }
+    }
+  }
+
+  @include mobile {
+    grid-column: auto;
+  }
+}
+
+// ── Tile tones (art is drawn for each palette) ─────────────
+.accentTile {
+  background: $accent;
+  border-color: $white-12;
+
+  .title {
+    color: $white;
+  }
+  .description {
+    color: $white-88;
+  }
+}
+
+.darkTile {
+  background: $dark-surface;
+  border-color: $white-08;
+
+  .title {
+    color: $white;
+  }
+  .description {
+    color: $white-65;
+  }
+}
+
+.lightTile {
+  background: $light-bg;
+  border-color: $line;
+
+  .title {
+    color: $text-primary;
+  }
+  .description {
+    color: $text-secondary;
+  }
+}
+
+.midTile {
+  background: $dark-mid;
+  border-color: $white-08;
+
+  .title {
+    color: $white;
+  }
+  .description {
+    color: $white-65;
+  }
+}
+
+.deepTile {
+  background: $accent-dark;
+  border-color: $white-12;
+
+  .title {
+    color: $white;
+  }
+  .description {
+    color: $white-75;
+  }
+}
+
+// ── Motion: hover lift only ────────────────────────────────
+@media (prefers-reduced-motion: no-preference) {
+  .tile {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}

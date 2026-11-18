@@ -1,24 +1,33 @@
-import React from "react";
+// /app/services/microsoft-excel/data-manipulation/layout.js
+
+const PAGE_URL =
+  "https://www.officeexperts.com.au/services/microsoft-excel/data-manipulation";
+const PAGE_TITLE = "Excel Data Manipulation & Automation | Office Experts";
+const PAGE_DESCRIPTION =
+  "Excel data automation specialists helping businesses simplify imports, exports, formatting and complex data manipulation using VBA. Free initial assessment";
+const PAGE_KEYWORDS = [
+  "Excel data manipulation experts",
+  "Excel data automation",
+  "Power Query consultants Australia",
+  "VBA data import and export",
+];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png";
 
 export const metadata = {
-  title: "Data Manipulation | Office Experts Group",
-  description:
-    "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
-
-  alternates: {
-    canonical: "https://www.excelexperts.com.au/data-manipulation",
-  },
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Data Manipulation | Office Experts Group",
-    description:
-      "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
-    url: "https://www.excelexperts.com.au/data-manipulation",
-    siteName: "Office Experts Group",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Office Experts Group Logo",
@@ -27,18 +36,18 @@ export const metadata = {
     locale: "en-AU",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "Data Manipulation | Office Experts Group",
-    description:
-      "Expert Excel data manipulation services including automated data processing, formatting, and conversions. Specialising in CSV, XML, SQL, and JSON data handling.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+  alternates: {
+    canonical: PAGE_URL,
   },
 };
 
-export default function RootLayout({ children }) {
-  return <>{children}</>;
+export default function DataManipulationLayout({ children }) {
+  return children;
 }
