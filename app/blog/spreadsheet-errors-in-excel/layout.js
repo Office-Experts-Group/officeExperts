@@ -1,49 +1,52 @@
-import React from "react";
+// /app/blog/spreadsheet-errors-in-excel/layout.js
+
+// Keep these constants in sync with page.js.
+const PAGE_URL =
+  "https://www.officeexperts.com.au/blog/spreadsheet-errors-in-excel";
+const PAGE_TITLE = "Preventing Spreadsheet Errors in Excel | Office Experts";
+const PAGE_DESCRIPTION =
+  "Learn why 88% of spreadsheets contain errors, how to spot the warning signs, and practical ways to prevent costly Excel mistakes in your business.";
+const PAGE_KEYWORDS = ["spreadsheet errors", "Excel errors"];
+const SITE_NAME = "Office Experts";
+const TWITTER_HANDLE = "@OfficeExpertsG1";
+const OG_IMAGE = "/logo.png"; // confirm it exists in OE /public
+const OG_IMAGE_ALT = "Office Experts logo";
 
 export const metadata = {
-  // Basic metadata
-  title: "The Hidden Risk of Spreadsheet Errors in Your Business",
-  description:
-    "Learn why spreadsheet errors are so common, how to identify warning signs, and practical strategies to prevent costly mistakes.",
-
-  // OpenGraph
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
+  keywords: PAGE_KEYWORDS,
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
-    title: "The Hidden Risk of Spreadsheet Errors in Your Business",
-    description:
-      "Learn why spreadsheet errors are so common, how to identify warning signs, and practical strategies to prevent costly mistakes.",
-    url: "https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel",
-    siteName: "Excel Experts",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: "/logo.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo",
+        alt: OG_IMAGE_ALT,
       },
     ],
     locale: "en-AU",
     type: "website",
   },
-
-  // Additional metadata
-  keywords: ["spreadsheet errors"],
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    site: "@OfficeExpertsG1",
-    title: "The Hidden Risk of Spreadsheet Errors in Your Business",
-    description:
-      "Learn why spreadsheet errors are so common, how to identify warning signs, and practical strategies to prevent costly mistakes.",
-    images: ["/logo.png"],
+    site: TWITTER_HANDLE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
-
   alternates: {
-    canonical:
-      "https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel",
+    canonical: PAGE_URL,
   },
 };
 
-export default function RootLayout({ children }) {
+export default function SpreadsheetErrorsBlogLayout({ children }) {
   return <>{children}</>;
 }

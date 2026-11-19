@@ -6,13 +6,7 @@ const PAGE_URL = "https://www.officeexperts.com.au/blog/convert-canva-to-word";
 const PAGE_TITLE = "How to Convert Canva to a Word Template | Office Experts";
 const PAGE_DESCRIPTION =
   "Convert a Canva design into an editable Microsoft Word template that keeps your fonts, colours and brand. A step-by-step guide from Office Experts.";
-const PAGE_KEYWORDS = [
-  "Canva to Word template",
-  "convert Canva to Word",
-  "Canva design to Word document",
-  "Canva to editable Word",
-  "Word template from Canva",
-];
+const PAGE_KEYWORDS = ["convert Canva to Word"];
 
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";

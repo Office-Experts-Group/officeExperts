@@ -6,13 +6,7 @@ const PAGE_URL =
 const PAGE_TITLE = "10 Custom Excel Shortcuts Using Macros | Office Experts";
 const PAGE_DESCRIPTION =
   "Learn how to create your own Excel shortcuts using macros. 10 copy-and-paste VBA macros for Mac and Windows, each with a practical use case.";
-const PAGE_KEYWORDS = [
-  "Excel custom shortcuts",
-  "Excel macros",
-  "VBA shortcuts",
-  "Excel automation",
-  "Excel keyboard shortcuts",
-];
+const PAGE_KEYWORDS = ["Excel custom shortcuts"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
 const OG_IMAGE = "/logo.png";
@@ -47,6 +41,9 @@ export const metadata = {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
     images: [OG_IMAGE],
+  },
+  alternates: {
+    canonical: PAGE_URL,
   },
 };
 
