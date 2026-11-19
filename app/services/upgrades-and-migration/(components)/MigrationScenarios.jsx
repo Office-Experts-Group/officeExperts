@@ -26,7 +26,7 @@ const scenarios = [
       "We rebuild the logic as a structured application using Power Apps, store and manage the data properly in SQL Server or a cloud platform, and automate the processes that are currently manual. The output looks similar. The system underneath is completely different.",
     tag: "Excel",
     link: {
-      href: "https://www.excelexperts.com.au/upgrades-and-migration",
+      href: "/services/upgrades-and-migration",
       label: "Excel upgrade services",
     },
   },

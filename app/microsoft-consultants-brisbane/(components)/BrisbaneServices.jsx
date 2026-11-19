@@ -13,7 +13,7 @@ const services = [
     category: "Data & Reporting",
     description:
       "Excel is everywhere because it\u2019s flexible and familiar. But after a while, those important spreadsheets turn into monsters. We build structured Excel setups with automation, dashboards, VBA and live reporting that make them dependable and cut down manual work.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

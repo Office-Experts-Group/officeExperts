@@ -39,7 +39,7 @@ const services = [
       <>
         A merge is only as good as its data. We connect your template to the
         right source and tidy that source so Word reads it reliably, including{" "}
-        <Link href="https://www.excelexperts.com.au/data-manipulation">
+        <Link href="/services/data-manipulation">
           cleaning messy Excel data
         </Link>{" "}
         before it goes anywhere near a letter.

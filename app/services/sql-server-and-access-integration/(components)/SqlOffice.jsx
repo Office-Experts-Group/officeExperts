@@ -17,7 +17,7 @@ const solutions = [
         text: "Dashboard solutions",
       },
       {
-        href: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+        href: "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
         text: "Pivot tables, charts and reporting",
       },
     ],

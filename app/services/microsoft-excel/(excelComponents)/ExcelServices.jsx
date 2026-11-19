@@ -76,7 +76,7 @@ const ExcelServices = () => {
     {
       title: "Add-in development",
       text: "Add-ins for Excel and other Office apps, set up across your team.",
-      href: "/services/add-in-development",
+      href: "/services/add-in-creation",
       icon: <AddInIcon />,
     },
     {

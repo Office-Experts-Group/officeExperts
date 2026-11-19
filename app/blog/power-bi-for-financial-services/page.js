@@ -1004,7 +1004,7 @@ const PowerBIFinancialServicesBlogPost = () => {
                 management reporting and a dedicated platform for filings. And
                 if a well-built spreadsheet is still the right answer for part
                 of your reporting, our{" "}
-                <Ext href="https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions">
+                <Ext href="/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions">
                   Excel reporting specialists
                 </Ext>{" "}
                 can help with that too.

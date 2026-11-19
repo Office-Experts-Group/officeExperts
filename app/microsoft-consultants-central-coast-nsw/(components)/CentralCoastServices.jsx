@@ -19,7 +19,7 @@ const services = [
     description:
       "The quote sheet, the job tracker, the stock list, the month-end pack: for plenty of owner-run businesses Excel is the system. We rebuild the fragile ones into structured workbooks with VBA, Power Query and live dashboards, so the numbers hold up as the business grows.",
     chips: ["VBA & macros", "Power Query", "Dashboards", "Data models"],
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

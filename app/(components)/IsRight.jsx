@@ -50,7 +50,7 @@ const IsRight = () => {
               </div>
               <p>
                 Expert development in{" "}
-                <Link href="https://www.excelexperts.com.au">Excel</Link>,{" "}
+                <Link href="/services/microsoft-excel">Excel</Link>,{" "}
                 <Link href="https://www.accessexperts.com.au">Access</Link>,{" "}
                 <Link href="/services/microsoft-word">Word</Link>,{" "}
                 <Link href="/services/microsoft-powerpoint">PowerPoint</Link>,

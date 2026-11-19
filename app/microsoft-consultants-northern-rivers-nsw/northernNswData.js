@@ -13,7 +13,7 @@
 // - /services/{slug} URLs assume the flattened structure from the cleanup branch
 //   (by-business-solution and microsoft-office levels removed).
 
-const EXCEL = "https://www.excelexperts.com.au";
+const EXCEL = "/services/microsoft-excel";
 const WORD = "/services/microsoft-word";
 const ACCESS = "https://www.accessexperts.com.au";
 const POWER = "/services/microsoft-power-platform";

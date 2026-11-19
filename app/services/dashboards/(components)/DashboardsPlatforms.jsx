@@ -11,7 +11,7 @@ const platforms = [
   },
   {
     name: "Excel",
-    href: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+    href: "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
     linkText: "Excel reporting solutions",
   },
   {

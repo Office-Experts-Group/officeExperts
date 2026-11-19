@@ -16,7 +16,7 @@ const services = [
     category: "Data & Reporting",
     description:
       "Excel quietly runs a huge part of most businesses: the roster, the stock sheet, the month-end pack. When those files get fragile we rebuild them as structured workbooks with VBA, Power Query and live dashboards, so the numbers are right the first time and nobody dreads opening the file.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

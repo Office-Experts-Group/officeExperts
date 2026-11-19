@@ -72,7 +72,7 @@ const PIVOT_SERVICES = [
     description:
       "For workflows that need to do more than refresh, we can automate reports, email them on a schedule, or apply consistent formatting rules. VBA wraps around pivot tables and Power Query to create one-click reporting systems.",
     link: {
-      href: "https://www.excelexperts.com.au/vba-macro-development",
+      href: "/services/vba-macro-development",
       text: "VBA Automation",
     },
     chips: [

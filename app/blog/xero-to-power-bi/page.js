@@ -704,7 +704,7 @@ export default function XeroToPowerBIBlogPost() {
                 errors, and when those spreadsheets inform business decisions,
                 the consequences can be costly. We’ve written before about{" "}
                 <a
-                  href="https://www.excelexperts.com.au/blog/spreadsheet-errors-in-excel"
+                  href="/blog/spreadsheet-errors-in-excel"
                   className={styles.inlineLink}
                 >
                   the hidden risks of spreadsheet errors

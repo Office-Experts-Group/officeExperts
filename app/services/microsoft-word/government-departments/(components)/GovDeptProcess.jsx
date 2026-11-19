@@ -49,9 +49,7 @@ const GovDeptProcess = () => {
             <Link href="https://www.accessexperts.com.au">
               Access databases
             </Link>
-            ,{" "}
-            <Link href="https://www.excelexperts.com.au">Excel reporting</Link>{" "}
-            or{" "}
+            , <Link href="/services/microsoft-excel">Excel reporting</Link> or{" "}
             <Link href="/services/microsoft-power-platform">
               Power Platform
             </Link>{" "}

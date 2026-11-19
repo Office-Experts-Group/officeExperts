@@ -21,7 +21,7 @@ const groups = [
         description:
           "Quotes, rosters, property and project trackers, month-end packs. We rebuild fragile workbooks with VBA, Power Query and live dashboards so the numbers hold up as the business grows.",
         chips: ["VBA & macros", "Power Query", "Dashboards"],
-        href: "https://www.excelexperts.com.au",
+        href: "/services/microsoft-excel",
         linkText: "Excel Programmers",
       },
       {

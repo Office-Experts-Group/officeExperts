@@ -25,7 +25,7 @@ const services = [
     tag: "Data & Reporting",
     description:
       "Sydney's finance and insurance sectors generate enormous volumes of spreadsheet-driven reporting. We build automated Excel solutions, VBA macros, dashboards and data models that eliminate the manual work and reduce the risk of overloaded spreadsheets and manual input errors.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Development",
   },
   {

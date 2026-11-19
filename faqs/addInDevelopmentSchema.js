@@ -8,7 +8,7 @@ import faqs from "./add-in-development";
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.excelexperts.com.au/add-in-development#faq",
+  "@id": "https://www.excelexperts.com.au/add-in-creation#faq",
   mainEntity: faqs.map(({ question, answer }) => ({
     "@type": "Question",
     name: question,

@@ -52,10 +52,7 @@ const VbaAddins = () => (
               Add-in creation
               <VbaArrowSvg />
             </Link>
-            <Link
-              href="https://www.excelexperts.com.au/add-in-development"
-              className={styles.link}
-            >
+            <Link href="/services/add-in-creation" className={styles.link}>
               Excel add-in development
               <VbaArrowSvg />
             </Link>

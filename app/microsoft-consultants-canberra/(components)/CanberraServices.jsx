@@ -17,7 +17,7 @@ const services = [
     category: "Data & Reporting",
     description:
       "Federal departments and growing businesses generate enormous volumes of data that flow through Excel. We build the automation, VBA macros, pivot dashboards and custom reporting workbooks that make that data manageable.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Experts",
   },
   {

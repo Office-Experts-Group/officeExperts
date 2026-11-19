@@ -11,7 +11,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Excel ",
-      link: "https://www.excelexperts.com.au/",
+      link: "/services/microsoft-excel/",
       image: project1,
       description: [
         "Spreadsheets and Add-ins",

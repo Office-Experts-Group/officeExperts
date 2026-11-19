@@ -28,7 +28,7 @@ const pathsWithDifferentCanonicals = new Set([
   // "/services/microsoft-word/word-template-conversions",
   // excel
   // "/services/microsoft-excel",
-  // "/services/microsoft-excel/add-in-development",
+  "/services/microsoft-excel/add-in-development",
   "/services/microsoft-excel/custom-design-and-development",
   // "/services/microsoft-excel/data-manipulation",
   // "/services/microsoft-excel/excel-formulas-and-custom-formulas",

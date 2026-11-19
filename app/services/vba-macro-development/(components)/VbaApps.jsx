@@ -30,11 +30,11 @@ const apps = [
     ],
     links: [
       {
-        href: "https://www.excelexperts.com.au/custom-excel-development",
+        href: "/services/microsoft-excel/custom-excel-development",
         label: "Custom Excel design and development",
       },
       {
-        href: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+        href: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
         label: "Formulas or macros?",
       },
     ],

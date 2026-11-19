@@ -36,7 +36,7 @@ const EPBM_SERVICES = [
     title: "Data transformation and modelling",
     text: "Spreadsheet data is often messy and hard to manage at scale. We clean it, reshape it and connect it into one data model, so the numbers in Power BI are accurate, consistent and ready to grow with you.",
     link: {
-      href: "https://www.excelexperts.com.au/data-manipulation",
+      href: "/services/microsoft-excel/data-manipulation",
       text: "Excel data clean-up",
     },
   },

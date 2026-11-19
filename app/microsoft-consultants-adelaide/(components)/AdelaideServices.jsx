@@ -18,7 +18,7 @@ const services = [
     description:
       "Budgets, rosters, costing models and month-end packs often live in one workbook that only one person dares to touch. We make them dependable: VBA that does the repetitive work, Power Query that pulls the data in cleanly, and dashboards that update themselves.",
     chips: ["VBA & macros", "Power Query", "Dashboards", "Data models"],
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

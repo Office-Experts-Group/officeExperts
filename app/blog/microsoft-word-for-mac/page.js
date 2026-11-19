@@ -209,7 +209,7 @@ const SCENARIOS = [
     problem: (
       <>
         <strong>Problem -</strong> No macro recorder, limited{" "}
-        <Link href="https://www.excelexperts.com.au/vba-macro-development">
+        <Link href="/services/microsoft-excel/vba-macro-development">
           VBA development ability
         </Link>
         , developer tools and inability to create the custom application
@@ -223,7 +223,7 @@ const SCENARIOS = [
       "Keyboard Maestro or similar Mac automation tools",
       <>
         Consider whether the task can be done in{" "}
-        <Link href="https://www.excelexperts.com.au">Excel</Link> instead
+        <Link href="/services/microsoft-excel">Excel</Link> instead
       </>,
     ],
     tip: "Write the task down step by step first. A clear process is easier to rebuild in any tool.",

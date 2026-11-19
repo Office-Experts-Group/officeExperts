@@ -102,10 +102,7 @@ const QueryServices = () => {
             . The right approach for each project depends on your data and your
             reporting requirements.
           </p>
-          <Link
-            href="https://www.excelexperts.com.au/data-manipulation"
-            className={styles.sideLink}
-          >
+          <Link href="/services/data-manipulation" className={styles.sideLink}>
             See our broader data manipulation services
             <svg
               width="12"

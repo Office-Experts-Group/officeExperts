@@ -10,44 +10,39 @@ import { ArrowIcon } from "../(svgs)/ArrowIcon";
 const items = [
   {
     name: "Custom design and development",
-    href: "https://www.excelexperts.com.au/custom-excel-development",
+    href: "/services/microsoft-excel/custom-excel-development",
     description:
       "Workbooks designed around your process, not the other way round.",
   },
   {
     name: "Formulas and custom functions",
-    href: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+    href: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
     description:
       "Complex calculations made reliable, plus functions Excel does not have.",
   },
   {
     name: "VBA and macro development",
-    href: "https://www.excelexperts.com.au/vba-macro-development",
+    href: "/services/vba-macro-development",
     description: "Automate repetitive work and build tools inside Excel.",
   },
   {
     name: "Pivot tables, charts and reporting",
-    href: "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions",
+    href: "/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions",
     description: "Reporting that updates itself and reads clearly.",
   },
   {
     name: "Data manipulation",
-    href: "https://www.excelexperts.com.au/data-manipulation",
+    href: "/services/microsoft-excel/data-manipulation",
     description: "Clean, combine and reshape messy data.",
   },
   {
     name: "Add-in development",
-    href: "https://www.excelexperts.com.au/add-in-development",
+    href: "/services/add-in-creation",
     description: "Packaged tools your whole team can install.",
   },
   {
-    name: "Excel support",
-    href: "https://www.excelexperts.com.au/excel-support",
-    description: "Help when a workbook is broken or behaving badly.",
-  },
-  {
     name: "Upgrades and migration",
-    href: "https://www.excelexperts.com.au/upgrades-and-migration",
+    href: "/services/upgrades-and-migration",
     description: "Move legacy spreadsheets to current versions safely.",
   },
 ];
@@ -72,10 +67,7 @@ const ExcelSection = () => (
           specialists build spreadsheets that are fast, accurate and hard to
           break.
         </p>
-        <ServiceLink
-          href="https://www.excelexperts.com.au"
-          className={styles.siteLink}
-        >
+        <ServiceLink href="/" className={styles.siteLink}>
           Visit Excel Experts
         </ServiceLink>
       </div>

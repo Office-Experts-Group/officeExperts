@@ -73,7 +73,7 @@ const MigrationProblem = () => {
           <p>
             We see this constantly across organisations using{" "}
             <Link
-              href="https://www.excelexperts.com.au"
+              href="/services/microsoft-excel"
               className={styles.inlineLink}
             >
               Microsoft Excel

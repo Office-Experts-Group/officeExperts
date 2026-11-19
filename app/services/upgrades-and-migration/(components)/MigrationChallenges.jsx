@@ -30,7 +30,7 @@ const challenges = [
     insight:
       "This is what makes even small changes risky and what makes migrations significantly more complex than a first estimate suggests.",
     link: {
-      href: "https://www.excelexperts.com.au/vba-macro-development",
+      href: "/services/vba-macro-development",
       label: "VBA and macro services",
     },
   },

@@ -1073,7 +1073,7 @@ const PROBLEMS = [
           <>
             Microsoft provides Mac-specific Excel shortcut lists. Keep one handy
             while you retrain your muscle memory. Check out our other blog with{" "}
-            <ExtLink href="https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts">
+            <ExtLink href="/services/microsoft-excel/blog/20-advanced-excel-shortcuts">
               20 advanced Excel shortcuts
             </ExtLink>
             .
@@ -1376,7 +1376,7 @@ const RELATED = [
     text: "A look at when the browser version is enough and when you need the desktop app.",
   },
   {
-    href: "https://www.excelexperts.com.au/blog/20-advanced-excel-shortcuts",
+    href: "/services/microsoft-excel/blog/20-advanced-excel-shortcuts",
     external: true,
     title: "20 advanced Excel shortcuts",
     text: "A follow-up to Problem #9 with shortcuts worth learning once your keyboard behaves.",

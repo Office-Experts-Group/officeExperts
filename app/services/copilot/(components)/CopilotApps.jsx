@@ -31,7 +31,7 @@ const apps = [
       "Copilot makes advanced spreadsheet work far more approachable for everyday users. Staff can ask questions in simple English to do what once only advanced 'power user's' could accomplish. Copilot, could you analyse trends from last months sales? Create monthly reports based on the data for our shareholders? Yes now it can, excel spreadsheets are now fully ingestible, editable and even created out of thin air by Ai.",
     highlight:
       "Our Excel specialists help businesses integrate Copilot into existing dashboards, reporting systems, and macro-driven workbooks. We set the parameters and functionality to allow advanced functionality without needing to constantly reach out for an industry expert.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel experts",
   },
   {

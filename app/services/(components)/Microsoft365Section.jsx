@@ -28,7 +28,7 @@ const pillars = [
     items: [
       {
         name: "Excel support",
-        href: "https://www.excelexperts.com.au/excel-support",
+        href: "/microsoft-support-and-training-australia",
       },
       {
         name: "Access support",

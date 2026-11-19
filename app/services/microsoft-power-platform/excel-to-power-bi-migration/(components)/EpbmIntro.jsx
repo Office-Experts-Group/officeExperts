@@ -55,7 +55,7 @@ const EpbmIntro = () => (
             We’ve helped many organisations make the move. Our
             Microsoft-certified consultants work across the Power Platform, and
             also specialise in{" "}
-            <Link href="https://www.excelexperts.com.au">Excel</Link> and the{" "}
+            <Link href="/services/microsoft-excel">Excel</Link> and the{" "}
             <Link href="/">entire Microsoft suite</Link>, so nothing gets lost
             between the old setup and the new one.
           </p>

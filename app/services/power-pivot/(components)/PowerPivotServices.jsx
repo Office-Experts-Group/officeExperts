@@ -66,13 +66,12 @@ const services = [
     body: (
       <>
         From{" "}
-        <Link href="https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions">
+        <Link href="/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions">
           Excel pivot tables
         </Link>{" "}
-        to{" "}
-        <Link href="/services/dashboards">Power BI dashboards</Link>, we design
-        reports that are easy to explore, share and understand. No more manual
-        updates or disconnected spreadsheets.
+        to <Link href="/services/dashboards">Power BI dashboards</Link>, we
+        design reports that are easy to explore, share and understand. No more
+        manual updates or disconnected spreadsheets.
       </>
     ),
   },

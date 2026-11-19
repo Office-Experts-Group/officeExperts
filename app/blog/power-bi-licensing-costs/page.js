@@ -286,12 +286,11 @@ const STRATEGIES = [
     body: (
       <>
         For analytical users with needs beyond viewing reports,{" "}
-        <InlineLink href="https://www.excelexperts.com.au">Excel</InlineLink>{" "}
-        with <InlineLink href="/services/power-query">Power Query</InlineLink>{" "}
-        is an interesting alternative. Power Query is included in Excel for
-        Microsoft 365, so many organisations have no extra licence to buy.
-        Analysts can build their own data models locally and publish summary
-        information to{" "}
+        <InlineLink href="/services/microsoft-excel">Excel</InlineLink> with{" "}
+        <InlineLink href="/services/power-query">Power Query</InlineLink> is an
+        interesting alternative. Power Query is included in Excel for Microsoft
+        365, so many organisations have no extra licence to buy. Analysts can
+        build their own data models locally and publish summary information to{" "}
         <InlineLink href="/services/microsoft-power-platform/power-bi">
           Power BI
         </InlineLink>

@@ -7,7 +7,7 @@ import ScrollLine from "./ScrollLine";
 import styles from "@/styles/activexReplaces.module.scss";
 // Cross-site links, kept in one place so URLs are easy to maintain.
 const LINKS = {
-  excelVba: "https://www.excelexperts.com.au",
+  excelVba: "/services/microsoft-excel",
   wordContentControls: "/services/microsoft-word",
   access: "https://www.accessexperts.com.au",
   powerApps: "/services/microsoft-power-platform/power-apps",

@@ -18,7 +18,7 @@ const services = [
     description:
       "Tender pricing, job costing, fleet and asset lists, wet-season production tracking: much of the Territory's day-to-day numbers sit in Excel. We make those workbooks dependable, with VBA to automate the repeat work, Power Query to pull data in cleanly and dashboards that update themselves.",
     points: ["VBA & macros", "Power Query", "Dashboards", "Data models"],
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

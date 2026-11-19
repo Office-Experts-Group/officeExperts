@@ -873,16 +873,10 @@ const WordDesktopVsWebBlogPost = () => {
                   automation
                 </Link>
                 , and it can’t install{" "}
-                <Link
-                  href="https://www.excelexperts.com.au/add-in-development"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  add-ins
-                </Link>
-                . The second is file handling: you can’t open local files
-                directly (you must upload them), and there is no “Save As” to
-                your computer (you must download).
+                <Link href="/services/add-in-creation">add-ins</Link>. The
+                second is file handling: you can’t open local files directly
+                (you must upload them), and there is no “Save As” to your
+                computer (you must download).
               </p>
 
               <PullQuote q={quotes.macros} />

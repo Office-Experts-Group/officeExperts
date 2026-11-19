@@ -14,7 +14,7 @@ const services = [
     category: "Data & Reporting",
     description:
       "Resources and construction firms in WA generate enormous volumes of operational data. We build Excel solutions with automation, VBA, Power Query and dashboards that turn raw site and production data into something your management team can actually use. No more manually consolidating weekly reports from 12 different spreadsheets.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

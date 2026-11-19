@@ -11,7 +11,7 @@ const services = [
     id: "excel",
     title: "Microsoft Excel",
     category: "Data & Reporting",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Experts",
     description:
       "Custom workbooks, VBA automation, pivot reporting and dashboards built for the way your team actually works. We replace fragile, manual spreadsheets with structured Excel solutions that scale as your business grows.",

@@ -57,7 +57,7 @@ const Services = ({ location }) => {
                 "Pivot tables, reports, charts",
                 "Forms/formulas/functions",
               ]}
-              link={"https://www.excelexperts.com.au"}
+              link={"/services/microsoft-excel"}
               linkText={"Excel"}
             />
           </CardIntersectionWrapper>

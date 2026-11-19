@@ -67,11 +67,11 @@ const EXCEL_OFFERS = [
   },
   {
     name: "Excel add-in development",
-    path: "/services/microsoft-excel/add-in-development",
+    path: "/services/add-in-creation",
   },
   {
     name: "Excel upgrades and migration",
-    path: "/services/microsoft-excel/upgrades-and-migration",
+    path: "/services/upgrades-and-migration",
   },
 ];
 

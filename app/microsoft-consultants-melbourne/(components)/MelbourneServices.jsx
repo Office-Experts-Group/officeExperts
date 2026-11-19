@@ -14,7 +14,7 @@ const services = [
     category: "Data & Reporting",
     description:
       "Spreadsheets doing jobs they were never built for are one of the most common problems we see in Melbourne businesses. We replace brittle manual workbooks with various solutions, custom automation, VBA, pivot reporting, dashboards and add-ins built to last.",
-    href: "https://www.excelexperts.com.au",
+    href: "/services/microsoft-excel",
     linkText: "Excel Programmers",
   },
   {

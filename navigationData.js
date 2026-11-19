@@ -1,8 +1,3 @@
-// Base URLs for different sites (change these for production)
-const WORD_EXPERTS_URL = "https://www.wordexperts.com.au";
-const OFFICE_EXPERTS_URL = "/";
-const EXCEL_EXPERTS_URL = "https://www.excelexperts.com.au";
-const POWER_PLATFORM_EXPERTS_URL = "https://www.powerplatformexperts.com.au";
 const ACCESS_EXPERTS_URL = "https://www.accessexperts.com.au";
 
 export const navigationData = {
@@ -264,7 +259,7 @@ export const navigationData = {
           },
           {
             label: "Add-In Development",
-            href: `/services/microsoft-excel/add-in-development`,
+            href: `/services/microsoft-excel/add-in-creation`,
           },
         ],
       },

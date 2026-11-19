@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "@/styles/businessAnalysisValue.module.scss";
 const teams = [
   { label: "Word", href: "/services/microsoft-word" },
-  { label: "Excel", href: "https://www.excelexperts.com.au" },
+  { label: "Excel", href: "/services/microsoft-excel" },
   { label: "Access & SQL Server", href: "https://www.accessexperts.com.au" },
   { label: "Power Platform", href: "/services/microsoft-power-platform" },
   { label: "Microsoft 365, Azure & custom development", href: "/services" },

@@ -36,7 +36,7 @@ const PowerPivotIntro = () => {
             </p>
             <p>
               With decades of experience across{" "}
-              <Link href="https://www.excelexperts.com.au/">Excel</Link>,{" "}
+              <Link href="/services/microsoft-excel">Excel</Link>,{" "}
               <Link href="/services/microsoft-power-platform/power-bi">
                 Power BI
               </Link>{" "}
