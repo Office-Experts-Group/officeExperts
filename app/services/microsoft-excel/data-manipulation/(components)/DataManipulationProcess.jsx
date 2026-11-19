@@ -47,7 +47,7 @@ const DataManipulationProcess = () => {
             , <Link href="/services/microsoft-office-365">365</Link> or even a
             completely custom application.
           </p>
-          <Link href="/contact-us/request-a-quote" className="btn">
+          <Link href="/contact-us" className="btn">
             Start a conversation
           </Link>
         </div>

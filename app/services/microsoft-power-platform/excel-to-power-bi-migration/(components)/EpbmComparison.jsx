@@ -113,7 +113,7 @@ const EpbmComparison = () => (
         Not sure which reports should move? Many teams run a hybrid setup, with
         Excel for ad-hoc analysis and Power BI for shared dashboards. If your
         workbooks need tidying first, our{" "}
-        <Link href="/services/microsoft-excel/upgrades-and-migration">
+        <Link href="/services/upgrades-and-migration">
           Excel upgrade and migration
         </Link>{" "}
         team can help.

@@ -209,7 +209,7 @@ const SCENARIOS = [
     problem: (
       <>
         <strong>Problem -</strong> No macro recorder, limited{" "}
-        <Link href="/services/microsoft-excel/vba-macro-development">
+        <Link href="/services/vba-macro-development">
           VBA development ability
         </Link>
         , developer tools and inability to create the custom application

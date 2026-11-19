@@ -1,5 +1,5 @@
-"url","problems","status","redirectPath","finalUrl","finalStatus","linkedFromCount","linkedFrom"
-"http://localhost:3000/services/add-in-development","BROKEN","404","","","","1","http://localhost:3000/services/microsoft-excel"
-"http://localhost:3000/services/microsoft-excel/upgrades-and-migration","BROKEN","404","","","","2","http://localhost:3000/case-studies/community-services-excel-consolidation-rebuild http://localhost:3000/services/microsoft-excel"
-"http://localhost:3000/services/microsoft-excel/vba-macro-development","BROKEN","404","","","","2","http://localhost:3000/case-studies/food-manufacturer-excel-costing-workbook http://localhost:3000/services/microsoft-excel"
-"http://localhost:3000/contact-us/request-a-quote","REDIRECT","308","308 http://localhost:3000/contact-us","http://localhost:3000/contact-us","200","1","http://localhost:3000/services/microsoft-excel/data-manipulation"
+url,problems,status,redirectPath,finalUrl,finalStatus,linkedFromCount,linkedFrom
+http://localhost:3000/services/add-in-development,BROKEN,404,,,,1,http://localhost:3000/services/microsoft-excel
+http://localhost:3000/services/microsoft-excel/upgrades-and-migration,BROKEN,404,,,,2,http://localhost:3000/case-studies/community-services-excel-consolidation-rebuild http://localhost:3000/services/microsoft-excel
+http://localhost:3000/services/microsoft-excel/vba-macro-development,BROKEN,404,,,,2,http://localhost:3000/case-studies/food-manufacturer-excel-costing-workbook http://localhost:3000/services/microsoft-excel
+http://localhost:3000/contact-us/request-a-quote,REDIRECT,308,308 http://localhost:3000/contact-us,http://localhost:3000/contact-us,200,1,http://localhost:3000/services/microsoft-excel/data-manipulation

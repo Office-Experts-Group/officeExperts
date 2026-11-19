@@ -39,7 +39,7 @@ const ExcelServices = () => {
     {
       title: "VBA and macro development",
       text: "Automate repetitive tasks or extend what Excel can do. Each of our Australian VBA developers has at least 15 years’ experience.",
-      href: "/services/microsoft-excel/vba-macro-development",
+      href: "/services/vba-macro-development",
       linkText: "VBA and macros",
       art: <VbaArt />,
       tone: styles.darkTile,

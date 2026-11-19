@@ -32,7 +32,7 @@ const EXCEL_FAQS = [
     answer:
       "Yes. Upgrades and moves to Microsoft 365 can break older VBA. We find what changed, fix the code and test it with your real files before handing it back.",
     link: {
-      href: "/services/microsoft-excel/upgrades-and-migration",
+      href: "/services/upgrades-and-migration",
       text: "Upgrades and migration",
     },
   },

@@ -87,7 +87,7 @@ const PowerPivotCaseStudy = () => {
             </Link>
             <p className={styles.related}>
               Related:{" "}
-              <Link href="/services/data-manipulation">
+              <Link href="/services/microsoft-excel/data-manipulation">
                 Data manipulation services
               </Link>{" "}
               and{" "}

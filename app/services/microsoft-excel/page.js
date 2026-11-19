@@ -51,7 +51,7 @@ const EXCEL_OFFERS = [
   },
   {
     name: "VBA and macro development",
-    path: "/services/microsoft-excel/vba-macro-development",
+    path: "/services/vba-macro-development",
   },
   {
     name: "Excel formulas and troubleshooting",

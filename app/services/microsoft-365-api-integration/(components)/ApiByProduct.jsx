@@ -41,7 +41,7 @@ const products = [
       "Use a workbook as a calculation service for other apps",
       "Custom functions and task panes that pull live data",
     ],
-    href: "/services/microsoft-excel/add-in-creation",
+    href: "/services/add-in-creation",
     linkText: "Excel add-in development",
   },
   {

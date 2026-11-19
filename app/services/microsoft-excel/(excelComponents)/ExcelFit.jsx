@@ -95,7 +95,7 @@ const ExcelFit = () => {
           </h2>
           <p className={styles.text}>
             Our Excel consultants can advise on every feature of Excel and{" "}
-            <Link href="/services/microsoft-excel/vba-macro-development">
+            <Link href="/services/vba-macro-development">
               VBA macro programming
             </Link>
             , and tell you honestly whether Excel is the right solution for your

@@ -464,7 +464,7 @@ export const caseStudies = [
     services: [
       {
         label: "VBA and macro development",
-        href: "/services/microsoft-excel/vba-macro-development",
+        href: "/services/vba-macro-development",
       },
       {
         label: "Custom design and development",
@@ -969,7 +969,7 @@ export const caseStudies = [
       },
       {
         label: "Excel Upgrades and Migration",
-        href: "/services/microsoft-excel/upgrades-and-migration",
+        href: "/services/upgrades-and-migration",
       },
     ],
   },
