@@ -63,6 +63,12 @@
   }
 }
 
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .reverse .media {
   @include desktopUp {
     order: 2;
@@ -83,7 +89,6 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: $radius;
 }
 
 .body {
@@ -200,7 +205,7 @@
 // ── Links ───────────────────────────────────────────────────
 // The button mixins use nowrap, so long link text is allowed to wrap here.
 .cta {
-  margin-top: 0.25rem;
+  margin-top: 1.25rem;
 }
 
 .ctaLight {

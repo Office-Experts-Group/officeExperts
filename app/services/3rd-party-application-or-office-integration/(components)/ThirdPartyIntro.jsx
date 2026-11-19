@@ -28,7 +28,7 @@ const ThirdPartyIntro = () => {
               We build the connections. Our Australian developers link{" "}
               <Link
                 className={styles.inlineLink}
-                href="https://www.excelexperts.com.au/custom-design-and-development"
+                href="https://www.excelexperts.com.au/custom-excel-development"
               >
                 Excel
               </Link>

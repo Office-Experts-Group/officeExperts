@@ -30,7 +30,7 @@ const apps = [
     ],
     links: [
       {
-        href: "https://www.excelexperts.com.au/custom-design-and-development",
+        href: "https://www.excelexperts.com.au/custom-excel-development",
         label: "Custom Excel design and development",
       },
       {

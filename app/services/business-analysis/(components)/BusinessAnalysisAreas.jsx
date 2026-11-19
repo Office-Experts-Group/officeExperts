@@ -35,7 +35,7 @@ const areas = [
     links: [
       {
         label: "Excel custom development",
-        href: "https://www.excelexperts.com.au/custom-design-and-development",
+        href: "https://www.excelexperts.com.au/custom-excel-development",
       },
       {
         label: "Excel to Power BI migration",

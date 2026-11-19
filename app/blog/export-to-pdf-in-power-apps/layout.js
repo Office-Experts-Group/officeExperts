@@ -8,14 +8,7 @@ const PAGE_TITLE = "Export to PDF in Power Apps | Office Experts";
 const PAGE_DESCRIPTION =
   "Learn how to export to PDF in Power Apps with Power Automate. Build the HTML, add images, convert the file and link the PDF to your SharePoint record.";
 
-const PAGE_KEYWORDS = [
-  "Power Apps Export to PDF",
-  "export to PDF in Power Apps",
-  "Power Automate HTML to PDF",
-  "Power Apps PDF export",
-  "Power Automate convert file to PDF",
-  "SharePoint PDF from list item",
-];
+const PAGE_KEYWORDS = ["Power Apps Export to PDF"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
 const OG_IMAGE = "/logo.png"; // confirm this exists in the OE /public folder

@@ -10,7 +10,7 @@ import { ArrowIcon } from "../(svgs)/ArrowIcon";
 const items = [
   {
     name: "Custom design and development",
-    href: "https://www.excelexperts.com.au/custom-design-and-development",
+    href: "https://www.excelexperts.com.au/custom-excel-development",
     description:
       "Workbooks designed around your process, not the other way round.",
   },
@@ -53,7 +53,11 @@ const items = [
 ];
 
 const ExcelSection = () => (
-  <section id="excel" className={styles.section} aria-labelledby="excel-heading">
+  <section
+    id="excel"
+    className={styles.section}
+    aria-labelledby="excel-heading"
+  >
     <div className={styles.inner}>
       <div className={styles.intro}>
         <span className={styles.icon}>

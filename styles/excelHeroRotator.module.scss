@@ -1,0 +1,185 @@
+// /styles/excelHeroRotator.module.scss
+// Rotator look for the Microsoft Excel hero, passed to the shared HeroRotator
+// as `classes`. Needs: rotator, copy, frames, controls, tabs, tab, track,
+// fill, toggle, visual.
+//
+// HeroRotator writes data-frame, data-mode, data-paused and data-onscreen on
+// .rotator. The active tab's .fill runs a CSS animation; when it ends the
+// rotator moves to the next frame. In manual mode (a tab was clicked) and for
+// reduced motion the fill has no animation, so nothing advances on its own.
+@use "./globals" as *;
+
+.rotator {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 3.5rem;
+  max-width: 1400px;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  min-width: 0;
+}
+
+// All frames share one grid cell, so the tallest one sets the height and
+// switching frames never moves the page
+.frames {
+  display: grid;
+
+  > * {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.rotator[data-frame="0"] .frames > :nth-child(1),
+.rotator[data-frame="1"] .frames > :nth-child(2),
+.rotator[data-frame="2"] .frames > :nth-child(3) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.tabs {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  min-width: 0;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+  color: $white-55;
+  cursor: pointer;
+
+  &:hover {
+    color: $white-88;
+  }
+  &[aria-selected="true"] {
+    color: $white;
+  }
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 6px;
+    border-radius: 4px;
+  }
+}
+
+.track {
+  position: relative;
+  display: block;
+  height: 3px;
+  overflow: hidden;
+  border-radius: $radius-pill;
+  background: $white-18;
+}
+
+// Full width by default (manual mode and reduced motion)
+.fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  background: $accent-on-dark;
+  transform-origin: left center;
+}
+
+.toggle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid $white-35;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1rem;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $accent-on-dark;
+    color: $accent-on-dark;
+  }
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 3px;
+  }
+
+  // Nothing autoplays for reduced motion, so there is nothing to pause
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
+}
+
+.visual {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .frames > * {
+    transition:
+      opacity 0.45s ease,
+      visibility 0s linear 0.45s;
+  }
+
+  .rotator[data-frame="0"] .frames > :nth-child(1),
+  .rotator[data-frame="1"] .frames > :nth-child(2),
+  .rotator[data-frame="2"] .frames > :nth-child(3) {
+    transition:
+      opacity 0.45s ease 0.15s,
+      visibility 0s linear 0s;
+  }
+
+  .fill {
+    animation-name: excelHeroFill;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .rotator[data-paused="true"] .fill,
+  .rotator[data-onscreen="false"] .fill {
+    animation-play-state: paused;
+  }
+
+  // A tab click stops autoplay: the bar sits full and never fires animationend
+  .rotator[data-mode="manual"] .fill {
+    animation-name: none;
+  }
+
+  @keyframes excelHeroFill {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -464,11 +464,11 @@ export const caseStudies = [
     services: [
       {
         label: "VBA and macro development",
-        href: "https://www.excelexperts.com.au/vba-macro-development",
+        href: "/services/microsoft-excel/vba-macro-development",
       },
       {
         label: "Custom design and development",
-        href: "https://www.excelexperts.com.au/custom-design-and-development",
+        href: "/services/microsoft-excel/custom-excel-development",
       },
     ],
   },
@@ -965,11 +965,11 @@ export const caseStudies = [
     services: [
       {
         label: "Power Query consolidation",
-        href: "https://www.excelexperts.com.au/data-manipulation",
+        href: "/services/microsoft-excel/data-manipulation",
       },
       {
         label: "Excel Upgrades and Migration",
-        href: "https://www.excelexperts.com.au/upgrades-and-migration",
+        href: "/services/microsoft-excel/upgrades-and-migration",
       },
     ],
   },
@@ -1458,11 +1458,11 @@ export const caseStudies = [
     services: [
       {
         label: "Data manipulation services",
-        href: "https://www.excelexperts.com.au/data-manipulation",
+        href: "/services/microsoft-excel/data-manipulation",
       },
       {
         label: "Custom design and development",
-        href: "https://www.excelexperts.com.au/custom-design-and-development",
+        href: "/services/microsoft-excel/custom-excel-development",
       },
     ],
   },
@@ -1789,7 +1789,7 @@ export const caseStudies = [
     services: [
       {
         label: "Custom code automation",
-        href: "https://www.excelexperts.com.au/excel-formulas-and-custom-formulas",
+        href: "/services/microsoft-excel/excel-formulas-and-custom-formulas",
       },
       {
         label: "Power BI reporting services",
@@ -2454,7 +2454,7 @@ export const caseStudies = [
       },
       {
         label: "Reporting and analytics",
-        href: "https://www.excelexperts.com.au/custom-design-and-development",
+        href: "/services/microsoft-excel/custom-excel-development",
       },
     ],
   },
@@ -2903,7 +2903,7 @@ export const siteMeta = {
   },
   excel: {
     name: "Excel Experts",
-    domain: "https://www.excelexperts.com.au",
+    domain: "/services/microsoft-excel",
   },
   powerplatform: {
     name: "Power Platform Experts",

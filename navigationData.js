@@ -236,27 +236,23 @@ export const navigationData = {
       },
       {
         label: "Microsoft Excel",
-        href: EXCEL_EXPERTS_URL,
+        href: "/services/microsoft-excel",
         items: [
           {
             label: "Custom Design & Development",
-            href: `${EXCEL_EXPERTS_URL}/custom-design-and-development`,
+            href: `/services/microsoft-excel/custom-excel-development`,
           },
           {
             label: "VBA Macro Development",
-            href: `${EXCEL_EXPERTS_URL}/vba-macro-development`,
+            href: `/services/vba-macro-development`,
           },
           {
             label: "Formulas",
-            href: `${EXCEL_EXPERTS_URL}/excel-formulas-and-custom-formulas`,
-          },
-          {
-            label: "Training and Skill Development",
-            href: `${EXCEL_EXPERTS_URL}/excel-support`,
+            href: `/services/microsoft-excel/excel-formulas-and-custom-formulas`,
           },
           {
             label: "Data analysis and reporting",
-            href: `${EXCEL_EXPERTS_URL}/data-manipulation`,
+            href: `/services/microsoft-excel/data-manipulation`,
           },
           {
             label: "Dashboards",
@@ -264,15 +260,11 @@ export const navigationData = {
           },
           {
             label: "Charting & Pivot Tables",
-            href: `${EXCEL_EXPERTS_URL}/pivot-tables-charts-and-reporting-solutions`,
-          },
-          {
-            label: "Upgrades & Migration",
-            href: `${EXCEL_EXPERTS_URL}/upgrades-and-migration`,
+            href: `/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions`,
           },
           {
             label: "Add-In Development",
-            href: `${EXCEL_EXPERTS_URL}/add-in-development`,
+            href: `/services/microsoft-excel/add-in-development`,
           },
         ],
       },

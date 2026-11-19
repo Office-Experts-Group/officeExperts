@@ -91,7 +91,7 @@ const PowerPivotCaseStudy = () => {
                 Data manipulation services
               </Link>{" "}
               and{" "}
-              <Link href="https://www.excelexperts.com.au/custom-design-and-development">
+              <Link href="https://www.excelexperts.com.au/custom-excel-development">
                 custom design and development
               </Link>
               .

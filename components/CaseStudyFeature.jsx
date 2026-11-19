@@ -72,33 +72,18 @@ const CaseStudyFeature = ({
 
   return (
     <article className={classes}>
-      {image && (
-        <figure className={styles.media}>
-          <Image
-            src={image}
-            alt={imageAlt}
-            width={IMAGE_WIDTH}
-            height={IMAGE_HEIGHT}
-            sizes="(max-width: 1024px) 100vw, 480px"
-            className={styles.image}
-          />
-        </figure>
-      )}
-
-      <div className={styles.body}>
-        {industry && <p className={styles.tag}>{industry}</p>}
-        <h3 className={styles.title}>{title}</h3>
-        {summary && <p className={styles.summary}>{summary}</p>}
-
-        {stats?.length > 0 && (
-          <dl className={styles.stats}>
-            {stats.slice(0, MAX_STATS).map((stat) => (
-              <div key={stat.label} className={styles.stat}>
-                <dt className={styles.statLabel}>{stat.label}</dt>
-                <dd className={styles.statValue}>{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
+      <div className={styles.leftCol}>
+        {image && (
+          <figure className={styles.media}>
+            <Image
+              src={image}
+              alt={imageAlt}
+              width={IMAGE_WIDTH}
+              height={IMAGE_HEIGHT}
+              sizes="(max-width: 1024px) 100vw, 480px"
+              className={styles.image}
+            />
+          </figure>
         )}
 
         {approach?.length > 0 && (
@@ -116,6 +101,39 @@ const CaseStudyFeature = ({
             </ul>
           </div>
         )}
+      </div>
+
+      <div className={styles.body}>
+        {industry && <p className={styles.tag}>{industry}</p>}
+        <h3 className={styles.title}>{title}</h3>
+        {summary && <p className={styles.summary}>{summary}</p>}
+
+        {stats?.length > 0 && (
+          <dl className={styles.stats}>
+            {stats.slice(0, MAX_STATS).map((stat) => (
+              <div key={stat.label} className={styles.stat}>
+                <dt className={styles.statLabel}>{stat.label}</dt>
+                <dd className={styles.statValue}>{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+
+        {/* {approach?.length > 0 && (
+          <div className={styles.build}>
+            <p className={styles.buildLabel}>What we built</p>
+            <ul className={styles.buildList}>
+              {approach.slice(0, MAX_BUILD_ITEMS).map((step) => (
+                <li key={step.heading} className={styles.buildItem}>
+                  <span className={styles.buildIcon}>
+                    <LayersIcon />
+                  </span>
+                  {step.heading}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )} */}
 
         <Link
           href={href}

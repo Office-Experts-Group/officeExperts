@@ -6,13 +6,7 @@ const PAGE_URL =
 const PAGE_TITLE = "Power BI in Healthcare Analytics | Office Experts";
 const PAGE_DESCRIPTION =
   "See how healthcare providers use Power BI dashboards to reduce readmissions, improve patient flow and protect patient data, and how to start well.";
-const PAGE_KEYWORDS = [
-  "power bi healthcare analytics",
-  "power bi for hospitals",
-  "healthcare dashboards",
-  "patient flow dashboard",
-  "healthcare data analytics Australia",
-];
+const PAGE_KEYWORDS = ["power bi healthcare analytics"];
 const SITE_NAME = "Office Experts";
 const TWITTER_HANDLE = "@OfficeExpertsG1";
 const OG_IMAGE = "/logo.png"; // confirm this file exists in the OE /public folder

@@ -1,0 +1,174 @@
+// /styles/excelHero.module.scss
+// Section background and frame typography for ExcelHero.
+// The rotator layout, tabs and frame switching live in excelHeroRotator.module.scss.
+@use "./globals" as *;
+
+.excelHero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-bg;
+  color: $white;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 10rem $mobGutter 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 8.5rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.eyebrow {
+  @include eyebrow-on-dark;
+}
+
+.title {
+  margin: 0;
+  max-width: 15ch;
+  @include heading-main($white);
+}
+
+.heading {
+  margin: 0;
+  max-width: 20ch;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lead {
+  margin: 0;
+  max-width: 34rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.link {
+  @include arrow-link($accent-on-dark);
+}
+
+// ── Frame 1 trust row ──
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include small-text($white-75);
+}
+
+.trustIcon {
+  display: inline-flex;
+  font-size: 1.15rem;
+  color: $accent-on-dark;
+}
+
+// ── Frame 2 points ──
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include phone {
+    gap: 0.6rem;
+  }
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.15rem;
+  border-radius: $radius;
+  background: $white-08;
+
+  @include phone {
+    padding: 0.85rem 1rem;
+  }
+}
+
+.pointTitle {
+  @include card-title(sm, $white);
+}
+
+.pointText {
+  @include small-text($white-65);
+
+  // Phones show the titles only, so frame 2 is no taller than frame 1
+  // (the text stays in the HTML for screen readers and search)
+  @include phone {
+    @include visually-hidden;
+  }
+}
+
+// ── Frame 3 steps ──
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include phone {
+    gap: 0.85rem;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+
+  @include phone {
+    align-items: center;
+  }
+}
+
+.stepIcon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: $accent-dim;
+  font-size: 1.2rem;
+  color: $accent-on-dark;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}

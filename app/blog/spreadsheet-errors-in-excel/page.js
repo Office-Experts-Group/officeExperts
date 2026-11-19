@@ -569,14 +569,14 @@ const SpreadsheetErrorBlogPost = () => {
                 error, to put it bluntly, is that the barrier to entry is low.
                 Anyone with a computer can start building{" "}
                 <a
-                  href="https://www.excelexperts.com.au/excel-formulas-and-custom-formulas"
+                  href="/services/microsoft-excel/excel-formulas-and-custom-formulas"
                   className={styles.inlineLink}
                 >
                   formulas
                 </a>
                 ,{" "}
                 <a
-                  href="https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions"
+                  href="/services/microsoft-excel/pivot-tables-charts-and-reporting-solutions"
                   className={styles.inlineLink}
                 >
                   pivot tables
