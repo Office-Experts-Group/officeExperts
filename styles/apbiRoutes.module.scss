@@ -1,0 +1,205 @@
+// /styles/apbiRoutes.module.scss
+@use "./globals" as *;
+
+.apbiRoutes {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  @include lede($white-75);
+}
+
+// ── Tabs ─────────────────────────────────────────────────────────────────────
+.tabs {
+  position: relative;
+  min-width: 0;
+  margin: 3rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  @include visually-hidden;
+}
+
+.radio {
+  @include visually-hidden;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.tab {
+  flex: 1 1 14rem;
+  padding: 1rem 1.5rem;
+  background: $dark-surface;
+  border: 1px solid $white-18;
+  border-radius: $radius;
+  color: $white-75;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    border-color: $accent-on-dark;
+    color: $white;
+  }
+}
+
+.panels {
+  min-width: 0;
+}
+
+.panel {
+  display: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  padding: 2.5rem;
+  background: $dark-surface;
+  border: 1px solid $white-12;
+  border-radius: $radius;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDeskL {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  @include phone {
+    padding: 1.5rem;
+  }
+}
+
+// Show the panel and highlight the tab that match the checked radio.
+.radioDirect:checked ~ .panels .panelDirect,
+.radioSql:checked ~ .panels .panelSql,
+.radioBlend:checked ~ .panels .panelBlend {
+  display: grid;
+}
+
+.radioDirect:checked ~ .tabList .tabDirect,
+.radioSql:checked ~ .tabList .tabSql,
+.radioBlend:checked ~ .tabList .tabBlend {
+  background: $accent;
+  border-color: $accent;
+  color: $white;
+}
+
+.radioDirect:focus-visible ~ .tabList .tabDirect,
+.radioSql:focus-visible ~ .tabList .tabSql,
+.radioBlend:focus-visible ~ .tabList .tabBlend {
+  outline: 2px solid $accent-on-dark;
+  outline-offset: 3px;
+}
+
+.title {
+  margin: 0 0 1rem;
+  @include card-title(lg, $white);
+}
+
+.text {
+  margin: 0 0 1rem;
+  @include body-text($white-75);
+}
+
+.note {
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid $white-12;
+  @include body-text($white-75);
+
+  strong {
+    color: $accent-on-dark;
+  }
+}
+
+.link {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  @include arrow-link($accent-on-dark);
+}
+
+.figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.diagramScroll {
+  overflow-x: auto;
+  padding: 1rem;
+  background: $dark-bg;
+  border: 1px solid $white-08;
+  border-radius: $radius;
+}
+
+.diagramInner {
+  min-width: 30rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.after {
+  max-width: 46rem;
+  margin: 2rem 0 0;
+  @include lede($white-75);
+}
+
+.inline {
+  color: $accent-on-dark;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

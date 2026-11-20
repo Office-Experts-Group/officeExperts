@@ -99,6 +99,10 @@ p {
   text-wrap: pretty;
 }
 
+figcaption {
+  text-align: center;
+}
+
 button {
   background: none;
   border: none;

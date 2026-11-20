@@ -1,0 +1,163 @@
+// /styles/apbiProcess.module.scss
+@use "./globals" as *;
+
+.apbiProcess {
+  background: $accent-dark;
+  color: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0 0 1rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  color: $white-88;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.trackWrap {
+  margin-bottom: 2.5rem;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(13rem, 1fr));
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.75rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 4px;
+  }
+}
+
+.step {
+  scroll-snap-align: start;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: $radius;
+}
+
+.art {
+  margin-bottom: 1.25rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  color: $white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.text {
+  margin: 0;
+  color: $white-88;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.engage {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+
+.engageText {
+  margin: 0;
+  color: $white-88;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.25rem 2.5rem;
+  background: $accent;
+  border-radius: $radius;
+
+  @include belowDesktop {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.ctaTitle {
+  margin: 0 0 0.5rem;
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ctaText {
+  max-width: 38rem;
+  margin: 0;
+  color: $white-88;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  background: $white;
+  border-radius: $radius-pill;
+  color: $accent-dark;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $accent-light;
+  }
+}

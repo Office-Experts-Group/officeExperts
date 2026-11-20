@@ -1,0 +1,206 @@
+// /styles/apbiStrain.module.scss
+@use "./globals" as *;
+
+.apbiStrain {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+  @include belowDesktop {
+    max-width: none;
+  }
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.subhead {
+  margin: 0 0 0.6rem;
+  @include card-title(lg);
+}
+
+.text {
+  margin: 0;
+  @include lede;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: $radius;
+}
+
+.tileCharts,
+.tileScale,
+.tileExport {
+  grid-column: span 2;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include mobile {
+    grid-column: span 1;
+  }
+}
+
+.tileExport {
+  @include belowDesktop {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include mobile {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.tileShare {
+  grid-column: span 6;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+
+  @include belowDesktop {
+    grid-column: span 2;
+    gap: 2rem;
+  }
+  @include mobile {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 14rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .tileExport &,
+  .tileShare & {
+    @include belowDesktop {
+      flex: 0 0 14rem;
+    }
+  }
+
+  .tileShare & {
+    flex: 0 0 16rem;
+    max-width: 16rem;
+
+    @include belowDesktop {
+      flex: 0 0 14rem;
+    }
+    @include mobile {
+      flex: none;
+      max-width: 14rem;
+    }
+  }
+}
+
+.body {
+  min-width: 0;
+}
+
+.tileTitle {
+  margin: 0 0 0.6rem;
+  @include card-title(lg);
+}
+
+.tileText {
+  margin: 0;
+  @include body-text;
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .tileTitle {
+    color: $white;
+  }
+  .tileText {
+    color: $white-75;
+  }
+}
+
+.lightTile {
+  background: $white;
+  border: 1px solid $line;
+
+  .tileTitle {
+    color: $text-primary;
+  }
+}
+
+.accentTile {
+  background: $accent;
+
+  .tileTitle {
+    color: $white;
+  }
+  .tileText {
+    color: $white-88;
+  }
+}
+
+.tintTile {
+  background: $accent-light;
+
+  .tileTitle {
+    color: $text-primary;
+  }
+}
+
+.closing {
+  text-align: center;
+  margin: 2.5rem 0 0;
+  @include lede;
+}

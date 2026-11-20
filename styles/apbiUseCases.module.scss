@@ -1,0 +1,161 @@
+// /styles/apbiUseCases.module.scss
+@use "./globals" as *;
+
+.apbiUseCases {
+  background: $grayBGC;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  margin: 0 0 1rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}
+
+.rows {
+  display: grid;
+  gap: 1rem;
+}
+
+.row {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &[open] {
+    box-shadow: $shadow-panel;
+  }
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: 1rem 1.25rem;
+    padding: 1.25rem;
+  }
+}
+
+.art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.head {
+  display: block;
+}
+
+.tag {
+  display: block;
+  margin-bottom: 0.3rem;
+  @include label($accent);
+}
+
+.title {
+  margin: 0;
+  @include card-title(lg);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid $accent-border;
+  border-radius: $radius-pill;
+  color: $accent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .summary:hover & {
+    background: $accent-tint;
+  }
+
+  @include mobile {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+.less {
+  display: none;
+}
+
+.row[open] .more {
+  display: none;
+}
+
+.row[open] .less {
+  display: inline;
+}
+
+.row[open] .toggle svg {
+  transform: rotate(45deg);
+}
+
+.content {
+  padding: 0 1.75rem 1.75rem calc(6rem + 3.25rem);
+
+  @include mobile {
+    padding: 0 1.25rem 1.5rem;
+  }
+}
+
+.text {
+  max-width: 44rem;
+  margin: 0 0 1rem;
+  @include body-text;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

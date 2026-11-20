@@ -4,7 +4,7 @@
 // Hex values come from AorPalette.js (dark): $dark-surface, $dark-mid, $white, $white-65,
 // $white-18, $accent-on-dark, $replace-x.
 import React from "react";
-import { PALETTES } from "./AorPalette";
+import { PALETTES } from "../AorPalette";
 
 const P = PALETTES.dark;
 
