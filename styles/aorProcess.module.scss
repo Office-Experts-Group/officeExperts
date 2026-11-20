@@ -1,0 +1,129 @@
+// /styles/aorProcess.module.scss
+@use "./globals" as *;
+
+.aorProcess {
+  background: $accent-dark;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: $container;
+  margin-inline: auto;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.subtitle {
+  margin: 0;
+  @include lede($white-88);
+}
+
+// Horizontal track: all four steps across on desktop, swipeable with snapping below that
+.scroller {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+
+  &:focus-visible {
+    outline: 2px solid $accent-on-dark;
+    outline-offset: 4px;
+  }
+}
+
+.track {
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 2.5rem 0 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    left: 0;
+    height: 0;
+    border-top: 2px dashed $white-35;
+  }
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 16rem;
+  padding: 1.75rem;
+  background: $dark-bg;
+  border-radius: $radius;
+  scroll-snap-align: start;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(-2rem - 7px);
+    left: 1.75rem;
+    width: 14px;
+    height: 14px;
+    background: $accent-on-dark;
+    border: 3px solid $accent-dark;
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin-left: -3px;
+  }
+
+  @include belowDesktop {
+    flex: 0 0 min(19rem, 80vw);
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 8.5rem;
+}
+
+.title {
+  margin: 0;
+  @include card-title(lg, $white);
+}
+
+.text {
+  margin: 0;
+  @include body-text($white-75);
+}

@@ -1,0 +1,192 @@
+// /styles/aorEngage.module.scss
+@use "./globals" as *;
+
+.aorEngage {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  margin: 0;
+  @include lede;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// Solid accent tile
+.warnTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2.5rem;
+  background: $accent;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.warnTitle {
+  margin: 0;
+  @include card-title(lg, $white);
+}
+
+.warnText {
+  margin: 0;
+  @include body-text($white-88);
+}
+
+.warnActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+
+  button {
+    background-color: $white;
+    color: $accent;
+  }
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.warnArt {
+  width: 100%;
+  max-width: 22rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+// Ways to engage
+.ways {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.waysLede {
+  margin: 0;
+  padding: 0 0.25rem;
+  @include lede;
+}
+
+.waysList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.way {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: $light-bg;
+  border-radius: $radius;
+  transition: background 0.2s ease;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.wayArt {
+  flex: 0 0 6.5rem;
+  width: 6.5rem;
+}
+
+.wayBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.wayTitle {
+  margin: 0;
+  @include card-title;
+}
+
+.wayText {
+  margin: 0;
+  @include small-text;
+}
+
+.arrowLink {
+  @include arrow-link;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .way:hover {
+    background: $accent-light;
+  }
+}

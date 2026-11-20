@@ -50,7 +50,8 @@ input,
 label,
 textarea,
 dd,
-td {
+td,
+figcaption {
   font-family: var(--font-aptos), sans-serif;
 }
 

@@ -1,0 +1,367 @@
+// /styles/aorServices.module.scss
+@use "./globals" as *;
+
+.aorServices {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.subtitle {
+  margin: 0;
+  @include lede;
+}
+
+// Bento: 12 columns on desktop, 2 below 1024px, 1 below 767px
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// Desktop placement. Split points differ on every row so the tiles stagger:
+// row 1 splits at 8, row 2 at 4, row 3 at 7, row 4 at 5.
+.placeA {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+}
+
+.placeB {
+  grid-column: 9 / span 4;
+  grid-row: 1;
+}
+
+.placeC {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+
+.placeD {
+  grid-column: 5 / span 8;
+  grid-row: 2;
+}
+
+.placeE {
+  grid-column: 1 / span 7;
+  grid-row: 3;
+}
+
+.placeF {
+  grid-column: 8 / span 5;
+  grid-row: 3;
+}
+
+.placeG {
+  grid-column: 1 / span 5;
+  grid-row: 4;
+}
+
+.placeH {
+  grid-column: 6 / span 7;
+  grid-row: 4;
+}
+
+@include belowDesktop {
+  .placeA,
+  .placeD,
+  .placeE,
+  .placeH {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .placeB,
+  .placeC,
+  .placeF,
+  .placeG {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+}
+
+@include mobile {
+  .placeA,
+  .placeB,
+  .placeC,
+  .placeD,
+  .placeE,
+  .placeF,
+  .placeG,
+  .placeH {
+    grid-column: span 1;
+  }
+}
+
+// CTA tile (final, wide, art beside the copy)
+.ctaTile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: $accent-dark;
+  border-radius: $radius;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem;
+  }
+}
+
+.ctaArt {
+  flex: 0 0 34%;
+  min-width: 0;
+
+  @include mobile {
+    flex: none;
+    max-width: 12rem;
+  }
+}
+
+.ctaBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+
+  :global(.btn) {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+.ctaTitle {
+  margin: 0;
+  @include card-title(lg, $white);
+}
+
+.ctaText {
+  margin: 0;
+  @include body-text($white-88);
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: $radius;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 11rem;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  @include card-title(lg);
+}
+
+.text {
+  margin: 0;
+  @include body-text;
+}
+
+.arrowLink {
+  margin-top: auto;
+  padding-top: 0.25rem;
+  @include arrow-link;
+}
+
+// Wide tiles: art beside the copy
+.beside {
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+  .art {
+    flex: 0 0 38%;
+    max-width: none;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+
+    .art {
+      flex: none;
+      max-width: 14rem;
+    }
+  }
+}
+
+// Tile colours
+.lightTile {
+  background: $white;
+  border: 1px solid $line;
+}
+
+.darkTile {
+  background: $dark-bg;
+
+  .title {
+    color: $white;
+  }
+
+  .text {
+    color: $white-75;
+  }
+
+  .arrowLink {
+    color: $accent-on-dark;
+  }
+}
+
+.accentTile {
+  background: $accent;
+
+  .title {
+    color: $white;
+  }
+
+  .text {
+    color: $white-88;
+  }
+
+  .arrowLink {
+    color: $white;
+  }
+}
+
+.deepTile {
+  background: $accent-dark;
+
+  .title {
+    color: $white;
+  }
+
+  .text {
+    color: $white-88;
+  }
+
+  .arrowLink {
+    color: $accent-on-dark;
+  }
+}
+
+.tintTile {
+  background: $accent-light;
+
+  .title {
+    color: $ink;
+  }
+}
+
+// "What we review" checklist inside the feature tile
+.review {
+  width: 100%;
+  margin-top: auto;
+  padding: 1.25rem 1.5rem;
+  background: $dark-surface;
+  border-radius: $radius;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    @include small-text($white-88);
+  }
+
+  li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background: $accent-on-dark;
+    border-radius: 50%;
+  }
+}
+
+.reviewLabel {
+  margin: 0 0 0.75rem;
+  @include label($accent-on-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tile {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}

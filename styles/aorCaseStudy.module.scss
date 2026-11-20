@@ -1,0 +1,48 @@
+// /styles/aorCaseStudy.module.scss
+@use "./globals" as *;
+
+.aorCaseStudy {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: $container;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.text {
+  margin: 0;
+  @include lede;
+}

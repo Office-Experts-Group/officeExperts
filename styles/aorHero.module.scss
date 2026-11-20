@@ -1,0 +1,130 @@
+// /styles/aorHero.module.scss
+@use "./globals" as *;
+
+.aorHero {
+  background: $dark-bg;
+  overflow: hidden;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 9rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 8rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: $container;
+  margin-inline: auto;
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.title {
+  margin: 0;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  max-width: 36rem;
+  @include lede($white-75);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.75rem;
+  margin: 0.5rem 0 0;
+  padding: 1.25rem 0 0;
+  list-style: none;
+  border-top: 1px solid $white-12;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    @include small-text($white-75);
+  }
+}
+
+.trustIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: $accent-on-dark;
+}
+
+.visual {
+  min-width: 0;
+
+  svg {
+    width: 100%;
+    height: auto;
+    max-height: 32rem;
+  }
+
+  @include belowDesktop {
+    max-width: 34rem;
+  }
+}
+
+// Only the hero illustration moves, and only when the visitor allows motion.
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    stroke-dasharray: 6 8;
+    animation: aorFlow 1.4s linear infinite;
+  }
+
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: aorPulse 2.2s ease-out infinite;
+  }
+
+  @keyframes aorFlow {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+
+  @keyframes aorPulse {
+    0% {
+      transform: scale(0.7);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
