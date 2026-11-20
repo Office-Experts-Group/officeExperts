@@ -12,7 +12,9 @@ const isDev = process.env.NODE_ENV !== "production";
 // Host groups shared between the standard and payment policies
 // googleadservices.com serves the Google Ads conversion tag/pixel
 const GOOGLE_HOSTS =
-  "*.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.doubleclick.net googleads.g.doubleclick.net *.googleadservices.com";
+  "*.googletagmanager.com *.google-analytics.com *.google.com *.gstatic.com *.doubleclick.net googleads.g.doubleclick.net *.googleadservices.com google.com.au *.google.com.au";
+// Microsoft Clarity: tag loads from www.clarity.ms, then scripts.clarity.ms; data goes to *.clarity.ms
+const CLARITY_HOSTS = "*.clarity.ms";
 const AHREFS_HOSTS = "*.ahrefs.com analytics.ahrefs.com";
 const VIDEO_SCRIPT_HOSTS = "*.vimeo.com *.youtube.com *.ytimg.com";
 const BPOINT_HOSTS = "*.bpoint.com.au";
@@ -51,26 +53,28 @@ function scriptDirectives(hosts) {
 // Payment page: allows BPoint scripts, frames and connections
 const PAYMENT_CSP = [
   "default-src 'self'",
-  ...scriptDirectives(`${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS}`),
+  ...scriptDirectives(
+    `${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${CLARITY_HOSTS}`,
+  ),
   `style-src 'self' 'unsafe-inline' ${BPOINT_HOSTS} fonts.googleapis.com`,
   `img-src 'self' data: https:`,
   `font-src 'self' ${BPOINT_HOSTS} fonts.gstatic.com`,
-  `frame-src 'self' ${BPOINT_HOSTS} *.googletagmanager.com *.doubleclick.net`,
-  `connect-src 'self' ${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} *.officeexperts.com.au`,
+  `frame-src 'self' ${BPOINT_HOSTS} *.googletagmanager.com *.doubleclick.net *.google.com.au`,
+  `connect-src 'self' ${BPOINT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${CLARITY_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
 // All other pages: adds YouTube and Vimeo embeds and Gurulytics lead tracking
 const STANDARD_CSP = [
   "default-src 'self'",
   ...scriptDirectives(
-    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS}`,
+    `${VIDEO_SCRIPT_HOSTS} ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${OPENAI_SCRIPT_HOSTS} ${CLARITY_HOSTS}`,
   ),
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
   "img-src 'self' data: https:",
   "font-src 'self' fonts.gstatic.com",
-  "frame-src 'self' *.vimeo.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.doubleclick.net",
+  "frame-src 'self' *.vimeo.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.doubleclick.net *.google.com.au",
   "media-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.googlevideo.com",
-  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${GURULYTICS_HOSTS} ${OPENAI_CONNECT_HOSTS} *.officeexperts.com.au`,
+  `connect-src 'self' *.vimeo.com *.vimeocdn.com *.youtube.com *.youtube-nocookie.com *.ytimg.com *.googlevideo.com google.com ${GOOGLE_HOSTS} ${AHREFS_HOSTS} ${GURULYTICS_HOSTS} ${OPENAI_CONNECT_HOSTS}  ${CLARITY_HOSTS} *.officeexperts.com.au`,
 ].join("; ");
 
 export function proxy(request) {
