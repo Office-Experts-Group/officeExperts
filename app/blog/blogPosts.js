@@ -11,7 +11,6 @@ export const blogPosts = [
     category: "Power Apps",
     featured: false,
     youtubeId: "_mgLYllGY-Y",
-    imagePath: null, // Default to null when using youtubeId
   },
   {
     id: 2,
@@ -25,7 +24,6 @@ export const blogPosts = [
     category: "Power Apps",
     featured: false,
     youtubeId: "awsNLPGNI4w",
-    imagePath: null,
   },
   {
     id: 3,
@@ -39,7 +37,6 @@ export const blogPosts = [
     category: "Power Apps",
     featured: false,
     youtubeId: "BiOCK1jDOMo",
-    imagePath: null,
   },
   {
     id: 4,
@@ -53,7 +50,6 @@ export const blogPosts = [
     category: "Power Apps",
     featured: false,
     youtubeId: "yC0W5am6M3Q",
-    imagePath: null,
   },
   {
     id: 5,
@@ -73,7 +69,7 @@ export const blogPosts = [
     id: 6,
     title: "Ultimate Guide to Microsoft Word Templates",
     description:
-      "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organization. Learn how templates can ensure consistency and save valuable time.",
+      "What is a Word Template? Explore the benefits, types, and implementation of Microsoft Word templates for your organisation. Learn how templates can ensure consistency and save valuable time.",
     slug: "/blog/ultimate-guide-to-word-templates",
     date: "April 8, 2025",
     author: "Daniel Thomas",
