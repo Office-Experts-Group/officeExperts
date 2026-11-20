@@ -1,0 +1,178 @@
+// /styles/sqlsSigns.module.scss
+@use "./globals" as *;
+
+.sqlsSigns {
+  background: $light-bg;
+  padding: 7rem $gutter;
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.head {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow;
+}
+
+.title {
+  margin: 0 0 1rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  border-radius: $radius;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.wide {
+  grid-column: span 7;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.25rem;
+
+  .artWrap {
+    flex: 0 0 min(18rem, 42%);
+  }
+
+  @include belowDesktop {
+    grid-column: span 2;
+  }
+  @include mobile {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+
+    .artWrap {
+      flex: none;
+    }
+  }
+}
+
+.narrow {
+  grid-column: span 5;
+  flex-direction: column;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include mobile {
+    grid-column: span 1;
+  }
+}
+
+.darkTile {
+  background: $dark-surface;
+}
+
+.lightTile {
+  background: $white;
+  border: 1px solid $line;
+}
+
+.accentTile {
+  background: $accent;
+}
+
+.artWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 9rem;
+}
+
+.wide .art {
+  max-height: 13rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.tileTitle {
+  margin: 0;
+  @include card-title(lg, $text-primary);
+}
+
+.tileText {
+  margin: 0;
+  @include body-text($text-secondary);
+}
+
+.tileLink {
+  margin-top: auto;
+  @include arrow-link($accent);
+}
+
+.darkTile,
+.accentTile {
+  .tileTitle {
+    color: $white;
+  }
+}
+
+.darkTile .tileText {
+  color: $white-75;
+}
+
+.accentTile .tileText {
+  color: $white-88;
+}
+
+.darkTile .tileLink {
+  color: $accent-on-dark;
+}
+
+.accentTile .tileLink {
+  color: $white;
+}

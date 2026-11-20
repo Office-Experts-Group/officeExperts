@@ -1,0 +1,170 @@
+// /styles/sqlsIntro.module.scss
+@use "./globals" as *;
+
+.sqlsIntro {
+  background: $white;
+  padding: 7rem $gutter;
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3.5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  p {
+    margin: 0 0 1.1rem;
+    @include lede;
+  }
+  @include inline-link;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow;
+}
+
+.title {
+  margin: 0 0 1.5rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include phone {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.keep,
+.move {
+  border-radius: $radius;
+  padding: 1.75rem 1.5rem;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  li {
+    padding: 0.65rem 0.9rem;
+    border-radius: 0.75rem;
+    @include small-text;
+  }
+}
+
+.keep {
+  background: $light-bg;
+  border: 1px solid $line;
+
+  li {
+    background: $white;
+    border: 1px solid $line;
+  }
+}
+
+.move {
+  background: $accent;
+
+  li {
+    background: $accent-dark;
+    color: $white-88;
+  }
+}
+
+.splitTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.1rem;
+  @include card-title(sm, $text-primary);
+
+  svg {
+    flex-shrink: 0;
+    color: $accent;
+  }
+}
+
+.move .splitTitle {
+  color: $white;
+
+  svg {
+    color: $white;
+  }
+}
+
+.note {
+  grid-column: 1 / -1;
+  margin: 0.25rem 0 0;
+  @include small-text($text-secondary);
+}
+
+.figure {
+  margin: 4rem 0 0;
+  padding: 2rem;
+  border-radius: $radius;
+  background: $light-bg;
+  border: 1px solid $line;
+  box-shadow: $shadow-panel;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 560px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.caption {
+  margin-top: 1.25rem;
+  max-width: 44rem;
+  @include small-text;
+}

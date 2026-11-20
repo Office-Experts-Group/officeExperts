@@ -1,0 +1,209 @@
+// /styles/sqlsBenefits.module.scss
+@use "./globals" as *;
+
+.sqlsBenefits {
+  background: $dark-bg;
+  padding: 7rem $gutter;
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.head {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow-on-dark;
+}
+
+.title {
+  margin: 0 0 1rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  @include lede($white-75);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border-radius: $radius;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+}
+
+.midTile {
+  background: $dark-mid;
+}
+
+.third {
+  grid-column: span 2;
+
+  @include belowDesktop {
+    grid-column: span 1;
+  }
+  @include mobile {
+    grid-column: span 1;
+  }
+}
+
+.firstTile {
+  @include belowDesktop {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+
+    .artWrap {
+      flex: 0 0 min(15rem, 40%);
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+
+    .artWrap {
+      flex: none;
+    }
+  }
+}
+
+.half {
+  grid-column: span 3;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.75rem;
+
+  .artWrap {
+    flex: 0 0 min(12rem, 42%);
+  }
+
+  @include belowDesktop {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: stretch;
+
+    .artWrap {
+      flex: none;
+    }
+  }
+}
+
+.artWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 9.5rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tileTitle {
+  margin: 0;
+  @include card-title(md, $white);
+}
+
+.tileText {
+  margin: 0;
+  @include body-text($white-75);
+}
+
+.chips {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    padding: 0.3rem 0.8rem;
+    border-radius: $radius-pill;
+    background: $white-08;
+    @include small-text($white-88);
+    font-size: 0.8rem;
+  }
+}
+
+.links {
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  @include small-text($white-75);
+
+  a {
+    color: $accent-on-dark;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.ctaTile {
+  background: $accent;
+  border-color: transparent;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+
+  @include belowDesktop {
+    grid-column: span 2;
+  }
+  @include mobile {
+    grid-column: span 1;
+  }
+}
+
+.ctaTitle {
+  margin: 0;
+  @include heading-section($white);
+  font-size: 1.7rem;
+}
+
+.ctaText {
+  margin: 0;
+  @include body-text($white-88);
+}

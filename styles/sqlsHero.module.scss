@@ -1,0 +1,137 @@
+// /styles/sqlsHero.module.scss
+@use "./globals" as *;
+
+.sqlsHero {
+  background: $dark-bg;
+  color: $white;
+  overflow: hidden;
+  @include heroPadding;
+  @include belowDesktop {
+    padding-top: 10rem;
+    padding-right: $mobGutter;
+    padding-bottom: 5rem;
+    padding-left: $mobGutter;
+  }
+  @include phone {
+    padding: 8.5rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.title {
+  margin: 0 0 1.25rem;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0 0 2rem;
+  max-width: 34rem;
+  @include lede($white-75);
+  font-size: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+}
+
+.trust {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.75rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @include small-text($white-65);
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: $accent-on-dark;
+  }
+}
+
+.art {
+  width: 100%;
+  max-width: 40rem;
+  justify-self: center;
+
+  @include belowDesktop {
+    max-width: 30rem;
+  }
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flow {
+  stroke-dasharray: 6 8;
+}
+
+.live {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: sqlsFlow 1.6s linear infinite;
+  }
+
+  .live {
+    animation: sqlsPulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes sqlsFlow {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+
+  @keyframes sqlsPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(1.6);
+    }
+  }
+}

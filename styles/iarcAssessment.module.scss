@@ -1,0 +1,95 @@
+// /styles/iarcAssessment.module.scss
+@use "./globals" as *;
+
+.iarcAssessment {
+  background: $dark-bg;
+  color: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.header {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow-on-dark;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  @include lede(rgba(255, 255, 255, 0.88));
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid $accent-on-dark;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  max-width: 13rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.itemTitle {
+  margin: 0;
+  @include card-title(md, $white);
+}
+
+.itemText {
+  margin: 0;
+  @include small-text(rgba(255, 255, 255, 0.75));
+}

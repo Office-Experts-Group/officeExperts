@@ -1,0 +1,134 @@
+// /styles/iarcHero.module.scss
+@use "./globals" as *;
+
+.iarcHero {
+  background: $dark-bg;
+  color: $white;
+  overflow: hidden;
+  @include heroPadding;
+
+  @include belowDesktop {
+    padding: 9rem $mobGutter 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 7.5rem 1.25rem 4rem 1.25rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+  max-width: $container;
+  margin-inline: auto;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.heading {
+  margin: 0;
+  @include heading-main($white);
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.lede {
+  margin: 0;
+  max-width: 34rem;
+  @include lede(rgba(255, 255, 255, 0.88));
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.arrowLink {
+  @include arrow-link($accent-on-dark);
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: $accent-on-dark;
+    flex-shrink: 0;
+  }
+}
+
+.art {
+  min-width: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+}
+
+.flow {
+  stroke-dasharray: 6 8;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow {
+    animation: iarcFlow 1.6s linear infinite;
+  }
+  .live {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: iarcPulse 2s ease-in-out infinite;
+  }
+  @keyframes iarcFlow {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+  @keyframes iarcPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(1.5);
+    }
+  }
+}

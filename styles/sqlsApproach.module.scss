@@ -1,0 +1,111 @@
+// /styles/sqlsApproach.module.scss
+@use "./globals" as *;
+
+.sqlsApproach {
+  background: $accent-dark;
+  padding: 7rem $gutter;
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include phone {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 4rem;
+  align-items: center;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.copy {
+  p {
+    margin: 0 0 1.1rem;
+    @include lede($white-88);
+  }
+
+  a:not(:global(.btn)) {
+    color: $white;
+    font-weight: 700;
+  }
+
+  :global(.btn) {
+    margin-top: 0.75rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow-on-dark;
+}
+
+.title {
+  margin: 0 0 1.5rem;
+  @include heading-section-on-dark;
+}
+
+.accent {
+  color: $accent-on-dark;
+}
+
+.ways {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.way {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: $radius;
+  background: $dark-surface;
+  border: 1px solid $white-08;
+
+  @include phone {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+.art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 7rem;
+
+  @include phone {
+    max-width: 6rem;
+  }
+}
+
+.wayTitle {
+  margin: 0 0 0.4rem;
+  @include card-title(md, $white);
+}
+
+.wayText {
+  margin: 0 0 0.6rem;
+  @include small-text($white-75);
+}
+
+.wayLink {
+  @include arrow-link($accent-on-dark);
+}

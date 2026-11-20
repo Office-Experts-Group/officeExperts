@@ -5,10 +5,5 @@
 // All files in this folder that next.config.js loads are CommonJS (module.exports / require).
 const internalRedirects = require("./internalRedirects.js");
 const locationRedirects = require("./locationRedirects.js");
-const sisterDomainRedirects = require("./sisterDomainRedirects.js");
 
-module.exports = [
-  ...internalRedirects,
-  ...locationRedirects,
-  ...sisterDomainRedirects,
-];
+module.exports = [...internalRedirects, ...locationRedirects];

@@ -1,0 +1,214 @@
+// /styles/sqlsMigration.module.scss
+@use "./globals" as *;
+
+.sqlsMigration {
+  background: $white;
+  padding: 7rem 0;
+  overflow: hidden;
+  @include belowDesktop {
+    padding: 5rem 0;
+  }
+  @include phone {
+    padding: 4rem 0;
+  }
+}
+
+.head {
+  max-width: calc(#{$container} + 20vw);
+  padding: 0 $gutter;
+  margin: 0 auto 3rem;
+  @include belowDesktop {
+    padding: 0 $mobGutter;
+  }
+  @include phone {
+    padding: 0 1.25rem;
+  }
+
+  > * {
+    max-width: 46rem;
+  }
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  @include eyebrow;
+}
+
+.title {
+  margin: 0 0 1rem;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}
+
+.track {
+  list-style: none;
+  margin: 0 auto;
+  max-width: calc(#{$container} + 20vw);
+  padding: 0 $gutter;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+
+  @include belowDesktop {
+    padding: 0 $mobGutter;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include phone {
+    padding: 0 1.25rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.step {
+  position: relative;
+  padding-top: 2.75rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.85rem;
+    left: 1.75rem;
+    right: -1.5rem;
+    height: 2px;
+    background: $accent-border;
+  }
+
+  &:nth-child(3n)::before {
+    display: none;
+  }
+
+  @include belowDesktop {
+    &:nth-child(3n)::before {
+      display: block;
+    }
+    &:nth-child(2n)::before {
+      display: none;
+    }
+  }
+  @include phone {
+    &::before,
+    &:nth-child(3n)::before {
+      display: none;
+    }
+  }
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: $accent;
+  box-shadow: 0 0 0 6px $accent-tint;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border-radius: 50%;
+    background: $white;
+  }
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.25rem 1.25rem 1.75rem;
+  border-radius: $radius;
+  background: $white;
+  border: 1px solid $line;
+  box-shadow: $shadow-panel;
+}
+
+.artWrap {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background: $accent-light;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stepTitle {
+  margin: 0.25rem 0.5rem 0;
+  @include card-title(md, $text-primary);
+}
+
+.stepText {
+  margin: 0 0.5rem;
+  @include body-text($text-secondary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+}
+
+.keepRow {
+  max-width: calc(#{$container} + 20vw);
+  margin: 2.5rem auto 0;
+  padding: 0 $gutter;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+
+  @include belowDesktop {
+    padding: 0 $mobGutter;
+  }
+  @include phone {
+    padding: 0 1.25rem;
+  }
+}
+
+.keepLabel {
+  margin: 0;
+  @include label($text-secondary);
+}
+
+.keepList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    padding: 0.4rem 1rem;
+    border-radius: $radius-pill;
+    background: $accent-tint;
+    @include small-text($accent-dark);
+    font-weight: 700;
+  }
+}
+
+.keepNote {
+  margin: 0;
+  flex-basis: 100%;
+  @include small-text($text-secondary);
+}

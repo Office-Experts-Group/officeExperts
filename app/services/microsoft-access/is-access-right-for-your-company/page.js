@@ -1,81 +1,122 @@
+// /app/services/microsoft-access/is-access-right-for-your-company/page.js
 import React from "react";
+import dynamic from "next/dynamic";
 
-import ServiceHero from "@/components/ServiceHero";
-import PageSegmentMain2 from "./(components)/PageSegmentMain2";
-import Promo from "@/components/Promo";
-import MiniTicks from "./(components)/MiniTicks";
-import ExpertsAwait from "@/components/ExpertsAwait";
-import FAQSection from "@/components/FAQSection";
-import Contact from "@/components/Contact";
-import Contents from "./(components)/Contents";
+import IarcHero from "./(components)/IarcHero";
+import IarcIntro from "./(components)/IarcIntro";
 
-import faqs from "@/faqs/is-access-right-for-you";
+const IarcStrengths = dynamic(() => import("./(components)/IarcStrengths"));
+const IarcGrowth = dynamic(() => import("./(components)/IarcGrowth"));
+const IarcSituations = dynamic(() => import("./(components)/IarcSituations"));
+const IarcStack = dynamic(() => import("./(components)/IarcStack"));
+const IarcAssessment = dynamic(() => import("./(components)/IarcAssessment"));
+const IarcCaseStudy = dynamic(() => import("./(components)/IarcCaseStudy"));
+const IarcFaq = dynamic(() => import("./(components)/IarcFaq"));
+const RelatedLinks = dynamic(() => import("@/components/RelatedLinks"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
-import twoComputers from "@/public/pageHeros/twoComputers.webp";
-import graph from "@/public/pageHeros/mob/graph.webp";
+import {
+  generateProfessionalServiceSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/utils/schemaGenerators";
+import { getCaseStudyBySlug } from "@/app/case-studies/caseStudies";
+
+const SITE_URL = "https://www.officeexperts.com.au";
+const PAGE_URL = `${SITE_URL}/services/microsoft-access/is-access-right-for-your-company`;
+const PAGE_NAME = "Is Microsoft Access Right for Your Company?";
+const PAGE_DESCRIPTION =
+  "Not sure if Microsoft Access is right for your business? Our Australian Access experts review your data, users and systems and give you a straight answer.";
+
+// Same four services the old Access Experts page listed, one Offer each.
+const IARC_OFFERS = [
+  "Database Assessment",
+  "Business Requirements Analysis",
+  "Solution Consulting",
+  "Database Strategy Planning",
+];
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    generateOrganizationSchema(),
+    generateProfessionalServiceSchema(),
+    generateWebSiteSchema(),
     {
       "@type": "WebPage",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company",
-      url: "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company",
-      name: "Why To Choose Access for your Company | Office Expert Australia",
-      isPartOf: {
-        "@id": "https://www.officeexperts.com.au#website",
-      },
-      datePublished: "2024-10-26T00:00:00+00:00",
-      dateModified: "2025-07-28T00:00:00+00:00",
-      description:
-        "We get asked this question all the time! Whether your solution is online and/or offline, we can help point you in the right direction to keep your business.",
-      breadcrumb: {
-        "@id":
-          "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company#breadcrumb",
-      },
+      "@id": `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: PAGE_NAME,
+      isPartOf: { "@id": `${SITE_URL}#website` },
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      mainEntity: { "@id": `${PAGE_URL}#service` },
+      datePublished: "2024-10-27T00:00:00+00:00",
+      dateModified: "2026-11-20T00:00:00+11:00",
+      description: PAGE_DESCRIPTION,
       inLanguage: "en-AU",
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: [
-            "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company",
-          ],
-        },
-      ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.officeexperts.com.au/services/microsoft-access/is-access-right-for-your-company#breadcrumb",
+      "@id": `${PAGE_URL}#breadcrumb`,
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.officeexperts.com.au",
-        },
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
         {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://www.officeexperts.com.au/services",
+          item: `${SITE_URL}/services`,
         },
         {
           "@type": "ListItem",
           position: 3,
-          name: "Access Experts Services",
-          item: "https://www.officeexperts.com.au/services/microsoft-access",
+          name: "Microsoft Access",
+          item: `${SITE_URL}/services/microsoft-access`,
         },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "Is Access Right for your Company?",
-        },
+        { "@type": "ListItem", position: 4, name: PAGE_NAME, item: PAGE_URL },
       ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#service`,
+      name: "Microsoft Access suitability assessment",
+      serviceType: "Microsoft Access consulting",
+      provider: { "@id": `${SITE_URL}#organization` },
+      areaServed: { "@type": "Country", name: "Australia" },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType:
+          "Australian businesses deciding whether Microsoft Access suits their data, users and systems",
+      },
+      serviceOutput:
+        "A plain-English recommendation on whether Microsoft Access, Access with SQL Server or Azure, or another platform is the best fit",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Microsoft Access consultation services",
+        itemListElement: IARC_OFFERS.map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name },
+        })),
+      },
     },
   ],
 };
+
+// Case studies for the RelatedLinks cards (the big film crew story is a
+// feature panel inside IarcCaseStudy, so it is not repeated here).
+const IARC_CASE_STUDY_SLUGS = [
+  "research-organisation-access-kanban-planner",
+  "automated-proposal-generation-in-microsoft",
+  "community-services-excel-consolidation-rebuild",
+];
+const iarcCaseStudyLinks = IARC_CASE_STUDY_SLUGS.map(getCaseStudyBySlug)
+  .filter(Boolean)
+  .map((s) => ({
+    href: `/case-studies/${s.slug}`,
+    title: s.title,
+    description: s.truncatedDescription,
+    image: s.image,
+    linkText: s.linkText,
+  }));
 
 const Page = () => {
   return (
@@ -84,24 +125,22 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Contents />
-      <ServiceHero
-        title="Is Microsoft Access the Right Technology for your Company?"
-        desktopImage={twoComputers}
-        mobileImage={graph}
-        altDesk={"two computers at an office"}
-        altMob={"graphs"}
+      <IarcHero />
+      <IarcIntro />
+      <IarcStrengths />
+      <RelatedLinks
+        theme="dark"
+        eyebrow="Case Studies"
+        heading="Access and spreadsheets"
+        headingAccent="in practice"
+        links={iarcCaseStudyLinks}
       />
-      <PageSegmentMain2 />
-      <Promo
-        h2="Just Ask The Office Experts"
-        p="Whether your solution is online and/or offline, we can help point you in the right direction to keep your business ahead of the rest."
-      />
-      <MiniTicks />
-      <ExpertsAwait />
-      <div style={{ marginTop: "4rem" }}>
-        <FAQSection faqs={faqs} />
-      </div>
+      <IarcGrowth />
+      <IarcSituations />
+      <IarcStack />
+      <IarcAssessment />
+      <IarcCaseStudy />
+      <IarcFaq />
       <Contact />
     </>
   );

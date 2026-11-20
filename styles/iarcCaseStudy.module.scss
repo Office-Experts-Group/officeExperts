@@ -1,0 +1,52 @@
+// /styles/iarcCaseStudy.module.scss
+@use "./globals" as *;
+
+.iarcCaseStudy {
+  background: $white;
+  padding: 7rem $gutter 3rem;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter 2rem;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem 2rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.header {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}

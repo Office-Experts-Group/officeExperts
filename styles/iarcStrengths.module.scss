@@ -1,0 +1,174 @@
+// /styles/iarcStrengths.module.scss
+@use "./globals" as *;
+
+.iarcStrengths {
+  background: $light-bg;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.lede {
+  margin: 0;
+  @include lede;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+  padding: 2rem;
+  border-radius: $radius;
+
+  @include belowDesktop {
+    grid-column: auto;
+  }
+}
+
+.darkTile {
+  background: $dark-bg;
+  color: $white;
+}
+
+.accentTile {
+  background: $accent;
+  color: $white;
+}
+
+.lightTile {
+  background: $white;
+  color: $text-primary;
+  border: 1px solid $line;
+}
+
+.placeData {
+  grid-column: span 4;
+}
+.placeData,
+.placeReports {
+  @include desktopUp {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+
+    .art {
+      flex: 0 0 45%;
+      max-width: none;
+    }
+    .copy {
+      flex: 1;
+    }
+  }
+}
+.placeQuery {
+  grid-column: span 2;
+}
+.placeUsers {
+  grid-column: span 2;
+}
+.placeReports {
+  grid-column: span 4;
+}
+
+.art {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tileTitle {
+  margin: 0;
+  @include card-title(lg, currentColor);
+}
+
+.tileText {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  opacity: 0.88;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.35rem 0.85rem;
+    border-radius: $radius-pill;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.12);
+    color: $white;
+  }
+
+  .lightTile & li {
+    background: $accent-tint;
+    color: $accent;
+  }
+}

@@ -1,0 +1,169 @@
+// /styles/iarcIntro.module.scss
+@use "./globals" as *;
+
+.iarcIntro {
+  background: $white;
+  padding: 7rem $gutter;
+
+  @include belowDesktop {
+    padding: 5rem $mobGutter;
+  }
+  @include mobile {
+    padding: 4rem 1.25rem;
+  }
+}
+
+.inner {
+  max-width: $container;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.header {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  @include eyebrow;
+}
+
+.heading {
+  margin: 0;
+  @include heading-section;
+}
+
+.accent {
+  color: $accent;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.lead {
+  margin: 0;
+  @include lede;
+}
+
+.checks {
+  background: $light-bg;
+  border-radius: $radius;
+  padding: 2rem;
+}
+
+.checksLabel {
+  margin: 0 0 1.25rem;
+  @include label($accent);
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.check {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: $accent;
+  color: $white;
+
+  svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+}
+
+.checkTitle {
+  margin: 0 0 0.2rem;
+  @include card-title(sm);
+}
+
+.checkText {
+  margin: 0;
+  @include small-text;
+}
+
+.verdicts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  border-radius: $radius;
+  background: $dark-bg;
+  color: $white;
+
+  &:nth-child(2) {
+    background: $accent;
+  }
+}
+
+.verdictArt {
+  display: block;
+  width: 7.5rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.verdictTitle {
+  margin: 0;
+  @include card-title(lg, $white);
+}
+
+.verdictText {
+  margin: 0;
+  flex: 1;
+  @include body-text(rgba(255, 255, 255, 0.88));
+}
+
+.verdictLink {
+  margin-top: 0.5rem;
+  @include arrow-link($accent-on-dark);
+
+  .verdict:nth-child(2) & {
+    color: $white;
+  }
+}
