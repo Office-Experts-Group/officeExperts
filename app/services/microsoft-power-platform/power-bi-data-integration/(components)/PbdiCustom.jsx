@@ -53,7 +53,7 @@ const PBDI_ROUTES = [
         For large or complex systems, our programmers build API integrations and
         custom connectors for legacy systems, SaaS platforms and
         industry-specific tools. Got an old Access database? See how to{" "}
-        <a href="https://www.accessexperts.com.au/integrate-access-with-power-bi">
+        <a href="/services/microsoft-access/integrate-access-with-power-bi">
           integrate Access with Power BI
         </a>
         , or how we{" "}

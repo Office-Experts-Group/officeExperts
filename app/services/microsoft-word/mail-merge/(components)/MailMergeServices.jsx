@@ -48,8 +48,8 @@ const services = [
     capabilities: [
       "Excel workbooks, named ranges and filtered tables",
       <>
-        <Link href="https://www.accessexperts.com.au">Access</Link> tables and
-        saved queries for targeted merges
+        <Link href="/services/microsoft-access">Access</Link> tables and saved
+        queries for targeted merges
       </>,
       "Outlook contacts and Exchange address lists",
       "SQL Server views and SharePoint lists",

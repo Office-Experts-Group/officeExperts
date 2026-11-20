@@ -204,7 +204,7 @@ export const caseStudies = [
       },
       {
         label: "Azure Cloud Solutions",
-        href: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+        href: "/services/cloud-based-solutions-with-azure",
       },
     ],
   },
@@ -1296,7 +1296,7 @@ export const caseStudies = [
       },
       {
         label: "Upgrading with Access",
-        href: "https://www.accessexperts.com.au/upgrades-and-migration",
+        href: "/upgrades-and-migration",
       },
     ],
   },
@@ -2201,7 +2201,7 @@ export const caseStudies = [
     services: [
       {
         label: "Microsoft Access database development",
-        href: "https://www.accessexperts.com.au/sql-server-backend-business-solutions",
+        href: "/services/microsoft-access/sql-server-solutions",
       },
       {
         label: "Custom web application development",
@@ -2782,7 +2782,7 @@ export const caseStudies = [
       },
       {
         label: "Microsoft Access services",
-        href: "https://www.accessexperts.com.au/services",
+        href: "/services",
       },
     ],
   },
@@ -2911,7 +2911,7 @@ export const siteMeta = {
   },
   access: {
     name: "Access Experts",
-    domain: "https://www.accessexperts.com.au",
+    domain: "/services/microsoft-access",
   },
 };
 

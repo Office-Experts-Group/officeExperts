@@ -112,7 +112,7 @@ const DatabaseIntro = () => {
                 64-bit conflicts or need their data moved to SQL Server or Azure
                 make up a large share of our work. Our{" "}
                 <Link
-                  href="https://www.accessexperts.com.au/upgrades-and-migration"
+                  href="/services/upgrades-and-migration"
                   className={styles.upgradeLink}
                 >
                   Access database upgrades and migration

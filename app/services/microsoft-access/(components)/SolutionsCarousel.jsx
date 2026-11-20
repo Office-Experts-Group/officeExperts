@@ -12,7 +12,7 @@ const SolutionsCarousel = () => {
   const solutionsData = [
     {
       title: "Online",
-      link: "https://www.accessexperts.com.au/access-online",
+      link: "/services/online-solutions",
       image: magnify,
       alt: "magnifying glass",
       description: [
@@ -22,7 +22,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Help and Training",
-      link: "https://www.accessexperts.com.au/access-support",
+      link: "/microsoft-support-and-training-australia",
       image: handShake,
       alt: "handshake",
       description: [
@@ -33,7 +33,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Upgrades and Conversions",
-      link: "https://www.accessexperts.com.au/upgrades-and-migration",
+      link: "/services/upgrades-and-migration",
       image: graph,
       alt: "graph",
       description: [
@@ -43,7 +43,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "is it right for you?",
-      link: "https://www.accessexperts.com.au/is-access-right-for-your-company",
+      link: "/services/microsoft-access/is-access-right-for-your-company",
       image: desk,
       alt: "desk in an office",
       description: [

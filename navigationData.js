@@ -1,5 +1,3 @@
-const ACCESS_EXPERTS_URL = "https://www.accessexperts.com.au";
-
 export const navigationData = {
   locations: {
     label: "Locations",
@@ -265,39 +263,23 @@ export const navigationData = {
       },
       {
         label: "Microsoft Access",
-        href: ACCESS_EXPERTS_URL,
+        href: "/services/microsoft-access",
         items: [
           {
             label: "Is Access right for you company?",
-            href: `${ACCESS_EXPERTS_URL}/is-access-right-for-your-company`,
-          },
-          {
-            label: "3rd Party Product Integration",
-            href: `${ACCESS_EXPERTS_URL}/3rd-party-product-integration`,
-          },
-          {
-            label: "Help & Training",
-            href: `${ACCESS_EXPERTS_URL}/access-support`,
-          },
-          {
-            label: "Upgrades & Migration",
-            href: `${ACCESS_EXPERTS_URL}/upgrades-and-migration`,
-          },
-          {
-            label: "Cloud-based Solutions",
-            href: `${ACCESS_EXPERTS_URL}/access-online`,
+            href: `/services/microsoft-access/is-access-right-for-your-company`,
           },
           {
             label: "Power BI Integration",
-            href: `${ACCESS_EXPERTS_URL}/integrate-access-with-power-bi`,
+            href: `/services/microsoft-access/integrate-access-with-power-bi`,
           },
           {
             label: "Database Optimisation and Repair",
-            href: `${ACCESS_EXPERTS_URL}/access-database-optimisation-and-repair`,
+            href: `/services/microsoft-access/access-database-optimisation-and-repair`,
           },
           {
             label: "SQL Server Backend Solutions",
-            href: `${ACCESS_EXPERTS_URL}/sql-server-backend-business-solutions`,
+            href: `/services/microsoft-access/sql-server-solutions`,
           },
         ],
       },

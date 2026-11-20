@@ -18,7 +18,7 @@ const SQLS_SIGNS = [
     text: "With a shared Access file, every PC does the heavy lifting and pulls whole tables across the network. SQL Server processes queries on a dedicated server and uses row-level locking, so more people can work at once with fewer “database is locked” moments.",
     link: {
       label: "Why Access slows down",
-      href: "https://www.accessexperts.com.au/blog/access-database-slow-performance",
+      href: "/blog/access-database-slow-performance",
     },
     Art: SqlsSlowArt,
     tile: "darkTile",
@@ -30,7 +30,7 @@ const SQLS_SIGNS = [
     text: "Frequent compacting, repairs or a file creeping towards the 2 GB Access limit are early warnings. SQL Server adds transaction logs and recovery tools that help protect you from data loss and downtime.",
     link: {
       label: "The 2 GB Access limit",
-      href: "https://www.accessexperts.com.au/blog/2gb-access-database-limit",
+      href: "/blog/2gb-access-database-limit",
     },
     Art: SqlsSizeArt,
     tile: "lightTile",

@@ -8,7 +8,7 @@ import faqs from "./3rd-party-product-integration";
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.accessexperts.com.au/3rd-party-product-integration#faq",
+  "@id": "/services/3rd-party-application-or-office-integration#faq",
   mainEntity: faqs.map(({ question, answer }) => ({
     "@type": "Question",
     name: question,

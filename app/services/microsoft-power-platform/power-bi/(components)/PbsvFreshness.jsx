@@ -45,7 +45,7 @@ const PBSV_FRESH_SOURCES = [
   { label: "Dataverse and Dynamics" },
   {
     label: "Access databases",
-    href: "https://www.accessexperts.com.au/integrate-access-with-power-bi",
+    href: "/integrate-access-with-power-bi",
   },
 ];
 

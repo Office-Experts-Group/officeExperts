@@ -21,7 +21,7 @@ const SolutionsCarousel = () => {
     },
     {
       title: "Online Solutions",
-      link: "https://www.accessexperts.com.au/access-support",
+      link: "/services/online-solutions",
       image: project2,
       description: [
         "Do you want your documents, spreadsheets and databases online?",

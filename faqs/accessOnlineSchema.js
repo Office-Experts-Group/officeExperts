@@ -8,7 +8,7 @@ import faqs from "./access-online";
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.accessexperts.com.au/access-online#faq",
+  "@id": "/services/online-solutions#faq",
   mainEntity: faqs.map(({ question, answer }) => ({
     "@type": "Question",
     name: question,

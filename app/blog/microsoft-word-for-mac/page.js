@@ -1075,8 +1075,7 @@ export default function WordForMacBlogPost() {
                 If you’re looking to buy MS Office for Mac, expect Word, Excel,{" "}
                 <Link href="/services/microsoft-powerpoint">PowerPoint</Link>,
                 Outlook, and OneNote. Teams is also available, but Publisher and{" "}
-                <Link href="https://www.accessexperts.com.au">Access</Link> are
-                not.
+                <Link href="/services/microsoft-access">Access</Link> are not.
               </Quote>
             </section>
 

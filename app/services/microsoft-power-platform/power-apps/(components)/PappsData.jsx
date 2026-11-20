@@ -22,7 +22,7 @@ const PAPPS_DATA_LINKS = [
     text: "Connect SQL Server and Access",
   },
   {
-    href: "https://www.accessexperts.com.au/blog/using-power-platform-with-access-database",
+    href: "/blog/using-power-platform-with-access-database",
     text: "Using Power Platform with an Access database",
   },
 ];

@@ -24,7 +24,7 @@ const SQLS_FAQS = [
     links: [
       {
         label: "Read about the 2 GB Access limit",
-        href: "https://www.accessexperts.com.au/blog/2gb-access-database-limit",
+        href: "/services/microsoft-access/blog/2gb-access-database-limit",
       },
     ],
   },

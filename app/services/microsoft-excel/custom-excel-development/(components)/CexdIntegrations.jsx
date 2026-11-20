@@ -32,7 +32,7 @@ const CEXD_TECHNOLOGIES = [
   },
   {
     name: "Microsoft Access",
-    href: "https://www.accessexperts.com.au",
+    href: "/services/microsoft-access",
     external: true,
     Icon: CexdAccessIcon,
   },

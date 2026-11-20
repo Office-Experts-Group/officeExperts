@@ -57,7 +57,7 @@ const areas = [
       },
       {
         label: "SQL Server back ends",
-        href: "https://www.accessexperts.com.au/sql-server-backend-business-solutions",
+        href: "/services/microsoft-access/sql-server-solutions",
       },
       {
         label: "Power Apps",
@@ -112,7 +112,7 @@ const areas = [
       },
       {
         label: "Access upgrades and migration",
-        href: "https://www.accessexperts.com.au/upgrades-and-migration",
+        href: "/services/upgrades-and-migration",
       },
       { label: ".NET development", href: "/services/microsoft-dot-net" },
     ],

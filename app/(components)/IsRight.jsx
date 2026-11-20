@@ -51,7 +51,7 @@ const IsRight = () => {
               <p>
                 Expert development in{" "}
                 <Link href="/services/microsoft-excel">Excel</Link>,{" "}
-                <Link href="https://www.accessexperts.com.au">Access</Link>,{" "}
+                <Link href="/services/microsoft-access">Access</Link>,{" "}
                 <Link href="/services/microsoft-word">Word</Link>,{" "}
                 <Link href="/services/microsoft-powerpoint">PowerPoint</Link>,
                 and complete Office integration solutions.

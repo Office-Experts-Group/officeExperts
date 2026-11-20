@@ -39,7 +39,7 @@ const benefits = [
       <>
         No more “Database has been corrupted” messages or downtime from bloated
         Access files. Already seeing them? We also offer{" "}
-        <Link href="https://www.accessexperts.com.au/access-database-optimisation-and-repair">
+        <Link href="/services/microsoft-access/access-database-optimisation-and-repair">
           Access database repair and optimisation
         </Link>
         .
@@ -57,7 +57,7 @@ const benefits = [
       <>
         Handles databases from a few megabytes to multiple terabytes, well
         beyond the{" "}
-        <Link href="https://www.accessexperts.com.au/blog/2gb-access-database-limit">
+        <Link href="/blog/2gb-access-database-limit">
           2GB Access database limit
         </Link>
         .
@@ -65,7 +65,7 @@ const benefits = [
       <>
         Forms and reports that can take minutes to load now open in seconds. Not
         sure why yours are slow?{" "}
-        <Link href="https://www.accessexperts.com.au/blog/access-database-slow-performance">
+        <Link href="/blog/access-database-slow-performance">
           Read why Access databases slow down
         </Link>
         .

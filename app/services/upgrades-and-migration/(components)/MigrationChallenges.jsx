@@ -47,7 +47,7 @@ const challenges = [
     insight:
       "The fix is usually a proper database backend like SQL Server or cloud infrastructure built with Azure. It's not more optimisation of the existing file.",
     link: {
-      href: "https://www.accessexperts.com.au/sql-server-backend-business-solutions",
+      href: "/services/microsoft-access/sql-server-solutions",
       label: "SQL Server migration options",
     },
   },

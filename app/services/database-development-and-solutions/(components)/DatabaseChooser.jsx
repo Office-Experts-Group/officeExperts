@@ -8,7 +8,7 @@ import Link from "next/link";
 import styles from "@/styles/databaseChooser.module.scss";
 // Column headings, each linking to the page that covers that platform in depth
 const platforms = [
-  { name: "Microsoft Access", href: "https://www.accessexperts.com.au" },
+  { name: "Microsoft Access", href: "/services/microsoft-access" },
   {
     name: "Access + SQL Server or Azure",
     href: "/services/sql-server-and-access-integration",

@@ -8,42 +8,42 @@ import { AccessIcon } from "../(svgs)/AccessIcon";
 const rows = [
   {
     name: "Access support",
-    href: "https://www.accessexperts.com.au/access-support",
+    href: "/microsoft-support-and-training-australia",
     helps: "Ongoing help when a database misbehaves.",
   },
   {
     name: "Optimisation and repair",
-    href: "https://www.accessexperts.com.au/access-database-optimisation-and-repair",
+    href: "/services/microsoft-access/access-database-optimisation-and-repair",
     helps: "Slow, corrupt or overgrown databases.",
   },
   {
     name: "SQL Server backend",
-    href: "https://www.accessexperts.com.au/sql-server-backend-business-solutions",
+    href: "/services/microsoft-access/sql-server-solutions",
     helps: "More users, more data and stronger security.",
   },
   {
     name: "Azure cloud solutions",
-    href: "https://www.accessexperts.com.au/access-azure-cloud-based-solutions",
+    href: "/services/microsoft-access/access-azure-cloud-based-solutions",
     helps: "Reaching your database from anywhere.",
   },
   {
     name: "Access online",
-    href: "https://www.accessexperts.com.au/access-online",
+    href: "/services/online-solutions",
     helps: "Sharing an Access system through the browser.",
   },
   {
     name: "Upgrades and migration",
-    href: "https://www.accessexperts.com.au/upgrades-and-migration",
+    href: "/services/upgrades-and-migration",
     helps: "Moving an old database to a current platform.",
   },
   {
     name: "3rd party product integration",
-    href: "https://www.accessexperts.com.au/3rd-party-product-integration",
+    href: "/services/microsoft-access/3rd-party-application-or-office-integration",
     helps: "Connecting Access to the other tools you use.",
   },
   {
     name: "Access with Power BI",
-    href: "https://www.accessexperts.com.au/integrate-access-with-power-bi",
+    href: "/services/microsoft-access/integrate-access-with-power-bi",
     helps: "Modern reporting on your existing data.",
   },
   {
@@ -53,7 +53,7 @@ const rows = [
   },
   {
     name: "Is Access right for you?",
-    href: "https://www.accessexperts.com.au/is-access-right-for-your-company",
+    href: "/services/microsoft-access/is-access-right-for-your-company",
     helps: "A straight answer before you invest.",
   },
 ];

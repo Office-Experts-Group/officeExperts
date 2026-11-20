@@ -158,7 +158,7 @@ export const blogPosts = [
     title: "Your Access Database Isn't Dead — It Just Needs a Cloud Strategy",
     description:
       "Don't abandon your Microsoft Access database. Learn how to modernise it with cloud technologies like Azure SQL, SharePoint, and Power Platform while keeping your existing forms, reports, and business logic intact.",
-    slug: "https://www.accessexperts.com.au/blog/your-access-database-needs-a-cloud-strategy",
+    slug: "/blog/your-access-database-needs-a-cloud-strategy",
     date: "July 28, 2025",
     author: "Daniel Thomas",
     readingTime: "8 min",
@@ -173,7 +173,7 @@ export const blogPosts = [
       "Hybrid Access Solutions: Connect to Power Apps Without Losing What Works",
     description:
       "Learn how to modernise your Microsoft Access database with Power Platform without losing your existing forms, reports, and VBA code. Discover hybrid solutions that connect Access to Dataverse and Power Apps.",
-    slug: "https://www.accessexperts.com.au/blog/using-power-platform-with-access-database",
+    slug: "/blog/using-power-platform-with-access-database",
     date: "July 30, 2025",
     author: "Access Experts Team",
     readingTime: "14 min",
@@ -244,7 +244,7 @@ export const blogPosts = [
     title: "Microsoft Access vs. Excel: When to Use Which for Your Business",
     description:
       "Discover when to use Microsoft Access versus Excel for your Australian business data management. Learn the key differences, benefits, and how to leverage both tools together for optimal efficiency.",
-    slug: "https://www.accessexperts.com.au/blog/access-vs-excel",
+    slug: "/blog/access-vs-excel",
     date: "October 23, 2025",
     author: "Daniel Thomas",
     readingTime: "12 min",
@@ -258,7 +258,7 @@ export const blogPosts = [
     title: "Why Dropbox Fails with Access Databases: Better Cloud Solutions",
     description:
       "Storing Microsoft Access databases in Dropbox leads to corruption, data loss, and conflicts. Learn why this approach fails and discover reliable alternatives like SQL Server and Azure SQL for secure multi-user access.",
-    slug: "https://www.accessexperts.com.au/blog/why-dropbox-fails-with-access-databases",
+    slug: "/blog/why-dropbox-fails-with-access-databases",
     date: "January 29, 2025",
     author: "Scott Robinson",
     readingTime: "7 min",
@@ -316,7 +316,7 @@ export const blogPosts = [
     title: "Your Access Database Just Hit 2GB... Now What? A Survival Guide",
     description:
       "The 2GB limit crisis hits without warning. Learn why it happens, how to recognize the warning signs, and discover immediate fixes vs long-term solutions including migration paths to SQL Server and Azure.",
-    slug: "https://www.accessexperts.com.au/blog/2gb-access-database-limit",
+    slug: "/blog/2gb-access-database-limit",
     date: "January 28, 2025",
     author: "Scott Robinson",
     readingTime: "15 min",
@@ -352,5 +352,20 @@ export const blogPosts = [
     featured: true,
     youtubeId: null,
     imagePath: "/blog/desktop/desktop-or-web.webp",
+  },
+  {
+    id: 26,
+    title:
+      "Access Database Running Slow? 7 Performance Killers (and How to Fix Them)",
+    description:
+      "Is your Access database painfully slow? Discover the 7 most common performance killers and learn quick fixes that can restore speed in minutes. Expert solutions for Australian businesses.",
+    slug: "access-database-slow-performance",
+    date: "January 30, 2025",
+    author: "Scott Robinson",
+    readingTime: "14 min",
+    category: "Database",
+    featured: false,
+    youtubeId: null,
+    imagePath: "/blog/slow/performance.webp",
   },
 ];

@@ -15,7 +15,7 @@
 
 const EXCEL = "/services/microsoft-excel";
 const WORD = "/services/microsoft-word";
-const ACCESS = "https://www.accessexperts.com.au";
+const ACCESS = "/services/microsoft-access";
 const POWER = "/services/microsoft-power-platform";
 
 // ── Intro: how we work in the region ────────────────────────────────────────

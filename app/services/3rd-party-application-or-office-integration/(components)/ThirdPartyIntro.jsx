@@ -42,7 +42,7 @@ const ThirdPartyIntro = () => {
               ,{" "}
               <Link
                 className={styles.inlineLink}
-                href="https://www.accessexperts.com.au/3rd-party-product-integration"
+                href="/services/microsoft-access"
               >
                 Access
               </Link>

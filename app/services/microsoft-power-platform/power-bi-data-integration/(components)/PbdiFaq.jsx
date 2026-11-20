@@ -25,7 +25,7 @@ const PBDI_FAQS = [
     answer:
       "In most cases, yes. It usually comes down to whether the system can share its data through a database, an API or a regular export. We check this when we assess your sources, and we’ll tell you plainly if a system needs extra work or a different approach first.",
     more: {
-      href: "https://www.accessexperts.com.au/integrate-access-with-power-bi",
+      href: "/services/microsoft-access/integrate-access-with-power-bi",
       text: "Integrate Access with Power BI",
     },
   },

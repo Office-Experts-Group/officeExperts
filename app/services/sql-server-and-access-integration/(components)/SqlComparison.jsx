@@ -138,7 +138,7 @@ const SqlComparison = () => {
           </p>
           <p className={styles.rule}>
             Not sure Access is still the right tool?{" "}
-            <Link href="https://www.accessexperts.com.au/is-access-right-for-your-company">
+            <Link href="/services/microsoft-access/is-access-right-for-your-company">
               Find out if Access is right for your company
             </Link>
             .

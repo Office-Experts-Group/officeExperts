@@ -32,7 +32,7 @@ const pillars = [
       },
       {
         name: "Access support",
-        href: "https://www.accessexperts.com.au/access-support",
+        href: "/microsoft-support-and-training-australia",
       },
       {
         name: "Power Platform support",

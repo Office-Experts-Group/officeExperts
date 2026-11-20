@@ -1,12 +1,8 @@
 // app/services/database-development-and-solutions/(components)/SqlServerAzure.jsx
-// SQL Server and Azure SQL back ends. A dark "health check" console lists the signs that an
-// Access back end has been outgrown, each with a small meter, beside the explanation of what changes.
-// Consolidates the old SQL Server, Visual Studio and Azure segments, which repeated each other.
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/sqlServerAzure.module.scss)
 import styles from "@/styles/sqlServerAzure.module.scss";
-const ACCESS_SITE = "https://www.accessexperts.com.au";
 
 // `level` sets the meter fill (1 to 4), purely visual
 const signals = [
@@ -20,19 +16,19 @@ const signals = [
 // Specialist articles on Access Experts that go deeper on each signal above
 const reading = [
   {
-    href: `${ACCESS_SITE}/blog/2gb-access-database-limit`,
+    href: `/services/microsoft-access/blog/2gb-access-database-limit`,
     text: "The 2GB Access database limit explained",
   },
   {
-    href: `${ACCESS_SITE}/blog/access-database-slow-performance`,
+    href: `/services/microsoft-access/blog/access-database-slow-performance`,
     text: "Why your Access database is slow",
   },
   {
-    href: `${ACCESS_SITE}/blog/why-dropbox-fails-with-access-databases`,
+    href: `/services/microsoft-access/blog/why-dropbox-fails-with-access-databases`,
     text: "Why Dropbox fails with Access databases",
   },
   {
-    href: `${ACCESS_SITE}/blog/your-access-database-needs-a-cloud-strategy`,
+    href: `/services/microsoft-access/blog/your-access-database-needs-a-cloud-strategy`,
     text: "Your Access database needs a cloud strategy",
   },
 ];
@@ -104,7 +100,7 @@ const SqlServerAzure = () => {
                 than across the network, so forms stay quick with hundreds of
                 users and millions of rows. See how we build{" "}
                 <Link
-                  href={`${ACCESS_SITE}/sql-server-backend-business-solutions`}
+                  href={`/services/microsoft-access/sql-server-solutions`}
                   className={styles.link}
                 >
                   SQL Server back-end solutions

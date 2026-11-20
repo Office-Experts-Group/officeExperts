@@ -39,7 +39,9 @@ const AccessOnAzure = () => {
     <section className={styles.section} id="access">
       <div className={styles.inner}>
         <header className={styles.header}>
-          <span className={styles.eyebrow}>Access front end, Azure back end</span>
+          <span className={styles.eyebrow}>
+            Access front end, Azure back end
+          </span>
           <h2 className={styles.heading}>
             The most cost-effective way{" "}
             <span className={styles.accent}>to put Access in the cloud</span>
@@ -48,8 +50,9 @@ const AccessOnAzure = () => {
             If your team already knows its Access forms and reports, there is no
             need to throw them away. We move the tables into Azure SQL Database
             and relink the Access front end, so the application looks the same
-            but the data lives in the cloud. Staff can open it from home, a branch
-            office or a client site without connecting directly to your server.
+            but the data lives in the cloud. Staff can open it from home, a
+            branch office or a client site without connecting directly to your
+            server.
           </p>
         </header>
 
@@ -68,7 +71,7 @@ const AccessOnAzure = () => {
             <p className={styles.note}>
               Is the database already struggling with size, speed or remote
               access? Our article on{" "}
-              <Link href="https://www.accessexperts.com.au/blog/your-access-database-needs-a-cloud-strategy">
+              <Link href="/services/microsoft-access/blog/your-access-database-needs-a-cloud-strategy">
                 why your Access database needs a cloud strategy
               </Link>{" "}
               covers the warning signs. If it is also stuck on an old version of
@@ -80,7 +83,8 @@ const AccessOnAzure = () => {
               <Link href="/services/database-development-and-solutions#sql-server-and-azure">
                 SQL Server and Azure back-end
               </Link>{" "}
-              guide explains when a server on your own network is the better fit.
+              guide explains when a server on your own network is the better
+              fit.
             </p>
           </div>
 
@@ -96,7 +100,13 @@ const AccessOnAzure = () => {
               {requirements.map((item) => (
                 <li key={item}>
                   {/* Tick icon, decorative */}
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
                     <path
                       d="M3 8.5l3.2 3L13 4.5"
                       stroke="currentColor"

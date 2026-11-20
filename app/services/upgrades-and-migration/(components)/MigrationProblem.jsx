@@ -15,7 +15,7 @@ const signs = [
     title: "Legacy apps that keep breaking",
     body: "Access databases and VBA-driven tools that struggle after every Office update, or worse, quietly produce wrong results that nobody notices.",
     link: {
-      href: "https://www.accessexperts.com.au/upgrades-and-migration",
+      href: "/services/upgrades-and-migration",
       label: "Access migration options",
     },
   },
@@ -80,7 +80,7 @@ const MigrationProblem = () => {
             </Link>
             ,{" "}
             <Link
-              href="https://www.accessexperts.com.au"
+              href="/services/microsoft-access"
               className={styles.inlineLink}
             >
               Access

@@ -99,7 +99,7 @@ const DashboardsDataSources = () => {
               summary
             </Link>{" "}
             with year-on-year comparisons. Running an Access database? See{" "}
-            <Link href="https://www.accessexperts.com.au/integrate-access-with-power-bi">
+            <Link href="/services/microsoft-access/integrate-access-with-power-bi">
               connecting Access to Power BI
             </Link>
             .

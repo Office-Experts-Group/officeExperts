@@ -1,13 +1,9 @@
 // app/services/database-development-and-solutions/(components)/AccessDatabases.jsx
-// Microsoft Access section. Capabilities are laid out as a "spec sheet" definition list
-// rather than cards, so this section reads differently from the rest of the page.
 import Link from "next/link";
 
 // Compiled CSS module (source: styles/accessDatabases.module.scss)
 import styles from "@/styles/accessDatabases.module.scss";
 import { ExcelToAccessSvg } from "../(svgs)/ExcelToAccessSvg";
-
-const ACCESS_SITE = "https://www.accessexperts.com.au";
 
 // Each spec row can carry an optional link; `before` and `after` wrap the anchor text
 const specs = [
@@ -25,7 +21,7 @@ const specs = [
     term: "Integration with Office and accounting",
     before: "Outlook, Word and Excel automation, plus ",
     link: {
-      href: `${ACCESS_SITE}/3rd-party-product-integration`,
+      href: `/services/3rd-party-application-or-office-integration`,
       text: "Xero and MYOB integration",
     },
     after: " so invoices and customer records stay in step.",
@@ -44,7 +40,7 @@ const specs = [
     term: "Repair and performance tuning",
     before: "Slow, bloated or corrupted files are fixed through ",
     link: {
-      href: `${ACCESS_SITE}/access-database-optimisation-and-repair`,
+      href: `/services/microsoft-access/access-database-optimisation-and-repair`,
       text: "Access optimisation and repair",
     },
     after: ", often without users noticing anything but the speed.",
@@ -88,7 +84,7 @@ const AccessDatabases = () => {
             Windows, so many clients already have it installed. If you're unsure
             which tool you need, our guide to{" "}
             <Link
-              href={`${ACCESS_SITE}/blog/access-vs-excel`}
+              href={`/services/microsoft-access/blog/access-vs-excel`}
               className={styles.link}
             >
               Access vs Excel

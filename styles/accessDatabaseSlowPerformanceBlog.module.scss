@@ -1,0 +1,1347 @@
+// /styles/accessDatabaseSlowPerformanceBlog.module.scss
+// Tokens used: $dark-bg, $dark-mid, $accent, $accent-light, $accent-border, $accent-on-dark,
+// $light-bg, $line, $text-primary, $text-secondary, $radius, $shadow-panel, $shadow-card-hover,
+// $white and the $white-xx tints, $replace-x (tiny accents only).
+@use "./globals" as *;
+
+$rail: 1400px;
+$article-width: 820px;
+$slate: #8a97a3;
+$tick-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23046999' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 12.5l4.5 4.5 8.5-9.5'/%3E%3C/svg%3E");
+
+.page {
+  background: $white;
+  color: $text-primary;
+}
+
+// ── Heading accent ─────────────────────────────────────────────────────────
+.accent {
+  color: $accent;
+}
+
+.hero .accent,
+.ctaBand .accent {
+  color: $accent-on-dark;
+}
+
+// ── Hero ───────────────────────────────────────────────────────────────────
+.hero {
+  position: relative;
+  padding: 14rem 0 8.5rem 6rem;
+  background: linear-gradient(135deg, $dark-bg 0%, $dark-mid 100%);
+  color: $white;
+
+  @include belowDesktop {
+    padding: 11rem $mobGutter 8rem $mobGutter;
+  }
+  @include mobile {
+    padding: 6.5rem 1.25rem 7rem 1.25rem;
+  }
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1500px;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include belowDesktop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.title {
+  margin: 0 0 1.25rem 0;
+  @include heading-main($white);
+}
+
+.heroLede {
+  max-width: 38rem;
+  margin: 0 0 1.75rem 0;
+  @include lede($white-75);
+}
+
+.byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  font-size: 0.92rem;
+  color: $white-75;
+}
+
+.bylineName {
+  font-weight: 700;
+  color: $white;
+}
+
+.bylineMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  svg {
+    width: 1.05rem;
+    height: 1.05rem;
+    color: $accent-on-dark;
+  }
+}
+
+.avatar,
+.avatarLarge {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 4px solid $accent;
+  border-radius: 50%;
+  overflow: hidden;
+  background: $white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+}
+
+.avatarLarge {
+  width: 56px;
+  height: 56px;
+}
+
+.heroArt {
+  width: 100%;
+  max-width: 640px;
+  justify-self: end;
+  padding-right: 4vw;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include belowDesktop {
+    justify-self: start;
+    padding-right: 0;
+    max-width: 560px;
+  }
+}
+
+// ── At a glance ────────────────────────────────────────────────────────────
+.glance {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: $container;
+  margin: -4.5rem auto 0 auto;
+  padding: 0 1.5rem;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: -3.5rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.glanceCard {
+  padding: 1.5rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.glanceValue {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: $accent;
+}
+
+.glanceLabel {
+  display: block;
+  margin: 0.6rem 0 0.35rem 0;
+  @include label($text-primary);
+}
+
+.glanceText {
+  margin: 0;
+  @include small-text;
+}
+
+// ── Layout: centred article, contents as a rail ────────────────────────────
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  max-width: calc(#{$article-width} + 3rem);
+  margin-inline: auto;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+  }
+
+  @media (min-width: $rail) {
+    grid-template-columns: minmax(0, 1fr) $article-width minmax(0, 1fr);
+    max-width: none;
+    padding: 5rem 2rem 3rem 2rem;
+  }
+}
+
+.toc {
+  padding: 1.5rem 1.4rem;
+  background: $light-bg;
+  border-radius: $radius;
+
+  @media (min-width: $rail) {
+    grid-column: 1;
+    justify-self: end;
+    width: 210px;
+    margin-right: 1.5rem;
+    position: sticky;
+    top: $scroll-offset;
+    padding: 0;
+    background: transparent;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    margin: 0.75rem 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    @media (min-width: $rail) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.1rem;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $accent;
+    }
+  }
+}
+
+.tocTitle {
+  margin: 0;
+  @include label($accent);
+}
+
+.article {
+  min-width: 0;
+
+  @media (min-width: $rail) {
+    grid-column: 2;
+  }
+
+  p {
+    margin: 0 0 1.1rem 0;
+    @include lede($text-secondary);
+  }
+
+  h2 {
+    margin: 0 0 1.1rem 0;
+    @include heading-section;
+  }
+
+  h3 {
+    margin: 2.25rem 0 0.75rem 0;
+    @include card-title(lg);
+  }
+}
+
+.section {
+  margin-top: 4.5rem;
+  scroll-margin-top: $scroll-offset;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// ── Inline links ───────────────────────────────────────────────────────────
+.inlineLink,
+.article .inlineLink {
+  color: $accent;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-thickness: 2px;
+  }
+}
+
+.ctaBand .inlineLink {
+  color: $accent-on-dark;
+}
+
+// ── Callouts and tips ──────────────────────────────────────────────────────
+.callout {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.4rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, $accent-light 0%, $white 100%);
+  border: 1px solid $accent-border;
+  border-radius: $radius;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(4, 105, 153, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  &::before {
+    top: -3rem;
+    right: -3rem;
+    width: 9rem;
+    height: 9rem;
+  }
+  &::after {
+    top: -5.5rem;
+    right: -5.5rem;
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+.calloutIcon {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: $accent;
+  color: $white;
+  border-radius: 10px;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.calloutBody {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.calloutLabel {
+  display: block;
+  margin-bottom: 0.3rem;
+  @include label($accent);
+}
+
+.callout .calloutText {
+  margin: 0;
+  @include small-text($text-primary);
+}
+
+.proTip {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin: 1.5rem 0 0 0;
+  padding: 1rem 1.25rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.proTipLabel {
+  flex-shrink: 0;
+  padding: 0.3rem 0.65rem;
+  background: $accent;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.proTip .proTipText {
+  margin: 0;
+  @include small-text($text-primary);
+}
+
+// ── Reasons (why Access gets slow) ─────────────────────────────────────────
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.reason {
+  padding: 1.4rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.iconBadge {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.9rem;
+  background: $accent-light;
+  color: $accent;
+  border-radius: 12px;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.reasonTitle {
+  display: block;
+  margin-bottom: 0.4rem;
+  @include card-title(sm);
+}
+
+.article .reasonText {
+  margin: 0;
+  @include small-text;
+}
+
+// ── Lists ──────────────────────────────────────────────────────────────────
+.signList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  li {
+    position: relative;
+    padding: 0.8rem 1rem 0.8rem 2.4rem;
+    background: $light-bg;
+    border: 1px solid $line;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: $text-primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      top: 1.15rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: $replace-x;
+      border-radius: 50%;
+    }
+  }
+}
+
+.tickList {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.5rem 0 1.25rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    min-width: 0;
+    padding-left: 1.9rem;
+    overflow-wrap: anywhere;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: $text-secondary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.22rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background: $accent-light $tick-icon center / 72% no-repeat;
+      border-radius: 50%;
+    }
+  }
+}
+
+.twoCol {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.stepList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1.25rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stepNo;
+
+  li {
+    position: relative;
+    min-width: 0;
+    padding-left: 2.4rem;
+    overflow-wrap: anywhere;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: $text-secondary;
+    counter-increment: stepNo;
+
+    &::before {
+      content: counter(stepNo);
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      display: grid;
+      place-items: center;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: $accent-light;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: $accent;
+    }
+  }
+}
+
+.subLabel {
+  display: block;
+  margin: 1.6rem 0 0.5rem 0;
+  font-size: 0.78rem;
+  @include label($accent);
+}
+
+// ── Diagrams ───────────────────────────────────────────────────────────────
+.diagram {
+  margin: 1.75rem 0;
+  padding: 1rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.diagramScroll {
+  overflow-x: auto;
+}
+
+.diagramInner {
+  min-width: 480px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.article .diagramCaption {
+  margin: 0.75rem 0.25rem 0.1rem 0.25rem;
+  @include small-text($text-secondary);
+}
+
+// ── Tables ─────────────────────────────────────────────────────────────────
+.tableWrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  text-align: left;
+
+  th {
+    padding: 0.9rem 1.1rem;
+    background: $dark-bg;
+    color: $white;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+  }
+
+  td {
+    padding: 0.9rem 1.1rem;
+    color: $text-secondary;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $light-bg;
+  }
+
+  tbody th {
+    background: transparent;
+    color: $text-primary;
+    font-size: 0.93rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+// ── Killers: jump chips and timeline ───────────────────────────────────────
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    background: $white;
+    border: 1px solid $accent-border;
+    border-radius: $radius-pill;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $accent;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: $accent-light;
+    }
+  }
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 4rem;
+  margin: 2.25rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.3rem;
+    width: 2px;
+    background: $accent-border;
+
+    @include mobile {
+      left: 1.05rem;
+    }
+  }
+}
+
+.step {
+  position: relative;
+  min-width: 0;
+  padding-left: 4.4rem;
+  scroll-margin-top: $scroll-offset;
+
+  @include mobile {
+    padding-left: 3.4rem;
+  }
+
+  h3 {
+    margin-top: 0.35rem;
+  }
+}
+
+.stepBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: $accent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px $white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $white;
+
+  @include mobile {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 0.95rem;
+  }
+}
+
+// ── Method cards (quick / proper / best) ───────────────────────────────────
+.methods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.methodQuick {
+  background: $white;
+}
+
+.methodProper {
+  background: $accent-light;
+  border-color: $accent-border;
+}
+
+.methodBest {
+  background: $accent;
+  border-color: $accent;
+}
+
+.methodTag {
+  align-self: flex-start;
+  padding: 0.28rem 0.65rem;
+  background: $light-bg;
+  border-radius: $radius-pill;
+  @include label($text-secondary);
+}
+
+.methodBest .methodTag {
+  background: $white-18;
+  color: $white;
+}
+
+.methodName {
+  display: block;
+  @include card-title(sm);
+}
+
+.methodBest .methodName {
+  color: $white;
+}
+
+.methodText {
+  display: block;
+  @include small-text;
+}
+
+.methodBest .methodText {
+  color: $white-88;
+}
+
+// ── Avoid / use pairs (code and files) ─────────────────────────────────────
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.25rem 0;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pairStack {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pairCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.1rem;
+  border-radius: $radius;
+}
+
+.pairAvoid {
+  background: $light-bg;
+  border: 1px dashed $slate;
+}
+
+.pairUse {
+  background: $accent-light;
+  border: 1px solid $accent-border;
+}
+
+.pairTag {
+  align-self: flex-start;
+  padding: 0.28rem 0.7rem;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.pairAvoid .pairTag {
+  background: $slate;
+}
+
+.pairUse .pairTag {
+  background: $accent;
+}
+
+.article .pairText {
+  margin: 0;
+  @include small-text($text-primary);
+}
+
+.code {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  background: $dark-bg;
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: $white-88;
+  white-space: pre;
+}
+
+// ── Mistakes ───────────────────────────────────────────────────────────────
+.mistakes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.mistake {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+  padding: 1.4rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+
+  h3 {
+    margin: 0;
+    @include card-title(md);
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.mistakeNum {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px $accent;
+}
+
+.insteadPill {
+  align-self: flex-start;
+  padding: 0.3rem 0.75rem;
+  background: $accent;
+  border-radius: $radius-pill;
+  @include label($white);
+}
+
+.article .mistakeText {
+  margin: 0;
+  @include small-text;
+}
+
+.checkCard {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .tickList {
+    margin-bottom: 0;
+  }
+}
+
+// ── Plan and cadence ───────────────────────────────────────────────────────
+.plan {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+}
+
+.planRow {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  & + & {
+    border-top: 1px solid $line;
+  }
+}
+
+.planWhen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 1.25rem 1.4rem;
+}
+
+.planNow {
+  background: $accent;
+  color: $white;
+}
+
+.planWeek {
+  background: $accent-light;
+  color: $text-primary;
+}
+
+.planMonth {
+  background: $dark-bg;
+  color: $white;
+}
+
+.planPriority {
+  @include label(currentColor);
+  opacity: 0.8;
+}
+
+.planTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.planBody {
+  padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+
+  .tickList {
+    margin-top: 0;
+  }
+}
+
+.cadence {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.cadenceItem {
+  padding: 1rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+}
+
+.cadenceWhen {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+  @include label($accent);
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.cadenceText {
+  display: block;
+  @include small-text($text-primary);
+}
+
+// ── Help: DIY vs professional, CTA band ────────────────────────────────────
+.help {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.helpCard {
+  padding: 1.5rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    @include card-title(md);
+  }
+
+  .tickList {
+    margin-bottom: 0;
+  }
+}
+
+.helpDiy {
+  background: $light-bg;
+}
+
+.helpPro {
+  background: $accent-light;
+  border-color: $accent-border;
+
+  .tickList li::before {
+    background: $white $tick-icon center / 72% no-repeat;
+  }
+}
+
+.ctaBand {
+  position: relative;
+  margin: 2rem 0 0 0;
+  padding: 2.5rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, $dark-bg 0%, $dark-mid 100%);
+  border-radius: $radius;
+  color: $white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid $white-08;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  &::before {
+    top: -4rem;
+    right: -4rem;
+    width: 12rem;
+    height: 12rem;
+  }
+  &::after {
+    top: -7rem;
+    right: -7rem;
+    width: 18rem;
+    height: 18rem;
+  }
+
+  @include mobile {
+    padding: 1.75rem 1.4rem;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.6rem;
+    color: $white;
+  }
+}
+
+.article .ctaText {
+  max-width: 34rem;
+  margin: 0 0 1.5rem 0;
+  @include lede($white-75);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.ctaLink {
+  @include arrow-link($accent-on-dark);
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+// ── FAQ ────────────────────────────────────────────────────────────────────
+.faq {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.faqItem {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $text-primary;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] {
+    background: $light-bg;
+  }
+}
+
+.faqIcon {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: $accent-light;
+  border-radius: 50%;
+  color: $accent;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.faqItem[open] .faqIcon {
+  transform: rotate(45deg);
+}
+
+.faqBody {
+  padding: 0 1.25rem 1.2rem 1.25rem;
+
+  p {
+    margin: 0;
+    font-size: 0.97rem;
+  }
+}
+
+// ── Conclusion, author, related ────────────────────────────────────────────
+.authorBox {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin: 3rem 0 0 0;
+  padding: 1.75rem;
+  background: $light-bg;
+  border: 1px solid $line;
+  border-radius: $radius;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0 0 0.4rem 0;
+    @include card-title(md);
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 1.4rem;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-panel;
+  color: $text-primary;
+  text-decoration: none;
+}
+
+.relatedKicker {
+  @include label($accent);
+}
+
+.relatedTitle {
+  @include card-title(md);
+}
+
+.relatedText {
+  @include small-text;
+}
+
+.relatedMore {
+  margin-top: auto;
+  @include arrow-link;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+// ── Motion (only when the visitor has not asked for less) ─────────────────
+@media (prefers-reduced-motion: no-preference) {
+  .reason,
+  .relatedCard,
+  .glanceCard {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-card-hover;
+    }
+  }
+
+  .faqIcon {
+    transition: transform 0.2s ease;
+  }
+
+  .flow {
+    animation: flowDash 1.4s linear infinite;
+  }
+
+  .spin {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spinDial 2.4s linear infinite;
+  }
+
+  @keyframes flowDash {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+
+  @keyframes spinDial {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

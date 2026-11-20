@@ -96,7 +96,7 @@ const FormDataJourney = () => {
 
       <p className={styles.footNote}>
         Need the data somewhere more powerful than a spreadsheet? Our{" "}
-        <Link href="https://www.accessexperts.com.au">Access database</Link> and{" "}
+        <Link href="/services/microsoft-access">Access database</Link> and{" "}
         <Link href="/services/microsoft-power-platform">Power Platform</Link>{" "}
         specialists can connect your Word form directly to the business systems
         you already use.

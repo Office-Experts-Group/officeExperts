@@ -53,7 +53,7 @@ const AOR_SERVICES = [
     Art: AorIndexArt,
     tone: "accent",
     link: {
-      href: "https://www.accessexperts.com.au/blog/access-database-slow-performance",
+      href: "/services/microsoft-access/blog/access-database-slow-performance",
       label: "Read our slow database guide",
     },
   },

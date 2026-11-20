@@ -9,7 +9,7 @@ import styles from "@/styles/activexReplaces.module.scss";
 const LINKS = {
   excelVba: "/services/microsoft-excel",
   wordContentControls: "/services/microsoft-word",
-  access: "https://www.accessexperts.com.au",
+  access: "/services/microsoft-access",
   powerApps: "/services/microsoft-power-platform/power-apps",
   powerAutomate: "/services/microsoft-power-platform/power-automate",
 };

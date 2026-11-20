@@ -46,10 +46,8 @@ const GovDeptProcess = () => {
           <p className={styles.body}>
             Aslong with our dedicated Word Experts, we can also call on
             specialists in{" "}
-            <Link href="https://www.accessexperts.com.au">
-              Access databases
-            </Link>
-            , <Link href="/services/microsoft-excel">Excel reporting</Link> or{" "}
+            <Link href="/services/microsoft-access">Access databases</Link>,{" "}
+            <Link href="/services/microsoft-excel">Excel reporting</Link> or{" "}
             <Link href="/services/microsoft-power-platform">
               Power Platform
             </Link>{" "}
